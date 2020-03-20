@@ -2,66 +2,78 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 55C7B18C7F9
-	for <lists+linux-mediatek@lfdr.de>; Fri, 20 Mar 2020 08:06:50 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 9F86F18C80A
+	for <lists+linux-mediatek@lfdr.de>; Fri, 20 Mar 2020 08:13:56 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
-	Content-Transfer-Encoding:Cc:List-Subscribe:List-Help:List-Post:List-Archive:
-	List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:Message-ID:From:
-	References:To:Subject:Reply-To:Content-ID:Content-Description:Resent-Date:
-	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
-	 bh=T6hUYWCd+cVP4wb5QI0m+ON55sVeIeUAJ6yBNpKgL9c=; b=IKhuaXVfimt8gDEGR/kKaqCwe
-	6J5CWutx84a2Wpmq0BCgnD4m+esO2W8g+CR8DlELvcbzVi7XqOxA+OII3nFGh+25Ja8OgHIfG57sH
-	pxU9qCA5mXqah71/ywQq8xLvnlYI/YOR1Sc3CXEEg2/o5AynNQtSwm+ssvaWoFeulpIRYnhw6F9Lw
-	C2eJCrY6TXEho+ueSti7JclcNcqbQbXblyubwpeAJcjulKSh8C9Bb5FyHieQVKk9ZOy1L6gyy8t4p
-	Je9uvJOmcbbKTasGUwunjJR5xz+k5DzIynWtnUMwgs/wGuAnowid0THOMUjICEoRo0ZWxQZKcWklv
-	aaNiR5D5w==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=LG/ihj1KVu4ysOt0ado2gAwdb19HZDwUnGLhfSPCPFA=; b=ebkWvitCOq4eV5
+	MXGcoA4Xw3QGhQeD9BhtqDagJZ7e5PiM3wwqMQYA6h3kQp8hzm7iErlpQ4bfD7hGKS3y1JbTF0sIG
+	RzV3uiEVV0lPOsUFsHK1X/lI7meWNgoEJBblfJX7pYnPRwyNSwYQeO1eP9fRsQcOMC3LH3HjBCmBA
+	BVEJOfljsTRDlTyEO7VwRNnIxd35tJZ/twLIL41Hhtawzsn5nuJuWSk+lipl2yIhrpLACM9nUgn20
+	zpX8i4/siJasgYh6bhU3eGlst+U0Q0a1lmrSLv1IrG4phtM9iCzi+fh0vNCC6Fr49VxU+ShYimoIl
+	I5Y0hYDkRvgvyWYc8aWQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jFBju-0002Zt-0C; Fri, 20 Mar 2020 07:06:42 +0000
-Received: from mga07.intel.com ([134.134.136.100])
+	id 1jFBql-0004cZ-Nm; Fri, 20 Mar 2020 07:13:47 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jFBjr-0002Yv-9V; Fri, 20 Mar 2020 07:06:40 +0000
-IronPort-SDR: EDxBMBWmHRY90wGkXvONgoti1/svRqNtzJfu1ML6vtorIQ8kpBpIAKE2zH3pvMVuzMuPuZPz5R
- dTdma0In0dog==
-X-Amp-Result: SKIPPED(no attachment in message)
-X-Amp-File-Uploaded: False
-Received: from fmsmga001.fm.intel.com ([10.253.24.23])
- by orsmga105.jf.intel.com with ESMTP/TLS/ECDHE-RSA-AES256-GCM-SHA384;
- 20 Mar 2020 00:06:37 -0700
-IronPort-SDR: qQTFLsdf6C7DljdvIuIQN6Y1afZcxjIFlDqm5oREhf3SQKLv3Q8zMsPRwvvsQ2xfMB1iJdT5ye
- 7yUiw7Egm94Q==
-X-ExtLoop1: 1
-X-IronPort-AV: E=Sophos;i="5.72,283,1580803200"; d="scan'208";a="356328149"
-Received: from sxu27-mobl2.ccr.corp.intel.com (HELO [10.254.214.109])
- ([10.254.214.109])
- by fmsmga001.fm.intel.com with ESMTP; 20 Mar 2020 00:06:26 -0700
-Subject: Re: [PATCH 3/8] iommu/vt-d: Remove IOVA handling code from
- non-dma_ops path
-To: Tom Murphy <murphyt7@tcd.ie>, iommu@lists.linux-foundation.org
-References: <20191221150402.13868-1-murphyt7@tcd.ie>
- <20191221150402.13868-4-murphyt7@tcd.ie>
- <CALQxJuuue2MCF+xAAAcWCW=301HHZ9yWBmYV-K-ubCxO4s5eqQ@mail.gmail.com>
-From: Lu Baolu <baolu.lu@linux.intel.com>
-Message-ID: <46bf21e2-bb3e-1c1e-8dae-2c5bd8c5274f@linux.intel.com>
-Date: Fri, 20 Mar 2020 15:06:24 +0800
-User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:68.0) Gecko/20100101
- Thunderbird/68.6.0
+ id 1jFBqi-0004c2-Dv; Fri, 20 Mar 2020 07:13:46 +0000
+X-UUID: ed32d557a3d94f8b99cceb813e0b93a4-20200319
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
+ s=dk; 
+ h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:Subject:CC:To:From;
+ bh=k58APG24uidmU5v8KtptUOGOeNfiLEWeS+xyzZ6fKUI=; 
+ b=iQ5dSost9Wnho3MFg3aDcFx5NtUWxkTmfe3IuhR1yUa6k0WtBY+nXG7GX5BeU5nqaHFKmoUCyHUvm5qfWIoPRi6Ayw4aRQg2fHtOnaLwGJw78oH138t61PAQw76pjuIrUwPwEJBqWH2T5pm2Qk3uliHu0jroGLlC6n+EcPX4ZDg=;
+X-UUID: ed32d557a3d94f8b99cceb813e0b93a4-20200319
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw01.mediatek.com
+ (envelope-from <erin.lo@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 617265054; Thu, 19 Mar 2020 23:13:38 -0800
+Received: from MTKMBS07N2.mediatek.inc (172.21.101.141) by
+ MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Fri, 20 Mar 2020 00:14:02 -0700
+Received: from mtkcas07.mediatek.inc (172.21.101.84) by
+ mtkmbs07n2.mediatek.inc (172.21.101.141) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Fri, 20 Mar 2020 15:12:36 +0800
+Received: from mtksdccf07.mediatek.inc (172.21.84.99) by mtkcas07.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
+ Frontend Transport; Fri, 20 Mar 2020 15:13:37 +0800
+From: Erin Lo <erin.lo@mediatek.com>
+To: <linux-firmware@kernel.org>
+Subject: pull request v2: linux-firmware: Create Mediatek MT8183 SCP firmware 
+Date: Fri, 20 Mar 2020 15:11:42 +0800
+Message-ID: <20200320071143.4225-1-erin.lo@mediatek.com>
+X-Mailer: git-send-email 2.18.0
 MIME-Version: 1.0
-In-Reply-To: <CALQxJuuue2MCF+xAAAcWCW=301HHZ9yWBmYV-K-ubCxO4s5eqQ@mail.gmail.com>
-Content-Language: en-US
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200320_000639_372158_6C283657 
-X-CRM114-Status: GOOD (  14.82  )
-X-Spam-Score: -2.3 (--)
+X-CRM114-CacheID: sfid-20200320_001344_479601_63261857 
+X-CRM114-Status: UNSURE (   6.82  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
- Content analysis details:   (-2.3 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
- medium trust [134.134.136.100 listed in list.dnswl.org]
- 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [216.200.240.184 listed in list.dnswl.org]
+ -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 0.0 MIME_BASE64_TEXT       RAW: Message text disguised using base64
+ encoding
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -73,62 +85,40 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Heiko Stuebner <heiko@sntech.de>, kvm@vger.kernel.org,
- David Airlie <airlied@linux.ie>,
- Joonas Lahtinen <joonas.lahtinen@linux.intel.com>,
- dri-devel@lists.freedesktop.org, Bjorn Andersson <bjorn.andersson@linaro.org>,
- linux-tegra@vger.kernel.org, Julien Grall <julien.grall@arm.com>,
- Thierry Reding <thierry.reding@gmail.com>, Will Deacon <will@kernel.org>,
- Marek Szyprowski <m.szyprowski@samsung.com>,
- Jean-Philippe Brucker <jean-philippe@linaro.org>,
- linux-samsung-soc@vger.kernel.org, Marc Zyngier <maz@kernel.org>,
- Joerg Roedel <joro@8bytes.org>, Krzysztof Kozlowski <krzk@kernel.org>,
- Jonathan Hunter <jonathanh@nvidia.com>, linux-rockchip@lists.infradead.org,
- Andy Gross <agross@kernel.org>, linux-arm-kernel@lists.infradead.org,
- linux-s390@vger.kernel.org, linux-arm-msm@vger.kernel.org,
- intel-gfx@lists.freedesktop.org, Jani Nikula <jani.nikula@linux.intel.com>,
- Eric Auger <eric.auger@redhat.com>,
- Alex Williamson <alex.williamson@redhat.com>,
- linux-mediatek@lists.infradead.org, Rodrigo Vivi <rodrigo.vivi@intel.com>,
- Matthias Brugger <matthias.bgg@gmail.com>,
- Thomas Gleixner <tglx@linutronix.de>,
- virtualization@lists.linux-foundation.org,
- Gerald Schaefer <gerald.schaefer@de.ibm.com>,
- David Woodhouse <dwmw2@infradead.org>, Cornelia Huck <cohuck@redhat.com>,
- Linux Kernel Mailing List <linux-kernel@vger.kernel.org>,
- Rob Clark <robdclark@gmail.com>, Kukjin Kim <kgene@kernel.org>,
- Daniel Vetter <daniel@ffwll.ch>, Robin Murphy <robin.murphy@arm.com>,
- baolu.lu@linux.intel.com
+Cc: menghui.lin@mediatek.com, maoguang.meng@mediatek.com,
+ srv_heupstream@mediatek.com, drinkcat@google.com, yunfei.dong@mediatek.com,
+ erin.lo@mediatek.com, linux-remoteproc@vger.kernel.org, sj.huang@mediatek.com,
+ linux-mediatek@lists.infradead.org, shawnku@google.com,
+ linux-arm-kernel@lists.infradead.org
+Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
-Content-Type: text/plain; charset="us-ascii"; Format="flowed"
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On 2020/3/20 14:30, Tom Murphy wrote:
-> Could we merge patch 1-3 from this series? it just cleans up weird
-> code and merging these patches will cover some of the work needed to
-> move the intel iommu driver to the dma-iommu api in the future.
+Hi, maintainers,
+Changes since v1:
+ - Add information to WHENCE
 
-Can you please take a look at this patch series?
+The following changes since commit 0148cfefcbf98898ca65bb26d9d7d638b30e211d:
 
-https://lkml.org/lkml/2020/3/13/1162
+  Merge https://github.com/rjliao-qca/qca-btfw (2020-03-02 08:08:15 -0500)
 
-It probably makes this series easier.
+are available in the Git repository at:
 
-Best regards,
-baolu
+  https://github.com/erinlo/linux_fw_scp v12573.77
 
-> 
-> On Sat, 21 Dec 2019 at 07:04, Tom Murphy<murphyt7@tcd.ie>  wrote:
->> Remove all IOVA handling code from the non-dma_ops path in the intel
->> iommu driver.
->>
->> There's no need for the non-dma_ops path to keep track of IOVAs. The
->> whole point of the non-dma_ops path is that it allows the IOVAs to be
->> handled separately. The IOVA handling code removed in this patch is
->> pointless.
->>
->> Signed-off-by: Tom Murphy<murphyt7@tcd.ie>
+for you to fetch changes up to 3c213aa59661c4641f0c2166a315140ac0445230:
+
+  mediatek: Add mt8183 SCP firmware (2020-03-20 14:37:49 +0800)
+
+----------------------------------------------------------------
+Erin Lo (1):
+      mediatek: Add mt8183 SCP firmware
+
+ WHENCE                  |  18 ++++++++++++++++++
+ mediatek/mt8183/scp.img | Bin 0 -> 1027104 bytes
+ 2 files changed, 18 insertions(+)
+ create mode 100644 mediatek/mt8183/scp.img
 
 _______________________________________________
 Linux-mediatek mailing list
