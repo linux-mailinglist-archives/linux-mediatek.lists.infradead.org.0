@@ -2,84 +2,87 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 8A63E18DB87
-	for <lists+linux-mediatek@lfdr.de>; Sat, 21 Mar 2020 00:09:59 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 1BD6418E0C5
+	for <lists+linux-mediatek@lfdr.de>; Sat, 21 Mar 2020 12:40:53 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=mR+wcKiJZ9ZpU8/JcSC2nm9ZaU6DwW/KN43HwgW7f44=; b=Icw7VyqsNu8WDw
-	CofcCqAkPRTwquPaC2cAUOe7+JqhzJCpQDH7duZBsyeuuhfaBRPMfNkQDJlCI+CW0L/PgFT+UdCKK
-	a7cFqlOguVq/dQ4o6QoQe/+q+sEp9XpO1VuXr2bEkL71PWIVhcLrlUfBekPE0KId9KcffvzSXTyXv
-	KWbgXp6wFKSPQ6ghpqc0gM4X6QXT+5SCgakh4uHxrIg/0/tbeF/ezj7WE/u001ttrGtToGSUjx7ov
-	Ynjl8wBjHqR9dV1nlcLtUfSFjeuQRBpEfjSUr2MMxcN3AnV+4tYtovFGYVV1igndYyOeg9v2bEy5j
-	R08OWFNh9xrXzlP5OA3w==;
+	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
+	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Message-Id:Date:
+	Subject:To:From:Reply-To:Content-ID:Content-Description:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+	References:List-Owner; bh=zOxD5Z6CiEN3cdmwFAGjMkn4xZIL44y8Gy9T8tGEqvc=; b=mCP
+	Jlgd6H6PpGX+bSdHhs2FDgf94MtcN1EiKjPW6XoC57hN0Kcp2gIJi7cAtvjVpz1VWZ8+hU6R3PgKc
+	BL7ULxgcEr/RRY7d2PPwRU6K6WxzgM66rUw5uEEUje3tNA+QvqUZqSjOM3+IwYJkXSFielZyozXQ3
+	GbyqRLULfbjeSynD7pM4AoqWJAaaFnW64Vu0UhfgCC9eJymBXfD8yQfdYsD2CJkzv+zqgOjyIi3Gf
+	vG1dJVGrJ5NJ4XkMGnbnyULOXCn3TCEL5UFDKVRHQat/2cL8R3SLKb1v/DHSz99CzWUuPoVrtQ9ab
+	6iSXCpciTc2FGCCnFZdb1QS7nDFrIVA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jFQlu-0002HT-Ed; Fri, 20 Mar 2020 23:09:46 +0000
-Received: from mail-io1-f67.google.com ([209.85.166.67])
+	id 1jFcUZ-0007IP-EF; Sat, 21 Mar 2020 11:40:39 +0000
+Received: from mail-wr1-x442.google.com ([2a00:1450:4864:20::442])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jFQli-0002A3-TP; Fri, 20 Mar 2020 23:09:36 +0000
-Received: by mail-io1-f67.google.com with SMTP id m15so2644706iob.5;
- Fri, 20 Mar 2020 16:09:33 -0700 (PDT)
+ id 1jFcUW-0007He-E9; Sat, 21 Mar 2020 11:40:37 +0000
+Received: by mail-wr1-x442.google.com with SMTP id h4so10627819wru.2;
+ Sat, 21 Mar 2020 04:40:35 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
+ h=from:to:cc:subject:date:message-id;
+ bh=7jR/DJniamHEDhpAAfPOcbN20Xg7ftVEruh/hyhO0PE=;
+ b=LsLAT8+uDmGSdQQJntAF8vnUqUnpGplRkCu3wIrpjOm72QwxiPSyucWszlZYxKozpk
+ qp1vUdTtSmAetmlLU6jTQsYrGZZvda/aPVoulZxELtCJkR0Tsk815tDkL+3HK/YXbxmF
+ jtLdYdPDUeiOXDU/BXFfAiZiw+i+o+K8v/k6ReFNHkMNTlclmAibR2TVRvpJfZhdkJjf
+ PO6EcEnhKLmfdn1TCVDGkM0VDNM4QsMMh+da0N9WrkDmlYc+Nei1FaumMXpQqwIkgw4S
+ CSLK6Su/ZLNqr4Y5WZVY9LyUUDLzSlUN8nngsIj++Gs1w7nQoRTiQsF98zCyGaGin7Oz
+ uAYQ==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:date:from:to:cc:subject:message-id:references
- :mime-version:content-disposition:in-reply-to:user-agent;
- bh=zI/A5t6sz0HZZha9rW07DEcIwNV0BjOpWxSE/SxyAvE=;
- b=Xwg2z291QgR8GnPh0Y0f79HZ5YGR0sJMd8DtvY8e5ZoqnRGYy5gvW5fUU1Wu/JFhO+
- ohOzViDT6Ba6+O1VCaXLl00ZsMlR4tRsjKb0nWE1bD/igUuvr1NifM8Rz+D+ODW6EO41
- 10NkjPspGfb6tOdrByqGOs+vGYj27ASZHsKFtO1ddlePW23JvwjXebwZ1kIJmo8940fc
- RdvOfw0S6efZsMdmVdszMb01sxARMy49sybhuMQ0aQ2uNzR1fmfNTvYvMGkxOmeros1x
- 0+8rNjI7HXGflWvxFUA2zPerpfb603S7H6W1WsNhu9WkEJCxZGIv3WpKM3GyZSmSivJR
- 08mA==
-X-Gm-Message-State: ANhLgQ3raBI1mwcyAYM+CXStIzeTj0zHEmFI8o7MJ8/CMhxiNLj4W+ss
- LBXCMokmoIC9gNvl4UhLLQ==
-X-Google-Smtp-Source: ADFU+vu8yuQGmtMjuXxAe3eJym4ITk7sMDRSQjp8IwrmCn4xXCWAQBhmn9VQa6+RdyyyGEdTKHltrg==
-X-Received: by 2002:a5d:8cd3:: with SMTP id k19mr10026199iot.123.1584745772527; 
- Fri, 20 Mar 2020 16:09:32 -0700 (PDT)
-Received: from rob-hp-laptop ([64.188.179.250])
- by smtp.gmail.com with ESMTPSA id g69sm1604552ile.3.2020.03.20.16.09.30
+ h=x-gm-message-state:from:to:cc:subject:date:message-id;
+ bh=7jR/DJniamHEDhpAAfPOcbN20Xg7ftVEruh/hyhO0PE=;
+ b=MN44luOnCYUoG1/KeortEgoKWaDFCRKaWHDDnTHitD+PIF70P8Mbc4olti27w13TuT
+ dA9HW2kNnWSopKBuliXtz8Ua/KsXeTuU9OlSXauYZXgAjW21BMcNfPhNGH5MyOecIjvz
+ 91SRQemmc0VMlQgOr4zqQabF1Aa//DQnbgLIjPtLKgkSYJdgyYPXyDKjc1oTTPfGsieK
+ KjLq+/xB3f6ctcQFjAkxFol2x7WjXKH3jis6huWrhyoKtwv0ENuye6xklgrSHOqWYM2o
+ /YV5LG7u2xl4oUE7Pt2ds5VlKzAuoCkacvz1bQKsACB3VWBdmRROS8/8yXwt009yX2MO
+ ScPQ==
+X-Gm-Message-State: ANhLgQ0irQKg0JKE5P9XuZ5UN0axI7Kg7d8Wk47qa25pmm+J+f+JTV3r
+ +dZ+6p3VxB4EEgqAjrG6ci8=
+X-Google-Smtp-Source: ADFU+vvxfx5Oi42isr8/wePrVDB2XPv0PjWByfMkPVW34u6Ng9Fb9YvXxU3xXUegrdwEReYm41u9Cg==
+X-Received: by 2002:a5d:6a4b:: with SMTP id t11mr17009174wrw.52.1584790834729; 
+ Sat, 21 Mar 2020 04:40:34 -0700 (PDT)
+Received: from felia.fritz.box ([2001:16b8:2d49:b100:e503:a7c7:f4c6:1aab])
+ by smtp.gmail.com with ESMTPSA id t16sm9533091wra.17.2020.03.21.04.40.33
  (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Fri, 20 Mar 2020 16:09:31 -0700 (PDT)
-Received: (nullmailer pid 14611 invoked by uid 1000);
- Fri, 20 Mar 2020 23:09:30 -0000
-Date: Fri, 20 Mar 2020 17:09:30 -0600
-From: Rob Herring <robh@kernel.org>
-To: Henry Chen <henryc.chen@mediatek.com>
-Subject: Re: [PATCH V4 08/13] dt-bindings: interconnect: add MT8183
- interconnect dt-bindings
-Message-ID: <20200320230930.GA10504@bogus>
-References: <1584092066-24425-1-git-send-email-henryc.chen@mediatek.com>
- <1584092066-24425-9-git-send-email-henryc.chen@mediatek.com>
-MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <1584092066-24425-9-git-send-email-henryc.chen@mediatek.com>
-User-Agent: Mutt/1.10.1 (2018-07-13)
+ Sat, 21 Mar 2020 04:40:34 -0700 (PDT)
+From: Lukas Bulwahn <lukas.bulwahn@gmail.com>
+To: Jeff Chang <jeff_chang@richtek.com>,
+ Matthias Brugger <matthias.bgg@gmail.com>,
+ linux-mediatek@lists.infradead.org
+Subject: [PATCH] ASoC: MT6660: make spdxcheck.py happy
+Date: Sat, 21 Mar 2020 12:40:22 +0100
+Message-Id: <20200321114022.8545-1-lukas.bulwahn@gmail.com>
+X-Mailer: git-send-email 2.17.1
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200320_160934_951306_BCFA946E 
-X-CRM114-Status: GOOD (  13.44  )
-X-Spam-Score: 0.5 (/)
+X-CRM114-CacheID: sfid-20200321_044036_500093_4A6E84D2 
+X-CRM114-Status: UNSURE (   8.84  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
- Content analysis details:   (0.5 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [209.85.166.67 listed in list.dnswl.org]
- 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
- mail domains are different
- -0.0 SPF_PASS               SPF: sender matches SPF record
+ no trust [2a00:1450:4864:20:0:0:0:442 listed in]
+ [list.dnswl.org]
  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider [robherring2[at]gmail.com]
- 0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
- in digit [robherring2[at]gmail.com]
+ provider [lukas.bulwahn[at]gmail.com]
+ -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
- [209.85.166.67 listed in wl.mailspike.net]
- 0.0 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
- EnvelopeFrom freemail headers are different
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -91,59 +94,40 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>, Nicolas Boichat <drinkcat@google.com>,
- Mike Turquette <mturquette@linaro.org>, srv_heupstream@mediatek.com,
- James Liao <jamesjj.liao@mediatek.com>, Viresh Kumar <vireshk@kernel.org>,
- linux-pm@vger.kernel.org, linux-kernel@vger.kernel.org,
- Stephen Boyd <swboyd@chromium.org>, Fan Chen <fan.chen@mediatek.com>,
- devicetree@vger.kernel.org, Mark Brown <broonie@kernel.org>,
- Ryan Case <ryandcase@chromium.org>, Arvin Wang <arvin.wang@mediatek.com>,
- Matthias Brugger <matthias.bgg@gmail.com>, linux-mediatek@lists.infradead.org,
- Georgi Djakov <georgi.djakov@linaro.org>, linux-arm-kernel@lists.infradead.org
+Cc: alsa-devel@alsa-project.org, linux-kernel@vger.kernel.org,
+ Mark Brown <broonie@kernel.org>, Lukas Bulwahn <lukas.bulwahn@gmail.com>,
+ linux-spdx@vger.kernel.org, linux-arm-kernel@lists.infradead.org
+MIME-Version: 1.0
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Fri, Mar 13, 2020 at 05:34:21PM +0800, Henry Chen wrote:
-> Add interconnect provider dt-bindings for MT8183.
-> 
-> Signed-off-by: Henry Chen <henryc.chen@mediatek.com>
-> ---
->  .../devicetree/bindings/soc/mediatek/dvfsrc.txt        |  9 +++++++++
->  include/dt-bindings/interconnect/mtk,mt8183-emi.h      | 18 ++++++++++++++++++
->  2 files changed, 27 insertions(+)
->  create mode 100644 include/dt-bindings/interconnect/mtk,mt8183-emi.h
-> 
-> diff --git a/Documentation/devicetree/bindings/soc/mediatek/dvfsrc.txt b/Documentation/devicetree/bindings/soc/mediatek/dvfsrc.txt
-> index 7f43499..da98ec9 100644
-> --- a/Documentation/devicetree/bindings/soc/mediatek/dvfsrc.txt
-> +++ b/Documentation/devicetree/bindings/soc/mediatek/dvfsrc.txt
-> @@ -12,6 +12,11 @@ Required Properties:
->  - clock-names: Must include the following entries:
->  	"dvfsrc": DVFSRC module clock
->  - clocks: Must contain an entry for each entry in clock-names.
-> +- #interconnect-cells : should contain 1
-> +- interconnect : interconnect providers support dram bandwidth requirements.
-> +	The provider is able to communicate with the DVFSRC and send the dram
-> +	bandwidth to it. shall contain only one of the following:
-> +	"mediatek,mt8183-emi"
->  
->  Example:
->  
-> @@ -20,4 +25,8 @@ Example:
->  		reg = <0 0x10012000 0 0x1000>;
->  		clocks = <&infracfg CLK_INFRA_DVFSRC>;
->  		clock-names = "dvfsrc";
-> +		ddr_emi: interconnect {
-> +			compatible = "mediatek,mt8183-emi";
-> +			#interconnect-cells = <1>;
+The SPDX-License-Identifier shall not be suffixed with anything further.
+This makes ./scripts/spdxcheck.py complain:
 
-Nodes with a compatible and no defined way to access the hardware always 
-look suspicious. Can't you make the parent node an interconnect 
-provider.
+  sound/soc/codecs/mt6660.c: 1:36 Invalid token: //
 
-Rob
+Clean up SPDX-License-Identifier line to make spdxcheck.py happy.
+
+Signed-off-by: Lukas Bulwahn <lukas.bulwahn@gmail.com>
+---
+ sound/soc/codecs/mt6660.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/sound/soc/codecs/mt6660.c b/sound/soc/codecs/mt6660.c
+index a36c416caad4..06ab1d39d2c1 100644
+--- a/sound/soc/codecs/mt6660.c
++++ b/sound/soc/codecs/mt6660.c
+@@ -1,4 +1,4 @@
+-// SPDX-License-Identifier: GPL-2.0 //
++// SPDX-License-Identifier: GPL-2.0
+ 
+ // Copyright (c) 2019 MediaTek Inc.
+ 
+-- 
+2.17.1
+
 
 _______________________________________________
 Linux-mediatek mailing list
