@@ -2,43 +2,43 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id E7A5E18F44F
-	for <lists+linux-mediatek@lfdr.de>; Mon, 23 Mar 2020 13:17:32 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id A0C0C18F446
+	for <lists+linux-mediatek@lfdr.de>; Mon, 23 Mar 2020 13:16:36 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=CxWEDk4PIvOswQMiy9ciDCrQK3gAdo1+M2ffKlzYCms=; b=T7Q8hF7sWww2+N
-	5AtEBRyA3Wejcp1Z7A/BwvPwZ4ViZ1btlepBa0gZQ//BPCbADkjpgkHxmvra0sdLysdUshbYSOBJI
-	n6jZtaV+EA0R5RPUEia+TRHeiI0c+bbp2W3Q2ZGzxdWIgrVh77R7gKC6t4+or7bGvgk0rtLIfjtqE
-	rJ1rW3ZQU7rLEUbjUY3dVsQyPey/rELpFu9X7i8Zt973D9uhHuQY/W6bHcFsipnnTrr1c3WzkDiwh
-	STdgKS+qMAXWyOh9aAF6xtLoHar5kCw67h+Dq1kTd8xqbuIvuEV/anjt8xT5C0w4TiDXNXXXCZkzr
-	Js73YrvJuea6p+AS1HLg==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=srIhxshtBGOr0xHtxBuunkqtdDamc/Fu0GuKQYO3kKY=; b=nDR3qv7Y6hx3jq
+	Q5Z/SpwLn/PTrfMF2gBwJFi/J+yLlGUWaJnMWCyyxLElc8fouyYbeaCrK/ap541nbZ4i2FXIOxTac
+	BIdN3sNoFeIwcyvP0zFFXRivdVhA0VdHD6kZ4/14mfqN8E5vZ5HQfSYhVG7AWUHj+wbwQi2ccQzSd
+	DsDAFXP2FuggdJrWnL4b/HERBJ6y1CJaTW7E/XViGqVcp2UYmFGL/ZqenbTtg4MEQd3oUQCGEJhNn
+	/dxvnP6eINZpIu4qqxplXOf/rY/gVQJwfDMc59vYrUXTpMZxnZd28PWq8xdwJBHtpLDs9vCQ8FTOt
+	pxv+Qt3wWO6H9Osf+JOw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jGM1F-0008Tn-Tm; Mon, 23 Mar 2020 12:17:25 +0000
+	id 1jGM0M-0007Po-Aw; Mon, 23 Mar 2020 12:16:30 +0000
 Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jGLzi-0006oU-Tm; Mon, 23 Mar 2020 12:15:52 +0000
-X-UUID: 609ad3716f6447f6bc39c5361f35804b-20200323
+ id 1jGLzh-0006oU-6C; Mon, 23 Mar 2020 12:15:50 +0000
+X-UUID: 32e858f50b8148efbbc32786bb006e89-20200323
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
  s=dk; 
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:Subject:CC:To:From;
- bh=+agh3Es7dP6XolQ0jlcE57kFr9lWPqGfX2DPzkcDR8M=; 
- b=aC57KzAo+3q95D82mtkf4SpJT2214zJmYbLyyds7UUtRiCIfFK+sJ6ZnYHcY2N9Wx35bMHsAlaKSvC6fqIqbj8rEsTgfFACbFqhU/ihJW2332y8k5A+aTkXHNq0k7lYekx6crCu5CgFo54Y/cbnYeeE6Mdww5UpK8noWCV4tD3U=;
-X-UUID: 609ad3716f6447f6bc39c5361f35804b-20200323
-Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw01.mediatek.com
+ h=Content-Transfer-Encoding:Content-Type:MIME-Version:References:In-Reply-To:Message-ID:Date:Subject:CC:To:From;
+ bh=kFXOGIrbZvG1pMcA5nWeAzPVOClsgKfC1+JFMevkUH0=; 
+ b=iBSVdMlk8WSou9EekUafwNmqIWJ6Ccnk4GAn23OJCnVcLGaw/TnEMktIiQFfCINSWUmNHCorRR63/PwxnW8M4cqTLGLOUagHeB2SMBt0np0yic0K5wdit5/tZzjyreW7G7rKenHcyU9ovY+m4fA0UI58ZPVdviBIr8YhWUY+bJ8=;
+X-UUID: 32e858f50b8148efbbc32786bb006e89-20200323
+Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw01.mediatek.com
  (envelope-from <michael.kao@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1560738857; Mon, 23 Mar 2020 04:15:42 -0800
-Received: from mtkmbs05n2.mediatek.inc (172.21.101.140) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 23 Mar 2020 05:15:39 -0700
+ with ESMTP id 2046566071; Mon, 23 Mar 2020 04:15:42 -0800
+Received: from mtkmbs05n1.mediatek.inc (172.21.101.15) by
+ MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Mon, 23 Mar 2020 05:15:40 -0700
 Received: from mtkcas08.mediatek.inc (172.21.101.126) by
- mtkmbs05n2.mediatek.inc (172.21.101.140) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 23 Mar 2020 20:14:28 +0800
+ mtkmbs05n1.mediatek.inc (172.21.101.15) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Mon, 23 Mar 2020 20:14:16 +0800
 Received: from mtksdccf07.mediatek.inc (172.21.84.99) by mtkcas08.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
  Frontend Transport; Mon, 23 Mar 2020 20:15:37 +0800
@@ -48,16 +48,17 @@ To: Matthias Brugger <matthias.bgg@gmail.com>, Zhang Rui
  <daniel.lezcano@linaro.org>, Rob Herring <robh+dt@kernel.org>, Mark Rutland
  <mark.rutland@arm.com>, <hsinyi@chromium.org>, <linux-pm@vger.kernel.org>,
  <srv_heupstream@mediatek.com>, <michael.kao@mediatek.com>
-Subject: [v4,0/7] Add Mediatek thermal dirver and dtsi
-Date: Mon, 23 Mar 2020 20:15:30 +0800
-Message-ID: <20200323121537.22697-1-michael.kao@mediatek.com>
+Subject: [v4,1/7] arm64: dts: mt8183: add thermal zone node
+Date: Mon, 23 Mar 2020 20:15:31 +0800
+Message-ID: <20200323121537.22697-2-michael.kao@mediatek.com>
 X-Mailer: git-send-email 2.18.0
+In-Reply-To: <20200323121537.22697-1-michael.kao@mediatek.com>
+References: <20200323121537.22697-1-michael.kao@mediatek.com>
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200323_051550_993132_78E7F26E 
-X-CRM114-Status: UNSURE (   7.47  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20200323_051549_246471_F1D0B258 
+X-CRM114-Status: GOOD (  10.12  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
@@ -89,57 +90,131 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: devicetree@vger.kernel.org, linux-mediatek@lists.infradead.org,
- linux-kernel@vger.kernel.org, linux-arm-kernel@lists.infradead.org
+Cc: devicetree@vger.kernel.org, Matthias Kaehlcke <mka@chromium.org>,
+ linux-mediatek@lists.infradead.org, linux-kernel@vger.kernel.org,
+ linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-This patchset supports for MT8183 chip to mtk_thermal.c.
-Add thermal zone of all the thermal sensor in SoC for
-another get temperatrue. They don't need to thermal throttle.
-And we bind coolers for thermal zone nodes of cpu_thermal.
+From: "michael.kao" <michael.kao@mediatek.com>
 
-Rebase to kernel-5.6-rc1.
+Add thermal zone node to Mediatek MT8183 dts file.
 
-Update content:
+Evaluate the thermal zone every 500ms while not cooling
+and every 100ms when passive cooling is performed.
 
-[1/7]
-    - Squash thermal zone settings in the dtsi from [v3,5/8]
-      arm64: dts: mt8183: Increase polling frequency for CPU thermal zone
+Signed-off-by: Matthias Kaehlcke <mka@chromium.org>
+Signed-off-by: Michael Kao <michael.kao@mediatek.com>
+---
+ arch/arm64/boot/dts/mediatek/mt8183.dtsi | 84 ++++++++++++++++++++++++
+ 1 file changed, 84 insertions(+)
 
-    - Remove the property of interrupts and mediatek,hw-reset-temp
-
-[2/7]
-    - Correct commit message
-
-[4/7]
-    - Change the target temperature to the 80C and change the commit message
-
-[6/7]
-    - Adjust newline alignment
-
-    - Fix the judgement on the return value of registering thermal zone
-
-This patch series base on these patches [1].
-
-[v7,3/3] PM / AVS: SVS: Introduce SVS engine (https://patchwork.kernel.org/patch/11439829/)
-
-Matthias Kaehlcke (1):
-  arm64: dts: mt8183: Configure CPU cooling
-
-Michael Kao (6):
-  arm64: dts: mt8183: add thermal zone node
-  arm64: dts: mt8183: add dynamic power coefficients
-  arm64: dts: mt8183: Add #cooling-cells to CPU nodes
-  thermal: mediatek: mt8183: fix bank number settings
-  thermal: mediatek: add another get_temp ops for thermal sensors
-  thermal: mediatek: use spinlock to protect PTPCORESEL
-
- arch/arm64/boot/dts/mediatek/mt8183.dtsi | 156 +++++++++++++++++++++++
- drivers/thermal/mtk_thermal.c            |  88 +++++++++++--
- 2 files changed, 231 insertions(+), 13 deletions(-)
+diff --git a/arch/arm64/boot/dts/mediatek/mt8183.dtsi b/arch/arm64/boot/dts/mediatek/mt8183.dtsi
+index 433c62efab2d..59f97217aaa8 100644
+--- a/arch/arm64/boot/dts/mediatek/mt8183.dtsi
++++ b/arch/arm64/boot/dts/mediatek/mt8183.dtsi
+@@ -638,6 +638,86 @@
+ 			status = "disabled";
+ 		};
+ 
++		thermal: thermal@1100b000 {
++			#thermal-sensor-cells = <1>;
++			compatible = "mediatek,mt8183-thermal";
++			reg = <0 0x1100b000 0 0x1000>;
++			clocks = <&infracfg CLK_INFRA_THERM>,
++				 <&infracfg CLK_INFRA_AUXADC>;
++			clock-names = "therm", "auxadc";
++			resets = <&infracfg  MT8183_INFRACFG_AO_THERM_SW_RST>;
++			mediatek,auxadc = <&auxadc>;
++			mediatek,apmixedsys = <&apmixedsys>;
++			nvmem-cells = <&thermal_calibration>;
++			nvmem-cell-names = "calibration-data";
++		};
++
++		thermal-zones {
++			cpu_thermal: cpu_thermal {
++				polling-delay-passive = <100>;
++				polling-delay = <500>;
++				thermal-sensors = <&thermal 0>;
++				sustainable-power = <5000>;
++			};
++
++			/* The tzts1 ~ tzts6 don't need to polling */
++			/* The tzts1 ~ tzts6 don't need to thermal throttle */
++
++			tzts1: tzts1 {
++				polling-delay-passive = <0>;
++				polling-delay = <0>;
++				thermal-sensors = <&thermal 1>;
++				sustainable-power = <5000>;
++				trips {};
++				cooling-maps {};
++			};
++
++			tzts2: tzts2 {
++				polling-delay-passive = <0>;
++				polling-delay = <0>;
++				thermal-sensors = <&thermal 2>;
++				sustainable-power = <5000>;
++				trips {};
++				cooling-maps {};
++			};
++
++			tzts3: tzts3 {
++				polling-delay-passive = <0>;
++				polling-delay = <0>;
++				thermal-sensors = <&thermal 3>;
++				sustainable-power = <5000>;
++				trips {};
++				cooling-maps {};
++			};
++
++			tzts4: tzts4 {
++				polling-delay-passive = <0>;
++				polling-delay = <0>;
++				thermal-sensors = <&thermal 4>;
++				sustainable-power = <5000>;
++				trips {};
++				cooling-maps {};
++			};
++
++			tzts5: tzts5 {
++				polling-delay-passive = <0>;
++				polling-delay = <0>;
++				thermal-sensors = <&thermal 5>;
++				sustainable-power = <5000>;
++				trips {};
++				cooling-maps {};
++			};
++
++			tztsABB: tztsABB {
++				polling-delay-passive = <0>;
++				polling-delay = <0>;
++				thermal-sensors = <&thermal 6>;
++				sustainable-power = <5000>;
++				trips {};
++				cooling-maps {};
++			};
++		};
++
+ 		audiosys: syscon@11220000 {
+ 			compatible = "mediatek,mt8183-audiosys", "syscon";
+ 			reg = <0 0x11220000 0 0x1000>;
+@@ -648,6 +728,10 @@
+ 			compatible = "mediatek,mt8183-efuse",
+ 				     "mediatek,efuse";
+ 			reg = <0 0x11f10000 0 0x1000>;
++
++			thermal_calibration: calib@180 {
++				reg = <0x180 0xc>;
++			};
+ 		};
+ 
+ 		mfgcfg: syscon@13000000 {
+-- 
+2.18.0
 _______________________________________________
 Linux-mediatek mailing list
 Linux-mediatek@lists.infradead.org
