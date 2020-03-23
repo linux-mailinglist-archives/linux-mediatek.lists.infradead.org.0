@@ -2,63 +2,67 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id F356F18E9BA
-	for <lists+linux-mediatek@lfdr.de>; Sun, 22 Mar 2020 16:35:11 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 1B97818ED94
+	for <lists+linux-mediatek@lfdr.de>; Mon, 23 Mar 2020 02:12:34 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
-	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:References:
-	In-Reply-To:Message-Id:Date:Subject:To:From:Reply-To:Content-ID:
-	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
-	:Resent-Message-ID:List-Owner;
-	bh=b5TKxlJnIkLH9vyiHlg0qER+w9YrhaiDqGhj2G3EaqM=; b=PO/AJRD9/4wzh/KXge80kS7IZH
-	Ys4GUj2JxwBBXNCtA3/h54zljY+ZmR95ffT7NwTr83/ad2MJmpuwv1xaM/OJEHII/uKAyOe8RxOET
-	4sPKy4p1wDkzZFg3jGuglJHaKHUnMx/TjdFswZ04G2Kjyu6Z9qLSjhc+yG7MCh6EXyXdAEGuAu9T/
-	8U+m8FkTvORCRpZ20qOmwyaRgJRuLH4qYxo4ne24TaNFq/qWuVR/InpcgSE7ZMKiSLyBT0BGsGog8
-	4fQTl3nceyHqxp/B8qr9ZIxdZ1kbTpTxi/XHVfVIhw6rc1oN1kx3NhCaCFHDRClmEYZ4uF32/tHDi
-	ggmfS4UQ==;
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=GJDmaf68VkVCAaSD4jQlSPcLXwh+AuEduCB+56lv9p8=; b=hd21lb8CCQy4ec
+	/s496K2bOVmlEAT1mNgMMOpni5AJM1zT3T91L7ln9mqRlp/L7Io5qj1ZGx++vagcPOvnOYlsCuYH9
+	XKcGhnG3PWD1szwV8Bisu4ZI0hSv2lGqb51jnANjwFM+FC+ICeviE3rJfeOBhcG6hic5oYZQnBZsI
+	hBE5mrYaq2hty7XGZ5j7VUIfAEJLDVZSu57iFdSbPEEBe0fZVt6N2AmSM+XTOrmRe46R5zcj3o5CO
+	0UCY4ONQf2By+jAC7EtDdjBVPCBlc8hDETCDekJ2FJ9EhqCb6xaQon+TkNIMjB4b4FZBxLZMt5ZDF
+	l/hXfiH2S4EDn6D+3mNA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jG2cz-0005hK-0u; Sun, 22 Mar 2020 15:35:05 +0000
-Received: from mail.kernel.org ([198.145.29.99])
+	id 1jGBdY-0002nv-Tw; Mon, 23 Mar 2020 01:12:16 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jG2cr-0005eS-89
- for linux-mediatek@lists.infradead.org; Sun, 22 Mar 2020 15:34:58 +0000
-Received: from DESKTOP-GFFITBK.localdomain (218-161-90-76.HINET-IP.hinet.net
- [218.161.90.76])
- (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
- (No client certificate requested)
- by mail.kernel.org (Postfix) with ESMTPSA id 3782920736;
- Sun, 22 Mar 2020 15:34:55 +0000 (UTC)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1584891296;
- bh=bFnnF2dZO5qJovO73F2Ej1VVG447VC5SqBeFPILlMsI=;
- h=From:To:Cc:Subject:Date:In-Reply-To:References:From;
- b=qxoUzW1f5wpb6gvf6E4Lnfjp+mjt2q+z/bIw4lyzOe/a41T2EjD+C32SX0oAC/GQG
- 3EcVAQ2xf0590fKrPlhK360bm4aYGN0/zgQ86i1aDeOl2r9eS16odHzZGEAoESnAc8
- THvT7Al1sh8PenOLjXQICQuJz2iBv0xw9uUd4C5w=
-From: Chun-Kuang Hu <chunkuang.hu@kernel.org>
-To: Philipp Zabel <p.zabel@pengutronix.de>, David Airlie <airlied@linux.ie>,
- Daniel Vetter <daniel@ffwll.ch>, Matthias Brugger <matthias.bgg@gmail.com>,
- Chunfeng Yun <chunfeng.yun@mediatek.com>,
- Kishon Vijay Abraham I <kishon@ti.com>
-Subject: [PATCH 4/4] MAINTAINERS: add files for Mediatek DRM drivers
-Date: Sun, 22 Mar 2020 23:34:24 +0800
-Message-Id: <20200322153424.2447-5-chunkuang.hu@kernel.org>
-X-Mailer: git-send-email 2.17.1
-In-Reply-To: <20200322153424.2447-1-chunkuang.hu@kernel.org>
-References: <20200322153424.2447-1-chunkuang.hu@kernel.org>
+ id 1jGBdT-0002mt-BO; Mon, 23 Mar 2020 01:12:14 +0000
+X-UUID: e84cfff42ba54b33b7932408f16c0e21-20200322
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
+ s=dk; 
+ h=Content-Transfer-Encoding:MIME-Version:Content-Type:References:In-Reply-To:Date:CC:To:From:Subject:Message-ID;
+ bh=Ej7b2xhDVPxexbXWATZXTqKZRMpmRwD04pT0SWLn2fk=; 
+ b=fCIOZ+bWNom8QOBcauvYjY7vyph+pCXA1q4bc1Wd1qWLAI/bcnraokHPUBldFY3u+D6NQCQ03BpaRBQiPrVEKxahMNEXn5IkfZ/PTze118rifakZLoiCRwrbNui7FP+7D70UYRuEDzKEJguwIvNTLDrhy2/2kTB8PT035c/RRz4=;
+X-UUID: e84cfff42ba54b33b7932408f16c0e21-20200322
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
+ (envelope-from <dennis-yc.hsieh@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 476863208; Sun, 22 Mar 2020 17:12:04 -0800
+Received: from MTKMBS07N2.mediatek.inc (172.21.101.141) by
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Sun, 22 Mar 2020 18:12:35 -0700
+Received: from MTKCAS06.mediatek.inc (172.21.101.30) by
+ mtkmbs07n2.mediatek.inc (172.21.101.141) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Mon, 23 Mar 2020 09:11:00 +0800
+Received: from [172.21.77.33] (172.21.77.33) by MTKCAS06.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Mon, 23 Mar 2020 09:09:43 +0800
+Message-ID: <1584925915.16928.1.camel@mtkswgap22>
+Subject: Re: [PATCH v5 02/13] mailbox: cmdq: variablize address shift in
+ platform
+From: Dennis-YC Hsieh <dennis-yc.hsieh@mediatek.com>
+To: Jassi Brar <jassisinghbrar@gmail.com>
+Date: Mon, 23 Mar 2020 09:11:55 +0800
+In-Reply-To: <CABb+yY04NbSvHkQ0sVHd+KjU3ZFZSZD=H99OSNjoeu+Qpk7R8g@mail.gmail.com>
+References: <1583664775-19382-1-git-send-email-dennis-yc.hsieh@mediatek.com>
+ <1583664775-19382-3-git-send-email-dennis-yc.hsieh@mediatek.com>
+ <CABb+yY04NbSvHkQ0sVHd+KjU3ZFZSZD=H99OSNjoeu+Qpk7R8g@mail.gmail.com>
+X-Mailer: Evolution 3.2.3-0ubuntu6 
+MIME-Version: 1.0
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200322_083457_316489_8C92C85A 
-X-CRM114-Status: UNSURE (   9.01  )
-X-CRM114-Notice: Please train this message.
-X-Spam-Score: -5.2 (-----)
+X-CRM114-CacheID: sfid-20200322_181211_400201_CEE2B511 
+X-CRM114-Status: GOOD (  12.17  )
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
- Content analysis details:   (-5.2 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
- high trust [198.145.29.99 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
@@ -68,7 +72,8 @@ X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
- -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -80,38 +85,52 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Chun-Kuang Hu <chunkuang.hu@kernel.org>, linux-mediatek@lists.infradead.org,
- linux-kernel@vger.kernel.org, dri-devel@lists.freedesktop.org
-MIME-Version: 1.0
+Cc: Mark Rutland <mark.rutland@arm.com>,
+ Devicetree List <devicetree@vger.kernel.org>,
+ Philipp Zabel <p.zabel@pengutronix.de>, wsd_upstream@mediatek.com,
+ David Airlie <airlied@linux.ie>,
+ Linux Kernel Mailing List <linux-kernel@vger.kernel.org>,
+ dri-devel@lists.freedesktop.org, HS Liao <hs.liao@mediatek.com>,
+ CK Hu <ck.hu@mediatek.com>, Rob Herring <robh+dt@kernel.org>,
+ linux-mediatek@lists.infradead.org, Houlong Wei <houlong.wei@mediatek.com>,
+ Daniel Vetter <daniel@ffwll.ch>, Matthias Brugger <matthias.bgg@gmail.com>,
+ Bibby Hsieh <bibby.hsieh@mediatek.com>,
+ linux-arm-kernel <linux-arm-kernel@lists.infradead.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Mediatek HDMI phy driver is moved from drivers/gpu/drm/mediatek to
-drivers/phy/mediatek, so add the new folder to the Mediatek DRM drivers'
-information.
+Hi Jassi,
 
-Signed-off-by: Chun-Kuang Hu <chunkuang.hu@kernel.org>
----
- MAINTAINERS | 1 +
- 1 file changed, 1 insertion(+)
 
-diff --git a/MAINTAINERS b/MAINTAINERS
-index 38fe2f3f7b6f..129777037538 100644
---- a/MAINTAINERS
-+++ b/MAINTAINERS
-@@ -5612,6 +5612,7 @@ M:	Philipp Zabel <p.zabel@pengutronix.de>
- L:	dri-devel@lists.freedesktop.org
- S:	Supported
- F:	drivers/gpu/drm/mediatek/
-+F:	drivers/phy/mediatek/phy-mtk-hdmi*
- F:	Documentation/devicetree/bindings/display/mediatek/
- 
- DRM DRIVERS FOR NVIDIA TEGRA
--- 
-2.17.1
+On Thu, 2020-03-19 at 20:05 -0500, Jassi Brar wrote:
+> On Sun, Mar 8, 2020 at 5:53 AM Dennis YC Hsieh
+> <dennis-yc.hsieh@mediatek.com> wrote:
+> >
+> > Some gce hardware shift pc and end address in register to support
+> > large dram addressing.
+> > Implement gce address shift when write or read pc and end register.
+> > And add shift bit in platform definition.
+> >
+> > Signed-off-by: Dennis YC Hsieh <dennis-yc.hsieh@mediatek.com>
+> > Reviewed-by: CK Hu <ck.hu@mediatek.com>
+> > ---
+> >  drivers/mailbox/mtk-cmdq-mailbox.c       | 61 ++++++++++++++++++------
+> >  drivers/soc/mediatek/mtk-cmdq-helper.c   |  3 +-
+> >  include/linux/mailbox/mtk-cmdq-mailbox.h |  2 +
+> >
+> Please segregate this patch, and any other if, into mailbox and
+> platform specific patchsets. Ideally soc/client specific changes later
+> on top of mailbox/provider changes.
+> 
+> Thanks
 
+Thanks for your comment. I'll separate mailbox and soc code.
+
+
+Regards,
+Dennis
 
 _______________________________________________
 Linux-mediatek mailing list
