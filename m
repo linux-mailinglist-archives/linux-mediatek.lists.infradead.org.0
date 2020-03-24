@@ -2,46 +2,46 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 3E4A719129A
-	for <lists+linux-mediatek@lfdr.de>; Tue, 24 Mar 2020 15:16:46 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id B74271912F3
+	for <lists+linux-mediatek@lfdr.de>; Tue, 24 Mar 2020 15:24:57 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:Cc:
 	List-Subscribe:List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:
 	In-Reply-To:MIME-Version:References:Message-ID:Subject:To:From:Date:Reply-To:
 	Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
 	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
-	 bh=hG22WATwAMXre8CowX06tFf0PS0W8/4/qmjzIFfNWbY=; b=OsuZkJiCfcaE41TIC8+uZPr2r
-	Et74qQYpsUijl1wBOfBBuH6iv4G03rsm028IdVO+ffEHzjd38KM52j7QTdqY2Mx6QdQheKjMyF7xH
-	ZilSk/4bRVBw0yxWAxGUgPFjwYNs69Uh9DkeLX8LCaPJ3Ov7kKPkdKdN9Z6Ny/gp33yOHuqAa7wFy
-	sUsTkeq8xbMcC49SreWlkRKO9PPqIUwPvl70yJc9msGRWQwKAAgWhoQWuthRzYDug+O3vGnAWLgx/
-	pAvd6Bt5KrIBKkAPoOVBgBk5fSZQ7zOxWRnGRQAwh2Ed1Z4g8yUIv8CWChm99icNZsIKf7r/3+K/W
-	goBCwkRBw==;
+	 bh=SwQ5SYlP0IvZp36wp3HcIzxj2fA4NGBTTW/Te9HHSFI=; b=Hz7CF2cl8C9C0Si8uzGZDNyiq
+	mV1PU4nmT0hlwlAELnGVuLNQ2AMCYIqSUN7tQx0zKaM/a3ivpiTfXxHmTHeEsXVVVmv4O0GQVsaBB
+	CsBgW9vNMdZEgd+fFNDT4HgAE/4MScc6qpeY/JQ1b+rzHbeSR9zBHd5GtSLJz+hm6u0A1DBb6ci4F
+	txAr1m2onJFx1XYItWKHNg28+KmPMbx4GnzcbycXi5mYyWkjuM0R+HLZYZ244mBj8KaGFf7KUkTaf
+	bYwWUCMQzlVx9xO8Xyeo0weyzk5DZR8izO5ND0svh90F6dzJAJmrJwM4SQMl4DOmKO+FKri+UUmW+
+	cfz3g2E+w==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jGkMA-0004Ri-0d; Tue, 24 Mar 2020 14:16:38 +0000
+	id 1jGkU6-0001qD-IJ; Tue, 24 Mar 2020 14:24:50 +0000
 Received: from foss.arm.com ([217.140.110.172])
  by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jGkM6-0004RB-Rr; Tue, 24 Mar 2020 14:16:36 +0000
+ id 1jGkTo-0001c6-0u; Tue, 24 Mar 2020 14:24:37 +0000
 Received: from usa-sjc-imap-foss1.foss.arm.com (unknown [10.121.207.14])
- by usa-sjc-mx-foss1.foss.arm.com (Postfix) with ESMTP id DA5A51FB;
- Tue, 24 Mar 2020 07:16:33 -0700 (PDT)
+ by usa-sjc-mx-foss1.foss.arm.com (Postfix) with ESMTP id DC9401FB;
+ Tue, 24 Mar 2020 07:24:29 -0700 (PDT)
 Received: from localhost (unknown [10.37.6.21])
- by usa-sjc-imap-foss1.foss.arm.com (Postfix) with ESMTPSA id 630563F52E;
- Tue, 24 Mar 2020 07:16:33 -0700 (PDT)
-Date: Tue, 24 Mar 2020 14:16:31 +0000
+ by usa-sjc-imap-foss1.foss.arm.com (Postfix) with ESMTPSA id 372A53F52E;
+ Tue, 24 Mar 2020 07:24:29 -0700 (PDT)
+Date: Tue, 24 Mar 2020 14:24:27 +0000
 From: Mark Brown <broonie@kernel.org>
 To: Matti Vaittinen <matti.vaittinen@fi.rohmeurope.com>
-Subject: Re: [PATCH v6 03/10] lib: add linear ranges helpers
-Message-ID: <20200324141631.GE7039@sirena.org.uk>
+Subject: Re: [PATCH v6 06/10] regulator: use linear_ranges helper
+Message-ID: <20200324142427.GF7039@sirena.org.uk>
 References: <cover.1584977512.git.matti.vaittinen@fi.rohmeurope.com>
- <c659a4627bc33b8a7d10e1af16e85edd0ff8637f.1584977512.git.matti.vaittinen@fi.rohmeurope.com>
+ <5522b2e03f77e1b7c93adf07b85747ea9ddfbf9b.1584977512.git.matti.vaittinen@fi.rohmeurope.com>
 MIME-Version: 1.0
-In-Reply-To: <c659a4627bc33b8a7d10e1af16e85edd0ff8637f.1584977512.git.matti.vaittinen@fi.rohmeurope.com>
+In-Reply-To: <5522b2e03f77e1b7c93adf07b85747ea9ddfbf9b.1584977512.git.matti.vaittinen@fi.rohmeurope.com>
 X-Cookie: I feel ... JUGULAR ...
 User-Agent: Mutt/1.10.1 (2018-07-13)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200324_071634_992134_2B7073FF 
-X-CRM114-Status: GOOD (  12.71  )
+X-CRM114-CacheID: sfid-20200324_072432_168079_3188E37E 
+X-CRM114-Status: GOOD (  11.90  )
 X-Spam-Score: -2.1 (--)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
  Content analysis details:   (-2.1 points)
@@ -103,52 +103,53 @@ Cc: Mark Rutland <mark.rutland@arm.com>, Milo Kim <milo.kim@ti.com>,
  Masami Hiramatsu <mhiramat@kernel.org>, patches@opensource.cirrus.com,
  Andrew Morton <akpm@linux-foundation.org>, Vladimir Oltean <olteanv@gmail.com>,
  "David S. Miller" <davem@davemloft.net>
-Content-Type: multipart/mixed; boundary="===============0605430446613083547=="
+Content-Type: multipart/mixed; boundary="===============9019065393513980571=="
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
 
---===============0605430446613083547==
+--===============9019065393513980571==
 Content-Type: multipart/signed; micalg=pgp-sha512;
-	protocol="application/pgp-signature"; boundary="OZkY3AIuv2LYvjdk"
+	protocol="application/pgp-signature"; boundary="yRA+Bmk8aPhU85Qt"
 Content-Disposition: inline
 
 
---OZkY3AIuv2LYvjdk
+--yRA+Bmk8aPhU85Qt
 Content-Type: text/plain; charset=us-ascii
 Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
 
-On Tue, Mar 24, 2020 at 10:29:09AM +0200, Matti Vaittinen wrote:
-> Many devices have control registers which control some measurable
-> property. Often a register contains control field so that change in
-> this field causes linear change in the controlled property. It is not
-> a rare case that user wants to give 'meaningful' control values and
-> driver needs to convert them to register field values. Even more
-> often user wants to 'see' the currently set value - again in
-> meaningful units - and driver needs to convert the values it reads
-> from register to these meaningful units. Examples of this include:
+On Tue, Mar 24, 2020 at 10:30:54AM +0200, Matti Vaittinen wrote:
 
-Reviwed-by: Mark Brown <broonie@kernel.org>
+> =20
+> -		if (!(min_uV <=3D linear_max_uV && max_uV >=3D range->min_uV))
+> +		ret =3D linear_range_get_selector_high(range, min_uV, &sel,
+> +						     &found);
+> +		if (ret)
+>  			continue;
 
---OZkY3AIuv2LYvjdk
+Why are these going for _get_selector_high()?  Usually we try to choose
+the lowest voltage we can.
+
+--yRA+Bmk8aPhU85Qt
 Content-Type: application/pgp-signature; name="signature.asc"
 
 -----BEGIN PGP SIGNATURE-----
 
-iQEzBAABCgAdFiEEreZoqmdXGLWf4p/qJNaLcl1Uh9AFAl56Fj8ACgkQJNaLcl1U
-h9Agjwf+Io/zV2QMzoU2EKs1sg15aBVtSYsYl6smy2i9XXr5Fi61Nt1MMI7OBocI
-fFjs642G2c66K25uiK4Ol9pTut6RFb4ToZgcZiGWCSLsfgiswPIIgIFMEVU6rNFG
-raSBgvSAkW7kPK0hnhQG+oOe5vlgivjoG8JqG0pUex682DmujBQXL7eZFkRl8Bak
-L/4AZ2d5e7cd0tMjwThOBkSD9s6zAakkEAEWXeb5buX0Ne3Pp6DXjvY0mBeBEtbF
-0faz2t2B5ixMQE2c9XkBIGhPTXeuXFmTjOP4CtnYnUcd4csREk37xwrliR2lZapt
-BUUQWoOV2y5hyQlTeqWg9cKven0cWw==
-=9zhx
+iQEzBAABCgAdFiEEreZoqmdXGLWf4p/qJNaLcl1Uh9AFAl56GBsACgkQJNaLcl1U
+h9CN2Qf/R3HW431olYvhFPNzcF/cfTxpUIKeXvCEaJZzRSz4PNUTk2n8PfjR8QJc
+r1rCNq6XHT3GvoIk4XgLxgDEBz/3tT0pwRBXe8qwCYzdWLisDN1jz1cjURObeaUV
+jIJMfhu2Q3BQEDdrRKnHdN7rFgzXMPW3tc4mxlitPQ2c/m2TAQKtXdx/D5ekGz2b
+Gi8r8r4mtZ4vf/DinqVNAFI01WKs7PaYM8NL/+CVpYQsUy2J1LHbbk6JAO+NMnLZ
+Baokwy5eIlpox1/TOqmFu1L39ZB7QgwYwEnDXlMjs30c8hGTWE5mdmjWlnQyH93M
+vO5v7AOkNChmCy/jeRykVY3AifrPxA==
+=FYhc
 -----END PGP SIGNATURE-----
 
---OZkY3AIuv2LYvjdk--
+--yRA+Bmk8aPhU85Qt--
 
 
---===============0605430446613083547==
+--===============9019065393513980571==
 Content-Type: text/plain; charset="us-ascii"
 MIME-Version: 1.0
 Content-Transfer-Encoding: 7bit
@@ -159,5 +160,5 @@ Linux-mediatek mailing list
 Linux-mediatek@lists.infradead.org
 http://lists.infradead.org/mailman/listinfo/linux-mediatek
 
---===============0605430446613083547==--
+--===============9019065393513980571==--
 
