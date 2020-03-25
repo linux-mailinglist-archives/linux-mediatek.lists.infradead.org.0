@@ -2,59 +2,78 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id F1BFE191F3E
-	for <lists+linux-mediatek@lfdr.de>; Wed, 25 Mar 2020 03:35:28 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 07CF41920CB
+	for <lists+linux-mediatek@lfdr.de>; Wed, 25 Mar 2020 06:57:02 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Date:Subject:Message-ID:To:From:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=iHr9Us1WtIAopoRLJyNwrsYV/bCHEL4UtnDgvLPFwB4=; b=UPUWy+kFW7DuD6
-	vT6gpg1PSXxnoU+LjOGQcDoZrQOJfGMCdKKLZbLF28rQvEoAqheEjXKizWoiTO9zNVaD9zH60BYeG
-	NaVusSIIStT6i5WiBwlqfV3griOKh8JTYy03cVso4T4W7U5e2JI9+ONjXYdYs0AHEXh34EDnLiQwI
-	A4QrMka+PTkIl+g6F8rF0CUcunmA3O++LG1ZYdHayxGA5eTCSs1OclLQCRfgVs17omakUASSATE6k
-	3KyAho53j4tMMY+NaPDcc+VwxxsgYA6b7HIn8f4IkdL2LoS+x0YOhN6UdDIciDzAZGB9AL0K+5Qma
-	ZnmAH1t8SqEOFgnrCKLQ==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=03uYPwVM1g4XQUdr9YCkIpE4GajRaSIMQUbmaPwrtGM=; b=ClHUXrNbzDxS37
+	PHBBGg4Okekdw7CwW7YShLJhTZCEoOYwbWfHr4zKCeeF+OSHGFsyzB2gc7cCUA4b9lP7BW4Dz3afR
+	nXSHkMiZw6MSwuguoryHQZc52odHREhNlB7pUqmKcc+tC/V9gy5cfcQX1piWfaS+Y/Fp9K6xpxHC+
+	5dkfaL0TpnYDxsJzJ5K0phCVbQH8Drqtlkh/DXOEVMrgXz1qVa0pNMhI5XVDBCqGz7IdL92HrdUck
+	CE41Q6uY1X8+Pvin0h794oUVejJly3KH7etdPWb0ggD6WpeHpGZ3hJcVkWh85UjcJ239/JKr8wZcD
+	mNd/S769cvf5Bu8QpUEA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jGvt3-0006bE-5p; Wed, 25 Mar 2020 02:35:21 +0000
-Received: from sender3-op-o12.zoho.com.cn ([124.251.121.243])
+	id 1jGz24-0006O3-4d; Wed, 25 Mar 2020 05:56:52 +0000
+Received: from mail-lj1-x242.google.com ([2a00:1450:4864:20::242])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jGvsg-0005Ad-CX; Wed, 25 Mar 2020 02:35:00 +0000
-DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; t=1585103595; 
- s=mail; d=flygoat.com; i=jiaxun.yang@flygoat.com;
- h=From:To:Cc:Message-ID:Subject:Date:In-Reply-To:References:MIME-Version:Content-Transfer-Encoding:Content-Type;
- bh=q3522WmCMcchsrcIlYC+4bPpCWTc6GzKb+1Lr0erI0g=;
- b=aow0CiwG/hBJpTXuR4X2GcdsbXYILhWzbR25pZEkKL1dnOVaDH2BRyez6/6r2dd2
- GjGJmQMVISsaLIHz0qfSOU8kCoB0KQMx+2rbtyEPtJLbhSVAONkI3SkFlJ/VTIJkPCT
- 907zcU85fxxghl04s5c2HjtqFr3yGfNUyXzMVASQ=
-Received: from localhost.localdomain (39.155.141.144 [39.155.141.144]) by
- mx.zoho.com.cn with SMTPS id 1585103593296580.9934269828649;
- Wed, 25 Mar 2020 10:33:13 +0800 (CST)
-From: Jiaxun Yang <jiaxun.yang@flygoat.com>
-To: linux-mips@vger.kernel.org
-Message-ID: <20200325022916.106641-6-jiaxun.yang@flygoat.com>
-Subject: [PATCH v7 03/12] dt-bindings: interrupt-controller: Add Loongson
- LIOINTC
-Date: Wed, 25 Mar 2020 10:28:21 +0800
-X-Mailer: git-send-email 2.26.0.rc2
-In-Reply-To: <20200325022916.106641-1-jiaxun.yang@flygoat.com>
-References: <20200325022916.106641-1-jiaxun.yang@flygoat.com>
+ id 1jGz1p-00068Y-77; Wed, 25 Mar 2020 05:56:38 +0000
+Received: by mail-lj1-x242.google.com with SMTP id k21so1180907ljh.2;
+ Tue, 24 Mar 2020 22:56:36 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
+ h=from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=KXLP0/H62Iyak+HWMvNxv2asCanHU5NDryMupzQljyQ=;
+ b=pZR9ei1vxMr3u8y5qL+mLZGwU/2WSStdK5WDY0E67329D/GFURPI717SH1LJJ8Pjl7
+ wUdOM8f3RY5tMwLxdZsfS2NcnGAlpDtHxYI0uxbPL6F9TO7dGiB4hByqOrnYTrxKfmTo
+ A9UGNoNuiQS8omgDrK2UzlP1gAqF/MB49ucMu7uZDJnyngiYbvPjENn2qXW3Rvwl/ggV
+ 7Nsvzpj0Rsp1IIXZDXTPcAhvp88VuGFAb6uU8X7xM4ZAtLdxAZJUVQaP9mjst3dNvyH6
+ zUEeJAmo1krCrnnxTFUZrv9Vlh7c7wpu+5450YoGJZ1wXhHlZZaBDIF8ZrAWkm9SL/jK
+ 8qWA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=KXLP0/H62Iyak+HWMvNxv2asCanHU5NDryMupzQljyQ=;
+ b=VNFZ7sAVE1ldW0YdoRpPvbC4bkQ/Uy1zVejGhL+uhaGH1umKXl/xCZrVIEBKAvIGwZ
+ kleVrkUL2zQsOlGeCNWaKCEnJpV4DaZ8wv46gYsOqkeQLyTVKBVcdi7pfzOF5CFB2gr/
+ POlL04xR9ODOn77CxPjgqX8nQb84NZoFC5NYSptopgKx6whwOMkj9x0FWiSXCFi3V39q
+ 4FnDaAfwu7VaUzeIrFCiUTxZlZokHtwKpa7RG+vV1atfszAGRH5A9f/PdUrWEBovDjnh
+ 6yUntZTk/aIO3MriLigSdeu2qx4LP6uJjKSfaPYN/KTL568imDXBAS7Z2jbcCQ+HkzQP
+ GuJA==
+X-Gm-Message-State: AGi0PubB0JUvqahkMUSd6T/PXkPFEr/d+6ORJ++EW2BgegqrB/QlJ39o
+ ALgTx4wFun/rVYupzc3qCTQ=
+X-Google-Smtp-Source: ADFU+vu3fs9td+AZg+GfH8KE6sCDA0t03LRyFkKaskNvANi2tSXlhNrCU5zMzOlFPRoZLQ/GPlGnQg==
+X-Received: by 2002:a2e:878a:: with SMTP id n10mr885894lji.130.1585115794908; 
+ Tue, 24 Mar 2020 22:56:34 -0700 (PDT)
+Received: from localhost.localdomain ([185.188.71.122])
+ by smtp.gmail.com with ESMTPSA id y20sm3453692ljy.100.2020.03.24.22.56.33
+ (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+ Tue, 24 Mar 2020 22:56:34 -0700 (PDT)
+From: Pawel Dembicki <paweldembicki@gmail.com>
+To: Felix Fietkau <nbd@nbd.name>
+Subject: [PATCH] mt76: mt76x0: pci: add mt7610 PCI ID
+Date: Wed, 25 Mar 2020 06:55:23 +0100
+Message-Id: <20200325055525.20279-1-paweldembicki@gmail.com>
+X-Mailer: git-send-email 2.20.1
 MIME-Version: 1.0
-X-ZohoCNMailClient: External
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200324_193459_376591_A0982B25 
-X-CRM114-Status: GOOD (  11.74  )
+X-CRM114-CacheID: sfid-20200324_225637_262255_04D8AC2E 
+X-CRM114-Status: UNSURE (   9.26  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [124.251.121.243 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider [paweldembicki[at]gmail.com]
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
  author's domain
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
@@ -62,6 +81,9 @@ X-Spam-Report: SpamAssassin version 3.4.3 on bombadil.infradead.org summary:
  valid
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [2a00:1450:4864:20:0:0:0:242 listed in]
+ [list.dnswl.org]
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -73,148 +95,42 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>, linux-doc@vger.kernel.org,
- "H. Nikolaus Schaller" <hns@goldelico.com>, John Crispin <john@phrozen.org>,
- Jiaxun Yang <jiaxun.yang@flygoat.com>, Paul Cercueil <paul@crapouillou.net>,
- linux-ide@vger.kernel.org, Miquel Raynal <miquel.raynal@bootlin.com>,
- Mauro Carvalho Chehab <mchehab+samsung@kernel.org>,
- Huacai Chen <chenhc@lemote.com>, Tiezhu Yang <yangtiezhu@loongson.cn>,
- Rob Herring <robh@kernel.org>, Andi Kleen <ak@linux.intel.com>,
- Paul Burton <paulburton@kernel.org>, Jonathan Corbet <corbet@lwn.net>,
- Marc Zyngier <maz@kernel.org>, Krzysztof Kozlowski <krzk@kernel.org>,
- Yinglu Yang <yangyinglu@loongson.cn>, devicetree@vger.kernel.org,
- Jean Delvare <jdelvare@suse.com>, Jason Cooper <jason@lakedaemon.net>,
- Bartlomiej Zolnierkiewicz <b.zolnierkie@samsung.com>,
- Rob Herring <robh+dt@kernel.org>, linux-mediatek@lists.infradead.org,
- Jonathan Cameron <Jonathan.Cameron@huawei.com>,
- Matthias Brugger <matthias.bgg@gmail.com>,
- Thomas Gleixner <tglx@linutronix.de>,
- Andy Shevchenko <andriy.shevchenko@linux.intel.com>,
- Allison Randal <allison@lohutok.net>, linux-arm-kernel@lists.infradead.org,
- Thomas Bogendoerfer <tsbogend@alpha.franken.de>,
- Matt Redfearn <matt.redfearn@mips.com>,
- Greg Kroah-Hartman <gregkh@linuxfoundation.org>, linux-kernel@vger.kernel.org,
- Serge Semin <fancer.lancer@gmail.com>,
- "Eric W. Biederman" <ebiederm@xmission.com>,
- Manuel Lauss <manuel.lauss@gmail.com>, "David S. Miller" <davem@davemloft.net>
+Cc: Ryder Lee <ryder.lee@mediatek.com>, Stanislaw Gruszka <sgruszka@redhat.com>,
+ netdev@vger.kernel.org, linux-wireless@vger.kernel.org,
+ linux-kernel@vger.kernel.org, Matthias Brugger <matthias.bgg@gmail.com>,
+ Pawel Dembicki <paweldembicki@gmail.com>, linux-mediatek@lists.infradead.org,
+ linux-arm-kernel@lists.infradead.org, Roy Luo <royluo@google.com>,
+ Lorenzo Bianconi <lorenzo.bianconi83@gmail.com>,
+ "David S. Miller" <davem@davemloft.net>, Kalle Valo <kvalo@codeaurora.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Document Loongson I/O Interrupt controller.
+Add mt7610 PCI id found on D-Link DWR-960 to pci_device_id table.
 
-Signed-off-by: Jiaxun Yang <jiaxun.yang@flygoat.com>
-Reviewed-by: Rob Herring <robh@kernel.org>
-Co-developed-by: Huacai Chen <chenhc@lemote.com>
-Signed-off-by: Huacai Chen <chenhc@lemote.com>
+Run-tested on D-Link DWR-960 with no-name half-size mPCIE card
+with mt7610e.
+
+Signed-off-by: Pawel Dembicki <paweldembicki@gmail.com>
 ---
- .../loongson,liointc.yaml                     | 93 +++++++++++++++++++
- 1 file changed, 93 insertions(+)
- create mode 100644 Documentation/devicetree/bindings/interrupt-controller/loongson,liointc.yaml
+ drivers/net/wireless/mediatek/mt76/mt76x0/pci.c | 1 +
+ 1 file changed, 1 insertion(+)
 
-diff --git a/Documentation/devicetree/bindings/interrupt-controller/loongson,liointc.yaml b/Documentation/devicetree/bindings/interrupt-controller/loongson,liointc.yaml
-new file mode 100644
-index 000000000000..9c6b91fee477
---- /dev/null
-+++ b/Documentation/devicetree/bindings/interrupt-controller/loongson,liointc.yaml
-@@ -0,0 +1,93 @@
-+# SPDX-License-Identifier: (GPL-2.0-only OR BSD-2-Clause)
-+%YAML 1.2
-+---
-+$id: "http://devicetree.org/schemas/interrupt-controller/loongson,liointc.yaml#"
-+$schema: "http://devicetree.org/meta-schemas/core.yaml#"
-+
-+title: Loongson Local I/O Interrupt Controller
-+
-+maintainers:
-+  - Jiaxun Yang <jiaxun.yang@flygoat.com>
-+
-+description: |
-+  This interrupt controller is found in the Loongson-3 family of chips as the primary
-+  package interrupt controller which can route local I/O interrupt to interrupt lines
-+  of cores.
-+
-+allOf:
-+  - $ref: /schemas/interrupt-controller.yaml#
-+
-+properties:
-+  compatible:
-+    oneOf:
-+      - const: loongson,liointc-1.0
-+      - const: loongson,liointc-1.0a
-+
-+  reg:
-+    maxItems: 1
-+
-+  interrupt-controller: true
-+
-+  interrupts:
-+    description:
-+      Interrupt source of the CPU interrupts.
-+    minItems: 1
-+    maxItems: 4
-+
-+  interrupt-names:
-+    description: List of names for the parent interrupts.
-+    items:
-+      - const: int0
-+      - const: int1
-+      - const: int2
-+      - const: int3
-+    minItems: 1
-+    maxItems: 4
-+
-+  '#interrupt-cells':
-+    const: 2
-+
-+  'loongson,parent_int_map':
-+    description: |
-+      This property points how the children interrupts will be mapped into CPU
-+      interrupt lines. Each cell refers to a parent interrupt line from 0 to 3
-+      and each bit in the cell refers to a children interrupt fron 0 to 31.
-+      If a CPU interrupt line didn't connected with liointc, then keep it's
-+      cell with zero.
-+    allOf:
-+      - $ref: /schemas/types.yaml#/definitions/uint32-array
-+      - items:
-+          minItems: 4
-+          maxItems: 4
-+
-+
-+required:
-+  - compatible
-+  - reg
-+  - interrupts
-+  - interrupt-controller
-+  - '#interrupt-cells'
-+  - 'loongson,parent_int_map'
-+
-+
-+examples:
-+  - |
-+    iointc: interrupt-controller@3ff01400 {
-+      compatible = "loongson,liointc-1.0";
-+      reg = <0x3ff01400 0x64>;
-+
-+      interrupt-controller;
-+      #interrupt-cells = <2>;
-+
-+      interrupt-parent = <&cpuintc>;
-+      interrupts = <2>, <3>;
-+      interrupt-names = "int0", "int1";
-+
-+      loongson,parent_int_map = <0xf0ffffff>, /* int0 */
-+                                <0x0f000000>, /* int1 */
-+                                <0x00000000>, /* int2 */
-+                                <0x00000000>; /* int3 */
-+
-+    };
-+
-+...
+diff --git a/drivers/net/wireless/mediatek/mt76/mt76x0/pci.c b/drivers/net/wireless/mediatek/mt76/mt76x0/pci.c
+index e2974e0ae1fc..3bd753cda190 100644
+--- a/drivers/net/wireless/mediatek/mt76/mt76x0/pci.c
++++ b/drivers/net/wireless/mediatek/mt76/mt76x0/pci.c
+@@ -215,6 +215,7 @@ mt76x0e_remove(struct pci_dev *pdev)
+ }
+ 
+ static const struct pci_device_id mt76x0e_device_table[] = {
++	{ PCI_DEVICE(0x14c3, 0x7610) },
+ 	{ PCI_DEVICE(0x14c3, 0x7630) },
+ 	{ PCI_DEVICE(0x14c3, 0x7650) },
+ 	{ },
 -- 
-2.26.0.rc2
-
+2.20.1
 
 
 _______________________________________________
