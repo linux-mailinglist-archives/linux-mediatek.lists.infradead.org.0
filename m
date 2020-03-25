@@ -2,60 +2,59 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 2800F19340C
-	for <lists+linux-mediatek@lfdr.de>; Wed, 25 Mar 2020 23:59:33 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 3C663193413
+	for <lists+linux-mediatek@lfdr.de>; Thu, 26 Mar 2020 00:00:49 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=sLGNB9mwqYiA4JkifRv54/vCFjqwfxPFmAcqmEGe2NU=; b=KnBwcx+mtWvCJD
-	uVoatbtPUYi8p8gkKfGDEFhJrsg45DeSImyfULHNz5U1jZ3iTDnS+Z2LpczCOn7WXiZQkomGlutZL
-	eDCjkHoCG0nUcuKGq28uX/ZKQTqhll676ZRZNhAh0gLaVZZQ5lRv08f1kjO6NlVWEZwR2gqdzlxnd
-	hbVcJ1OBkT8aOJY8sqFEOht1y3lEwSPuQw65G08MFq2JLxaXn/KLRXv0P34ElZgmWlDipPkofLWrN
-	cPNDBvjCP8ynugh8vL90RkMXH1jis2qopJPsBW8IMtIuZMMNUB/V9R7rugXo4AJroudjyYZlMYF72
-	2WlxVO3ZoUWFO6Bonwrg==;
+	List-Owner; bh=wXV1L2R2rKA9HNApQD/xWW1HZy0KjNgiab6JzDSV/Rg=; b=e+UI9mKgyGbeze
+	K6ZrKdkw3d4yMmBEuFV3CoU9lx754sm+ak7qZPxP2wq3Nr737EEjcacPa4s6VvwC/PfZComrv2ifc
+	qVhI3P6eFYLYBDKOZibm4pTfwLyBEg20lRbktumcCPquF1jccBWTsJnwa7u38YVvxpF5bUEzXP3Cc
+	u1wYY6xyVbSwQftwEvrpmj4rqPQ/CswmKu39Bmg3Ow/A1Epr02D6Oh+MwRfpe87RI08mcKulotsuW
+	TXwQ6RPKUBLxg1ZqB3hmqLQAsmJkgKWcJ9z8KJM1tjKDTgVQF1pqPF+JERhG9agd6Nn70j48TBxwo
+	KsdibjoLH0vovWFW2g7w==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jHEza-0006Wy-G2; Wed, 25 Mar 2020 22:59:22 +0000
+	id 1jHF0s-0008RH-76; Wed, 25 Mar 2020 23:00:42 +0000
 Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jHEzX-0006W8-EL; Wed, 25 Mar 2020 22:59:20 +0000
-X-UUID: 50c11041517841a5bfc86559cc444309-20200325
+ id 1jHF0o-0008QP-67; Wed, 25 Mar 2020 23:00:39 +0000
+X-UUID: 9a80fba9e475448e86081c0760d89450-20200325
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
  s=dk; 
  h=Content-Transfer-Encoding:MIME-Version:Content-Type:References:In-Reply-To:Date:CC:To:From:Subject:Message-ID;
- bh=Rwm8uk+VZBk+Tue2u7MEctjQsGy1qba7rFKBvQkm1A0=; 
- b=i7boojxICfrjyewIWC+X1xbxvlH2IaBTv9AkbDdvDCpyVHtABq0wLj537y3B9jkvO+nQ9icTQZdHivcHeQ5LUaKLrihgdEXtJNsqsGTSTZPbqLD+3G/knMwR+c0dQIfsRcVPy2enuCgOc5Awsl28JYCE/nUviKT2VLkSxdZWOwk=;
-X-UUID: 50c11041517841a5bfc86559cc444309-20200325
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
+ bh=zRMHb+7lQ/kxPsZpJcKWipHS7+03jckwS7Gwba6WOEM=; 
+ b=r8lv1lYlGPHABlJA5/YvzkJB1hF9pK/v1LICPxxSO5nZCcv32OHDOmvHfEUd+znkTB995rws7hJHYTPnlQWT66hkirsOEUbpu6uo/53tSXJAnbFi1jeFk6/PbpDCO4Wf0oNaFpj8AaxKx8TQ4lQM+ym1wlIa1AHmIXg9f2JoVyc=;
+X-UUID: 9a80fba9e475448e86081c0760d89450-20200325
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw02.mediatek.com
  (envelope-from <ck.hu@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 453364106; Wed, 25 Mar 2020 14:59:11 -0800
-Received: from MTKMBS07N2.mediatek.inc (172.21.101.141) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 25 Mar 2020 15:59:09 -0700
+ with ESMTP id 672323448; Wed, 25 Mar 2020 15:00:36 -0800
+Received: from MTKMBS02N1.mediatek.inc (172.21.101.77) by
+ MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Wed, 25 Mar 2020 16:00:34 -0700
 Received: from mtkcas09.mediatek.inc (172.21.101.178) by
- mtkmbs07n2.mediatek.inc (172.21.101.141) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Thu, 26 Mar 2020 06:59:08 +0800
+ mtkmbs02n1.mediatek.inc (172.21.101.77) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Thu, 26 Mar 2020 07:00:28 +0800
 Received: from [172.21.77.4] (172.21.77.4) by mtkcas09.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Thu, 26 Mar 2020 06:59:06 +0800
-Message-ID: <1585177148.26117.0.camel@mtksdaap41>
-Subject: Re: [SPAM][PATCH] drm/mediatek: Remove debug messages for function
- calls
+ Transport; Thu, 26 Mar 2020 07:00:21 +0800
+Message-ID: <1585177223.26117.1.camel@mtksdaap41>
+Subject: Re: [PATCH] drm/mediatek: Remove debug messages for function calls
 From: CK Hu <ck.hu@mediatek.com>
 To: Enric Balletbo i Serra <enric.balletbo@collabora.com>
-Date: Thu, 26 Mar 2020 06:59:08 +0800
+Date: Thu, 26 Mar 2020 07:00:23 +0800
 In-Reply-To: <20200226112723.649954-1-enric.balletbo@collabora.com>
 References: <20200226112723.649954-1-enric.balletbo@collabora.com>
 X-Mailer: Evolution 3.10.4-0ubuntu2 
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200325_155919_496031_3C9EE948 
-X-CRM114-Status: GOOD (  13.74  )
+X-CRM114-CacheID: sfid-20200325_160038_237614_A11DD65A 
+X-CRM114-Status: GOOD (  14.28  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
@@ -99,11 +98,11 @@ Hi, Enric:
 On Wed, 2020-02-26 at 12:27 +0100, Enric Balletbo i Serra wrote:
 > Equivalent information can be nowadays obtained using function tracer.
 > 
+> Signed-off-by: Enric Balletbo i Serra <enric.balletbo@collabora.com>
+> ---
 
 Acked-by: CK Hu <ck.hu@mediatek.com>
 
-> Signed-off-by: Enric Balletbo i Serra <enric.balletbo@collabora.com>
-> ---
 > 
 >  drivers/gpu/drm/mediatek/mtk_drm_crtc.c | 5 -----
 >  drivers/gpu/drm/mediatek/mtk_drm_drv.c  | 2 --
