@@ -2,42 +2,47 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id A5B1A19428C
-	for <lists+linux-mediatek@lfdr.de>; Thu, 26 Mar 2020 16:09:27 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id 97BC3194273
+	for <lists+linux-mediatek@lfdr.de>; Thu, 26 Mar 2020 16:09:00 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
-	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:References:
-	In-Reply-To:Message-Id:Date:Subject:To:From:Reply-To:Content-ID:
-	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
-	:Resent-Message-ID:List-Owner;
-	bh=YOOVPKM5zgx9rqdq2q1wU2eyAxlvxKycSFHBwN37cnI=; b=HCW1O7yBs5HRI/aSv8GywiWNIw
-	fKLkL+Lao1HcxZ7xnQrp3gxrVDqWHU36KsRteteOpvFKhDzswgoWAT75prM6NWIfAX/ZYT9pYwzHb
-	AwfvzcSQM2Xh/jeAhgtI9VnkKrDLt1Vv6ELC9I91RS+ZpNH9WLzVfWgK/Krphvdlwc6I32z9p8wQA
-	Ju1JFS1Bk0RKU7yjh1ZYOwfPx7zADHBJKlGIhGhlqzVn/woMCAukPnStl7y0nLy/jhh8HXuW/V3LX
-	yW4hrCT3M79t9EQyKk7dsMvsuKYM0H6VsNYYvFbpm30xBc7aBt31hUNL/gx53rS7S/8wKBiXifse9
-	/xLhTJsw==;
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=JlZLvBwDHfGRglItlrTl6iO2LW+wp07p7z8oSLFDdGY=; b=irTxj6AhesrqMf
+	9QYne3LreWtedh3junz1pygdIGwaNvZzr1UfV8wfVxWN08x0JWrQy8UkdAzFkR8uQA5OZK97SDgVK
+	CyKGJZYc/HSeZue0fCf0NYBh2Gh8YTg6yQcJIUYVPkeU8PuiDOznZFmBlEvido/vC6ituHijcDiLU
+	nnuhhCByNFIIRXliarpAJMzJJWp0PIKhxySh8zkMag0bIFUrG5xZXNoEFE7ot3z10Aa3TCBEP6boR
+	z9vyrqis9+TXJcMsjAhVD+/v92rb2yPbp95VRuO6wPca1Kg/EtAzz1uljg/U9LqH0lHiz4FQftEBQ
+	OtgiEjZWhTcw/gKG6XRQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jHU8H-0004iR-NV; Thu, 26 Mar 2020 15:09:21 +0000
+	id 1jHU7p-00041U-Vx; Thu, 26 Mar 2020 15:08:53 +0000
 Received: from 8bytes.org ([2a01:238:4383:600:38bc:a715:4b6d:a889]
  helo=theia.8bytes.org)
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jHU7q-00041s-KQ
- for linux-mediatek@lists.infradead.org; Thu, 26 Mar 2020 15:08:57 +0000
+ id 1jHU7l-0003xw-Py
+ for linux-mediatek@lists.infradead.org; Thu, 26 Mar 2020 15:08:51 +0000
 Received: by theia.8bytes.org (Postfix, from userid 1000)
- id 516677BA; Thu, 26 Mar 2020 16:08:47 +0100 (CET)
+ id D5F5329A; Thu, 26 Mar 2020 16:08:35 +0100 (CET)
+Date: Thu, 26 Mar 2020 16:08:34 +0100
 From: Joerg Roedel <joro@8bytes.org>
-To: iommu@lists.linux-foundation.org
-Subject: [PATCH v4 08/16] iommu: Introduce accessors for iommu private data
-Date: Thu, 26 Mar 2020 16:08:33 +0100
-Message-Id: <20200326150841.10083-9-joro@8bytes.org>
-X-Mailer: git-send-email 2.17.1
-In-Reply-To: <20200326150841.10083-1-joro@8bytes.org>
-References: <20200326150841.10083-1-joro@8bytes.org>
+To: Robin Murphy <robin.murphy@arm.com>
+Subject: Re: [PATCH v3 10/15] iommu/arm-smmu: Use accessor functions for
+ iommu private data
+Message-ID: <20200326150834.GA6937@8bytes.org>
+References: <20200320091414.3941-1-joro@8bytes.org>
+ <20200320091414.3941-11-joro@8bytes.org>
+ <09ed4676-449e-c6eb-8c51-c15b326c206c@arm.com>
+ <20200324100819.GA4038@8bytes.org>
+ <d69dad81-d025-96ef-863c-553b5ed2dd8e@arm.com>
+MIME-Version: 1.0
+Content-Disposition: inline
+In-Reply-To: <d69dad81-d025-96ef-863c-553b5ed2dd8e@arm.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200326_080854_877148_48D5C1C4 
-X-CRM114-Status: UNSURE (   9.37  )
+X-CRM114-CacheID: sfid-20200326_080849_996275_05229A24 
+X-CRM114-Status: UNSURE (   9.12  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
@@ -57,58 +62,46 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Jean-Philippe Brucker <jean-philippe@linaro.org>,
- Joerg Roedel <jroedel@suse.de>, Will Deacon <will@kernel.org>,
- Greg Kroah-Hartman <gregkh@linuxfoundation.org>, linux-arm-msm@vger.kernel.org,
- Joerg Roedel <joro@8bytes.org>, guohanjun@huawei.com,
- linux-kernel@vger.kernel.org, Bjorn Andersson <bjorn.andersson@linaro.org>,
- Rob Clark <robdclark@gmail.com>, Thierry Reding <thierry.reding@gmail.com>,
- linux-mediatek@lists.infradead.org, Andy Gross <agross@kernel.org>,
- Sudeep Holla <sudeep.holla@arm.com>, Matthias Brugger <matthias.bgg@gmail.com>,
- Sean Paul <sean@poorly.run>, Robin Murphy <robin.murphy@arm.com>
-MIME-Version: 1.0
+Cc: Rob Clark <robdclark@gmail.com>, Joerg Roedel <jroedel@suse.de>,
+ Will Deacon <will@kernel.org>,
+ Jean-Philippe Brucker <jean-philippe@linaro.org>,
+ "linux-arm-msm@vger.kernel.org" <linux-arm-msm@vger.kernel.org>,
+ "guohanjun@huawei.com" <guohanjun@huawei.com>,
+ "linux-kernel@vger.kernel.org" <linux-kernel@vger.kernel.org>,
+ Bjorn Andersson <bjorn.andersson@linaro.org>,
+ "iommu@lists.linux-foundation.org" <iommu@lists.linux-foundation.org>,
+ Thierry Reding <thierry.reding@gmail.com>,
+ "linux-mediatek@lists.infradead.org" <linux-mediatek@lists.infradead.org>,
+ Andy Gross <agross@kernel.org>, Sudeep Holla <Sudeep.Holla@arm.com>,
+ Matthias Brugger <matthias.bgg@gmail.com>, Sean Paul <sean@poorly.run>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-From: Joerg Roedel <jroedel@suse.de>
+Hi Robin,
 
-Add dev_iommu_priv_get/set() functions to access per-device iommu
-private data. This makes it easier to move the pointer to a different
-location.
+On Wed, Mar 25, 2020 at 12:31:46PM +0000, Robin Murphy wrote:
+> Oops, sorry - as you might imagine I'm not in my normal workflow :)
 
-Tested-by: Will Deacon <will@kernel.org> # arm-smmu
-Reviewed-by: Jean-Philippe Brucker <jean-philippe@linaro.org>
-Signed-off-by: Joerg Roedel <jroedel@suse.de>
----
- include/linux/iommu.h | 10 ++++++++++
- 1 file changed, 10 insertions(+)
+No problem, nobody is right now :)
 
-diff --git a/include/linux/iommu.h b/include/linux/iommu.h
-index f5edc21a644d..056900e75758 100644
---- a/include/linux/iommu.h
-+++ b/include/linux/iommu.h
-@@ -627,6 +627,16 @@ static inline void dev_iommu_fwspec_set(struct device *dev,
- 	dev->iommu->fwspec = fwspec;
- }
- 
-+static inline void *dev_iommu_priv_get(struct device *dev)
-+{
-+	return dev->iommu->fwspec->iommu_priv;
-+}
-+
-+static inline void dev_iommu_priv_set(struct device *dev, void *priv)
-+{
-+	dev->iommu->fwspec->iommu_priv = priv;
-+}
-+
- int iommu_probe_device(struct device *dev);
- void iommu_release_device(struct device *dev);
- 
--- 
-2.17.1
+> Let me rebase that onto something actually in your tree (rather than
+> whatever detached HEAD this is checked out out on my laptop...) and try
+> resending it properly.
 
+Got it, thanks. Added to the next version of the patch-set which I will
+send out shortly.
+
+> Cool, let me know if you need a hand with all the *_iommu_configure() stuff
+> - I still have plans for overhauling that lot anyway, but not imminently, so
+> it probably is worthwhile to do the straightforward housekeeping first.
+
+Okay, I'll get back to you if I need help with the conversion.
+
+Thanks,
+
+	Joerg
 
 _______________________________________________
 Linux-mediatek mailing list
