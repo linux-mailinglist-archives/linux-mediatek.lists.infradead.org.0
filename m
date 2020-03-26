@@ -2,67 +2,61 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 2FE2019375E
-	for <lists+linux-mediatek@lfdr.de>; Thu, 26 Mar 2020 05:49:48 +0100 (CET)
+	by mail.lfdr.de (Postfix) with ESMTPS id E9C19193BCB
+	for <lists+linux-mediatek@lfdr.de>; Thu, 26 Mar 2020 10:26:42 +0100 (CET)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Date:Subject:Message-ID:To:From:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=NFJCGdyETWkvu0E5jIhXvlTwNXRSaM0v7INGd/CIQjg=; b=Hw5tZntVjOmMDv
-	YFYDvwmMOo3+C7o2G+30PmPmdsPwS19qTksr+BhYw9IATr/MQ8a0XbuDS4GS5JcJixVPVHhYthL/a
-	6ZSmbU+xRn1kBsQfE9QMqBz1n5ozXyDf4as4zFlRJWYl1+P1k+mSUGKsO7Dn3CnvuW81nTkCN12xj
-	0hgBSChQrZHLiDzz8sr9XUyyg0Yr6b9nclJp5um3c7jqntrb0yzab5x7KXMNIV2qFa522ZagaH/ll
-	eoJF9nZSVdJiYNcEHmTS2El3ikjcU0XAEYXBPG5F4h3kNMovk2/QkQNhEAPd07UGVzw9R1aUkhPsV
-	+ZpNVBbONCWFGqgKaBzA==;
+	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
+	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:References:
+	In-Reply-To:Message-Id:Date:Subject:To:From:Reply-To:Content-ID:
+	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+	:Resent-Message-ID:List-Owner;
+	bh=lHc9Lrvc0ZtJvotckiNV11ZZ5n797JrxvF/VRGx93gg=; b=eRi6EjYuFvUdfpV+QkwrlYsJFf
+	huqTIbZqaSKb8rm3lGAA0n4zlikikh7wnnnf184dHuSX0Df2vk4/XMSask+dDyx5w9M84Sc2ZWFOj
+	Wo1cumjESoDuVMA6DnmfXvwTK90c56yqKfCp1TbjXq82rJndwgOhRCWa445Oy+rHlXIqb44yZprTt
+	crC3v8aFC5CxbVnm7EQ52tAkZgHG9Plnd6rTaQjzqDaDjQyZa0IdmH38vmVCBJVSv4KnC+HUYQRlo
+	dCheKTZHpQDkIZJmEEkEpZYCN+3oAK9cFObihrvNrZLl1r+vFkEDfH3pWtrSjaIT9jJOpVsgFJO/r
+	iU/9rOPw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jHKSZ-0002ZI-Vs; Thu, 26 Mar 2020 04:49:39 +0000
-Received: from sender3-op-o12.zoho.com.cn ([124.251.121.243])
+	id 1jHOmU-0001Qk-GK; Thu, 26 Mar 2020 09:26:30 +0000
+Received: from labrats.qualcomm.com ([199.106.110.90])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jHKSV-0002Xc-TL
- for linux-mediatek@lists.infradead.org; Thu, 26 Mar 2020 04:49:37 +0000
-DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; t=1585198134; 
- s=mail; d=flygoat.com; i=jiaxun.yang@flygoat.com;
- h=From:To:Cc:Message-ID:Subject:Date:In-Reply-To:References:MIME-Version:Content-Transfer-Encoding:Content-Type;
- bh=gGd3RxAxyUkb4OJvY+SCCfsP9WVGN6zphOE5v3hmzUk=;
- b=alE//OJSXXUtATKaqI6LomMZqD/zU2BNtYGqbXiKsdKjidEQkPnmeCIHbfRvwWRi
- xCusLt0k5+bcjkGfbSaMqEXcSpTGaN+uzmQFVN8APQ4D0trGQOztEOp/g22N4hqVSi5
- 79pHR5SPsZoqsUdSPBbyugDaZQUgZng89FEm4GXY=
-Received: from localhost.localdomain (39.155.141.144 [39.155.141.144]) by
- mx.zoho.com.cn with SMTPS id 1585198132317262.7241477206006;
- Thu, 26 Mar 2020 12:48:52 +0800 (CST)
-From: Jiaxun Yang <jiaxun.yang@flygoat.com>
-To: linux-mips@vger.kernel.org
-Message-ID: <20200326044804.382981-2-jiaxun.yang@flygoat.com>
-Subject: [PATCH 2/2] MIPS: Kill RM7K & RM9K IRQ Code
-Date: Thu, 26 Mar 2020 12:48:04 +0800
-X-Mailer: git-send-email 2.26.0.rc2
-In-Reply-To: <20200326044804.382981-1-jiaxun.yang@flygoat.com>
-References: <20200326044804.382981-1-jiaxun.yang@flygoat.com>
-MIME-Version: 1.0
-X-ZohoCNMailClient: External
+ id 1jHOmJ-0001JY-RI; Thu, 26 Mar 2020 09:26:21 +0000
+IronPort-SDR: BrctfGvM7wry5GhQTcDsQnJ6qNiFTR9y1lWL190mWOcSgMmvwOuI4xOlqslgIeidEmxjYIecOq
+ Uyh37cn+PDMAocZeOQovJSoo9qRmffuBXb+3yGoMPxJ45qmbzM6RNU7xstgTY/8bKPocW8cDrI
+ OXn1ePb+CJo3nFQtvCB8YxHwzDM8jvt+/5Co7YX1xLAmI3tL9gJsHwqCR/iKMelh3qKPDpELgK
+ xjUXr+1STd8ZZRPZlUH0ojsK0DBBVn38ugBOpmTzM1DtuAOzXkB+TIL6ViOmVYeFrgMyxdebiM
+ a5E=
+X-IronPort-AV: E=Sophos;i="5.72,307,1580803200"; d="scan'208";a="28616319"
+Received: from unknown (HELO ironmsg01-sd.qualcomm.com) ([10.53.140.141])
+ by labrats.qualcomm.com with ESMTP; 26 Mar 2020 02:26:18 -0700
+Received: from pacamara-linux.qualcomm.com ([192.168.140.135])
+ by ironmsg01-sd.qualcomm.com with ESMTP; 26 Mar 2020 02:26:16 -0700
+Received: by pacamara-linux.qualcomm.com (Postfix, from userid 359480)
+ id 888803AA6; Thu, 26 Mar 2020 02:26:16 -0700 (PDT)
+From: Can Guo <cang@codeaurora.org>
+To: asutoshd@codeaurora.org, nguyenb@codeaurora.org, hongwus@codeaurora.org,
+ rnayak@codeaurora.org, linux-scsi@vger.kernel.org, kernel-team@android.com,
+ saravanak@google.com, salyzyn@google.com, cang@codeaurora.org
+Subject: [PATCH v6 2/2] scsi: ufs: Do not rely on prefetched data
+Date: Thu, 26 Mar 2020 02:25:41 -0700
+Message-Id: <1585214742-5466-3-git-send-email-cang@codeaurora.org>
+X-Mailer: git-send-email 1.9.1
+In-Reply-To: <1585214742-5466-1-git-send-email-cang@codeaurora.org>
+References: <1585214742-5466-1-git-send-email-cang@codeaurora.org>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200325_214936_413862_BFC67B10 
-X-CRM114-Status: UNSURE (   6.83  )
-X-CRM114-Notice: Please train this message.
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20200326_022619_911648_A281D4B7 
+X-CRM114-Status: GOOD (  13.75  )
+X-Spam-Score: 0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [124.251.121.243 listed in list.dnswl.org]
- -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
+ mail domains are different
+ -0.0 SPF_PASS               SPF: sender matches SPF record
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -74,136 +68,149 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: linux-mediatek@lists.infradead.org, tsbogend@alpha.franken.de,
- gch981213@gmail.com, Jiaxun Yang <jiaxun.yang@flygoat.com>
+Cc: Bart Van Assche <bvanassche@acm.org>,
+ "Martin K. Petersen" <martin.petersen@oracle.com>,
+ Venkat Gopalakrishnan <venkatg@codeaurora.org>,
+ "James E.J. Bottomley" <jejb@linux.ibm.com>,
+ open list <linux-kernel@vger.kernel.org>,
+ Bjorn Andersson <bjorn.andersson@linaro.org>,
+ Avri Altman <avri.altman@wdc.com>,
+ "moderated list:ARM/Mediatek SoC support" <linux-mediatek@lists.infradead.org>,
+ Alim Akhtar <alim.akhtar@samsung.com>,
+ Matthias Brugger <matthias.bgg@gmail.com>,
+ Tomas Winkler <tomas.winkler@intel.com>,
+ Stanley Chu <stanley.chu@mediatek.com>,
+ "moderated list:ARM/Mediatek SoC support"
+ <linux-arm-kernel@lists.infradead.org>, Bean Huo <beanhuo@micron.com>
+MIME-Version: 1.0
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-RM7000 IRQ driver never got really used by any of the platform,
-and rm9k_cpu_irq_init only exist in a header.
+We were setting bActiveICCLevel attribute for UFS device only once but
+type of this attribute has changed from persistent to volatile since UFS
+device specification v2.1. This attribute is set to the default value after
+power cycle or hardware reset event. It isn't safe to rely on prefetched
+data (only used for bActiveICCLevel attribute now). Hence this change
+removes the code related to data prefetching and set this parameter on
+every attempt to probe the UFS device.
 
-Signed-off-by: Jiaxun Yang <jiaxun.yang@flygoat.com>
+Signed-off-by: Can Guo <cang@codeaurora.org>
+Reviewed-by: Stanley Chu <stanley.chu@mediatek.com>
+Tested-by: Stanley Chu <stanley.chu@mediatek.com>
+Reviewed-by: Avri Altman <avri.altman@wdc.com>
 ---
- arch/mips/Kconfig                        |  3 --
- arch/mips/include/asm/irq_cpu.h          |  2 --
- arch/mips/include/asm/mach-generic/irq.h |  6 ----
- arch/mips/kernel/Makefile                |  1 -
- arch/mips/kernel/irq-rm7000.c            | 45 ------------------------
- 5 files changed, 57 deletions(-)
- delete mode 100644 arch/mips/kernel/irq-rm7000.c
+ drivers/scsi/ufs/ufshcd.c | 26 +++++++++++++++-----------
+ drivers/scsi/ufs/ufshcd.h | 11 -----------
+ 2 files changed, 15 insertions(+), 22 deletions(-)
 
-diff --git a/arch/mips/Kconfig b/arch/mips/Kconfig
-index a1f973cc0265..7cda047766bd 100644
---- a/arch/mips/Kconfig
-+++ b/arch/mips/Kconfig
-@@ -1309,9 +1309,6 @@ config SYS_SUPPORTS_HUGETLBFS
- config MIPS_HUGE_TLB_SUPPORT
- 	def_bool HUGETLB_PAGE || TRANSPARENT_HUGEPAGE
+diff --git a/drivers/scsi/ufs/ufshcd.c b/drivers/scsi/ufs/ufshcd.c
+index 148e73a..f19a11e 100644
+--- a/drivers/scsi/ufs/ufshcd.c
++++ b/drivers/scsi/ufs/ufshcd.c
+@@ -6457,11 +6457,12 @@ static u32 ufshcd_find_max_sup_active_icc_level(struct ufs_hba *hba,
+ 	return icc_level;
+ }
  
--config IRQ_CPU_RM7K
--	bool
+-static void ufshcd_init_icc_levels(struct ufs_hba *hba)
++static void ufshcd_set_active_icc_lvl(struct ufs_hba *hba)
+ {
+ 	int ret;
+ 	int buff_len = hba->desc_size.pwr_desc;
+ 	u8 *desc_buf;
++	u32 icc_level;
+ 
+ 	desc_buf = kmalloc(buff_len, GFP_KERNEL);
+ 	if (!desc_buf)
+@@ -6476,20 +6477,17 @@ static void ufshcd_init_icc_levels(struct ufs_hba *hba)
+ 		goto out;
+ 	}
+ 
+-	hba->init_prefetch_data.icc_level =
+-			ufshcd_find_max_sup_active_icc_level(hba,
+-			desc_buf, buff_len);
+-	dev_dbg(hba->dev, "%s: setting icc_level 0x%x",
+-			__func__, hba->init_prefetch_data.icc_level);
++	icc_level = ufshcd_find_max_sup_active_icc_level(hba, desc_buf,
++							 buff_len);
++	dev_dbg(hba->dev, "%s: setting icc_level 0x%x", __func__, icc_level);
+ 
+ 	ret = ufshcd_query_attr_retry(hba, UPIU_QUERY_OPCODE_WRITE_ATTR,
+-		QUERY_ATTR_IDN_ACTIVE_ICC_LVL, 0, 0,
+-		&hba->init_prefetch_data.icc_level);
++		QUERY_ATTR_IDN_ACTIVE_ICC_LVL, 0, 0, &icc_level);
+ 
+ 	if (ret)
+ 		dev_err(hba->dev,
+ 			"%s: Failed configuring bActiveICCLevel = %d ret = %d",
+-			__func__, hba->init_prefetch_data.icc_level , ret);
++			__func__, icc_level, ret);
+ 
+ out:
+ 	kfree(desc_buf);
+@@ -6995,8 +6993,6 @@ static int ufshcd_add_lus(struct ufs_hba *hba)
+ {
+ 	int ret;
+ 
+-	ufshcd_init_icc_levels(hba);
 -
- config IRQ_MSP_SLP
- 	bool
+ 	/* Add required well known logical units to scsi mid layer */
+ 	ret = ufshcd_scsi_add_wlus(hba);
+ 	if (ret)
+@@ -7094,6 +7090,14 @@ static int ufshcd_probe_hba(struct ufs_hba *hba, bool async)
+ 		}
+ 	}
  
-diff --git a/arch/mips/include/asm/irq_cpu.h b/arch/mips/include/asm/irq_cpu.h
-index 8d321180b5c2..83d7331ab215 100644
---- a/arch/mips/include/asm/irq_cpu.h
-+++ b/arch/mips/include/asm/irq_cpu.h
-@@ -10,8 +10,6 @@
- #define _ASM_IRQ_CPU_H
++	/*
++	 * bActiveICCLevel is volatile for UFS device (as per latest v2.1 spec)
++	 * and for removable UFS card as well, hence always set the parameter.
++	 * Note: Error handler may issue the device reset hence resetting
++	 * bActiveICCLevel as well so it is always safe to set this here.
++	 */
++	ufshcd_set_active_icc_lvl(hba);
++
+ 	/* set the state as operational after switching to desired gear */
+ 	hba->ufshcd_state = UFSHCD_STATE_OPERATIONAL;
  
- extern void mips_cpu_irq_init(void);
--extern void rm7k_cpu_irq_init(void);
--extern void rm9k_cpu_irq_init(void);
+diff --git a/drivers/scsi/ufs/ufshcd.h b/drivers/scsi/ufs/ufshcd.h
+index d45a044..5652d39 100644
+--- a/drivers/scsi/ufs/ufshcd.h
++++ b/drivers/scsi/ufs/ufshcd.h
+@@ -404,15 +404,6 @@ struct ufs_clk_scaling {
+ 	bool is_suspended;
+ };
  
- #ifdef CONFIG_IRQ_DOMAIN
- struct device_node;
-diff --git a/arch/mips/include/asm/mach-generic/irq.h b/arch/mips/include/asm/mach-generic/irq.h
-index 72ac2c202c55..ac711b0d6225 100644
---- a/arch/mips/include/asm/mach-generic/irq.h
-+++ b/arch/mips/include/asm/mach-generic/irq.h
-@@ -28,12 +28,6 @@
- #endif /* CONFIG_I8259 */
- #endif
- 
--#ifdef CONFIG_IRQ_CPU_RM7K
--#ifndef RM7K_CPU_IRQ_BASE
--#define RM7K_CPU_IRQ_BASE (MIPS_CPU_IRQ_BASE+8)
--#endif
--#endif
--
- #endif /* CONFIG_IRQ_MIPS_CPU */
- 
- #endif /* __ASM_MACH_GENERIC_IRQ_H */
-diff --git a/arch/mips/kernel/Makefile b/arch/mips/kernel/Makefile
-index d6e97df51cfb..c0a7e3f266e1 100644
---- a/arch/mips/kernel/Makefile
-+++ b/arch/mips/kernel/Makefile
-@@ -64,7 +64,6 @@ obj-$(CONFIG_MIPS_VPE_APSP_API) += rtlx.o
- obj-$(CONFIG_MIPS_VPE_APSP_API_CMP) += rtlx-cmp.o
- obj-$(CONFIG_MIPS_VPE_APSP_API_MT) += rtlx-mt.o
- 
--obj-$(CONFIG_IRQ_CPU_RM7K)	+= irq-rm7000.o
- obj-$(CONFIG_MIPS_MSC)		+= irq-msc01.o
- obj-$(CONFIG_IRQ_TXX9)		+= irq_txx9.o
- obj-$(CONFIG_IRQ_GT641XX)	+= irq-gt641xx.o
-diff --git a/arch/mips/kernel/irq-rm7000.c b/arch/mips/kernel/irq-rm7000.c
-deleted file mode 100644
-index e1a497f639d7..000000000000
---- a/arch/mips/kernel/irq-rm7000.c
-+++ /dev/null
-@@ -1,45 +0,0 @@
--// SPDX-License-Identifier: GPL-2.0-or-later
--/*
-- * Copyright (C) 2003 Ralf Baechle
-- *
-- * Handler for RM7000 extended interrupts.  These are a non-standard
-- * feature so we handle them separately from standard interrupts.
+-/**
+- * struct ufs_init_prefetch - contains data that is pre-fetched once during
+- * initialization
+- * @icc_level: icc level which was read during initialization
 - */
--#include <linux/init.h>
--#include <linux/interrupt.h>
--#include <linux/irq.h>
--#include <linux/kernel.h>
--
--#include <asm/irq_cpu.h>
--#include <asm/mipsregs.h>
--
--static inline void unmask_rm7k_irq(struct irq_data *d)
--{
--	set_c0_intcontrol(0x100 << (d->irq - RM7K_CPU_IRQ_BASE));
--}
--
--static inline void mask_rm7k_irq(struct irq_data *d)
--{
--	clear_c0_intcontrol(0x100 << (d->irq - RM7K_CPU_IRQ_BASE));
--}
--
--static struct irq_chip rm7k_irq_controller = {
--	.name = "RM7000",
--	.irq_ack = mask_rm7k_irq,
--	.irq_mask = mask_rm7k_irq,
--	.irq_mask_ack = mask_rm7k_irq,
--	.irq_unmask = unmask_rm7k_irq,
--	.irq_eoi = unmask_rm7k_irq
+-struct ufs_init_prefetch {
+-	u32 icc_level;
 -};
 -
--void __init rm7k_cpu_irq_init(void)
--{
--	int base = RM7K_CPU_IRQ_BASE;
--	int i;
--
--	clear_c0_intcontrol(0x00000f00);		/* Mask all */
--
--	for (i = base; i < base + 4; i++)
--		irq_set_chip_and_handler(i, &rm7k_irq_controller,
--					 handle_percpu_irq);
--}
+ #define UFS_ERR_REG_HIST_LENGTH 8
+ /**
+  * struct ufs_err_reg_hist - keeps history of errors
+@@ -544,7 +535,6 @@ enum ufshcd_quirks {
+  * @intr_mask: Interrupt Mask Bits
+  * @ee_ctrl_mask: Exception event control mask
+  * @is_powered: flag to check if HBA is powered
+- * @init_prefetch_data: data pre-fetched during initialization
+  * @eh_work: Worker to handle UFS errors that require s/w attention
+  * @eeh_work: Worker to handle exception events
+  * @errors: HBA errors
+@@ -632,7 +622,6 @@ struct ufs_hba {
+ 	u32 intr_mask;
+ 	u16 ee_ctrl_mask;
+ 	bool is_powered;
+-	struct ufs_init_prefetch init_prefetch_data;
+ 
+ 	/* Work Queues */
+ 	struct work_struct eh_work;
 -- 
-2.26.0.rc2
-
+Qualcomm Innovation Center, Inc. is a member of Code Aurora Forum, a Linux Foundation Collaborative Project.
 
 
 _______________________________________________
