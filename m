@@ -2,61 +2,60 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id BBA8D197B6F
-	for <lists+linux-mediatek@lfdr.de>; Mon, 30 Mar 2020 14:01:33 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 222C8197BFA
+	for <lists+linux-mediatek@lfdr.de>; Mon, 30 Mar 2020 14:36:51 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=k8CdwbzD2rz12v6ENUpCQWg7ZocrneCyifk5zvGqPS0=; b=P0JJ++0wbSyx85
-	mujU2BWrhtSSoOb5zSstRbXxuyQTK0itTD5zx7qrL8ui59lU4lzkAAlLdfvX1cJEbpYFypQtJo/pB
-	T3PC2/PzlANWrfpeJ48obyFgIKbukmvPupkLXtGlLO3ZeC8HKFjQKPfwYC3VWvg7wmXv7VhT6H8af
-	45IW6b4kEp+XdRAcKeUyLoLYs81CIbiia20/iWIF4QMYS6F1UUK16oH/i/tsIMkbEkP4Nft2tBapu
-	u6pgYZ1UjC60sybtM/Pmg0VVhRtXPDtRlghE8Nz9+Fvy5/POJg5+SF1ZYJiZ6UqM+CsS/mdesLd62
-	KprFOpAdUuz6DiMlig2Q==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=R4ctfl71VKswMMkIW2k65m5e+s1wHyfP4FCLLQ4VDc8=; b=EB275Dp99xs56V
+	hXPCtqb4HeMrh5NE6X/9Wuk1kK/22P9icrII2taU9LQ5f90MhRgWCTIoz23gG92r2r5FZMpqHT6yx
+	/nHCKegJtw+8tx0ikXIJKb3kfhtXup1PXNCEPfP0xbT5lV0spnPBWCQ9F8UUs2tVy6wupTbTaMVrt
+	OUUY8Ou8q+GA/xYQSzxVv5gR0OUB14PrXhls6foe07sA+8/Se9mq7ywS+g9GTKNi+2rq9MPzMCta0
+	HM51lxJbA8yc2fJFRb6VZMjGWtYoBnL4YzrXMbrLKPcP6aR5jTdVMaRW7QikTG2ukPOeqKmhcs/j3
+	6xlxU2/Mp9s+wEaXXbfg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jIt6X-0005xB-VS; Mon, 30 Mar 2020 12:01:21 +0000
+	id 1jItej-0004LX-3K; Mon, 30 Mar 2020 12:36:41 +0000
 Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jIt6V-0005wR-6o
- for linux-mediatek@lists.infradead.org; Mon, 30 Mar 2020 12:01:20 +0000
-X-UUID: 83dc6281f4cd45e3b12522f144c10c7b-20200330
+ id 1jIteg-0004Kb-DE; Mon, 30 Mar 2020 12:36:39 +0000
+X-UUID: b319726c80a3426298678c524a7a1956-20200330
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
  s=dk; 
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:References:In-Reply-To:Message-ID:Date:Subject:CC:To:From;
- bh=Kiqp2ZjN5cJpdx9vGYZmzVbMbWNtHznGsl1vNvxEzyU=; 
- b=U47aYvLPHqj6cL+Y+Xvjmi/XM4YHXmU3pHACfsijZkn2cdt6pPUDmB5G4UoKGqtrqJpMKpCLlotRahuOUe9DU9ZU04wFZsa5FxrX2soyNqhukJGctowftWIdXSXn0maAKL03aoolwInIF6s7ztzo/8K2e0Jx+gytaKgxrxIo/d8=;
-X-UUID: 83dc6281f4cd45e3b12522f144c10c7b-20200330
-Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw01.mediatek.com
- (envelope-from <light.hsieh@mediatek.com>)
+ h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:Subject:CC:To:From;
+ bh=5fynngkcfVP3y4nuFrJ+FfItuj0F2ovwQT443e47vAM=; 
+ b=S36tuLp5A9vckFlGPARidf9un053JVOXrFCQQFK2npj2KBo+afhhf8Kb3ajMyXf2MvThc9uV9YX6o38N77ucL7YKEAI7zzgr9DxdlUYHMmjhA3P+TBSgvdnRIyuhBFwnYOOFnOb9hGY3MeVgACzohMhcnSuCM89vOzo77uW7TkI=;
+X-UUID: b319726c80a3426298678c524a7a1956-20200330
+Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw01.mediatek.com
+ (envelope-from <dongchun.zhu@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 238225264; Mon, 30 Mar 2020 04:01:09 -0800
-Received: from mtkmbs08n1.mediatek.inc (172.21.101.55) by
- MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 30 Mar 2020 05:01:03 -0700
+ with ESMTP id 2114219133; Mon, 30 Mar 2020 04:36:37 -0800
+Received: from MTKMBS07N2.mediatek.inc (172.21.101.141) by
+ MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Mon, 30 Mar 2020 05:36:31 -0700
 Received: from mtkcas07.mediatek.inc (172.21.101.84) by
- mtkmbs08n1.mediatek.inc (172.21.101.55) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Mon, 30 Mar 2020 20:00:46 +0800
-Received: from mtkswgap22.mediatek.inc (172.21.77.33) by mtkcas07.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via
- Frontend Transport; Mon, 30 Mar 2020 20:00:48 +0800
-From: <light.hsieh@mediatek.com>
-To: <linus.walleij@linaro.org>
-Subject: [PATCH v5 2/2] pinctrl: mediatek: make MediaTek MT6765 pinctrl ready
- for buiding loadable module
-Date: Mon, 30 Mar 2020 20:00:48 +0800
-Message-ID: <1585569648-14017-3-git-send-email-light.hsieh@mediatek.com>
-X-Mailer: git-send-email 1.8.1.1.dirty
-In-Reply-To: <1585569648-14017-1-git-send-email-light.hsieh@mediatek.com>
-References: <1585569648-14017-1-git-send-email-light.hsieh@mediatek.com>
+ mtkmbs07n2.mediatek.inc (172.21.101.141) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Mon, 30 Mar 2020 20:36:27 +0800
+Received: from localhost.localdomain (10.17.3.153) by mtkcas07.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
+ Transport; Mon, 30 Mar 2020 20:36:26 +0800
+From: Dongchun Zhu <dongchun.zhu@mediatek.com>
+To: <mchehab@kernel.org>, <andriy.shevchenko@linux.intel.com>,
+ <robh+dt@kernel.org>, <mark.rutland@arm.com>, <sakari.ailus@linux.intel.com>, 
+ <drinkcat@chromium.org>, <tfiga@chromium.org>, <matthias.bgg@gmail.com>,
+ <bingbu.cao@intel.com>
+Subject: [V4, 0/2] media: i2c: add support for DW9768 VCM driver
+Date: Mon, 30 Mar 2020 20:36:32 +0800
+Message-ID: <20200330123634.363-1-dongchun.zhu@mediatek.com>
+X-Mailer: git-send-email 2.9.2
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200330_050119_254335_1375E2EC 
-X-CRM114-Status: UNSURE (   8.13  )
+X-CRM114-CacheID: sfid-20200330_053638_458328_6D9E7B2C 
+X-CRM114-Status: UNSURE (   9.48  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
@@ -89,59 +88,69 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: sean.wang@kernel.org, kuohong.wang@mediatek.com,
- linux-kernel@vger.kernel.org, Light Hsieh <light.hsieh@mediatek.com>,
- linux-gpio@vger.kernel.org, linux-mediatek@lists.infradead.org
+Cc: devicetree@vger.kernel.org, srv_heupstream@mediatek.com,
+ shengnan.wang@mediatek.com, sj.huang@mediatek.com,
+ linux-mediatek@lists.infradead.org, dongchun.zhu@mediatek.com,
+ louis.kuo@mediatek.com, linux-arm-kernel@lists.infradead.org,
+ linux-media@vger.kernel.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-From: Light Hsieh <light.hsieh@mediatek.com>
+Hello,
 
-This patch make pinctrl-mt6765 ready for building as loadable module.
+Here is the updated version of the changes to add DT bindings in YAML
+and V4L2 driver for the DW9768 lens voicee coil motor.
+This is a 10-bit DAC with 100mA output current sink capability from Dongwoon,
+designed for linear control of voice coil motor, and controlled via
+I2C serial interface to set the desired focus.
 
-Signed-off-by: Light Hsieh <light.hsieh@mediatek.com>
-Reviewed-by: Matthias Brugger <matthias.bgg@gmail.com>
----
- drivers/pinctrl/mediatek/Kconfig          | 2 +-
- drivers/pinctrl/mediatek/pinctrl-mt6765.c | 4 ++++
- 2 files changed, 5 insertions(+), 1 deletion(-)
+The DW9768 controls the position with 10-bit DAC data D[9:0] and seperates
+two 8-bit registers to control the VCM position as belows.
+DAC_MSB: D[9:8](ADDR: 0x03):
+     +---+---+---+---+---+---+---+---+
+     |---|---|---|---|---|---|D09|D08|
+     +---+---+---+---+---+---+---+---+
+DAC_LSB: D[7:0](ADDR: 0x04):
+     +---+---+---+---+---+---+---+---+
+     |D07|D06|D05|D04|D03|D02|D01|D00|
+     +---+---+---+---+---+---+---+---+
 
-diff --git a/drivers/pinctrl/mediatek/Kconfig b/drivers/pinctrl/mediatek/Kconfig
-index 551ac71..f32d364 100644
---- a/drivers/pinctrl/mediatek/Kconfig
-+++ b/drivers/pinctrl/mediatek/Kconfig
-@@ -87,7 +87,7 @@ config PINCTRL_MT2712
- 	select PINCTRL_MTK
- 
- config PINCTRL_MT6765
--	bool "Mediatek MT6765 pin control"
-+	tristate "Mediatek MT6765 pin control"
- 	depends on OF
- 	depends on ARM64 || COMPILE_TEST
- 	default ARM64 && ARCH_MEDIATEK
-diff --git a/drivers/pinctrl/mediatek/pinctrl-mt6765.c b/drivers/pinctrl/mediatek/pinctrl-mt6765.c
-index 905dae8c..2c59d39 100644
---- a/drivers/pinctrl/mediatek/pinctrl-mt6765.c
-+++ b/drivers/pinctrl/mediatek/pinctrl-mt6765.c
-@@ -6,6 +6,7 @@
-  *
-  */
- 
-+#include <linux/module.h>
- #include "pinctrl-mtk-mt6765.h"
- #include "pinctrl-paris.h"
- 
-@@ -1103,3 +1104,6 @@ static int __init mt6765_pinctrl_init(void)
- 	return platform_driver_register(&mt6765_pinctrl_driver);
- }
- arch_initcall(mt6765_pinctrl_init);
-+
-+MODULE_LICENSE("GPL v2");
-+MODULE_DESCRIPTION("MediaTek MT6765 Pinctrl Driver");
+This driver supports:
+ - set DW9768 to standby mode once suspend and turn it back to active if resume
+ - set the desired focus via V4L2_CID_FOCUS_ABSOLUTE ctrl
+
+Previous versions of this patch-set can be found here:
+v3: https://patchwork.kernel.org/cover/11412719/
+v2: https://patchwork.kernel.org/cover/11132299/
+v1: https://patchwork.kernel.org/cover/11034797/
+
+Mainly changes of v4 are addressing comments from Rob, Andy, Sakari, Tomasz.
+Compared to v3:
+ - Fix DT bindings and MAINTAINERS checking errors
+ - Use i2c_smbus_write_word_swapped() to replace of i2c_smbus_write_word_data()
+ - Refine driver more simply and clear
+ - Add a dependency to CONFIG_PM
+
+Please review.
+Thanks.
+
+Dongchun Zhu (2):
+  media: i2c: dw9768: Add DT support and MAINTAINERS entry
+  media: i2c: Add DW9768 VCM driver
+
+ .../bindings/media/i2c/dongwoon,dw9768.yaml        |  62 +++
+ MAINTAINERS                                        |   8 +
+ drivers/media/i2c/Kconfig                          |  11 +
+ drivers/media/i2c/Makefile                         |   1 +
+ drivers/media/i2c/dw9768.c                         | 432 +++++++++++++++++++++
+ 5 files changed, 514 insertions(+)
+ create mode 100644 Documentation/devicetree/bindings/media/i2c/dongwoon,dw9768.yaml
+ create mode 100644 drivers/media/i2c/dw9768.c
+
 -- 
-1.8.1.1.dirty
+2.9.2
 _______________________________________________
 Linux-mediatek mailing list
 Linux-mediatek@lists.infradead.org
