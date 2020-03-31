@@ -2,73 +2,66 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 200C4199AF7
-	for <lists+linux-mediatek@lfdr.de>; Tue, 31 Mar 2020 18:09:01 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 530BD199B61
+	for <lists+linux-mediatek@lfdr.de>; Tue, 31 Mar 2020 18:24:55 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
 	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=PevM7SFKcxXKsbbHmvp3c7gy43EvdTYVowY5fwvPtZY=; b=f0CZp2WeDce/v4
-	adm0WG5l9thcMTxMAZOL7xyn92D4xT5jeKZhkn4hfI50lgegtF4QoVU6aYW7UWKBlUs0sB6v7U8CD
-	6ZttkTl6Xm5Vg7Dp0ysdf7orgfXKyzmMBocizOLsFqAh5M4XonKnQ6yxFXtPGR56EkTI9usz5OSn3
-	NFoqlhgXZOLmWpP4NIJGu7QxjXJHskHeMAe56tNDwm+gU8dRDMlwSHLPg7Bg+MdFB+WOUaz48u+qk
-	UaY7tX2fvS1Y+i9L3xYGTBFwhWUwKGL3524CpdDCCyX3UgSpax+q9IRuC94d2T8YkLCkGQqCF+baO
-	yE1nqgO4pvrI7AHbr3dQ==;
+	List-Owner; bh=IzLJJBGafX56j02d6B6u7r8wAcSH69uSEHflus8pIOQ=; b=VaQPmeGQLEHcOC
+	AtWhnt8SiET8OraRFQr1vDnd7TUFlmcBCy+9/ua2gEJWwPEkUKVGO4kewtnsZ+F43sIxSFNAYgdB9
+	3EtO5lFl7DPJhJq91ZL0lFXBCRzDNIgAaDUr2O2++733Dbmu28CjoCT/hRPHa7PnCCpfeQDrvQUCs
+	fAXvS8vY73VF5XUHCEU6JVX08IHPbzF9kRMj/B/AmffHA2E0F0B5z8akcmsZr+4ObVM+OYBdiCmf4
+	DIFmOlPtxyVBiVXVnjKjL0AqsQAbz4Ag7M2A2IAqpjH09qPQy/EUIG4pTzqUU115V1+O6vy8LWhH3
+	ViTI61qBMNzqc2YBLeGA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jJJRe-0001XL-GW; Tue, 31 Mar 2020 16:08:54 +0000
-Received: from mga05.intel.com ([192.55.52.43])
+	id 1jJJh3-0003Rl-BJ; Tue, 31 Mar 2020 16:24:49 +0000
+Received: from mga12.intel.com ([192.55.52.136])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jJJRY-0001W6-Mp; Tue, 31 Mar 2020 16:08:51 +0000
-IronPort-SDR: 0aQTMnBCEL3ldYjkobLHFWIKIpn/JdOPUciXq5yPmbCCTgYP9Qqi5uwHNPKZexqtDgPYR1E2a2
- VEM7TwC6wAoA==
+ id 1jJJgv-0003PR-S4; Tue, 31 Mar 2020 16:24:46 +0000
+IronPort-SDR: NtVZUr5HNkWRFfS4DNlJTSmMmp8F33rhkvX4EiLf+dpLfso/AXOGfzC1uAB0t+IKK0t7qdyf+W
+ 9CYiZIhCuA7A==
 X-Amp-Result: SKIPPED(no attachment in message)
 X-Amp-File-Uploaded: False
-Received: from fmsmga008.fm.intel.com ([10.253.24.58])
- by fmsmga105.fm.intel.com with ESMTP/TLS/ECDHE-RSA-AES256-GCM-SHA384;
- 31 Mar 2020 07:05:34 -0700
-IronPort-SDR: Cp30xgv8jTSLPFdDeo8bM9c6hTeVSKfMYLRKjiO0I+Mb3yqaFRdAARW/g3DIYUXnMydxdxY86e
- lpk0AmZ7FrmA==
+Received: from orsmga002.jf.intel.com ([10.7.209.21])
+ by fmsmga106.fm.intel.com with ESMTP/TLS/ECDHE-RSA-AES256-GCM-SHA384;
+ 31 Mar 2020 07:21:28 -0700
+IronPort-SDR: sdD6GgxeRL8Ps3R76lYFgQENIIr/nUulSPpqBkmBlF2QxdA1PYfxR9lYbKWOdVtEbSPjj2FdCE
+ x6r1ZBRfi/3A==
 X-ExtLoop1: 1
-X-IronPort-AV: E=Sophos;i="5.72,327,1580803200"; d="scan'208";a="241921240"
+X-IronPort-AV: E=Sophos;i="5.72,328,1580803200"; d="scan'208";a="267296473"
 Received: from smile.fi.intel.com (HELO smile) ([10.237.68.40])
- by fmsmga008.fm.intel.com with ESMTP; 31 Mar 2020 07:05:23 -0700
+ by orsmga002.jf.intel.com with ESMTP; 31 Mar 2020 07:21:14 -0700
 Received: from andy by smile with local (Exim 4.93)
- (envelope-from <andy.shevchenko@gmail.com>)
- id 1jJHW7-00EWBr-4E; Tue, 31 Mar 2020 17:05:23 +0300
-Date: Tue, 31 Mar 2020 17:05:23 +0300
-From: Andy Shevchenko <andy.shevchenko@gmail.com>
-To: Matti Vaittinen <matti.vaittinen@fi.rohmeurope.com>
-Subject: Re: [PATCH v7 03/10] lib: add linear ranges helpers
-Message-ID: <20200331140523.GJ1922688@smile.fi.intel.com>
+ (envelope-from <andriy.shevchenko@linux.intel.com>)
+ id 1jJHlS-00EWMm-GN; Tue, 31 Mar 2020 17:21:14 +0300
+Date: Tue, 31 Mar 2020 17:21:14 +0300
+From: "andriy.shevchenko@linux.intel.com" <andriy.shevchenko@linux.intel.com>
+To: "Vaittinen, Matti" <Matti.Vaittinen@fi.rohmeurope.com>
+Subject: Re: [PATCH v7 00/10] Support ROHM BD99954 charger IC
+Message-ID: <20200331142114.GL1922688@smile.fi.intel.com>
 References: <cover.1585656143.git.matti.vaittinen@fi.rohmeurope.com>
- <c4cd52979ec187c942fa5794aab11e6c7f944cbb.1585656143.git.matti.vaittinen@fi.rohmeurope.com>
+ <CAMj1kXGUJpBnLUX0J-cHCMrYzvoPB38O42_WB58Z6jtnT7XZUQ@mail.gmail.com>
+ <168c9184cd4781f27a3d53339610849894263800.camel@fi.rohmeurope.com>
 MIME-Version: 1.0
 Content-Disposition: inline
-In-Reply-To: <c4cd52979ec187c942fa5794aab11e6c7f944cbb.1585656143.git.matti.vaittinen@fi.rohmeurope.com>
+In-Reply-To: <168c9184cd4781f27a3d53339610849894263800.camel@fi.rohmeurope.com>
 Organization: Intel Finland Oy - BIC 0357606-4 - Westendinkatu 7, 02160 Espoo
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200331_090849_648031_E624F122 
-X-CRM114-Status: GOOD (  26.72  )
-X-Spam-Score: 0.9 (/)
+X-CRM114-CacheID: sfid-20200331_092441_929872_E135E760 
+X-CRM114-Status: GOOD (  16.05  )
+X-Spam-Score: -2.3 (--)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
- Content analysis details:   (0.9 points)
+ Content analysis details:   (-2.3 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
- medium trust [192.55.52.43 listed in list.dnswl.org]
- 1.0 FORGED_GMAIL_RCVD      'From' gmail.com does not match 'Received'
- headers
- 1.0 SPF_SOFTFAIL           SPF: sender does not match SPF record (softfail)
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider [andy.shevchenko[at]gmail.com]
- 0.0 DKIM_ADSP_CUSTOM_MED   No valid author signature, adsp_override is
- CUSTOM_MED
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 1.2 NML_ADSP_CUSTOM_MED    ADSP custom_med hit, and not from a mailing
- list
+ medium trust [192.55.52.136 listed in list.dnswl.org]
+ -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
+ 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -80,217 +73,98 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>, Milo Kim <milo.kim@ti.com>,
- Andrei Stefanescu <andrei.stefanescu@microchip.com>,
- "Rafael J. Wysocki" <rafael@kernel.org>, Tony Lindgren <tony@atomide.com>,
- Linus Walleij <linus.walleij@linaro.org>,
- Brendan Higgins <brendanhiggins@google.com>,
- Liam Girdwood <lgirdwood@gmail.com>,
- Masahiro Yamada <yamada.masahiro@socionext.com>, devicetree@vger.kernel.org,
- mikko.mutanen@fi.rohmeurope.com, Vincenzo Frascino <vincenzo.frascino@arm.com>,
- Dan Williams <dan.j.williams@intel.com>, linux-samsung-soc@vger.kernel.org,
- linux-omap@vger.kernel.org, Herbert Xu <herbert@gondor.apana.org.au>,
- Bartlomiej Zolnierkiewicz <b.zolnierkie@samsung.com>,
- Krzysztof Kozlowski <krzk@kernel.org>, Ard Biesheuvel <ardb@kernel.org>,
- Bartosz Golaszewski <bgolaszewski@baylibre.com>, Chen-Yu Tsai <wens@csie.org>,
- Andy Gross <agross@kernel.org>, markus.laine@fi.rohmeurope.com,
- linux-arm-msm@vger.kernel.org, Borislav Petkov <bp@suse.de>,
- Petr Mladek <pmladek@suse.com>, Mikhail Zaslonko <zaslonko@linux.ibm.com>,
- Charles Keepax <ckeepax@opensource.cirrus.com>, Arnd Bergmann <arnd@arndb.de>,
- mazziesaccount@gmail.com, Gary Hook <Gary.Hook@amd.com>,
- Richard Fitzgerald <rf@opensource.cirrus.com>,
- Rob Herring <robh+dt@kernel.org>, linux-mediatek@lists.infradead.org,
- David Gow <davidgow@google.com>, Shuah Khan <skhan@linuxfoundation.org>,
- Matthias Brugger <matthias.bgg@gmail.com>,
- Thomas Gleixner <tglx@linutronix.de>,
- Bjorn Andersson <bjorn.andersson@linaro.org>,
- linux-arm-kernel@lists.infradead.org,
- Support Opensource <support.opensource@diasemi.com>,
- Sangbeom Kim <sbkim73@samsung.com>,
- Greg Kroah-Hartman <gregkh@linuxfoundation.org>, linux-pm@vger.kernel.org,
- Randy Dunlap <rdunlap@infradead.org>, Sebastian Reichel <sre@kernel.org>,
- linux-kernel@vger.kernel.org, Tal Gilboa <talgi@mellanox.com>,
- Changbin Du <changbin.du@intel.com>, Mark Brown <broonie@kernel.org>,
- Uwe =?iso-8859-1?Q?Kleine-K=F6nig?= <uwe@kleine-koenig.org>,
- Masami Hiramatsu <mhiramat@kernel.org>, patches@opensource.cirrus.com,
- Andrew Morton <akpm@linux-foundation.org>, Vladimir Oltean <olteanv@gmail.com>,
- "David S. Miller" <davem@davemloft.net>
+Cc: "mark.rutland@arm.com" <mark.rutland@arm.com>,
+ "milo.kim@ti.com" <milo.kim@ti.com>,
+ "andrei.stefanescu@microchip.com" <andrei.stefanescu@microchip.com>,
+ "devicetree@vger.kernel.org" <devicetree@vger.kernel.org>,
+ "tony@atomide.com" <tony@atomide.com>,
+ "linus.walleij@linaro.org" <linus.walleij@linaro.org>,
+ "Gary.Hook@amd.com" <Gary.Hook@amd.com>,
+ "linux-kernel@vger.kernel.org" <linux-kernel@vger.kernel.org>,
+ "yamada.masahiro@socionext.com" <yamada.masahiro@socionext.com>,
+ "linux-omap@vger.kernel.org" <linux-omap@vger.kernel.org>, "Mutanen,
+ Mikko" <Mikko.Mutanen@fi.rohmeurope.com>,
+ "vincenzo.frascino@arm.com" <vincenzo.frascino@arm.com>,
+ "ardb@kernel.org" <ardb@kernel.org>,
+ "linux-samsung-soc@vger.kernel.org" <linux-samsung-soc@vger.kernel.org>,
+ "uwe@kleine-koenig.org" <uwe@kleine-koenig.org>,
+ "rafael@kernel.org" <rafael@kernel.org>, "krzk@kernel.org" <krzk@kernel.org>,
+ "bgolaszewski@baylibre.com" <bgolaszewski@baylibre.com>,
+ "wens@csie.org" <wens@csie.org>, "agross@kernel.org" <agross@kernel.org>,
+ "Laine, Markus" <Markus.Laine@fi.rohmeurope.com>,
+ "linux-arm-msm@vger.kernel.org" <linux-arm-msm@vger.kernel.org>,
+ "bp@suse.de" <bp@suse.de>, "pmladek@suse.com" <pmladek@suse.com>,
+ "zaslonko@linux.ibm.com" <zaslonko@linux.ibm.com>,
+ "ckeepax@opensource.cirrus.com" <ckeepax@opensource.cirrus.com>,
+ "arnd@arndb.de" <arnd@arndb.de>,
+ "linux-pm@vger.kernel.org" <linux-pm@vger.kernel.org>,
+ "brendanhiggins@google.com" <brendanhiggins@google.com>,
+ "dan.j.williams@intel.com" <dan.j.williams@intel.com>,
+ "rf@opensource.cirrus.com" <rf@opensource.cirrus.com>,
+ "broonie@kernel.org" <broonie@kernel.org>,
+ "linux-mediatek@lists.infradead.org" <linux-mediatek@lists.infradead.org>,
+ "sre@kernel.org" <sre@kernel.org>, "davidgow@google.com" <davidgow@google.com>,
+ "skhan@linuxfoundation.org" <skhan@linuxfoundation.org>,
+ "matthias.bgg@gmail.com" <matthias.bgg@gmail.com>,
+ "tglx@linutronix.de" <tglx@linutronix.de>,
+ "bjorn.andersson@linaro.org" <bjorn.andersson@linaro.org>,
+ "linux-arm-kernel@lists.infradead.org" <linux-arm-kernel@lists.infradead.org>,
+ "support.opensource@diasemi.com" <support.opensource@diasemi.com>,
+ "sbkim73@samsung.com" <sbkim73@samsung.com>,
+ "patches@opensource.cirrus.com" <patches@opensource.cirrus.com>,
+ "rdunlap@infradead.org" <rdunlap@infradead.org>,
+ "lgirdwood@gmail.com" <lgirdwood@gmail.com>,
+ "talgi@mellanox.com" <talgi@mellanox.com>,
+ "changbin.du@intel.com" <changbin.du@intel.com>,
+ "b.zolnierkie@samsung.com" <b.zolnierkie@samsung.com>,
+ "robh+dt@kernel.org" <robh+dt@kernel.org>,
+ "mhiramat@kernel.org" <mhiramat@kernel.org>,
+ "gregkh@linuxfoundation.org" <gregkh@linuxfoundation.org>,
+ "akpm@linux-foundation.org" <akpm@linux-foundation.org>,
+ "olteanv@gmail.com" <olteanv@gmail.com>,
+ "davem@davemloft.net" <davem@davemloft.net>,
+ "mazziesaccount@gmail.com" <mazziesaccount@gmail.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Tue, Mar 31, 2020 at 03:23:03PM +0300, Matti Vaittinen wrote:
-> Many devices have control registers which control some measurable
-> property. Often a register contains control field so that change in
-> this field causes linear change in the controlled property. It is not
-> a rare case that user wants to give 'meaningful' control values and
-> driver needs to convert them to register field values. Even more
-> often user wants to 'see' the currently set value - again in
-> meaningful units - and driver needs to convert the values it reads
-> from register to these meaningful units. Examples of this include:
+On Tue, Mar 31, 2020 at 02:02:55PM +0000, Vaittinen, Matti wrote:
 > 
-> - regulators, voltage/current configurations
-> - power, voltage/current configurations
-> - clk(?) NCOs
+> On Tue, 2020-03-31 at 14:24 +0200, Ard Biesheuvel wrote:
+> > Hello Matti,
+> > 
+> > On Tue, 31 Mar 2020 at 14:20, Matti Vaittinen
+> > <matti.vaittinen@fi.rohmeurope.com> wrote:
+> > > Support ROHM BD99954 Battery Management IC
+> > > 
+> > > ROHM BD99954 is a Battery Management IC for 1-4 cell Lithium-Ion
+> > > secondary battery. BD99954 is intended to be used in space-
+> > > constraint
+> > > equipment such as Low profile Notebook PC, Tablets and other
+> > > applications.
+> > > 
+> > 
+> > Is it *really* necessary to cc this to 50 different people?
+> > 
+> > In the future, please trim down the cc list and keep it to the
+> > mailing
+> > list, maintainers and reviewers of the affected subsystem.
 > 
-> and maybe others I can't think of right now.
-> 
-> Provide a linear_range helper which can do conversion from user value
-> to register value 'selector'.
-> 
-> The idea here is stolen from regulator framework and patches refactoring
-> the regulator helpers to use this are following.
+> Sorry Ard (and others). This is the list get_maintainers.pl gave for
+> the series. Partially the large amount of receivers is caused by the
+> regulator framework change which impacted bunch of individual drivers.
+> Please, see the amount changed files from summary below. In addition to
+> that the linear_range code has been drifting from one place to other
+> during the review iterations until it settled to /lib. For example Greg
+> gave me some comments while linear_ranges was still heading to
+> drivers/base - so I did not drop Greg off from new revisions of the
+> series even if it was no longer changing drivers/base
 
-...
+I'm wondering if the command line I usually use gives you such amount of recipients.
 
-> +/*
-> + * linear_ranges.c -- helpers to map values in a linear range to range index
+	scripts/get_maintainer.pl --git --git-min-percent=67 ...
 
-File name inside file can bring an unnecessary churn in the future in case we
-would like to rename it (by some reason). So, better to remove.
-
-> + *
-> + * Original idea borrowed from regulator framework
-> + *
-
-> + * It might be useful if we could support also inversely proportional ranges?
-
-Looks like remark that should not be here, rather in commit message or even in cover letter.
-
-> + * Copyright 2020 ROHM Semiconductors
-> + */
-
-...
-
-> +/**
-> + * linear_range_get_value - fetch a value from given range
-
-> + *
-
-This blank line is not needed. Can we drop them everywhere?
-
-> + * @r:		pointer to linear range where value is looked from
-> + * @selector:	selector for which the value is searched
-> + * @val:	address where found value is updated
-> + *
-> + * Search given ranges for value which matches given selector.
-> + *
-> + * Return: 0 on success, -EINVAL given selector is not found from any of the
-> + * ranges.
-> + */
-
-...
-
-> +int linear_range_get_selector_low(const struct linear_range *r,
-> +				  unsigned int val, unsigned int *selector,
-> +				  bool *found)
-> +{
-> +	*found = false;
-> +
-> +	if (r->min > val)
-> +		return -EINVAL;
-> +
-
-> +	if (linear_range_get_max_value(r) >= val)
-> +		*found = true;
-
-As far as I can see this is a bit different from _high counterpart. So, if we
-even not found the range we still check r->step. Can we make them symmetrical
-(to some extend)?
-
-> +	if (!r->step)
-
-Why not positive conditional?
-
-> +		*selector = r->min_sel;
-> +	else
-> +		*selector = (val - r->min) / r->step + r->min_sel;
-
-> +	return 0;
-> +}
-
-...
-
-> +int linear_range_get_selector_low_array(const struct linear_range *r,
-> +					int ranges, unsigned int val,
-> +					unsigned int *selector, bool *found)
-> +{
-> +	int i;
-> +	int ret = -EINVAL;
-> +
-> +	for (i = 0; i < ranges; i++) {
-> +		int tmpret;
-> +
-> +		tmpret = linear_range_get_selector_low(&r[i], val, selector,
-> +						       found);
-> +
-> +		if (!tmpret)
-> +			ret = 0;
-> +
-> +		if (*found)
-> +			break;
-> +	}
-> +
-> +	return ret;
-> +}
-
-Can we refactor this?
-
-	int i;
-	int ret = -EINVAL;
-
-	for (i = 0; i < ranges; i++) {
-		ret = linear_range_get_selector_low(&r[i], val, selector, found);
-		if (*found)
-			break;
-	}
-
-	return break;
-
-This will unshadow the error code returned by the loop body.
-
-Or if ranges is guaranteed to be always positive number, convert this to do {} while.
-
-...
-
-> +int linear_range_get_selector_high(const struct linear_range *r,
-> +				   unsigned int val, unsigned int *selector,
-> +				   bool *found)
-> +{
-> +	*found = false;
-> +
-> +	if (linear_range_get_max_value(r) < val)
-> +		return -EINVAL;
-> +
-
-> +	if (r->min <= val) {
-> +		*found = true;
-> +	} else {
-> +		*selector = r->min_sel;
-> +		return 0;
-> +	}
-
-	if (r->min > val) {
-		*selector = r->min_sel;
-		return 0;
-	}
-
-	...see below...
-
-> +	if (!r->step)
-
-Positive conditional?
-
-> +		*selector = r->max_sel;
-> +	else
-> +		*selector = DIV_ROUND_UP(val - r->min, r->step) + r->min_sel;
-
-
-	*found = true;
-
-> +	return 0;
-> +}
 
 -- 
 With Best Regards,
