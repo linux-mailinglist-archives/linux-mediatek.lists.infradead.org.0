@@ -2,63 +2,62 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 5C01319A393
-	for <lists+linux-mediatek@lfdr.de>; Wed,  1 Apr 2020 04:26:18 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id F23F319A383
+	for <lists+linux-mediatek@lfdr.de>; Wed,  1 Apr 2020 04:20:44 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=5Ma5xoxUN6DVdyI4cgpWUeGJ+T877cud2Gx+MM1Ulzw=; b=TD4L0eDPrB+rD9
-	ihF2M6gd/5+aZFFfgQ4rkHB9bFbYZldJBxZEMtqC2+Sj7tIKRNT8jhNBKReD1s3PMRpzhqDhcyyH1
-	G3hOhXQks6XuRSBOSLcos9cpAVaezDS3SMd3YJ6RxfKYPbEF3e9q+/vIsHLIorMX0wOMWGZSRLXkf
-	bjeuunr5eey9Uwov0znbncdJV/S2ezNx7IBn4AwKN/nPgn9gYpkOHdxuA2dYmfTc0IMk3DsOSZj1J
-	dSv2P8i3i9t9Ilhw4Lj0AtfJPdAXYuaXK+xVxIYuM5OCiAASjS34ykjwyaO0e+xEjSvApDB5lNe5C
-	TW3JJxpxBfud8G6Nk9hQ==;
+	List-Owner; bh=sQ48ek7grAu1ciskT7NM48u/6mGdExv0mvIwh/CYK+E=; b=mZk202u0D7UDic
+	netSpKeVqBD0wP3xww1RIIMjykzSkPZMr/B2hCnmyvWQlz/0dF25Qv19zy7Mq7ZDGFbBO3zKsjhmV
+	3G3wIAVUQBnK795SDvIf+oSFBHzcebrYiO7JcsKNmX5T9aB5n6A+dc8js/4JACsd73O8C3xkakt6o
+	Eg5dGpYjWa4gHv+yluZPUjPwU1CIlQKVyn/AVScMcga50A9+lHWfq6mXQeGRBL7m0EY7DcslgllZO
+	sFuKE8dnasdRZHx2BOXc6kBs+C3CcZFHFn0j+ly22iGc6uTQu4q3aqBzoaN6ho44cGek923TQWmVN
+	ArR1X2liWZzVObwh0ZxA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jJT4y-0001Kb-7y; Wed, 01 Apr 2020 02:26:08 +0000
+	id 1jJSze-0006hR-4T; Wed, 01 Apr 2020 02:20:38 +0000
 Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jJT4v-0001JR-Ed
- for linux-mediatek@lists.infradead.org; Wed, 01 Apr 2020 02:26:07 +0000
-X-UUID: d8a6f0bba99140ccb27079fdfc8ab26b-20200331
+ id 1jJSzb-0006ge-4n
+ for linux-mediatek@lists.infradead.org; Wed, 01 Apr 2020 02:20:36 +0000
+X-UUID: af28c2343fa947fba8dfa75f67e14f15-20200331
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
  s=dk; 
  h=Content-Transfer-Encoding:MIME-Version:Content-Type:References:In-Reply-To:Date:CC:To:From:Subject:Message-ID;
- bh=ozChR75QyhnkmzvgkYzHisLoS9xThMPk60TjOXq2y0w=; 
- b=E5XwNqTjj7DmNh1TQV5VjC/i34j7mzgfT6rWfcrOtFBjsJ4xsVA+juCWKEwZQiBehk4TDATtzbvt3U83b80S/BfWEPuT1vOxXGfc/0FthSwO6+cOBHuRLxwwMtAU7bDFGkJwGcCenOEPXdumzSDT00rFLkpoYK/XLqb6EswMzUs=;
-X-UUID: d8a6f0bba99140ccb27079fdfc8ab26b-20200331
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
+ bh=EVfDkcSg67rWMGV0bZzmWDij5Lm1irRxXDFbaSycSd8=; 
+ b=JDVVCCfKPIcaFE+3QJ9jrIVYE0pQUFP1P/g+iuorb9ojc7ZQIUgsfBZwgPQn8TSTUhgQL1OzQ8L9G41GWpSZp2kxhx3vyyOKFiUWgb2d6cO0pIDwQncsg5/7RIxS+inWE+c3pQd9aKguYWFvLOQi8sBwFM/Wk2cUEOwvNqpCPFM=;
+X-UUID: af28c2343fa947fba8dfa75f67e14f15-20200331
+Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw01.mediatek.com
  (envelope-from <chunfeng.yun@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 729377008; Tue, 31 Mar 2020 18:25:58 -0800
-Received: from mtkmbs05n2.mediatek.inc (172.21.101.140) by
- MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Tue, 31 Mar 2020 19:18:18 -0700
-Received: from MTKCAS32.mediatek.inc (172.27.4.184) by mtkmbs05n2.mediatek.inc
- (172.21.101.140) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
- Wed, 1 Apr 2020 10:18:14 +0800
+ with ESMTP id 1560492243; Tue, 31 Mar 2020 18:20:19 -0800
+Received: from mtkmbs05n1.mediatek.inc (172.21.101.15) by
+ MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Tue, 31 Mar 2020 19:20:20 -0700
+Received: from MTKCAS32.mediatek.inc (172.27.4.184) by mtkmbs05n1.mediatek.inc
+ (172.21.101.15) with Microsoft SMTP Server (TLS) id 15.0.1395.4;
+ Wed, 1 Apr 2020 10:20:19 +0800
 Received: from [10.17.3.153] (10.17.3.153) by MTKCAS32.mediatek.inc
  (172.27.4.170) with Microsoft SMTP Server id 15.0.1395.4 via Frontend
- Transport; Wed, 1 Apr 2020 10:18:16 +0800
-Message-ID: <1585707503.28859.21.camel@mhfsdcap03>
-Subject: Re: [PATCH v3 3/4] phy: mediatek: Move mtk_hdmi_phy driver into
- drivers/phy/mediatek folder
+ Transport; Wed, 1 Apr 2020 10:20:17 +0800
+Message-ID: <1585707625.28859.23.camel@mhfsdcap03>
+Subject: Re: [PATCH v3 2/4] drm/mediatek: Separate mtk_hdmi_phy to an
+ independent module
 From: Chunfeng Yun <chunfeng.yun@mediatek.com>
 To: Chun-Kuang Hu <chunkuang.hu@kernel.org>
-Date: Wed, 1 Apr 2020 10:18:23 +0800
-In-Reply-To: <20200331155728.18032-4-chunkuang.hu@kernel.org>
+Date: Wed, 1 Apr 2020 10:20:25 +0800
+In-Reply-To: <20200331155728.18032-3-chunkuang.hu@kernel.org>
 References: <20200331155728.18032-1-chunkuang.hu@kernel.org>
- <20200331155728.18032-4-chunkuang.hu@kernel.org>
+ <20200331155728.18032-3-chunkuang.hu@kernel.org>
 X-Mailer: Evolution 3.10.4-0ubuntu2 
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200331_192605_498114_A616977E 
-X-CRM114-Status: UNSURE (   8.82  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20200331_192035_188529_981A3C18 
+X-CRM114-Status: GOOD (  10.21  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
@@ -101,28 +100,24 @@ Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.o
 On Tue, 2020-03-31 at 23:57 +0800, Chun-Kuang Hu wrote:
 > From: CK Hu <ck.hu@mediatek.com>
 > 
-> mtk_hdmi_phy is currently placed inside mediatek drm driver, but it's
-> more suitable to place a phy driver into phy driver folder, so move
-> mtk_hdmi_phy driver into phy driver folder.
+> mtk_hdmi_phy is a part of mtk_hdmi module, but phy driver should be an
+> independent module rather than be part of drm module, so separate the phy
+> driver to an independent module.
 > 
 > Signed-off-by: CK Hu <ck.hu@mediatek.com>
 > Signed-off-by: Chun-Kuang Hu <chunkuang.hu@kernel.org>
 > ---
->  drivers/gpu/drm/mediatek/Kconfig                           | 7 -------
->  drivers/gpu/drm/mediatek/Makefile                          | 6 ------
->  drivers/phy/mediatek/Kconfig                               | 7 +++++++
->  drivers/phy/mediatek/Makefile                              | 7 +++++++
->  .../mediatek/phy-mtk-hdmi-mt2701.c}                        | 2 +-
->  .../mediatek/phy-mtk-hdmi-mt8173.c}                        | 2 +-
->  .../mtk_hdmi_phy.c => phy/mediatek/phy-mtk-hdmi.c}         | 2 +-
->  .../mtk_hdmi_phy.h => phy/mediatek/phy-mtk-hdmi.h}         | 0
->  8 files changed, 17 insertions(+), 16 deletions(-)
->  rename drivers/{gpu/drm/mediatek/mtk_mt2701_hdmi_phy.c => phy/mediatek/phy-mtk-hdmi-mt2701.c} (99%)
->  rename drivers/{gpu/drm/mediatek/mtk_mt8173_hdmi_phy.c => phy/mediatek/phy-mtk-hdmi-mt8173.c} (99%)
->  rename drivers/{gpu/drm/mediatek/mtk_hdmi_phy.c => phy/mediatek/phy-mtk-hdmi.c} (99%)
->  rename drivers/{gpu/drm/mediatek/mtk_hdmi_phy.h => phy/mediatek/phy-mtk-hdmi.h} (100%)
-> 
+>  drivers/gpu/drm/mediatek/Kconfig        |  9 ++++++++-
+>  drivers/gpu/drm/mediatek/Makefile       | 11 +++++++----
+>  drivers/gpu/drm/mediatek/mtk_hdmi.c     |  2 +-
+>  drivers/gpu/drm/mediatek/mtk_hdmi.h     |  1 -
+>  drivers/gpu/drm/mediatek/mtk_hdmi_phy.c |  1 +
+>  drivers/gpu/drm/mediatek/mtk_hdmi_phy.h |  1 -
+>  6 files changed, 17 insertions(+), 8 deletions(-)
 Reviewed-by: Chunfeng Yun <chunfeng.yun@mediatek.com>
+
+Thanks a lot
+
 _______________________________________________
 Linux-mediatek mailing list
 Linux-mediatek@lists.infradead.org
