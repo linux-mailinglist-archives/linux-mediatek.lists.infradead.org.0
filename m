@@ -2,56 +2,58 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id CFCC919A954
-	for <lists+linux-mediatek@lfdr.de>; Wed,  1 Apr 2020 12:18:10 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 2347019A9CA
+	for <lists+linux-mediatek@lfdr.de>; Wed,  1 Apr 2020 12:49:51 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:Cc:
-	List-Subscribe:List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:
-	In-Reply-To:MIME-Version:References:Message-ID:Subject:To:From:Date:Reply-To:
-	Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
+	Content-Transfer-Encoding:Cc:List-Subscribe:List-Help:List-Post:List-Archive:
+	List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:Message-ID:From:
+	References:To:Subject:Reply-To:Content-ID:Content-Description:Resent-Date:
 	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
-	 bh=93qHTOpVut4Ys410GaWkwCYReLefkoAQ+7rkbwj03Gk=; b=nUL1gE6kljCwh5F03/zci9DRW
-	jKp/2x/eHyRxi5GUlyj/0BByY1+ssoAmI0HDhjveaMtJmMxhNyxcJyBbGeaoMSK53Ep69nTiIuIdx
-	ngEs236R2RyQ8iEOREnWlZi+FXhKW90PjWHq3+J10bLEhVIThKhUF7Sk44TwUtCvAgG9OKodLPk2N
-	pbqAu7YbWiRQm+uL5e/bJOLr0zKS/HzmUa2b88N3aQJ6vp3Ev7jJoLvfxCHIyRxZc4zH0C885bTXu
-	QW8gTbmBDKNc1/lkWRzWqGJ1k4v99SL4NLvtxGASIXxe/F+Fc1UBdXlyi5PCt5TXD3usYzrCWlF2U
-	1Ym2JwRpQ==;
+	 bh=QVj7SXtMIuYbssTDaVODm30xD5Ili37aqgefyx+j3nE=; b=VarVp2egZX6KTN/ixPoW1MoDQ
+	1YR52heOdbq7si4vor4l1MzP35yL4S/045B81KZyywMD4DZIx3lzOPqmGThQEFWiMek3w3qgtJ9Sf
+	jjh3DzPGykfOwx+ioHodri+wSFZZjJedcB9c5X5m3SmkmUEvDOxa2niajGqNV/9jEr+9p1EglXv+a
+	MD8QZZz8brCiKLd1a1AT8nVaSs2u2mAUpJ8tRsf/pdilZX+MQNBFkwYocctx9pY4HsWoylT5jyRnl
+	vzDfh5T4U+NeMxyjivxVN9Zg5KdYFN1/+fag9FBnKHD/j+P8K2Do7KfQp1UW/MJj4UumTn53KfAxB
+	feknyxHbA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jJaRg-0005qC-Nl; Wed, 01 Apr 2020 10:18:04 +0000
+	id 1jJawJ-0000He-IW; Wed, 01 Apr 2020 10:49:43 +0000
 Received: from foss.arm.com ([217.140.110.172])
  by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jJaRe-0005p4-1r; Wed, 01 Apr 2020 10:18:03 +0000
+ id 1jJaw9-0000Ac-R3; Wed, 01 Apr 2020 10:49:35 +0000
 Received: from usa-sjc-imap-foss1.foss.arm.com (unknown [10.121.207.14])
- by usa-sjc-mx-foss1.foss.arm.com (Postfix) with ESMTP id 271761FB;
- Wed,  1 Apr 2020 03:17:59 -0700 (PDT)
-Received: from localhost (unknown [10.37.6.21])
- by usa-sjc-imap-foss1.foss.arm.com (Postfix) with ESMTPSA id 771D03F52E;
- Wed,  1 Apr 2020 03:17:58 -0700 (PDT)
-Date: Wed, 1 Apr 2020 11:17:57 +0100
-From: Mark Brown <broonie@kernel.org>
-To: Matti Vaittinen <matti.vaittinen@fi.rohmeurope.com>
-Subject: Re: [PATCH v7 06/10] regulator: use linear_ranges helper
-Message-ID: <20200401101757.GF4943@sirena.org.uk>
-References: <cover.1585656143.git.matti.vaittinen@fi.rohmeurope.com>
- <e5d785e3b3d2a60f44713ac5720df394e312408f.1585656143.git.matti.vaittinen@fi.rohmeurope.com>
+ by usa-sjc-mx-foss1.foss.arm.com (Postfix) with ESMTP id AA5471FB;
+ Wed,  1 Apr 2020 03:49:32 -0700 (PDT)
+Received: from [10.37.12.63] (unknown [10.37.12.63])
+ by usa-sjc-imap-foss1.foss.arm.com (Postfix) with ESMTPSA id 1A4CC3F68F;
+ Wed,  1 Apr 2020 03:49:21 -0700 (PDT)
+Subject: Re: [PATCH v5 4/5] thermal: devfreq_cooling: Refactor code and switch
+ to use Energy Model
+To: linux-kernel@vger.kernel.org, linux-pm@vger.kernel.org,
+ linux-arm-kernel@lists.infradead.org, dri-devel@lists.freedesktop.org,
+ linux-omap@vger.kernel.org, linux-mediatek@lists.infradead.org,
+ linux-arm-msm@vger.kernel.org, linux-imx@nxp.com
+References: <20200318114548.19916-1-lukasz.luba@arm.com>
+ <20200318114548.19916-5-lukasz.luba@arm.com>
+From: Lukasz Luba <lukasz.luba@arm.com>
+Message-ID: <b409f9d4-e9fe-1473-f2dd-aa11e3be1fd9@arm.com>
+Date: Wed, 1 Apr 2020 11:49:20 +0100
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
+ Thunderbird/60.9.0
 MIME-Version: 1.0
-In-Reply-To: <e5d785e3b3d2a60f44713ac5720df394e312408f.1585656143.git.matti.vaittinen@fi.rohmeurope.com>
-X-Cookie: The Ranger isn't gonna like it, Yogi.
-User-Agent: Mutt/1.10.1 (2018-07-13)
+In-Reply-To: <20200318114548.19916-5-lukasz.luba@arm.com>
+Content-Language: en-US
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200401_031802_180308_CBECB2D7 
-X-CRM114-Status: UNSURE (   9.80  )
-X-CRM114-Notice: Please train this message.
-X-Spam-Score: -2.1 (--)
+X-CRM114-CacheID: sfid-20200401_034933_921725_1D70C9F1 
+X-CRM114-Status: GOOD (  16.27  )
+X-Spam-Score: -2.3 (--)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
- Content analysis details:   (-2.1 points)
+ Content analysis details:   (-2.3 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
  medium trust [217.140.110.172 listed in list.dnswl.org]
- 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
- mail domains are different
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
 X-BeenThere: linux-mediatek@lists.infradead.org
@@ -65,94 +67,56 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>, Milo Kim <milo.kim@ti.com>,
- Andrei Stefanescu <andrei.stefanescu@microchip.com>,
- "Rafael J. Wysocki" <rafael@kernel.org>, Tony Lindgren <tony@atomide.com>,
- Linus Walleij <linus.walleij@linaro.org>,
- Brendan Higgins <brendanhiggins@google.com>,
- Liam Girdwood <lgirdwood@gmail.com>,
- Masahiro Yamada <yamada.masahiro@socionext.com>, devicetree@vger.kernel.org,
- linux-omap@vger.kernel.org, mikko.mutanen@fi.rohmeurope.com,
- Vincenzo Frascino <vincenzo.frascino@arm.com>,
- Dan Williams <dan.j.williams@intel.com>, linux-samsung-soc@vger.kernel.org,
- Andy Shevchenko <andriy.shevchenko@linux.intel.com>,
- Herbert Xu <herbert@gondor.apana.org.au>,
- Bartlomiej Zolnierkiewicz <b.zolnierkie@samsung.com>,
- Chen-Yu Tsai <wens@csie.org>, Krzysztof Kozlowski <krzk@kernel.org>,
- Ard Biesheuvel <ardb@kernel.org>,
- Bartosz Golaszewski <bgolaszewski@baylibre.com>,
- Andy Shevchenko <andy.shevchenko@gmail.com>, Andy Gross <agross@kernel.org>,
- markus.laine@fi.rohmeurope.com, linux-arm-msm@vger.kernel.org,
- Borislav Petkov <bp@suse.de>, Petr Mladek <pmladek@suse.com>,
- Mikhail Zaslonko <zaslonko@linux.ibm.com>,
- Charles Keepax <ckeepax@opensource.cirrus.com>, Arnd Bergmann <arnd@arndb.de>,
- mazziesaccount@gmail.com, Gary Hook <Gary.Hook@amd.com>,
- Richard Fitzgerald <rf@opensource.cirrus.com>,
- Rob Herring <robh+dt@kernel.org>, linux-mediatek@lists.infradead.org,
- David Gow <davidgow@google.com>, Shuah Khan <skhan@linuxfoundation.org>,
- Matthias Brugger <matthias.bgg@gmail.com>,
- Thomas Gleixner <tglx@linutronix.de>,
- Bjorn Andersson <bjorn.andersson@linaro.org>,
- linux-arm-kernel@lists.infradead.org,
- Support Opensource <support.opensource@diasemi.com>,
- Sangbeom Kim <sbkim73@samsung.com>,
- Greg Kroah-Hartman <gregkh@linuxfoundation.org>, linux-pm@vger.kernel.org,
- Randy Dunlap <rdunlap@infradead.org>, Sebastian Reichel <sre@kernel.org>,
- linux-kernel@vger.kernel.org, Tal Gilboa <talgi@mellanox.com>,
- Changbin Du <changbin.du@intel.com>,
- Uwe =?iso-8859-1?Q?Kleine-K=F6nig?= <uwe@kleine-koenig.org>,
- Masami Hiramatsu <mhiramat@kernel.org>, patches@opensource.cirrus.com,
- Andrew Morton <akpm@linux-foundation.org>, Vladimir Oltean <olteanv@gmail.com>,
- "David S. Miller" <davem@davemloft.net>
-Content-Type: multipart/mixed; boundary="===============1684185162940737182=="
+Cc: nm@ti.com, juri.lelli@redhat.com, peterz@infradead.org,
+ viresh.kumar@linaro.org, liviu.dudau@arm.com, bjorn.andersson@linaro.org,
+ bsegall@google.com, festevam@gmail.com, Morten.Rasmussen@arm.com,
+ robh@kernel.org, amit.kucheria@verdurent.com, lorenzo.pieralisi@arm.com,
+ vincent.guittot@linaro.org, khilman@kernel.org, daniel.lezcano@linaro.org,
+ steven.price@arm.com, cw00.choi@samsung.com, mingo@redhat.com, mgorman@suse.de,
+ rui.zhang@intel.com, alyssa.rosenzweig@collabora.com, orjan.eide@arm.com,
+ daniel@ffwll.ch, b.zolnierkie@samsung.com, s.hauer@pengutronix.de,
+ rostedt@goodmis.org, matthias.bgg@gmail.com, Dietmar.Eggemann@arm.com,
+ airlied@linux.ie, javi.merino@arm.com, tomeu.vizoso@collabora.com,
+ qperret@google.com, sboyd@kernel.org, mka@chromium.org, rdunlap@infradead.org,
+ rjw@rjwysocki.net, agross@kernel.org, kernel@pengutronix.de,
+ sudeep.holla@arm.com, patrick.bellasi@matbug.net, shawnguo@kernel.org
+Content-Transfer-Encoding: 7bit
+Content-Type: text/plain; charset="us-ascii"; Format="flowed"
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
 
---===============1684185162940737182==
-Content-Type: multipart/signed; micalg=pgp-sha512;
-	protocol="application/pgp-signature"; boundary="c3bfwLpm8qysLVxt"
-Content-Disposition: inline
 
+On 3/18/20 11:45 AM, Lukasz Luba wrote:
+> The overhauled Energy Model (EM) framework support also devfreq devices.
+> The unified API interface of the EM can be used in the thermal subsystem to
+> not duplicate code. The power table now is taken from EM structure and
+> there is no need to maintain calculation for it locally. In case when the
+> EM is not provided by the device a simple interface for cooling device is
+> used.
+> 
+> There is also an improvement in code related to enabling/disabling OPPs,
+> which prevents from race condition with devfreq governors.
+> 
+> [lkp: Reported the build warning]
+> Reported-by: kbuild test robot <lkp@intel.com>
+> Reviewed-by: Steven Rostedt (VMware) <rostedt@goodmis.org> # for tracing code
+> Signed-off-by: Lukasz Luba <lukasz.luba@arm.com>
+> ---
+>   drivers/thermal/devfreq_cooling.c | 474 ++++++++++++++++--------------
+>   include/linux/devfreq_cooling.h   |  39 +--
+>   include/trace/events/thermal.h    |  19 +-
+>   3 files changed, 277 insertions(+), 255 deletions(-)
+> 
 
---c3bfwLpm8qysLVxt
-Content-Type: text/plain; charset=us-ascii
-Content-Disposition: inline
+Gentle ping.
 
-On Tue, Mar 31, 2020 at 03:25:30PM +0300, Matti Vaittinen wrote:
+Daniel or Amit could you have a look at this patch?
 
-> Change the regulator helpers to use common linear_ranges code.
-
-Reviwed-by: Mark Brown <broonie@kernel.org>
-
---c3bfwLpm8qysLVxt
-Content-Type: application/pgp-signature; name="signature.asc"
-
------BEGIN PGP SIGNATURE-----
-
-iQEzBAABCgAdFiEEreZoqmdXGLWf4p/qJNaLcl1Uh9AFAl6EalQACgkQJNaLcl1U
-h9CXQgf/bs8libOQQ/yuGReAwtyUFTOVn+sMCSimsvFb4ZR2rABibOuqznQvwU+7
-viAAlBNlwvQR1uXROyHPGYBBTBDFGn6zzHtfcicj9sCbra0yDKXfUxL3ZrASm3aH
-x4DpdTpv3aCIZ//spSa5RexaUHTUaCtEmW1J/Rda+eVEmlMwdBUnfPfDMJxobjhJ
-BpnduTl5fuWbyigg3PzrogvDA2VNT4WNPwpfgvwVW4RsQ3xuToOvq/YaORN9TpnH
-76j1ky6pPMjIQURjOxqYgClqCNhI2nA8RX006xXEIs+2RohpKu9AQs5gsqziSG37
-atz/twWtwqcuXZVMSncHKoypY5ZD9w==
-=mRhT
------END PGP SIGNATURE-----
-
---c3bfwLpm8qysLVxt--
-
-
---===============1684185162940737182==
-Content-Type: text/plain; charset="us-ascii"
-MIME-Version: 1.0
-Content-Transfer-Encoding: 7bit
-Content-Disposition: inline
+Regards,
+Lukasz
 
 _______________________________________________
 Linux-mediatek mailing list
 Linux-mediatek@lists.infradead.org
 http://lists.infradead.org/mailman/listinfo/linux-mediatek
-
---===============1684185162940737182==--
-
