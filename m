@@ -2,77 +2,87 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 7704A19BA7D
-	for <lists+linux-mediatek@lfdr.de>; Thu,  2 Apr 2020 04:50:23 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 3D53519BAD9
+	for <lists+linux-mediatek@lfdr.de>; Thu,  2 Apr 2020 06:03:30 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Content-ID:In-Reply-To:
+	References:Message-ID:Date:Subject:To:From:Reply-To:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=Uo/gePSEElD89hEoJXmXLpD6N90Jm4HiAFV3XRBOCpY=; b=kD97tIYklSJV38
-	k5t6kbA4yRKhL9fzyKEPxLKvFgNi5rYCvDPooA/aaiDI7jfbWJzljXtxIUvNQuWJOmfMELdIBzzJF
-	2hrm0t/d9RgjCfBqy2AGGPP0UdLDIVfcCbAzi6r9qREJ5zLI04Mm4GOUwKb7MGJ87wUuqk1DYWdKx
-	pxUIMO7b9KYXQef6bMsRN6A1jhPmlME0ukiGjB/Mj5XScsUj9VFJBVJ9Ea3Gzf5RbuphUoo6Qrr/r
-	yy36esJezgsh2p7SBVCApNHihOf6T95P0eNAMdUS3r+jO8i3c50Zz7oqT5gXMpaRw+bHK4tKRCu4x
-	nWQrPvQp3ElqfFugK5OQ==;
+	List-Owner; bh=SCEqdey4FlWuc6Mxu+Zxbu/jLQE/LvlNcpm06jj1w4k=; b=jv13Kma66mbRE9
+	qE9AqG6uGLdKKrtIfhwo/l0FyyxjSmJtLiyi/3/VG7C3GM4fbX1wdVtHgEYDOvyvFTkEH14RNbm9B
+	yUQnO65HrzV7ugpyykSbr94XAF5085vLdCjZrYQidWwnhPHRDK/GERh7X45nq6V1wKT+nqVcv9Iif
+	1glxROo3yCjz/uSUlEn75ZoRPLwAiniqCoR/Fwi1XqYz7zbeT/oO2dDZHNF993A2fIq3YiVylyQVi
+	Y0rIAu+C90Fvql7HnGjY9UfQAN9FrJR4PytnQ1/YTUE0fTB21tLKUys/AhRLuxX7xB1x2LylbqLIp
+	Rb83TacG0cs2Q5GUwIaQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jJpvq-0000bu-3a; Thu, 02 Apr 2020 02:50:14 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
- by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jJpvm-0008Jy-PG; Thu, 02 Apr 2020 02:50:12 +0000
-X-UUID: fa6da213356d47bd8ff0f8fa32aa6262-20200401
-DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
- s=dk; 
- h=Content-Transfer-Encoding:MIME-Version:Content-Type:References:In-Reply-To:Date:CC:To:From:Subject:Message-ID;
- bh=P6AXl14409aeLCBpPKkU44gdGTRy5JIxj8i/NJ61DK8=; 
- b=R+WAuqV4NaHAeSkH/LdPNNeyxXO4mFtZdsgFWw+33GfWqKr6oGHK1BXgS0T7ZiQ2sE4vVc7ECyNKzLk4BRq+pB48Ns89S9Biphhbhlqf/sM7+gEUdqaO9f4bVhxF23YnL95JMZWXh1tLDcqCK0chwT1VGWyVxzPfWyiNdYxDsyQ=;
-X-UUID: fa6da213356d47bd8ff0f8fa32aa6262-20200401
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
- (envelope-from <henryc.chen@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1139957167; Wed, 01 Apr 2020 18:50:04 -0800
-Received: from MTKMBS02N1.mediatek.inc (172.21.101.77) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Wed, 1 Apr 2020 19:48:12 -0700
-Received: from mtkcas07.mediatek.inc (172.21.101.84) by
- mtkmbs02n1.mediatek.inc (172.21.101.77) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Thu, 2 Apr 2020 10:48:11 +0800
-Received: from [172.21.77.4] (172.21.77.4) by mtkcas07.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1497.2 via Frontend
- Transport; Thu, 2 Apr 2020 10:48:10 +0800
-Message-ID: <1585795691.27527.14.camel@mtksdaap41>
-Subject: Re: [PATCH V4 06/13] soc: mediatek: add MT8183 dvfsrc support
-From: Henry Chen <henryc.chen@mediatek.com>
-To: Georgi Djakov <georgi.djakov@linaro.org>
-Date: Thu, 2 Apr 2020 10:48:11 +0800
-In-Reply-To: <4220e681-80b6-f9af-ddd1-b28aabe513cf@linaro.org>
-References: <1584092066-24425-1-git-send-email-henryc.chen@mediatek.com>
- <1584092066-24425-7-git-send-email-henryc.chen@mediatek.com>
- <4220e681-80b6-f9af-ddd1-b28aabe513cf@linaro.org>
-X-Mailer: Evolution 3.10.4-0ubuntu2 
+	id 1jJr4Y-0008FM-EH; Thu, 02 Apr 2020 04:03:18 +0000
+Received: from mailgate1.rohmeurope.com ([87.129.152.131])
+ by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
+ id 1jJr4U-0008E2-Fz; Thu, 02 Apr 2020 04:03:16 +0000
+X-AuditID: c0a8fbf4-489ff70000004419-ea-5e8563fdb129
+Received: from smtp.reu.rohmeu.com (will-cas002.reu.rohmeu.com
+ [192.168.251.178])
+ by mailgate1.rohmeurope.com (Symantec Messaging Gateway) with SMTP id
+ 18.A4.17433.DF3658E5; Thu,  2 Apr 2020 06:03:09 +0200 (CEST)
+Received: from WILL-MAIL001.REu.RohmEu.com ([fe80::2915:304f:d22c:c6ba]) by
+ WILL-CAS002.REu.RohmEu.com ([fe80::fc24:4cbc:e287:8659%12]) with mapi id
+ 14.03.0487.000; Thu, 2 Apr 2020 06:03:05 +0200
+From: "Vaittinen, Matti" <Matti.Vaittinen@fi.rohmeurope.com>
+To: "andy.shevchenko@gmail.com" <andy.shevchenko@gmail.com>
+Subject: Re: [SPF Softfail] Re: [PATCH v7 03/10] lib: add linear ranges helpers
+Thread-Topic: [SPF Softfail] Re: [PATCH v7 03/10] lib: add linear ranges
+ helpers
+Thread-Index: AQHWB1cj+aMIIRocXUeZN2Io9Ehlr6himqGAgAFQhQCAACnkAIAACuYAgAAXZoCAAN+uAA==
+Date: Thu, 2 Apr 2020 04:03:03 +0000
+Message-ID: <bbdf3a3e12bd2ba11a019192e492d135f92634cc.camel@fi.rohmeurope.com>
+References: <cover.1585656143.git.matti.vaittinen@fi.rohmeurope.com>
+ <c4cd52979ec187c942fa5794aab11e6c7f944cbb.1585656143.git.matti.vaittinen@fi.rohmeurope.com>
+ <20200331140523.GJ1922688@smile.fi.intel.com>
+ <4e75e0fcc9782220798c90eee5e41788fe277cc1.camel@fi.rohmeurope.com>
+ <CAHp75VcnK2A_qjBo3FEz-XC6Y=3z7ssSgT6AS-P_9EPyRXsFXQ@mail.gmail.com>
+ <e2391c0749478d42ac7e2db4981b9d373a160323.camel@fi.rohmeurope.com>
+ <CAHp75Vd24w6dqqCYH46GKnJ5Nzase6LdVgSSVwQ3FEzMd5gsYA@mail.gmail.com>
+In-Reply-To: <CAHp75Vd24w6dqqCYH46GKnJ5Nzase6LdVgSSVwQ3FEzMd5gsYA@mail.gmail.com>
+Accept-Language: en-US, de-DE
+Content-Language: de-DE
+X-MS-Has-Attach: 
+X-MS-TNEF-Correlator: 
+x-originating-ip: [62.78.225.252]
+Content-ID: <3D13BA28F4027B4DB279FD920FA6548A@de.rohmeurope.com>
 MIME-Version: 1.0
-X-MTK: N
+X-Brightmail-Tracker: H4sIAAAAAAAAA02TfUwTdxjH87u7tgfS5SgwfivMadUtYCaiZnmSmUWTxd0W4tsStpCMWuSg
+ zNKyvhgwWUKEbgoZAuNtBeRNXnQESnE6kFLTMecgUDs6kM2ZIcgEJ2zQQYDBdkdV+Ofue8/3
+ +Tzf54/naFJWRMvpFK2R02tVGoXYn7rZtGx7feWkOX63Z2IPDIwtU1DR2iyGvNlaEibzv0Ow
+ UnhLAm1lrSLwVvZS0OeYpqDgQgS4735JQvHouBg8ZhuC0uI7CCpc2RTcbrNSUNUzIIKsulYx
+ 5E6Fg8tllcC85xwBRf82EmAbGxJBgaNfAoOdFWIYzHIjKL90gYK5L3oQlLm6CagfdhNwNnsv
+ VNTfpqCu8VVoXGqhwNq+QMDcjEMEld5iEp7cK6XAXeYiwWzvkYC7yUuAvbRBBH03jGA3u0ko
+ qbRLoN3G9zo878Hw7C98w+oiBYtOF6/uzyG49fciOrCXbb7YjNjlpULEzv9TSLEzd80S1vrg
+ axF79fIIwTbNRrEdlt8k7LWbO9hqm4ltb4pk67omCdZ25byYLWyoFbH3hrrE7PTAgORoeNym
+ /Qkq4+n3U5K1UW+d2KSeaWok0+5Eprd6FiWZqCciB/nRmNmH8/p7RTnIn5YxQwjn3195+vED
+ wlOf1UhyEE2Lmf04Z0QiAMHMm7j2+2pS6CGZRyH4xuMSsWAEMcfw564Bwtd0HHf/aUU+HYsb
+ urxrMMVsxzXVuWt1KXMYO7xtIkHLmL9IfPWPg4L24+dcHC5bqyPmZXw+c3ptJsmEYtvEgsi3
+ NYMvdblInw7Bk2OrT+tb8fWFFkrYmWQicGtnlA89gLNqpsQ+vRUX5Y5KfCsE4h+/Gqfy0YuW
+ DQmWddqygbZsoC0b6GokuoJwqipFk6wyctG79Jxpl16nTuVfJ3WpNuS7b++36D/nu05E0MiJ
+ XqIJRYg0K94cL3shQZeYoVYZ1Eq9ScMZnAjTpCJYWv52drxMmqjKOMPpdc+sMJpShEpfGy34
+ SMYIWac4Lo3TP3PDaVqBpUEJ/NBAPZfMpSelaIzrNkH7CcP95cEGTpvI6VUmo1op3IfSwB+I
+ YAXwuasqHpca0lSpfNWH9qJoOn+yspakeyrr+efwjL2elFFanZaTh0p7BYARALVJ+zxuCoXS
+ SBEkbVHybgD/qz+fNsUHEXzQz+lZQpBRtW7JM1F42okdMyXFcY/Yh2rY+cmZmN2pR96R2TPK
+ t4svD5nmf9/TkXlKWXVoXKY5cvaVQeWnHYf6d/46ts2dmWR9LJZvPvwgivvmA2PgltifhsKu
+ beuLNXk+1p12PTwmHzHvCzie9KQ7Jc9Zoj4X5ohb6pyv2rxl0po4MR2jOfhG7vWY7oIP+xWU
+ Qa2KjiT1BtX/6kwhg6cEAAA=
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200401_195010_858652_8D77B02A 
-X-CRM114-Status: GOOD (  22.63  )
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20200401_210314_685516_F5DE5002 
+X-CRM114-Status: GOOD (  21.94  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -84,104 +94,191 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>, Nicolas Boichat <drinkcat@google.com>,
- Mike Turquette <mturquette@linaro.org>, srv_heupstream@mediatek.com,
- James Liao <jamesjj.liao@mediatek.com>, Viresh Kumar <vireshk@kernel.org>,
- linux-pm@vger.kernel.org, linux-kernel@vger.kernel.org,
- Rob Herring <robh+dt@kernel.org>, Stephen Boyd <swboyd@chromium.org>,
- Fan Chen <fan.chen@mediatek.com>, devicetree@vger.kernel.org,
- Mark Brown <broonie@kernel.org>, Ryan Case <ryandcase@chromium.org>,
- Arvin Wang <arvin.wang@mediatek.com>,
- Matthias Brugger <matthias.bgg@gmail.com>, linux-mediatek@lists.infradead.org,
- linux-arm-kernel@lists.infradead.org
+Cc: "mark.rutland@arm.com" <mark.rutland@arm.com>,
+ "milo.kim@ti.com" <milo.kim@ti.com>,
+ "andrei.stefanescu@microchip.com" <andrei.stefanescu@microchip.com>,
+ "rafael@kernel.org" <rafael@kernel.org>, "tony@atomide.com" <tony@atomide.com>,
+ "linus.walleij@linaro.org" <linus.walleij@linaro.org>,
+ "brendanhiggins@google.com" <brendanhiggins@google.com>,
+ "linux-kernel@vger.kernel.org" <linux-kernel@vger.kernel.org>,
+ "yamada.masahiro@socionext.com" <yamada.masahiro@socionext.com>,
+ "linux-omap@vger.kernel.org" <linux-omap@vger.kernel.org>,
+ "vincenzo.frascino@arm.com" <vincenzo.frascino@arm.com>,
+ "tglx@linutronix.de" <tglx@linutronix.de>,
+ "linux-samsung-soc@vger.kernel.org" <linux-samsung-soc@vger.kernel.org>,
+ "herbert@gondor.apana.org.au" <herbert@gondor.apana.org.au>,
+ "b.zolnierkie@samsung.com" <b.zolnierkie@samsung.com>,
+ "krzk@kernel.org" <krzk@kernel.org>,
+ "bgolaszewski@baylibre.com" <bgolaszewski@baylibre.com>,
+ "wens@csie.org" <wens@csie.org>, "agross@kernel.org" <agross@kernel.org>,
+ "Laine, Markus" <Markus.Laine@fi.rohmeurope.com>, "bp@suse.de" <bp@suse.de>,
+ "devicetree@vger.kernel.org" <devicetree@vger.kernel.org>,
+ "zaslonko@linux.ibm.com" <zaslonko@linux.ibm.com>,
+ "ckeepax@opensource.cirrus.com" <ckeepax@opensource.cirrus.com>,
+ "arnd@arndb.de" <arnd@arndb.de>,
+ "linux-pm@vger.kernel.org" <linux-pm@vger.kernel.org>,
+ "linux-arm-msm@vger.kernel.org" <linux-arm-msm@vger.kernel.org>,
+ "rf@opensource.cirrus.com" <rf@opensource.cirrus.com>,
+ "broonie@kernel.org" <broonie@kernel.org>,
+ "linux-mediatek@lists.infradead.org" <linux-mediatek@lists.infradead.org>,
+ "sre@kernel.org" <sre@kernel.org>, "davidgow@google.com" <davidgow@google.com>,
+ "skhan@linuxfoundation.org" <skhan@linuxfoundation.org>,
+ "matthias.bgg@gmail.com" <matthias.bgg@gmail.com>,
+ "dan.j.williams@intel.com" <dan.j.williams@intel.com>,
+ "bjorn.andersson@linaro.org" <bjorn.andersson@linaro.org>,
+ "linux-arm-kernel@lists.infradead.org" <linux-arm-kernel@lists.infradead.org>,
+ "support.opensource@diasemi.com" <support.opensource@diasemi.com>,
+ "sbkim73@samsung.com" <sbkim73@samsung.com>,
+ "patches@opensource.cirrus.com" <patches@opensource.cirrus.com>,
+ "rdunlap@infradead.org" <rdunlap@infradead.org>,
+ "lgirdwood@gmail.com" <lgirdwood@gmail.com>,
+ "talgi@mellanox.com" <talgi@mellanox.com>, "Mutanen,
+ Mikko" <Mikko.Mutanen@fi.rohmeurope.com>,
+ "robh+dt@kernel.org" <robh+dt@kernel.org>,
+ "uwe@kleine-koenig.org" <uwe@kleine-koenig.org>,
+ "mhiramat@kernel.org" <mhiramat@kernel.org>,
+ "gregkh@linuxfoundation.org" <gregkh@linuxfoundation.org>,
+ "akpm@linux-foundation.org" <akpm@linux-foundation.org>,
+ "olteanv@gmail.com" <olteanv@gmail.com>,
+ "davem@davemloft.net" <davem@davemloft.net>,
+ "mazziesaccount@gmail.com" <mazziesaccount@gmail.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi Georgi,
+Hello Andy,
 
-On Wed, 2020-04-01 at 17:41 +0300, Georgi Djakov wrote:
-> Hi Henry,
+On Wed, 2020-04-01 at 17:42 +0300, Andy Shevchenko wrote:
+> On Wed, Apr 1, 2020 at 4:18 PM Vaittinen, Matti
+> <Matti.Vaittinen@fi.rohmeurope.com> wrote:
+> > On Wed, 2020-04-01 at 15:39 +0300, Andy Shevchenko wrote:
+> > > On Wed, Apr 1, 2020 at 1:09 PM Vaittinen, Matti
+> > > <Matti.Vaittinen@fi.rohmeurope.com> wrote:
+> > > > On Tue, 2020-03-31 at 17:05 +0300, Andy Shevchenko wrote:
+> > > > > On Tue, Mar 31, 2020 at 03:23:03PM +0300, Matti Vaittinen
+> > > > > wrote:
+> > > > > > +int linear_range_get_selector_low_array(const struct
+> > > > > > linear_range
+> > > > > > *r,
+> > > > > > +                                   int ranges, unsigned
+> > > > > > int
+> > > > > > val,
+> > > > > > +                                   unsigned int *selector,
+> > > > > > bool
+> > > > > > *found)
+> > > > > > +{
+> > > > > > +   int i;
+> > > > > > +   int ret = -EINVAL;
+> > > > > > +
+> > > > > > +   for (i = 0; i < ranges; i++) {
+> > > > > > +           int tmpret;
+> > > > > > +
+> > > > > > +           tmpret = linear_range_get_selector_low(&r[i],
+> > > > > > val,
+> > > > > > selector,
+> > > > > > +                                                  found);
+> > > > > > +
+> > > > > > +           if (!tmpret)
+> > > > > > +                   ret = 0;
+> > > > > > +
+> > > > > > +           if (*found)
+> > > > > > +                   break;
+> > > > > > +   }
+> > > > > > +
+> > > > > > +   return ret;
+> > > > > > +}
 > 
-> On 3/13/20 11:34, Henry Chen wrote:
-> > Add dvfsrc driver for MT8183
-> > 
-> > Signed-off-by: Henry Chen <henryc.chen@mediatek.com>
-> > ---
-> >  drivers/soc/mediatek/Kconfig      |  15 ++
-> >  drivers/soc/mediatek/Makefile     |   1 +
-> >  drivers/soc/mediatek/mtk-dvfsrc.c | 434 ++++++++++++++++++++++++++++++++++++++
-> >  include/soc/mediatek/mtk_dvfsrc.h |  30 +++
-> >  4 files changed, 480 insertions(+)
-> >  create mode 100644 drivers/soc/mediatek/mtk-dvfsrc.c
-> >  create mode 100644 include/soc/mediatek/mtk_dvfsrc.h
-> > 
-> > diff --git a/drivers/soc/mediatek/Kconfig b/drivers/soc/mediatek/Kconfig
-> > index f837b3c..44808f4 100644
-> > --- a/drivers/soc/mediatek/Kconfig
-> > +++ b/drivers/soc/mediatek/Kconfig
-> > @@ -16,6 +16,21 @@ config MTK_CMDQ
-> >  	  time limitation, such as updating display configuration during the
-> >  	  vblank.
-> >  
-> > +config MTK_DVFSRC
-> > +	bool "MediaTek DVFSRC Support"
-> > +	depends on ARCH_MEDIATEK
-> > +	default ARCH_MEDIATEK
-> > +	select MTK_INFRACFG
-> > +	select PM_GENERIC_DOMAINS if PM
-> > +	depends on MTK_SCPSYS
-> > +	help
-> > +	  Say yes here to add support for the MediaTek DVFSRC (dynamic voltage
-> > +	  and frequency scaling resource collector) found
-> > +	  on different MediaTek SoCs. The DVFSRC is a proprietary
-> > +	  hardware which is used to collect all the requests from
-> > +	  system and turn into the decision of minimum Vcore voltage
-> > +	  and minimum DRAM frequency to fulfill those requests.
-> > +
-> >  config MTK_PMIC_WRAP
-> >  	tristate "MediaTek PMIC Wrapper Support"
-> >  	depends on RESET_CONTROLLER
-> > diff --git a/drivers/soc/mediatek/Makefile b/drivers/soc/mediatek/Makefile
-> > index 2b2c2537..84182f0 100644
-> > --- a/drivers/soc/mediatek/Makefile
-> > +++ b/drivers/soc/mediatek/Makefile
-> > @@ -1,4 +1,5 @@
-> >  # SPDX-License-Identifier: GPL-2.0-only
-> >  obj-$(CONFIG_MTK_CMDQ) += mtk-cmdq-helper.o
-> > +obj-$(CONFIG_MTK_DVFSRC) += mtk-dvfsrc.o
-> >  obj-$(CONFIG_MTK_PMIC_WRAP) += mtk-pmic-wrap.o
-> >  obj-$(CONFIG_MTK_SCPSYS) += mtk-scpsys.o
-> > diff --git a/drivers/soc/mediatek/mtk-dvfsrc.c b/drivers/soc/mediatek/mtk-dvfsrc.c
-> > new file mode 100644
-> > index 0000000..85b3572
-> > --- /dev/null
-> > +++ b/drivers/soc/mediatek/mtk-dvfsrc.c
-> > @@ -0,0 +1,434 @@
-> > +// SPDX-License-Identifier: GPL-2.0
-> > +/*
-> > + * Copyright (C) 2018 MediaTek Inc.
-> > + */
-> > +#include <linux/arm-smccc.h>
-> > +#include <linux/clk.h>
-> > +#include <linux/io.h>
-> > +#include <linux/iopoll.h>
-> > +#include <linux/module.h>
-> > +#include <linux/notifier.h>
-> > +#include <linux/of_device.h>
-> > +#include <linux/platform_device.h>
-> > +#include <soc/mediatek/mtk_dvfsrc.h>
-> > +#include <soc/mediatek/mtk_sip.h>
-> > +#include <dt-bindings/power/mt8183-power.h>
-> 
-> Looks like this depends on a header which is not part of this patch-set.
-> It would be nice to list any dependencies in the cover letter.
-> 
-> Thanks,
-> Georgi
+> Looked again at the code of the callee.
+> So, *found becomes true if and only if the return is 0
 
-I disregarded to list here. Thanks for your friendly reminder.
+Yes. If found is true, then ret is 0.
+
+>  (or other way
+> around if you prefer).
+
+No. Not other way around. Ret can be 0 and found false. This is what we
+need to handle. Ret means we found range value smaller than given
+input. Found means also the given input was in range.
+
+> Now I'm wondering why you need 'found' at all?
+
+To separate case where given input was in range.
+
+> It means above may be as simple as
+> 
+>       int i;
+>       int ret = -EINVAL;
+> 
+>       for (i = 0; i < ranges; i++) {
+>                ret = linear_range_get_selector_low(&r[i], val,
+> selector, found);
+>                if (*found)
+>                        break;
+>       }
+
+No. It can't. Here we get wrong return value if one of the calls to
+linear_range_get_selector_low() return zero with found being false and
+subsequent calls return non zero ret. Then we actually found lower-
+than-given-input value from one of the ranges and updated the selector
+(that would be usable for example for regulator voltage control) but
+end up returning non zero ret as the subsequent calls to
+linear_range_get_selector_low() do overwrite the ret.
+
+OTOH, we should not stop for first range having zero ret if found is
+false because some of the ranges may have range where given input is
+in-range (and this is considered better value).
+
+> 
+>       return ret;
+> 
+> or assuming 'found' will gone
+
+No. We should not drop the 'found'.
+
+> 
+>   int i
+>   int ret = -EINVAL;
+> 
+>   for (i = 0; i < ranges && ret; i++) {
+>       ret = linear_range_get_selector_low(&r[i], val, selector);
+>   }
+>   return ret;
+> 
+> ...
+> 
+> >  * value. If given value is found to be in a range scannins is
+> > I think it is but I am open to all suggestions how to improve doc!
+> 
+> Thanks. At least fix a typo: scannins -> scannings
+> 
+
+Thanks :) I'll fix it
+
+> ...
+> 
+> > Compared to:
+> > for (i = 0; i < ranges; i++) {
+> >         ret = ...
+> > }
+> > 
+> > I wouldn't say so.
+> > 
+> > As I explained, we need to have "temporary" return value in any
+> > case
+> > because we need to return 0 if any of the calls to
+> > linear_range_get_selector_low() returned 0. Return value 0 from
+> > linear_range_get_selector_low() means we found "matching" value
+> > (lower
+> > than input) and selector was updated (although input value was not
+> > in
+> > range).
+> 
+> See above.
+
+
+Best Regards
+	--Matti
 _______________________________________________
 Linux-mediatek mailing list
 Linux-mediatek@lists.infradead.org
