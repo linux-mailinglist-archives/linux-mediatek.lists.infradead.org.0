@@ -2,96 +2,93 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id ABAFF19CFFC
-	for <lists+linux-mediatek@lfdr.de>; Fri,  3 Apr 2020 08:01:09 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id B585819D020
+	for <lists+linux-mediatek@lfdr.de>; Fri,  3 Apr 2020 08:17:13 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
+	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=lrt1GcY2NV0xCyzR86YEFDe2tAz143TQVAcCE9nhkCg=; b=lrBpmmelPRZZjA
-	gHHhSgRWJYOCBRAb0GNcygbSl5ganXepchUP2v9nCxi7HXJ9Ob/AD/REpFIH7HBMfl4pK7dr0IRSv
-	5D8Q1TBW0ei6AvtL7O6kgaOj4RWbLU07IJ+GE5RO5roCOuVH1Svene0GzDiKXr1w5RsuHe6vo3mPs
-	9ZMIhHQGRdGviHW21TYWlPJujmY6ZYlqDENpc/1mNLiVfN5P3+3STD0SNp+UzXnZJWWNI6mywMvbc
-	AI5N66jMPfw5ycLDESZmr7i7XK1qKbVporpyuKms/H/n+2xFPHjh1hF+NGzK28X7NsUnPH4RxCdJW
-	wFIqHchxx4l6trwq2sNw==;
+	List-Owner; bh=h4VtXhSKuRwW5x/nNfsRIq+tjvLFLVgz9rLw5kQeIsI=; b=CASM9mNVKHZjrM
+	+k75JsBUATJEEziVOL6hPkE+OQjXCMwrCFqz9jiaIlbPDPoQYoP9cfrEc0iKrHtUuMMXWnvKdITD2
+	Hwl/kg1Cfv0X00u4GMtDxPPkZVpPxRg/IbCxMouPWWHkSow2XacKCcYGqJWqIDIfjd2PP8wy64B85
+	bHkIGJXT52GjQODS6oby70pRxfIRvS4+0nAPddD2SGjvNoLxerSK4BtAABOVI9f+J568hWu1bplhA
+	RatBRpB2hlSlXpQTqww25cTiVGbb70rQZlVl8DfjdoxYckyJx68cimtOckVV3uKo+R39zBjdm0bJN
+	W+6yRmMQAZflSAh9unQw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jKFO1-00009K-6N; Fri, 03 Apr 2020 06:01:01 +0000
-Received: from mail-pj1-x1044.google.com ([2607:f8b0:4864:20::1044])
+	id 1jKFdb-0003K4-JR; Fri, 03 Apr 2020 06:17:07 +0000
+Received: from mail-pj1-x1042.google.com ([2607:f8b0:4864:20::1042])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jKFNr-0008Sy-FI; Fri, 03 Apr 2020 06:00:53 +0000
-Received: by mail-pj1-x1044.google.com with SMTP id m15so2493020pje.3;
- Thu, 02 Apr 2020 23:00:51 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
- h=sender:date:from:to:cc:subject:message-id:references:mime-version
- :content-disposition:in-reply-to:user-agent;
- bh=x91h2tLyTlc0iDe/5j3RCDbqB7p+b6c6m++cx7QhiU4=;
- b=Mfd0P8XlBUeT3svQWKNFphNvd7/KN1aCiN2pYOjw1C1YhI4RksEgbj2lZlCOmuVydw
- yDkQT79vAi12Q8YcmSqpuWpbWKgzJr7F8jFnYppWPUNmxH6tiwgYEXUC000cH4NHtOnc
- 7BSSvrVODv1MRQNDKnevxlBOTKaSBpczQPjCAl1diwHz7RxwM8NhahytzhQWz59jPG+5
- jqsjH4bVCsuV4idpO6E8JDuGLXfWXr7Y4i9c+Q2ddSkqqHCUqcmpm8/I5qWVjvFqL2LX
- /uv7eXMl531dJJ5E4PsW70QEntYZtv6Vj+gCSVc+OHCDaOWj1yQSgn0usqigtFNmHISh
- a0Fw==
+ id 1jKFdY-0003JY-TD
+ for linux-mediatek@lists.infradead.org; Fri, 03 Apr 2020 06:17:06 +0000
+Received: by mail-pj1-x1042.google.com with SMTP id nu11so2515087pjb.1
+ for <linux-mediatek@lists.infradead.org>; Thu, 02 Apr 2020 23:17:04 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=chromium.org; s=google;
+ h=mime-version:references:in-reply-to:from:date:message-id:subject:to
+ :cc; bh=V3yS2lItqVOfGsXBFcK1Q03oHDR0TygtC5pNqATurHQ=;
+ b=DtAiTGcqQSpV/avwmNRjvHO1qDLd3tZsNHf3k+C+AgpkKHnLK0/VqwekGEJ4JQQ0uq
+ wXTt47KxFzE5AetYqr4lZNkUqqQvCxPwyDnzOdlwb2XRAY3sI63HyI8fCcfwegKRCIJx
+ Wr/jdxxl1E+403E/ErpRJFCWlSoK8AeJ20XUk=
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:sender:date:from:to:cc:subject:message-id
- :references:mime-version:content-disposition:in-reply-to:user-agent;
- bh=x91h2tLyTlc0iDe/5j3RCDbqB7p+b6c6m++cx7QhiU4=;
- b=K6USvyI5hH6EgtxleM3BPX8QMBD4pa/DJ6uND1NVAu92xYgiqR1RJTflpFLMOlwdml
- aYfiLPI7H2wu6dlsZivrEEgNCbHGPZ3m07+xf+HpTktqZg+koAZnGg42H2xMTgCZyNqX
- S+3YKpWZgME0LXh7ZHHxbuYj8752woQDvxzShmPcIVDkVqB3IuI5kmfzWhUM8UbLKVj7
- McbkdB4WJMLghxKXTpa3Njy4FlmEgE/LkpxpQXfxC9QuMNcSOEM1RqHdvF25+rWNSvDS
- 00hByGo4eQyoiKFIhWy0lGbMv2cexpSwRR6iUKoRa0JkjXaPLTApKXgdsN3JzFSOUufg
- fm+A==
-X-Gm-Message-State: AGi0PuZ9Jx3mqiKXIdENfM+8J4cmiMfkF+c1vsgdigPzXifxSb88xxjC
- UF+xh9L9Oo6YaeBwZ+MT6Fk=
-X-Google-Smtp-Source: APiQypK8XbyWn3ZnQaFnbDolPcc04wWirWxbpBYroE8OL8s8uzDCEjQ/PWbPHv9R/8g/MsL6Oqt0pQ==
-X-Received: by 2002:a17:902:7404:: with SMTP id
- g4mr6126025pll.69.1585893650600; 
- Thu, 02 Apr 2020 23:00:50 -0700 (PDT)
-Received: from localhost ([2600:1700:e321:62f0:329c:23ff:fee3:9d7c])
- by smtp.gmail.com with ESMTPSA id h2sm5048442pfr.220.2020.04.02.23.00.49
- (version=TLS1_2 cipher=ECDHE-RSA-CHACHA20-POLY1305 bits=256/256);
- Thu, 02 Apr 2020 23:00:49 -0700 (PDT)
-Date: Thu, 2 Apr 2020 23:00:48 -0700
-From: Guenter Roeck <linux@roeck-us.net>
-To: Evan Benn <evanbenn@chromium.org>
-Subject: Re: [PATCH v2 2/2] watchdog: Add new arm_smd_wdt watchdog driver
-Message-ID: <20200403060048.GA206691@roeck-us.net>
-References: <20200403052900.258855-1-evanbenn@chromium.org>
- <20200403162742.v2.2.Ia92bb4d4ce84bcefeba1d00aaa1c1e919b6164ef@changeid>
+ h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+ :message-id:subject:to:cc;
+ bh=V3yS2lItqVOfGsXBFcK1Q03oHDR0TygtC5pNqATurHQ=;
+ b=Vr0GJztbouoZTFK11rSIAEKfrLyVuCmG66JbTmGEc7mgTJFbRjo6QKXrJHJwLMRwGp
+ rENkJWEnYYqRU1HG0qPFvUc2YG/Hm7Z8JY/5Itr8SIr4qGDLY1WD69faEhZW5Np6Zo/g
+ n/yZ5yGRttcAhyp6mPAw1lzAYOy9q2UFrQxbJvvcj3x/SxhvnXtgyGoMCYJ0xhisJL8s
+ gGTXl4gOihvwDbnO9l3qqznkLvdv09HjBi2eup57WtB5qDAi9U3/K84ec3CljL0192JZ
+ R/AYhKHzHKaf2liCI/+LIfD70TnlwYOXWhaEOH0av1kOVSWmJxKijHS6FAo9NQKJ9r0G
+ riMg==
+X-Gm-Message-State: AGi0PuY4eRx15DdUt0/dav8tMbthPZS1ljfhOtF+4eIFKesxmIMRZS9s
+ zGoliP+G9YjXaLb2+hVBGFuE3L4pz1Q=
+X-Google-Smtp-Source: APiQypIfdvNECIvPqpS9j1Je0/VhoIp1fwuOxvcOdFCpTdrAuJom39k4dRyIAdcEib9WicDh48gCcQ==
+X-Received: by 2002:a17:902:5a44:: with SMTP id
+ f4mr6388995plm.306.1585894623979; 
+ Thu, 02 Apr 2020 23:17:03 -0700 (PDT)
+Received: from mail-pl1-f181.google.com (mail-pl1-f181.google.com.
+ [209.85.214.181])
+ by smtp.gmail.com with ESMTPSA id a71sm5173715pfa.162.2020.04.02.23.17.03
+ for <linux-mediatek@lists.infradead.org>
+ (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+ Thu, 02 Apr 2020 23:17:03 -0700 (PDT)
+Received: by mail-pl1-f181.google.com with SMTP id k18so2317578pll.6
+ for <linux-mediatek@lists.infradead.org>; Thu, 02 Apr 2020 23:17:03 -0700 (PDT)
+X-Received: by 2002:a1f:1846:: with SMTP id 67mr5194780vky.32.1585894163062;
+ Thu, 02 Apr 2020 23:09:23 -0700 (PDT)
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <20200403162742.v2.2.Ia92bb4d4ce84bcefeba1d00aaa1c1e919b6164ef@changeid>
-User-Agent: Mutt/1.9.4 (2018-02-28)
+References: <20200403052900.258855-1-evanbenn@chromium.org>
+In-Reply-To: <20200403052900.258855-1-evanbenn@chromium.org>
+From: Evan Benn <evanbenn@chromium.org>
+Date: Fri, 3 Apr 2020 17:08:52 +1100
+X-Gmail-Original-Message-ID: <CAKz_xw1w=uKEV_p94cT8uL-4WN9mRkQE47N=4QdE+_NOFQ-2kg@mail.gmail.com>
+Message-ID: <CAKz_xw1w=uKEV_p94cT8uL-4WN9mRkQE47N=4QdE+_NOFQ-2kg@mail.gmail.com>
+Subject: Re: [PATCH v2 0/2] Add a watchdog driver that uses ARM Secure Monitor
+ Calls.
+To: LKML <linux-kernel@vger.kernel.org>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200402_230051_735278_F0F34101 
-X-CRM114-Status: GOOD (  11.88  )
-X-Spam-Score: 0.6 (/)
+X-CRM114-CacheID: sfid-20200402_231704_955167_92F3FA7A 
+X-CRM114-Status: GOOD (  19.19  )
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
- Content analysis details:   (0.6 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:1044 listed in]
+ no trust [2607:f8b0:4864:20:0:0:0:1042 listed in]
  [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
- mail domains are different
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider [groeck7[at]gmail.com]
- 0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
- in digit [groeck7[at]gmail.com]
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.2 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
- EnvelopeFrom freemail headers are different
+ -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -103,48 +100,88 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Catalin Marinas <catalin.marinas@arm.com>,
+Cc: Mark Rutland <mark.rutland@arm.com>,
+ Catalin Marinas <catalin.marinas@arm.com>,
  Bjorn Andersson <bjorn.andersson@linaro.org>,
  Manivannan Sadhasivam <manivannan.sadhasivam@linaro.org>,
  Leonard Crestez <leonard.crestez@nxp.com>, Will Deacon <will@kernel.org>,
- xingyu.chen@amlogic.com, Rob Herring <robh@kernel.org>,
- Andy Shevchenko <andriy.shevchenko@linux.intel.com>,
- Anson Huang <Anson.Huang@nxp.com>,
+ Xingyu Chen <xingyu.chen@amlogic.com>, Rob Herring <robh@kernel.org>,
+ Wim Van Sebroeck <wim@linux-watchdog.org>, Anson Huang <Anson.Huang@nxp.com>,
  Mauro Carvalho Chehab <mchehab+huawei@kernel.org>,
  Marcin Juszkiewicz <marcin.juszkiewicz@linaro.org>,
  Valentin Schneider <valentin.schneider@arm.com>,
- linux-watchdog@vger.kernel.org, linux-mediatek@lists.infradead.org,
+ Guenter Roeck <linux@roeck-us.net>, devicetree@vger.kernel.org,
+ LINUX-WATCHDOG <linux-watchdog@vger.kernel.org>,
+ Rob Herring <robh+dt@kernel.org>,
+ "moderated list:ARM/Mediatek SoC support" <linux-mediatek@lists.infradead.org>,
  Jonathan Cameron <Jonathan.Cameron@huawei.com>,
  Matthias Brugger <matthias.bgg@gmail.com>,
- Wim Van Sebroeck <wim@linux-watchdog.org>,
- linux-arm-kernel@lists.infradead.org,
- Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
- LKML <linux-kernel@vger.kernel.org>, Vinod Koul <vkoul@kernel.org>,
- Olof Johansson <olof@lixom.net>, jwerner@chromium.org,
+ Andy Shevchenko <andriy.shevchenko@linux.intel.com>,
+ "moderated list:ARM/FREESCALE IMX / MXC ARM ARCHITECTURE"
+ <linux-arm-kernel@lists.infradead.org>,
+ Greg Kroah-Hartman <gregkh@linuxfoundation.org>, Vinod Koul <vkoul@kernel.org>,
+ Olof Johansson <olof@lixom.net>, Julius Werner <jwerner@chromium.org>,
  Shawn Guo <shawnguo@kernel.org>, "David S. Miller" <davem@davemloft.net>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Fri, Apr 03, 2020 at 04:29:00PM +1100, Evan Benn wrote:
-> From: Julius Werner <jwerner@chromium.org>
-> 
-> This patch adds a watchdog driver that can be used on ARM systems
-> with the appropriate watchdog implemented in Secure Monitor firmware.
-> The driver communicates with firmware via a Secure Monitor Call.
-> This may be useful for platforms using TrustZone that want
-> the Secure Monitor firmware to have the final control over the watchdog.
-> 
-> This is implemented on mt8173 chromebook devices oak, elm and hana in
-> arm trusted firmware file plat/mediatek/mt8173/drivers/wdt/wdt.c.
-> 
-> Signed-off-by: Julius Werner <jwerner@chromium.org>
-> Signed-off-by: Evan Benn <evanbenn@chromium.org>
+Apologies I forgot to add this note to my cover letter.
 
-Reviewed-by: Guenter Roeck <linux@roeck-us.net>
+Xingyu do you mind seeing if you can modify your ATF firmware to match
+this driver?
+We can add a compatible or make other changes to suit you.
 
-Guenter
+Thanks
+
+
+On Fri, Apr 3, 2020 at 4:29 PM Evan Benn <evanbenn@chromium.org> wrote:
+>
+> This is currently supported in firmware deployed on oak, hana and elm mt8173
+> chromebook devices. The kernel driver is written to be a generic SMC
+> watchdog driver.
+>
+> Arm Trusted Firmware upstreaming review:
+>     https://review.trustedfirmware.org/c/TF-A/trusted-firmware-a/+/3405
+>
+> Patch to add oak, hana, elm device tree:
+>     https://lore.kernel.org/linux-arm-kernel/20200110073730.213789-1-hsinyi@chromium.org/
+> I would like to add the device tree support after the above patch is
+> accepted.
+>
+> Changes in v3:
+> - Change name back to arm
+> - Add optional get_timeleft op
+> - change name to arm_smc_wdt
+>
+> Changes in v2:
+> - Change name arm > mt8173
+> - use watchdog_stop_on_reboot
+> - use watchdog_stop_on_unregister
+> - use devm_watchdog_register_device
+> - remove smcwd_shutdown, smcwd_remove
+> - change error codes
+>
+> Evan Benn (1):
+>   dt-bindings: watchdog: Add ARM smc wdt for mt8173 watchdog
+>
+> Julius Werner (1):
+>   watchdog: Add new arm_smd_wdt watchdog driver
+>
+>  .../bindings/watchdog/arm-smc-wdt.yaml        |  30 +++
+>  MAINTAINERS                                   |   7 +
+>  arch/arm64/configs/defconfig                  |   1 +
+>  drivers/watchdog/Kconfig                      |  13 ++
+>  drivers/watchdog/Makefile                     |   1 +
+>  drivers/watchdog/arm_smc_wdt.c                | 181 ++++++++++++++++++
+>  6 files changed, 233 insertions(+)
+>  create mode 100644 Documentation/devicetree/bindings/watchdog/arm-smc-wdt.yaml
+>  create mode 100644 drivers/watchdog/arm_smc_wdt.c
+>
+> --
+> 2.26.0.292.g33ef6b2f38-goog
+>
 
 _______________________________________________
 Linux-mediatek mailing list
