@@ -2,62 +2,62 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id E032D19D46E
-	for <lists+linux-mediatek@lfdr.de>; Fri,  3 Apr 2020 11:53:58 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id C533319D455
+	for <lists+linux-mediatek@lfdr.de>; Fri,  3 Apr 2020 11:50:51 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=nqJZw68MAQBygxHZBEya9kMUl63vyPF5vT/Ha/VECgY=; b=JLqlglcLOzCxRy
-	Nw7rgtFzat0d0QAPW4d7exBk1C68CSpMxE+DDAqvZGiFK6j4Hd82zrc4u9p2LdGPoPeji5XdS3dr4
-	do263E+L9z8YIY7cu1ZoigiBv9f2syGgSMLMSQV2D88f/rk8KwLd0PZtmcow1Pd8kOjsnqOihUeXD
-	V6clbjINoxNFoYkYf3OQVofUOQ1Z/9tx2LCvzeGMj/kEiiT/YH8DsgcGyALYJEn5aygAemJmyOU7K
-	w0zIDkK0K1f+MZul9MPW89uMMIf6ED9yVnHlF9jfcDi/uBInVbOP1Ojz+16awCy5BmDLJHplVg5KD
-	PmaDKahg22NAldsfdkWg==;
+	List-Owner; bh=KK0JWtQrCUwVMs17czZGVhgMar7NtJ1JarpyeCaN1KY=; b=RRRFAW7ZN4YIva
+	DxXvFRNHvJez1pDwYW7oahHAUa/3/zvBccUaw/S6goyIEZq65yx4TMc4Q4avYPA+750Ss5SbEF2xF
+	0EujaU/RNtTVLe+7RglcbnaiU/a3IoJ5VMRk9hZt3ENxKX+Z8YtApeRvIbuWoMx5s3i0hPf2rK0ID
+	+A45dXOkasDgN+SdpwP0ypZab5MY9PayNBSPNif7/xyPj3a9ZtRkYxhT20Z1Tn+BoO9ARaO++TRps
+	CSUFyCKez5Y4/ubmTLS0I57ExaM0IHN4Ys3TmKob7MwLCW7HfoctB2uTV+cX8Cr5EW940WYHQyBvk
+	L+Na/OOp8WtIrxqJEG2w==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jKJ1L-0002zq-Tc; Fri, 03 Apr 2020 09:53:51 +0000
+	id 1jKIyI-0000GA-Iz; Fri, 03 Apr 2020 09:50:42 +0000
 Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jKIya-0000Uk-39; Fri, 03 Apr 2020 09:51:01 +0000
-X-UUID: 6b7f855cb9c8450eb887aade4efabeed-20200403
+ id 1jKIyF-0000Eq-K1; Fri, 03 Apr 2020 09:50:41 +0000
+X-UUID: d777c155b00349fb8637a277e04bd23d-20200403
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
  s=dk; 
  h=Content-Transfer-Encoding:Content-Type:MIME-Version:References:In-Reply-To:Message-ID:Date:Subject:CC:To:From;
- bh=Lprj+ufCYbzLwTfc1XoNnGUMFca4BTukbE1k5gVfSdE=; 
- b=uEav5dOtyWLt1KR0e0l2J+ZeHZAPj1xviuawl415pp0I2bucwoF4NGLPEAQcIn9KT4i6RPNmEORK+UZDdoun6Gz2tmomuzIR3rjX6U/P33wwiw1zuY/7UeMJn06o4HD0hTA+LIx4EnG1gkQmDr5wWRzHddIS9KMSzUiRyPgArC8=;
-X-UUID: 6b7f855cb9c8450eb887aade4efabeed-20200403
+ bh=bUhGrLapqpGG5TNnQ19oiY23ELwVrSpG9+CqRSWV9fQ=; 
+ b=QZBc9TyQ5uORex6UpOMt5GaQSwIE4keM0L2L7IFjY9GQI206qWz7S2mb00UUtKwtmvsZ+Js0CRAxsAxHysilpwGgXawpJs5JJmVtqUKTqoeyEtdalYqWdMEoKBlZEM8oUQq2mggKI1Ym94TIopx2tIVxTIFX3OeikAqd3WNIFf8=;
+X-UUID: d777c155b00349fb8637a277e04bd23d-20200403
 Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
  (envelope-from <xia.jiang@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 198267025; Fri, 03 Apr 2020 01:50:42 -0800
-Received: from mtkmbs05n2.mediatek.inc (172.21.101.140) by
- MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Fri, 3 Apr 2020 02:40:46 -0700
+ with ESMTP id 1932582810; Fri, 03 Apr 2020 01:50:33 -0800
+Received: from mtkmbs07n1.mediatek.inc (172.21.101.16) by
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Fri, 3 Apr 2020 02:40:48 -0700
 Received: from mtkcas07.mediatek.inc (172.21.101.84) by
- mtkmbs05n2.mediatek.inc (172.21.101.140) with Microsoft SMTP Server (TLS) id
- 15.0.1497.2; Fri, 3 Apr 2020 17:40:43 +0800
+ mtkmbs07n1.mediatek.inc (172.21.101.16) with Microsoft SMTP Server (TLS) id
+ 15.0.1497.2; Fri, 3 Apr 2020 17:40:44 +0800
 Received: from localhost.localdomain (10.17.3.153) by mtkcas07.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1497.2 via Frontend
- Transport; Fri, 3 Apr 2020 17:40:43 +0800
+ Transport; Fri, 3 Apr 2020 17:40:44 +0800
 From: Xia Jiang <xia.jiang@mediatek.com>
 To: Hans Verkuil <hverkuil-cisco@xs4all.nl>, Mauro Carvalho Chehab
  <mchehab+samsung@kernel.org>, Rob Herring <robh+dt@kernel.org>, "Matthias
  Brugger" <matthias.bgg@gmail.com>, Rick Chang <rick.chang@mediatek.com>
-Subject: [PATCH v8 10/14] media: platform: Delete redundant code for improving
- code quality
-Date: Fri, 3 Apr 2020 17:40:29 +0800
-Message-ID: <20200403094033.8288-11-xia.jiang@mediatek.com>
+Subject: [PATCH v8 11/14] media: dt-bindings: Add jpeg enc device tree node
+ document
+Date: Fri, 3 Apr 2020 17:40:30 +0800
+Message-ID: <20200403094033.8288-12-xia.jiang@mediatek.com>
 X-Mailer: git-send-email 2.18.0
 In-Reply-To: <20200403094033.8288-1-xia.jiang@mediatek.com>
 References: <20200403094033.8288-1-xia.jiang@mediatek.com>
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200403_025100_270979_7E9C9F7B 
-X-CRM114-Status: GOOD (  11.74  )
+X-CRM114-CacheID: sfid-20200403_025039_665191_FF47F631 
+X-CRM114-Status: GOOD (  10.02  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
@@ -99,93 +99,72 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Delete unused member variables annotation.
-Delete unused variable definition.
-Delete redundant log print, because V4L2 debug logs already print it.
+Add jpeg enc device tree node document
 
+Reviewed-by: Rob Herring <robh@kernel.org>
 Signed-off-by: Xia Jiang <xia.jiang@mediatek.com>
 ---
 v8: no changes
----
- drivers/media/platform/mtk-jpeg/mtk_jpeg_core.c | 16 ++--------------
- drivers/media/platform/mtk-jpeg/mtk_jpeg_core.h |  5 +++--
- 2 files changed, 5 insertions(+), 16 deletions(-)
 
-diff --git a/drivers/media/platform/mtk-jpeg/mtk_jpeg_core.c b/drivers/media/platform/mtk-jpeg/mtk_jpeg_core.c
-index 4e64046a6854..9e59b9a51ef0 100644
---- a/drivers/media/platform/mtk-jpeg/mtk_jpeg_core.c
-+++ b/drivers/media/platform/mtk-jpeg/mtk_jpeg_core.c
-@@ -182,7 +182,6 @@ static int mtk_jpeg_try_fmt_mplane(struct v4l2_format *f,
- 				   struct mtk_jpeg_ctx *ctx, int q_type)
- {
- 	struct v4l2_pix_format_mplane *pix_mp = &f->fmt.pix_mp;
--	struct mtk_jpeg_dev *jpeg = ctx->jpeg;
- 	int i;
- 
- 	memset(pix_mp->reserved, 0, sizeof(pix_mp->reserved));
-@@ -190,7 +189,7 @@ static int mtk_jpeg_try_fmt_mplane(struct v4l2_format *f,
- 
- 	if (ctx->state != MTK_JPEG_INIT) {
- 		mtk_jpeg_adjust_fmt_mplane(ctx, f);
--		goto end;
-+		return 0;
- 	}
- 
- 	pix_mp->num_planes = fmt->colplanes;
-@@ -210,7 +209,7 @@ static int mtk_jpeg_try_fmt_mplane(struct v4l2_format *f,
- 		pfmt->sizeimage = round_up(pfmt->sizeimage, 128);
- 		if (pfmt->sizeimage == 0)
- 			pfmt->sizeimage = MTK_JPEG_DEFAULT_SIZEIMAGE;
--		goto end;
-+		return 0;
- 	}
- 
- 	/* type is MTK_JPEG_FMT_TYPE_CAPTURE */
-@@ -224,20 +223,9 @@ static int mtk_jpeg_try_fmt_mplane(struct v4l2_format *f,
- 		u32 stride = pix_mp->width * fmt->h_sample[i] / 4;
- 		u32 h = pix_mp->height * fmt->v_sample[i] / 4;
- 
--		memset(pfmt->reserved, 0, sizeof(pfmt->reserved));
- 		pfmt->bytesperline = stride;
- 		pfmt->sizeimage = stride * h;
- 	}
--end:
--	v4l2_dbg(2, debug, &jpeg->v4l2_dev, "wxh:%ux%u\n",
--		 pix_mp->width, pix_mp->height);
--	for (i = 0; i < pix_mp->num_planes; i++) {
--		v4l2_dbg(2, debug, &jpeg->v4l2_dev,
--			 "plane[%d] bpl=%u, size=%u\n",
--			 i,
--			 pix_mp->plane_fmt[i].bytesperline,
--			 pix_mp->plane_fmt[i].sizeimage);
--	}
- 	return 0;
- }
- 
-diff --git a/drivers/media/platform/mtk-jpeg/mtk_jpeg_core.h b/drivers/media/platform/mtk-jpeg/mtk_jpeg_core.h
-index 64a731261214..9bbd615b1067 100644
---- a/drivers/media/platform/mtk-jpeg/mtk_jpeg_core.h
-+++ b/drivers/media/platform/mtk-jpeg/mtk_jpeg_core.h
-@@ -30,6 +30,9 @@
- 
- #define MTK_JPEG_DEFAULT_SIZEIMAGE	(1 * 1024 * 1024)
- 
-+/**
-+ * enum mtk_jpeg_ctx_state - contex state of jpeg
-+ */
- enum mtk_jpeg_ctx_state {
- 	MTK_JPEG_INIT = 0,
- 	MTK_JPEG_RUNNING,
-@@ -109,9 +112,7 @@ struct mtk_jpeg_q_data {
-  * @out_q:		source (output) queue information
-  * @cap_q:		destination (capture) queue queue information
-  * @fh:			V4L2 file handle
-- * @dec_param		parameters for HW decoding
-  * @state:		state of the context
-- * @header_valid:	set if header has been parsed and valid
-  * @colorspace: enum v4l2_colorspace; supplemental to pixelformat
-  * @ycbcr_enc: enum v4l2_ycbcr_encoding, Y'CbCr encoding
-  * @quantization: enum v4l2_quantization, colorspace quantization
+v7: no changes
+
+v6: no changes
+
+v5: no changes
+
+v4: no changes
+
+v3: change compatible to SoC specific compatible
+
+v2: no changes
+---
+ .../bindings/media/mediatek-jpeg-encoder.txt  | 37 +++++++++++++++++++
+ 1 file changed, 37 insertions(+)
+ create mode 100644 Documentation/devicetree/bindings/media/mediatek-jpeg-encoder.txt
+
+diff --git a/Documentation/devicetree/bindings/media/mediatek-jpeg-encoder.txt b/Documentation/devicetree/bindings/media/mediatek-jpeg-encoder.txt
+new file mode 100644
+index 000000000000..fa8da699493b
+--- /dev/null
++++ b/Documentation/devicetree/bindings/media/mediatek-jpeg-encoder.txt
+@@ -0,0 +1,37 @@
++* MediaTek JPEG Encoder
++
++MediaTek JPEG Encoder is the JPEG encode hardware present in MediaTek SoCs
++
++Required properties:
++- compatible : should be one of:
++               "mediatek,mt2701-jpgenc"
++               ...
++               followed by "mediatek,mtk-jpgenc"
++- reg : physical base address of the JPEG encoder registers and length of
++  memory mapped region.
++- interrupts : interrupt number to the interrupt controller.
++- clocks: device clocks, see
++  Documentation/devicetree/bindings/clock/clock-bindings.txt for details.
++- clock-names: must contain "jpgenc". It is the clock of JPEG encoder.
++- power-domains: a phandle to the power domain, see
++  Documentation/devicetree/bindings/power/power_domain.txt for details.
++- mediatek,larb: must contain the local arbiters in the current SoCs, see
++  Documentation/devicetree/bindings/memory-controllers/mediatek,smi-larb.txt
++  for details.
++- iommus: should point to the respective IOMMU block with master port as
++  argument, see Documentation/devicetree/bindings/iommu/mediatek,iommu.txt
++  for details.
++
++Example:
++	jpegenc: jpegenc@1500a000 {
++		compatible = "mediatek,mt2701-jpgenc",
++			     "mediatek,mtk-jpgenc";
++		reg = <0 0x1500a000 0 0x1000>;
++		interrupts = <GIC_SPI 141 IRQ_TYPE_LEVEL_LOW>;
++		clocks =  <&imgsys CLK_IMG_VENC>;
++		clock-names = "jpgenc";
++		power-domains = <&scpsys MT2701_POWER_DOMAIN_ISP>;
++		mediatek,larb = <&larb2>;
++		iommus = <&iommu MT2701_M4U_PORT_JPGENC_RDMA>,
++			 <&iommu MT2701_M4U_PORT_JPGENC_BSDMA>;
++	};
 -- 
 2.18.0
 _______________________________________________
