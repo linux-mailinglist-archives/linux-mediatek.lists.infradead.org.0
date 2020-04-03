@@ -2,79 +2,79 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id ED76C19D2B0
-	for <lists+linux-mediatek@lfdr.de>; Fri,  3 Apr 2020 10:49:58 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 50DEF19D325
+	for <lists+linux-mediatek@lfdr.de>; Fri,  3 Apr 2020 11:09:43 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=ed0x2+8gPFJ0pXC4hiW22J9lJbytD6nxbMWGTn2ADzw=; b=dn618IhLTiPtRC
-	F1p7jGpd0DeKcQHVdjgUiUSXkdrbaYwnoroWg3DBfpQ4wN7O2Fbi224e11KxVbXNRIvHsGS/GuKNA
-	U8ra4ifRxtcJijf7cugjA1QEGbpmQNDWHyo9S6X1Gv4VEMRH4g+3D5KXIC9e+LUTYodTNGDDe2X4t
-	cF8WUBeIJ+Vzv6W40ubdVEJPRXeXGQNAmShckW87S+WWzlTa3tyzkyESdL6wokU9Fr0yAwQPGaMDy
-	+BYh+vbAHHs1apULM7Uo0hPh3M+/t25L/Rl9F3QCWnTOUCd1j2rm27f7QOJ4SKQX+tRoMudiwluEf
-	pv3fsEmc+NeCnfhkZVQw==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=WTmaLuDhRQT3uxSMgFVrCcFB/TCWJPc2vzM2aB+oIjA=; b=U3EGYXpc26hPFu
+	XwPyB4+1Kem2C6zGxV1V4teV9QcaYTKhz4cUe7nA5bOSRa63rCpJ4loqaErVZtuyPZQSnACOh8nd2
+	iustI3YWRTlgom8I+dZF2pG72xONJciIkoU2BY5OT2pWPxqsuAQaoaNh6WSX8qVitz52f/R6paqvD
+	4Pgld8f4kMY2TGGDR6Tg6Nm+Z1nwFDy4sd1J9Ato0Go6gvRtmRk21e0lGazoYJjZsQ+6ixCK3bFBB
+	Hh93xvGE+2BXGe+1VDjAosWkEL/7RggE6XPVlgnxeNwD13bSlPC6izpCghKS31bqViPCumyj0hbJJ
+	T9mN4kepfEDogAiqvZTw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jKI1P-0003cj-U4; Fri, 03 Apr 2020 08:49:51 +0000
-Received: from mail-lf1-f68.google.com ([209.85.167.68])
+	id 1jKIKU-0001dl-2v; Fri, 03 Apr 2020 09:09:34 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jKI0E-0002e6-Fw; Fri, 03 Apr 2020 08:48:44 +0000
-Received: by mail-lf1-f68.google.com with SMTP id q5so5081805lfb.13;
- Fri, 03 Apr 2020 01:48:38 -0700 (PDT)
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:date:from:to:cc:subject:message-id:references
- :mime-version:content-disposition:in-reply-to:user-agent;
- bh=gzfKSjnXqc4wJpLbDrR2fQHTuXHpbdii2oUy9JVLW5U=;
- b=S4LdPsUz6Hvocn4WPk9vAqU1MVxnMo9js02NFJg2caVBxk5R1nH8WO7VFk2FegN0wU
- EYRTmcHxjTJoKK/b24H834rfcb9eil7tO4VeiwVE5DZBDr2tTUjVhU1vaiYeFOuNItGz
- TRy5i0g8j98JN8LAAwfi6vopAUMtAGY+QjSUhh7yNpTxIpaJrVU+uGBXy7gEdECcGOUY
- Gm3GcvsdAt7Ego8lsu5Og3zvl4sSjtKnAQzup4XRyIFjZ+KS8TNjiB/nnmb8SsxiZmxA
- xs2Xmd1IadZ4r6CMlKHCwuKjMVlJCy89WXBzKvA7Rg1fnzafdXkk4/P4JvJ6slQRrgkm
- qOSg==
-X-Gm-Message-State: AGi0PuZjbiOdOVbIQaY+k20D/xss6PF9QYfbWrJ8iyXwSOz/l/io0B06
- xt4Df/6bGAgHMNBQO8HQVV4=
-X-Google-Smtp-Source: APiQypJalw6zIVY08a+G4MsAoTU8wvRc8cUWZcbKLXz1vtzS3UZ2eP/3MaEOgqq1FCDg0tUSRHXXvA==
-X-Received: by 2002:a19:6144:: with SMTP id m4mr4557411lfk.192.1585903716362; 
- Fri, 03 Apr 2020 01:48:36 -0700 (PDT)
-Received: from localhost.localdomain
- (dc7t7ryyyyyyyyyyyyybt-3.rev.dnainternet.fi. [2001:14ba:16e1:b700::3])
- by smtp.gmail.com with ESMTPSA id c4sm5580377lfg.82.2020.04.03.01.48.33
- (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Fri, 03 Apr 2020 01:48:35 -0700 (PDT)
-Date: Fri, 3 Apr 2020 11:48:28 +0300
-From: Matti Vaittinen <matti.vaittinen@fi.rohmeurope.com>
-To: matti.vaittinen@fi.rohmeurope.com, mazziesaccount@gmail.com
-Subject: [PATCH v8 10/10] power: supply: Fix Kconfig help text indentiation
-Message-ID: <43077ce36099b3c381817b63c20ba29eef912456.1585902279.git.matti.vaittinen@fi.rohmeurope.com>
-References: <cover.1585902279.git.matti.vaittinen@fi.rohmeurope.com>
+ id 1jKIKR-0001dA-7t
+ for linux-mediatek@lists.infradead.org; Fri, 03 Apr 2020 09:09:32 +0000
+X-UUID: 40ce0e547d9a4ac5a4c158ab609cbc52-20200403
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
+ s=dk; 
+ h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:Subject:CC:To:From;
+ bh=noTg9XcjB6G862HLpOk/NARelLKgQV8r1Sj1NFb+P00=; 
+ b=Tx4nBRZ2ZnWr94w5Tu+7/nC3nrvwPGBJTqIgjE3NsOpJtE4TC9qe2mrFk//rEqUFY2mxCAOd6wU8yYlESJZtSv+PLDmwHreMEpwlbEc7qMLVjrXNnzb2V3JAlNbaqntwVojTqKkzkPvvCqOIwGYDV4LtstanBHgRMhBUl0aItNM=;
+X-UUID: 40ce0e547d9a4ac5a4c158ab609cbc52-20200403
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw01.mediatek.com
+ (envelope-from <sean.wang@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 1193544254; Fri, 03 Apr 2020 01:09:16 -0800
+Received: from mtkmbs08n1.mediatek.inc (172.21.101.55) by
+ MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Fri, 3 Apr 2020 02:09:20 -0700
+Received: from mtkcas08.mediatek.inc (172.21.101.126) by
+ mtkmbs08n1.mediatek.inc (172.21.101.55) with Microsoft SMTP Server (TLS) id
+ 15.0.1497.2; Fri, 3 Apr 2020 17:09:15 +0800
+Received: from mtkswgap22.mediatek.inc (172.21.77.33) by mtkcas08.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1497.2 via
+ Frontend Transport; Fri, 3 Apr 2020 17:09:15 +0800
+From: <sean.wang@mediatek.com>
+To: <nbd@nbd.name>, <lorenzo.bianconi@redhat.com>
+Subject: [PATCH] mt76: mt7663: correct the name of the rom patch
+Date: Fri, 3 Apr 2020 17:09:16 +0800
+Message-ID: <e290681bc341a60575ee087d0bbd9a91ad1b1de0.1585904519.git.sean.wang@mediatek.com>
+X-Mailer: git-send-email 1.7.9.5
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <cover.1585902279.git.matti.vaittinen@fi.rohmeurope.com>
-User-Agent: Mutt/1.12.1 (2019-06-15)
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200403_014838_579656_98A4D4C8 
-X-CRM114-Status: GOOD (  12.59  )
-X-Spam-Score: 0.5 (/)
+X-CRM114-CacheID: sfid-20200403_020931_290070_C0A3ADA2 
+X-CRM114-Status: UNSURE (   8.69  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
- Content analysis details:   (0.5 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [209.85.167.68 listed in list.dnswl.org]
- -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
- [209.85.167.68 listed in wl.mailspike.net]
+ no trust [216.200.240.184 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
- mail domains are different
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider [mazziesaccount[at]gmail.com]
- 0.2 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
- EnvelopeFrom freemail headers are different
+ 0.0 MIME_BASE64_TEXT       RAW: Message text disguised using base64
+ encoding
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -86,142 +86,38 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>,
- Andrei Stefanescu <andrei.stefanescu@microchip.com>,
- Heiko Stuebner <heiko@sntech.de>, "Rafael J. Wysocki" <rafael@kernel.org>,
- Tony Lindgren <tony@atomide.com>, Linus Walleij <linus.walleij@linaro.org>,
- Brendan Higgins <brendanhiggins@google.com>,
- Sebastian Reichel <sre@kernel.org>, Andreas Kemnade <andreas@kemnade.info>,
- "Angelo G. Del Regno" <kholk11@gmail.com>,
- Hsin-Hsiung Wang <hsin-hsiung.wang@mediatek.com>,
- linux-samsung-soc@vger.kernel.org,
- Andy Shevchenko <andriy.shevchenko@linux.intel.com>,
- Axel Lin <axel.lin@ingics.com>, Gregory CLEMENT <gregory.clement@bootlin.com>,
- linux-pm@vger.kernel.org, Krzysztof Kozlowski <krzk@kernel.org>,
- Markus Reichl <m.reichl@fivetechno.de>,
- Bartosz Golaszewski <bgolaszewski@baylibre.com>, Chen-Yu Tsai <wens@csie.org>,
- Andy Gross <agross@kernel.org>, markus.laine@fi.rohmeurope.com,
- Adam Thomson <Adam.Thomson.Opensource@diasemi.com>, devicetree@vger.kernel.org,
- Charles Keepax <ckeepax@opensource.cirrus.com>, linux-omap@vger.kernel.org,
- Bartlomiej Zolnierkiewicz <b.zolnierkie@samsung.com>,
- linux-arm-msm@vger.kernel.org, Richard Fitzgerald <rf@opensource.cirrus.com>,
- Mark Brown <broonie@kernel.org>, linux-mediatek@lists.infradead.org,
- Matthias Brugger <matthias.bgg@gmail.com>,
- Thomas Gleixner <tglx@linutronix.de>,
- Bjorn Andersson <bjorn.andersson@linaro.org>,
- linux-arm-kernel@lists.infradead.org,
- Support Opensource <support.opensource@diasemi.com>,
- Baolin Wang <baolin.wang@linaro.org>, Sangbeom Kim <sbkim73@samsung.com>,
- Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
- Randy Dunlap <rdunlap@infradead.org>,
- Matti Vaittinen <matti.vaittinen@fi.rohmeurope.com>,
- Liam Girdwood <lgirdwood@gmail.com>, linux-kernel@vger.kernel.org,
- mikko.mutanen@fi.rohmeurope.com, Vinod Koul <vkoul@kernel.org>,
- Rob Herring <robh+dt@kernel.org>, patches@opensource.cirrus.com
+Cc: linux-mediatek@lists.infradead.org, sean.wang@mediatek.com,
+ linux-wireless@vger.kernel.org, ryder.lee@mediatek.com
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Indent the help text as explained in
-Documentation/process/coding-style.rst
+From: Sean Wang <sean.wang@mediatek.com>
 
-Signed-off-by: Matti Vaittinen <matti.vaittinen@fi.rohmeurope.com>
+Rom patch is shared between Bluetooth and Wifi devices, so correct the
+naming to allow two drivers to share the same file.
+
+Signed-off-by: Sean Wang <sean.wang@mediatek.com>
 ---
+ drivers/net/wireless/mediatek/mt76/mt7615/mt7615.h | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
 
-No changes since v7
-
-I just learned the help text in Kconfigs should be indented by two
-spaces. I fixed this for BD99954 as suggested by Randy and decided
-that I could do this for few other entries as well while I was at
-it anyways.
-
- drivers/power/supply/Kconfig | 24 ++++++++++++------------
- 1 file changed, 12 insertions(+), 12 deletions(-)
-
-diff --git a/drivers/power/supply/Kconfig b/drivers/power/supply/Kconfig
-index af96d7fa56b1..f606ba069e4e 100644
---- a/drivers/power/supply/Kconfig
-+++ b/drivers/power/supply/Kconfig
-@@ -415,7 +415,7 @@ config CHARGER_PCF50633
- 	tristate "NXP PCF50633 MBC"
- 	depends on MFD_PCF50633
- 	help
--	 Say Y to include support for NXP PCF50633 Main Battery Charger.
-+	  Say Y to include support for NXP PCF50633 Main Battery Charger.
+diff --git a/drivers/net/wireless/mediatek/mt76/mt7615/mt7615.h b/drivers/net/wireless/mediatek/mt76/mt7615/mt7615.h
+index 52d2d1a41fe0..23fc12648582 100644
+--- a/drivers/net/wireless/mediatek/mt76/mt7615/mt7615.h
++++ b/drivers/net/wireless/mediatek/mt76/mt7615/mt7615.h
+@@ -41,7 +41,7 @@
+ #define MT7615_FIRMWARE_V2		2
+ #define MT7615_FIRMWARE_V3		3
  
- config BATTERY_RX51
- 	tristate "Nokia RX-51 (N900) battery driver"
-@@ -609,15 +609,15 @@ config CHARGER_TPS65090
- 	tristate "TPS65090 battery charger driver"
- 	depends on MFD_TPS65090
- 	help
--	 Say Y here to enable support for battery charging with TPS65090
--	 PMIC chips.
-+	  Say Y here to enable support for battery charging with TPS65090
-+	  PMIC chips.
+-#define MT7663_ROM_PATCH		"mediatek/mt7663pr2h_v3.bin"
++#define MT7663_ROM_PATCH		"mediatek/mt7663pr2h.bin"
+ #define MT7663_FIRMWARE_N9              "mediatek/mt7663_n9_v3.bin"
  
- config CHARGER_TPS65217
- 	tristate "TPS65217 battery charger driver"
- 	depends on MFD_TPS65217
- 	help
--	 Say Y here to enable support for battery charging with TPS65217
--	 PMIC chips.
-+	  Say Y here to enable support for battery charging with TPS65217
-+	  PMIC chips.
- 
- config BATTERY_GAUGE_LTC2941
- 	tristate "LTC2941/LTC2943 Battery Gauge Driver"
-@@ -671,16 +671,16 @@ config CHARGER_SC2731
- 	tristate "Spreadtrum SC2731 charger driver"
- 	depends on MFD_SC27XX_PMIC || COMPILE_TEST
- 	help
--	 Say Y here to enable support for battery charging with SC2731
--	 PMIC chips.
-+	  Say Y here to enable support for battery charging with SC2731
-+	  PMIC chips.
- 
- config FUEL_GAUGE_SC27XX
- 	tristate "Spreadtrum SC27XX fuel gauge driver"
- 	depends on MFD_SC27XX_PMIC || COMPILE_TEST
- 	depends on IIO
- 	help
--	 Say Y here to enable support for fuel gauge with SC27XX
--	 PMIC chips.
-+	  Say Y here to enable support for fuel gauge with SC27XX
-+	  PMIC chips.
- 
- config CHARGER_UCS1002
- 	tristate "Microchip UCS1002 USB Port Power Controller"
-@@ -698,9 +698,9 @@ config CHARGER_BD70528
- 	select LINEAR_RANGES
- 	default n
- 	help
--	 Say Y here to enable support for getting battery status
--	 information and altering charger configurations from charger
--	 block of the ROHM BD70528 Power Management IC.
-+	  Say Y here to enable support for getting battery status
-+	  information and altering charger configurations from charger
-+	  block of the ROHM BD70528 Power Management IC.
- 
- config CHARGER_BD99954
- 	tristate "ROHM bd99954 charger driver"
+ #define MT7615_EEPROM_SIZE		1024
 -- 
-2.21.0
-
-
--- 
-Matti Vaittinen, Linux device drivers
-ROHM Semiconductors, Finland SWDC
-Kiviharjunlenkki 1E
-90220 OULU
-FINLAND
-
-~~~ "I don't think so," said Rene Descartes. Just then he vanished ~~~
-Simon says - in Latin please.
-~~~ "non cogito me" dixit Rene Descarte, deinde evanescavit ~~~
-Thanks to Simon Glass for the translation =] 
-
+2.25.1
 _______________________________________________
 Linux-mediatek mailing list
 Linux-mediatek@lists.infradead.org
