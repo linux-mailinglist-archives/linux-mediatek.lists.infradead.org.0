@@ -2,62 +2,62 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 5D7F919D45C
-	for <lists+linux-mediatek@lfdr.de>; Fri,  3 Apr 2020 11:51:40 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 13FE719D405
+	for <lists+linux-mediatek@lfdr.de>; Fri,  3 Apr 2020 11:41:18 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=83RQzH7C0yoDar3geuTZ4ATUcXL5p5e6jsXeKNUvRmw=; b=SNmy6ftUSX5jj0
-	EtJr3sgDgUbm9oGXPza39Cc9td/0hoCQSHDaeFJycPJ0u0CvAVtRA9PVqMJRCOBTGeGrZaAOwgcxp
-	1ktIAKVJ9gOnTJCSe0NLMK27GoPtaac2DynM1s2R47jXqfgODjz+5AkurLAKQoxJ09/n8Y0hcXkfz
-	r1hyS0Q35LPCuzPgOkwD3wnx9ustOmINbkyShoI/GjnYmY0SOgxuhFrI8ShFmTg/+SkfU4Yd76oqg
-	6m9H3r4dpWW413rxlodLmD48gmqhWGY3cnx3RzQvTAavjQdOiAVXgaN4GwevskwlrvY9fgWzfu9RX
-	oQMKIKvfomWujK9+9C1A==;
+	List-Owner; bh=je595eLBmeJrlJTNg1iTPHq8uzuW3wwhXZQRNGZOXjU=; b=VXxUpgtMyO5jnZ
+	btxgR3y6sch/zZXvJY0/KjueJmVLIUpdOfhXDjBuisVla87UnN4gbsQIXOgQlG6Nam4C4CjYbZ3P6
+	3+/YsFHOLcrPwgw4CYF2UOIlBT6gR+qDkyh1/RU2FJely6XLcH0lKRsmkLmGZYgZydDhBWaeHV8xi
+	d8MJfNHwiFoX394fuOWCGjWybmJ7WC6P3x6sqhgjFDsXVfam0qP2S64csOvJeydmcHYga5lf1w1bS
+	+OUEFB+u8u1wuPGrrfGztSymIGKnXkEkK7efm+gRAI0/DX8Yye00LUbpDxT+xeYrHB6Uygp+XgHX2
+	setfoEFStgWRkdsTzCHw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jKIz8-00016g-2G; Fri, 03 Apr 2020 09:51:34 +0000
+	id 1jKIp6-0000x0-9B; Fri, 03 Apr 2020 09:41:12 +0000
 Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jKIyH-0000F8-L8; Fri, 03 Apr 2020 09:50:42 +0000
-X-UUID: 772edfa6768644fba612f69cd1d95f22-20200403
+ id 1jKIog-0000QK-E3; Fri, 03 Apr 2020 09:40:47 +0000
+X-UUID: b8289e81868f41e3bd2a708c61a84dac-20200403
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
  s=dk; 
  h=Content-Transfer-Encoding:Content-Type:MIME-Version:References:In-Reply-To:Message-ID:Date:Subject:CC:To:From;
- bh=1NzC3/r7pfZorLeb22GFj0dVTvtgWY91KdwBPoSAgm4=; 
- b=Es2dp/6I7TuKIdP8JyZqKmb9AZ7nN6Qz/bX4/Ll/2CNBrQNoTFq6IH+aRheLjCdtsYgMYy/TpE4i1jHFC/9K222hKJfwPDpFxgzJJu7McaI/iJSjwEnQf/kS0fGVqeBH20/FD84W29MK5/iYzqSo5jD993KjtmhZXeFxEnKFZe4=;
-X-UUID: 772edfa6768644fba612f69cd1d95f22-20200403
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
+ bh=6dN1GgsfwAHyVkKZX2n+eOaaQgO90AAheL/GZ5XbwcM=; 
+ b=rdUZKaBsf7ADpKbgllwxdjDMH1/SEdInpiLtZbkoD0Eq+EgTmzwdUzi7KkYvmpm+zBFfH5/K8ABRT80CpJOahngCFqYdW5ot92Uhh/9oEZkolBLV2hm2qqF+wte0B9xGa2oW7dAPh7kdasWlwfBNuXgDUaiHNLKvIQtwIF07Kh8=;
+X-UUID: b8289e81868f41e3bd2a708c61a84dac-20200403
+Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw02.mediatek.com
  (envelope-from <xia.jiang@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1996907714; Fri, 03 Apr 2020 01:50:33 -0800
-Received: from mtkmbs05n2.mediatek.inc (172.21.101.140) by
- MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
- 15.0.1395.4; Fri, 3 Apr 2020 02:40:38 -0700
+ with ESMTP id 375658111; Fri, 03 Apr 2020 01:40:37 -0800
+Received: from mtkmbs05n1.mediatek.inc (172.21.101.15) by
+ MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
+ 15.0.1395.4; Fri, 3 Apr 2020 02:40:39 -0700
 Received: from mtkcas07.mediatek.inc (172.21.101.84) by
- mtkmbs05n2.mediatek.inc (172.21.101.140) with Microsoft SMTP Server (TLS) id
- 15.0.1497.2; Fri, 3 Apr 2020 17:40:35 +0800
+ mtkmbs05n1.mediatek.inc (172.21.101.15) with Microsoft SMTP Server (TLS) id
+ 15.0.1497.2; Fri, 3 Apr 2020 17:40:36 +0800
 Received: from localhost.localdomain (10.17.3.153) by mtkcas07.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1497.2 via Frontend
- Transport; Fri, 3 Apr 2020 17:40:34 +0800
+ Transport; Fri, 3 Apr 2020 17:40:35 +0800
 From: Xia Jiang <xia.jiang@mediatek.com>
 To: Hans Verkuil <hverkuil-cisco@xs4all.nl>, Mauro Carvalho Chehab
  <mchehab+samsung@kernel.org>, Rob Herring <robh+dt@kernel.org>, "Matthias
  Brugger" <matthias.bgg@gmail.com>, Rick Chang <rick.chang@mediatek.com>
-Subject: [PATCH v8 03/14] media: platform: Improve getting and requesting irq
- flow for bug fixing
-Date: Fri, 3 Apr 2020 17:40:22 +0800
-Message-ID: <20200403094033.8288-4-xia.jiang@mediatek.com>
+Subject: [PATCH v8 04/14] media: platform: Change the fixed device node number
+ to unfixed value
+Date: Fri, 3 Apr 2020 17:40:23 +0800
+Message-ID: <20200403094033.8288-5-xia.jiang@mediatek.com>
 X-Mailer: git-send-email 2.18.0
 In-Reply-To: <20200403094033.8288-1-xia.jiang@mediatek.com>
 References: <20200403094033.8288-1-xia.jiang@mediatek.com>
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200403_025041_695317_4142BD89 
-X-CRM114-Status: GOOD (  10.66  )
+X-CRM114-CacheID: sfid-20200403_024046_486040_EE26BF3D 
+X-CRM114-Status: GOOD (  10.59  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
@@ -99,42 +99,27 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Delete platform_get_resource operation for irq.
-Return actual value rather than EINVAL when fail to get and request
-irq.
+Change device node number from 3 to -1 because that the driver will
+also support jpeg encoder.
 
 Signed-off-by: Xia Jiang <xia.jiang@mediatek.com>
 ---
- drivers/media/platform/mtk-jpeg/mtk_jpeg_core.c | 7 ++-----
- 1 file changed, 2 insertions(+), 5 deletions(-)
+ drivers/media/platform/mtk-jpeg/mtk_jpeg_core.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
 
 diff --git a/drivers/media/platform/mtk-jpeg/mtk_jpeg_core.c b/drivers/media/platform/mtk-jpeg/mtk_jpeg_core.c
-index da0dae4b0fc9..e2a1d850813b 100644
+index e2a1d850813b..a536fa95b3d6 100644
 --- a/drivers/media/platform/mtk-jpeg/mtk_jpeg_core.c
 +++ b/drivers/media/platform/mtk-jpeg/mtk_jpeg_core.c
-@@ -1103,12 +1103,10 @@ static int mtk_jpeg_probe(struct platform_device *pdev)
- 		return ret;
- 	}
+@@ -1154,7 +1154,7 @@ static int mtk_jpeg_probe(struct platform_device *pdev)
+ 	jpeg->dec_vdev->device_caps = V4L2_CAP_STREAMING |
+ 				      V4L2_CAP_VIDEO_M2M_MPLANE;
  
--	res = platform_get_resource(pdev, IORESOURCE_IRQ, 0);
- 	dec_irq = platform_get_irq(pdev, 0);
--	if (!res || dec_irq < 0) {
-+	if (dec_irq < 0) {
- 		dev_err(&pdev->dev, "Failed to get dec_irq %d.\n", dec_irq);
--		ret = -EINVAL;
--		return ret;
-+		return dec_irq;
- 	}
- 
- 	ret = devm_request_irq(&pdev->dev, dec_irq, mtk_jpeg_dec_irq, 0,
-@@ -1116,7 +1114,6 @@ static int mtk_jpeg_probe(struct platform_device *pdev)
+-	ret = video_register_device(jpeg->dec_vdev, VFL_TYPE_GRABBER, 3);
++	ret = video_register_device(jpeg->dec_vdev, VFL_TYPE_GRABBER, -1);
  	if (ret) {
- 		dev_err(&pdev->dev, "Failed to request dec_irq %d (%d)\n",
- 			dec_irq, ret);
--		ret = -EINVAL;
- 		goto err_req_irq;
- 	}
- 
+ 		v4l2_err(&jpeg->v4l2_dev, "Failed to register video device\n");
+ 		goto err_dec_vdev_register;
 -- 
 2.18.0
 _______________________________________________
