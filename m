@@ -2,61 +2,81 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id A691619E605
-	for <lists+linux-mediatek@lfdr.de>; Sat,  4 Apr 2020 17:09:15 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 60AB619E61A
+	for <lists+linux-mediatek@lfdr.de>; Sat,  4 Apr 2020 17:35:00 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
+	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=kSBrJZCxq29sZ4WdP3810ESRxkoMKS61zTLFmzmdAdY=; b=omvirJBkhIz2aB
-	DyeP+ipr3ZUwNYYS7sxlxEeDTAVZS4tFLwc/LMD2kk1ohZq8dOjESQBI26cV9nwIMyKORL03nLK58
-	CyfS6VNe8I7vKuWaSZw3bWXOC8cl8rC3zy/lAHmza3aKEIvSyYrUaIW3+Vyo2aU89VgYVgiJa6/s5
-	6TYwbITqwSGCaAEeFXY1UG+OhVPbskZfTjJm21+pCKQ4G66Pw4fEsvL1bg790KA3KFWc0T3vEd3ae
-	SUFOQewZ0SrYzcsbPvk5tq2lX4bpAcrnvJghgpmnFe0s2T/ABuushKj6vebPNddnHB5XtwDEVmtfV
-	yd8782mQeIoJbye5P4Hg==;
+	List-Owner; bh=VYxZ+OTvEkIKhz/LCnk9XIOPonlO4QLekMs6yVuEBFs=; b=cY6DD4O25e7BfF
+	GMUJdIjIB7YQ2/lm2LvNPW/YSsYpAP2T4M6qcwKuxEkhhNHfE5PeehTI/OjjOFdF/SaNCeXPBLuYd
+	F/7RpHWgblyuHbcODB2jh41YDhC6eDP5FqFFuneVEC1L7qMntgAylx+iasXXfhMUAZ2i1aegVS8Wy
+	5bnJmhnoqhbBwGE/scM4EZip4HPJb4jxT/Hna+NHfvDd+0F3t02Pi3AAcaFtz+/FaQ48mSYjV9ffx
+	t+1U+iaorOo0psVU1Yk+ObO+XwNenZ11rR0jraCwn7f0CQqOCDeUvcBDt57gxz4pv6zFKkWokMH+g
+	hewiFGeDASHHZ4Yk23Pg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jKkPj-0004Oe-Gy; Sat, 04 Apr 2020 15:08:51 +0000
-Received: from vps0.lunn.ch ([185.16.172.187])
+	id 1jKkou-0000cy-1d; Sat, 04 Apr 2020 15:34:52 +0000
+Received: from mail-ot1-x344.google.com ([2607:f8b0:4864:20::344])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jKkPb-0004J8-2v; Sat, 04 Apr 2020 15:08:44 +0000
-DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=lunn.ch;
- s=20171124; h=In-Reply-To:Content-Transfer-Encoding:Content-Type:MIME-Version
- :References:Message-ID:Subject:Cc:To:From:Date:Sender:Reply-To:Content-ID:
- Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
- :Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:List-Subscribe:
- List-Post:List-Owner:List-Archive;
- bh=vp27F8VCbpDyMug+E/DkoFiqJ0iXvSFB3dG9NhdVtJ4=; b=c4fufxCNaxCfxlabO36Hw9VuYU
- Iy7BaNe3r6MvvPPy9rhjqGjZJpP9y0GM9FWH6DappHyVFuggm31hWHqH+YqpzuLjkqxjiY+lCXKRh
- qEj3F2/EgI8g3uP6a3Lm8t5Z4mb59eooVu3rTup4yLq4VA8REUq6oXm6aucvLfNwtXf8=;
-Received: from andrew by vps0.lunn.ch with local (Exim 4.93)
- (envelope-from <andrew@lunn.ch>)
- id 1jKkP4-000xRF-B9; Sat, 04 Apr 2020 17:08:10 +0200
-Date: Sat, 4 Apr 2020 17:08:10 +0200
-From: Andrew Lunn <andrew@lunn.ch>
-To: Chuanhong Guo <gch981213@gmail.com>
-Subject: Re: [PATCH] net: dsa: mt7530: fix null pointer dereferencing in
- port5 setup
-Message-ID: <20200404150810.GA161768@lunn.ch>
+ id 1jKkom-0000HK-Ml; Sat, 04 Apr 2020 15:34:45 +0000
+Received: by mail-ot1-x344.google.com with SMTP id t28so10586139ott.5;
+ Sat, 04 Apr 2020 08:34:42 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
+ h=mime-version:references:in-reply-to:from:date:message-id:subject:to
+ :cc; bh=wJJHt0CSx4rCuEsqr8ESfPqtz2SvcHs+oQjfrjV6kEc=;
+ b=rvWQiF5F8bJnmlWbMT7R49NetVKvTAdp4EJoY3L86knHIuMiThiWt9GN38kOhTFKJh
+ R/puK9Sr3rH99oncCgmc1eK4NIkt+fy8pJp82Uj0vAMSBEQnbAGzU5HSBYLjcU31y0Hq
+ 4yaatE2LPEJ5lgaSEd+1NuCPVvtORn+cSTnedW8fICKr4mMw9NT+KjMSLPPB7sN4dlZC
+ dLsMVRtTOT7xshyqN4Uaiqm3NnxvOoKvRkQmkMqQn3LongPZHMloOdNa73uECn/jAC9x
+ dkVQTIIDejHXp9ieN+gkTLpU7d54CHS/0Ks69XfSwNU+pS+nL+vefjtCj7Al4RwaRHRj
+ jSGA==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+ :message-id:subject:to:cc;
+ bh=wJJHt0CSx4rCuEsqr8ESfPqtz2SvcHs+oQjfrjV6kEc=;
+ b=kDkVZTgJZycb55OWoZUUTlGxXmebYkRs8fwTuszuxMR7Rdr61H445ZUGQFUhYnvj/y
+ t6xTzRi6yaGy5rXbjszYFf3QA4Oi6jgxCIi0uzaQPlZTacg5ZJBApmDiHNp5z4VgG8s+
+ F7Vidx93lX3C5opmWFbScg8qcPrRt/zKJXW4LmhgVjvJY2C01AjsePf4oBk6eij0ZXbl
+ +c4tCBuvH1cQdWNFH175WpYO9J/V5pEOMhamHFzGgus3/qp2mYPbVURi1MgXAsVwZw5U
+ ZVU0Ynm3q8Md0NuirCQNurlkM1TWtr1PX2StdGmqXlEqDXDF5j9snVMSzySijL+jzqnX
+ N/Ag==
+X-Gm-Message-State: AGi0PuZJQJuZv/PjmG7AXjYsrEpD92ekNCFMOqQwZ7Hh5uxyEKgv/U5q
+ Qw+ag6fRAis3L+Aoc2d7DpRpGx4LGJhJoNKKJcw=
+X-Google-Smtp-Source: APiQypJurN6kKeueDqM6o5vZ2pCFzzx2u9sVqqily6xPz9KLmAwCuSMsRcuswvGToxGksPlnBUBs6hgZxPamk8aeaiQ=
+X-Received: by 2002:a9d:7a45:: with SMTP id z5mr10438979otm.181.1586014481828; 
+ Sat, 04 Apr 2020 08:34:41 -0700 (PDT)
+MIME-Version: 1.0
 References: <20200403112830.505720-1-gch981213@gmail.com>
  <20200403180911.Horde.9xqnJvjcRDe-ttshlJbG6WE@www.vdorst.com>
  <CAJsYDVJj1JajVxeGifaOprXYstG-gC_OYwd5LrALUY_4BdtR3A@mail.gmail.com>
-MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <CAJsYDVJj1JajVxeGifaOprXYstG-gC_OYwd5LrALUY_4BdtR3A@mail.gmail.com>
+ <20200404150810.GA161768@lunn.ch>
+In-Reply-To: <20200404150810.GA161768@lunn.ch>
+From: Chuanhong Guo <gch981213@gmail.com>
+Date: Sat, 4 Apr 2020 23:34:30 +0800
+Message-ID: <CAJsYDV+NY90r=PV0dYRRaTEuxQAMTbakLvguX-1jOu3OQwYfSQ@mail.gmail.com>
+Subject: Re: [PATCH] net: dsa: mt7530: fix null pointer dereferencing in port5
+ setup
+To: Andrew Lunn <andrew@lunn.ch>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200404_080843_127208_1B293184 
-X-CRM114-Status: GOOD (  10.92  )
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20200404_083444_778821_F3C9915F 
+X-CRM114-Status: GOOD (  10.43  )
+X-Spam-Score: 0.1 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (0.1 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [185.16.172.187 listed in list.dnswl.org]
- -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
+ no trust [2607:f8b0:4864:20:0:0:0:344 listed in]
+ [list.dnswl.org]
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider [gch981213[at]gmail.com]
+ 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
+ in digit [gch981213[at]gmail.com]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
@@ -79,46 +99,38 @@ List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>,
 Cc: Florian Fainelli <f.fainelli@gmail.com>, netdev@vger.kernel.org,
  Sean Wang <sean.wang@mediatek.com>, open list <linux-kernel@vger.kernel.org>,
  stable@vger.kernel.org, "David S. Miller" <davem@davemloft.net>,
- =?iso-8859-1?Q?Ren=E9?= van Dorst <opensource@vdorst.com>,
+ =?UTF-8?Q?Ren=C3=A9_van_Dorst?= <opensource@vdorst.com>,
  Russell King <rmk+kernel@armlinux.org.uk>, linux-mediatek@lists.infradead.org,
  Matthias Brugger <matthias.bgg@gmail.com>,
  Vivien Didelot <vivien.didelot@gmail.com>,
  "moderated list:ARM/Mediatek SoC support"
  <linux-arm-kernel@lists.infradead.org>
-Content-Type: text/plain; charset="iso-8859-1"
-Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Sat, Apr 04, 2020 at 11:19:10AM +0800, Chuanhong Guo wrote:
-> Hi!
-> =
+Hi!
 
-> On Sat, Apr 4, 2020 at 2:09 AM Ren=E9 van Dorst <opensource@vdorst.com> w=
-rote:
+On Sat, Apr 4, 2020 at 11:08 PM Andrew Lunn <andrew@lunn.ch> wrote:
+> > > MT7530 tries to detect if 2nd GMAC is using a phy with phy-address 0 or 4.
 > >
-> > Quoting Chuanhong Guo <gch981213@gmail.com>:
-> >
-> > Hi Chuanhong,
-> >
-> > > The 2nd gmac of mediatek soc ethernet may not be connected to a PHY
-> > > and a phy-handle isn't always available.
-> > > Unfortunately, mt7530 dsa driver assumes that the 2nd gmac is always
-> > > connected to switch port 5 and setup mt7530 according to phy address
-> > > of 2nd gmac node, causing null pointer dereferencing when phy-handle
-> > > isn't defined in dts.
-> >
-> > MT7530 tries to detect if 2nd GMAC is using a phy with phy-address 0 or=
- 4.
-> =
+> > What if the 2nd GMAC connects to an external PHY on address 0 on a
+> > different mdio-bus?
+>
+> In general, you using a phy-handle to cover such a situation. If there
+> is a phy-handle, just use it.
 
-> What if the 2nd GMAC connects to an external PHY on address 0 on a
-> different mdio-bus?
+If it's determining where switch mac5 is wired, a phy-handle is fine.
+Here we are determining where exposed rgmii2 pins are wired.
+It can be wired to switch mac5 or skip the switch mac completely
+and connected to phy0/phy4.
+Current driver is determining rgmii2 wiring on mt7530 using phy-handle
+on *another unrelated ethernet node* which doesn't sound right.
 
-In general, you using a phy-handle to cover such a situation. If there
-is a phy-handle, just use it.
-
-   Andrew
+-- 
+Regards,
+Chuanhong Guo
 
 _______________________________________________
 Linux-mediatek mailing list
