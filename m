@@ -2,81 +2,83 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 8C1F719F31A
-	for <lists+linux-mediatek@lfdr.de>; Mon,  6 Apr 2020 11:59:36 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 27DB419F41A
+	for <lists+linux-mediatek@lfdr.de>; Mon,  6 Apr 2020 13:06:43 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Content-ID:In-Reply-To:
-	References:Message-ID:Date:Subject:To:From:Reply-To:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=QN4kdSSxzPtYNhQjRiopSpERtRgYLGMfmbdQnKJpoEc=; b=QakKlc/1wng1Jt
-	mS/Fe2+Gyx7Up7+PerX3SqxxQSIMT0BjA4oNIM0U6bkDPxRSqTnFJ1IF6IbWoBJlyXIozGuug2C3i
-	dHlzIaLOrpVsC+4CqHw2Sns1iojOqNfLkACl2dIIpPRvflsZEMbU8kojmsIUZiweQiYq6rkH6vHZe
-	8Mt2pKqhUvmUEyXRjHWXRNX97Vwd9vG67ty4znhJWI+UNoDSs1owc+AA+yHDHT60R/xgIcdNqbKnF
-	Fpb7psaivVwABF1m723fkidB1Z+3hJlQtFU/0d72sr3iQvbySkWz7Ppbxk7ldMc3Qz4vren2Jchmu
-	q/HwrGqdOYVFOA9ADUbA==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=XLsGEzTB3KEfi34HlzpL8Z9exM+KLeUGojOaFpyuR1c=; b=AyYnRfKm/zcM2m
+	xOqujOeSbcNMhm9xWjYWatQ/L+4UWdhv1YAhKyL1sGkg/aoG9Wo1B9tydw/4+MoH7rSp85FeYJe8c
+	vtkyt05roAP6KoN6kNBNPeQm1XdH3lhq2UrECbrIC1YaBmroA4FTHqm9J29JY4eyNMbBWNt9eIR8s
+	L44rS40073FRPSLcgp36kV3MxNc7mJHhUeh7vTRbArZbR2h70CrFL//o/Hj8RXdb7M9njWeuRhObw
+	l62fM3nqUrlBfTPf18OeOAcjMwD5qCVYpX+VXO5/X+ivqV6FUL+lBB/InRbwE49QB6C71Q74QM3zK
+	k2XCJqC2fBkm8WkkyXSg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jLOXL-0005vI-NN; Mon, 06 Apr 2020 09:59:23 +0000
-Received: from mailgate1.rohmeurope.com ([87.129.152.131])
- by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jLOXI-0005uZ-Lk; Mon, 06 Apr 2020 09:59:22 +0000
-X-AuditID: c0a8fbf4-473ff70000004419-d0-5e8afd75cde5
-Received: from smtp.reu.rohmeu.com (will-cas001.reu.rohmeu.com
- [192.168.251.177])
- by mailgate1.rohmeurope.com (Symantec Messaging Gateway) with SMTP id
- 27.3D.17433.57DFA8E5; Mon,  6 Apr 2020 11:59:17 +0200 (CEST)
-Received: from WILL-MAIL001.REu.RohmEu.com ([fe80::2915:304f:d22c:c6ba]) by
- WILL-CAS001.REu.RohmEu.com ([fe80::d57e:33d0:7a5d:f0a6%16]) with mapi id
- 14.03.0487.000; Mon, 6 Apr 2020 11:59:05 +0200
-From: "Vaittinen, Matti" <Matti.Vaittinen@fi.rohmeurope.com>
-To: "sebastian.reichel@collabora.com" <sebastian.reichel@collabora.com>
-Subject: Re: [PATCH v8 09/10] power: supply: Support ROHM bd99954 charger
-Thread-Topic: [PATCH v8 09/10] power: supply: Support ROHM bd99954 charger
-Thread-Index: AQHWCZSbKj2cmrJL+U+GBPNSQgTBAqhpvjOAgAIBK4A=
-Date: Mon, 6 Apr 2020 09:59:04 +0000
-Message-ID: <334ae92d62a32675bc18f331c9981e169e33e5e0.camel@fi.rohmeurope.com>
-References: <cover.1585902279.git.matti.vaittinen@fi.rohmeurope.com>
- <10b40f9bca727e790d891f6442a879bfeca68624.1585902279.git.matti.vaittinen@fi.rohmeurope.com>
- <20200405032233.btlwo5wvzmrrw65k@earth.universe>
-In-Reply-To: <20200405032233.btlwo5wvzmrrw65k@earth.universe>
-Accept-Language: en-US, de-DE
-Content-Language: de-DE
-X-MS-Has-Attach: 
-X-MS-TNEF-Correlator: 
-x-originating-ip: [62.78.225.252]
-Content-ID: <6785965BAD2C094A829E9DBBECE6AE2E@de.rohmeurope.com>
+	id 1jLPaN-0008PL-N7; Mon, 06 Apr 2020 11:06:35 +0000
+Received: from forward103p.mail.yandex.net ([2a02:6b8:0:1472:2741:0:8b7:106])
+ by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat
+ Linux)) id 1jLPa9-0008HL-Uy; Mon, 06 Apr 2020 11:06:25 +0000
+Received: from forward101q.mail.yandex.net (forward101q.mail.yandex.net
+ [IPv6:2a02:6b8:c0e:4b:0:640:4012:bb98])
+ by forward103p.mail.yandex.net (Yandex) with ESMTP id B662B18C1533;
+ Mon,  6 Apr 2020 13:59:22 +0300 (MSK)
+Received: from mxback8q.mail.yandex.net (mxback8q.mail.yandex.net
+ [IPv6:2a02:6b8:c0e:42:0:640:b38f:32ec])
+ by forward101q.mail.yandex.net (Yandex) with ESMTP id AFE19CF40010;
+ Mon,  6 Apr 2020 13:59:22 +0300 (MSK)
+Received: from vla3-4c649d03f525.qloud-c.yandex.net
+ (vla3-4c649d03f525.qloud-c.yandex.net [2a02:6b8:c15:2584:0:640:4c64:9d03])
+ by mxback8q.mail.yandex.net (mxback/Yandex) with ESMTP id vNXYnWr9pt-xJtuNdCg; 
+ Mon, 06 Apr 2020 13:59:22 +0300
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=yandex.com; s=mail;
+ t=1586170762; bh=saz29ZzM0qeNyctJjTSW0ESSl5VDK20cE2c5IJADMB8=;
+ h=Subject:To:From:Cc:Date:Message-Id;
+ b=Wa4y6BS4V6dH6GA826LlwzBp2fyTFJ79ipvrJg8KhskqfT5GkJX67pEtnmPd0k4TM
+ //WASQRMkXSg2/wpb72YDjBnQtukA1cY+tu/edAhRJrAMYJsC2uRed6q6O3Y93IGkn
+ F7Dtkmb+Rrmt7+MV/sLeTO5fJGyJy7djfje75Zoo=
+Authentication-Results: mxback8q.mail.yandex.net;
+ dkim=pass header.i=@yandex.com
+Received: by vla3-4c649d03f525.qloud-c.yandex.net (smtp/Yandex) with ESMTPSA
+ id xHhLUG81xr-xGWOKepN; Mon, 06 Apr 2020 13:59:18 +0300
+ (using TLSv1.3 with cipher TLS_AES_256_GCM_SHA384 (256/256 bits))
+ (Client certificate not present)
+From: Alexander Lobakin <79537434260@yandex.com>
+To: "David S. Miller" <davem@davemloft.net>, Jakub Kicinski <kuba@kernel.org>
+Subject: [PATCH net-next] net: dsa: add GRO support via gro_cells
+Date: Mon,  6 Apr 2020 13:59:10 +0300
+Message-Id: <20200406105910.32339-1-79537434260@yandex.com>
+X-Mailer: git-send-email 2.26.0
 MIME-Version: 1.0
-X-Brightmail-Tracker: H4sIAAAAAAAAA01TbUwTZxzPc3ftHehtZ8XxULclNDOoG6CRuH8Wt5jMzZMoIyFxycxgxzha
- MmhJX4xsWSAqU0pA0IJQCyNIZ0UEKdGhQzGkCS9DOiby4toPvGQT2CBjgAgydken8On5Pf/f
- 2/Ph/zCk6k9azaTpzaJRL6RrlMHUfddSY6Rl2Zq4q8GrBOe0k4Se0SUK7N1OCgpnqkkoOHmR
- AI9jjoTGsgYFzOT0kTBb0UXBz61TFPQOXiChZHhMCX25bgTfe3oUcOpygxIcrixYGZlUQPnZ
- bPhpspYAr/cGDfN9ZwmwPb9CgHu0XwHFrQ9oeHjHoYSHp3oRXKo5R8E/BR4EZd57BIx7FhA4
- B3oJOHl6DzicHRI53aqAitkSEv7yXZTqy7wk5N710NDrmiXAPxkHd3N7SWhyS4rWvli47esg
- 4Vmbl9gfyddV1iF+fu48xU8P5tJ8Zd03fLO/BvE3Rq4peNdMNP/Yl83ftvtpvspt4ZtcO/nv
- nh3nn9S5ad5dm6fkff0tSn6qp4eOD/tsw75kwXw8IU2rj/7giw06Z/68ItOBT3jODRM5qDvU
- ioIYzMVgj99PW1Ewo+L6Eb7W94AIXNoRXiyclhiGUXL7sHVoFYZwB3G5jZclJGcNwc1jjwh5
- vpk7hG1/GAOSWGzrOijHh3DvYVvneULGFPcWHqwpJWUJy8XhujxtoGgA4SZ/MS1rgrj3cf2F
- 9lWMuDdwXs7UqpfkQrH796eKwJM5XNPiJQN4Cx4f/ff/eTj+8Wk9JeeT3A7ccCc6YN2Pf/NV
- 0gEcjm35w6uY5TbhzvIxqgi9Zl/XYF9z29e57evc9nXuKqSoRThDSEvXCmZxd5RRtEQZDboM
- 6fjSkOFGge2dbUYrbYfaEMGgNhTGEJotbMkTa6LqlWRDSpZOMOmSjJZ00dSGMENqQlh1QV6i
- ik0Rsr4WjYYX1FaG0oSyEcPFn6s4uesrUcwUjS/Y1xlGg9nmJSl0k1HUiidS09LNazTBBMnh
- weoQk6hPEY2CxaxLkpcjySRth0xtlHpNi5KdNWUKGdI0YO1CbzNF4xXVJOOpcFaTKkpv0Ivq
- UPbN55KUk6U6i/5l0QQKZZBmM5stv2Oj9IVf5kxIFYRUodSfkSvMwhqlzkFV9Z27oqYmRtJi
- mhpHtiYh7aOFiANHt+mv3tt7xT9w89OuqyX5qR2lmbFTo77Cv8/YEzKOXdoedjNmqJVdiDR1
- F7WrPy69PlYfv3RkuWWx9LI/anvcragfEva+azlyeujAh5OfRBQN7Pnol3dSV8LjH1+/n334
- Vd2vy8mDsKPC+e2xW2hOQ5l0wu6dpNEk/AeeDufYfwQAAA==
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200406_025920_862385_54F34B03 
-X-CRM114-Status: GOOD (  16.59  )
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20200406_040623_292531_6CBEA623 
+X-CRM114-Status: GOOD (  16.46  )
+X-Spam-Score: 0.4 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (0.4 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [2a02:6b8:0:1472:2741:0:8b7:106 listed in]
+ [list.dnswl.org]
+ 0.3 FROM_LOCAL_HEX         From: localpart has long hexadecimal sequence
+ 0.0 FROM_LOCAL_DIGITS      From: localpart has long digit sequence
+ 0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
+ in digit [79537434260[at]yandex.com]
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider [79537434260[at]yandex.com]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -88,129 +90,149 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: "mark.rutland@arm.com" <mark.rutland@arm.com>,
- "andrei.stefanescu@microchip.com" <andrei.stefanescu@microchip.com>,
- "heiko@sntech.de" <heiko@sntech.de>, "rafael@kernel.org" <rafael@kernel.org>,
- "tony@atomide.com" <tony@atomide.com>,
- "linus.walleij@linaro.org" <linus.walleij@linaro.org>,
- "brendanhiggins@google.com" <brendanhiggins@google.com>,
- "lgirdwood@gmail.com" <lgirdwood@gmail.com>,
- "kholk11@gmail.com" <kholk11@gmail.com>,
- "hsin-hsiung.wang@mediatek.com" <hsin-hsiung.wang@mediatek.com>,
- "linux-samsung-soc@vger.kernel.org" <linux-samsung-soc@vger.kernel.org>,
- "axel.lin@ingics.com" <axel.lin@ingics.com>,
- "gregory.clement@bootlin.com" <gregory.clement@bootlin.com>,
- "b.zolnierkie@samsung.com" <b.zolnierkie@samsung.com>,
- "krzk@kernel.org" <krzk@kernel.org>,
- "m.reichl@fivetechno.de" <m.reichl@fivetechno.de>,
- "bgolaszewski@baylibre.com" <bgolaszewski@baylibre.com>,
- "wens@csie.org" <wens@csie.org>, "andreas@kemnade.info" <andreas@kemnade.info>,
- "agross@kernel.org" <agross@kernel.org>, "Laine,
- Markus" <Markus.Laine@fi.rohmeurope.com>,
- "Adam.Thomson.Opensource@diasemi.com" <Adam.Thomson.Opensource@diasemi.com>,
- "devicetree@vger.kernel.org" <devicetree@vger.kernel.org>,
- "ckeepax@opensource.cirrus.com" <ckeepax@opensource.cirrus.com>,
- "linux-omap@vger.kernel.org" <linux-omap@vger.kernel.org>,
- "linux-pm@vger.kernel.org" <linux-pm@vger.kernel.org>,
- "linux-arm-msm@vger.kernel.org" <linux-arm-msm@vger.kernel.org>,
- "rf@opensource.cirrus.com" <rf@opensource.cirrus.com>,
- "broonie@kernel.org" <broonie@kernel.org>,
- "linux-mediatek@lists.infradead.org" <linux-mediatek@lists.infradead.org>,
- "matthias.bgg@gmail.com" <matthias.bgg@gmail.com>,
- "tglx@linutronix.de" <tglx@linutronix.de>,
- "andriy.shevchenko@linux.intel.com" <andriy.shevchenko@linux.intel.com>,
- "linux-arm-kernel@lists.infradead.org" <linux-arm-kernel@lists.infradead.org>,
- "support.opensource@diasemi.com" <support.opensource@diasemi.com>,
- "baolin.wang@linaro.org" <baolin.wang@linaro.org>,
- "sbkim73@samsung.com" <sbkim73@samsung.com>,
- "patches@opensource.cirrus.com" <patches@opensource.cirrus.com>,
- "rdunlap@infradead.org" <rdunlap@infradead.org>,
- "linux-kernel@vger.kernel.org" <linux-kernel@vger.kernel.org>, "Mutanen,
- Mikko" <Mikko.Mutanen@fi.rohmeurope.com>,
- "vkoul@kernel.org" <vkoul@kernel.org>,
- "robh+dt@kernel.org" <robh+dt@kernel.org>,
- "bjorn.andersson@linaro.org" <bjorn.andersson@linaro.org>,
- "gregkh@linuxfoundation.org" <gregkh@linuxfoundation.org>,
- "mazziesaccount@gmail.com" <mazziesaccount@gmail.com>
+Cc: Woojung Huh <woojung.huh@microchip.com>, Andrew Lunn <andrew@lunn.ch>,
+ Florian Fainelli <f.fainelli@gmail.com>, Hauke Mehrtens <hauke@hauke-m.de>,
+ Linus Walleij <linus.walleij@linaro.org>, Sean Wang <sean.wang@mediatek.com>,
+ Russell King <linux@armlinux.org.uk>,
+ Microchip Linux Driver Support <UNGLinuxDriver@microchip.com>,
+ Alexander Lobakin <79537434260@yandex.com>,
+ Claudiu Manoil <claudiu.manoil@nxp.com>, netdev@vger.kernel.org,
+ linux-mediatek@lists.infradead.org, linux-arm-kernel@lists.infradead.org,
+ Philipp Zabel <p.zabel@pengutronix.de>,
+ Vladimir Oltean <vladimir.oltean@nxp.com>,
+ Matthias Brugger <matthias.bgg@gmail.com>,
+ Oleksij Rempel <linux@rempel-privat.de>,
+ Vivien Didelot <vivien.didelot@gmail.com>, linux-kernel@vger.kernel.org,
+ Mao Wenan <maowenan@huawei.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
+gro_cells lib is used by different encapsulating netdevices, such as
+geneve, macsec, vxlan etc. to speed up decapsulated traffic processing.
+CPU tag is a sort of "encapsulation", and we can use the same mechs to
+greatly improve overall DSA performance.
+skbs are passed to the GRO layer after removing CPU tags, so we don't
+need any new packet offload types as it was firstly proposed by me in
+the first GRO-over-DSA variant [1].
 
-On Sun, 2020-04-05 at 05:22 +0200, Sebastian Reichel wrote:
-> Hi,
-> 
-> On Fri, Apr 03, 2020 at 11:48:05AM +0300, Matti Vaittinen wrote:
-> > The ROHM BD99954 is a Battery Management LSI for 1-4 cell Lithium-
-> > Ion
-> > secondary battery intended to be used in space-constraint equipment
-> > such
-> > as Low profile Notebook PC, Tablets and other applications. BD99954
-> > provides a Dual-source Battery Charger, two port BC1.2 detection
-> > and a
-> > Battery Monitor.
-> > 
-> > Support ROHM BD99954 Charger IC.
-> > 
-> > Signed-off-by: Matti Vaittinen <matti.vaittinen@fi.rohmeurope.com>
-> > ---
-> > 
-> > No changes since v7
-> 
-> Thanks, the drivers looks mostly good to me, I found some minor
-> things. Please fix before sending the next (and hopefully final)
-> revision.
+The size of struct gro_cells is sizeof(void *), so hot struct
+dsa_slave_priv becomes only 4/8 bytes bigger, and all critical fields
+remain in one 32-byte cacheline.
+The other positive side effect is that drivers for network devices
+that can be shipped as CPU ports of DSA-driven switches can now use
+napi_gro_frags() to pass skbs to kernel. Packets built that way are
+completely non-linear and are likely being dropped without GRO.
 
-I will :) Thanks for all the effort when doing the review. Much
-appreciated! And I'll rebase and send the next version after v5.7-rc1
-gets tagged. I'll fix these at that version.
+This was tested on to-be-mainlined-soon Ethernet driver that uses
+napi_gro_frags(), and the overall performance was on par with the
+variant from [1], sometimes even better due to minimal overhead.
+net.core.gro_normal_batch tuning may help to push it to the limit
+on particular setups and platforms.
 
-> 
-> >  drivers/power/supply/Kconfig           |    9 +
-> >  drivers/power/supply/Makefile          |    1 +
-> >  drivers/power/supply/bd99954-charger.c | 1149
-> > ++++++++++++++++++++++++
-> >  include/linux/power/bd99954-charger.h  | 1075
-> > ++++++++++++++++++++++
-> 
-> Please move this header to drivers/power/supply/, the public
-> include directory is only needed for platform_data and MFD.
-> 
+[1] https://lore.kernel.org/netdev/20191230143028.27313-1-alobakin@dlink.ru/
+
+Signed-off-by: Alexander Lobakin <79537434260@yandex.com>
+---
+ net/dsa/Kconfig    |  1 +
+ net/dsa/dsa.c      |  2 +-
+ net/dsa/dsa_priv.h |  3 +++
+ net/dsa/slave.c    | 10 +++++++++-
+ 4 files changed, 14 insertions(+), 2 deletions(-)
+
+diff --git a/net/dsa/Kconfig b/net/dsa/Kconfig
+index 92663dcb3aa2..739613070d07 100644
+--- a/net/dsa/Kconfig
++++ b/net/dsa/Kconfig
+@@ -9,6 +9,7 @@ menuconfig NET_DSA
+ 	tristate "Distributed Switch Architecture"
+ 	depends on HAVE_NET_DSA
+ 	depends on BRIDGE || BRIDGE=n
++	select GRO_CELLS
+ 	select NET_SWITCHDEV
+ 	select PHYLINK
+ 	select NET_DEVLINK
+diff --git a/net/dsa/dsa.c b/net/dsa/dsa.c
+index ee2610c4d46a..0384a911779e 100644
+--- a/net/dsa/dsa.c
++++ b/net/dsa/dsa.c
+@@ -234,7 +234,7 @@ static int dsa_switch_rcv(struct sk_buff *skb, struct net_device *dev,
+ 	if (dsa_skb_defer_rx_timestamp(p, skb))
+ 		return 0;
  
-Makes sense.
+-	netif_receive_skb(skb);
++	gro_cells_receive(&p->gcells, skb);
+ 
+ 	return 0;
+ }
+diff --git a/net/dsa/dsa_priv.h b/net/dsa/dsa_priv.h
+index 904cc7c9b882..6d9a1ef65fa0 100644
+--- a/net/dsa/dsa_priv.h
++++ b/net/dsa/dsa_priv.h
+@@ -11,6 +11,7 @@
+ #include <linux/netdevice.h>
+ #include <linux/netpoll.h>
+ #include <net/dsa.h>
++#include <net/gro_cells.h>
+ 
+ enum {
+ 	DSA_NOTIFIER_AGEING_TIME,
+@@ -77,6 +78,8 @@ struct dsa_slave_priv {
+ 
+ 	struct pcpu_sw_netstats	*stats64;
+ 
++	struct gro_cells	gcells;
++
+ 	/* DSA port data, such as switch, port index, etc. */
+ 	struct dsa_port		*dp;
+ 
+diff --git a/net/dsa/slave.c b/net/dsa/slave.c
+index 5390ff541658..36c7491e8e5f 100644
+--- a/net/dsa/slave.c
++++ b/net/dsa/slave.c
+@@ -1762,6 +1762,11 @@ int dsa_slave_create(struct dsa_port *port)
+ 		free_netdev(slave_dev);
+ 		return -ENOMEM;
+ 	}
++
++	ret = gro_cells_init(&p->gcells, slave_dev);
++	if (ret)
++		goto out_free;
++
+ 	p->dp = port;
+ 	INIT_LIST_HEAD(&p->mall_tc_list);
+ 	p->xmit = cpu_dp->tag_ops->xmit;
+@@ -1781,7 +1786,7 @@ int dsa_slave_create(struct dsa_port *port)
+ 	ret = dsa_slave_phy_setup(slave_dev);
+ 	if (ret) {
+ 		netdev_err(master, "error %d setting up slave phy\n", ret);
+-		goto out_free;
++		goto out_gcells;
+ 	}
+ 
+ 	dsa_slave_notify(slave_dev, DSA_PORT_REGISTER);
+@@ -1800,6 +1805,8 @@ int dsa_slave_create(struct dsa_port *port)
+ 	phylink_disconnect_phy(p->dp->pl);
+ 	rtnl_unlock();
+ 	phylink_destroy(p->dp->pl);
++out_gcells:
++	gro_cells_destroy(&p->gcells);
+ out_free:
+ 	free_percpu(p->stats64);
+ 	free_netdev(slave_dev);
+@@ -1820,6 +1827,7 @@ void dsa_slave_destroy(struct net_device *slave_dev)
+ 	dsa_slave_notify(slave_dev, DSA_PORT_UNREGISTER);
+ 	unregister_netdev(slave_dev);
+ 	phylink_destroy(dp->pl);
++	gro_cells_destroy(&p->gcells);
+ 	free_percpu(p->stats64);
+ 	free_netdev(slave_dev);
+ }
+-- 
+2.26.0
 
-> > +	dev_info(bd->dev, "Found DB99954 chip rev %d\n", bd->chip_rev);
-> 
-> DB -> BD?
 
-Right. Well spotted :)
-
-> > +
-> > +static int bd9995x_remove(struct i2c_client *client)
-> > +{
-> > +	int ret;
-> > +	struct bd9995x_device *bd = i2c_get_clientdata(client);
-> > +
-> > +	disable_irq(client->irq);
-> > +
-> > +	/*
-> > +	 * Reset all registers to default values. This should also
-> > disable
-> > +	 * CHG_EN bit. If this is not required we can get rid of the
-> > remove.
-> > +	 */
-> > +	ret = bd9995x_chip_reset(bd);
-> 
-> You can register this using devm_add_action_or_reset() before the
-> devm_request_threaded_irq() call in probe and get rid of the remove
-> function :)
-
-Yep! That was a good point! I think I had never used
-devm_add_action_or_reset() - this is a handy thing for my toolbox! :)
-
-Best Regards
-	Matti Vaittinen
 _______________________________________________
 Linux-mediatek mailing list
 Linux-mediatek@lists.infradead.org
