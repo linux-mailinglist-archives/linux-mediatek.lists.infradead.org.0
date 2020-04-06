@@ -2,103 +2,81 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 72A5C19F2A5
-	for <lists+linux-mediatek@lfdr.de>; Mon,  6 Apr 2020 11:30:10 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 8C1F719F31A
+	for <lists+linux-mediatek@lfdr.de>; Mon,  6 Apr 2020 11:59:36 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Content-ID:In-Reply-To:
+	References:Message-ID:Date:Subject:To:From:Reply-To:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=z115YnfhatZdJHHoCWhc6FmRvxh55W+urx/YhFi4ODo=; b=PdWlhIqW6LWPwI
-	hS51Tpfu7x4BVCv3aDoEThteYo9AnnArlaWkIV2yZuHhvZO39lBHWplwoDYmO0/MhbJ1RvsiOBaSz
-	bul3AprrMwzf+bDEYbVMGbGYAPoIcjdyjBReDiS5+f3mltT0LLUG6xsjZSQfieSbIovGjTHiK7liY
-	2+GhpoaZ2CnJ2HkopI0XAAcAJJTOIg1tFI6GNlRAy49hT8JnhFiDGIi/eqsPihJ8zw3OgRQxEZhpO
-	+5ggwDkvBJE3ptNRRfZBemV3+vhycFcra5q2RBBHaWDatGLdQRov8+NfPsIp61/ha/hCg0+IffMiA
-	Qb0zL/FesvQ6GWbKXXsA==;
+	List-Owner; bh=QN4kdSSxzPtYNhQjRiopSpERtRgYLGMfmbdQnKJpoEc=; b=QakKlc/1wng1Jt
+	mS/Fe2+Gyx7Up7+PerX3SqxxQSIMT0BjA4oNIM0U6bkDPxRSqTnFJ1IF6IbWoBJlyXIozGuug2C3i
+	dHlzIaLOrpVsC+4CqHw2Sns1iojOqNfLkACl2dIIpPRvflsZEMbU8kojmsIUZiweQiYq6rkH6vHZe
+	8Mt2pKqhUvmUEyXRjHWXRNX97Vwd9vG67ty4znhJWI+UNoDSs1owc+AA+yHDHT60R/xgIcdNqbKnF
+	Fpb7psaivVwABF1m723fkidB1Z+3hJlQtFU/0d72sr3iQvbySkWz7Ppbxk7ldMc3Qz4vren2Jchmu
+	q/HwrGqdOYVFOA9ADUbA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jLO4v-0002Oe-IV; Mon, 06 Apr 2020 09:30:01 +0000
-Received: from mail-pl1-x644.google.com ([2607:f8b0:4864:20::644])
- by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jLO4j-0002FN-7Z
- for linux-mediatek@lists.infradead.org; Mon, 06 Apr 2020 09:29:50 +0000
-Received: by mail-pl1-x644.google.com with SMTP id e1so5680032plt.9
- for <linux-mediatek@lists.infradead.org>; Mon, 06 Apr 2020 02:29:49 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=linaro.org; s=google;
- h=date:from:to:cc:subject:message-id:references:mime-version
- :content-disposition:in-reply-to:user-agent;
- bh=ZCzHwl/tdcpxDCvekc0v2ATl1ivxbmKIM4V06jUFE4o=;
- b=lA2dD1pU3P/Ty4DeO3ShHycc7coGr4rgguYE94pdUYB0rQeBI4R+O+XPILIDswxwUZ
- 8/0N/Nf87j7tRNEWERwPiO+a8fKnsi9Y6Ftu3dVR3xICxGhLDWb+KGsFDsQaBOcgI3tr
- jSqz9jjdv+rGEp7nNDmxgLrZQKooGMiHIMJTMjPW9qY6OwddYlWPTFKeb8bg7qZU3AwG
- qBX3zWIimob9XlsraxiQ+pWhNKsyugcy2Q068sezTmHZQY54B4p2jq0lnirIIi91YGmo
- NGF9j8S2DD7riX6aAyxCPnvM0QyW2GEyt48nwV9aXfhYqowCQbI+nfwwy4PbTMDIoY32
- YE4A==
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:date:from:to:cc:subject:message-id:references
- :mime-version:content-disposition:in-reply-to:user-agent;
- bh=ZCzHwl/tdcpxDCvekc0v2ATl1ivxbmKIM4V06jUFE4o=;
- b=HIxhj1vRvjQmgIg0wenNvCXl6fw0otWKXrTLV5XGYvEereuMlr+SY4sQKwf5Yyn9vI
- NL/499L3IARb5CgiUVhC9y9fH/9rxRWcyb47X3NGK2HdaKxm47jHoQubXS1yUX+4tWoW
- z29j2QwrWYd/LSXadt5Mx3biJIN9Odkz/yV5bhfJnyN2JroG7tNC1i0e8b9gooYswSJ8
- bCftbw7UI933uh1DDkh8ilqN1RjG2oguK9SQSkVnzdxpezF9Z3TFySMoeNcWpBg/QyP0
- ZK+DW6O/u1XBR3T8/n7Uy4oPRrdWgDGONW+3zyIynXrR34cHlusE3hV82kZAbxIYWtjD
- EDCg==
-X-Gm-Message-State: AGi0PuYGFQ5OcFwdojsT4G/5MeTDvpqQOWRhkNF/SRfeFfPxQWAo8xEn
- sMh8VA4xw5ffYH4eS8VOZ4B9hg==
-X-Google-Smtp-Source: APiQypJ1tW013VPp2UhXvt/1Bxz5iwbypmAuTEFj+PUd/NiBUPS+9Nx3CgJdVnertByvQXbdXVoStw==
-X-Received: by 2002:a17:902:b593:: with SMTP id
- a19mr19581254pls.92.1586165388661; 
- Mon, 06 Apr 2020 02:29:48 -0700 (PDT)
-Received: from localhost ([122.171.118.46])
- by smtp.gmail.com with ESMTPSA id c128sm11053782pfa.11.2020.04.06.02.29.47
- (version=TLS1_2 cipher=ECDHE-RSA-AES128-GCM-SHA256 bits=128/128);
- Mon, 06 Apr 2020 02:29:47 -0700 (PDT)
-Date: Mon, 6 Apr 2020 14:59:45 +0530
-From: Viresh Kumar <viresh.kumar@linaro.org>
-To: "andrew-sh.cheng" <andrew-sh.cheng@mediatek.com>
-Subject: Re: [v5, PATCH 4/5] cpufreq: mediatek: add opp notification for SVS
- support
-Message-ID: <20200406092945.d5thcd2h3bo7mn45@vireshk-i7>
-References: <1574769046-28449-1-git-send-email-andrew-sh.cheng@mediatek.com>
- <1574769046-28449-5-git-send-email-andrew-sh.cheng@mediatek.com>
- <20191127083619.etocnhpyyut3hzwq@vireshk-i7>
- <1575874588.13494.4.camel@mtksdaap41>
- <20191210064319.f4ksrxozp3gv4xry@vireshk-i7>
- <1583827865.4840.1.camel@mtksdaap41>
- <20200311060616.62nh7sfwtjwvrjfr@vireshk-i7>
- <1584084154.7753.3.camel@mtksdaap41>
- <20200313091038.q7q7exiowoah4nk4@vireshk-i7>
- <1586164366.5015.6.camel@mtksdaap41>
+	id 1jLOXL-0005vI-NN; Mon, 06 Apr 2020 09:59:23 +0000
+Received: from mailgate1.rohmeurope.com ([87.129.152.131])
+ by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
+ id 1jLOXI-0005uZ-Lk; Mon, 06 Apr 2020 09:59:22 +0000
+X-AuditID: c0a8fbf4-473ff70000004419-d0-5e8afd75cde5
+Received: from smtp.reu.rohmeu.com (will-cas001.reu.rohmeu.com
+ [192.168.251.177])
+ by mailgate1.rohmeurope.com (Symantec Messaging Gateway) with SMTP id
+ 27.3D.17433.57DFA8E5; Mon,  6 Apr 2020 11:59:17 +0200 (CEST)
+Received: from WILL-MAIL001.REu.RohmEu.com ([fe80::2915:304f:d22c:c6ba]) by
+ WILL-CAS001.REu.RohmEu.com ([fe80::d57e:33d0:7a5d:f0a6%16]) with mapi id
+ 14.03.0487.000; Mon, 6 Apr 2020 11:59:05 +0200
+From: "Vaittinen, Matti" <Matti.Vaittinen@fi.rohmeurope.com>
+To: "sebastian.reichel@collabora.com" <sebastian.reichel@collabora.com>
+Subject: Re: [PATCH v8 09/10] power: supply: Support ROHM bd99954 charger
+Thread-Topic: [PATCH v8 09/10] power: supply: Support ROHM bd99954 charger
+Thread-Index: AQHWCZSbKj2cmrJL+U+GBPNSQgTBAqhpvjOAgAIBK4A=
+Date: Mon, 6 Apr 2020 09:59:04 +0000
+Message-ID: <334ae92d62a32675bc18f331c9981e169e33e5e0.camel@fi.rohmeurope.com>
+References: <cover.1585902279.git.matti.vaittinen@fi.rohmeurope.com>
+ <10b40f9bca727e790d891f6442a879bfeca68624.1585902279.git.matti.vaittinen@fi.rohmeurope.com>
+ <20200405032233.btlwo5wvzmrrw65k@earth.universe>
+In-Reply-To: <20200405032233.btlwo5wvzmrrw65k@earth.universe>
+Accept-Language: en-US, de-DE
+Content-Language: de-DE
+X-MS-Has-Attach: 
+X-MS-TNEF-Correlator: 
+x-originating-ip: [62.78.225.252]
+Content-ID: <6785965BAD2C094A829E9DBBECE6AE2E@de.rohmeurope.com>
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <1586164366.5015.6.camel@mtksdaap41>
-User-Agent: NeoMutt/20180716-391-311a52
+X-Brightmail-Tracker: H4sIAAAAAAAAA01TbUwTZxzPc3ftHehtZ8XxULclNDOoG6CRuH8Wt5jMzZMoIyFxycxgxzha
+ MmhJX4xsWSAqU0pA0IJQCyNIZ0UEKdGhQzGkCS9DOiby4toPvGQT2CBjgAgydken8On5Pf/f
+ 2/Ph/zCk6k9azaTpzaJRL6RrlMHUfddSY6Rl2Zq4q8GrBOe0k4Se0SUK7N1OCgpnqkkoOHmR
+ AI9jjoTGsgYFzOT0kTBb0UXBz61TFPQOXiChZHhMCX25bgTfe3oUcOpygxIcrixYGZlUQPnZ
+ bPhpspYAr/cGDfN9ZwmwPb9CgHu0XwHFrQ9oeHjHoYSHp3oRXKo5R8E/BR4EZd57BIx7FhA4
+ B3oJOHl6DzicHRI53aqAitkSEv7yXZTqy7wk5N710NDrmiXAPxkHd3N7SWhyS4rWvli47esg
+ 4Vmbl9gfyddV1iF+fu48xU8P5tJ8Zd03fLO/BvE3Rq4peNdMNP/Yl83ftvtpvspt4ZtcO/nv
+ nh3nn9S5ad5dm6fkff0tSn6qp4eOD/tsw75kwXw8IU2rj/7giw06Z/68ItOBT3jODRM5qDvU
+ ioIYzMVgj99PW1Ewo+L6Eb7W94AIXNoRXiyclhiGUXL7sHVoFYZwB3G5jZclJGcNwc1jjwh5
+ vpk7hG1/GAOSWGzrOijHh3DvYVvneULGFPcWHqwpJWUJy8XhujxtoGgA4SZ/MS1rgrj3cf2F
+ 9lWMuDdwXs7UqpfkQrH796eKwJM5XNPiJQN4Cx4f/ff/eTj+8Wk9JeeT3A7ccCc6YN2Pf/NV
+ 0gEcjm35w6uY5TbhzvIxqgi9Zl/XYF9z29e57evc9nXuKqSoRThDSEvXCmZxd5RRtEQZDboM
+ 6fjSkOFGge2dbUYrbYfaEMGgNhTGEJotbMkTa6LqlWRDSpZOMOmSjJZ00dSGMENqQlh1QV6i
+ ik0Rsr4WjYYX1FaG0oSyEcPFn6s4uesrUcwUjS/Y1xlGg9nmJSl0k1HUiidS09LNazTBBMnh
+ weoQk6hPEY2CxaxLkpcjySRth0xtlHpNi5KdNWUKGdI0YO1CbzNF4xXVJOOpcFaTKkpv0Ivq
+ UPbN55KUk6U6i/5l0QQKZZBmM5stv2Oj9IVf5kxIFYRUodSfkSvMwhqlzkFV9Z27oqYmRtJi
+ mhpHtiYh7aOFiANHt+mv3tt7xT9w89OuqyX5qR2lmbFTo77Cv8/YEzKOXdoedjNmqJVdiDR1
+ F7WrPy69PlYfv3RkuWWx9LI/anvcragfEva+azlyeujAh5OfRBQN7Pnol3dSV8LjH1+/n334
+ Vd2vy8mDsKPC+e2xW2hOQ5l0wu6dpNEk/AeeDufYfwQAAA==
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200406_022949_286856_1C90267E 
-X-CRM114-Status: UNSURE (   7.31  )
-X-CRM114-Notice: Please train this message.
-X-Spam-Score: 1.8 (+)
+X-CRM114-CacheID: sfid-20200406_025920_862385_54F34B03 
+X-CRM114-Status: GOOD (  16.59  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
- Content analysis details:   (1.8 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:644 listed in]
- [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- 2.0 PDS_TONAME_EQ_TOLOCAL_SHORT Short body with To: name matches
- everything in local email
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -110,33 +88,129 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>, Nishanth Menon <nm@ti.com>,
+Cc: "mark.rutland@arm.com" <mark.rutland@arm.com>,
+ "andrei.stefanescu@microchip.com" <andrei.stefanescu@microchip.com>,
+ "heiko@sntech.de" <heiko@sntech.de>, "rafael@kernel.org" <rafael@kernel.org>,
+ "tony@atomide.com" <tony@atomide.com>,
+ "linus.walleij@linaro.org" <linus.walleij@linaro.org>,
+ "brendanhiggins@google.com" <brendanhiggins@google.com>,
+ "lgirdwood@gmail.com" <lgirdwood@gmail.com>,
+ "kholk11@gmail.com" <kholk11@gmail.com>,
+ "hsin-hsiung.wang@mediatek.com" <hsin-hsiung.wang@mediatek.com>,
+ "linux-samsung-soc@vger.kernel.org" <linux-samsung-soc@vger.kernel.org>,
+ "axel.lin@ingics.com" <axel.lin@ingics.com>,
+ "gregory.clement@bootlin.com" <gregory.clement@bootlin.com>,
+ "b.zolnierkie@samsung.com" <b.zolnierkie@samsung.com>,
+ "krzk@kernel.org" <krzk@kernel.org>,
+ "m.reichl@fivetechno.de" <m.reichl@fivetechno.de>,
+ "bgolaszewski@baylibre.com" <bgolaszewski@baylibre.com>,
+ "wens@csie.org" <wens@csie.org>, "andreas@kemnade.info" <andreas@kemnade.info>,
+ "agross@kernel.org" <agross@kernel.org>, "Laine,
+ Markus" <Markus.Laine@fi.rohmeurope.com>,
+ "Adam.Thomson.Opensource@diasemi.com" <Adam.Thomson.Opensource@diasemi.com>,
  "devicetree@vger.kernel.org" <devicetree@vger.kernel.org>,
- srv_heupstream <srv_heupstream@mediatek.com>,
+ "ckeepax@opensource.cirrus.com" <ckeepax@opensource.cirrus.com>,
+ "linux-omap@vger.kernel.org" <linux-omap@vger.kernel.org>,
  "linux-pm@vger.kernel.org" <linux-pm@vger.kernel.org>,
- Stephen Boyd <sboyd@kernel.org>, "Rafael J. Wysocki" <rjw@rjwysocki.net>,
- "linux-kernel@vger.kernel.org" <linux-kernel@vger.kernel.org>,
- Chanwoo Choi <cw00.choi@samsung.com>,
- Kyungmin Park <kyungmin.park@samsung.com>, Rob Herring <robh+dt@kernel.org>,
+ "linux-arm-msm@vger.kernel.org" <linux-arm-msm@vger.kernel.org>,
+ "rf@opensource.cirrus.com" <rf@opensource.cirrus.com>,
+ "broonie@kernel.org" <broonie@kernel.org>,
  "linux-mediatek@lists.infradead.org" <linux-mediatek@lists.infradead.org>,
- MyungJoo Ham <myungjoo.ham@samsung.com>,
- Matthias Brugger <matthias.bgg@gmail.com>,
- Fan Chen =?utf-8?B?KOmZs+WHoSk=?= <fan.chen@mediatek.com>,
- "linux-arm-kernel@lists.infradead.org" <linux-arm-kernel@lists.infradead.org>
+ "matthias.bgg@gmail.com" <matthias.bgg@gmail.com>,
+ "tglx@linutronix.de" <tglx@linutronix.de>,
+ "andriy.shevchenko@linux.intel.com" <andriy.shevchenko@linux.intel.com>,
+ "linux-arm-kernel@lists.infradead.org" <linux-arm-kernel@lists.infradead.org>,
+ "support.opensource@diasemi.com" <support.opensource@diasemi.com>,
+ "baolin.wang@linaro.org" <baolin.wang@linaro.org>,
+ "sbkim73@samsung.com" <sbkim73@samsung.com>,
+ "patches@opensource.cirrus.com" <patches@opensource.cirrus.com>,
+ "rdunlap@infradead.org" <rdunlap@infradead.org>,
+ "linux-kernel@vger.kernel.org" <linux-kernel@vger.kernel.org>, "Mutanen,
+ Mikko" <Mikko.Mutanen@fi.rohmeurope.com>,
+ "vkoul@kernel.org" <vkoul@kernel.org>,
+ "robh+dt@kernel.org" <robh+dt@kernel.org>,
+ "bjorn.andersson@linaro.org" <bjorn.andersson@linaro.org>,
+ "gregkh@linuxfoundation.org" <gregkh@linuxfoundation.org>,
+ "mazziesaccount@gmail.com" <mazziesaccount@gmail.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On 06-04-20, 17:12, andrew-sh.cheng wrote:
-> I will use regulator in the locked region.
-> And regulator will use mutex_lock.
 
-Yeah, you can't use spinlock here, use a mutex.
+On Sun, 2020-04-05 at 05:22 +0200, Sebastian Reichel wrote:
+> Hi,
+> 
+> On Fri, Apr 03, 2020 at 11:48:05AM +0300, Matti Vaittinen wrote:
+> > The ROHM BD99954 is a Battery Management LSI for 1-4 cell Lithium-
+> > Ion
+> > secondary battery intended to be used in space-constraint equipment
+> > such
+> > as Low profile Notebook PC, Tablets and other applications. BD99954
+> > provides a Dual-source Battery Charger, two port BC1.2 detection
+> > and a
+> > Battery Monitor.
+> > 
+> > Support ROHM BD99954 Charger IC.
+> > 
+> > Signed-off-by: Matti Vaittinen <matti.vaittinen@fi.rohmeurope.com>
+> > ---
+> > 
+> > No changes since v7
+> 
+> Thanks, the drivers looks mostly good to me, I found some minor
+> things. Please fix before sending the next (and hopefully final)
+> revision.
 
--- 
-viresh
+I will :) Thanks for all the effort when doing the review. Much
+appreciated! And I'll rebase and send the next version after v5.7-rc1
+gets tagged. I'll fix these at that version.
 
+> 
+> >  drivers/power/supply/Kconfig           |    9 +
+> >  drivers/power/supply/Makefile          |    1 +
+> >  drivers/power/supply/bd99954-charger.c | 1149
+> > ++++++++++++++++++++++++
+> >  include/linux/power/bd99954-charger.h  | 1075
+> > ++++++++++++++++++++++
+> 
+> Please move this header to drivers/power/supply/, the public
+> include directory is only needed for platform_data and MFD.
+> 
+ 
+Makes sense.
+
+> > +	dev_info(bd->dev, "Found DB99954 chip rev %d\n", bd->chip_rev);
+> 
+> DB -> BD?
+
+Right. Well spotted :)
+
+> > +
+> > +static int bd9995x_remove(struct i2c_client *client)
+> > +{
+> > +	int ret;
+> > +	struct bd9995x_device *bd = i2c_get_clientdata(client);
+> > +
+> > +	disable_irq(client->irq);
+> > +
+> > +	/*
+> > +	 * Reset all registers to default values. This should also
+> > disable
+> > +	 * CHG_EN bit. If this is not required we can get rid of the
+> > remove.
+> > +	 */
+> > +	ret = bd9995x_chip_reset(bd);
+> 
+> You can register this using devm_add_action_or_reset() before the
+> devm_request_threaded_irq() call in probe and get rid of the remove
+> function :)
+
+Yep! That was a good point! I think I had never used
+devm_add_action_or_reset() - this is a handy thing for my toolbox! :)
+
+Best Regards
+	Matti Vaittinen
 _______________________________________________
 Linux-mediatek mailing list
 Linux-mediatek@lists.infradead.org
