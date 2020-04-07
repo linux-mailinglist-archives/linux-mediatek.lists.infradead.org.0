@@ -2,8 +2,8 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 09AD41A1454
-	for <lists+linux-mediatek@lfdr.de>; Tue,  7 Apr 2020 20:39:07 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 4B1141A144D
+	for <lists+linux-mediatek@lfdr.de>; Tue,  7 Apr 2020 20:39:05 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
@@ -11,20 +11,20 @@ DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	In-Reply-To:Message-Id:Date:Subject:To:From:Reply-To:Content-ID:
 	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
 	:Resent-Message-ID:List-Owner;
-	bh=SnIYm+XGnJy5DidtWjgsryrebS3aF7yAqrGoGMBqYa4=; b=BisayXXSFHKBpf67B6IXbCtZVc
-	W3nNwTii7a/9TmIlFliOgeVHoNZPO/UWaxyv3/NrzIMd2l1ESqESsYNcQUJ/AnAvIVjT4Vm61nW/R
-	mWyQah5oWv6gdNRps02D+r2Qy2tSdcDif78JiFBInOcsFmPahsmxG6gr/931OfciK8vIytHUGKWrn
-	VV9J1WSJWTxP8tKy9EUwrN0hiiXZujqHO8rLnTK6IwGF/KMqdVxmMNBgA6PsX4OkpW3cD6LVwNfLm
-	rrsfqJ54DSv4eUxiGJEmQqjRiwJWzDCXTAXe2X8UeoKcEkg6nfvrIizmMU0bYOQKmVM4IV8uI5oEg
-	0OqVkEPQ==;
+	bh=U+NFfnySKFQw103bxGqEHQbD76DN3y1g7Y9t7aJeHjk=; b=K7N8JXEitHYRkrkn7vbm2q7jwm
+	WWccIy982ycr4Kzb/oUTDm7TQbWXuctpLu3pGwZAN5DMzF8oKqyV1xDlq3JkyL+EEstxBBf1zap16
+	OweO0pk7XMDHw9qLomljYs+E0F6ln867nVrNPX2/myNZhEZb3Zv+fIYJHGAmyFRunpprpdLDPumv7
+	UfYtr6fOe0ZQzxZd7jDe5fSStkyvbedg91teb3fzGbrZnoyTdM5cLt1ktb1YpipmTayjsx1UvylQn
+	YC33YtNVfHiQPuaHXLOaqw7wa8Jm/OFoQtln1e4rg07EEoWr6mImhVg4jAV7hC/Dgdvlp/KyUuEyo
+	ef4JfBLg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jLt7k-0007lZ-S5; Tue, 07 Apr 2020 18:39:00 +0000
+	id 1jLt7j-0007jZ-UK; Tue, 07 Apr 2020 18:38:59 +0000
 Received: from 8bytes.org ([81.169.241.247] helo=theia.8bytes.org)
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jLt6q-0006ic-CR; Tue, 07 Apr 2020 18:38:08 +0000
+ id 1jLt6q-0006j5-Fi; Tue, 07 Apr 2020 18:38:08 +0000
 Received: by theia.8bytes.org (Postfix, from userid 1000)
- id B761F2E7; Tue,  7 Apr 2020 20:37:49 +0200 (CEST)
+ id E3062312; Tue,  7 Apr 2020 20:37:49 +0200 (CEST)
 From: Joerg Roedel <joro@8bytes.org>
 To: Joerg Roedel <joro@8bytes.org>, Will Deacon <will@kernel.org>,
  Robin Murphy <robin.murphy@arm.com>,
@@ -39,16 +39,16 @@ To: Joerg Roedel <joro@8bytes.org>, Will Deacon <will@kernel.org>,
  Thierry Reding <thierry.reding@gmail.com>,
  Jonathan Hunter <jonathanh@nvidia.com>,
  Jean-Philippe Brucker <jean-philippe@linaro.org>
-Subject: [RFC PATCH 08/34] iommu: Move default domain allocation to
- iommu_probe_device()
-Date: Tue,  7 Apr 2020 20:37:16 +0200
-Message-Id: <20200407183742.4344-9-joro@8bytes.org>
+Subject: [RFC PATCH 09/34] iommu: Keep a list of allocated groups in
+ __iommu_probe_device()
+Date: Tue,  7 Apr 2020 20:37:17 +0200
+Message-Id: <20200407183742.4344-10-joro@8bytes.org>
 X-Mailer: git-send-email 2.17.1
 In-Reply-To: <20200407183742.4344-1-joro@8bytes.org>
 References: <20200407183742.4344-1-joro@8bytes.org>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200407_113804_647748_812B3255 
-X-CRM114-Status: GOOD (  19.66  )
+X-CRM114-CacheID: sfid-20200407_113804_695235_8A2C98C6 
+X-CRM114-Status: GOOD (  12.41  )
 X-Spam-Score: -0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  Content analysis details:   (-0.0 points)
@@ -82,182 +82,62 @@ Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.o
 
 From: Joerg Roedel <jroedel@suse.de>
 
-Well, not really. The call to iommu_alloc_default_domain() in
-iommu_group_get_for_dev() has to stay around as long as there are
-IOMMU drivers using the add/remove_device() call-backs instead of
-probe/release_device().
-
-Those drivers expect that iommu_group_get_for_dev() returns the device
-attached to a group and the group set up with a default domain (and
-the device attached to the groups current domain).
-
-But when all drivers are converted this compatability mess can be
-removed.
+This is needed to defer default_domain allocation for new IOMMU groups
+until all devices have been added to the group.
 
 Signed-off-by: Joerg Roedel <jroedel@suse.de>
 ---
- drivers/iommu/iommu.c | 102 +++++++++++++++++++++++++++++-------------
- 1 file changed, 71 insertions(+), 31 deletions(-)
+ drivers/iommu/iommu.c | 9 +++++++--
+ 1 file changed, 7 insertions(+), 2 deletions(-)
 
 diff --git a/drivers/iommu/iommu.c b/drivers/iommu/iommu.c
-index 6cfe7799dc8c..7a385c18e1a5 100644
+index 7a385c18e1a5..18eb3623bd00 100644
 --- a/drivers/iommu/iommu.c
 +++ b/drivers/iommu/iommu.c
-@@ -79,6 +79,16 @@ static bool iommu_cmd_line_dma_api(void)
- 	return !!(iommu_cmd_line & IOMMU_CMD_LINE_DMA_API);
+@@ -44,6 +44,7 @@ struct iommu_group {
+ 	int id;
+ 	struct iommu_domain *default_domain;
+ 	struct iommu_domain *domain;
++	struct list_head entry;
+ };
+ 
+ struct group_device {
+@@ -184,7 +185,7 @@ static void dev_iommu_free(struct device *dev)
+ 	dev->iommu = NULL;
  }
  
-+static int iommu_alloc_default_domain(struct device *dev);
-+static struct iommu_domain *__iommu_domain_alloc(struct bus_type *bus,
-+						 unsigned type);
-+static int __iommu_attach_device(struct iommu_domain *domain,
-+				 struct device *dev);
-+static int __iommu_attach_group(struct iommu_domain *domain,
-+				struct iommu_group *group);
-+static void __iommu_detach_group(struct iommu_domain *domain,
-+				 struct iommu_group *group);
-+
- #define IOMMU_GROUP_ATTR(_name, _mode, _show, _store)		\
- struct iommu_group_attribute iommu_group_attr_##_name =		\
- 	__ATTR(_name, _mode, _show, _store)
-@@ -221,10 +231,29 @@ int iommu_probe_device(struct device *dev)
- 		goto err_free_dev_param;
- 	}
- 
--	if (ops->probe_device)
-+	if (ops->probe_device) {
-+		struct iommu_group *group;
-+
- 		ret = __iommu_probe_device(dev);
--	else
-+
-+		/*
-+		 * Try to allocate a default domain - needs support from the
-+		 * IOMMU driver. There are still some drivers which don't
-+		 * support default domains, so the return value is not yet
-+		 * checked.
-+		 */
-+		if (!ret)
-+			iommu_alloc_default_domain(dev);
-+
-+		group = iommu_group_get(dev);
-+		if (group && group->default_domain) {
-+			ret = __iommu_attach_device(group->default_domain, dev);
-+			iommu_group_put(group);
-+		}
-+
-+	} else {
- 		ret = ops->add_device(dev);
-+	}
- 
- 	if (ret)
- 		goto err_module_put;
-@@ -268,15 +297,6 @@ void iommu_release_device(struct device *dev)
- 	dev_iommu_free(dev);
- }
- 
--static struct iommu_domain *__iommu_domain_alloc(struct bus_type *bus,
--						 unsigned type);
--static int __iommu_attach_device(struct iommu_domain *domain,
--				 struct device *dev);
--static int __iommu_attach_group(struct iommu_domain *domain,
--				struct iommu_group *group);
--static void __iommu_detach_group(struct iommu_domain *domain,
--				 struct iommu_group *group);
--
- static int __init iommu_set_def_domain_type(char *str)
+-static int __iommu_probe_device(struct device *dev)
++static int __iommu_probe_device(struct device *dev, struct list_head *group_list)
  {
- 	bool pt;
-@@ -1423,25 +1443,18 @@ static int iommu_get_def_domain_type(struct device *dev)
- 	return (type == 0) ? iommu_def_domain_type : type;
- }
- 
--static int iommu_alloc_default_domain(struct device *dev,
--				      struct iommu_group *group)
-+static int iommu_group_alloc_default_domain(struct bus_type *bus,
-+					    struct iommu_group *group,
-+					    unsigned int type)
- {
- 	struct iommu_domain *dom;
--	unsigned int type;
--
--	if (group->default_domain)
--		return 0;
- 
--	type = iommu_get_def_domain_type(dev);
--
--	dom = __iommu_domain_alloc(dev->bus, type);
-+	dom = __iommu_domain_alloc(bus, type);
- 	if (!dom && type != IOMMU_DOMAIN_DMA) {
--		dom = __iommu_domain_alloc(dev->bus, IOMMU_DOMAIN_DMA);
--		if (dom) {
--			dev_warn(dev,
--				 "failed to allocate default IOMMU domain of type %u; falling back to IOMMU_DOMAIN_DMA",
--				 type);
--		}
-+		dom = __iommu_domain_alloc(bus, IOMMU_DOMAIN_DMA);
-+		if (dom)
-+			pr_warn("Failed to allocate default IOMMU domain of type %u for group %s - Falling back to IOMMU_DOMAIN_DMA",
-+				type, group->name);
+ 	const struct iommu_ops *ops = dev->bus->iommu_ops;
+ 	struct iommu_device *iommu_dev;
+@@ -204,6 +205,9 @@ static int __iommu_probe_device(struct device *dev)
  	}
+ 	iommu_group_put(group);
  
- 	if (!dom)
-@@ -1461,6 +1474,23 @@ static int iommu_alloc_default_domain(struct device *dev,
++	if (group_list && !group->default_domain && list_empty(&group->entry))
++		list_add_tail(&group->entry, group_list);
++
+ 	iommu_device_link(iommu_dev, dev);
+ 
  	return 0;
- }
+@@ -234,7 +238,7 @@ int iommu_probe_device(struct device *dev)
+ 	if (ops->probe_device) {
+ 		struct iommu_group *group;
  
-+static int iommu_alloc_default_domain(struct device *dev)
-+{
-+	struct iommu_group *group;
-+	unsigned int type;
-+
-+	group = iommu_group_get(dev);
-+	if (!group)
-+		return -ENODEV;
-+
-+	if (group->default_domain)
-+		return 0;
-+
-+	type = iommu_get_def_domain_type(dev);
-+
-+	return iommu_group_alloc_default_domain(dev->bus, group, type);
-+}
-+
- /**
-  * iommu_group_get_for_dev - Find or create the IOMMU group for a device
-  * @dev: target device
-@@ -1491,16 +1521,26 @@ struct iommu_group *iommu_group_get_for_dev(struct device *dev)
- 	if (IS_ERR(group))
- 		return group;
+-		ret = __iommu_probe_device(dev);
++		ret = __iommu_probe_device(dev, NULL);
  
-+	ret = iommu_group_add_device(group, dev);
-+	if (ret)
-+		goto out_put_group;
-+
- 	/*
- 	 * Try to allocate a default domain - needs support from the
- 	 * IOMMU driver. There are still some drivers which don't support
--	 * default domains, so the return value is not yet checked.
-+	 * default domains, so the return value is not yet checked. Only
-+	 * allocate the domain here when the driver still has the
-+	 * add_device/remove_device call-backs implemented.
- 	 */
--	iommu_alloc_default_domain(dev, group);
-+	if (!ops->probe_device) {
-+		iommu_alloc_default_domain(dev);
+ 		/*
+ 		 * Try to allocate a default domain - needs support from the
+@@ -567,6 +571,7 @@ struct iommu_group *iommu_group_alloc(void)
+ 	group->kobj.kset = iommu_group_kset;
+ 	mutex_init(&group->mutex);
+ 	INIT_LIST_HEAD(&group->devices);
++	INIT_LIST_HEAD(&group->entry);
+ 	BLOCKING_INIT_NOTIFIER_HEAD(&group->notifier);
  
--	ret = iommu_group_add_device(group, dev);
--	if (ret)
--		goto out_put_group;
-+		if (group->default_domain)
-+			ret = __iommu_attach_device(group->default_domain, dev);
-+
-+		if (ret)
-+			goto out_put_group;
-+	}
- 
- 	return group;
- 
+ 	ret = ida_simple_get(&iommu_group_ida, 0, 0, GFP_KERNEL);
 -- 
 2.17.1
 
