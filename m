@@ -2,8 +2,8 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 4F1A41A1438
-	for <lists+linux-mediatek@lfdr.de>; Tue,  7 Apr 2020 20:38:51 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id B6D691A1414
+	for <lists+linux-mediatek@lfdr.de>; Tue,  7 Apr 2020 20:38:32 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
@@ -11,21 +11,20 @@ DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	In-Reply-To:Message-Id:Date:Subject:To:From:Reply-To:Content-ID:
 	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
 	:Resent-Message-ID:List-Owner;
-	bh=HCdlzsAz6IkuZ4r6NUew/INFxa818WHH++RJ0VM03vE=; b=Ujf9VANpXd3ql/iZ2Zjz6KkTSO
-	K7Zumk80OkJAh8riuo4C0nadjgKlqFMjJLDrJG8eofzcJmL4jVQMh3rgRTaWhrYBuSqOM7DOM5+tc
-	DYq4hFVJ2M2HEXawn/rAXdLtmLEi8IVSofv6+sgoTirANsSZCCyWC4GW/Ej52Y36/Emjh2/bk4G9j
-	7YteoSrHkSW4P8QU4gwt6zXXjNwsl+Gtea6AzKHBrkPz49ARrI76UuEh0kuYnJlFzEij08ztQ05TG
-	RZHC5txpWIcRv2S+uXYk5tMPGtJffDMwtjRsQGTFKuK8AbZT5IDP5cMhKASVvnt2o2vPnITKlTo4R
-	Nt4gvTtQ==;
+	bh=92HHElTGoxxIBKC/BsbzvOtyFk7ZZW/xyeTdrXC8MYA=; b=oW0bawWXXIvH9e/VYf726nHZ8v
+	9fVmrLKrzCb/JdsB8iWI7ttRAPY5ZjcfaScO6AICTkkBjqDUTNgkBWi8ku1rBAMFIaZzatTMq7yFJ
+	NJ+4wHcjzojl6SLRHPVZmFApW0lm0B8umyQL5XmYhG4WUWIWI+OtTkbkN+VlpbpJOwnUjHytlbMkq
+	OHgVpYzWuTITdbFOBel2BANmMS/A94MLmggF6nlgWYTCFYtSp0zimY4s+u3kl/Dq12hKi5C13obP4
+	G5pO6SjNi5CEcjlf1/2QKUGdFQGDiOF86dlwzdqa4mR1I2D8R6/kGIXEriLy6mUeACFrInMrno+bk
+	3zUMOF0w==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jLt7V-0007P7-2A; Tue, 07 Apr 2020 18:38:45 +0000
-Received: from 8bytes.org ([2a01:238:4383:600:38bc:a715:4b6d:a889]
- helo=theia.8bytes.org)
+	id 1jLt7B-00072O-KF; Tue, 07 Apr 2020 18:38:25 +0000
+Received: from 8bytes.org ([81.169.241.247] helo=theia.8bytes.org)
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jLt6l-0006aI-8b; Tue, 07 Apr 2020 18:38:03 +0000
+ id 1jLt6l-0006aM-9u; Tue, 07 Apr 2020 18:38:01 +0000
 Received: by theia.8bytes.org (Postfix, from userid 1000)
- id A093293; Tue,  7 Apr 2020 20:37:48 +0200 (CEST)
+ id CB48311D; Tue,  7 Apr 2020 20:37:48 +0200 (CEST)
 From: Joerg Roedel <joro@8bytes.org>
 To: Joerg Roedel <joro@8bytes.org>, Will Deacon <will@kernel.org>,
  Robin Murphy <robin.murphy@arm.com>,
@@ -40,20 +39,24 @@ To: Joerg Roedel <joro@8bytes.org>, Will Deacon <will@kernel.org>,
  Thierry Reding <thierry.reding@gmail.com>,
  Jonathan Hunter <jonathanh@nvidia.com>,
  Jean-Philippe Brucker <jean-philippe@linaro.org>
-Subject: [RFC PATCH 02/34] iommu: Add def_domain_type() callback in iommu_ops
-Date: Tue,  7 Apr 2020 20:37:10 +0200
-Message-Id: <20200407183742.4344-3-joro@8bytes.org>
+Subject: [RFC PATCH 03/34] iommu/amd: Implement iommu_ops->def_domain_type
+ call-back
+Date: Tue,  7 Apr 2020 20:37:11 +0200
+Message-Id: <20200407183742.4344-4-joro@8bytes.org>
 X-Mailer: git-send-email 2.17.1
 In-Reply-To: <20200407183742.4344-1-joro@8bytes.org>
 References: <20200407183742.4344-1-joro@8bytes.org>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200407_113759_639058_8A69816C 
-X-CRM114-Status: GOOD (  16.28  )
+X-CRM114-CacheID: sfid-20200407_113759_501590_83E9E764 
+X-CRM114-Status: UNSURE (   9.87  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  Content analysis details:   (-0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [81.169.241.247 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
 X-BeenThere: linux-mediatek@lists.infradead.org
@@ -68,7 +71,6 @@ List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
 Cc: linux-s390@vger.kernel.org, linux-samsung-soc@vger.kernel.org,
- Sai Praneeth Prakhya <sai.praneeth.prakhya@intel.com>,
  linux-arm-msm@vger.kernel.org, linux-kernel@vger.kernel.org,
  virtualization@lists.linux-foundation.org, linux-rockchip@lists.infradead.org,
  iommu@lists.linux-foundation.org, Joerg Roedel <jroedel@suse.de>,
@@ -79,100 +81,48 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-From: Sai Praneeth Prakhya <sai.praneeth.prakhya@intel.com>
+From: Joerg Roedel <jroedel@suse.de>
 
-Some devices are reqired to use a specific type (identity or dma)
-of default domain when they are used with a vendor iommu. When the
-system level default domain type is different from it, the vendor
-iommu driver has to request a new default domain with
-iommu_request_dma_domain_for_dev() and iommu_request_dm_for_dev()
-in the add_dev() callback. Unfortunately, these two helpers only
-work when the group hasn't been assigned to any other devices,
-hence, some vendor iommu driver has to use a private domain if
-it fails to request a new default one.
+Implement the new def_domain_type call-back for the AMD IOMMU driver.
 
-This adds def_domain_type() callback in the iommu_ops, so that
-any special requirement of default domain for a device could be
-aware by the iommu generic layer.
-
-Signed-off-by: Sai Praneeth Prakhya <sai.praneeth.prakhya@intel.com>
-Signed-off-by: Lu Baolu <baolu.lu@linux.intel.com>
-[ jroedel@suse.de: Added iommu_get_def_domain_type() function and use
-                   it to allocate the default domain ]
-Co-developed-by: Joerg Roedel <jroedel@suse.de>
 Signed-off-by: Joerg Roedel <jroedel@suse.de>
 ---
- drivers/iommu/iommu.c | 20 +++++++++++++++++---
- include/linux/iommu.h |  6 ++++++
- 2 files changed, 23 insertions(+), 3 deletions(-)
+ drivers/iommu/amd_iommu.c | 15 +++++++++++++++
+ 1 file changed, 15 insertions(+)
 
-diff --git a/drivers/iommu/iommu.c b/drivers/iommu/iommu.c
-index bfe011760ed1..5877abd9b693 100644
---- a/drivers/iommu/iommu.c
-+++ b/drivers/iommu/iommu.c
-@@ -1361,21 +1361,35 @@ struct iommu_group *fsl_mc_device_group(struct device *dev)
+diff --git a/drivers/iommu/amd_iommu.c b/drivers/iommu/amd_iommu.c
+index 20cce366e951..73b4f84cf449 100644
+--- a/drivers/iommu/amd_iommu.c
++++ b/drivers/iommu/amd_iommu.c
+@@ -2661,6 +2661,20 @@ static void amd_iommu_iotlb_sync(struct iommu_domain *domain,
+ 	amd_iommu_flush_iotlb_all(domain);
  }
- EXPORT_SYMBOL_GPL(fsl_mc_device_group);
  
-+static int iommu_get_def_domain_type(struct device *dev)
++static int amd_iommu_def_domain_type(struct device *dev)
 +{
-+	const struct iommu_ops *ops = dev->bus->iommu_ops;
-+	unsigned int type = 0;
++	struct iommu_dev_data *dev_data;
 +
-+	if (ops->def_domain_type)
-+		type = ops->def_domain_type(dev);
++	dev_data = get_dev_data(dev);
++	if (!dev_data)
++		return 0;
 +
-+	return (type == 0) ? iommu_def_domain_type : type;
++	if (dev_data->iommu_v2)
++		return IOMMU_DOMAIN_IDENTITY;
++
++	return 0;
 +}
 +
- static int iommu_alloc_default_domain(struct device *dev,
- 				      struct iommu_group *group)
- {
- 	struct iommu_domain *dom;
-+	unsigned int type;
- 
- 	if (group->default_domain)
- 		return 0;
- 
--	dom = __iommu_domain_alloc(dev->bus, iommu_def_domain_type);
--	if (!dom && iommu_def_domain_type != IOMMU_DOMAIN_DMA) {
-+	type = iommu_get_def_domain_type(dev);
-+
-+	dom = __iommu_domain_alloc(dev->bus, type);
-+	if (!dom && type != IOMMU_DOMAIN_DMA) {
- 		dom = __iommu_domain_alloc(dev->bus, IOMMU_DOMAIN_DMA);
- 		if (dom) {
- 			dev_warn(dev,
- 				 "failed to allocate default IOMMU domain of type %u; falling back to IOMMU_DOMAIN_DMA",
--				 iommu_def_domain_type);
-+				 type);
- 		}
- 	}
- 
-diff --git a/include/linux/iommu.h b/include/linux/iommu.h
-index 7ef8b0bda695..1f027b07e499 100644
---- a/include/linux/iommu.h
-+++ b/include/linux/iommu.h
-@@ -248,6 +248,10 @@ struct iommu_iotlb_gather {
-  * @cache_invalidate: invalidate translation caches
-  * @sva_bind_gpasid: bind guest pasid and mm
-  * @sva_unbind_gpasid: unbind guest pasid and mm
-+ * @def_domain_type: device default domain type, return value:
-+ *		- IOMMU_DOMAIN_IDENTITY: must use an identity domain
-+ *		- IOMMU_DOMAIN_DMA: must use a dma domain
-+ *		- 0: use the default setting
-  * @pgsize_bitmap: bitmap of all possible supported page sizes
-  * @owner: Driver module providing these ops
-  */
-@@ -318,6 +322,8 @@ struct iommu_ops {
- 
- 	int (*sva_unbind_gpasid)(struct device *dev, int pasid);
- 
-+	int (*def_domain_type)(struct device *dev);
-+
- 	unsigned long pgsize_bitmap;
- 	struct module *owner;
+ const struct iommu_ops amd_iommu_ops = {
+ 	.capable = amd_iommu_capable,
+ 	.domain_alloc = amd_iommu_domain_alloc,
+@@ -2680,6 +2694,7 @@ const struct iommu_ops amd_iommu_ops = {
+ 	.pgsize_bitmap	= AMD_IOMMU_PGSIZES,
+ 	.flush_iotlb_all = amd_iommu_flush_iotlb_all,
+ 	.iotlb_sync = amd_iommu_iotlb_sync,
++	.def_domain_type = amd_iommu_def_domain_type,
  };
+ 
+ /*****************************************************************************
 -- 
 2.17.1
 
