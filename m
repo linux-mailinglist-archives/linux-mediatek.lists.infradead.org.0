@@ -2,8 +2,8 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id E69521A154C
-	for <lists+linux-mediatek@lfdr.de>; Tue,  7 Apr 2020 20:55:20 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 949911A1505
+	for <lists+linux-mediatek@lfdr.de>; Tue,  7 Apr 2020 20:40:50 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
@@ -11,33 +11,34 @@ DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	In-Reply-To:Message-Id:Date:Subject:To:From:Reply-To:Content-ID:
 	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
 	:Resent-Message-ID:List-Owner;
-	bh=GgRvJakt6doscvL+lccOiejK5G+S+kKbppqt7r0bmu8=; b=Rogi3leL6ojoaxT7xiGfmV68Y+
-	gva6b+pDaScrPw4n4ko2DBgTfBThICRzTlSD7ApD1apjFY/A18VdwkulVwOm3NYZrxltwPVCaONMW
-	7n0xOQ36FcenrnbetiEPz1UxNOrLdMrQ/+dK6JEfKqhF05sj/lGNj369bHN64u82Pavv/iDEfHdkb
-	x4HUsGVY9JR6hB5ZRUvqyhQCiU+2Hj1x48pgcMw0ZQyv+EhzQtOVJ1oXfdVTFlkXyoQTQWriSFd04
-	x2YqZ9W/3gVVkmeW10eLNaywT8N+0hOQj/JCPoA2q8DsCH1F+SSJQssZ/mo0guZHIJ9hYz6yTzT9Z
-	+fn1Qx0Q==;
+	bh=SH+infWgwFIoPydpZud0vmQvSAxfJSl7Gv7sODmY39w=; b=WLChu4/hyL7LV9UA+jQOJDyIct
+	ayNI4Nik++4GwLz9RX6wVbkMVRezBFG9DEOQ70pQBSqc5pmxQOSYhCzWylXs7fHr4YxhikgP1XDpu
+	ruHthRvpPf9Phgqs8yvNAzVpSFavZvH0V69XVlNeUqxLkM2kGwtFkxTo793EjsIR3w4qyUE92cshq
+	pqRgvA4hEpAHEXnf5cRa9awz+SGg8UvJXIgWr+PiZ/W/raBB2Mo6quaQ9Lqq3EMWAvgHyiJs7LbF/
+	2hg4GD6GPQ2mkNFNrBql89QuHPaPZwpYECndzsjMeH0A4Ux4PSLBRSc5lwI1gskfdoYljaqPMdf2v
+	R09yDV5A==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jLtNT-0006FV-4e; Tue, 07 Apr 2020 18:55:15 +0000
-Received: from merlin.infradead.org ([2001:8b0:10b:1231::1])
+	id 1jLt9P-00040Q-VH; Tue, 07 Apr 2020 18:40:43 +0000
+Received: from casper.infradead.org ([2001:8b0:10b:1236::1])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jLtNN-0003Zl-5D; Tue, 07 Apr 2020 18:55:09 +0000
+ id 1jLt7L-0007IV-Lq; Tue, 07 Apr 2020 18:38:35 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
- d=infradead.org; s=merlin.20170209; h=References:In-Reply-To:Message-Id:Date:
+ d=infradead.org; s=casper.20170209; h=References:In-Reply-To:Message-Id:Date:
  Subject:Cc:To:From:Sender:Reply-To:MIME-Version:Content-Type:
  Content-Transfer-Encoding:Content-ID:Content-Description;
- bh=tBM90ug8dReFUk/0mF17YDyp6x5pBNMkMLHmgIm7lsg=; b=JgdaaN8cTc84YGotQILWBuIgnI
- 2TRx5duAvnb+82EkLTlp+s8jIKeKd/2JyKnUb1u3ruCCkRSM9GsH86VnfByOd2FGpr1wxFd919MB4
- ylUuyxVGA4vM1yAj1Eu/L9lmiCoFXhmP84tMOtR2mBSjjpmwxfoMXCy6QnOv3buFpAnz//ACy3JFU
- QDtDXfHV18gLPU/Ber3aAyH5zxHbj/qS5qEQFmAtmgR1DT/raMBTjnl4FY4FDXfEnJtUlKI851QYM
- 5JByguQbve5qgqnktiztyVZkqUqH0orpNhRRzzODqu4f0AodglgWSCeKfrdCPSX6xKkOeovN8Mu4Y
- kRdzoyQA==;
-Received: from 8bytes.org ([81.169.241.247] helo=theia.8bytes.org)
- by merlin.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jLt6x-0007fM-3b; Tue, 07 Apr 2020 18:38:15 +0000
+ bh=3Opj20+5HPpld2ndbb8aFFbwgRbbaS/xoYgURzJujyE=; b=q1O8U7T4uOW4yknHAEXRnPS4M8
+ 9ZuxZn4bJ9Cv5D/yf9APId7mn45f5yNuIa8j7Gd2Ac/oMNmAi2XpBTzYPKp7OQG0hFvxynhil59F4
+ nFFptVQoq1oOpuY/75dpJxcqd9ETert1KI2B8U2St64VhaUOPCvWxqcRnnUbIwvWlVu8lA+16S9jo
+ gjqGJDSsv4UjFnJA/W33moojPa9y8NSusw41DvLfZ6AyL1yiCKrO75Z7YdMCr06l999Xre0gXaFC9
+ HJ9UOyjHJUb/Q96dsBPX/d8mirWVWcCFXHlF2un/ItFK1nCp3s/oQTHXRAPTdveC8nZnLiTC+G6LV
+ /P/2nDOQ==;
+Received: from 8bytes.org ([2a01:238:4383:600:38bc:a715:4b6d:a889]
+ helo=theia.8bytes.org)
+ by casper.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
+ id 1jLt78-0004pl-24; Tue, 07 Apr 2020 18:38:32 +0000
 Received: by theia.8bytes.org (Postfix, from userid 1000)
- id 3549360C; Tue,  7 Apr 2020 20:37:53 +0200 (CEST)
+ id 6667D642; Tue,  7 Apr 2020 20:37:53 +0200 (CEST)
 From: Joerg Roedel <joro@8bytes.org>
 To: Joerg Roedel <joro@8bytes.org>, Will Deacon <will@kernel.org>,
  Robin Murphy <robin.murphy@arm.com>,
@@ -52,23 +53,25 @@ To: Joerg Roedel <joro@8bytes.org>, Will Deacon <will@kernel.org>,
  Thierry Reding <thierry.reding@gmail.com>,
  Jonathan Hunter <jonathanh@nvidia.com>,
  Jean-Philippe Brucker <jean-philippe@linaro.org>
-Subject: [RFC PATCH 26/34] iommu/rockchip: Convert to probe/release_device()
+Subject: [RFC PATCH 27/34] iommu/tegra: Convert to probe/release_device()
  call-backs
-Date: Tue,  7 Apr 2020 20:37:34 +0200
-Message-Id: <20200407183742.4344-27-joro@8bytes.org>
+Date: Tue,  7 Apr 2020 20:37:35 +0200
+Message-Id: <20200407183742.4344-28-joro@8bytes.org>
 X-Mailer: git-send-email 2.17.1
 In-Reply-To: <20200407183742.4344-1-joro@8bytes.org>
 References: <20200407183742.4344-1-joro@8bytes.org>
-X-Spam-Note: CRM114 invocation failed
-X-Spam-Score: -0.0 (/)
-X-Spam-Report: SpamAssassin version 3.4.4 on merlin.infradead.org summary:
- Content analysis details:   (-0.0 points)
+X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
+X-CRM114-CacheID: sfid-20200407_193823_123627_999160EB 
+X-CRM114-Status: GOOD (  18.67  )
+X-Spam-Score: -1.9 (-)
+X-Spam-Report: SpamAssassin version 3.4.4 on casper.infradead.org summary:
+ Content analysis details:   (-1.9 points, 5.0 required)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [81.169.241.247 listed in list.dnswl.org]
- -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
+ -1.9 BAYES_00               BODY: Bayes spam probability is 0 to 1%
+ [score: 0.0000]
  -0.0 SPF_PASS               SPF: sender matches SPF record
+ -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -93,76 +96,149 @@ Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.o
 
 From: Joerg Roedel <jroedel@suse.de>
 
-Convert the Rockchip IOMMU driver to use the probe_device() and
+Convert the Tegra IOMMU drivers to use the probe_device() and
 release_device() call-backs of iommu_ops, so that the iommu core code
 does the group and sysfs setup.
 
 Signed-off-by: Joerg Roedel <jroedel@suse.de>
 ---
- drivers/iommu/rockchip-iommu.c | 26 +++++++-------------------
- 1 file changed, 7 insertions(+), 19 deletions(-)
+ drivers/iommu/tegra-gart.c | 24 ++++++------------------
+ drivers/iommu/tegra-smmu.c | 31 ++++++++-----------------------
+ 2 files changed, 14 insertions(+), 41 deletions(-)
 
-diff --git a/drivers/iommu/rockchip-iommu.c b/drivers/iommu/rockchip-iommu.c
-index b33cdd5aad81..d25c2486ca07 100644
---- a/drivers/iommu/rockchip-iommu.c
-+++ b/drivers/iommu/rockchip-iommu.c
-@@ -1054,40 +1054,28 @@ static void rk_iommu_domain_free(struct iommu_domain *domain)
- 	kfree(rk_domain);
+diff --git a/drivers/iommu/tegra-gart.c b/drivers/iommu/tegra-gart.c
+index db6559e8336f..5fbdff6ff41a 100644
+--- a/drivers/iommu/tegra-gart.c
++++ b/drivers/iommu/tegra-gart.c
+@@ -243,28 +243,16 @@ static bool gart_iommu_capable(enum iommu_cap cap)
+ 	return false;
  }
  
--static int rk_iommu_add_device(struct device *dev)
-+static struct iommu_device *rk_iommu_probe_device(struct device *dev)
+-static int gart_iommu_add_device(struct device *dev)
++static struct iommu_device *gart_iommu_probe_device(struct device *dev)
  {
 -	struct iommu_group *group;
--	struct rk_iommu *iommu;
- 	struct rk_iommudata *data;
-+	struct rk_iommu *iommu;
- 
- 	data = dev->archdata.iommu;
- 	if (!data)
+-
+ 	if (!dev_iommu_fwspec_get(dev))
 -		return -ENODEV;
-+		return ERR_PTR(-ENODEV);
- 
- 	iommu = rk_iommu_from_dev(dev);
- 
+-
 -	group = iommu_group_get_for_dev(dev);
 -	if (IS_ERR(group))
 -		return PTR_ERR(group);
--	iommu_group_put(group);
 -
--	iommu_device_link(&iommu->iommu, dev);
- 	data->link = device_link_add(dev, iommu->dev,
- 				     DL_FLAG_STATELESS | DL_FLAG_PM_RUNTIME);
+-	iommu_group_put(group);
++		return ERR_PTR(-ENODEV);
  
+-	iommu_device_link(&gart_handle->iommu, dev);
+-
 -	return 0;
-+	return &iommu->iommu;
++	return &gart_handle->iommu;
  }
  
--static void rk_iommu_remove_device(struct device *dev)
-+static void rk_iommu_release_device(struct device *dev)
+-static void gart_iommu_remove_device(struct device *dev)
++static void gart_iommu_release_device(struct device *dev)
  {
--	struct rk_iommu *iommu;
- 	struct rk_iommudata *data = dev->archdata.iommu;
+-	iommu_group_remove_device(dev);
+-	iommu_device_unlink(&gart_handle->iommu, dev);
+ }
  
--	iommu = rk_iommu_from_dev(dev);
+ static int gart_iommu_of_xlate(struct device *dev,
+@@ -290,8 +278,8 @@ static const struct iommu_ops gart_iommu_ops = {
+ 	.domain_free	= gart_iommu_domain_free,
+ 	.attach_dev	= gart_iommu_attach_dev,
+ 	.detach_dev	= gart_iommu_detach_dev,
+-	.add_device	= gart_iommu_add_device,
+-	.remove_device	= gart_iommu_remove_device,
++	.probe_device	= gart_iommu_probe_device,
++	.release_device	= gart_iommu_release_device,
+ 	.device_group	= generic_device_group,
+ 	.map		= gart_iommu_map,
+ 	.unmap		= gart_iommu_unmap,
+diff --git a/drivers/iommu/tegra-smmu.c b/drivers/iommu/tegra-smmu.c
+index 63a147b623e6..7426b7666e2b 100644
+--- a/drivers/iommu/tegra-smmu.c
++++ b/drivers/iommu/tegra-smmu.c
+@@ -757,11 +757,10 @@ static int tegra_smmu_configure(struct tegra_smmu *smmu, struct device *dev,
+ 	return 0;
+ }
+ 
+-static int tegra_smmu_add_device(struct device *dev)
++static struct iommu_device *tegra_smmu_probe_device(struct device *dev)
+ {
+ 	struct device_node *np = dev->of_node;
+ 	struct tegra_smmu *smmu = NULL;
+-	struct iommu_group *group;
+ 	struct of_phandle_args args;
+ 	unsigned int index = 0;
+ 	int err;
+@@ -774,7 +773,7 @@ static int tegra_smmu_add_device(struct device *dev)
+ 			of_node_put(args.np);
+ 
+ 			if (err < 0)
+-				return err;
++				return ERR_PTR(err);
+ 
+ 			/*
+ 			 * Only a single IOMMU master interface is currently
+@@ -783,8 +782,6 @@ static int tegra_smmu_add_device(struct device *dev)
+ 			 */
+ 			dev->archdata.iommu = smmu;
+ 
+-			iommu_device_link(&smmu->iommu, dev);
 -
- 	device_link_del(data->link);
--	iommu_device_unlink(&iommu->iommu, dev);
+ 			break;
+ 		}
+ 
+@@ -793,26 +790,14 @@ static int tegra_smmu_add_device(struct device *dev)
+ 	}
+ 
+ 	if (!smmu)
+-		return -ENODEV;
+-
+-	group = iommu_group_get_for_dev(dev);
+-	if (IS_ERR(group))
+-		return PTR_ERR(group);
+-
+-	iommu_group_put(group);
++		return ERR_PTR(-ENODEV);
+ 
+-	return 0;
++	return &smmu->iommu;
+ }
+ 
+-static void tegra_smmu_remove_device(struct device *dev)
++static void tegra_smmu_release_device(struct device *dev)
+ {
+-	struct tegra_smmu *smmu = dev->archdata.iommu;
+-
+-	if (smmu)
+-		iommu_device_unlink(&smmu->iommu, dev);
+-
+ 	dev->archdata.iommu = NULL;
 -	iommu_group_remove_device(dev);
  }
  
- static struct iommu_group *rk_iommu_device_group(struct device *dev)
-@@ -1126,8 +1114,8 @@ static const struct iommu_ops rk_iommu_ops = {
- 	.detach_dev = rk_iommu_detach_device,
- 	.map = rk_iommu_map,
- 	.unmap = rk_iommu_unmap,
--	.add_device = rk_iommu_add_device,
--	.remove_device = rk_iommu_remove_device,
-+	.probe_device = rk_iommu_probe_device,
-+	.release_device = rk_iommu_release_device,
- 	.iova_to_phys = rk_iommu_iova_to_phys,
- 	.device_group = rk_iommu_device_group,
- 	.pgsize_bitmap = RK_IOMMU_PGSIZE_BITMAP,
+ static const struct tegra_smmu_group_soc *
+@@ -895,8 +880,8 @@ static const struct iommu_ops tegra_smmu_ops = {
+ 	.domain_free = tegra_smmu_domain_free,
+ 	.attach_dev = tegra_smmu_attach_dev,
+ 	.detach_dev = tegra_smmu_detach_dev,
+-	.add_device = tegra_smmu_add_device,
+-	.remove_device = tegra_smmu_remove_device,
++	.probe_device = tegra_smmu_probe_device,
++	.release_device = tegra_smmu_release_device,
+ 	.device_group = tegra_smmu_device_group,
+ 	.map = tegra_smmu_map,
+ 	.unmap = tegra_smmu_unmap,
+@@ -1015,7 +1000,7 @@ struct tegra_smmu *tegra_smmu_probe(struct device *dev,
+ 	 * value. However the IOMMU registration process will attempt to add
+ 	 * all devices to the IOMMU when bus_set_iommu() is called. In order
+ 	 * not to rely on global variables to track the IOMMU instance, we
+-	 * set it here so that it can be looked up from the .add_device()
++	 * set it here so that it can be looked up from the .probe_device()
+ 	 * callback via the IOMMU device's .drvdata field.
+ 	 */
+ 	mc->smmu = smmu;
 -- 
 2.17.1
 
