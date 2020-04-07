@@ -2,8 +2,8 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 2C0BB1A1482
-	for <lists+linux-mediatek@lfdr.de>; Tue,  7 Apr 2020 20:39:24 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 13AAC1A147C
+	for <lists+linux-mediatek@lfdr.de>; Tue,  7 Apr 2020 20:39:22 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
@@ -11,20 +11,20 @@ DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	In-Reply-To:Message-Id:Date:Subject:To:From:Reply-To:Content-ID:
 	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
 	:Resent-Message-ID:List-Owner;
-	bh=m6+qh4GI0mc3uECPAZZfLLLpHr1/l0Ti+ndOAE+mIaE=; b=RWuucwmrUtADZCKRBvnUZCSlcq
-	0RluHm5hT736enZfSDpSR7sJKNa6dK6qKfhET9xbdwAa2xk82R/8CEzBfIZxw/uUt/vYO72w67v2q
-	a2gbEWJ08vldKyqh1tlOB1eDlcXnLLDT9Yi4mN3ttSwyXeKggF/OGCc7Y+8vkX/e+zc8mBqAGSrNW
-	cJqk2gXlTgL+kloJEEpLBNglMmJbR7V/kWK3HeUGu/rZsxWOKA+8i6qT/lupoV/7XowzO96lxdtnF
-	wenKYKm0j3iHW1UJ3mD5UJLVj4fcavFPUIkzGNKj+g4PzcytubWLljIpEkh+OfhLfc4ay8SMOKQB6
-	346OUKpQ==;
+	bh=B00YyYGIfSceGkJwxEWGZD0Ig8W6a/xlCMneIiFhvBY=; b=W/lPF93RSmG+NiG8PMZIDfnBEu
+	d63wkiN+z4lu+lbEOKzE3UuSVGOezinnOVdhA1BOovWAknGOL5k8OJtXvJdQbvm4srH0N41n/vI7m
+	DNZ1sO8WDoG/HHLD5+4r+rKc4Y2ybuc9vRp2salRPmA5hT2ZsVPajw4solmdMKnJ+bnFd+VGN64NJ
+	2ZoKGyJBZU4DfcQ+UxqKZ/Q56AGJf9kAcxWrwPf66Uwr+CdN+TQ+d/jdUooLLC8hP7UHOlskUtP/a
+	h/UkbwywnaC8Kr0efPSmM7ca2hfZziHK7F4Kl/66tHYIpCNnh8UkZfn/KWprvprXQAeJ56kvujyUR
+	3aYTGlAg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jLt81-0008Ap-KN; Tue, 07 Apr 2020 18:39:17 +0000
+	id 1jLt7z-00088p-AG; Tue, 07 Apr 2020 18:39:15 +0000
 Received: from 8bytes.org ([81.169.241.247] helo=theia.8bytes.org)
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jLt6t-0006od-Fz; Tue, 07 Apr 2020 18:38:11 +0000
+ id 1jLt6t-0006of-Pe; Tue, 07 Apr 2020 18:38:12 +0000
 Received: by theia.8bytes.org (Postfix, from userid 1000)
- id 3FD6B46B; Tue,  7 Apr 2020 20:37:51 +0200 (CEST)
+ id 5DAF6475; Tue,  7 Apr 2020 20:37:51 +0200 (CEST)
 From: Joerg Roedel <joro@8bytes.org>
 To: Joerg Roedel <joro@8bytes.org>, Will Deacon <will@kernel.org>,
  Robin Murphy <robin.murphy@arm.com>,
@@ -39,16 +39,16 @@ To: Joerg Roedel <joro@8bytes.org>, Will Deacon <will@kernel.org>,
  Thierry Reding <thierry.reding@gmail.com>,
  Jonathan Hunter <jonathanh@nvidia.com>,
  Jean-Philippe Brucker <jean-philippe@linaro.org>
-Subject: [RFC PATCH 16/34] iommu/vt-d: Convert to probe/release_device()
- call-backs
-Date: Tue,  7 Apr 2020 20:37:24 +0200
-Message-Id: <20200407183742.4344-17-joro@8bytes.org>
+Subject: [RFC PATCH 17/34] iommu/arm-smmu: Store device instead of group in
+ arm_smmu_s2cr
+Date: Tue,  7 Apr 2020 20:37:25 +0200
+Message-Id: <20200407183742.4344-18-joro@8bytes.org>
 X-Mailer: git-send-email 2.17.1
 In-Reply-To: <20200407183742.4344-1-joro@8bytes.org>
 References: <20200407183742.4344-1-joro@8bytes.org>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200407_113807_707574_DC4911B5 
-X-CRM114-Status: GOOD (  13.58  )
+X-CRM114-CacheID: sfid-20200407_113808_026567_36208C1F 
+X-CRM114-Status: GOOD (  13.11  )
 X-Spam-Score: -0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  Content analysis details:   (-0.0 points)
@@ -82,124 +82,55 @@ Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.o
 
 From: Joerg Roedel <jroedel@suse.de>
 
-Convert the Intel IOMMU driver to use the probe_device() and
-release_device() call-backs of iommu_ops, so that the iommu core code
-does the group and sysfs setup.
+This is required to convert the arm-smmu driver to the
+probe/release_device() interface.
 
 Signed-off-by: Joerg Roedel <jroedel@suse.de>
 ---
- drivers/iommu/intel-iommu.c | 67 ++++---------------------------------
- 1 file changed, 6 insertions(+), 61 deletions(-)
+ drivers/iommu/arm-smmu.c | 14 +++++++++-----
+ 1 file changed, 9 insertions(+), 5 deletions(-)
 
-diff --git a/drivers/iommu/intel-iommu.c b/drivers/iommu/intel-iommu.c
-index b9f905a55dda..b906727f5b85 100644
---- a/drivers/iommu/intel-iommu.c
-+++ b/drivers/iommu/intel-iommu.c
-@@ -5781,78 +5781,27 @@ static bool intel_iommu_capable(enum iommu_cap cap)
- 	return false;
- }
+diff --git a/drivers/iommu/arm-smmu.c b/drivers/iommu/arm-smmu.c
+index a6a5796e9c41..3493501d8b2c 100644
+--- a/drivers/iommu/arm-smmu.c
++++ b/drivers/iommu/arm-smmu.c
+@@ -69,7 +69,7 @@ MODULE_PARM_DESC(disable_bypass,
+ 	"Disable bypass streams such that incoming transactions from devices that are not attached to an iommu domain will report an abort back to the device and will not be allowed to pass through the SMMU.");
  
--static int intel_iommu_add_device(struct device *dev)
-+static struct iommu_device *intel_iommu_probe_device(struct device *dev)
- {
--	struct dmar_domain *dmar_domain;
--	struct iommu_domain *domain;
- 	struct intel_iommu *iommu;
--	struct iommu_group *group;
- 	u8 bus, devfn;
--	int ret;
- 
- 	iommu = device_to_iommu(dev, &bus, &devfn);
- 	if (!iommu)
--		return -ENODEV;
--
--	iommu_device_link(&iommu->iommu, dev);
-+		return ERR_PTR(-ENODEV);
- 
- 	if (translation_pre_enabled(iommu))
- 		dev->archdata.iommu = DEFER_DEVICE_DOMAIN_INFO;
- 
--	group = iommu_group_get_for_dev(dev);
--
--	if (IS_ERR(group)) {
--		ret = PTR_ERR(group);
--		goto unlink;
--	}
--
--	iommu_group_put(group);
--
--	domain = iommu_get_domain_for_dev(dev);
--	dmar_domain = to_dmar_domain(domain);
--	if (domain->type == IOMMU_DOMAIN_DMA) {
--		if (device_def_domain_type(dev) == IOMMU_DOMAIN_IDENTITY) {
--			ret = iommu_request_dm_for_dev(dev);
--			if (ret) {
--				dmar_remove_one_dev_info(dev);
--				dmar_domain->flags |= DOMAIN_FLAG_LOSE_CHILDREN;
--				domain_add_dev_info(si_domain, dev);
--				dev_info(dev,
--					 "Device uses a private identity domain.\n");
--			}
--		}
--	} else {
--		if (device_def_domain_type(dev) == IOMMU_DOMAIN_DMA) {
--			ret = iommu_request_dma_domain_for_dev(dev);
--			if (ret) {
--				dmar_remove_one_dev_info(dev);
--				dmar_domain->flags |= DOMAIN_FLAG_LOSE_CHILDREN;
--				if (!get_private_domain_for_dev(dev)) {
--					dev_warn(dev,
--						 "Failed to get a private domain.\n");
--					ret = -ENOMEM;
--					goto unlink;
--				}
--
--				dev_info(dev,
--					 "Device uses a private dma domain.\n");
--			}
--		}
--	}
--
- 	if (device_needs_bounce(dev)) {
- 		dev_info(dev, "Use Intel IOMMU bounce page dma_ops\n");
- 		set_dma_ops(dev, &bounce_dma_ops);
+ struct arm_smmu_s2cr {
+-	struct iommu_group		*group;
++	struct device			*dev;
+ 	int				count;
+ 	enum arm_smmu_s2cr_type		type;
+ 	enum arm_smmu_s2cr_privcfg	privcfg;
+@@ -1100,7 +1100,7 @@ static int arm_smmu_master_alloc_smes(struct device *dev)
+ 	/* It worked! Now, poke the actual hardware */
+ 	for_each_cfg_sme(cfg, fwspec, i, idx) {
+ 		arm_smmu_write_sme(smmu, idx);
+-		smmu->s2crs[idx].group = group;
++		smmu->s2crs[idx].dev = dev;
  	}
  
--	return 0;
--
--unlink:
--	iommu_device_unlink(&iommu->iommu, dev);
--	return ret;
-+	return &iommu->iommu;
- }
+ 	mutex_unlock(&smmu->stream_map_mutex);
+@@ -1495,11 +1495,15 @@ static struct iommu_group *arm_smmu_device_group(struct device *dev)
+ 	int i, idx;
  
--static void intel_iommu_remove_device(struct device *dev)
-+static void intel_iommu_release_device(struct device *dev)
- {
- 	struct intel_iommu *iommu;
- 	u8 bus, devfn;
-@@ -5863,10 +5812,6 @@ static void intel_iommu_remove_device(struct device *dev)
+ 	for_each_cfg_sme(cfg, fwspec, i, idx) {
+-		if (group && smmu->s2crs[idx].group &&
+-		    group != smmu->s2crs[idx].group)
++		struct iommu_group *idx_grp = NULL;
++
++		if (smmu->s2crs[idx].dev)
++			idx_grp = smmu->s2crs[idx].dev->iommu_group;
++
++		if (group && idx_grp && group != idx_grp)
+ 			return ERR_PTR(-EINVAL);
  
- 	dmar_remove_one_dev_info(dev);
+-		group = smmu->s2crs[idx].group;
++		group = idx_grp;
+ 	}
  
--	iommu_group_remove_device(dev);
--
--	iommu_device_unlink(&iommu->iommu, dev);
--
- 	if (device_needs_bounce(dev))
- 		set_dma_ops(dev, NULL);
- }
-@@ -6198,8 +6143,8 @@ const struct iommu_ops intel_iommu_ops = {
- 	.map			= intel_iommu_map,
- 	.unmap			= intel_iommu_unmap,
- 	.iova_to_phys		= intel_iommu_iova_to_phys,
--	.add_device		= intel_iommu_add_device,
--	.remove_device		= intel_iommu_remove_device,
-+	.probe_device		= intel_iommu_probe_device,
-+	.release_device		= intel_iommu_release_device,
- 	.get_resv_regions	= intel_iommu_get_resv_regions,
- 	.put_resv_regions	= generic_iommu_put_resv_regions,
- 	.apply_resv_region	= intel_iommu_apply_resv_region,
+ 	if (group)
 -- 
 2.17.1
 
