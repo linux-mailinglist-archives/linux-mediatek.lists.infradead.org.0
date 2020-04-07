@@ -2,8 +2,8 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id B6D691A1414
-	for <lists+linux-mediatek@lfdr.de>; Tue,  7 Apr 2020 20:38:32 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 91B451A1417
+	for <lists+linux-mediatek@lfdr.de>; Tue,  7 Apr 2020 20:38:33 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
@@ -11,20 +11,21 @@ DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	In-Reply-To:Message-Id:Date:Subject:To:From:Reply-To:Content-ID:
 	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
 	:Resent-Message-ID:List-Owner;
-	bh=92HHElTGoxxIBKC/BsbzvOtyFk7ZZW/xyeTdrXC8MYA=; b=oW0bawWXXIvH9e/VYf726nHZ8v
-	9fVmrLKrzCb/JdsB8iWI7ttRAPY5ZjcfaScO6AICTkkBjqDUTNgkBWi8ku1rBAMFIaZzatTMq7yFJ
-	NJ+4wHcjzojl6SLRHPVZmFApW0lm0B8umyQL5XmYhG4WUWIWI+OtTkbkN+VlpbpJOwnUjHytlbMkq
-	OHgVpYzWuTITdbFOBel2BANmMS/A94MLmggF6nlgWYTCFYtSp0zimY4s+u3kl/Dq12hKi5C13obP4
-	G5pO6SjNi5CEcjlf1/2QKUGdFQGDiOF86dlwzdqa4mR1I2D8R6/kGIXEriLy6mUeACFrInMrno+bk
-	3zUMOF0w==;
+	bh=ckxmVyusM9oi4ezVrzrPXx53VoujgMWhfK/IbsVHD24=; b=tH01L1qMh6eqzWdJQhDhymN6td
+	IbP0Pc78P0A+4ioQ9KJrDKG6g72rzt+2FSxaiI/kzCC8vdb4VWNZEi0QwKVKdvA+58pQNRH+LFzlt
+	o0Gf8Si9bW7Kbj4Q844NzEtz+ynbSh5Si0/F9UG/iXaDunRyK77yPjFYjl4ofVBhwbjQGw2hxAwUS
+	HLEw4Eciaf4fHQw7BqKQLPqy7bbmCVI6E7QwOaCUi1wvIJCBOr5KAMC8qxT18yWfqV0acatRUgUwu
+	pzKslaQvY+JngyGRLy+YZxpdFiO4d2tNhZ/uogiqzbi+M4Bh+ks0EGUlhsgtXkMz3hbbVA8/A6Vc2
+	toQkTz6A==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jLt7B-00072O-KF; Tue, 07 Apr 2020 18:38:25 +0000
-Received: from 8bytes.org ([81.169.241.247] helo=theia.8bytes.org)
+	id 1jLt7D-000772-HB; Tue, 07 Apr 2020 18:38:27 +0000
+Received: from 8bytes.org ([2a01:238:4383:600:38bc:a715:4b6d:a889]
+ helo=theia.8bytes.org)
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jLt6l-0006aM-9u; Tue, 07 Apr 2020 18:38:01 +0000
+ id 1jLt6l-0006aV-8S; Tue, 07 Apr 2020 18:38:01 +0000
 Received: by theia.8bytes.org (Postfix, from userid 1000)
- id CB48311D; Tue,  7 Apr 2020 20:37:48 +0200 (CEST)
+ id 0558E189; Tue,  7 Apr 2020 20:37:48 +0200 (CEST)
 From: Joerg Roedel <joro@8bytes.org>
 To: Joerg Roedel <joro@8bytes.org>, Will Deacon <will@kernel.org>,
  Robin Murphy <robin.murphy@arm.com>,
@@ -39,24 +40,20 @@ To: Joerg Roedel <joro@8bytes.org>, Will Deacon <will@kernel.org>,
  Thierry Reding <thierry.reding@gmail.com>,
  Jonathan Hunter <jonathanh@nvidia.com>,
  Jean-Philippe Brucker <jean-philippe@linaro.org>
-Subject: [RFC PATCH 03/34] iommu/amd: Implement iommu_ops->def_domain_type
- call-back
-Date: Tue,  7 Apr 2020 20:37:11 +0200
-Message-Id: <20200407183742.4344-4-joro@8bytes.org>
+Subject: [RFC PATCH 04/34] iommu/vt-d: Wire up iommu_ops->def_domain_type
+Date: Tue,  7 Apr 2020 20:37:12 +0200
+Message-Id: <20200407183742.4344-5-joro@8bytes.org>
 X-Mailer: git-send-email 2.17.1
 In-Reply-To: <20200407183742.4344-1-joro@8bytes.org>
 References: <20200407183742.4344-1-joro@8bytes.org>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200407_113759_501590_83E9E764 
-X-CRM114-Status: UNSURE (   9.87  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20200407_113759_456145_3EFFA07E 
+X-CRM114-Status: GOOD (  10.28  )
 X-Spam-Score: -0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  Content analysis details:   (-0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [81.169.241.247 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
 X-BeenThere: linux-mediatek@lists.infradead.org
@@ -83,46 +80,26 @@ Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.o
 
 From: Joerg Roedel <jroedel@suse.de>
 
-Implement the new def_domain_type call-back for the AMD IOMMU driver.
+The Intel VT-d driver already has a matching function to determine the
+default domain type for a device. Wire it up in intel_iommu_ops.
 
 Signed-off-by: Joerg Roedel <jroedel@suse.de>
 ---
- drivers/iommu/amd_iommu.c | 15 +++++++++++++++
- 1 file changed, 15 insertions(+)
+ drivers/iommu/intel-iommu.c | 1 +
+ 1 file changed, 1 insertion(+)
 
-diff --git a/drivers/iommu/amd_iommu.c b/drivers/iommu/amd_iommu.c
-index 20cce366e951..73b4f84cf449 100644
---- a/drivers/iommu/amd_iommu.c
-+++ b/drivers/iommu/amd_iommu.c
-@@ -2661,6 +2661,20 @@ static void amd_iommu_iotlb_sync(struct iommu_domain *domain,
- 	amd_iommu_flush_iotlb_all(domain);
- }
- 
-+static int amd_iommu_def_domain_type(struct device *dev)
-+{
-+	struct iommu_dev_data *dev_data;
-+
-+	dev_data = get_dev_data(dev);
-+	if (!dev_data)
-+		return 0;
-+
-+	if (dev_data->iommu_v2)
-+		return IOMMU_DOMAIN_IDENTITY;
-+
-+	return 0;
-+}
-+
- const struct iommu_ops amd_iommu_ops = {
- 	.capable = amd_iommu_capable,
- 	.domain_alloc = amd_iommu_domain_alloc,
-@@ -2680,6 +2694,7 @@ const struct iommu_ops amd_iommu_ops = {
- 	.pgsize_bitmap	= AMD_IOMMU_PGSIZES,
- 	.flush_iotlb_all = amd_iommu_flush_iotlb_all,
- 	.iotlb_sync = amd_iommu_iotlb_sync,
-+	.def_domain_type = amd_iommu_def_domain_type,
+diff --git a/drivers/iommu/intel-iommu.c b/drivers/iommu/intel-iommu.c
+index ef0a5246700e..b9f905a55dda 100644
+--- a/drivers/iommu/intel-iommu.c
++++ b/drivers/iommu/intel-iommu.c
+@@ -6209,6 +6209,7 @@ const struct iommu_ops intel_iommu_ops = {
+ 	.dev_enable_feat	= intel_iommu_dev_enable_feat,
+ 	.dev_disable_feat	= intel_iommu_dev_disable_feat,
+ 	.is_attach_deferred	= intel_iommu_is_attach_deferred,
++	.def_domain_type	= device_def_domain_type,
+ 	.pgsize_bitmap		= INTEL_IOMMU_PGSIZES,
  };
  
- /*****************************************************************************
 -- 
 2.17.1
 
