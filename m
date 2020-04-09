@@ -2,68 +2,56 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 237BC1A312A
-	for <lists+linux-mediatek@lfdr.de>; Thu,  9 Apr 2020 10:47:10 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id CC8791A3140
+	for <lists+linux-mediatek@lfdr.de>; Thu,  9 Apr 2020 10:52:09 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=PEDtv/53W2B5A0FRkPbrFxxLTVBG4CUJmMG8feCZIkY=; b=JB4k2u50FZQbQi
-	/FiERlXrdbofvIKx6mcMF363CHri/AAQ/YDppKwiN4Hpam0zlqJWhQEyPO8BWu6+XrZn1B9XuT36E
-	YqhhkZnghCEggPSxrd+EJHSv07cBn/BUWoIMl4uFh12QFGoXaRxvhyon7PHg7LibjN7cxMhWOxHah
-	SGMOLuGrHapMWWwFdDMDvH2fechWMyajiPz92AYb/lbij0uB7F98QjKdMsGjc3OBiaFJi61QYErp4
-	nB3qZsJDxwexGCkVm1pPJoCIYS4+e2AflJb0Tr68vGmhW0VVk2eXaIRLRiF7E4fxi6fyK+wyAo3Ku
-	zjxutrAYjypiW8FAIKrQ==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=AcYC0DswLTeWUkgOYESJkTeuFAi/bJbzQtMnc3jJY4c=; b=tfvM8VXor5OTIS
+	oVFIwSq4eTR1s6SbmphnLyCgeZ0mWfI1O/9WXST6hyh62GbBq30okFvKPbc/sp7hkcjtatSvE1BG8
+	aab/BwzUIXdLl2rgeQPOtBq8gNEK4BNlcg+nJfC5pV8UrBSfTAr/o6YmF5rufcBCQx+OBAJAOdxwg
+	fdKQ+RIXQsLuJI8lA6yPip1TuZ/rIx0vQQiiZTDwG7Qv2mzUDlZ+crg/r45Qea1G4U8fFquzVzST3
+	eH6QAFnNgevhFvUcIRfOH9oMfuBAUBKlwhQcVqYw6R0rUB3YfA/nIUDBCoEyMf0Gv1uV+Fig8u3t+
+	uH4+q3YF0/LmKgMVKzxA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jMSpv-0000EV-71; Thu, 09 Apr 2020 08:46:59 +0000
-Received: from mail.kernel.org ([198.145.29.99])
+	id 1jMSup-0003SN-0D; Thu, 09 Apr 2020 08:52:03 +0000
+Received: from szxga05-in.huawei.com ([45.249.212.191] helo=huawei.com)
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jMSps-0000Cs-00
- for linux-mediatek@lists.infradead.org; Thu, 09 Apr 2020 08:46:57 +0000
-Received: from lore-desk-wlan.redhat.com (unknown [151.48.151.50])
- (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
- (No client certificate requested)
- by mail.kernel.org (Postfix) with ESMTPSA id 2DE8922202;
- Thu,  9 Apr 2020 08:46:54 +0000 (UTC)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1586422015;
- bh=BWcm7JB/lPeWS8begBxm6Gv9BP5cm/j+Y7kTfEgg8A0=;
- h=From:To:Cc:Subject:Date:In-Reply-To:References:From;
- b=OwJxbMFK4EGhNY93BWbnVQm7lz2RPllyBBjY9ERFNRdNnvIkoBHrHe1Xu/tQpUEoh
- 5NvH3UIMDFe7nH5eGgfInEtsPmu6WVTWj9EMR3isIZNmiGIb82T2XOldUlrgRdkeRX
- Lvxut5KwWniOlDdlAwVsJn1M8hJIdMyPkjKLtA/g=
-From: Lorenzo Bianconi <lorenzo@kernel.org>
-To: nbd@nbd.name
-Subject: [PATCH 2/2] mt76: mt7663: fix DMA unmap length
-Date: Thu,  9 Apr 2020 10:46:39 +0200
-Message-Id: <20f6c8304fb911d31780ad2b1d8fa768b7b1eda2.1586421673.git.lorenzo@kernel.org>
-X-Mailer: git-send-email 2.25.2
-In-Reply-To: <cover.1586421673.git.lorenzo@kernel.org>
-References: <cover.1586421673.git.lorenzo@kernel.org>
+ id 1jMSuh-0003MJ-92; Thu, 09 Apr 2020 08:51:56 +0000
+Received: from DGGEMS412-HUB.china.huawei.com (unknown [172.30.72.58])
+ by Forcepoint Email with ESMTP id B51C658B19EB8263FEEF;
+ Thu,  9 Apr 2020 16:51:43 +0800 (CST)
+Received: from huawei.com (10.175.124.28) by DGGEMS412-HUB.china.huawei.com
+ (10.3.19.212) with Microsoft SMTP Server id 14.3.487.0; Thu, 9 Apr 2020
+ 16:51:36 +0800
+From: Jason Yan <yanaijie@huawei.com>
+To: <broonie@kernel.org>, <matthias.bgg@gmail.com>,
+ <linux-spi@vger.kernel.org>, <linux-arm-kernel@lists.infradead.org>,
+ <linux-mediatek@lists.infradead.org>, <linux-kernel@vger.kernel.org>
+Subject: [PATCH] spi: spi-mtk-nor: make mtk_nor_exec_op() statuc
+Date: Thu, 9 Apr 2020 16:50:09 +0800
+Message-ID: <20200409085009.44971-1-yanaijie@huawei.com>
+X-Mailer: git-send-email 2.17.2
 MIME-Version: 1.0
+X-Originating-IP: [10.175.124.28]
+X-CFilter-Loop: Reflected
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200409_014656_073696_64833343 
-X-CRM114-Status: GOOD (  10.91  )
-X-Spam-Score: -5.2 (-----)
+X-CRM114-CacheID: sfid-20200409_015155_500464_B9E73B61 
+X-CRM114-Status: UNSURE (   8.78  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: -2.3 (--)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
- Content analysis details:   (-5.2 points)
+ Content analysis details:   (-2.3 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
- high trust [198.145.29.99 listed in list.dnswl.org]
+ -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
+ medium trust [45.249.212.191 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
+ -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -75,124 +63,38 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: ryder.lee@mediatek.com, sean.wang@mediatek.com,
- linux-wireless@vger.kernel.org, linux-mediatek@lists.infradead.org,
- soul.huang@mediatek.com, lorenzo.bianconi@redhat.com
+Cc: Jason Yan <yanaijie@huawei.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Fix DMA unmap length for mt7663e devices in mt7615_txp_skb_unmap_hw
+Fix the following sparse warning:
 
-Fixes: f40ac0f3d3c0 ("mt76: mt7615: introduce mt7663e support")
-Co-developed-by: Sean Wang <sean.wang@mediatek.com>
-Signed-off-by: Sean Wang <sean.wang@mediatek.com>
-Co-developed-by: Soul Huang <soul.huang@mediatek.com>
-Signed-off-by: Soul Huang <soul.huang@mediatek.com>
-Signed-off-by: Lorenzo Bianconi <lorenzo@kernel.org>
+drivers/spi/spi-mtk-nor.c:394:5: warning: symbol 'mtk_nor_exec_op' was
+not declared. Should it be static?
+
+Reported-by: Hulk Robot <hulkci@huawei.com>
+Signed-off-by: Jason Yan <yanaijie@huawei.com>
 ---
- drivers/net/wireless/mediatek/mt76/mt7615/mac.c | 17 +++++++++++++----
- drivers/net/wireless/mediatek/mt76/mt7615/mac.h |  2 ++
- .../net/wireless/mediatek/mt76/mt7615/pci_mac.c | 15 ++++++++++++---
- 3 files changed, 27 insertions(+), 7 deletions(-)
+ drivers/spi/spi-mtk-nor.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
 
-diff --git a/drivers/net/wireless/mediatek/mt76/mt7615/mac.c b/drivers/net/wireless/mediatek/mt76/mt7615/mac.c
-index e7db7f17c37b..11d161d278e4 100644
---- a/drivers/net/wireless/mediatek/mt76/mt7615/mac.c
-+++ b/drivers/net/wireless/mediatek/mt76/mt7615/mac.c
-@@ -654,24 +654,33 @@ mt7615_txp_skb_unmap_fw(struct mt76_dev *dev, struct mt7615_fw_txp *txp)
- static void
- mt7615_txp_skb_unmap_hw(struct mt76_dev *dev, struct mt7615_hw_txp *txp)
+diff --git a/drivers/spi/spi-mtk-nor.c b/drivers/spi/spi-mtk-nor.c
+index c15a9910549f..7bc302b50396 100644
+--- a/drivers/spi/spi-mtk-nor.c
++++ b/drivers/spi/spi-mtk-nor.c
+@@ -391,7 +391,7 @@ static int mtk_nor_pp_unbuffered(struct mtk_nor *sp,
+ 	return mtk_nor_cmd_exec(sp, MTK_NOR_CMD_WRITE, 6 * BITS_PER_BYTE);
+ }
+ 
+-int mtk_nor_exec_op(struct spi_mem *mem, const struct spi_mem_op *op)
++static int mtk_nor_exec_op(struct spi_mem *mem, const struct spi_mem_op *op)
  {
-+	u32 last_mask, len_mask;
- 	int i;
- 
-+	if (is_mt7663(dev)) {
-+		last_mask = MT_TXD_LEN_AMSDU_LAST;
-+		len_mask = MT7663_TXD_LEN_MASK;
-+	} else {
-+		last_mask = MT_TXD_LAST_MASK;
-+		len_mask = MT_TXD_LEN_MASK;
-+	}
-+
- 	for (i = 0; i < ARRAY_SIZE(txp->ptr); i++) {
- 		struct mt7615_txp_ptr *ptr = &txp->ptr[i];
- 		bool last;
- 		u16 len;
- 
- 		len = le16_to_cpu(ptr->len0);
--		last = len & MT_TXD_LAST_MASK;
--		len &= ~MT_TXD_LAST_MASK;
-+		last = len & last_mask;
-+		len &= len_mask;
- 		dma_unmap_single(dev->dev, le32_to_cpu(ptr->buf0), len,
- 				 DMA_TO_DEVICE);
- 		if (last)
- 			break;
- 
- 		len = le16_to_cpu(ptr->len1);
--		last = len & MT_TXD_LAST_MASK;
--		len &= ~MT_TXD_LAST_MASK;
-+		last = len & last_mask;
-+		len &= len_mask;
- 		dma_unmap_single(dev->dev, le32_to_cpu(ptr->buf1), len,
- 				 DMA_TO_DEVICE);
- 		if (last)
-diff --git a/drivers/net/wireless/mediatek/mt76/mt7615/mac.h b/drivers/net/wireless/mediatek/mt76/mt7615/mac.h
-index d9b2fdfb4c8b..2b08abb82b73 100644
---- a/drivers/net/wireless/mediatek/mt76/mt7615/mac.h
-+++ b/drivers/net/wireless/mediatek/mt76/mt7615/mac.h
-@@ -256,8 +256,10 @@ enum tx_phy_bandwidth {
- 
- #define MT_MSDU_ID_VALID		BIT(15)
- 
-+#define MT7663_TXD_LEN_MASK		GENMASK(11, 0)
- #define MT_TXD_LEN_MSDU_LAST		BIT(14)
- #define MT_TXD_LEN_AMSDU_LAST		BIT(15)
-+#define MT_TXD_LEN_MASK			GENMASK(13, 0)
- #define MT_TXD_LAST_MASK		GENMASK(15, 14)
- 
- struct mt7615_txp_ptr {
-diff --git a/drivers/net/wireless/mediatek/mt76/mt7615/pci_mac.c b/drivers/net/wireless/mediatek/mt76/mt7615/pci_mac.c
-index 6dfd03a8869b..f2db396bfae3 100644
---- a/drivers/net/wireless/mediatek/mt76/mt7615/pci_mac.c
-+++ b/drivers/net/wireless/mediatek/mt76/mt7615/pci_mac.c
-@@ -54,20 +54,29 @@ mt7615_write_hw_txp(struct mt7615_dev *dev, struct mt76_tx_info *tx_info,
- {
- 	struct mt7615_hw_txp *txp = txp_ptr;
- 	struct mt7615_txp_ptr *ptr = &txp->ptr[0];
--	int nbuf = tx_info->nbuf - 1;
--	int i;
-+	int i, nbuf = tx_info->nbuf - 1;
-+	u32 last_mask, len_mask;
- 
- 	tx_info->buf[0].len = MT_TXD_SIZE + sizeof(*txp);
- 	tx_info->nbuf = 1;
- 
-+	if (is_mt7663(&dev->mt76)) {
-+		last_mask = MT_TXD_LEN_AMSDU_LAST;
-+		len_mask = MT7663_TXD_LEN_MASK;
-+	} else {
-+		last_mask = MT_TXD_LAST_MASK;
-+		len_mask = MT_TXD_LEN_MASK;
-+	}
-+
- 	txp->msdu_id[0] = cpu_to_le16(id | MT_MSDU_ID_VALID);
- 
- 	for (i = 0; i < nbuf; i++) {
- 		u32 addr = tx_info->buf[i + 1].addr;
- 		u16 len = tx_info->buf[i + 1].len;
- 
-+		len &= len_mask;
- 		if (i == nbuf - 1)
--			len |= MT_TXD_LAST_MASK;
-+			len |= last_mask;
- 
- 		if (i & 1) {
- 			ptr->buf1 = cpu_to_le32(addr);
+ 	struct mtk_nor *sp = spi_controller_get_devdata(mem->spi->master);
+ 	int ret;
 -- 
-2.25.2
+2.17.2
 
 
 _______________________________________________
