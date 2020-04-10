@@ -2,58 +2,79 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 7023A1A43EB
-	for <lists+linux-mediatek@lfdr.de>; Fri, 10 Apr 2020 10:46:48 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id D964E1A4427
+	for <lists+linux-mediatek@lfdr.de>; Fri, 10 Apr 2020 11:03:08 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
-	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:References:
-	In-Reply-To:Message-Id:Date:Subject:To:From:Reply-To:Content-ID:
-	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
-	:Resent-Message-ID:List-Owner;
-	bh=zXAG/Hd3E4wSdanxjNVxtHlaHcwDWE+u8vL5I9hreCw=; b=WBWjaYv2YVb1aW1FYH0LDCU4S0
-	AU73/13LJ3sj98DcZH11bUtd23gOeBy6guyHDkn8eeezUhenjiyzJNcXbTQUGpSXrtM5lYgbOhbau
-	f9Dle8ufRSzqrGYMpaoZ4dZTh5PQ67f9/UvAR/Xrue1BXkBMVp+Cp4+etP3kbGidd+ikCHgL513um
-	bS1YBKoRJzRr6/CD60Riw/t+I9RBDJLSQkRAOtk/C+w/2+vMxLjXZHDWnHAKVLTVsZiyEHrZwvzte
-	dLtuBjVNibXvpmU2Zf/6HtWBO6BnxLYRISbdVPjT9P9Nm6jqYt7ZuIVhdNXm4VVy8CA3wp1BQt3Ap
-	qR+p18RQ==;
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=Ytj4DZrlM/AfGX6TgBTAaSUS2xfXmKbaPFDSCcPSdMM=; b=IPyuUMjIPXwLPR
+	oEz48XycN57C+mFhDxt6vL5lOqZYt/ZPV1jjEjCiJS3zLsBgVNiVaOafFRACfB2rq5N826Q3d/nKX
+	2Gbh7NUb25DYWx9qVMI9sGTAsp/R+rJBosoq8vCQ1rVW5sShZsbVZIaTA6BVHxMEPO9kgvszpTk1r
+	zFKA6snA07e4WlwOtQ//icqA4E8mTrFFMvh8L/3rZed2yUi5t3eQ2Iaujcf90BTMxSkcydNb8kG/Z
+	Vk13wcwKkat3LG9Izg6Fio6RbJ2iSdpQaNJKQHnawnbf22jOms/wHSyAXPh49Dqym8rXPRE3lmJdX
+	GB24FJSS8ZHWsROIYOZQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jMpJA-0001Wr-Re; Fri, 10 Apr 2020 08:46:40 +0000
-Received: from foss.arm.com ([217.140.110.172])
- by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jMpGo-0005dl-T5; Fri, 10 Apr 2020 08:44:21 +0000
-Received: from usa-sjc-imap-foss1.foss.arm.com (unknown [10.121.207.14])
- by usa-sjc-mx-foss1.foss.arm.com (Postfix) with ESMTP id E3B717FA;
- Fri, 10 Apr 2020 01:44:13 -0700 (PDT)
-Received: from e123648.arm.com (unknown [10.37.12.30])
- by usa-sjc-imap-foss1.foss.arm.com (Postfix) with ESMTPA id 0CD1F3F68F;
- Fri, 10 Apr 2020 01:44:02 -0700 (PDT)
-From: Lukasz Luba <lukasz.luba@arm.com>
-To: linux-kernel@vger.kernel.org, linux-pm@vger.kernel.org,
- linux-arm-kernel@lists.infradead.org, dri-devel@lists.freedesktop.org,
- linux-omap@vger.kernel.org, linux-mediatek@lists.infradead.org,
- linux-arm-msm@vger.kernel.org, linux-imx@nxp.com
-Subject: [PATCH v6 10/10] drm/panfrost: Register devfreq cooling and attempt
- to add Energy Model
-Date: Fri, 10 Apr 2020 09:42:10 +0100
-Message-Id: <20200410084210.24932-11-lukasz.luba@arm.com>
-X-Mailer: git-send-email 2.17.1
-In-Reply-To: <20200410084210.24932-1-lukasz.luba@arm.com>
-References: <20200410084210.24932-1-lukasz.luba@arm.com>
+	id 1jMpZ1-00054G-C0; Fri, 10 Apr 2020 09:03:03 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
+ by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
+ id 1jMpYt-0004sa-V9
+ for linux-mediatek@lists.infradead.org; Fri, 10 Apr 2020 09:02:57 +0000
+X-UUID: 3a6a0587e0734a0cb5a5d73dcbdfe242-20200410
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
+ s=dk; 
+ h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:Subject:CC:To:From;
+ bh=wzS0/3rTMaYyXRYAdRBHZyK1YHhLqhc1CArzNUWEjtk=; 
+ b=AtDWSRzu9p5IDEvkkDh5VAtXUe5Vdd/51TyaBmGYzb2nY3nUPSX2XDWsYp4Q/RztU5Vdn9ghLFkvgL1QWz+XitVBgT/N+BVXp43lLD2PlGM5kDLyO1wQmnumO04rLnHuycn+wrMIPxMuURJBVT+clZusFo4vPZ0RUXUCWh7lQZs=;
+X-UUID: 3a6a0587e0734a0cb5a5d73dcbdfe242-20200410
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
+ (envelope-from <ryder.lee@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 185076266; Fri, 10 Apr 2020 01:02:47 -0800
+Received: from MTKMBS02N2.mediatek.inc (172.21.101.101) by
+ MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
+ 15.0.1497.2; Fri, 10 Apr 2020 01:55:02 -0700
+Received: from MTKCAS06.mediatek.inc (172.21.101.30) by
+ mtkmbs02n2.mediatek.inc (172.21.101.101) with Microsoft SMTP Server (TLS) id
+ 15.0.1497.2; Fri, 10 Apr 2020 16:54:52 +0800
+Received: from mtksdccf07.mediatek.inc (172.21.84.99) by MTKCAS06.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1497.2 via
+ Frontend Transport; Fri, 10 Apr 2020 16:54:52 +0800
+From: Ryder Lee <ryder.lee@mediatek.com>
+To: Felix Fietkau <nbd@nbd.name>, Lorenzo Bianconi
+ <lorenzo.bianconi@redhat.com>
+Subject: [PATCH 00/16] Add MediaTek IEEE 802.11ax devices - MT7915E
+Date: Fri, 10 Apr 2020 16:54:37 +0800
+Message-ID: <cover.1586507878.git.ryder.lee@mediatek.com>
+X-Mailer: git-send-email 2.18.0
+MIME-Version: 1.0
+X-TM-SNTS-SMTP: 17A4B00CA607DF2078E2CE1875141F236039E6E3CA1649239768F2FBEC37D7C82000:8
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200410_014415_066316_AACDCCF9 
-X-CRM114-Status: UNSURE (   9.93  )
+X-CRM114-CacheID: sfid-20200410_020256_039007_1660772B 
+X-CRM114-Status: UNSURE (   8.73  )
 X-CRM114-Notice: Please train this message.
-X-Spam-Score: -2.3 (--)
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
- Content analysis details:   (-2.3 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
- medium trust [217.140.110.172 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 0.0 MIME_BASE64_TEXT       RAW: Message text disguised using base64
+ encoding
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -65,55 +86,97 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: nm@ti.com, juri.lelli@redhat.com, peterz@infradead.org,
- viresh.kumar@linaro.org, liviu.dudau@arm.com, bjorn.andersson@linaro.org,
- bsegall@google.com, festevam@gmail.com, mka@chromium.org, robh@kernel.org,
- amit.kucheria@verdurent.com, lorenzo.pieralisi@arm.com,
- vincent.guittot@linaro.org, khilman@kernel.org, daniel.lezcano@linaro.org,
- steven.price@arm.com, cw00.choi@samsung.com, mingo@redhat.com, mgorman@suse.de,
- rui.zhang@intel.com, alyssa.rosenzweig@collabora.com, orjan.eide@arm.com,
- daniel@ffwll.ch, b.zolnierkie@samsung.com, s.hauer@pengutronix.de,
- rostedt@goodmis.org, matthias.bgg@gmail.com, Dietmar.Eggemann@arm.com,
- airlied@linux.ie, tomeu.vizoso@collabora.com, qperret@google.com,
- sboyd@kernel.org, rdunlap@infradead.org, rjw@rjwysocki.net, agross@kernel.org,
- kernel@pengutronix.de, sudeep.holla@arm.com, patrick.bellasi@matbug.net,
- shawnguo@kernel.org, lukasz.luba@arm.com
-MIME-Version: 1.0
+Cc: YF Luo <yf.luo@mediatek.com>, Evelyn Tsai <evelyn.tsai@mediatek.com>,
+ linux-wireless@vger.kernel.org, Sean
+ Wang <sean.wang@mediatek.com>, Chih-Min Chen <chih-min.chen@mediatek.com>,
+ Ryder Lee <ryder.lee@mediatek.com>, Yiwei Chung <yiwei.chung@mediatek.com>,
+ linux-mediatek@lists.infradead.org, Shayne Chen <shayne.chen@mediatek.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Register devfreq cooling device and attempt to register Energy Model. This
-will add the devfreq device to the Energy Model framework. It will create
-a dedicated and unified data structures used i.e. in thermal framework.
-The last NULL parameter indicates that the power model is simplified and
-created based on DT 'dynamic-power-coefficient', voltage and frequency.
+MT7915E is the latest generation IEEE 802.11ax NIC in MediaTek, which
+currently supports AP, Station and Mesh mode.
 
-Reviewed-by: Steven Price <steven.price@arm.com>
-Reviewed-by: Alyssa Rosenzweig <alyssa.rosenzweig@collabora.com>
-Signed-off-by: Lukasz Luba <lukasz.luba@arm.com>
----
- drivers/gpu/drm/panfrost/panfrost_devfreq.c | 2 +-
- 1 file changed, 1 insertion(+), 1 deletion(-)
+Even though some Tx/Rx paths of MT7915 [1] are similar to MT7615. Considering it
+has huge amounts of HE parts, different designs of firmware, and most importantly,
+for the sake of convenience to get family devices supported in the future, it was
+concluded to be simpler to have a clean start for this generation.
 
-diff --git a/drivers/gpu/drm/panfrost/panfrost_devfreq.c b/drivers/gpu/drm/panfrost/panfrost_devfreq.c
-index 413987038fbf..8759a73db153 100644
---- a/drivers/gpu/drm/panfrost/panfrost_devfreq.c
-+++ b/drivers/gpu/drm/panfrost/panfrost_devfreq.c
-@@ -105,7 +105,7 @@ int panfrost_devfreq_init(struct panfrost_device *pfdev)
- 	}
- 	pfdev->devfreq.devfreq = devfreq;
- 
--	cooling = of_devfreq_cooling_register(dev->of_node, devfreq);
-+	cooling = devfreq_cooling_em_register(devfreq, NULL);
- 	if (IS_ERR(cooling))
- 		DRM_DEV_INFO(dev, "Failed to register cooling device\n");
- 	else
+This makes maintenance easier and avoids major changes in MT7615, which currently
+shares the codes with low power capable device MT7663. It will increase the risk
+of regressions in existing flow.
+
+MT7915 supports only basic HE_SU for the mmoment, whereas other 802.11ax specific
+features, such as BSS color, TWT, SR, DCM and OFDMA are WIP, and will be gradually
+added in upcoming days.
+
+The three firmwares are available from https://github.com/ryderlee1110/wireless-fw
+they will be submitted soon. At last, the developers are all listed in the series.
+
+[1] https://www.mediatek.com/blog/mediatek-mt7915-wi-fi-6-wave-1-chipset-builds-in-a-range-of-industry-firsts 
+
+Thanks,
+Ryder
+
+Ryder Lee (16):
+  mt76: avoid rx reorder buffer overflow
+  mt76: add support for HE RX rate reporting
+  mt76: add Rx stats support for radiotap
+  mt76: adjust wcid size to support new 802.11ax generation
+  mt76: add HE phy modes and hardware queue
+  mt76: add mac80211 driver for MT7915 PCIe-based chipsets
+  mt76: mt7915: implement HE per-rate tx power support
+  mt76: mt7915: add offloading Tx AMSDU support
+  mt76: mt7915: register HE capabilities for each interface
+  mt76: mt7915: add HE bss_conf support for interfaces
+  mt76: mt7915: add HE capabilities support for peers
+  mt76: mt7915: add Rx radiotap header support
+  mt76: mt7915: add .sta_add_debugfs support
+  mt76: mt7915: add .sta_statistics support
+  mt76: mt7915: set peer Tx fixed rate through debugfs
+  mt76: mt7915: enable firmware module debug support
+
+ drivers/net/wireless/mediatek/mt76/Kconfig    |    1 +
+ drivers/net/wireless/mediatek/mt76/Makefile   |    1 +
+ drivers/net/wireless/mediatek/mt76/agg-rx.c   |   12 +-
+ drivers/net/wireless/mediatek/mt76/mac80211.c |   10 +-
+ drivers/net/wireless/mediatek/mt76/mt76.h     |   42 +-
+ .../net/wireless/mediatek/mt76/mt7915/Kconfig |   13 +
+ .../wireless/mediatek/mt76/mt7915/Makefile    |    6 +
+ .../wireless/mediatek/mt76/mt7915/debugfs.c   |  415 +++
+ .../net/wireless/mediatek/mt76/mt7915/dma.c   |  283 ++
+ .../wireless/mediatek/mt76/mt7915/eeprom.c    |  236 ++
+ .../wireless/mediatek/mt76/mt7915/eeprom.h    |  125 +
+ .../net/wireless/mediatek/mt76/mt7915/init.c  |  591 ++++
+ .../net/wireless/mediatek/mt76/mt7915/mac.c   | 1453 +++++++++
+ .../net/wireless/mediatek/mt76/mt7915/mac.h   |  346 ++
+ .../net/wireless/mediatek/mt76/mt7915/main.c  |  780 +++++
+ .../net/wireless/mediatek/mt76/mt7915/mcu.c   | 2804 +++++++++++++++++
+ .../net/wireless/mediatek/mt76/mt7915/mcu.h   | 1003 ++++++
+ .../wireless/mediatek/mt76/mt7915/mt7915.h    |  459 +++
+ .../net/wireless/mediatek/mt76/mt7915/pci.c   |  212 ++
+ .../net/wireless/mediatek/mt76/mt7915/regs.h  |  344 ++
+ 20 files changed, 9118 insertions(+), 18 deletions(-)
+ create mode 100644 drivers/net/wireless/mediatek/mt76/mt7915/Kconfig
+ create mode 100644 drivers/net/wireless/mediatek/mt76/mt7915/Makefile
+ create mode 100644 drivers/net/wireless/mediatek/mt76/mt7915/debugfs.c
+ create mode 100644 drivers/net/wireless/mediatek/mt76/mt7915/dma.c
+ create mode 100644 drivers/net/wireless/mediatek/mt76/mt7915/eeprom.c
+ create mode 100644 drivers/net/wireless/mediatek/mt76/mt7915/eeprom.h
+ create mode 100644 drivers/net/wireless/mediatek/mt76/mt7915/init.c
+ create mode 100644 drivers/net/wireless/mediatek/mt76/mt7915/mac.c
+ create mode 100644 drivers/net/wireless/mediatek/mt76/mt7915/mac.h
+ create mode 100644 drivers/net/wireless/mediatek/mt76/mt7915/main.c
+ create mode 100644 drivers/net/wireless/mediatek/mt76/mt7915/mcu.c
+ create mode 100644 drivers/net/wireless/mediatek/mt76/mt7915/mcu.h
+ create mode 100644 drivers/net/wireless/mediatek/mt76/mt7915/mt7915.h
+ create mode 100644 drivers/net/wireless/mediatek/mt76/mt7915/pci.c
+ create mode 100644 drivers/net/wireless/mediatek/mt76/mt7915/regs.h
+
 -- 
-2.17.1
-
-
+2.18.0
 _______________________________________________
 Linux-mediatek mailing list
 Linux-mediatek@lists.infradead.org
