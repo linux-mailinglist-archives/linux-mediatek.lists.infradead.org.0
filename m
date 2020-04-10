@@ -2,66 +2,69 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id BEDB61A4425
-	for <lists+linux-mediatek@lfdr.de>; Fri, 10 Apr 2020 11:03:06 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 51DB11A440A
+	for <lists+linux-mediatek@lfdr.de>; Fri, 10 Apr 2020 10:55:21 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=HaFO24qdgtge8n2DTmaLatpPBKRiOyf1XU/nsRBTXqg=; b=I5xP7Fl3BTB5Pu
-	w/hZzHc7QkCqsmAo52Yg7aYO5LNoVoq1w0YQUz6861NenwlIc/QXbktEvcg3y+jY3eCoEa7mnYApv
-	kY5gvRISuZKt14+Kub4FeD7j2yH1WjwTngzRWxVkrjFPfNPZV8naz1P1fOR+aG2f0F7HHQ+41uGye
-	/o34QRBZsJw3g3Ivxv6pEmkNyw0B60ZrqS50TJom4Lan84lMvgOfmaSoMDTHlEPdm6+oXo6wu+P5b
-	cbBiZRDC3m2hYgLuJPJBmojESwxTkxuRJvIfK4Ybg7iSbDADFjtxSCoAdts6Ino45Xco96Os/yIG5
-	z5bcFVa8mYC56HASxpZA==;
+	List-Owner; bh=LJQuPmmB/iFH0g85i2wELa4bnoeROAl4UOi/KG0+TE0=; b=CCAEQyUnA2iBCe
+	Mjfm+bpTcjl7K+20zVi3DFs3IJDBbcxFqCyJ4mIM3K04TaZ8OE/fIzfNxi9gRPup1ebnb7zBr/qW6
+	cP8ukvjOjCFdGkP2uQiE8v551ILufvmh115ptWIpXaxeXbIup0w0suLl55Uj26fl2affT7rh1xPkQ
+	hWUQdZHQBirpdSM36RNoFPbfUueDGpgj0/vcuDoMN/hVyeULLCFyp/J1hxhVclpdWWhYk7/PJkVbv
+	yLCMkP6SlsvO15HjffVoAKLgfob+AHDrJ9a848RK5d70VvlTfSjDZEAbkyVE/OR1JGOlEqDTljDuF
+	m/dvf61HAAntL/MjCHHw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jMpYw-0004y1-S5; Fri, 10 Apr 2020 09:02:58 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
+	id 1jMpRS-0007SQ-AH; Fri, 10 Apr 2020 08:55:14 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jMpYr-0004sI-Sm
- for linux-mediatek@lists.infradead.org; Fri, 10 Apr 2020 09:02:55 +0000
-X-UUID: 2a034d08d9fa4a028901a596ba8c6520-20200410
+ id 1jMpRL-0006LE-3D
+ for linux-mediatek@lists.infradead.org; Fri, 10 Apr 2020 08:55:09 +0000
+X-UUID: 11212f5551f5402aa2cdc30c8fea57bb-20200410
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
  s=dk; 
  h=Content-Transfer-Encoding:Content-Type:MIME-Version:References:In-Reply-To:Message-ID:Date:Subject:CC:To:From;
- bh=AC/2zCkdulGB75Nmrt0AqeQETE4fZ3CMa6Mi4b3Ulo0=; 
- b=i7RW9n3Es7NSabWG43LAqZta49thYpqrDhkhW0MhRDqPPkv2sxkphgvIhJIdYpxg2sBfetBfb1AVmkNEpQlFRY1IKJuw5A85XqgKK/6Sjw6J9/pu/MjZCQv8cgep2EpXDz00c4cIS1xX6e44/KAD+6I85JxWEEozdcFO8XKscd4=;
-X-UUID: 2a034d08d9fa4a028901a596ba8c6520-20200410
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
+ bh=1DSTp/bpP9UbyDQzSr5aF0twBj7E1KmUQ0TlVlgQbFs=; 
+ b=dmQJ7vMAiQneISwF1qynBrmXr5FojUy1jGVvdWpnZu3iAXF3AAG56jb3du3bnvY1s/SKXC1wBIMyWIbBczU78A4LIv8dX84x56F+gRUFWAXnKKanRj+NmqMea0IfS94fatOMt2d00U7DdTs2EzEVXEJXreV/SKuTfeZgW9ucmIw=;
+X-UUID: 11212f5551f5402aa2cdc30c8fea57bb-20200410
+Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw01.mediatek.com
  (envelope-from <ryder.lee@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 731635736; Fri, 10 Apr 2020 01:02:47 -0800
-Received: from MTKMBS02N1.mediatek.inc (172.21.101.77) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1497.2; Fri, 10 Apr 2020 01:55:02 -0700
+ with ESMTP id 911219472; Fri, 10 Apr 2020 00:55:02 -0800
+Received: from MTKMBS06N1.mediatek.inc (172.21.101.129) by
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1497.2; Fri, 10 Apr 2020 01:55:01 -0700
 Received: from MTKCAS06.mediatek.inc (172.21.101.30) by
- mtkmbs02n1.mediatek.inc (172.21.101.77) with Microsoft SMTP Server (TLS) id
- 15.0.1497.2; Fri, 10 Apr 2020 16:54:58 +0800
+ mtkmbs06n1.mediatek.inc (172.21.101.129) with Microsoft SMTP Server (TLS) id
+ 15.0.1497.2; Fri, 10 Apr 2020 16:54:59 +0800
 Received: from mtksdccf07.mediatek.inc (172.21.84.99) by MTKCAS06.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1497.2 via
- Frontend Transport; Fri, 10 Apr 2020 16:54:58 +0800
+ Frontend Transport; Fri, 10 Apr 2020 16:54:59 +0800
 From: Ryder Lee <ryder.lee@mediatek.com>
 To: Felix Fietkau <nbd@nbd.name>, Lorenzo Bianconi
  <lorenzo.bianconi@redhat.com>
-Subject: [PATCH 08/16] mt76: mt7915: add offloading Tx AMSDU support
-Date: Fri, 10 Apr 2020 16:54:45 +0800
-Message-ID: <0cf99a5f317b0d41cd4832b14c99b6b9b8e5fefc.1586507878.git.ryder.lee@mediatek.com>
+Subject: [PATCH 09/16] mt76: mt7915: register HE capabilities for each
+ interface
+Date: Fri, 10 Apr 2020 16:54:46 +0800
+Message-ID: <a21c5c5c8f2aa3f18923af9876f5960c0996b2e1.1586507878.git.ryder.lee@mediatek.com>
 X-Mailer: git-send-email 2.18.0
 In-Reply-To: <cover.1586507878.git.ryder.lee@mediatek.com>
 References: <cover.1586507878.git.ryder.lee@mediatek.com>
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200410_020253_935070_72EF75B6 
-X-CRM114-Status: GOOD (  12.65  )
+X-CRM114-CacheID: sfid-20200410_015507_175356_02955C54 
+X-CRM114-Status: GOOD (  12.00  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [216.200.240.184 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  0.0 MIME_BASE64_TEXT       RAW: Message text disguised using base64
@@ -96,209 +99,363 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Add module parameter to enable hw_tx_amsdu.
+The capabilities for the HE interfaces are generated from the capabilities
+reported by the firmware.
+
+This should move to common file once we have other HE devices support.
 
 Signed-off-by: Ryder Lee <ryder.lee@mediatek.com>
-Signed-off-by: Shayne Chen <shayne.chen@mediatek.com>
-Tested-by: Chih-Min Chen <chih-min.chen@mediatek.com>
-Tested-by: Evelyn Tsai <evelyn.tsai@mediatek.com>
-Suggested-by: Yiwei Chung <yiwei.chung@mediatek.com>
-Suggested-by: YF Luo <yf.luo@mediatek.com>
 ---
- .../net/wireless/mediatek/mt76/mt7915/init.c  |  5 ++-
- .../net/wireless/mediatek/mt76/mt7915/mac.c   |  4 +-
- .../net/wireless/mediatek/mt76/mt7915/mcu.c   | 40 +++++++++++++++++++
- .../net/wireless/mediatek/mt76/mt7915/mcu.h   | 20 ++++++++++
- .../wireless/mediatek/mt76/mt7915/mt7915.h    |  1 +
- .../net/wireless/mediatek/mt76/mt7915/pci.c   |  8 ++++
- 6 files changed, 76 insertions(+), 2 deletions(-)
+ .../net/wireless/mediatek/mt76/mt7915/init.c  | 194 ++++++++++++++++++
+ .../net/wireless/mediatek/mt76/mt7915/main.c  |   1 +
+ .../net/wireless/mediatek/mt76/mt7915/mcu.c   |   9 +
+ .../net/wireless/mediatek/mt76/mt7915/mcu.h   |   3 +
+ .../wireless/mediatek/mt76/mt7915/mt7915.h    |   2 +
+ .../net/wireless/mediatek/mt76/mt7915/pci.c   |  13 ++
+ 6 files changed, 222 insertions(+)
 
 diff --git a/drivers/net/wireless/mediatek/mt76/mt7915/init.c b/drivers/net/wireless/mediatek/mt76/mt7915/init.c
-index cba9dfb83e19..59b3ffae7917 100644
+index 59b3ffae7917..14bf243f52ce 100644
 --- a/drivers/net/wireless/mediatek/mt76/mt7915/init.c
 +++ b/drivers/net/wireless/mediatek/mt76/mt7915/init.c
-@@ -236,7 +236,10 @@ mt7915_init_wiphy(struct ieee80211_hw *hw)
- 
- 	ieee80211_hw_set(hw, HAS_RATE_CONTROL);
- 
--	hw->max_tx_fragments = 4;
-+	if (phy->dev->hw_tx_amsdu)
-+		hw->max_tx_fragments = 1;
-+	else
-+		hw->max_tx_fragments = 4;
- }
- 
- static void
-diff --git a/drivers/net/wireless/mediatek/mt76/mt7915/mac.c b/drivers/net/wireless/mediatek/mt76/mt7915/mac.c
-index 349215dd417c..f0604bb6d644 100644
---- a/drivers/net/wireless/mediatek/mt76/mt7915/mac.c
-+++ b/drivers/net/wireless/mediatek/mt76/mt7915/mac.c
-@@ -524,7 +524,9 @@ void mt7915_mac_write_txwi(struct mt7915_dev *dev, __le32 *txwi,
- 	txwi[7] = cpu_to_le32(val);
- 
- 	val = FIELD_PREP(MT_TXD3_REM_TX_COUNT, tx_count);
--	if (ieee80211_is_data_qos(fc)) {
-+	if (dev->hw_tx_amsdu && ieee80211_is_data_qos(fc)) {
-+		txwi[7] |= MT_TXD7_HW_AMSDU;
-+	} else if (ieee80211_is_data_qos(fc)) {
- 		seqno = IEEE80211_SEQ_TO_SN(le16_to_cpu(hdr->seq_ctrl));
- 		val |= MT_TXD3_SN_VALID;
- 	} else if (ieee80211_is_back_req(fc)) {
-diff --git a/drivers/net/wireless/mediatek/mt76/mt7915/mcu.c b/drivers/net/wireless/mediatek/mt76/mt7915/mcu.c
-index 59cd50db2ecf..5e70f7f24fb7 100644
---- a/drivers/net/wireless/mediatek/mt76/mt7915/mcu.c
-+++ b/drivers/net/wireless/mediatek/mt76/mt7915/mcu.c
-@@ -85,6 +85,8 @@ struct mt7915_fw_region {
- #define to_wcid_lo(id)			FIELD_GET(GENMASK(7, 0), (u16)id)
- #define to_wcid_hi(id)			FIELD_GET(GENMASK(9, 8), (u16)id)
- 
-+#define HW_TX_AMSDU_MAX_NUM		8
-+
- static enum mt7915_cipher_type
- mt7915_mcu_get_cipher(int cipher)
- {
-@@ -786,6 +788,23 @@ mt7915_mcu_bss_ra_tlv(struct sk_buff *skb, struct ieee80211_vif *vif,
- 	ra->fast_interval = cpu_to_le32(100);
+@@ -242,6 +242,198 @@ mt7915_init_wiphy(struct ieee80211_hw *hw)
+ 		hw->max_tx_fragments = 4;
  }
  
 +static void
-+mt7915_mcu_bss_hw_amsdu_tlv(struct sk_buff *skb)
++mt7915_gen_ppe_thresh(struct mt7915_dev *dev, u8 *he_ppet)
 +{
-+#define TXD_CMP_MAP1		GENMASK(15, 0)
-+#define TXD_CMP_MAP2		(GENMASK(31, 0) & ~BIT(23))
-+	struct bss_info_hw_amsdu *amsdu;
-+	struct tlv *tlv;
++	int ru, nss, max_nss = 1, max_ru = 3;
++	u8 bit = 7, ru_bit_mask = 0x7;
++	u8 ppet16_ppet8_ru3_ru0[] = {0x1c, 0xc7, 0x71};
 +
-+	tlv = mt7915_mcu_add_tlv(skb, BSS_INFO_HW_AMSDU, sizeof(*amsdu));
++	he_ppet[0] = max_nss & IEEE80211_PPE_THRES_NSS_MASK;
++	he_ppet[0] |= (ru_bit_mask <<
++		       IEEE80211_PPE_THRES_RU_INDEX_BITMASK_POS) &
++			IEEE80211_PPE_THRES_RU_INDEX_BITMASK_MASK;
 +
-+	amsdu = (struct bss_info_hw_amsdu *)tlv;
-+	amsdu->cmp_bitmap_0 = cpu_to_le32(TXD_CMP_MAP1);
-+	amsdu->cmp_bitmap_1 = cpu_to_le32(TXD_CMP_MAP2);
-+	amsdu->trig_thres = cpu_to_le16(2);
-+	amsdu->enable = true;
++	for (nss = 0; nss <= max_nss; nss++) {
++		for (ru = 0; ru < max_ru; ru++) {
++			u8 val;
++			int i;
++
++			if (!(ru_bit_mask & BIT(ru)))
++				continue;
++
++			val = (ppet16_ppet8_ru3_ru0[nss] >> (ru * 6)) &
++			       0x3f;
++			val = ((val >> 3) & 0x7) | ((val & 0x7) << 3);
++			for (i = 5; i >= 0; i--) {
++				he_ppet[bit / 8] |=
++					((val >> i) & 0x1) << ((bit % 8));
++				bit++;
++			}
++		}
++	}
++}
++
++static int
++mt7915_init_he_caps(struct mt7915_dev *dev, enum nl80211_band band,
++		    struct ieee80211_sband_iftype_data *data)
++{
++	int i, idx = 0;
++	int nss = hweight8(dev->phy.chainmask);
++	u16 mcs_map = 0;
++
++	for (i = 0; i < 8; i++) {
++		if (i < nss)
++			mcs_map |= (IEEE80211_HE_MCS_SUPPORT_0_11 << (i * 2));
++		else
++			mcs_map |= (IEEE80211_HE_MCS_NOT_SUPPORTED << (i * 2));
++	}
++
++	for (i = 0; i < NUM_NL80211_IFTYPES; i++) {
++		struct ieee80211_sta_he_cap *he_cap = &data[idx].he_cap;
++		struct ieee80211_he_cap_elem *he_cap_elem =
++				&he_cap->he_cap_elem;
++		struct ieee80211_he_mcs_nss_supp *he_mcs =
++				&he_cap->he_mcs_nss_supp;
++
++		switch (i) {
++		case NL80211_IFTYPE_STATION:
++		case NL80211_IFTYPE_AP:
++#ifdef CONFIG_MAC80211_MESH
++		case NL80211_IFTYPE_MESH_POINT:
++#endif
++			break;
++		default:
++			continue;
++		}
++
++		data[idx].types_mask = BIT(i);
++		he_cap->has_he = true;
++
++		he_cap_elem->mac_cap_info[0] =
++			IEEE80211_HE_MAC_CAP0_HTC_HE;
++		he_cap_elem->mac_cap_info[1] =
++			IEEE80211_HE_MAC_CAP1_TF_MAC_PAD_DUR_0US |
++			IEEE80211_HE_MAC_CAP1_MULTI_TID_AGG_RX_QOS_1;
++		he_cap_elem->mac_cap_info[2] =
++			IEEE80211_HE_MAC_CAP2_BSR;
++		he_cap_elem->mac_cap_info[3] =
++			IEEE80211_HE_MAC_CAP3_OMI_CONTROL |
++			IEEE80211_HE_MAC_CAP3_MAX_AMPDU_LEN_EXP_RESERVED;
++		he_cap_elem->mac_cap_info[4] =
++			IEEE80211_HE_MAC_CAP4_AMDSU_IN_AMPDU;
++
++		if (band == NL80211_BAND_2GHZ)
++			he_cap_elem->phy_cap_info[0] =
++				IEEE80211_HE_PHY_CAP0_CHANNEL_WIDTH_SET_40MHZ_IN_2G;
++		else if (band == NL80211_BAND_5GHZ)
++			he_cap_elem->phy_cap_info[0] =
++				IEEE80211_HE_PHY_CAP0_CHANNEL_WIDTH_SET_40MHZ_80MHZ_IN_5G |
++				IEEE80211_HE_PHY_CAP0_CHANNEL_WIDTH_SET_160MHZ_IN_5G |
++				IEEE80211_HE_PHY_CAP0_CHANNEL_WIDTH_SET_80PLUS80_MHZ_IN_5G;
++
++		he_cap_elem->phy_cap_info[1] =
++			IEEE80211_HE_PHY_CAP1_LDPC_CODING_IN_PAYLOAD;
++		he_cap_elem->phy_cap_info[2] =
++			IEEE80211_HE_PHY_CAP2_NDP_4x_LTF_AND_3_2US |
++			IEEE80211_HE_PHY_CAP2_STBC_TX_UNDER_80MHZ |
++			IEEE80211_HE_PHY_CAP2_STBC_RX_UNDER_80MHZ;
++
++		/* TODO: TxBF & MU & MESH */
++
++		switch (i) {
++		case NL80211_IFTYPE_AP:
++			he_cap_elem->mac_cap_info[0] |=
++				IEEE80211_HE_MAC_CAP0_TWT_RES;
++			he_cap_elem->mac_cap_info[4] |=
++				IEEE80211_HE_MAC_CAP4_BQR;
++			he_cap_elem->phy_cap_info[3] |=
++				IEEE80211_HE_PHY_CAP3_DCM_MAX_CONST_TX_QPSK |
++				IEEE80211_HE_PHY_CAP3_DCM_MAX_CONST_RX_QPSK;
++			he_cap_elem->phy_cap_info[6] |=
++				IEEE80211_HE_PHY_CAP6_PPE_THRESHOLD_PRESENT;
++			he_cap_elem->phy_cap_info[9] |=
++				IEEE80211_HE_PHY_CAP9_RX_1024_QAM_LESS_THAN_242_TONE_RU;
++			break;
++		case NL80211_IFTYPE_STATION:
++			he_cap_elem->mac_cap_info[0] |=
++				IEEE80211_HE_MAC_CAP0_TWT_REQ;
++			he_cap_elem->mac_cap_info[3] |=
++				IEEE80211_HE_MAC_CAP3_FLEX_TWT_SCHED;
++
++			if (band == NL80211_BAND_2GHZ)
++				he_cap_elem->phy_cap_info[0] |=
++					IEEE80211_HE_PHY_CAP0_CHANNEL_WIDTH_SET_RU_MAPPING_IN_2G;
++			else if (band == NL80211_BAND_5GHZ)
++				he_cap_elem->phy_cap_info[0] |=
++					IEEE80211_HE_PHY_CAP0_CHANNEL_WIDTH_SET_RU_MAPPING_IN_5G;
++
++			he_cap_elem->phy_cap_info[1] |=
++				IEEE80211_HE_PHY_CAP1_DEVICE_CLASS_A;
++			he_cap_elem->phy_cap_info[8] |=
++				IEEE80211_HE_PHY_CAP8_20MHZ_IN_40MHZ_HE_PPDU_IN_2G |
++				IEEE80211_HE_PHY_CAP8_20MHZ_IN_160MHZ_HE_PPDU |
++				IEEE80211_HE_PHY_CAP8_80MHZ_IN_160MHZ_HE_PPDU;
++			he_cap_elem->phy_cap_info[9] |=
++				IEEE80211_HE_PHY_CAP9_TX_1024_QAM_LESS_THAN_242_TONE_RU;
++			break;
++#ifdef CONFIG_MAC80211_MESH
++		case NL80211_IFTYPE_MESH_POINT:
++			break;
++#endif
++		}
++
++		he_mcs->rx_mcs_80 = cpu_to_le16(mcs_map);
++		he_mcs->tx_mcs_80 = cpu_to_le16(mcs_map);
++
++		/* DBDC mode */
++		if (dev->chainmask != dev->phy.chainmask)
++			mcs_map = GENMASK(15, 0);
++
++		he_mcs->rx_mcs_160 = cpu_to_le16(mcs_map);
++		he_mcs->tx_mcs_160 = cpu_to_le16(mcs_map);
++		he_mcs->rx_mcs_80p80 = cpu_to_le16(mcs_map);
++		he_mcs->tx_mcs_80p80 = cpu_to_le16(mcs_map);
++
++		if (he_cap_elem->phy_cap_info[6] &
++		    IEEE80211_HE_PHY_CAP6_PPE_THRESHOLD_PRESENT) {
++			mt7915_gen_ppe_thresh(dev, he_cap->ppe_thres);
++		} else {
++			he_cap_elem->phy_cap_info[9] |=
++				IEEE80211_HE_PHY_CAP9_NOMIMAL_PKT_PADDING_16US;
++		}
++		idx++;
++	}
++
++	return idx;
++}
++
++void mt7915_set_stream_he_caps(struct mt7915_dev *dev)
++{
++	struct ieee80211_sband_iftype_data *data;
++	struct ieee80211_supported_band *band;
++	struct mt76_dev *mdev = &dev->mt76;
++	int n;
++
++	if (mdev->cap.has_2ghz) {
++		data = dev->iftype[NL80211_BAND_2GHZ];
++		n = mt7915_init_he_caps(dev, NL80211_BAND_2GHZ, data);
++
++		band = &mdev->phy.sband_2g.sband;
++		band->iftype_data = data;
++		band->n_iftype_data = n;
++	}
++
++	if (mdev->cap.has_5ghz) {
++		data = dev->iftype[NL80211_BAND_5GHZ];
++		n = mt7915_init_he_caps(dev, NL80211_BAND_5GHZ, data);
++
++		band = &mdev->phy.sband_5g.sband;
++		band->iftype_data = data;
++		band->n_iftype_data = n;
++	}
 +}
 +
  static void
- mt7915_mcu_bss_ext_tlv(struct sk_buff *skb, struct mt7915_vif *mvif)
+ mt7915_cap_dbdc_enable(struct mt7915_dev *dev)
  {
-@@ -861,6 +880,9 @@ int mt7915_mcu_add_bss_info(struct mt7915_phy *phy,
- 		mt7915_mcu_bss_bmc_tlv(skb, phy);
- 		mt7915_mcu_bss_ra_tlv(skb, vif, phy);
+@@ -259,6 +451,7 @@ mt7915_cap_dbdc_enable(struct mt7915_dev *dev)
+ 	dev->mphy.hw->wiphy->available_antennas_tx = dev->phy.chainmask;
  
-+		if (phy->dev->hw_tx_amsdu)
-+			mt7915_mcu_bss_hw_amsdu_tlv(skb);
-+
- 		if (mvif->omac_idx > HW_BSSID_MAX)
- 			mt7915_mcu_bss_ext_tlv(skb, mvif);
- 		else
-@@ -1145,6 +1167,24 @@ mt7915_mcu_sta_tlv(struct mt7915_dev *dev, struct sk_buff *skb,
- 		tlv = mt7915_mcu_add_tlv(skb, STA_REC_HT, sizeof(*ht));
- 		ht = (struct sta_rec_ht *)tlv;
- 		ht->ht_cap = cpu_to_le16(sta->ht_cap.cap);
-+
-+		/* starec hw amsdu */
-+		if (dev->hw_tx_amsdu) {
-+			struct sta_rec_amsdu *amsdu;
-+			int max_amsdu_len = sta->max_amsdu_len;
-+
-+			tlv = mt7915_mcu_add_tlv(skb, STA_REC_HW_AMSDU,
-+						 sizeof(*amsdu));
-+			amsdu = (struct sta_rec_amsdu *)tlv;
-+			amsdu->max_amsdu_num = HW_TX_AMSDU_MAX_NUM;
-+			amsdu->amsdu_en = true;
-+
-+			if (sta->max_rc_amsdu_len)
-+				max_amsdu_len = min_t(int, max_amsdu_len,
-+						      sta->max_rc_amsdu_len);
-+
-+			amsdu->max_mpdu_size = max_amsdu_len;
-+		}
+ 	mt76_set_stream_caps(&dev->mt76, true);
++	mt7915_set_stream_he_caps(dev);
+ }
+ 
+ static void
+@@ -274,6 +467,7 @@ mt7915_cap_dbdc_disable(struct mt7915_dev *dev)
+ 	dev->mphy.hw->wiphy->available_antennas_tx = dev->chainmask;
+ 
+ 	mt76_set_stream_caps(&dev->mt76, true);
++	mt7915_set_stream_he_caps(dev);
+ }
+ 
+ int mt7915_register_ext_phy(struct mt7915_dev *dev)
+diff --git a/drivers/net/wireless/mediatek/mt76/mt7915/main.c b/drivers/net/wireless/mediatek/mt76/mt7915/main.c
+index 7bf99e148d02..78e792ad782e 100644
+--- a/drivers/net/wireless/mediatek/mt76/mt7915/main.c
++++ b/drivers/net/wireless/mediatek/mt76/mt7915/main.c
+@@ -693,6 +693,7 @@ mt7915_set_antenna(struct ieee80211_hw *hw, u32 tx_ant, u32 rx_ant)
+ 	phy->chainmask = tx_ant;
+ 
+ 	mt76_set_stream_caps(&dev->mt76, true);
++	mt7915_set_stream_he_caps(dev);
+ 
+ 	mutex_unlock(&dev->mt76.mutex);
+ 
+diff --git a/drivers/net/wireless/mediatek/mt76/mt7915/mcu.c b/drivers/net/wireless/mediatek/mt76/mt7915/mcu.c
+index 5e70f7f24fb7..3cc7b9234e9d 100644
+--- a/drivers/net/wireless/mediatek/mt76/mt7915/mcu.c
++++ b/drivers/net/wireless/mediatek/mt76/mt7915/mcu.c
+@@ -139,11 +139,13 @@ mt7915_get_phy_mode(struct mt7915_dev *dev, struct ieee80211_vif *vif,
+ {
+ 	struct ieee80211_sta_ht_cap *ht_cap;
+ 	struct ieee80211_sta_vht_cap *vht_cap;
++	const struct ieee80211_sta_he_cap *he_cap;
+ 	u8 mode = 0;
+ 
+ 	if (sta) {
+ 		ht_cap = &sta->ht_cap;
+ 		vht_cap = &sta->vht_cap;
++		he_cap = &sta->he_cap;
+ 	} else {
+ 		struct ieee80211_supported_band *sband;
+ 
+@@ -154,6 +156,7 @@ mt7915_get_phy_mode(struct mt7915_dev *dev, struct ieee80211_vif *vif,
+ 
+ 		ht_cap = &sband->ht_cap;
+ 		vht_cap = &sband->vht_cap;
++		he_cap = ieee80211_get_he_iftype_cap(sband, vif->type);
  	}
  
- 	/* starec vht */
+ 	if (band == NL80211_BAND_2GHZ) {
+@@ -161,6 +164,9 @@ mt7915_get_phy_mode(struct mt7915_dev *dev, struct ieee80211_vif *vif,
+ 
+ 		if (ht_cap->ht_supported)
+ 			mode |= PHY_MODE_GN;
++
++		if (he_cap->has_he)
++			mode |= PHY_MODE_AX_24G;
+ 	} else if (band == NL80211_BAND_5GHZ) {
+ 		mode |= PHY_MODE_A;
+ 
+@@ -169,6 +175,9 @@ mt7915_get_phy_mode(struct mt7915_dev *dev, struct ieee80211_vif *vif,
+ 
+ 		if (vht_cap->vht_supported)
+ 			mode |= PHY_MODE_AC;
++
++		if (he_cap->has_he)
++			mode |= PHY_MODE_AX_5G;
+ 	}
+ 
+ 	return mode;
 diff --git a/drivers/net/wireless/mediatek/mt76/mt7915/mcu.h b/drivers/net/wireless/mediatek/mt76/mt7915/mcu.h
-index d9c9aab7e6dc..867cab7cf145 100644
+index 867cab7cf145..0563e9321175 100644
 --- a/drivers/net/wireless/mediatek/mt76/mt7915/mcu.h
 +++ b/drivers/net/wireless/mediatek/mt76/mt7915/mcu.h
-@@ -396,6 +396,16 @@ struct bss_info_ra {
- 	__le32 fast_interval;
- } __packed;
+@@ -835,6 +835,9 @@ enum {
+ #define PHY_MODE_GN			BIT(3)
+ #define PHY_MODE_AN			BIT(4)
+ #define PHY_MODE_AC			BIT(5)
++#define PHY_MODE_AX_24G			BIT(6)
++#define PHY_MODE_AX_5G			BIT(7)
++#define PHY_MODE_AX_6G			BIT(8)
  
-+struct bss_info_hw_amsdu {
-+	__le16 tag;
-+	__le16 len;
-+	__le32 cmp_bitmap_0;
-+	__le32 cmp_bitmap_1;
-+	__le16 trig_thres;
-+	u8 enable;
-+	u8 rsv;
-+} __packed;
-+
- struct bss_info_bcn {
- 	__le16 tag;
- 	__le16 len;
-@@ -659,6 +669,15 @@ struct sta_rec_ba {
- 	__le16 winsize;
- } __packed;
- 
-+struct sta_rec_amsdu {
-+	__le16 tag;
-+	__le16 len;
-+	u8 max_amsdu_num;
-+	u8 max_mpdu_size;
-+	u8 amsdu_en;
-+	u8 rsv;
-+} __packed;
-+
- struct sec_key {
- 	u8 cipher_id;
- 	u8 cipher_len;
-@@ -796,6 +815,7 @@ enum {
- 					 sizeof(struct sta_rec_ba) +	\
- 					 sizeof(struct sta_rec_vht) +	\
- 					 sizeof(struct tlv) +		\
-+					 sizeof(struct sta_rec_amsdu) +	\
- 					 sizeof(struct sta_rec_sec) +	\
- 					 sizeof(struct sta_rec_ra) +	\
- 					 MT7915_WTBL_UPDATE_MAX_SIZE)
+ #define MODE_CCK			BIT(0)
+ #define MODE_OFDM			BIT(1)
 diff --git a/drivers/net/wireless/mediatek/mt76/mt7915/mt7915.h b/drivers/net/wireless/mediatek/mt76/mt7915/mt7915.h
-index b502bcc985ec..7f569a7a0c9b 100644
+index 7f569a7a0c9b..694519836014 100644
 --- a/drivers/net/wireless/mediatek/mt76/mt7915/mt7915.h
 +++ b/drivers/net/wireless/mediatek/mt76/mt7915/mt7915.h
-@@ -167,6 +167,7 @@ struct mt7915_dev {
+@@ -163,6 +163,7 @@ struct mt7915_dev {
+ 	spinlock_t token_lock;
+ 	struct idr token;
+ 
++	struct ieee80211_sband_iftype_data **iftype;
+ 	s8 **rate_power; /* TODO: use mt76_rate_power */
  
  	u8 mac_work_count;
- 	bool fw_debug;
-+	bool hw_tx_amsdu;
- };
+@@ -443,6 +444,7 @@ void mt7915_txp_skb_unmap(struct mt76_dev *dev,
+ 			  struct mt76_txwi_cache *txwi);
+ int mt76_dfs_start_rdd(struct mt7915_dev *dev, bool force);
+ int mt7915_dfs_init_radar_detector(struct mt7915_phy *phy);
++void mt7915_set_stream_he_caps(struct mt7915_dev *dev);
+ void mt7915_update_channel(struct mt76_dev *mdev);
+ int mt7915_init_debugfs(struct mt7915_dev *dev);
  
- enum {
 diff --git a/drivers/net/wireless/mediatek/mt76/mt7915/pci.c b/drivers/net/wireless/mediatek/mt76/mt7915/pci.c
-index d349561e4598..75f72ae104db 100644
+index 75f72ae104db..109e67b5e265 100644
 --- a/drivers/net/wireless/mediatek/mt76/mt7915/pci.c
 +++ b/drivers/net/wireless/mediatek/mt76/mt7915/pci.c
-@@ -12,6 +12,10 @@
- #include "mac.h"
- #include "../trace.h"
+@@ -82,6 +82,7 @@ static int
+ mt7915_alloc_device(struct pci_dev *pdev, struct mt7915_dev *dev)
+ {
+ #define NUM_BANDS	2
++	struct ieee80211_sband_iftype_data **iftype;
+ 	int i;
+ 	s8 **sku;
  
-+static bool hw_tx_amsdu;
-+module_param_named(enable_hw_tx_amsdu, hw_tx_amsdu, bool, 0644);
-+MODULE_PARM_DESC(enable_hw_tx_amsdu, "enable Hardware Tx AMSDU");
+@@ -97,6 +98,18 @@ mt7915_alloc_device(struct pci_dev *pdev, struct mt7915_dev *dev)
+ 	}
+ 	dev->rate_power = sku;
+ 
++	iftype = devm_kzalloc(&pdev->dev, NUM_BANDS * sizeof(*iftype),
++			      GFP_KERNEL);
++	if (!iftype)
++		return -ENOMEM;
 +
- static const struct pci_device_id mt7915_pci_device_table[] = {
- 	{ PCI_DEVICE(0x14c3, 0x7915) },
- 	{ },
-@@ -149,6 +153,10 @@ static int mt7915_pci_probe(struct pci_dev *pdev,
- 		    (mt7915_l1_rr(dev, MT_HW_REV) & 0xff);
- 	dev_dbg(mdev->dev, "ASIC revision: %04x\n", mdev->rev);
++	for (i = 0; i < NUM_BANDS; i++) {
++		iftype[i] = devm_kzalloc(&pdev->dev, NUM_NL80211_IFTYPES *
++					 sizeof(**iftype), GFP_KERNEL);
++		if (!iftype[i])
++			return -ENOMEM;
++	}
++	dev->iftype = iftype;
  
-+	/* TODO: more hw capabilities */
-+	if (hw_tx_amsdu)
-+		dev->hw_tx_amsdu = true;
-+
- 	/* master switch of PCIe tnterrupt enable */
- 	mt7915_l1_wr(dev, MT_PCIE_MAC_INT_ENABLE, 0xff);
- 
+ 	return 0;
+ }
 -- 
 2.18.0
 _______________________________________________
