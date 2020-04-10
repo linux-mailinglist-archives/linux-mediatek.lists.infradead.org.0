@@ -2,62 +2,61 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 621D21A42EF
-	for <lists+linux-mediatek@lfdr.de>; Fri, 10 Apr 2020 09:21:05 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id B2E8C1A42EB
+	for <lists+linux-mediatek@lfdr.de>; Fri, 10 Apr 2020 09:20:40 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=pSNSfYLZzJ8rQ+unK2AGZa/YSLyMIeybNe1PJfH+mQc=; b=dTBgvTrnEhv0I5
-	lvYUEjCKDYYTd1gGz9YmVfiv4OcPovatqo4LFTTUK38Bb8Wu4QHaXYUmyNiKARbdNW9HLfRBAxi6W
-	clGTkdYsHfJ6Z76MlYarbxbNB/6TuIKYprnqiVRAN8IMpFu5g1BUhg66mL7t0ODO+bhsL+/+1f5l/
-	l0xoC0bPRKSpfe71Gm23y1WuDKw1xMMzvS2zq2jgzsD6wnq/fYXE/etTIeGru5DNGZONymQK7ABBI
-	kyylQppp0h066WkStskgbrrmQd0gPG5XnZbsLLHNi0sDrDLo81iQW9GhdtutA4WWNQh9IJhNC5Qma
-	ZEasBjD0qj3Fdfnjd/pw==;
+	List-Owner; bh=ez2LPruVCwEqt2muhc/Gd+okPEnDr3X9Cq1X0xpU0nE=; b=MPS6gh6dnYSKrw
+	AhRo+vzic5kkE4LZ3x3S7+4ne545atOQdEEg+Q8yd4AjBrSeQHPpkiKZncawkEuhhCy7Rbh+w5F51
+	JMMC9O60fX264KCTTzEPgMytJencHMB0XMmNuqIaicGnN+zb3jtNj0SKvQupHLG2JRTLHTKO3PoTn
+	SgjaaAEpxXT4iwrLeBbcaXqIRmJbjEsuH9cMOZNQqQi9aljnXGW0cf+lRJN6PHxxUdo9UHKujh7u6
+	n832FOHlaYkZaxgXZKKuDPr2RMLEcA7CIThnW0CDC9K4O14lQaJHjyBvuMRmFY8qQJPYVS2T+TYeD
+	BK3PLlKq7kZudioBIf4g==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jMnyE-00078V-SV; Fri, 10 Apr 2020 07:20:58 +0000
+	id 1jMnxo-0006i7-Sp; Fri, 10 Apr 2020 07:20:32 +0000
 Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jMnxn-0006go-KF; Fri, 10 Apr 2020 07:20:33 +0000
-X-UUID: 1694f905be944b5ab5a27f54b5364077-20200409
+ id 1jMnxm-0006go-9S; Fri, 10 Apr 2020 07:20:31 +0000
+X-UUID: c9e54b70f2f64e1087b05d1f488266a1-20200409
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
  s=dk; 
  h=Content-Transfer-Encoding:Content-Type:MIME-Version:References:In-Reply-To:Message-ID:Date:Subject:CC:To:From;
- bh=kSc1VSUFMhS93AZxKPxNBlcYGw6yPmLBY8gUjRDuIcg=; 
- b=IVtYDc3kg9Cp0KsptcASnXMZhuUYgq5sb0cXEcccQ777kllcmwauRdtPmcS9rflxDzJ0YriHQzW7MOlKPmNc5Ig6IwFftgFdu35jC/Z3qA55Eo6Qoy//n4YAI2wzelA56cDy6tJDBSU2rxXqaPqk5ZCfH8fsspctpWtlyOuNbew=;
-X-UUID: 1694f905be944b5ab5a27f54b5364077-20200409
+ bh=ygWe+eLtAFpl7pbb42yoKAd2QeY0+GuA6Di3Dh7DXzY=; 
+ b=HCaRMZW4ivGsHsJ1BJ+bY+/A8A2Nb72V8QzlxhUuMredEpdQOg5hrcwcBFhmPPoTnZLFuF579QEHykwT73qfn6++1trN7FG7cFoD9+uZ6ZIwWkV7jFT1NtNlHlOc/c3waZ6FmSApCwObVqfVW6w4MXGHJv2IAZVaSqbvdSfbybc=;
+X-UUID: c9e54b70f2f64e1087b05d1f488266a1-20200409
 Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
  (envelope-from <louis.kuo@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1181888470; Thu, 09 Apr 2020 23:20:22 -0800
-Received: from mtkmbs05n2.mediatek.inc (172.21.101.140) by
+ with ESMTP id 843401109; Thu, 09 Apr 2020 23:20:22 -0800
+Received: from mtkmbs08n1.mediatek.inc (172.21.101.55) by
  MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
- 15.0.1497.2; Fri, 10 Apr 2020 00:17:33 -0700
+ 15.0.1497.2; Fri, 10 Apr 2020 00:17:39 -0700
 Received: from MTKCAS06.mediatek.inc (172.21.101.30) by
- mtkmbs05n2.mediatek.inc (172.21.101.140) with Microsoft SMTP Server (TLS) id
+ mtkmbs08n1.mediatek.inc (172.21.101.55) with Microsoft SMTP Server (TLS) id
  15.0.1497.2; Fri, 10 Apr 2020 15:17:30 +0800
 Received: from mtksdccf07.mediatek.inc (172.21.84.99) by MTKCAS06.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1497.2 via
- Frontend Transport; Fri, 10 Apr 2020 15:17:30 +0800
+ Frontend Transport; Fri, 10 Apr 2020 15:17:31 +0800
 From: Louis Kuo <louis.kuo@mediatek.com>
 To: <hans.verkuil@cisco.com>, <laurent.pinchart+renesas@ideasonboard.com>,
  <tfiga@chromium.org>, <keiichiw@chromium.org>, <matthias.bgg@gmail.com>,
  <mchehab@kernel.org>
-Subject: [RFC PATCH V6 2/3] dt-bindings: mt8183: Add sensor interface
- dt-bindings
-Date: Fri, 10 Apr 2020 15:17:22 +0800
-Message-ID: <20200410071723.19720-3-louis.kuo@mediatek.com>
+Subject: [RFC PATCH V6 3/3] dts: arm64: mt8183: Add sensor interface nodes
+Date: Fri, 10 Apr 2020 15:17:23 +0800
+Message-ID: <20200410071723.19720-4-louis.kuo@mediatek.com>
 X-Mailer: git-send-email 2.18.0
 In-Reply-To: <20200410071723.19720-1-louis.kuo@mediatek.com>
 References: <20200410071723.19720-1-louis.kuo@mediatek.com>
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200410_002031_694627_4539B217 
-X-CRM114-Status: UNSURE (   9.91  )
+X-CRM114-CacheID: sfid-20200410_002030_336161_B9941C0A 
+X-CRM114-Status: UNSURE (   7.55  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
@@ -101,241 +100,50 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-This patch adds the DT binding documentation for the sensor interface
-module in Mediatek SoCs.
+Add nodes for Mediatek's sensor interface device. Sensor interface module
+embedded in Mediatek SOCs, works as a HW camera interface controller
+intended for image and data transmission between cameras and host devices.
 
 Signed-off-by: Louis Kuo <louis.kuo@mediatek.com>
 ---
- .../bindings/media/mediatek-seninf.yaml       | 219 ++++++++++++++++++
- 1 file changed, 219 insertions(+)
- create mode 100644 Documentation/devicetree/bindings/media/mediatek-seninf.yaml
+ arch/arm64/boot/dts/mediatek/mt8183.dtsi | 25 ++++++++++++++++++++++++
+ 1 file changed, 25 insertions(+)
 
-diff --git a/Documentation/devicetree/bindings/media/mediatek-seninf.yaml b/Documentation/devicetree/bindings/media/mediatek-seninf.yaml
-new file mode 100644
-index 000000000000..c9e5776a2bd0
---- /dev/null
-+++ b/Documentation/devicetree/bindings/media/mediatek-seninf.yaml
-@@ -0,0 +1,219 @@
-+# SPDX-License-Identifier: (GPL-2.0+ OR MIT)
-+%YAML 1.2
-+---
-+$id: http://devicetree.org/schemas/media/mediatek-seninf.yaml#
-+$schema: http://devicetree.org/meta-schemas/core.yaml#
+diff --git a/arch/arm64/boot/dts/mediatek/mt8183.dtsi b/arch/arm64/boot/dts/mediatek/mt8183.dtsi
+index 433c62efab2d..5c7bed5a6f32 100644
+--- a/arch/arm64/boot/dts/mediatek/mt8183.dtsi
++++ b/arch/arm64/boot/dts/mediatek/mt8183.dtsi
+@@ -715,5 +715,30 @@
+ 			reg = <0 0x1a000000 0 0x1000>;
+ 			#clock-cells = <1>;
+ 		};
++		seninf: seninf@1a040000 {
++			compatible = "mediatek,mt8183-seninf";
++			reg = <0 0x1a040000 0 0x8000>,
++			      <0 0x11c80000 0 0x6000>;
++			reg-names = "base", "rx";
++			interrupts = <GIC_SPI 251 IRQ_TYPE_LEVEL_LOW>;
++			power-domains = <&scpsys MT8183_POWER_DOMAIN_CAM>;
++			clocks = <&camsys CLK_CAM_SENINF>,
++				 <&topckgen CLK_TOP_MUX_SENINF>;
++			clock-names = "clk_cam_seninf", "clk_top_mux_seninf";
++			status = "disabled";
 +
-+title: Mediatek seninf MIPI-CSI2 host driver
++			ports {
++				#address-cells = <1>;
++				#size-cells = <0>;
 +
-+maintainers:
-+  - Louis Kuo <louis.kuo@mediatek.com>
++				port@4 {
++					reg = <4>;
 +
-+description: |
-+  Seninf MIPI-CSI2 host driver is a HW camera interface controller. It support
-+  a widely adopted, simple, high-speed protocol primarily intended for
-+  point-to-point image and video transmission between cameras and host devices.
-+
-+properties:
-+  compatible:
-+    const: mediatek,mt8183-seninf
-+
-+  reg:
-+    minItems: 2
-+    items:
-+      - description: The Seninf main register region
-+      - description: The RX register region
-+
-+  reg-names:
-+    minItems: 2
-+    items:
-+      - const: base
-+      - const: rx
-+
-+  interrupts:
-+    maxItems: 1
-+
-+  power-domains:
-+    maxItems: 1
-+
-+  clocks:
-+    items:
-+      - description: Seninf camsys clock
-+      - description: Seninf top mux clock
-+
-+  clock-names:
-+    items:
-+      - const: clk_cam_seninf
-+      - const: clk_top_mux_seninf
-+
-+  # See ./video-interfaces.txt for details
-+  ports:
-+    type: object
-+    additionalProperties: false
-+
-+    properties: 
-+      port@0:
-+        type: object
-+        description: connection point for sensor at port 0
-+        additionalProperties: false
-+
-+        properties:
-+          reg:
-+            const: 0
-+
-+        patternProperties:
-+          endpoint:
-+            type: object
-+            additionalProperties: false
-+
-+            properties:
-+              data-lanes:
-+                minItems: 1
-+                maxItems: 4
-+
-+              remote-endpoint: true
-+
-+      port@1:
-+        type: object
-+        description: connection point for sensor at port 1
-+        additionalProperties: false
-+
-+        properties:
-+          reg:
-+            const: 1
-+
-+        patternProperties:
-+          endpoint:
-+            type: object
-+            additionalProperties: false
-+
-+            properties:
-+              data-lanes:
-+                minItems: 1
-+                maxItems: 4
-+
-+              remote-endpoint: true
-+
-+      port@4:
-+        type: object
-+        description: connection point for camsys
-+        additionalProperties: false
-+
-+        properties:
-+          reg:
-+            const: 4
-+
-+        patternProperties:
-+          endpoint:
-+            type: object
-+            additionalProperties: false
-+
-+            properties:
-+              remote-endpoint: true
-+
-+    required:
-+      - port@0
-+      - port@1
-+      - port@4
-+
-+required:
-+  - compatible
-+  - interrupts
-+  - clocks
-+  - clock-names
-+  - power-domains
-+  - ports
-+
-+additionalProperties: false
-+
-+examples:
-+  - |
-+
-+    #include <dt-bindings/clock/mt8183-clk.h>
-+    #include <dt-bindings/interrupt-controller/irq.h>
-+    #include <dt-bindings/interrupt-controller/arm-gic.h>
-+    #include <dt-bindings/power/mt8183-power.h>
-+
-+    parent0: parent@0 {
-+        #address-cells = <2>;
-+        #size-cells = <2>;
-+
-+        seninf: seninf@1a040000 {
-+            compatible = "mediatek,mt8183-seninf";
-+            reg = <0 0x1a040000 0 0x8000>,
-+                  <0 0x11c80000 0 0x6000>;
-+            reg-names = "base", "rx";
-+            interrupts = <GIC_SPI 251 IRQ_TYPE_LEVEL_LOW>;
-+            power-domains = <&scpsys MT8183_POWER_DOMAIN_CAM>;
-+            clocks = <&camsys CLK_CAM_SENINF>,
-+                <&topckgen CLK_TOP_MUX_SENINF>;
-+            clock-names = "clk_cam_seninf", "clk_top_mux_seninf";
-+
-+            ports {
-+                #address-cells = <1>;
-+                #size-cells = <0>;
-+
-+                port@0 {
-+                    reg = <0>;
-+
-+                    mipi_in_bcam: endpoint {
-+                        data-lanes = <0 1 3 4>;
-+                        remote-endpoint = <&bcam_out>;
-+                    };
-+                };
-+
-+                port@1 {
-+                    reg = <1>;
-+
-+                    mipi_in_fcam: endpoint {
-+                        data-lanes = <1>;
-+                        remote-endpoint = <&fcam_out>;
-+                    };
-+                };
-+
-+                port@4 {
-+                    reg = <4>;
-+
-+                    seninf_camisp_endpoint: endpoint {
-+                        remote-endpoint = <&camisp_endpoint>;
-+                    };
-+                };
-+            };
-+        };
-+
-+        i2c2: i2c@11009000 {
-+            clock-frequency = <400000>;
-+            #address-cells = <1>;
-+            #size-cells = <0>;
-+
-+            wcam: camera@36 {
-+                compatible = "ovti,ov5695";
-+                reg = <0x36>;
-+
-+                port {
-+                    bcam_out: endpoint {
-+                        remote-endpoint = <&mipi_in_bcam>;
-+                        data-lanes = <0 1 3 4>;
-+                    };
-+                };
-+            };
-+        };
-+
-+        i2c4: i2c@11008000 {
-+            clock-frequency = <400000>;
-+            #address-cells = <1>;
-+            #size-cells = <0>;
-+            
-+            ucam: camera@3c {
-+                compatible = "ovti,ov2685";
-+                reg = <0x3c>;
-+
-+                port {
-+                    fcam_out: endpoint {
-+                        remote-endpoint = <&mipi_in_fcam>;
-+                        data-lanes = <1>;
-+                    };
-+                };
-+            };
-+        };
-+    };
-\ No newline at end of file
++					seninf_camisp_endpoint: endpoint {
++						remote-endpoint = <&camisp_endpoint>;
++					};
++				};
++			};
++		};
+ 	};
+ };
 -- 
 2.18.0
 _______________________________________________
