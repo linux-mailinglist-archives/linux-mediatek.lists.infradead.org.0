@@ -2,61 +2,63 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 346DA1A4C64
-	for <lists+linux-mediatek@lfdr.de>; Sat, 11 Apr 2020 01:02:15 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id CAF261A4C69
+	for <lists+linux-mediatek@lfdr.de>; Sat, 11 Apr 2020 01:02:21 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=Rqm4PXIe+nsPl4KdwBF8+Be/idxjiQBxQ+T0aG5VkiM=; b=aNE9ZoEVFhA55d
-	a94xL6hs2hLSnW/BTVPOkIoePAXK5z+lxcteRkUdOjXKFZOrFj4ECiWvEKKJpdk1v4FRapSvnA1MU
-	GOqrZJbKghgdWHRMSUsCec4cdz3pPCelzNGrolWTUxeYnvc1NiLwJyGA7X5EGn+yt8fJsFs0GBDhT
-	Oxb9BDPk1AcPkrkjjvaFg878IzAoZHE/FA6tOmGOyjCOQCzLaQcMwTD8V4R4cIPwpCTDvJE8C5h7k
-	f9di3+0JxosoJlrTWMjAGJ2X8Ou+Ns3+PaISht75MurpaoTr7CT5LuTOSNDF/Tm7OFSJ2iCLIKxMR
-	LqZDGzXoNFSSuL5+N5lQ==;
+	List-Owner; bh=efsfVl/JZfLDGOvxlNy/cNISxqlvgjyyeKkOx6MMS8k=; b=IYdMqvNMBNhsLj
+	bI618y/s8yYCpn7/N9KMCt9cnxBMsbbmmL/VjkVKKAU/bENwHFdaAaBilwLYR83QdpbE20X0YRTW+
+	KRY+09ZIwar9Oy3bCH6rwSFZo1/FRh3aijVQCIa8c3Uonx4vwYk0wVlNSVxmkHD5iVIXUs+lADEyl
+	F+R21MeHduZC8CtNx2/2bj2Qaa3eSNkIg4wNuABzKEr6O7cDX12RgNHImzd+b/5QfzkS1ASwQMSrk
+	r+OZFAa+9kwe2J4Pcv2/uviWF9IhYoSZ4vrejUeHVHUy6pMe58uYowGOvWyEPMW8XDOAx1O1L9DAC
+	W6uOfhCGQlalMaQzC7WA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jN2f3-0000OK-4v; Fri, 10 Apr 2020 23:02:09 +0000
+	id 1jN2f9-0000c8-Oq; Fri, 10 Apr 2020 23:02:15 +0000
 Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jN2ev-0000Cc-7F
- for linux-mediatek@lists.infradead.org; Fri, 10 Apr 2020 23:02:03 +0000
-X-UUID: e626b55c6fa14d37afdc1e96a32fb54c-20200410
+ id 1jN2ez-0000Ct-0w
+ for linux-mediatek@lists.infradead.org; Fri, 10 Apr 2020 23:02:07 +0000
+X-UUID: 2cc24da2028a4ff0aa4369502ca4cc0f-20200410
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
  s=dk; 
  h=Content-Transfer-Encoding:Content-Type:MIME-Version:References:In-Reply-To:Message-ID:Date:Subject:CC:To:From;
- bh=f5kQlwPF4iuq2MyeYNdnk1RWMKmEndEWIG76IKKWz2k=; 
- b=dXyh95S3+WHnzy01qLVDX98LVcBeLdEDhqH205D0xVNXPVk+uQyU56rJkQ5hQkEsdQZxXu9tEadZjTQneoPILOJlIDHQf7DcVPHt6NiIzyJFYN5qzjJk3x0jwmkoKbnKDn6g2ZDW0mSfmyxbkcqiVbBN4vPaIyp/Ovp1Qhc3qQA=;
-X-UUID: e626b55c6fa14d37afdc1e96a32fb54c-20200410
+ bh=LvCV4wftelyRIAz8An6hhVSxCWhChzcDS3rdLydG/G4=; 
+ b=UNRw+GDvMX3wWEox8uddQHUlBJpLr5A+4tdn88Z7ExX1UHkARsOa0rwk+MGZ9YUtlm/KIB3nMthmpg7Wvg0Bf3hA0loXy0Ge7WJwMoEe1iXSM2oZQQog7aJ6i6T88AWbfo19zSj62+ofyZe8pjTof8MkaRzBnAfnhbWscZp8NVw=;
+X-UUID: 2cc24da2028a4ff0aa4369502ca4cc0f-20200410
 Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
  (envelope-from <ryder.lee@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 30554180; Fri, 10 Apr 2020 15:01:58 -0800
-Received: from MTKMBS02N1.mediatek.inc (172.21.101.77) by
+ with ESMTP id 117061392; Fri, 10 Apr 2020 15:01:58 -0800
+Received: from mtkmbs08n2.mediatek.inc (172.21.101.56) by
  MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
  15.0.1497.2; Fri, 10 Apr 2020 15:51:57 -0700
 Received: from MTKCAS06.mediatek.inc (172.21.101.30) by
- mtkmbs02n1.mediatek.inc (172.21.101.77) with Microsoft SMTP Server (TLS) id
- 15.0.1497.2; Sat, 11 Apr 2020 06:51:52 +0800
+ mtkmbs08n2.mediatek.inc (172.21.101.56) with Microsoft SMTP Server (TLS) id
+ 15.0.1497.2; Sat, 11 Apr 2020 06:51:53 +0800
 Received: from mtksdccf07.mediatek.inc (172.21.84.99) by MTKCAS06.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1497.2 via
- Frontend Transport; Sat, 11 Apr 2020 06:51:52 +0800
+ Frontend Transport; Sat, 11 Apr 2020 06:51:53 +0800
 From: Ryder Lee <ryder.lee@mediatek.com>
 To: Felix Fietkau <nbd@nbd.name>, Lorenzo Bianconi
  <lorenzo.bianconi@redhat.com>
-Subject: [PATCH v1 15/16] mt76: mt7915: set peer Tx fixed rate through debugfs
-Date: Sat, 11 Apr 2020 06:51:30 +0800
-Message-ID: <4c58f4af64d93ac4980d6b0651563d85c3035909.1586558901.git.ryder.lee@mediatek.com>
+Subject: [PATCH v1 16/16] mt76: mt7915: enable firmware module debug support
+Date: Sat, 11 Apr 2020 06:51:31 +0800
+Message-ID: <ef463323fbc4f470bcaa47b9956c083e99fa04ea.1586558901.git.ryder.lee@mediatek.com>
 X-Mailer: git-send-email 2.18.0
 In-Reply-To: <cover.1586558901.git.ryder.lee@mediatek.com>
 References: <cover.1586558901.git.ryder.lee@mediatek.com>
 MIME-Version: 1.0
+X-TM-SNTS-SMTP: AF923D2F7F94F4B56F001A01F45E8C903E4192FE0F3FFFE60C89D73CD3BEFA052000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200410_160201_296295_7148917F 
-X-CRM114-Status: GOOD (  10.16  )
+X-CRM114-CacheID: sfid-20200410_160205_280201_E75EB88E 
+X-CRM114-Status: UNSURE (   9.53  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
@@ -96,159 +98,209 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Driver can manually set fixed rate for each peer through debugfs.
-
-May use .set_bitrate_mask callback and iterate stations under the
-current vif to achieve the aim once it supports HE rate.
+This allows host driver to get useful information of some important modules.
 
 Signed-off-by: Ryder Lee <ryder.lee@mediatek.com>
-Signed-off-by: Shayne Chen <shayne.chen@mediatek.com>
+Signed-off-by: Chih-Min Chen <chih-min.chen@mediatek.com>
 ---
- .../wireless/mediatek/mt76/mt7915/debugfs.c   | 13 ++++++
- .../net/wireless/mediatek/mt76/mt7915/mcu.c   | 46 +++++++++++++++++++
- .../net/wireless/mediatek/mt76/mt7915/mcu.h   | 28 +++++++++++
+ .../wireless/mediatek/mt76/mt7915/debugfs.c   | 36 ++++++++++++
+ .../net/wireless/mediatek/mt76/mt7915/mcu.c   | 58 +++++++++++++++++++
+ .../net/wireless/mediatek/mt76/mt7915/mcu.h   |  3 +
  .../wireless/mediatek/mt76/mt7915/mt7915.h    |  2 +
- 4 files changed, 89 insertions(+)
+ 4 files changed, 99 insertions(+)
 
 diff --git a/drivers/net/wireless/mediatek/mt76/mt7915/debugfs.c b/drivers/net/wireless/mediatek/mt76/mt7915/debugfs.c
-index 27f523d69618..181f42fcdeda 100644
+index 181f42fcdeda..73071db709b3 100644
 --- a/drivers/net/wireless/mediatek/mt76/mt7915/debugfs.c
 +++ b/drivers/net/wireless/mediatek/mt76/mt7915/debugfs.c
-@@ -302,6 +302,18 @@ int mt7915_init_debugfs(struct mt7915_dev *dev)
+@@ -74,6 +74,41 @@ mt7915_dbdc_get(void *data, u64 *val)
+ DEFINE_DEBUGFS_ATTRIBUTE(fops_dbdc, mt7915_dbdc_get,
+ 			 mt7915_dbdc_set, "%lld\n");
  
- /** per-station debugfs **/
- 
-+/* usage: <tx mode> <ldpc> <stbc> <bw> <gi> <nss> <mcs> */
-+static int mt7915_sta_fixed_rate_set(void *data, u64 rate)
++static int
++mt7915_fw_debug_set(void *data, u64 val)
 +{
-+	struct ieee80211_sta *sta = data;
-+	struct mt7915_sta *msta = (struct mt7915_sta *)sta->drv_priv;
++	struct mt7915_dev *dev = data;
++	enum {
++		DEBUG_TXCMD = 62,
++		DEBUG_CMD_RPT_TX,
++		DEBUG_CMD_RPT_TRIG,
++		DEBUG_SPL,
++		DEBUG_RPT_RX,
++	} debug;
 +
-+	return mt7915_mcu_set_fixed_rate(msta->vif->dev, sta, rate);
++	dev->fw_debug = !!val;
++
++	mt7915_mcu_fw_log_2_host(dev, dev->fw_debug ? 2 : 0);
++
++	for (debug = DEBUG_TXCMD; debug <= DEBUG_RPT_RX; debug++)
++		mt7915_mcu_fw_dbg_ctrl(dev, debug, dev->fw_debug);
++
++	return 0;
 +}
 +
-+DEFINE_DEBUGFS_ATTRIBUTE(fops_fixed_rate, NULL,
-+			 mt7915_sta_fixed_rate_set, "%llx\n");
++static int
++mt7915_fw_debug_get(void *data, u64 *val)
++{
++	struct mt7915_dev *dev = data;
 +
- static int
- mt7915_sta_stats_read(struct seq_file *s, void *data)
- {
-@@ -362,5 +374,6 @@ static const struct file_operations fops_sta_stats = {
- void mt7915_sta_add_debugfs(struct ieee80211_hw *hw, struct ieee80211_vif *vif,
- 			    struct ieee80211_sta *sta, struct dentry *dir)
- {
-+	debugfs_create_file("fixed_rate", 0600, dir, sta, &fops_fixed_rate);
- 	debugfs_create_file("stats", 0400, dir, sta, &fops_sta_stats);
- }
++	*val = dev->fw_debug;
++
++	return 0;
++}
++
++DEFINE_DEBUGFS_ATTRIBUTE(fops_fw_debug, mt7915_fw_debug_get,
++			 mt7915_fw_debug_set, "%lld\n");
++
+ static void
+ mt7915_ampdu_stat_read_phy(struct mt7915_phy *phy,
+ 			   struct seq_file *file)
+@@ -287,6 +322,7 @@ int mt7915_init_debugfs(struct mt7915_dev *dev)
+ 				    mt7915_queues_acq);
+ 	debugfs_create_file("tx_stats", 0400, dir, dev, &fops_tx_stats);
+ 	debugfs_create_file("dbdc", 0600, dir, dev, &fops_dbdc);
++	debugfs_create_file("fw_debug", 0600, dir, dev, &fops_fw_debug);
+ 	debugfs_create_u32("dfs_hw_pattern", 0400, dir, &dev->hw_pattern);
+ 	/* test knobs */
+ 	debugfs_create_file("radar_trigger", 0200, dir, dev,
 diff --git a/drivers/net/wireless/mediatek/mt76/mt7915/mcu.c b/drivers/net/wireless/mediatek/mt76/mt7915/mcu.c
-index e6e4405f5766..3905d0d2ce8a 100644
+index 3905d0d2ce8a..dc1744c36bf2 100644
 --- a/drivers/net/wireless/mediatek/mt76/mt7915/mcu.c
 +++ b/drivers/net/wireless/mediatek/mt76/mt7915/mcu.c
-@@ -1768,6 +1768,52 @@ int mt7915_mcu_add_sta(struct mt7915_dev *dev, struct ieee80211_vif *vif,
+@@ -503,6 +503,28 @@ mt7915_mcu_tx_rate_report(struct mt7915_dev *dev, struct sk_buff *skb)
+ 	}
+ }
+ 
++static void
++mt7915_mcu_rx_log_message(struct mt7915_dev *dev, struct sk_buff *skb)
++{
++	struct mt7915_mcu_rxd *rxd = (struct mt7915_mcu_rxd *)skb->data;
++	const char *data = (char *)&rxd[1];
++	const char *type;
++
++	switch (rxd->s2d_index) {
++	case 0:
++		type = "WM";
++		break;
++	case 2:
++		type = "WA";
++		break;
++	default:
++		type = "unknown";
++		break;
++	}
++
++	wiphy_info(mt76_hw(dev)->wiphy, "%s: %s", type, data);
++}
++
+ static void
+ mt7915_mcu_rx_ext_event(struct mt7915_dev *dev, struct sk_buff *skb)
+ {
+@@ -520,6 +542,9 @@ mt7915_mcu_rx_ext_event(struct mt7915_dev *dev, struct sk_buff *skb)
+ 	case MCU_EXT_EVENT_RATE_REPORT:
+ 		mt7915_mcu_tx_rate_report(dev, skb);
+ 		break;
++	case MCU_EXT_EVENT_FW_LOG_2_HOST:
++		mt7915_mcu_rx_log_message(dev, skb);
++		break;
+ 	default:
+ 		break;
+ 	}
+@@ -545,6 +570,7 @@ void mt7915_mcu_rx_event(struct mt7915_dev *dev, struct sk_buff *skb)
+ 	struct mt7915_mcu_rxd *rxd = (struct mt7915_mcu_rxd *)skb->data;
+ 
+ 	if (rxd->ext_eid == MCU_EXT_EVENT_THERMAL_PROTECT ||
++	    rxd->ext_eid == MCU_EXT_EVENT_FW_LOG_2_HOST ||
+ 	    rxd->ext_eid == MCU_EXT_EVENT_ASSERT_DUMP ||
+ 	    rxd->ext_eid == MCU_EXT_EVENT_PS_SYNC ||
+ 	    rxd->ext_eid == MCU_EXT_EVENT_RATE_REPORT ||
+@@ -2298,6 +2324,37 @@ static int mt7915_load_firmware(struct mt7915_dev *dev)
  	return 0;
  }
  
-+int mt7915_mcu_set_fixed_rate(struct mt7915_dev *dev,
-+			      struct ieee80211_sta *sta, u32 rate)
++int mt7915_mcu_fw_log_2_host(struct mt7915_dev *dev, u8 ctrl)
 +{
-+	struct mt7915_sta *msta = (struct mt7915_sta *)sta->drv_priv;
-+	struct mt7915_vif *mvif = msta->vif;
-+	struct sta_rec_ra_fixed *ra;
-+	struct sk_buff *skb;
-+	struct tlv *tlv;
++	struct {
++		u8 ctrl_val;
++		u8 pad[3];
++	} data = {
++		.ctrl_val = ctrl
++	};
 +
-+	skb = mt7915_mcu_alloc_sta_req(dev, mvif, msta,
-+				       MT7915_STA_UPDATE_MAX_SIZE);
-+	if (IS_ERR(skb))
-+		return PTR_ERR(skb);
-+
-+	tlv = mt7915_mcu_add_tlv(skb, STA_REC_RA_UPDATE, sizeof(*ra));
-+	ra = (struct sta_rec_ra_fixed *)tlv;
-+
-+	if (!rate) {
-+		ra->field = cpu_to_le32(RATE_PARAM_AUTO);
-+		goto out;
-+	} else {
-+		ra->field = cpu_to_le32(RATE_PARAM_FIXED);
-+	}
-+
-+	ra->phy.type = FIELD_GET(RATE_CFG_PHY_TYPE, rate);
-+	ra->phy.bw = FIELD_GET(RATE_CFG_BW, rate);
-+	ra->phy.nss = FIELD_GET(RATE_CFG_NSS, rate);
-+	ra->phy.mcs = FIELD_GET(RATE_CFG_MCS, rate);
-+	ra->phy.stbc = FIELD_GET(RATE_CFG_STBC, rate);
-+
-+	if (ra->phy.bw)
-+		ra->phy.ldpc = 7;
-+	else
-+		ra->phy.ldpc = FIELD_GET(RATE_CFG_LDPC, rate) * 7;
-+
-+	/* HT/VHT - SGI: 1, LGI: 0; HE - SGI: 0, MGI: 1, LGI: 2 */
-+	if (ra->phy.type > MT_PHY_TYPE_VHT)
-+		ra->phy.sgi = ra->phy.mcs * 85;
-+	else
-+		ra->phy.sgi = ra->phy.mcs * 15;
-+
-+out:
-+	return __mt76_mcu_skb_send_msg(&dev->mt76, skb,
-+				       MCU_EXT_CMD_STA_REC_UPDATE, true);
++	return __mt76_mcu_send_msg(&dev->mt76, MCU_EXT_CMD_FW_LOG_2_HOST,
++				   &data, sizeof(data), true);
 +}
 +
- int mt7915_mcu_add_dev_info(struct mt7915_dev *dev,
- 			    struct ieee80211_vif *vif, bool enable)
++int mt7915_mcu_fw_dbg_ctrl(struct mt7915_dev *dev, u32 module, u8 level)
++{
++	struct {
++		u8 ver;
++		u8 pad;
++		u16 len;
++		u8 level;
++		u8 rsv[3];
++		u32 module_idx;
++	} data = {
++		.module_idx = cpu_to_le32(module),
++		.level = level,
++	};
++
++	return __mt76_mcu_send_msg(&dev->mt76, MCU_EXT_CMD_FW_DBG_CTRL,
++				   &data, sizeof(data), false);
++}
++
+ int mt7915_mcu_init(struct mt7915_dev *dev)
  {
+ 	static const struct mt76_mcu_ops mt7915_mcu_ops = {
+@@ -2319,6 +2376,7 @@ int mt7915_mcu_init(struct mt7915_dev *dev)
+ 		return ret;
+ 
+ 	set_bit(MT76_STATE_MCU_RUNNING, &dev->mphy.state);
++	mt7915_mcu_fw_log_2_host(dev, 0);
+ 
+ 	return 0;
+ }
 diff --git a/drivers/net/wireless/mediatek/mt76/mt7915/mcu.h b/drivers/net/wireless/mediatek/mt76/mt7915/mcu.h
-index 52b420210908..2b2708828c1a 100644
+index 2b2708828c1a..42767c5204da 100644
 --- a/drivers/net/wireless/mediatek/mt76/mt7915/mcu.h
 +++ b/drivers/net/wireless/mediatek/mt76/mt7915/mcu.h
-@@ -823,6 +823,34 @@ struct sta_rec_ra {
- 	struct ra_phy phy;
- } __packed;
- 
-+struct sta_rec_ra_fixed {
-+	__le16 tag;
-+	__le16 len;
-+
-+	__le32 field;
-+	u8 op_mode;
-+	u8 op_vht_chan_width;
-+	u8 op_vht_rx_nss;
-+	u8 op_vht_rx_nss_type;
-+
-+	struct ra_phy phy;
-+
-+	u8 spe_en;
-+	u8 short_preamble;
-+	u8 is_5g;
-+	u8 mmps_mode;
-+} __packed;
-+
-+#define RATE_PARAM_FIXED		3
-+#define RATE_PARAM_AUTO			20
-+#define RATE_CFG_MCS			GENMASK(3, 0)
-+#define RATE_CFG_NSS			GENMASK(7, 4)
-+#define RATE_CFG_GI			GENMASK(11, 8)
-+#define RATE_CFG_BW			GENMASK(15, 12)
-+#define RATE_CFG_STBC			GENMASK(19, 16)
-+#define RATE_CFG_LDPC			GENMASK(23, 20)
-+#define RATE_CFG_PHY_TYPE		GENMASK(27, 24)
-+
+@@ -38,6 +38,7 @@ enum {
+ /* ext event table */
  enum {
- 	STA_REC_BASIC,
- 	STA_REC_RA,
+ 	MCU_EXT_EVENT_PS_SYNC = 0x5,
++	MCU_EXT_EVENT_FW_LOG_2_HOST = 0x13,
+ 	MCU_EXT_EVENT_THERMAL_PROTECT = 0x22,
+ 	MCU_EXT_EVENT_ASSERT_DUMP = 0x23,
+ 	MCU_EXT_EVENT_RDD_REPORT = 0x3a,
+@@ -192,6 +193,7 @@ enum {
+ 	MCU_EXT_CMD_EFUSE_ACCESS = 0x01,
+ 	MCU_EXT_CMD_PM_STATE_CTRL = 0x07,
+ 	MCU_EXT_CMD_CHANNEL_SWITCH = 0x08,
++	MCU_EXT_CMD_FW_LOG_2_HOST = 0x13,
+ 	MCU_EXT_CMD_EFUSE_BUFFER_MODE = 0x21,
+ 	MCU_EXT_CMD_STA_REC_UPDATE = 0x25,
+ 	MCU_EXT_CMD_BSS_INFO_UPDATE = 0x26,
+@@ -207,6 +209,7 @@ enum {
+ 	MCU_EXT_CMD_SET_SER_TRIGGER = 0x81,
+ 	MCU_EXT_CMD_SCS_CTRL = 0x82,
+ 	MCU_EXT_CMD_RATE_CTRL = 0x87,
++	MCU_EXT_CMD_FW_DBG_CTRL = 0x95,
+ 	MCU_EXT_CMD_SET_RDD_TH = 0x9d,
+ };
+ 
 diff --git a/drivers/net/wireless/mediatek/mt76/mt7915/mt7915.h b/drivers/net/wireless/mediatek/mt76/mt7915/mt7915.h
-index ae3866d0a47a..c9015fa25156 100644
+index c9015fa25156..fbca203d1706 100644
 --- a/drivers/net/wireless/mediatek/mt76/mt7915/mt7915.h
 +++ b/drivers/net/wireless/mediatek/mt76/mt7915/mt7915.h
-@@ -302,6 +302,8 @@ int mt7915_mcu_add_smps(struct mt7915_dev *dev, struct ieee80211_vif *vif,
- 			struct ieee80211_sta *sta);
- int mt7915_mcu_set_chan_info(struct mt7915_phy *phy, int cmd);
- int mt7915_mcu_set_tx(struct mt7915_dev *dev, struct ieee80211_vif *vif);
-+int mt7915_mcu_set_fixed_rate(struct mt7915_dev *dev,
-+			      struct ieee80211_sta *sta, u32 rate);
- int mt7915_mcu_set_eeprom(struct mt7915_dev *dev);
- int mt7915_mcu_get_eeprom(struct mt7915_dev *dev, u32 offset);
- int mt7915_mcu_set_mac(struct mt7915_dev *dev, int band, bool enable,
+@@ -323,6 +323,8 @@ int mt7915_mcu_get_rate_info(struct mt7915_dev *dev, u32 cmd, u16 wlan_idx);
+ int mt7915_mcu_get_temperature(struct mt7915_dev *dev, int index);
+ int mt7915_mcu_rdd_cmd(struct mt7915_dev *dev, enum mt7915_rdd_cmd cmd,
+ 		       u8 index, u8 rx_sel, u8 val);
++int mt7915_mcu_fw_log_2_host(struct mt7915_dev *dev, u8 ctrl);
++int mt7915_mcu_fw_dbg_ctrl(struct mt7915_dev *dev, u32 module, u8 level);
+ void mt7915_mcu_rx_event(struct mt7915_dev *dev, struct sk_buff *skb);
+ void mt7915_mcu_exit(struct mt7915_dev *dev);
+ 
 -- 
 2.18.0
 _______________________________________________
