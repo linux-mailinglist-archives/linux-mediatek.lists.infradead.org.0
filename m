@@ -2,136 +2,81 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 1E2C91A454C
-	for <lists+linux-mediatek@lfdr.de>; Fri, 10 Apr 2020 12:40:01 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 81CAB1A455B
+	for <lists+linux-mediatek@lfdr.de>; Fri, 10 Apr 2020 12:47:09 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:References:In-Reply-To:MIME-Version:
-	Date:Message-ID:From:To:Subject:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
+	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=ahD4up/YZNLMhsJwyOgqb5Dj8qcdvAW6YnZnegNEy2c=; b=HrBYlL30t1bNAC
-	eovg9OfX0+3W1o65ImyEjya9t9e8sSXTUgRr2hdWuIKVaXh0VKB9LTOtPlCTPcPLvjs9FV2KOf4ik
-	BLz//b/NGpcAvbgNjXL8XFjSffGvHfh/Yw6v7LhyEo3moqUakcB49b6jG2KpQnbjMivBT/bP29SRP
-	2Wktr2//s88Q+T0tjthgxa7T2WGtSJvQeoYjpvTlFKm3SnmsUe2lohuH9i6p6IImHhFvs3epXOWuq
-	XfHlSiYyKw/jINu6u02JPn659ebxTOJyUrZDCXh0GO+9TsUJ0HJONOlU/rZRwybQcJw4ySBKVymj5
-	lMXcJSIKT3hGMRp8D9VA==;
+	List-Owner; bh=JBZB485cjs1n7fu6JXhw/WWcNwUO7f5rkMuNHfn+sdk=; b=grL+ADu2cEfOxX
+	wJ2BM4WhmY9Q6JLSt6bS1ElkYX1MNkCeyryedGom0aHVjOnAHXeLs6vsd6i1zkaVwjqhHWq0rPIGK
+	5p1UxrFVQdCJdW0vwLdxBtRLZDEmQcnvQ/lLZQtV/jsE6GCDF7AxQg6kdXRXizmKrM/XCa29y6RCi
+	FHwWSF0QrbLZ1H/cZliu8rCdrbSqHVgMAho7/etMKu7DRbCHvYk1S5OVZdXtaY+wK1wr5GAPu/48Q
+	YfncQntf+qeeNtKMGPwAfMzbc5+aHd2QL+mMzrUfXZ215TKxB3YVvzRd+fESwln7JUHGp9wJuX/IE
+	lT6zl8aIRd/TzJfet1KQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jMr4j-00069g-8k; Fri, 10 Apr 2020 10:39:53 +0000
-Received: from mailout2.w1.samsung.com ([210.118.77.12])
+	id 1jMrBf-0003cx-Sx; Fri, 10 Apr 2020 10:47:03 +0000
+Received: from mail-ed1-x541.google.com ([2a00:1450:4864:20::541])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jMr4e-000683-1e
- for linux-mediatek@lists.infradead.org; Fri, 10 Apr 2020 10:39:50 +0000
-Received: from eucas1p2.samsung.com (unknown [182.198.249.207])
- by mailout2.w1.samsung.com (KnoxPortal) with ESMTP id
- 20200410103941euoutp0262c83710015ffb6c70d8a873752b7f5e~Ebyb6pd1-1261912619euoutp02y
- for <linux-mediatek@lists.infradead.org>; Fri, 10 Apr 2020 10:39:41 +0000 (GMT)
-DKIM-Filter: OpenDKIM Filter v2.11.0 mailout2.w1.samsung.com
- 20200410103941euoutp0262c83710015ffb6c70d8a873752b7f5e~Ebyb6pd1-1261912619euoutp02y
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=samsung.com;
- s=mail20170921; t=1586515181;
- bh=thvDiT/eQi5V7MIlmJv3g6iQX+aqMmt4n/u9ZPubS4c=;
- h=Subject:To:Cc:From:Date:In-Reply-To:References:From;
- b=XDdH6luNiLQsWlkkhL2LWYmfxTHqNRsR82yyHxoIWwUGFVjEGuVEibAvCs880Bi0K
- 5r6YBXm1D+SLGygHyjCMYD4/3/CGIZskb0OBRaiuzUn/22A4FpH30xcJUGkKJybJ6S
- SRoKQS+M5ZbJ2S7D3Oq/K6ypGATBV06YW8V5PjKs=
-Received: from eusmges3new.samsung.com (unknown [203.254.199.245]) by
- eucas1p1.samsung.com (KnoxPortal) with ESMTP id
- 20200410103940eucas1p1d1dab09988aaf6dca4cb656f4f51a88e~EbybAcSSv1417814178eucas1p1J;
- Fri, 10 Apr 2020 10:39:40 +0000 (GMT)
-Received: from eucas1p1.samsung.com ( [182.198.249.206]) by
- eusmges3new.samsung.com (EUCPMTA) with SMTP id 57.5D.60698.CEC409E5; Fri, 10
- Apr 2020 11:39:40 +0100 (BST)
-Received: from eusmtrp2.samsung.com (unknown [182.198.249.139]) by
- eucas1p1.samsung.com (KnoxPortal) with ESMTPA id
- 20200410103940eucas1p19192e0681adebd0f5fa447146af93c09~EbyafAxHX3201932019eucas1p10;
- Fri, 10 Apr 2020 10:39:40 +0000 (GMT)
-Received: from eusmgms1.samsung.com (unknown [182.198.249.179]) by
- eusmtrp2.samsung.com (KnoxPortal) with ESMTP id
- 20200410103940eusmtrp2e107babbe90369aaa7156b0ba01f2c38~EbyaeDJzm1000210002eusmtrp2I;
- Fri, 10 Apr 2020 10:39:40 +0000 (GMT)
-X-AuditID: cbfec7f5-a29ff7000001ed1a-ea-5e904cec0dfd
-Received: from eusmtip1.samsung.com ( [203.254.199.221]) by
- eusmgms1.samsung.com (EUCPMTA) with SMTP id 34.23.08375.CEC409E5; Fri, 10
- Apr 2020 11:39:40 +0100 (BST)
-Received: from [106.210.88.143] (unknown [106.210.88.143]) by
- eusmtip1.samsung.com (KnoxPortal) with ESMTPA id
- 20200410103939eusmtip1661ef8561a6aa99d569da66438857c18~EbyZRbR__2130221302eusmtip1D;
- Fri, 10 Apr 2020 10:39:39 +0000 (GMT)
-Subject: Re: [RFC PATCH 33/34] iommu: Remove add_device()/remove_device()
- code-paths
-To: Joerg Roedel <joro@8bytes.org>, Will Deacon <will@kernel.org>, Robin
- Murphy <robin.murphy@arm.com>, Kukjin Kim <kgene@kernel.org>, Krzysztof
- Kozlowski <krzk@kernel.org>, David Woodhouse <dwmw2@infradead.org>, Lu Baolu
- <baolu.lu@linux.intel.com>, Andy Gross <agross@kernel.org>, Bjorn Andersson
- <bjorn.andersson@linaro.org>, Matthias Brugger <matthias.bgg@gmail.com>, Rob
- Clark <robdclark@gmail.com>, Heiko Stuebner <heiko@sntech.de>, Gerald
- Schaefer <gerald.schaefer@de.ibm.com>, Thierry Reding
- <thierry.reding@gmail.com>, Jonathan Hunter <jonathanh@nvidia.com>,
- Jean-Philippe Brucker <jean-philippe@linaro.org>
-From: Marek Szyprowski <m.szyprowski@samsung.com>
-Message-ID: <1a88547f-ac90-825e-e529-a56c2c4e0391@samsung.com>
-Date: Fri, 10 Apr 2020 12:39:38 +0200
-User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:68.0) Gecko/20100101
- Thunderbird/68.7.0
+ id 1jMrBa-0003cY-FH
+ for linux-mediatek@lists.infradead.org; Fri, 10 Apr 2020 10:46:59 +0000
+Received: by mail-ed1-x541.google.com with SMTP id e5so1978109edq.5
+ for <linux-mediatek@lists.infradead.org>; Fri, 10 Apr 2020 03:46:57 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
+ h=mime-version:references:in-reply-to:from:date:message-id:subject:to
+ :cc; bh=g5flDUCc5onn9My7LelOLYfg2sqbcsix70bfOQElCCY=;
+ b=LK6H2vBs6EQoG8NxAHZXSN3WdX62sel9kYe6pWy8NYbKrN1wiwHV9n+fjzvFa2EVZC
+ dKbcgiPgKifg/BOlyN/6G7Jqsdn3vCsorcbrjgyyYnyCVD0hDygDReY7BLMzhxWNQheV
+ uYgpVnPxlUt38uU7itLT9TjuZLrJLfru6aJW2+r7mmfUexxsfFJAWDoKYF8agmqq1McO
+ 867t+FCK+ReI5oR8HEA0VwC3dfkdIXdq++toJj3LOWKeqx08BLwj/6yk1/0uJ3vaKR6s
+ t4+i06Mp1jQj9bQurc4I2/9jPBsYw4iOBeLw7mrzjZH24jOAaXYaH//Oo7Wu+vrHGVMr
+ B/0w==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+ :message-id:subject:to:cc;
+ bh=g5flDUCc5onn9My7LelOLYfg2sqbcsix70bfOQElCCY=;
+ b=F5seAwNOTJhXgR+/lrhgt9NWz8NJwk7YYz76brsr+1PQoeHGj44Xc1yMSziiWsw3LB
+ t+B4jHEtA4P+sYp5V6WMLKNQfUQh2q9T2jh3HxYrpuYJUcKki9E45rKMmbprYUQrNgi0
+ wM8Jit6wgPspgFvQti8dkdyN2QD+BR09fZ/HpR7b/hdoAZ8QlInHu7mIJBw2gj2+9kKn
+ c4ZZiDdMwbAreMq4mMmOSQWEryQ/1KmEQkG74O169O69XyilA1JgYUlPFV7pQkCcmlpb
+ NRPmbKKWil92tZLt3fzWUZnomE0Gi1caPQcnYveRBIWHu1K/KiE+RVOdg39rT+9DwicX
+ T6jA==
+X-Gm-Message-State: AGi0PuYw6tzjCqIrD+8DNOEB+drSiFGRaL8OogOTsWLGtDfTN4rrDoDC
+ UELjsNXuqUeCbGB2Y7YpdjyemqXOiD3iRo7c2CI=
+X-Google-Smtp-Source: APiQypLWDup2ZAK1S2IcOH0WTMLGSA4ZLAFWbXTDZbsNxTCSZqYmA8hnd16Tb6LpFY9BEm/k8vKrPTA2QvI3BAsREUA=
+X-Received: by 2002:a50:9ea1:: with SMTP id a30mr4246217edf.318.1586515616603; 
+ Fri, 10 Apr 2020 03:46:56 -0700 (PDT)
 MIME-Version: 1.0
-In-Reply-To: <20200407183742.4344-34-joro@8bytes.org>
-Content-Language: en-US
-X-Brightmail-Tracker: H4sIAAAAAAAAA01Se0hTcRjtt9/d3XU0u83KD4uKRUFFpizhBwupKLpQfxj0hqyVN4t81Ka9
- obFZqKXOZKm3Wlsvyx6aq0wJbVqJSmoaskQz08pyaj6i1MqcV8v/zjnfOXzng4/Bylzaj9kf
- FcProrQRKlpOPX45ULXEvd4cGpCTH0SqWoco4kh9RJPK4i6KpN5Ow6TA3U6T4Q8dUmIr1hDD
- nRopiROuUiThYq6MpFVclpCU1g5MqqtHaGrxKxmpK7xEkzrTa0R63w9jYrabMMmoLpKQhH6B
- JsY4Nfls/4mJ81ublAwUWimS9cpKk7jGoBV+XJvTKuHuWu8izvmhhOYKhCYZ57i1iMvLTqC5
- xvqnNGct38A5rp/i0lxZiEsyddFcfr0Vc47KE1xf3uwQ7+3y5WF8xP7DvG5p8C75vm8Nvfig
- TXP0t+s0MqBC/0TkxQC7DOyWIWkikjNK9haChB6jRCT9CIrSW8YmfQgaPw+h8UjF2wtIHGQh
- MGdnjkW6EViEGtrj8mE3g7nVNeqaxv6gwPbiEfYQzLokcLM7T+Zx0WwgJHYmjiYUbDBkNn8c
- MTEMxc6HJNMKD5zO7oD0+o2iYyqUZ7ZRHtmLDYKO95RHxuwcyO+8hEXsCw1tV0b7AOtmwNlj
- lIqtV8P1P6WUiH3ga9lDmYhnwXDBeMCEoKXqnkwk5xDUGTPGbtZAY9Ug7dmM2YWQU7hUlFfC
- +Rb7aCFgvcHVOVUs4Q3nH6djUVZA/Bml6F4AQtn9f2udNbXYjFTChMuECecIE84R/u+1ISob
- +fKx+shwXq+O4o/467WR+tiocP890ZF5aOSPK/+UfX+Cin7tLkEsg1STFfGSlFClVHtYfyyy
- BAGDVdMU64xJoUpFmPbYcV4XvVMXG8HrS9BMhlL5KtRXv+xQsuHaGP4Azx/kdeNTCePlZ0Db
- ZvgsLvWqtiQfHd71ybaGP9M8sLF9uazUZfnY9E713DnXp72nIuak2iTETDlr3vR666QAi3xV
- WPxWe3nYpJTaT5NvP7M942y+xr0GQ78mMEjHyN7UHXogj84ouhHgSO8dDJmnHlzgnrK4b21z
- /IN26Ra7u1aq7DpwWbO2pyX59zUVpd+nDVyEdXrtX2r/zjjDAwAA
-X-Brightmail-Tracker: H4sIAAAAAAAAA02Se0hTYRjG+3bOjkdrcZqaH2YXBv2R1Ow45z7LTCLoRBGaUJDpnHpQyW2y
- s3UlWqmRE3OysFq1lilesrKN8kqyQRddZprJiqTljAq1e9DoYtMV7L/n5Xl+78sLD4kJHfxo
- skilZTUqRbGICMNdfx6MrZnabsxe21weiR57f+LIXnObQK7eDziqaTZhqHPqHYFmxif5yNq7
- HumvPeGjMnMdjioutIUgU/8lHqr2TmJocNA/1vQOhKCnXRcJ9LR0CKAvnhkMGa+UYujc4F0e
- qvhmJtCJMgl6e+UHhhyfJvjI12XBUeOAhUBlL6Wp0cyEw8JjWi2tgHGMOwmm0zwWwtibYhlb
- SwXBvBztIRhLXzpjrz/GmNyNgKkq/UAw7aMWjLG7jjBfbcvSFu4RJ2vUOi27olDNaTeIMmkU
- L6aTkDg+IUlMS2RZ6+KloriU5Hy2uGg/q4lLyREXfnrxBSuxrj/4210O9KBLbAChJKQSYP/z
- WmAAYaSQagDwwkcbL2DEwL5aPT+gw+GvUQMRCE0DaHg0gc8a4dQuaPS65+gI6icO693dxKyB
- UW4evNe4OEDYALz6vGKOICgaGqYNcyEBlQLPv3qDGQBJ4tRKWFWaOisjqSxYNrQqkFgE+87P
- 3iLJUEoKJz14YHsitNhfYwG9HLZPX/yno+CLics8IxCag2hzEGIOQsxBiBXgLSCC1XHKAiVH
- izmFktOpCsR5aqUN+Otz577P3gGGb2U4AUUC0QLB2nnV2UK+Yj93SOkEkMREEYJtJ6qyhYJ8
- xaHDrEYt1+iKWc4JpP7ParDoyDy1v4wqrZyW0jKURMskMkkiEkUJTlGOvUKqQKFl97FsCav5
- z/HI0Gg9qE5THGh7OONTmeWflw5KC1VncjZddzfdLMm2vz9Zb/MlblQuyR1uO+n53uE4Wq9f
- kL56pHaTq7KoPyO8Af2qs9uKz/Yk9t3Y1i1/sFtobNv4FjelTFU+03u2do+fzk/bMpJbNSTf
- kdkTY5gnSUgu2tmw2bpqRHPcd8A53zuW5eJEOFeooGMxDaf4C7eSUfRUAwAA
-X-CMS-MailID: 20200410103940eucas1p19192e0681adebd0f5fa447146af93c09
-X-Msg-Generator: CA
-X-RootMTR: 20200407183806eucas1p2cf45fbce5a43a6b4fe3a623b28da0606
-X-EPHeader: CA
-CMS-TYPE: 201P
-X-CMS-RootMailID: 20200407183806eucas1p2cf45fbce5a43a6b4fe3a623b28da0606
-References: <20200407183742.4344-1-joro@8bytes.org>
- <CGME20200407183806eucas1p2cf45fbce5a43a6b4fe3a623b28da0606@eucas1p2.samsung.com>
- <20200407183742.4344-34-joro@8bytes.org>
+References: <20200409155409.12043-1-dqfext@gmail.com>
+ <20200409.102035.13094168508101122.davem@davemloft.net>
+ <CALW65jbrg1doaRBPdGQkQ-PG6dnh_L4va7RxcMxyKKMqasN7bQ@mail.gmail.com>
+ <c7da2de5-5e25-6284-0b35-fd2dbceb9c4f@gmail.com>
+ <CALW65jZAdFFNfGioAFWPwYN+F4baL0Z-+FX_pAte97uxNK3T6g@mail.gmail.com>
+In-Reply-To: <CALW65jZAdFFNfGioAFWPwYN+F4baL0Z-+FX_pAte97uxNK3T6g@mail.gmail.com>
+From: Vladimir Oltean <olteanv@gmail.com>
+Date: Fri, 10 Apr 2020 13:46:45 +0300
+Message-ID: <CA+h21hp8LueSfh+Z8f0-Y7dTPB50d+3E3K9n6R5MwNzA3Dh1Lw@mail.gmail.com>
+Subject: Re: [PATCH net-next] net: dsa: mt7530: enable jumbo frame
+To: DENG Qingfang <dqfext@gmail.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200410_033948_284260_3F1DA49F 
-X-CRM114-Status: GOOD (  28.54  )
-X-Spam-Score: -5.2 (-----)
+X-CRM114-CacheID: sfid-20200410_034658_545378_5FF8B5B9 
+X-CRM114-Status: GOOD (  16.15  )
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
- Content analysis details:   (-5.2 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
- high trust [210.118.77.12 listed in list.dnswl.org]
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [2a00:1450:4864:20:0:0:0:541 listed in]
+ [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
- [210.118.77.12 listed in wl.mailspike.net]
- -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider [olteanv[at]gmail.com]
+ 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
@@ -139,8 +84,6 @@ X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
- -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -152,265 +95,75 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: linux-s390@vger.kernel.org, linux-samsung-soc@vger.kernel.org,
- linux-arm-msm@vger.kernel.org, linux-kernel@vger.kernel.org,
- virtualization@lists.linux-foundation.org, linux-rockchip@lists.infradead.org,
- iommu@lists.linux-foundation.org, Joerg Roedel <jroedel@suse.de>,
- linux-mediatek@lists.infradead.org, linux-tegra@vger.kernel.org
+Cc: Andrew Lunn <andrew@lunn.ch>, Florian Fainelli <f.fainelli@gmail.com>,
+ netdev <netdev@vger.kernel.org>, Sean Wang <sean.wang@mediatek.com>,
+ Weijie Gao <weijie.gao@mediatek.com>,
+ Vivien Didelot <vivien.didelot@gmail.com>,
+ =?UTF-8?Q?Ren=C3=A9_van_Dorst?= <opensource@vdorst.com>,
+ "moderated list:ARM/Mediatek SoC support" <linux-mediatek@lists.infradead.org>,
+ John Crispin <john@phrozen.org>, David Miller <davem@davemloft.net>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi Joerg
+Hi Qingfang,
 
-On 07.04.2020 20:37, Joerg Roedel wrote:
-> From: Joerg Roedel <jroedel@suse.de>
+On Fri, 10 Apr 2020 at 05:51, DENG Qingfang <dqfext@gmail.com> wrote:
 >
-> All drivers are converted to use the probe/release_device()
-> call-backs, so the add_device/remove_device() pointers are unused and
-> the code using them can be removed.
+> On Fri, Apr 10, 2020 at 10:27 AM Florian Fainelli <f.fainelli@gmail.com> wrote:
+> >
+> >
+> >
+> > On 4/9/2020 7:19 PM, DENG Qingfang wrote:
+> > > So, since nothing else uses the mt7530_set_jumbo function, should I
+> > > remove the function and just add a single rmw to mt7530_setup?
+> >
+> > (please do not top-post on netdev)
+> >
+> > There is a proper way to support the MTU configuration for DSA switch
+> > drivers which is:
+> >
+> >         /*
+> >          * MTU change functionality. Switches can also adjust their MRU
+> > through
+> >          * this method. By MTU, one understands the SDU (L2 payload) length.
+> >          * If the switch needs to account for the DSA tag on the CPU
+> > port, this
+> >          * method needs to to do so privately.
+> >          */
+> >         int     (*port_change_mtu)(struct dsa_switch *ds, int port,
+> >                                    int new_mtu);
+> >         int     (*port_max_mtu)(struct dsa_switch *ds, int port);
 >
-> Signed-off-by: Joerg Roedel <jroedel@suse.de>
-> ---
->   drivers/iommu/iommu.c | 145 ++++++++----------------------------------
->   include/linux/iommu.h |   4 --
->   2 files changed, 27 insertions(+), 122 deletions(-)
+> MT7530 does not support configuring jumbo frame per-port
+> The register affects globally
 >
-> diff --git a/drivers/iommu/iommu.c b/drivers/iommu/iommu.c
-> index cf25c1e48830..d9032f9d597c 100644
-> --- a/drivers/iommu/iommu.c
-> +++ b/drivers/iommu/iommu.c
-> @@ -220,7 +220,7 @@ static int __iommu_probe_device(struct device *dev, struct list_head *group_list
->   	return ret;
->   }
->   
-> -static int __iommu_probe_device_helper(struct device *dev)
-> +int iommu_probe_device(struct device *dev)
->   {
->   	const struct iommu_ops *ops = dev->bus->iommu_ops;
->   	struct iommu_group *group;
-> @@ -264,70 +264,17 @@ static int __iommu_probe_device_helper(struct device *dev)
->   
->   }
->   
-> -int iommu_probe_device(struct device *dev)
-> +void iommu_release_device(struct device *dev)
->   {
->   	const struct iommu_ops *ops = dev->bus->iommu_ops;
-> -	struct iommu_group *group;
-> -	int ret;
-> -
-> -	WARN_ON(dev->iommu_group);
-> -
-> -	if (!ops)
-> -		return -EINVAL;
-> -
-> -	if (!dev_iommu_get(dev))
-> -		return -ENOMEM;
-> -
-> -	if (!try_module_get(ops->owner)) {
-> -		ret = -EINVAL;
-> -		goto err_free_dev_param;
-> -	}
-> -
-> -	if (ops->probe_device)
-> -		return __iommu_probe_device_helper(dev);
-> -
-> -	ret = ops->add_device(dev);
-> -	if (ret)
-> -		goto err_module_put;
->   
-> -	group = iommu_group_get(dev);
-> -	iommu_create_device_direct_mappings(group, dev);
-> -	iommu_group_put(group);
-> -
-> -	if (ops->probe_finalize)
-> -		ops->probe_finalize(dev);
-> -
-> -	return 0;
-> -
-> -err_module_put:
-> -	module_put(ops->owner);
-> -err_free_dev_param:
-> -	dev_iommu_free(dev);
-> -	return ret;
-> -}
-> -
-> -static void __iommu_release_device(struct device *dev)
-> -{
-> -	const struct iommu_ops *ops = dev->bus->iommu_ops;
-> +	if (!dev->iommu)
-> +		return;
->   
->   	iommu_device_unlink(dev->iommu->iommu_dev, dev);
-> -
->   	iommu_group_remove_device(dev);
->   
->   	ops->release_device(dev);
-> -}
-> -
-> -void iommu_release_device(struct device *dev)
-> -{
-> -	const struct iommu_ops *ops = dev->bus->iommu_ops;
-> -
-> -	if (!dev->iommu)
-> -		return;
-> -
-> -	if (ops->release_device)
-> -		__iommu_release_device(dev);
-> -	else if (dev->iommu_group)
-> -		ops->remove_device(dev);
->   
->   	module_put(ops->owner);
->   	dev_iommu_free(dev);
-> @@ -1560,23 +1507,6 @@ struct iommu_group *iommu_group_get_for_dev(struct device *dev)
->   	if (ret)
->   		goto out_put_group;
->   
-> -	/*
-> -	 * Try to allocate a default domain - needs support from the
-> -	 * IOMMU driver. There are still some drivers which don't support
-> -	 * default domains, so the return value is not yet checked. Only
-> -	 * allocate the domain here when the driver still has the
-> -	 * add_device/remove_device call-backs implemented.
-> -	 */
-> -	if (!ops->probe_device) {
-> -		iommu_alloc_default_domain(dev);
-> -
-> -		if (group->default_domain)
-> -			ret = __iommu_attach_device(group->default_domain, dev);
-> -
-> -		if (ret)
-> -			goto out_put_group;
-> -	}
-> -
->   	return group;
->   
->   out_put_group:
-> @@ -1591,21 +1521,6 @@ struct iommu_domain *iommu_group_default_domain(struct iommu_group *group)
->   	return group->default_domain;
->   }
->   
-> -static int add_iommu_group(struct device *dev, void *data)
-> -{
-> -	int ret = iommu_probe_device(dev);
-> -
-> -	/*
-> -	 * We ignore -ENODEV errors for now, as they just mean that the
-> -	 * device is not translated by an IOMMU. We still care about
-> -	 * other errors and fail to initialize when they happen.
-> -	 */
-> -	if (ret == -ENODEV)
-> -		ret = 0;
-> -
-> -	return ret;
-> -}
-> -
->   static int probe_iommu_group(struct device *dev, void *data)
->   {
->   	const struct iommu_ops *ops = dev->bus->iommu_ops;
-> @@ -1789,45 +1704,39 @@ static int iommu_group_create_direct_mappings(struct iommu_group *group)
->   
->   int bus_iommu_probe(struct bus_type *bus)
->   {
-> -	const struct iommu_ops *ops = bus->iommu_ops;
-> +	struct iommu_group *group, *next;
-> +	LIST_HEAD(group_list);
->   	int ret;
->   
-> -	if (ops->probe_device) {
-> -		struct iommu_group *group, *next;
-> -		LIST_HEAD(group_list);
-> -
-> -		/*
-> -		 * This code-path does not allocate the default domain when
-> -		 * creating the iommu group, so do it after the groups are
-> -		 * created.
-> -		 */
-> -		ret = bus_for_each_dev(bus, NULL, &group_list, probe_iommu_group);
-> -		if (ret)
-> -			return ret;
-> +	/*
-> +	 * This code-path does not allocate the default domain when
-> +	 * creating the iommu group, so do it after the groups are
-> +	 * created.
-> +	 */
-> +	ret = bus_for_each_dev(bus, NULL, &group_list, probe_iommu_group);
-> +	if (ret)
-> +		return ret;
->   
-> -		list_for_each_entry_safe(group, next, &group_list, entry) {
-> -			/* Remove item from the list */
-> -			list_del_init(&group->entry);
-> +	list_for_each_entry_safe(group, next, &group_list, entry) {
-> +		/* Remove item from the list */
-> +		list_del_init(&group->entry);
->   
-> -			mutex_lock(&group->mutex);
-> +		mutex_lock(&group->mutex);
->   
-> -			/* Try to allocate default domain */
-> -			probe_alloc_default_domain(bus, group);
-> +		/* Try to allocate default domain */
-> +		probe_alloc_default_domain(bus, group);
->   
-> -			if (!group->default_domain)
-> -				continue;
-> +		if (!group->default_domain)
-> +			continue;
+> >
+> > --
+> > Florian
 
-It doesn't look straight from the above diff, but this continue leaks 
-group->lock taken.
+This is a bit more tricky, but I think you can still deal with it
+using the port_change_mtu functionality. Basically it is only a
+problem when the other ports are standalone - otherwise the
+dsa_bridge_mtu_normalization function should kick in.
+So if you implement port_change_mtu, you should do something along the lines of:
 
->   
-> -			iommu_group_create_direct_mappings(group);
-> +		iommu_group_create_direct_mappings(group);
->   
-> -			ret = __iommu_group_dma_attach(group);
-> +		ret = __iommu_group_dma_attach(group);
->   
-> -			mutex_unlock(&group->mutex);
-> +		mutex_unlock(&group->mutex);
->   
-> -			if (ret)
-> -				break;
-> -		}
-> -	} else {
-> -		ret = bus_for_each_dev(bus, NULL, NULL, add_iommu_group);
-> +		if (ret)
-> +			break;
->   	}
->   
->   	return ret;
-> diff --git a/include/linux/iommu.h b/include/linux/iommu.h
-> index fea1622408ad..dd076366383f 100644
-> --- a/include/linux/iommu.h
-> +++ b/include/linux/iommu.h
-> @@ -223,8 +223,6 @@ struct iommu_iotlb_gather {
->    * @iotlb_sync: Flush all queued ranges from the hardware TLBs and empty flush
->    *            queue
->    * @iova_to_phys: translate iova to physical address
-> - * @add_device: add device to iommu grouping
-> - * @remove_device: remove device from iommu grouping
->    * @probe_device: Add device to iommu driver handling
->    * @release_device: Remove device from iommu driver handling
->    * @probe_finalize: Do final setup work after the device is added to an IOMMU
-> @@ -277,8 +275,6 @@ struct iommu_ops {
->   	void (*iotlb_sync)(struct iommu_domain *domain,
->   			   struct iommu_iotlb_gather *iotlb_gather);
->   	phys_addr_t (*iova_to_phys)(struct iommu_domain *domain, dma_addr_t iova);
-> -	int (*add_device)(struct device *dev);
-> -	void (*remove_device)(struct device *dev);
->   	struct iommu_device *(*probe_device)(struct device *dev);
->   	void (*release_device)(struct device *dev);
->   	void (*probe_finalize)(struct device *dev);
+for (i = 0; i < MT7530_NUM_PORTS; i++) {
+    struct net_device *slave;
 
-Best regards
--- 
-Marek Szyprowski, PhD
-Samsung R&D Institute Poland
+    if (!dsa_is_user_port(ds, i))
+        continue;
 
+    slave = ds->ports[i].slave;
+
+    slave->mtu = new_mtu;
+}
+
+to update the MTU known by the stack for all net devices.
+
+Hope this helps,
+-Vladimir
 
 _______________________________________________
 Linux-mediatek mailing list
