@@ -2,68 +2,64 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id DE6711A3EC0
-	for <lists+linux-mediatek@lfdr.de>; Fri, 10 Apr 2020 05:29:23 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 0146E1A3F2A
+	for <lists+linux-mediatek@lfdr.de>; Fri, 10 Apr 2020 05:49:52 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=49VgY9mgfd/5ftAkQ+SklRpQHSnNnPs22pgxglY7PUw=; b=qLlSZMBQ9n8mUQ
-	843ltXuBCKGk0tEg/a3aFUlVjNSWDIH+d9F248NdYf1a+1TBhl3AVa5rhnppMfNlYMCPTmI7vXif7
-	zHZFxQhlU8pR7rdAj9Felqy4PA3eAMOAAFOXrPWeMVmTRWRb5tgwcKRINugl8Ht2E8f3vdr4rMkkZ
-	8pyK8lTSCy2jF7qhR9S0uwYHymSHzEm5Zm7mhZOxtF1KPZmf/AfiCwQQJVDpdaYtxpuYCzV8TEeMQ
-	t1ZmFB5/mjdmCXa/kEFaMAPSsVDwcefSjg5bVdF4Bz7o8e9erqHJYKtJS2ZGzqVT4xrM/d6H0kHNP
-	axSF4aDsssaAMtgc+cEQ==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=GIcyXDyVTnFKF/+hqozhnc/dJpcR9bQx5bRhHfnUEr0=; b=rC9x2EIGk/CaUC
+	Ua74y/cjWNOJ5v1ANqnLrvMEOdV3+sMoVtZpYtafl9zBdnbLJOWPtw9oVmjj7EugmEmzF+/cKNUFQ
+	Wqaa16VFDFfbqo9yugeCJ/9TMI5ayHveLQdjwz8XXqJGv3rWtMi/AyRicrok27NTmrz+O9JZxkh20
+	7AoJxkGg9OxORUexIDCmTENj4K05OB1p+TqdISZfy6PSpsrKaV9eEN7ZuZ0TKzA1zPE/A7aubJS0U
+	76ak1UWIXhOFygYAvDS2A7AHvfq9n+4iIOVJK1hItij+rSVQitX7twMQYL0Wi1pJOY/YCCgk98TYy
+	hBU5f6lkR5QVZPWKHn9g==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jMkLy-0006DH-ED; Fri, 10 Apr 2020 03:29:14 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
+	id 1jMkfl-00051n-Uu; Fri, 10 Apr 2020 03:49:41 +0000
+Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jMkLv-0006Bu-3I; Fri, 10 Apr 2020 03:29:12 +0000
-X-UUID: 25187aa067414c19b60b5a32603391aa-20200409
-DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
- s=dk; 
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:Subject:CC:To:From;
- bh=8OzjROGkHfg1CooU6NBX4B+qS/5k+TWJfoCWP6Iz6tc=; 
- b=mT+9dbCEciYUnrQn2Ayc2mon+XhMNQJxbGhGiOcTSVTI4aXWUDhuVY6Md84XsuAx76Zfhx4mD5VLNYxKtF9bT/47isqWsRXdbA+gqDLCym9a092VZfWveUisXgH3DVhAkAw7XNzfN3RH2t0VrURbAjF/EmAD6ovdzRnKHhtrX7k=;
-X-UUID: 25187aa067414c19b60b5a32603391aa-20200409
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
- (envelope-from <jitao.shi@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1387699924; Thu, 09 Apr 2020 19:28:58 -0800
-Received: from MTKMBS33DR.mediatek.inc (172.27.6.106) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1497.2; Thu, 9 Apr 2020 20:20:04 -0700
-Received: from MTKCAS36.mediatek.inc (172.27.4.186) by MTKMBS33DR.mediatek.inc
- (172.27.6.106) with Microsoft SMTP Server (TLS) id 15.0.1497.2;
- Fri, 10 Apr 2020 11:20:03 +0800
-Received: from mszsdclx1018.gcn.mediatek.inc (10.16.6.18) by
- MTKCAS36.mediatek.inc (172.27.4.170) with Microsoft SMTP Server id
- 15.0.1497.2 via Frontend Transport; Fri, 10 Apr 2020 11:19:58 +0800
-From: Jitao Shi <jitao.shi@mediatek.com>
-To: Thierry Reding <thierry.reding@gmail.com>, Matthias Brugger
- <matthias.bgg@gmail.com>
-Subject: [PATCH 1/1] pwm: mtk_disp: implement .apply()
-Date: Fri, 10 Apr 2020 11:19:55 +0800
-Message-ID: <20200410031955.111392-1-jitao.shi@mediatek.com>
-X-Mailer: git-send-email 2.21.0
+ id 1jMkdp-0003DG-AP; Fri, 10 Apr 2020 03:47:44 +0000
+Received: from sasha-vm.mshome.net (c-73-47-72-35.hsd1.nh.comcast.net
+ [73.47.72.35])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
+ (No client certificate requested)
+ by mail.kernel.org (Postfix) with ESMTPSA id 91A2C20936;
+ Fri, 10 Apr 2020 03:47:39 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
+ s=default; t=1586490460;
+ bh=16VA5YD9gqxCaD7D986dD/QokR9l5L2qPbIUntmanD8=;
+ h=From:To:Cc:Subject:Date:In-Reply-To:References:From;
+ b=fsPvj1kk/F2hs2LOu6P24mUbyxjsat4AvkV5GGM1Kl8bT/71d815X2eV6h4/ZjjHp
+ B+YZ71gvcNJ7UNSsC7dy/ZAT1IWt1kypayWT+WXG/5FO2RmMni+MKvPb3jNla9UVB8
+ z5XuLZlExxPXNM/sCAMRTGBk4IMk1drGGBX2uinE=
+From: Sasha Levin <sashal@kernel.org>
+To: linux-kernel@vger.kernel.org,
+	stable@vger.kernel.org
+Subject: [PATCH AUTOSEL 5.6 54/68] media: mtk-vpu: avoid unaligned access to
+ DTCM buffer.
+Date: Thu,  9 Apr 2020 23:46:19 -0400
+Message-Id: <20200410034634.7731-54-sashal@kernel.org>
+X-Mailer: git-send-email 2.20.1
+In-Reply-To: <20200410034634.7731-1-sashal@kernel.org>
+References: <20200410034634.7731-1-sashal@kernel.org>
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: 1D83F094F6E15C6AE36EBCFB8D0EB957F322BB0E739695B42E2692AAB36440532000:8
-X-MTK: N
+X-stable: review
+X-Patchwork-Hint: Ignore
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200409_202911_169236_4CE71029 
-X-CRM114-Status: GOOD (  16.68  )
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20200409_204741_447881_7EF26D0E 
+X-CRM114-Status: GOOD (  16.66  )
+X-Spam-Score: -5.2 (-----)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (-5.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
+ high trust [198.145.29.99 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 MIME_BASE64_TEXT       RAW: Message text disguised using base64
- encoding
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
@@ -71,8 +67,7 @@ X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
+ -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -84,307 +79,261 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: linux-pwm@vger.kernel.org, Jitao Shi <jitao.shi@mediatek.com>,
- srv_heupstream@mediatek.com, huijuan.xie@mediatek.com, stonea168@163.com,
- linux-kernel@vger.kernel.org, cawa.cheng@mediatek.com,
- linux-mediatek@lists.infradead.org, bibby.hsieh@mediatek.com,
- ck.hu@mediatek.com, yingjoe.chen@mediatek.com, eddie.huang@mediatek.com,
- linux-arm-kernel@lists.infradead.org
+Cc: Sasha Levin <sashal@kernel.org>,
+ Mauro Carvalho Chehab <mchehab+huawei@kernel.org>,
+ linux-mediatek@lists.infradead.org, Hsin-Yi Wang <hsinyi@chromium.org>,
+ Hans Verkuil <hverkuil-cisco@xs4all.nl>, linux-arm-kernel@lists.infradead.org,
+ linux-media@vger.kernel.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-implement the apply() for pwm.
+From: Hsin-Yi Wang <hsinyi@chromium.org>
 
-Fix the clock clk_prepare_enable and clk_disable_unprepare mismatch,
-switch the driver to support the ->apply() method.
+[ Upstream commit e6599adfad30c340d06574e49a86afa7015c5c60 ]
 
-Signed-off-by: Jitao Shi <jitao.shi@mediatek.com>
+Previously, vpu->recv_buf and send_buf are forced cast from
+void __iomem *tcm. vpu->recv_buf->share_buf is passed to
+vpu_ipi_desc.handler(). It's not able to do unaligned access. Otherwise
+kernel would crash due to unable to handle kernel paging request.
+
+struct vpu_run {
+	u32 signaled;
+	char fw_ver[VPU_FW_VER_LEN];
+	unsigned int	dec_capability;
+	unsigned int	enc_capability;
+	wait_queue_head_t wq;
+};
+
+fw_ver starts at 4 byte boundary. If system enables
+CONFIG_HAVE_EFFICIENT_UNALIGNED_ACCESS, strscpy() will do
+read_word_at_a_time(), which tries to read 8-byte: *(unsigned long *)addr
+
+vpu_init_ipi_handler() calls strscpy(), which would lead to crash.
+
+vpu_init_ipi_handler() and several other handlers (eg.
+vpu_dec_ipi_handler) only do read access to this data, so they can be
+const, and we can use memcpy_fromio() to copy the buf to another non iomem
+buffer then pass to handler.
+
+Fixes: 85709cbf1524 ("media: replace strncpy() by strscpy()")
+Signed-off-by: Hsin-Yi Wang <hsinyi@chromium.org>
+Signed-off-by: Hans Verkuil <hverkuil-cisco@xs4all.nl>
+Signed-off-by: Mauro Carvalho Chehab <mchehab+huawei@kernel.org>
+Signed-off-by: Sasha Levin <sashal@kernel.org>
 ---
- drivers/pwm/pwm-mtk-disp.c | 179 +++++++++++++++++++++----------------
- 1 file changed, 104 insertions(+), 75 deletions(-)
+ drivers/media/platform/mtk-mdp/mtk_mdp_vpu.c  |  9 ++--
+ .../media/platform/mtk-vcodec/vdec_vpu_if.c   |  6 +--
+ .../media/platform/mtk-vcodec/venc_vpu_if.c   | 12 ++---
+ drivers/media/platform/mtk-vpu/mtk_vpu.c      | 45 ++++++++++---------
+ drivers/media/platform/mtk-vpu/mtk_vpu.h      |  2 +-
+ 5 files changed, 38 insertions(+), 36 deletions(-)
 
-diff --git a/drivers/pwm/pwm-mtk-disp.c b/drivers/pwm/pwm-mtk-disp.c
-index 83b8be0209b7..c1b0ed27f278 100644
---- a/drivers/pwm/pwm-mtk-disp.c
-+++ b/drivers/pwm/pwm-mtk-disp.c
-@@ -20,6 +20,7 @@
- #define PWM_CLKDIV_SHIFT	16
- #define PWM_CLKDIV_MAX		0x3ff
- #define PWM_CLKDIV_MASK		(PWM_CLKDIV_MAX << PWM_CLKDIV_SHIFT)
-+#define PWM_POLARITY	BIT(2)
- 
- #define PWM_PERIOD_BIT_WIDTH	12
- #define PWM_PERIOD_MASK		((1 << PWM_PERIOD_BIT_WIDTH) - 1)
-@@ -47,6 +48,7 @@ struct mtk_disp_pwm {
- 	struct clk *clk_main;
- 	struct clk *clk_mm;
- 	void __iomem *base;
-+	bool enabled;
- };
- 
- static inline struct mtk_disp_pwm *to_mtk_disp_pwm(struct pwm_chip *chip)
-@@ -66,11 +68,11 @@ static void mtk_disp_pwm_update_bits(struct mtk_disp_pwm *mdp, u32 offset,
- 	writel(value, address);
+diff --git a/drivers/media/platform/mtk-mdp/mtk_mdp_vpu.c b/drivers/media/platform/mtk-mdp/mtk_mdp_vpu.c
+index 6720d11f50cf6..b065ccd069140 100644
+--- a/drivers/media/platform/mtk-mdp/mtk_mdp_vpu.c
++++ b/drivers/media/platform/mtk-mdp/mtk_mdp_vpu.c
+@@ -15,7 +15,7 @@ static inline struct mtk_mdp_ctx *vpu_to_ctx(struct mtk_mdp_vpu *vpu)
+ 	return container_of(vpu, struct mtk_mdp_ctx, vpu);
  }
  
--static int mtk_disp_pwm_config(struct pwm_chip *chip, struct pwm_device *pwm,
--			       int duty_ns, int period_ns)
-+static int mtk_disp_pwm_enable(struct pwm_chip *chip,
-+			       const struct pwm_state *state)
+-static void mtk_mdp_vpu_handle_init_ack(struct mdp_ipi_comm_ack *msg)
++static void mtk_mdp_vpu_handle_init_ack(const struct mdp_ipi_comm_ack *msg)
  {
- 	struct mtk_disp_pwm *mdp = to_mtk_disp_pwm(chip);
--	u32 clk_div, period, high_width, value;
-+	u32 clk_div, period, high_width, value, polarity;
- 	u64 div, rate;
- 	int err;
+ 	struct mtk_mdp_vpu *vpu = (struct mtk_mdp_vpu *)
+ 					(unsigned long)msg->ap_inst;
+@@ -26,10 +26,11 @@ static void mtk_mdp_vpu_handle_init_ack(struct mdp_ipi_comm_ack *msg)
+ 	vpu->inst_addr = msg->vpu_inst_addr;
+ }
  
-@@ -84,33 +86,47 @@ static int mtk_disp_pwm_config(struct pwm_chip *chip, struct pwm_device *pwm,
- 	 * period = (PWM_CLK_RATE * period_ns) / (10^9 * (clk_div + 1)) - 1
- 	 * high_width = (PWM_CLK_RATE * duty_ns) / (10^9 * (clk_div + 1))
- 	 */
-+	if (!mdp->enabled) {
-+		err = clk_prepare_enable(mdp->clk_main);
-+		if (err < 0) {
-+			dev_err(chip->dev, "Can't enable mdp->clk_main: %d\n",
-+				err);
-+			return err;
-+		}
-+		err = clk_prepare_enable(mdp->clk_mm);
-+		if (err < 0) {
-+			dev_err(chip->dev, "Can't enable mdp->clk_mm: %d\n",
-+				err);
-+			clk_disable_unprepare(mdp->clk_main);
-+			return err;
-+		}
-+	}
- 	rate = clk_get_rate(mdp->clk_main);
--	clk_div = div_u64(rate * period_ns, NSEC_PER_SEC) >>
-+	clk_div = div_u64(rate * state->period, NSEC_PER_SEC) >>
- 			  PWM_PERIOD_BIT_WIDTH;
--	if (clk_div > PWM_CLKDIV_MAX)
-+	if (clk_div > PWM_CLKDIV_MAX) {
-+		dev_err(chip->dev, "clock rate is too high: rate = %d Hz\n",
-+			rate);
-+		clk_disable_unprepare(mdp->clk_mm);
-+		clk_disable_unprepare(mdp->clk_main);
- 		return -EINVAL;
--
-+	}
- 	div = NSEC_PER_SEC * (clk_div + 1);
--	period = div64_u64(rate * period_ns, div);
-+	period = div64_u64(rate * state->period, div);
- 	if (period > 0)
- 		period--;
+-static void mtk_mdp_vpu_ipi_handler(void *data, unsigned int len, void *priv)
++static void mtk_mdp_vpu_ipi_handler(const void *data, unsigned int len,
++				    void *priv)
+ {
+-	unsigned int msg_id = *(unsigned int *)data;
+-	struct mdp_ipi_comm_ack *msg = (struct mdp_ipi_comm_ack *)data;
++	const struct mdp_ipi_comm_ack *msg = data;
++	unsigned int msg_id = msg->msg_id;
+ 	struct mtk_mdp_vpu *vpu = (struct mtk_mdp_vpu *)
+ 					(unsigned long)msg->ap_inst;
+ 	struct mtk_mdp_ctx *ctx;
+diff --git a/drivers/media/platform/mtk-vcodec/vdec_vpu_if.c b/drivers/media/platform/mtk-vcodec/vdec_vpu_if.c
+index 70abfd4cd4b9f..948a12fd9d46a 100644
+--- a/drivers/media/platform/mtk-vcodec/vdec_vpu_if.c
++++ b/drivers/media/platform/mtk-vcodec/vdec_vpu_if.c
+@@ -9,7 +9,7 @@
+ #include "vdec_ipi_msg.h"
+ #include "vdec_vpu_if.h"
  
--	high_width = div64_u64(rate * duty_ns, div);
-+	high_width = div64_u64(rate * state->duty_cycle, div);
- 	value = period | (high_width << PWM_HIGH_WIDTH_SHIFT);
--
--	err = clk_enable(mdp->clk_main);
--	if (err < 0)
--		return err;
--
--	err = clk_enable(mdp->clk_mm);
--	if (err < 0) {
--		clk_disable(mdp->clk_main);
--		return err;
--	}
-+	polarity = 0;
-+	if (state->polarity == PWM_POLARITY_INVERSED)
-+		polarity = PWM_POLARITY;
+-static void handle_init_ack_msg(struct vdec_vpu_ipi_init_ack *msg)
++static void handle_init_ack_msg(const struct vdec_vpu_ipi_init_ack *msg)
+ {
+ 	struct vdec_vpu_inst *vpu = (struct vdec_vpu_inst *)
+ 					(unsigned long)msg->ap_inst_addr;
+@@ -34,9 +34,9 @@ static void handle_init_ack_msg(struct vdec_vpu_ipi_init_ack *msg)
+  * This function runs in interrupt context and it means there's an IPI MSG
+  * from VPU.
+  */
+-static void vpu_dec_ipi_handler(void *data, unsigned int len, void *priv)
++static void vpu_dec_ipi_handler(const void *data, unsigned int len, void *priv)
+ {
+-	struct vdec_vpu_ipi_ack *msg = data;
++	const struct vdec_vpu_ipi_ack *msg = data;
+ 	struct vdec_vpu_inst *vpu = (struct vdec_vpu_inst *)
+ 					(unsigned long)msg->ap_inst_addr;
  
- 	mtk_disp_pwm_update_bits(mdp, mdp->data->con0,
- 				 PWM_CLKDIV_MASK,
- 				 clk_div << PWM_CLKDIV_SHIFT);
-+	mtk_disp_pwm_update_bits(mdp, mdp->data->con0,
-+				 PWM_POLARITY, polarity);
- 	mtk_disp_pwm_update_bits(mdp, mdp->data->con1,
- 				 PWM_PERIOD_MASK | PWM_HIGH_WIDTH_MASK,
- 				 value);
-@@ -122,50 +138,95 @@ static int mtk_disp_pwm_config(struct pwm_chip *chip, struct pwm_device *pwm,
- 		mtk_disp_pwm_update_bits(mdp, mdp->data->commit,
- 					 mdp->data->commit_mask,
- 					 0x0);
-+	} else {
-+		mtk_disp_pwm_update_bits(mdp, mdp->data->bls_debug,
-+					 mdp->data->bls_debug_mask,
-+					 mdp->data->bls_debug_mask);
-+		mtk_disp_pwm_update_bits(mdp, mdp->data->con0,
-+					 mdp->data->con0_sel,
-+					 mdp->data->con0_sel);
+diff --git a/drivers/media/platform/mtk-vcodec/venc_vpu_if.c b/drivers/media/platform/mtk-vcodec/venc_vpu_if.c
+index 3e931b0ed0965..9540709c19058 100644
+--- a/drivers/media/platform/mtk-vcodec/venc_vpu_if.c
++++ b/drivers/media/platform/mtk-vcodec/venc_vpu_if.c
+@@ -8,26 +8,26 @@
+ #include "venc_ipi_msg.h"
+ #include "venc_vpu_if.h"
+ 
+-static void handle_enc_init_msg(struct venc_vpu_inst *vpu, void *data)
++static void handle_enc_init_msg(struct venc_vpu_inst *vpu, const void *data)
+ {
+-	struct venc_vpu_ipi_msg_init *msg = data;
++	const struct venc_vpu_ipi_msg_init *msg = data;
+ 
+ 	vpu->inst_addr = msg->vpu_inst_addr;
+ 	vpu->vsi = vpu_mapping_dm_addr(vpu->dev, msg->vpu_inst_addr);
+ }
+ 
+-static void handle_enc_encode_msg(struct venc_vpu_inst *vpu, void *data)
++static void handle_enc_encode_msg(struct venc_vpu_inst *vpu, const void *data)
+ {
+-	struct venc_vpu_ipi_msg_enc *msg = data;
++	const struct venc_vpu_ipi_msg_enc *msg = data;
+ 
+ 	vpu->state = msg->state;
+ 	vpu->bs_size = msg->bs_size;
+ 	vpu->is_key_frm = msg->is_key_frm;
+ }
+ 
+-static void vpu_enc_ipi_handler(void *data, unsigned int len, void *priv)
++static void vpu_enc_ipi_handler(const void *data, unsigned int len, void *priv)
+ {
+-	struct venc_vpu_ipi_msg_common *msg = data;
++	const struct venc_vpu_ipi_msg_common *msg = data;
+ 	struct venc_vpu_inst *vpu =
+ 		(struct venc_vpu_inst *)(unsigned long)msg->venc_inst;
+ 
+diff --git a/drivers/media/platform/mtk-vpu/mtk_vpu.c b/drivers/media/platform/mtk-vpu/mtk_vpu.c
+index a768707abb942..2fbccc9b247b0 100644
+--- a/drivers/media/platform/mtk-vpu/mtk_vpu.c
++++ b/drivers/media/platform/mtk-vpu/mtk_vpu.c
+@@ -203,8 +203,8 @@ struct mtk_vpu {
+ 	struct vpu_run run;
+ 	struct vpu_wdt wdt;
+ 	struct vpu_ipi_desc ipi_desc[IPI_MAX];
+-	struct share_obj *recv_buf;
+-	struct share_obj *send_buf;
++	struct share_obj __iomem *recv_buf;
++	struct share_obj __iomem *send_buf;
+ 	struct device *dev;
+ 	struct clk *clk;
+ 	bool fw_loaded;
+@@ -292,7 +292,7 @@ int vpu_ipi_send(struct platform_device *pdev,
+ 		 unsigned int len)
+ {
+ 	struct mtk_vpu *vpu = platform_get_drvdata(pdev);
+-	struct share_obj *send_obj = vpu->send_buf;
++	struct share_obj __iomem *send_obj = vpu->send_buf;
+ 	unsigned long timeout;
+ 	int ret = 0;
+ 
+@@ -325,9 +325,9 @@ int vpu_ipi_send(struct platform_device *pdev,
+ 		}
+ 	} while (vpu_cfg_readl(vpu, HOST_TO_VPU));
+ 
+-	memcpy((void *)send_obj->share_buf, buf, len);
+-	send_obj->len = len;
+-	send_obj->id = id;
++	memcpy_toio(send_obj->share_buf, buf, len);
++	writel(len, &send_obj->len);
++	writel(id, &send_obj->id);
+ 
+ 	vpu->ipi_id_ack[id] = false;
+ 	/* send the command to VPU */
+@@ -600,10 +600,10 @@ int vpu_load_firmware(struct platform_device *pdev)
+ }
+ EXPORT_SYMBOL_GPL(vpu_load_firmware);
+ 
+-static void vpu_init_ipi_handler(void *data, unsigned int len, void *priv)
++static void vpu_init_ipi_handler(const void *data, unsigned int len, void *priv)
+ {
+-	struct mtk_vpu *vpu = (struct mtk_vpu *)priv;
+-	struct vpu_run *run = (struct vpu_run *)data;
++	struct mtk_vpu *vpu = priv;
++	const struct vpu_run *run = data;
+ 
+ 	vpu->run.signaled = run->signaled;
+ 	strscpy(vpu->run.fw_ver, run->fw_ver, sizeof(vpu->run.fw_ver));
+@@ -700,19 +700,21 @@ static int vpu_alloc_ext_mem(struct mtk_vpu *vpu, u32 fw_type)
+ 
+ static void vpu_ipi_handler(struct mtk_vpu *vpu)
+ {
+-	struct share_obj *rcv_obj = vpu->recv_buf;
++	struct share_obj __iomem *rcv_obj = vpu->recv_buf;
+ 	struct vpu_ipi_desc *ipi_desc = vpu->ipi_desc;
+-
+-	if (rcv_obj->id < IPI_MAX && ipi_desc[rcv_obj->id].handler) {
+-		ipi_desc[rcv_obj->id].handler(rcv_obj->share_buf,
+-					      rcv_obj->len,
+-					      ipi_desc[rcv_obj->id].priv);
+-		if (rcv_obj->id > IPI_VPU_INIT) {
+-			vpu->ipi_id_ack[rcv_obj->id] = true;
++	unsigned char data[SHARE_BUF_SIZE];
++	s32 id = readl(&rcv_obj->id);
++
++	memcpy_fromio(data, rcv_obj->share_buf, sizeof(data));
++	if (id < IPI_MAX && ipi_desc[id].handler) {
++		ipi_desc[id].handler(data, readl(&rcv_obj->len),
++				     ipi_desc[id].priv);
++		if (id > IPI_VPU_INIT) {
++			vpu->ipi_id_ack[id] = true;
+ 			wake_up(&vpu->ack_wq);
+ 		}
+ 	} else {
+-		dev_err(vpu->dev, "No such ipi id = %d\n", rcv_obj->id);
++		dev_err(vpu->dev, "No such ipi id = %d\n", id);
  	}
+ }
  
--	clk_disable(mdp->clk_mm);
--	clk_disable(mdp->clk_main);
--
-+	mtk_disp_pwm_update_bits(mdp, DISP_PWM_EN, mdp->data->enable_mask,
-+				 mdp->data->enable_mask);
-+	mdp->enabled = true;
+@@ -722,11 +724,10 @@ static int vpu_ipi_init(struct mtk_vpu *vpu)
+ 	vpu_cfg_writel(vpu, 0x0, VPU_TO_HOST);
+ 
+ 	/* shared buffer initialization */
+-	vpu->recv_buf = (__force struct share_obj *)(vpu->reg.tcm +
+-						     VPU_DTCM_OFFSET);
++	vpu->recv_buf = vpu->reg.tcm + VPU_DTCM_OFFSET;
+ 	vpu->send_buf = vpu->recv_buf + 1;
+-	memset(vpu->recv_buf, 0, sizeof(struct share_obj));
+-	memset(vpu->send_buf, 0, sizeof(struct share_obj));
++	memset_io(vpu->recv_buf, 0, sizeof(struct share_obj));
++	memset_io(vpu->send_buf, 0, sizeof(struct share_obj));
+ 
  	return 0;
  }
+diff --git a/drivers/media/platform/mtk-vpu/mtk_vpu.h b/drivers/media/platform/mtk-vpu/mtk_vpu.h
+index d4453b4bcee92..ee7c552ce9289 100644
+--- a/drivers/media/platform/mtk-vpu/mtk_vpu.h
++++ b/drivers/media/platform/mtk-vpu/mtk_vpu.h
+@@ -15,7 +15,7 @@
+  * VPU interfaces with other blocks by share memory and interrupt.
+  **/
  
--static int mtk_disp_pwm_enable(struct pwm_chip *chip, struct pwm_device *pwm)
-+static int mtk_disp_pwm_disable(struct pwm_chip *chip,
-+				const struct pwm_state *state)
- {
- 	struct mtk_disp_pwm *mdp = to_mtk_disp_pwm(chip);
--	int err;
--
--	err = clk_enable(mdp->clk_main);
--	if (err < 0)
--		return err;
+-typedef void (*ipi_handler_t) (void *data,
++typedef void (*ipi_handler_t) (const void *data,
+ 			       unsigned int len,
+ 			       void *priv);
  
--	err = clk_enable(mdp->clk_mm);
--	if (err < 0) {
--		clk_disable(mdp->clk_main);
--		return err;
-+	mtk_disp_pwm_update_bits(mdp, DISP_PWM_EN, mdp->data->enable_mask,
-+				 0x0);
-+	if (mdp->enabled) {
-+		clk_disable_unprepare(mdp->clk_mm);
-+		clk_disable_unprepare(mdp->clk_main);
- 	}
- 
--	mtk_disp_pwm_update_bits(mdp, DISP_PWM_EN, mdp->data->enable_mask,
--				 mdp->data->enable_mask);
-+	mdp->enabled = false;
- 
- 	return 0;
- }
- 
--static void mtk_disp_pwm_disable(struct pwm_chip *chip, struct pwm_device *pwm)
-+static int mtk_disp_pwm_apply(struct pwm_chip *chip, struct pwm_device *pwm,
-+			      const struct pwm_state *state)
-+{
-+	if (!state->enabled)
-+		return mtk_disp_pwm_disable(chip, state);
-+
-+	return mtk_disp_pwm_enable(chip, state);
-+}
-+
-+static void mtk_disp_pwm_get_state(struct pwm_chip *chip,
-+				   struct pwm_device *pwm,
-+				   struct pwm_state *state)
- {
- 	struct mtk_disp_pwm *mdp = to_mtk_disp_pwm(chip);
-+	u32 clk_div, period, high_width, con0, con1;
-+	u64 rate;
-+	int err;
- 
--	mtk_disp_pwm_update_bits(mdp, DISP_PWM_EN, mdp->data->enable_mask,
--				 0x0);
-+	err = clk_prepare_enable(mdp->clk_main);
-+	if (err < 0) {
-+		dev_err(chip->dev, "Can't enable mdp->clk_main: %d\n", err);
-+		return;
-+	}
-+	err = clk_prepare_enable(mdp->clk_mm);
-+	if (err < 0) {
-+		dev_err(chip->dev, "Can't enable mdp->clk_mm: %d\n", err);
-+		clk_disable_unprepare(mdp->clk_main);
-+		return;
-+	}
-+
-+	rate = clk_get_rate(mdp->clk_main);
-+
-+	con0 = readl(mdp->base + mdp->data->con0);
-+	con1 = readl(mdp->base + mdp->data->con1);
- 
--	clk_disable(mdp->clk_mm);
--	clk_disable(mdp->clk_main);
-+	state->polarity = con0 & PWM_POLARITY ?
-+			  PWM_POLARITY_INVERSED : PWM_POLARITY_NORMAL;
-+	state->enabled = !!(con0 & BIT(0));
-+
-+	clk_div = (con0 & PWM_CLKDIV_MASK) >> PWM_CLKDIV_SHIFT;
-+	period = con1 & PWM_PERIOD_MASK;
-+	state->period = div_u64(period * (clk_div + 1) * NSEC_PER_SEC, rate);
-+	high_width = (con1 & PWM_HIGH_WIDTH_MASK) >> PWM_HIGH_WIDTH_SHIFT;
-+	state->duty_cycle = div_u64(high_width * (clk_div + 1) * NSEC_PER_SEC,
-+				    rate);
-+
-+	if (!state->enabled) {
-+		clk_disable_unprepare(mdp->clk_mm);
-+		clk_disable_unprepare(mdp->clk_main);
-+	}
-+
-+	mdp->enabled = state->enabled;
- }
- 
- static const struct pwm_ops mtk_disp_pwm_ops = {
--	.config = mtk_disp_pwm_config,
--	.enable = mtk_disp_pwm_enable,
--	.disable = mtk_disp_pwm_disable,
-+	.apply = mtk_disp_pwm_apply,
-+	.get_state = mtk_disp_pwm_get_state,
- 	.owner = THIS_MODULE,
- };
- 
-@@ -194,14 +255,6 @@ static int mtk_disp_pwm_probe(struct platform_device *pdev)
- 	if (IS_ERR(mdp->clk_mm))
- 		return PTR_ERR(mdp->clk_mm);
- 
--	ret = clk_prepare(mdp->clk_main);
--	if (ret < 0)
--		return ret;
--
--	ret = clk_prepare(mdp->clk_mm);
--	if (ret < 0)
--		goto disable_clk_main;
--
- 	mdp->chip.dev = &pdev->dev;
- 	mdp->chip.ops = &mtk_disp_pwm_ops;
- 	mdp->chip.base = -1;
-@@ -210,43 +263,19 @@ static int mtk_disp_pwm_probe(struct platform_device *pdev)
- 	ret = pwmchip_add(&mdp->chip);
- 	if (ret < 0) {
- 		dev_err(&pdev->dev, "pwmchip_add() failed: %d\n", ret);
--		goto disable_clk_mm;
-+		return ret;
- 	}
- 
- 	platform_set_drvdata(pdev, mdp);
- 
--	/*
--	 * For MT2701, disable double buffer before writing register
--	 * and select manual mode and use PWM_PERIOD/PWM_HIGH_WIDTH.
--	 */
--	if (!mdp->data->has_commit) {
--		mtk_disp_pwm_update_bits(mdp, mdp->data->bls_debug,
--					 mdp->data->bls_debug_mask,
--					 mdp->data->bls_debug_mask);
--		mtk_disp_pwm_update_bits(mdp, mdp->data->con0,
--					 mdp->data->con0_sel,
--					 mdp->data->con0_sel);
--	}
--
- 	return 0;
--
--disable_clk_mm:
--	clk_unprepare(mdp->clk_mm);
--disable_clk_main:
--	clk_unprepare(mdp->clk_main);
--	return ret;
- }
- 
- static int mtk_disp_pwm_remove(struct platform_device *pdev)
- {
- 	struct mtk_disp_pwm *mdp = platform_get_drvdata(pdev);
--	int ret;
--
--	ret = pwmchip_remove(&mdp->chip);
--	clk_unprepare(mdp->clk_mm);
--	clk_unprepare(mdp->clk_main);
- 
--	return ret;
-+	return pwmchip_remove(&mdp->chip);
- }
- 
- static const struct mtk_pwm_data mt2701_pwm_data = {
 -- 
-2.21.0
+2.20.1
+
+
 _______________________________________________
 Linux-mediatek mailing list
 Linux-mediatek@lists.infradead.org
