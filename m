@@ -2,54 +2,54 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 786E31A3F3C
-	for <lists+linux-mediatek@lfdr.de>; Fri, 10 Apr 2020 05:52:51 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 60A5D1A3F44
+	for <lists+linux-mediatek@lfdr.de>; Fri, 10 Apr 2020 05:54:58 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=vzeB2DZfoJcu3fMv3ut5tvXZ6KCP/ZVX9aL2mxKEkiE=; b=jiYddw/+x3KCTa
-	wflcL9Ys0zcstBo/wMwbKR3kL5bV/jSfj9Cn9CF0Jd09/WcBpZSKnH1w3XQIVQoaV0qmfqeVmU5B9
-	RlCRrRi0vUsm8tdfvwDM1r263jZ2KmV1ycu+7mLt8UfNwHaJaSBsSGWbTLlv7soz5jNaQ0LLutZgg
-	UuTt1pl/unDKCTSq1vdRINmzKI9dJHgNwFjgo+Zw0c/TLZE8vkDU6pqR99Ipx7LeSgLIhQnOeS55s
-	NL0zwjqsrMzL+vBQN6cp/w1yfvLO0GaNVcyl3EODE4bry1ikespJgmbiaVJoJKg6wqE6D1agYvNdI
-	8B1RN+yny78IInY8m37g==;
+	List-Owner; bh=pIfEqosDg7POQrLjwfk4ujPOsIiphow++GqgXekTu0s=; b=Mc13RKK9jS7rBp
+	0s8Qg86+e5qXr1ZgGaB8EcVOmVJb22M6PQKjmRHagNjmn4yXF/enczqHyAFrFbBCY+SZQ/nCjtvKZ
+	DxldEhz6c7IwBhl2w/eChN06Iw/KzI9WswBeZUEwuRRDWexaAlTQlSIEEWYNfvtVJjWSRvCWQtYKA
+	p2NRHgOOtpWExPhRkgThnsSuHfuJOLrPDKZ5cj0VV24k6iIqI0BmrDb9NJYDM6YowtsikwAWFTDr0
+	D/U+weW0SyRzK/JDnCZjbNg9mI31WP9vIccTinYDzdPJaKOnElxKtj92qj3T7VeeQikLk095z3qai
+	xC6eCVVK4JRdV9c6BerA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jMkii-00028F-KD; Fri, 10 Apr 2020 03:52:44 +0000
+	id 1jMkkl-000468-QU; Fri, 10 Apr 2020 03:54:51 +0000
 Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jMkez-0004Ja-K9; Fri, 10 Apr 2020 03:49:01 +0000
+ id 1jMkfu-0005Ar-Ou; Fri, 10 Apr 2020 03:49:53 +0000
 Received: from sasha-vm.mshome.net (c-73-47-72-35.hsd1.nh.comcast.net
  [73.47.72.35])
  (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
  (No client certificate requested)
- by mail.kernel.org (Postfix) with ESMTPSA id 1080221473;
- Fri, 10 Apr 2020 03:48:51 +0000 (UTC)
+ by mail.kernel.org (Postfix) with ESMTPSA id 14BBC214D8;
+ Fri, 10 Apr 2020 03:49:48 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1586490533;
- bh=BTli6aEC2oh+s7XOlwZLRxiWjvJO69p9yn9ye5/6N5M=;
+ s=default; t=1586490590;
+ bh=05uL3AfmLOd4vCKh5qhRusPGF7xL91Dt3P3g9f6M/k8=;
  h=From:To:Cc:Subject:Date:In-Reply-To:References:From;
- b=AvFyVLLrVrk778FdPu5XOqbkAVHB+HQmGz6ghB63IgJx0GPTQTnprIZM6IrrNzX9w
- IBFHdB4ENdJkoQ8joUISZ0xS0mBIW9QN7NXyspaFQeDkXHAgO/Ls9zZHN0knEGKw1T
- qxRPlGGBMKpI+RPJcanEZ8duuRLRoZohiuJgS1vY=
+ b=cTCSl7Au4s8HLjDC8uw4YXqShYhDzM6jmy66KUqy30lmnpOWXkqYN4Kq6Y8ksGZ9h
+ zhbs8eR8bpw1ZX7JPnPN0CnYcHfzmZnEk6czVgoEzuGUoIhXaw9CA72cjLLhOqGW9x
+ C0zxpXmKWxX3Luf8uS9QcaXzW14Vg+xbYtJl7+rU=
 From: Sasha Levin <sashal@kernel.org>
 To: linux-kernel@vger.kernel.org,
 	stable@vger.kernel.org
-Subject: [PATCH AUTOSEL 5.5 44/56] media: i2c: ov5695: Fix power on and off
+Subject: [PATCH AUTOSEL 5.4 34/46] media: i2c: ov5695: Fix power on and off
  sequences
-Date: Thu,  9 Apr 2020 23:47:48 -0400
-Message-Id: <20200410034800.8381-44-sashal@kernel.org>
+Date: Thu,  9 Apr 2020 23:48:57 -0400
+Message-Id: <20200410034909.8922-34-sashal@kernel.org>
 X-Mailer: git-send-email 2.20.1
-In-Reply-To: <20200410034800.8381-1-sashal@kernel.org>
-References: <20200410034800.8381-1-sashal@kernel.org>
+In-Reply-To: <20200410034909.8922-1-sashal@kernel.org>
+References: <20200410034909.8922-1-sashal@kernel.org>
 MIME-Version: 1.0
 X-stable: review
 X-Patchwork-Hint: Ignore
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200409_204853_772359_EEB236B0 
+X-CRM114-CacheID: sfid-20200409_204951_367040_9FE2D964 
 X-CRM114-Status: GOOD (  18.26  )
 X-Spam-Score: -5.2 (-----)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
@@ -125,7 +125,7 @@ Signed-off-by: Sasha Levin <sashal@kernel.org>
  1 file changed, 31 insertions(+), 18 deletions(-)
 
 diff --git a/drivers/media/i2c/ov5695.c b/drivers/media/i2c/ov5695.c
-index d6cd15bb699ac..cc678d9d2e0da 100644
+index 34b7046d97021..1adcd1ed16641 100644
 --- a/drivers/media/i2c/ov5695.c
 +++ b/drivers/media/i2c/ov5695.c
 @@ -971,16 +971,9 @@ static int ov5695_s_stream(struct v4l2_subdev *sd, int on)
