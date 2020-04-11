@@ -2,54 +2,54 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 291C91A56C0
-	for <lists+linux-mediatek@lfdr.de>; Sun, 12 Apr 2020 01:19:47 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 887861A574B
+	for <lists+linux-mediatek@lfdr.de>; Sun, 12 Apr 2020 01:22:26 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=+ZRHn/DGtvwkho8kVM0/GQC/NrMRZDip7gBscEcRjrc=; b=GzCYIxQE0QM69w
-	lU+Uf3XfmF1AV/ouE699paGQS4wdunpesR9JY73cj2FRssAgmfuEWDjFusbDFQitbjDWO5eOr9eBn
-	OKZl/Fj11PH/PiuqPU3cYekukXH49C+9dWGDgERbSwmJFWT/6GzrUowdGANzQm77EQ61Hlvt1WUxj
-	rdtzf7eA9A3lridx3fzh6NAd+F8xxkHKNmp5OchttNzb0QhN/N3rqnt0gKQn5bcWqOAKk1yCvmKfX
-	6yohFwUFvUvydIHg174QB6klLtpGPokRldoYbrbRK8Fjws6PMZIOzlqYWpxn5u4WCRW2FsjoN2MUW
-	UHG6WfZ9hZBqyD2dO81Q==;
+	List-Owner; bh=fHRO4j9CehvPG4Kpl4qFtoLtsIWwvioYJz/zM/16GYY=; b=REf5xET7QnrLva
+	7pOyd2Up88qYU4aQGHOkQXvJ0y2OaWiAF7LxnpWsGEtwwFya3Q1Nym15bwsh8UnQ5N4Bf1wO+XcjT
+	BhgUm0L9TrejCQHm1qF2oyMmlZgcRwXSd/1Uw4CLj1cEAC+/9+PP9XYaU/UlpftWrxebGrcOgpJQi
+	HUeFUKBTFS1Vfthv5lbLvf0+qYLdo0Q9uA0E6KT1ubbqppkeKXp7Gy41I8pkKuQyTvC518D1YblQx
+	1Vjk/i1NnCSt6WX0qOyxsHq4mpUBQYzGHLQhi1UMULIjBQZStJsApMwwcKP9JsAk5fa4Bl34u2tPd
+	vCM6Z2LmSOr30A8sGL1w==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jNPPY-0000qY-LO; Sat, 11 Apr 2020 23:19:40 +0000
+	id 1jNPS6-0005dL-UP; Sat, 11 Apr 2020 23:22:18 +0000
 Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jNPHp-0007dX-Rd; Sat, 11 Apr 2020 23:11:44 +0000
+ id 1jNPJN-0000cY-9p; Sat, 11 Apr 2020 23:13:19 +0000
 Received: from sasha-vm.mshome.net (c-73-47-72-35.hsd1.nh.comcast.net
  [73.47.72.35])
  (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
  (No client certificate requested)
- by mail.kernel.org (Postfix) with ESMTPSA id 486FA20757;
- Sat, 11 Apr 2020 23:11:40 +0000 (UTC)
+ by mail.kernel.org (Postfix) with ESMTPSA id 17741216FD;
+ Sat, 11 Apr 2020 23:13:15 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1586646701;
- bh=ho6xW5LnUsPUHxq7naO9jAI6CQcQutScrcuiYHWJ5o4=;
+ s=default; t=1586646796;
+ bh=tGOQQ9djfq9Q6LbI8RPsPUKkrC6zjvSHm/Qh17ZVSTM=;
  h=From:To:Cc:Subject:Date:In-Reply-To:References:From;
- b=EfyXq7Mp4B1nj+2mUMtVG4294cfaGVTtrTJTgkT8+oByvRiGjog7OLTC68luDf9rA
- UT0qtfE1hYxPICY9s4FEkFZD/MEx0NTtoZHivs8ljtJifFZzoBZwokDDZZ6TJCKXKe
- ml7bQqJU2A7jFMQrEylbQ1SlG2nyBhiWVg1jvzWE=
+ b=gk4xj1xI6X0TVfCM+43J8sMsHHDq8PBQgSYn4pCMeO3s4e+Q29lzTALRs0WLTthMC
+ w7XqN/+Vz+qG66Ysqa7HMOYjWy76d96ytME3AuOy9HZQ9F3+JKrfAw5hXLOtmwtxmc
+ dWyOmWx7BSj9wAxoW6u7QjQRK8U4uIFEHdzo1+xQ=
 From: Sasha Levin <sashal@kernel.org>
 To: linux-kernel@vger.kernel.org,
 	stable@vger.kernel.org
-Subject: [PATCH AUTOSEL 5.4 094/108] scsi: ufs: Fix ufshcd_hold() caused
+Subject: [PATCH AUTOSEL 4.19 59/66] scsi: ufs: Fix ufshcd_hold() caused
  scheduling while atomic
-Date: Sat, 11 Apr 2020 19:09:29 -0400
-Message-Id: <20200411230943.24951-94-sashal@kernel.org>
+Date: Sat, 11 Apr 2020 19:11:56 -0400
+Message-Id: <20200411231203.25933-59-sashal@kernel.org>
 X-Mailer: git-send-email 2.20.1
-In-Reply-To: <20200411230943.24951-1-sashal@kernel.org>
-References: <20200411230943.24951-1-sashal@kernel.org>
+In-Reply-To: <20200411231203.25933-1-sashal@kernel.org>
+References: <20200411231203.25933-1-sashal@kernel.org>
 MIME-Version: 1.0
 X-stable: review
 X-Patchwork-Hint: Ignore
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200411_161141_957678_FBD912D4 
+X-CRM114-CacheID: sfid-20200411_161317_413727_20C74C38 
 X-CRM114-Status: UNSURE (   9.06  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -5.2 (-----)
@@ -115,10 +115,10 @@ Signed-off-by: Sasha Levin <sashal@kernel.org>
  1 file changed, 5 insertions(+)
 
 diff --git a/drivers/scsi/ufs/ufshcd.c b/drivers/scsi/ufs/ufshcd.c
-index d9ea0ae4f374f..5582fbcfd7395 100644
+index b3dee24917a86..d91209ba18c86 100644
 --- a/drivers/scsi/ufs/ufshcd.c
 +++ b/drivers/scsi/ufs/ufshcd.c
-@@ -1539,6 +1539,11 @@ int ufshcd_hold(struct ufs_hba *hba, bool async)
+@@ -1563,6 +1563,11 @@ int ufshcd_hold(struct ufs_hba *hba, bool async)
  		 */
  		if (ufshcd_can_hibern8_during_gating(hba) &&
  		    ufshcd_is_link_hibern8(hba)) {
