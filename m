@@ -2,55 +2,55 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id B0C191A5525
-	for <lists+linux-mediatek@lfdr.de>; Sun, 12 Apr 2020 01:09:45 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id CBBAC1A55AC
+	for <lists+linux-mediatek@lfdr.de>; Sun, 12 Apr 2020 01:12:52 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=S8+ahdB7OPtMprvcRYaO/EdgB+45zZaXyI2FQkak3sQ=; b=iviVnkaVGTQS/w
-	H/YR0OucuJBTX6+UZr17INmiPQAViIf/CODbhFwtCqB3XylVCy4UaU+SWaDvuUZZeH5KfwSuBqL6v
-	55OP0e50AIeFUIeMIZZ9MfRxuh/UGZElNAjQL7d0b9M3LPPiUtEF4itn3zdg4WxgequHhathgccLD
-	rvLBHOp4eVWhe05WlSXOQWKmZ7qIEe4C4UXwzxNGAPss05cSUkE3emZ73jcsbhzNWFkuW14Ix0OYo
-	TW7kfd1ZozeC/sfMLAEYk2R5V5NcC9CtvNIXj0ZEDnhrIgYBshz5w3JipG1XJdCxdraKNf2kpo6KN
-	3Yzq8vLNwhMTqg2alSpw==;
+	List-Owner; bh=73nxccVbiX5BeiR7pGPvU61P1RsIwzNvEWNpGwDxee4=; b=A2SK4mFjd3YxeB
+	iZQVR8kAo8QwXd2Lb8WbuOT2hGtooqe3jypqYXAIzjGsctpOJo/Ov6+OwOygS1Kg0e88N+qcW2shq
+	Pf4w0FgJk9S/AxrUDWIXmJhUnFDCBg2WAFMtqAjshOKa8H5QBmGN1a+GW5byV/UaDfkNYBb4Mcp2c
+	uglo0R7YStnTeH6iwDxqx76sVtD0SiJBtJo8XbYK/F3jwX1YRsGxXFmQk4IHmkSC3B+ye1AVASZQ8
+	w6Kd2/tQa/k9xa44Bc0YqU0moxmXF2wmVpkR30kbxGKklPaME3hNLYdM5Kj4/Xx6K/0cDDd0oc8xj
+	yyIE+0okBmAMibWNX/lQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jNPFo-0003Vq-VD; Sat, 11 Apr 2020 23:09:37 +0000
+	id 1jNPIq-0008W0-Rf; Sat, 11 Apr 2020 23:12:44 +0000
 Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jNPCr-0000fL-Ql; Sat, 11 Apr 2020 23:06:37 +0000
+ id 1jNPEL-0002B0-8y; Sat, 11 Apr 2020 23:08:06 +0000
 Received: from sasha-vm.mshome.net (c-73-47-72-35.hsd1.nh.comcast.net
  [73.47.72.35])
  (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
  (No client certificate requested)
- by mail.kernel.org (Postfix) with ESMTPSA id BE9F8217D8;
- Sat, 11 Apr 2020 23:06:31 +0000 (UTC)
+ by mail.kernel.org (Postfix) with ESMTPSA id 19243214D8;
+ Sat, 11 Apr 2020 23:08:04 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1586646392;
- bh=Nfe9w6MmF3w6Ne3snw4ketatwqXeyWFrfrZSpGBMIIA=;
+ s=default; t=1586646484;
+ bh=vr0eU8N+DcfIEeHCMZcV+a3ZvG1NoSo5bc/6p6NwcV4=;
  h=From:To:Cc:Subject:Date:In-Reply-To:References:From;
- b=p7R4GX/aytF7UmCZo4OY1nWDd0eSyqsTWjVbQwrOPIDFN+tmaKjGc4PhoXQ569hDO
- Ym7/PdMHYZsIN7O2b/88heQmZQo3S+5Cv3/xWPZ1D6gy9Z56CuP3FlaM758n+jInzt
- Bwl3S9zOPdYZRwjNzMXUI5/eRZ7jjlwbFHtbm4AA=
+ b=jePnjNFEmT8PAv33ZVabp+i6/dAGjrKSygxzyR0rVDFpgyktpy9qlrfx0ATqeqr6H
+ +jB92hg0fD6YdNc+3RL9EK0IVNC9W28m0SfZ61v/85NWxUv2XuEx6NEIHyt6m+MIFV
+ TSTRcgwPvzQcGp1l9MvoNycEh5sx3jJYezWdLZlA=
 From: Sasha Levin <sashal@kernel.org>
 To: linux-kernel@vger.kernel.org,
 	stable@vger.kernel.org
-Subject: [PATCH AUTOSEL 5.6 131/149] scsi: ufs: ufs-mediatek: ensure UniPro is
- not powered down before linkup
-Date: Sat, 11 Apr 2020 19:03:28 -0400
-Message-Id: <20200411230347.22371-131-sashal@kernel.org>
+Subject: [PATCH AUTOSEL 5.5 049/121] mt76: mt7615: disable 5 GHz on MT7622
+Date: Sat, 11 Apr 2020 19:05:54 -0400
+Message-Id: <20200411230706.23855-49-sashal@kernel.org>
 X-Mailer: git-send-email 2.20.1
-In-Reply-To: <20200411230347.22371-1-sashal@kernel.org>
-References: <20200411230347.22371-1-sashal@kernel.org>
+In-Reply-To: <20200411230706.23855-1-sashal@kernel.org>
+References: <20200411230706.23855-1-sashal@kernel.org>
 MIME-Version: 1.0
 X-stable: review
 X-Patchwork-Hint: Ignore
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200411_160633_889803_ECC1BAD4 
-X-CRM114-Status: GOOD (  10.73  )
+X-CRM114-CacheID: sfid-20200411_160805_343999_E4417F04 
+X-CRM114-Status: UNSURE (   9.13  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: -5.2 (-----)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  Content analysis details:   (-5.2 points)
@@ -79,90 +79,41 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Sasha Levin <sashal@kernel.org>,
- "Martin K . Petersen" <martin.petersen@oracle.com>, linux-scsi@vger.kernel.org,
- linux-mediatek@lists.infradead.org, Alim Akhtar <alim.akhtar@samsung.com>,
- Stanley Chu <stanley.chu@mediatek.com>, linux-arm-kernel@lists.infradead.org,
- Bean Huo <beanhuo@micron.com>
+Cc: Sasha Levin <sashal@kernel.org>, netdev@vger.kernel.org,
+ linux-wireless@vger.kernel.org, linux-mediatek@lists.infradead.org,
+ linux-arm-kernel@lists.infradead.org, Felix Fietkau <nbd@nbd.name>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-From: Stanley Chu <stanley.chu@mediatek.com>
+From: Felix Fietkau <nbd@nbd.name>
 
-[ Upstream commit 7742ca797aa79f280853ffd3e7d2e2af3cd317a5 ]
+[ Upstream commit c3ad5e9d00af19c53dec1d8ae647a78ac377b593 ]
 
-MediaTek Chipsets can enter proprietary UniPro low-power mode during
-suspend while link is in hibern8 state. Make sure leaving low-power mode
-before every link startup to prevent lockup in any possible error recovery
-path.
+It is not supported by the chip, so avoid issues with potentially wrong
+EEPROM configurations.
 
-At the same time, re-factor related funcitons to improve code readability.
-
-Link: https://lore.kernel.org/r/20200129105251.12466-2-stanley.chu@mediatek.com
-Reviewed-by: Alim Akhtar <alim.akhtar@samsung.com>
-Reviewed-by: Bean Huo <beanhuo@micron.com>
-Signed-off-by: Stanley Chu <stanley.chu@mediatek.com>
-Signed-off-by: Martin K. Petersen <martin.petersen@oracle.com>
+Signed-off-by: Felix Fietkau <nbd@nbd.name>
 Signed-off-by: Sasha Levin <sashal@kernel.org>
 ---
- drivers/scsi/ufs/ufs-mediatek.c | 19 ++++++++++---------
- 1 file changed, 10 insertions(+), 9 deletions(-)
+ drivers/net/wireless/mediatek/mt76/mt7615/eeprom.c | 3 +++
+ 1 file changed, 3 insertions(+)
 
-diff --git a/drivers/scsi/ufs/ufs-mediatek.c b/drivers/scsi/ufs/ufs-mediatek.c
-index 53eae5fe2ade2..7ac838cc15d16 100644
---- a/drivers/scsi/ufs/ufs-mediatek.c
-+++ b/drivers/scsi/ufs/ufs-mediatek.c
-@@ -30,6 +30,11 @@
- #define ufs_mtk_device_reset_ctrl(high, res) \
- 	ufs_mtk_smc(UFS_MTK_SIP_DEVICE_RESET, high, res)
- 
-+#define ufs_mtk_unipro_powerdown(hba, powerdown) \
-+	ufshcd_dme_set(hba, \
-+		       UIC_ARG_MIB_SEL(VS_UNIPROPOWERDOWNCONTROL, 0), \
-+		       powerdown)
-+
- static void ufs_mtk_cfg_unipro_cg(struct ufs_hba *hba, bool enable)
- {
- 	u32 tmp;
-@@ -290,6 +295,8 @@ static int ufs_mtk_pre_link(struct ufs_hba *hba)
- 	int ret;
- 	u32 tmp;
- 
-+	ufs_mtk_unipro_powerdown(hba, 0);
-+
- 	/* disable deep stall */
- 	ret = ufshcd_dme_get(hba, UIC_ARG_MIB(VS_SAVEPOWERCONTROL), &tmp);
- 	if (ret)
-@@ -390,9 +397,7 @@ static int ufs_mtk_link_set_hpm(struct ufs_hba *hba)
- 	if (err)
- 		return err;
- 
--	err = ufshcd_dme_set(hba,
--			     UIC_ARG_MIB_SEL(VS_UNIPROPOWERDOWNCONTROL, 0),
--			     0);
-+	err = ufs_mtk_unipro_powerdown(hba, 0);
- 	if (err)
- 		return err;
- 
-@@ -413,14 +418,10 @@ static int ufs_mtk_link_set_lpm(struct ufs_hba *hba)
- {
- 	int err;
- 
--	err = ufshcd_dme_set(hba,
--			     UIC_ARG_MIB_SEL(VS_UNIPROPOWERDOWNCONTROL, 0),
--			     1);
-+	err = ufs_mtk_unipro_powerdown(hba, 1);
- 	if (err) {
- 		/* Resume UniPro state for following error recovery */
--		ufshcd_dme_set(hba,
--			       UIC_ARG_MIB_SEL(VS_UNIPROPOWERDOWNCONTROL, 0),
--			       0);
-+		ufs_mtk_unipro_powerdown(hba, 0);
- 		return err;
+diff --git a/drivers/net/wireless/mediatek/mt76/mt7615/eeprom.c b/drivers/net/wireless/mediatek/mt76/mt7615/eeprom.c
+index 17e277bf39e0f..cb05a07135a03 100644
+--- a/drivers/net/wireless/mediatek/mt76/mt7615/eeprom.c
++++ b/drivers/net/wireless/mediatek/mt76/mt7615/eeprom.c
+@@ -111,6 +111,9 @@ static void mt7615_eeprom_parse_hw_cap(struct mt7615_dev *dev)
+ 		break;
  	}
  
++	if (is_mt7622(&dev->mt76))
++		dev->mt76.cap.has_5ghz = false;
++
+ 	/* read tx-rx mask from eeprom */
+ 	val = mt76_rr(dev, MT_TOP_STRAP_STA);
+ 	max_nss = val & MT_TOP_3NSS ? 3 : 4;
 -- 
 2.20.1
 
