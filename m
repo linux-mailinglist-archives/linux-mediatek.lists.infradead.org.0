@@ -2,46 +2,46 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 2F4381A56A3
-	for <lists+linux-mediatek@lfdr.de>; Sun, 12 Apr 2020 01:18:32 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 291C91A56C0
+	for <lists+linux-mediatek@lfdr.de>; Sun, 12 Apr 2020 01:19:47 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=9hj+ulxjD9Q4aKmjUcqclHBv5zQH1KGnRIhVHQw5sOQ=; b=gTKFZ7AuzQLRot
-	/po12Io7IbpF3/tzYAokbL8YRT9UcZjtL1VXUx9i93t1zmov3PTUFDgyDueUJYLjaKKrnwdX2INg8
-	gFdD68x48XNJv0hS/snc9HnXgE/kRPon9oKce7TX/FWrg7p6T8p0tQK8zwcAdwTl82n3jKOLXLQMv
-	R/1MRJ/9uC78TC6rAPIMvs/Kh3RHs35niF1PMdKYEfa3b4V/q9PLUAQMfOXZVidRSwlSlwMgCYuIM
-	ejrgH7LAxzGrpGPRaaCO9BcPKT/Mq3YOLrXgEtXT1Pir/CXt1mViDv3SYrKlq9rLXPXAOTD5xWG7y
-	lOdU1S3kc4qzSiqB+6aw==;
+	List-Owner; bh=+ZRHn/DGtvwkho8kVM0/GQC/NrMRZDip7gBscEcRjrc=; b=GzCYIxQE0QM69w
+	lU+Uf3XfmF1AV/ouE699paGQS4wdunpesR9JY73cj2FRssAgmfuEWDjFusbDFQitbjDWO5eOr9eBn
+	OKZl/Fj11PH/PiuqPU3cYekukXH49C+9dWGDgERbSwmJFWT/6GzrUowdGANzQm77EQ61Hlvt1WUxj
+	rdtzf7eA9A3lridx3fzh6NAd+F8xxkHKNmp5OchttNzb0QhN/N3rqnt0gKQn5bcWqOAKk1yCvmKfX
+	6yohFwUFvUvydIHg174QB6klLtpGPokRldoYbrbRK8Fjws6PMZIOzlqYWpxn5u4WCRW2FsjoN2MUW
+	UHG6WfZ9hZBqyD2dO81Q==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jNPOK-00080h-60; Sat, 11 Apr 2020 23:18:24 +0000
+	id 1jNPPY-0000qY-LO; Sat, 11 Apr 2020 23:19:40 +0000
 Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jNPH8-00074L-TG; Sat, 11 Apr 2020 23:11:00 +0000
+ id 1jNPHp-0007dX-Rd; Sat, 11 Apr 2020 23:11:44 +0000
 Received: from sasha-vm.mshome.net (c-73-47-72-35.hsd1.nh.comcast.net
  [73.47.72.35])
  (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
  (No client certificate requested)
- by mail.kernel.org (Postfix) with ESMTPSA id 5F9F5216FD;
- Sat, 11 Apr 2020 23:10:57 +0000 (UTC)
+ by mail.kernel.org (Postfix) with ESMTPSA id 486FA20757;
+ Sat, 11 Apr 2020 23:11:40 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1586646658;
- bh=+GD6PLPiFpHNPiHz6Rnj1FDTwvjkiSNpc5Zoh+iL6l4=;
+ s=default; t=1586646701;
+ bh=ho6xW5LnUsPUHxq7naO9jAI6CQcQutScrcuiYHWJ5o4=;
  h=From:To:Cc:Subject:Date:In-Reply-To:References:From;
- b=ABuPB077GaUkRFPWbPWTGqd8olzTYuu4QpF7TgEH8SGJRq3R0ZauHF0PUT2i/xpHD
- kJIVsVgMiQ0a7YjAht4qtx8bjsOUqO0m4krd3dHvk3c7gBU+AgIXYqjdeoXx6g6s+F
- 9bJyT5G/NO54SW/vuwwHgSn5CnHhOAjGtZ1TBGro=
+ b=EfyXq7Mp4B1nj+2mUMtVG4294cfaGVTtrTJTgkT8+oByvRiGjog7OLTC68luDf9rA
+ UT0qtfE1hYxPICY9s4FEkFZD/MEx0NTtoZHivs8ljtJifFZzoBZwokDDZZ6TJCKXKe
+ ml7bQqJU2A7jFMQrEylbQ1SlG2nyBhiWVg1jvzWE=
 From: Sasha Levin <sashal@kernel.org>
 To: linux-kernel@vger.kernel.org,
 	stable@vger.kernel.org
-Subject: [PATCH AUTOSEL 5.4 060/108] mt76: mt7603: fix input validation issues
- for powersave-filtered frames
-Date: Sat, 11 Apr 2020 19:08:55 -0400
-Message-Id: <20200411230943.24951-60-sashal@kernel.org>
+Subject: [PATCH AUTOSEL 5.4 094/108] scsi: ufs: Fix ufshcd_hold() caused
+ scheduling while atomic
+Date: Sat, 11 Apr 2020 19:09:29 -0400
+Message-Id: <20200411230943.24951-94-sashal@kernel.org>
 X-Mailer: git-send-email 2.20.1
 In-Reply-To: <20200411230943.24951-1-sashal@kernel.org>
 References: <20200411230943.24951-1-sashal@kernel.org>
@@ -49,8 +49,9 @@ MIME-Version: 1.0
 X-stable: review
 X-Patchwork-Hint: Ignore
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200411_161058_976143_B9C9B524 
-X-CRM114-Status: GOOD (  10.79  )
+X-CRM114-CacheID: sfid-20200411_161141_957678_FBD912D4 
+X-CRM114-Status: UNSURE (   9.06  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: -5.2 (-----)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  Content analysis details:   (-5.2 points)
@@ -79,81 +80,56 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Sasha Levin <sashal@kernel.org>, netdev@vger.kernel.org,
- linux-wireless@vger.kernel.org, linux-mediatek@lists.infradead.org,
- linux-arm-kernel@lists.infradead.org, Felix Fietkau <nbd@nbd.name>
+Cc: Sasha Levin <sashal@kernel.org>, linux-scsi@vger.kernel.org,
+ "Martin K . Petersen" <martin.petersen@oracle.com>,
+ Asutosh Das <asutoshd@codeaurora.org>, Can Guo <cang@codeaurora.org>,
+ linux-mediatek@lists.infradead.org, linux-arm-kernel@lists.infradead.org,
+ Stanley Chu <stanley.chu@mediatek.com>, Hongwu Su <hongwus@codeaurora.org>,
+ Bean Huo <beanhuo@micron.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-From: Felix Fietkau <nbd@nbd.name>
+From: Can Guo <cang@codeaurora.org>
 
-[ Upstream commit d55aa5e17461b8b423adae376978032c4a10a1d8 ]
+[ Upstream commit c63d6099a7959ecc919b2549dc6b71f53521f819 ]
 
-Before extracting the tid out of the packet, check if it was qos-data.
-Only accept tid values 0-7
-Also, avoid accepting the hardware queue as skb queue mapping, it could
-lead to an overrun. Instead, derive the hardware queue from the tid number,
-in order to avoid issues with packets being filtered multiple times.
-This also fixes a mismatch between hardware and software queue indexes.
+The async version of ufshcd_hold(async == true), which is only called in
+queuecommand path as for now, is expected to work in atomic context, thus
+it should not sleep or schedule out. When it runs into the condition that
+clocks are ON but link is still in hibern8 state, it should bail out
+without flushing the clock ungate work.
 
-Signed-off-by: Felix Fietkau <nbd@nbd.name>
+Fixes: f2a785ac2312 ("scsi: ufshcd: Fix race between clk scaling and ungate work")
+Link: https://lore.kernel.org/r/1581392451-28743-6-git-send-email-cang@codeaurora.org
+Reviewed-by: Hongwu Su <hongwus@codeaurora.org>
+Reviewed-by: Asutosh Das <asutoshd@codeaurora.org>
+Reviewed-by: Bean Huo <beanhuo@micron.com>
+Reviewed-by: Stanley Chu <stanley.chu@mediatek.com>
+Signed-off-by: Can Guo <cang@codeaurora.org>
+Signed-off-by: Martin K. Petersen <martin.petersen@oracle.com>
 Signed-off-by: Sasha Levin <sashal@kernel.org>
 ---
- .../net/wireless/mediatek/mt76/mt7603/dma.c   | 19 +++++++++++++++----
- 1 file changed, 15 insertions(+), 4 deletions(-)
+ drivers/scsi/ufs/ufshcd.c | 5 +++++
+ 1 file changed, 5 insertions(+)
 
-diff --git a/drivers/net/wireless/mediatek/mt76/mt7603/dma.c b/drivers/net/wireless/mediatek/mt76/mt7603/dma.c
-index 24d82a20d046d..86820cf31bb34 100644
---- a/drivers/net/wireless/mediatek/mt76/mt7603/dma.c
-+++ b/drivers/net/wireless/mediatek/mt76/mt7603/dma.c
-@@ -30,6 +30,16 @@ mt7603_init_tx_queue(struct mt7603_dev *dev, struct mt76_sw_queue *q,
- static void
- mt7603_rx_loopback_skb(struct mt7603_dev *dev, struct sk_buff *skb)
- {
-+	static const u8 tid_to_ac[8] = {
-+		IEEE80211_AC_BE,
-+		IEEE80211_AC_BK,
-+		IEEE80211_AC_BK,
-+		IEEE80211_AC_BE,
-+		IEEE80211_AC_VI,
-+		IEEE80211_AC_VI,
-+		IEEE80211_AC_VO,
-+		IEEE80211_AC_VO
-+	};
- 	__le32 *txd = (__le32 *)skb->data;
- 	struct ieee80211_hdr *hdr;
- 	struct ieee80211_sta *sta;
-@@ -38,7 +48,7 @@ mt7603_rx_loopback_skb(struct mt7603_dev *dev, struct sk_buff *skb)
- 	void *priv;
- 	int idx;
- 	u32 val;
--	u8 tid;
-+	u8 tid = 0;
- 
- 	if (skb->len < MT_TXD_SIZE + sizeof(struct ieee80211_hdr))
- 		goto free;
-@@ -56,15 +66,16 @@ mt7603_rx_loopback_skb(struct mt7603_dev *dev, struct sk_buff *skb)
- 
- 	priv = msta = container_of(wcid, struct mt7603_sta, wcid);
- 	val = le32_to_cpu(txd[0]);
--	skb_set_queue_mapping(skb, FIELD_GET(MT_TXD0_Q_IDX, val));
--
- 	val &= ~(MT_TXD0_P_IDX | MT_TXD0_Q_IDX);
- 	val |= FIELD_PREP(MT_TXD0_Q_IDX, MT_TX_HW_QUEUE_MGMT);
- 	txd[0] = cpu_to_le32(val);
- 
- 	sta = container_of(priv, struct ieee80211_sta, drv_priv);
- 	hdr = (struct ieee80211_hdr *)&skb->data[MT_TXD_SIZE];
--	tid = *ieee80211_get_qos_ctl(hdr) & IEEE80211_QOS_CTL_TID_MASK;
-+	if (ieee80211_is_data_qos(hdr->frame_control))
-+		tid = *ieee80211_get_qos_ctl(hdr) &
-+		      IEEE80211_QOS_CTL_TAG1D_MASK;
-+	skb_set_queue_mapping(skb, tid_to_ac[tid]);
- 	ieee80211_sta_set_buffered(sta, tid, true);
- 
- 	spin_lock_bh(&dev->ps_lock);
+diff --git a/drivers/scsi/ufs/ufshcd.c b/drivers/scsi/ufs/ufshcd.c
+index d9ea0ae4f374f..5582fbcfd7395 100644
+--- a/drivers/scsi/ufs/ufshcd.c
++++ b/drivers/scsi/ufs/ufshcd.c
+@@ -1539,6 +1539,11 @@ int ufshcd_hold(struct ufs_hba *hba, bool async)
+ 		 */
+ 		if (ufshcd_can_hibern8_during_gating(hba) &&
+ 		    ufshcd_is_link_hibern8(hba)) {
++			if (async) {
++				rc = -EAGAIN;
++				hba->clk_gating.active_reqs--;
++				break;
++			}
+ 			spin_unlock_irqrestore(hba->host->host_lock, flags);
+ 			flush_work(&hba->clk_gating.ungate_work);
+ 			spin_lock_irqsave(hba->host->host_lock, flags);
 -- 
 2.20.1
 
