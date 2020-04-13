@@ -2,74 +2,91 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 136DD1A6E63
-	for <lists+linux-mediatek@lfdr.de>; Mon, 13 Apr 2020 23:34:12 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 634711A6EAE
+	for <lists+linux-mediatek@lfdr.de>; Mon, 13 Apr 2020 23:53:07 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=wr2jG3IYH8R0WiBsx3sTiPWoxirIUnE12ONsK5jUyUE=; b=IuQ9Mjl+gEB1ck
-	MwM3tYKfxKnBaHwKIIlYtnTF9EEqpNaPqHziocB+pqtpmwoe33i9YjEKTPunuWes50VqiPbEk1Rsx
-	ccwIp5B+Sg2lscM7VL/ACHswa3+pcoLR050fURYDsu2pax5NXm87/8Rpp9A88bycJa9MIwrsCfqmT
-	BAEd4ZWa/m/Dtp4Jj2GEyqD85r1lu0uPfLeH1byfx0Y5qJ3xREPDIlLaiWfEIF7pagh4D5IdfeXdn
-	iKjbN6SHtbkXLtkA5lNQFyGwjOQdq/S3I44DQ7uhA2LvwpAdu7l/IJbKJl31IVZjv6f4hjSM8Sbtv
-	0UEOYzUpn88Uv9PKbnOg==;
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
+	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
+	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=R0qqn/tymOz9CXkG9fvJ7NHtDvz9nky3Lz66z5nLnwY=; b=QlEwRgRHOT1WVA
+	3MmZ05J+VWRcLOhLdUPYmVJLIVSdeL5Yea2terTNl19kK7seqkG0kdY2LW7P0UmbSDDIOwzqDTIxY
+	2EvP/TJ2Ac+l8Dy1rpDF5CmEpVaR9wKs57KKIdqHr5X3V7Qhfr3e7KnLF0+ixPHdzS2XvncQSsNed
+	TFFLoGC8tAi9fe5PMi6fuyCvVmQRj/HSVtYXhD/f6L1FNbJBjbez2jPHe3V43idIjdApW51z/SO1n
+	M5sm4p/6gaandqoywa2erTSZuCE3Pp3ye6k0pnPgQaFKelOGGyOGaZmGQ8j1fKU/FupMpz3D8OrIA
+	qc1x0aHuNsW98+7csHcg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jO6iU-0004yF-Ek; Mon, 13 Apr 2020 21:34:06 +0000
-Received: from smtprelay0036.hostedemail.com ([216.40.44.36]
- helo=smtprelay.hostedemail.com)
+	id 1jO70m-0007nj-VH; Mon, 13 Apr 2020 21:53:00 +0000
+Received: from us-smtp-delivery-1.mimecast.com ([205.139.110.120]
+ helo=us-smtp-1.mimecast.com)
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jO6iI-0004mk-41; Mon, 13 Apr 2020 21:33:55 +0000
-Received: from filter.hostedemail.com (clb03-v110.bra.tucows.net
- [216.40.38.60])
- by smtprelay06.hostedemail.com (Postfix) with ESMTP id D45AF18027F9D;
- Mon, 13 Apr 2020 21:33:46 +0000 (UTC)
-X-Session-Marker: 6A6F6540706572636865732E636F6D
-X-Spam-Summary: 2, 0, 0, , d41d8cd98f00b204, joe@perches.com, ,
- RULES_HIT:41:355:379:599:966:988:989:1260:1277:1311:1313:1314:1345:1359:1437:1515:1516:1518:1534:1541:1593:1594:1711:1730:1747:1777:1792:2196:2199:2393:2559:2562:2693:2828:3138:3139:3140:3141:3142:3352:3622:3865:3866:3867:3868:3871:3872:4321:4385:5007:6119:6742:6743:7808:8660:10004:10400:10466:10848:11026:11232:11657:11658:11914:12043:12048:12296:12297:12438:12740:12760:12895:13069:13148:13230:13311:13357:13439:14659:14721:21080:21451:21627:21990:30054:30091,
- 0, RBL:none, CacheIP:none, Bayesian:0.5, 0.5, 0.5, Netcheck:none,
- DomainCache:0, MSF:not bulk, SPF:, MSBL:0, DNSBL:none, Custom_rules:0:0:0,
- LFtime:2, LUA_SUMMARY:none
-X-HE-Tag: badge84_5a5696689f027
-X-Filterd-Recvd-Size: 3380
-Received: from XPS-9350.home (unknown [47.151.136.130])
- (Authenticated sender: joe@perches.com)
- by omf07.hostedemail.com (Postfix) with ESMTPA;
- Mon, 13 Apr 2020 21:33:40 +0000 (UTC)
-Message-ID: <efd6ceb1f182aa7364e9706422768a1c1335aee4.camel@perches.com>
+ id 1jO70X-0007cz-AE
+ for linux-mediatek@lists.infradead.org; Mon, 13 Apr 2020 21:52:47 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=redhat.com;
+ s=mimecast20190719; t=1586814764;
+ h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
+ to:to:cc:cc:mime-version:mime-version:content-type:content-type:
+ content-transfer-encoding:content-transfer-encoding:
+ in-reply-to:in-reply-to:references:references;
+ bh=wxqewLP4iDn0WQn56N4JoZnVO/VnkSCHun6WFS8TA58=;
+ b=ZtXlUR+jTPnPN3iCA/WKmMCiPRo/hAbmohSMyJGHGYT5o6A8cEKHi7627TDTDbNJ1TeeIo
+ p8bBsVkbQlAOOZyLatf6AQfHgPPE8r3rc+shdpzSFQy3NMuUjhIpz78Cva0U8Z66l77Jjy
+ UVK9pTbtiTQkMRsi9aA4mLn8axE6Yp8=
+Received: from mimecast-mx01.redhat.com (mimecast-mx01.redhat.com
+ [209.132.183.4]) (Using TLS) by relay.mimecast.com with ESMTP id
+ us-mta-238-R_QYnAHVPD67nMQL-Amo0w-1; Mon, 13 Apr 2020 17:52:38 -0400
+X-MC-Unique: R_QYnAHVPD67nMQL-Amo0w-1
+Received: from smtp.corp.redhat.com (int-mx06.intmail.prod.int.phx2.redhat.com
+ [10.5.11.16])
+ (using TLSv1.2 with cipher AECDH-AES256-SHA (256/256 bits))
+ (No client certificate requested)
+ by mimecast-mx01.redhat.com (Postfix) with ESMTPS id F1B928018AA;
+ Mon, 13 Apr 2020 21:52:32 +0000 (UTC)
+Received: from llong.remote.csb (ovpn-115-28.rdu2.redhat.com [10.10.115.28])
+ by smtp.corp.redhat.com (Postfix) with ESMTP id AB5E15C1B2;
+ Mon, 13 Apr 2020 21:52:24 +0000 (UTC)
 Subject: Re: [PATCH 2/2] crypto: Remove unnecessary memzero_explicit()
-From: Joe Perches <joe@perches.com>
-To: Waiman Long <longman@redhat.com>, Andrew Morton
- <akpm@linux-foundation.org>,  David Howells <dhowells@redhat.com>, Jarkko
- Sakkinen <jarkko.sakkinen@linux.intel.com>, James Morris
- <jmorris@namei.org>, "Serge E. Hallyn" <serge@hallyn.com>, Linus Torvalds
- <torvalds@linux-foundation.org>, Matthew Wilcox <willy@infradead.org>,
- David Rientjes <rientjes@google.com>
-Date: Mon, 13 Apr 2020 14:31:32 -0700
-In-Reply-To: <20200413211550.8307-3-longman@redhat.com>
+To: Joe Perches <joe@perches.com>, Andrew Morton <akpm@linux-foundation.org>, 
+ David Howells <dhowells@redhat.com>,
+ Jarkko Sakkinen <jarkko.sakkinen@linux.intel.com>,
+ James Morris <jmorris@namei.org>, "Serge E. Hallyn" <serge@hallyn.com>,
+ Linus Torvalds <torvalds@linux-foundation.org>,
+ Matthew Wilcox <willy@infradead.org>, David Rientjes <rientjes@google.com>
 References: <20200413211550.8307-1-longman@redhat.com>
  <20200413211550.8307-3-longman@redhat.com>
-User-Agent: Evolution 3.34.1-2 
+ <efd6ceb1f182aa7364e9706422768a1c1335aee4.camel@perches.com>
+From: Waiman Long <longman@redhat.com>
+Organization: Red Hat
+Message-ID: <7e13a94b-2e92-850f-33f7-0f42cfcd9009@redhat.com>
+Date: Mon, 13 Apr 2020 17:52:24 -0400
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:60.0) Gecko/20100101
+ Thunderbird/60.7.2
 MIME-Version: 1.0
+In-Reply-To: <efd6ceb1f182aa7364e9706422768a1c1335aee4.camel@perches.com>
+Content-Language: en-US
+X-Scanned-By: MIMEDefang 2.79 on 10.5.11.16
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200413_143354_223380_5B0E3F82 
-X-CRM114-Status: UNSURE (   8.79  )
-X-CRM114-Notice: Please train this message.
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20200413_145245_433244_561841C6 
+X-CRM114-Status: GOOD (  12.30  )
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [216.40.44.36 listed in list.dnswl.org]
- 0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
- [216.40.44.36 listed in wl.mailspike.net]
- 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
+ no trust [205.139.110.120 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -102,42 +119,50 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Mon, 2020-04-13 at 17:15 -0400, Waiman Long wrote:
-> Since kfree_sensitive() will do an implicit memzero_explicit(), there
-> is no need to call memzero_explicit() before it. Eliminate those
-> memzero_explicit() and simplify the call sites.
+On 4/13/20 5:31 PM, Joe Perches wrote:
+> On Mon, 2020-04-13 at 17:15 -0400, Waiman Long wrote:
+>> Since kfree_sensitive() will do an implicit memzero_explicit(), there
+>> is no need to call memzero_explicit() before it. Eliminate those
+>> memzero_explicit() and simplify the call sites.
+> 2 bits of trivia:
+>
+>> diff --git a/drivers/crypto/allwinner/sun8i-ce/sun8i-ce-cipher.c b/drivers/crypto/allwinner/sun8i-ce/sun8i-ce-cipher.c
+> []
+>> @@ -391,10 +388,7 @@ int sun8i_ce_aes_setkey(struct crypto_skcipher *tfm, const u8 *key,
+>>  		dev_dbg(ce->dev, "ERROR: Invalid keylen %u\n", keylen);
+>>  		return -EINVAL;
+>>  	}
+>> -	if (op->key) {
+>> -		memzero_explicit(op->key, op->keylen);
+>> -		kfree(op->key);
+>> -	}
+>> +	kfree_sensitive(op->key);
+>>  	op->keylen = keylen;
+>>  	op->key = kmemdup(key, keylen, GFP_KERNEL | GFP_DMA);
+>>  	if (!op->key)
+> It might be a defect to set op->keylen before the kmemdup succeeds.
+It could be. I can move it down after the op->key check.
+>> @@ -416,10 +410,7 @@ int sun8i_ce_des3_setkey(struct crypto_skcipher *tfm, const u8 *key,
+>>  	if (err)
+>>  		return err;
+>>  
+>> -	if (op->key) {
+>> -		memzero_explicit(op->key, op->keylen);
+>> -		kfree(op->key);
+>> -	}
+>> +	free_sensitive(op->key, op->keylen);
+> Why not kfree_sensitive(op->key) ?
 
-2 bits of trivia:
+Oh, it is a bug. I will send out v2 to fix that.
 
-> diff --git a/drivers/crypto/allwinner/sun8i-ce/sun8i-ce-cipher.c b/drivers/crypto/allwinner/sun8i-ce/sun8i-ce-cipher.c
-[]
-> @@ -391,10 +388,7 @@ int sun8i_ce_aes_setkey(struct crypto_skcipher *tfm, const u8 *key,
->  		dev_dbg(ce->dev, "ERROR: Invalid keylen %u\n", keylen);
->  		return -EINVAL;
->  	}
-> -	if (op->key) {
-> -		memzero_explicit(op->key, op->keylen);
-> -		kfree(op->key);
-> -	}
-> +	kfree_sensitive(op->key);
->  	op->keylen = keylen;
->  	op->key = kmemdup(key, keylen, GFP_KERNEL | GFP_DMA);
->  	if (!op->key)
+Thanks for spotting it.
 
-It might be a defect to set op->keylen before the kmemdup succeeds.
+Cheers,
+Longman
 
-> @@ -416,10 +410,7 @@ int sun8i_ce_des3_setkey(struct crypto_skcipher *tfm, const u8 *key,
->  	if (err)
->  		return err;
->  
-> -	if (op->key) {
-> -		memzero_explicit(op->key, op->keylen);
-> -		kfree(op->key);
-> -	}
-> +	free_sensitive(op->key, op->keylen);
 
-Why not kfree_sensitive(op->key) ?
-
+>
+>
 
 
 _______________________________________________
