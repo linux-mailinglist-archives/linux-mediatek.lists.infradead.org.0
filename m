@@ -2,78 +2,70 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id B35D51A8B61
-	for <lists+linux-mediatek@lfdr.de>; Tue, 14 Apr 2020 21:47:37 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 407C81A8D13
+	for <lists+linux-mediatek@lfdr.de>; Tue, 14 Apr 2020 23:01:45 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
-	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=Wylxy90sWNajbShWcksKac9ZputKQ1pSEF0rt8wX7xI=; b=qdocK2Odw4DhVQ
-	Jbm+aQPRhWXSplVY1apoEznRlRQZgGZmvwhsol4ocUHjFenOExNYhXob7TJN0sMZi738zMZ00O2iM
-	bkki338fCj2Pr75NYPAj1urb+67ELCmBHi6qCOPpIC+IcuwmDBWufsrLFsKQ8tYE9yg2xw7xF8RWr
-	+1yZLj41YglXCon9S3WHDprWKj40MXc9HMsxx/fOURzR+6IbWnW7mVPVmlbP9IOXu72PUDoHJ4KMl
-	lQbvLdifK+BgmKqsap+swgmzppXAOdE6W4gOH9oSztyIXimHgOeGVrpdv+bxAZkFWokVDdG3TqcMF
-	H1p+CtPfHgovo/tA+zJQ==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=W08bmcWL2Z/1Frhitx6tDXSwrEm96o1OYP6Ms2zc0/E=; b=K4rZl4M4vEGsZC
+	FdrVN3H/uczOqxBC+QxT7muHP0qBRhBDAxv5OhdPRPYtsBB9rV0aa+zVyCsslKQRttguHRDGOD9JR
+	CUFsmoWwBQOnSkHBAfpSVGPrXuy1aARVUeSu/D3V0V4+oYWVynXkozAvSSmiLQolKGxrxMh4Qlqbh
+	GTHO9ITSBY7S8z4wR/Yb5F2kWvmLKlHTwr1+qQa/kJIYDsiz58oE+txx+QQCGPMthEPm+EUHh0hg4
+	PWwfPlAczI/rc+Qrbv3kgVIdt+i55gsBRA+OYvYqzgd7RLvkaMV2O7AS4UiZIt7XhpdqJxA0sK6FX
+	pjt7VBFTq7vccGexwcVw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jORWs-0003YK-I7; Tue, 14 Apr 2020 19:47:30 +0000
-Received: from mail-lj1-x243.google.com ([2a00:1450:4864:20::243])
+	id 1jOSgb-0007m9-Us; Tue, 14 Apr 2020 21:01:37 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jORWo-0003Tw-Hr
- for linux-mediatek@lists.infradead.org; Tue, 14 Apr 2020 19:47:28 +0000
-Received: by mail-lj1-x243.google.com with SMTP id j3so700172ljg.8
- for <linux-mediatek@lists.infradead.org>; Tue, 14 Apr 2020 12:47:25 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
- h=mime-version:references:in-reply-to:from:date:message-id:subject:to
- :cc; bh=JJK+Q+UKkDQaruBYiWcWjNudKJdkietMzkyNFKfwUfY=;
- b=NI2CbHQmy0JJhl4ytQt1TbKJDLFhbGdB6cugYS+62mNdDgladQHA0hgMSpm0uXhk9o
- OenLF/9qzYoyXCkuv5tboOvQ6DYSBgPak6ZedVQ8kUkb2+i3/FPQaVyVDxSnO7vm1ajm
- O8Ee2EwUzbtxLpnuvL5B21vXVbTPdRKawqDL3gkIiIr+Jrz202HaTyAyl3ggcMnK6bgF
- aHJmI2L8Q4H3BoMBCL08Cbenfkc2Ktqw+9w5IwhZlfXIkOWQjb/acdtVBaaBe5mpT7GX
- kwMHIbu70LH9UdN5hfijW4qXB2bKDyy7J84+hu3Wd69S/RaX2rI2sxEYDfE0xTjOAuIN
- MV3g==
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:mime-version:references:in-reply-to:from:date
- :message-id:subject:to:cc;
- bh=JJK+Q+UKkDQaruBYiWcWjNudKJdkietMzkyNFKfwUfY=;
- b=GRKhZt7Xx3HY8BplMyh+rkhMKHFaB/bJb4aKRgXt682WOpVhvGltoUbAv/W8j4ChOE
- GSEqFJerTLlL9Q0VVStLoupp1Mb3n2QJ0/KOx6aXr3g+kXjF92X96ozF2B4WQmyDzN8S
- AG4JyEVE11HRGcxfP0+RF3vDJYTm3IJ148zB9xpwK1rGb+koG01Iwh/iZ/ybrBFcCgek
- s/7R9lNSQgtZMo8Y7FErXqc2/W+GhZ7doSqcOLavsK+317U7csoqEX0W1k866QLl/siO
- aDFuQLn4z3PKVpVG0X9mF2ECW3ZTHba5zATZNxnDmeE2WYIqJvtGs85AJibiXduUiL+A
- epdQ==
-X-Gm-Message-State: AGi0PuZSIi+Om6CXAG/IUlrlR3tK8krUkv08CXOD1B37HMCLWF6/OJnN
- KkL0UUYYxgM7jRzYxca2FuEgA61vk72bO+/ouMEdxoqc
-X-Google-Smtp-Source: APiQypLGUYk3suy/eSUDKH5ICT7nYCw/nP+Vjdcx+EdWiVN7l3yhVL9RbojbaGVteYNrgDbwy7b43T8oKlKY7EU+/X4=
-X-Received: by 2002:a2e:6c05:: with SMTP id h5mr1012285ljc.217.1586893643490; 
- Tue, 14 Apr 2020 12:47:23 -0700 (PDT)
+ id 1jOSgR-0007c2-Nr
+ for linux-mediatek@lists.infradead.org; Tue, 14 Apr 2020 21:01:29 +0000
+X-UUID: d1b98fb4c18a451dbb81e7fea0d7ff0d-20200414
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
+ s=dk; 
+ h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:Subject:CC:To:From;
+ bh=X4mXXMKcwtzAjLfTBcqOdaoCYQYElct6qWdwAR4ZP7c=; 
+ b=A5iP02uvNVEwI/3BL+l5JDL5/CQXt1f4e5EJyQdv5aL+G9NHrmlXnxTfUtNrHsPLSzGQScTr2Gw+hZsMQxQDpE7eVNUhIbuihajYm4H3y85hER5R4edWfxTRrRzu6p0qrNcM1tSMn4xRz5jvbsKc4RQ50fwDQREyiFFcmqxUSC4=;
+X-UUID: d1b98fb4c18a451dbb81e7fea0d7ff0d-20200414
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
+ (envelope-from <ryder.lee@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 498528781; Tue, 14 Apr 2020 13:01:22 -0800
+Received: from MTKMBS06N1.mediatek.inc (172.21.101.129) by
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1497.2; Tue, 14 Apr 2020 14:01:16 -0700
+Received: from mtkcas07.mediatek.inc (172.21.101.84) by
+ mtkmbs06n1.mediatek.inc (172.21.101.129) with Microsoft SMTP Server (TLS) id
+ 15.0.1497.2; Wed, 15 Apr 2020 05:01:17 +0800
+Received: from mtksdccf07.mediatek.inc (172.21.84.99) by mtkcas07.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1497.2 via
+ Frontend Transport; Wed, 15 Apr 2020 05:01:16 +0800
+From: Ryder Lee <ryder.lee@mediatek.com>
+To: Felix Fietkau <nbd@nbd.name>, Lorenzo Bianconi
+ <lorenzo.bianconi@redhat.com>
+Subject: [PATCH v2 00/18] Add MediaTek IEEE 802.11ax devices - MT7915E
+Date: Wed, 15 Apr 2020 05:00:58 +0800
+Message-ID: <cover.1586895593.git.ryder.lee@mediatek.com>
+X-Mailer: git-send-email 2.18.0
 MIME-Version: 1.0
-References: <20200407095107.1988-1-miles.chen@mediatek.com>
- <20200407181908.GB94792@iweiny-DESK2.sc.intel.com>
-In-Reply-To: <20200407181908.GB94792@iweiny-DESK2.sc.intel.com>
-From: Souptick Joarder <jrdr.linux@gmail.com>
-Date: Wed, 15 Apr 2020 01:25:07 +0530
-Message-ID: <CAFqt6zYztssQEgMJtafr_ZdMYvBwAU-BZ4Z4tOWQPJ6eFnHq2Q@mail.gmail.com>
-Subject: Re: [PATCH] mm/gup: fix null pointer dereference detected by coverity
-To: Ira Weiny <ira.weiny@intel.com>
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200414_124726_606040_D0A50C4D 
-X-CRM114-Status: GOOD (  15.14  )
+X-CRM114-CacheID: sfid-20200414_140127_789484_FD6777C2 
+X-CRM114-Status: GOOD (  10.79  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:243 listed in]
- [list.dnswl.org]
+ no trust [216.200.240.184 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider [jrdr.linux[at]gmail.com]
  -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.0 MIME_BASE64_TEXT       RAW: Message text disguised using base64
+ encoding
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
  author's domain
@@ -81,6 +73,8 @@ X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  valid
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -92,61 +86,119 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: wsd_upstream@mediatek.com, linux-kernel@vger.kernel.org,
- Linux-MM <linux-mm@kvack.org>, Miles Chen <miles.chen@mediatek.com>,
- linux-mediatek@lists.infradead.org, Andrew Morton <akpm@linux-foundation.org>
+Cc: YF Luo <yf.luo@mediatek.com>, Evelyn Tsai <evelyn.tsai@mediatek.com>,
+ linux-wireless@vger.kernel.org, Sean
+ Wang <sean.wang@mediatek.com>, Chih-Min Chen <chih-min.chen@mediatek.com>,
+ Ryder Lee <ryder.lee@mediatek.com>, Yiwei Chung <yiwei.chung@mediatek.com>,
+ linux-mediatek@lists.infradead.org, Shayne Chen <shayne.chen@mediatek.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Tue, Apr 7, 2020 at 11:49 PM Ira Weiny <ira.weiny@intel.com> wrote:
->
-> On Tue, Apr 07, 2020 at 05:51:07PM +0800, Miles Chen wrote:
-> > In fixup_user_fault(), it is possible that unlocked is NULL,
-> > so we should test unlocked before using it.
-> >
-> > For example, in arch/arc/kernel/process.c, NULL is passed
-> > to fixup_user_fault().
-> >
-> > SYSCALL_DEFINE3(arc_usr_cmpxchg, int *, uaddr, int, expected, int, new)
-> > {
-> > ...
-> >       ret = fixup_user_fault(current, current->mm, (unsigned long) uaddr,
-> >                              FAULT_FLAG_WRITE, NULL);
-> > ...
-> > }
-> >
-> > Fixes: 4a9e1cda2748 ("mm: bring in additional flag for fixup_user_fault to signal unlock")
-> > Signed-off-by: Miles Chen <miles.chen@mediatek.com>
->
-> Reviewed-by: Ira Weiny <ira.weiny@intel.com>
+MT7915E[1] is MediaTek latest generation IEEE 802.11ax device, which
+currently supports AP, Station and Mesh mode.
 
-Acked-by: Souptick Joarder <jrdr.linux@gmail.com>
+Even though some code of MT7915 are similar to MT7615. New generation has: 
+- Huge amounts of HE dedicated parts.
+- New designs of PHY/firmware/DMA scheme.
+- Most fields of txd/txs/rxd/rxv are rearranged or deprecated.
+- Support much more offloading stuff.
 
->
-> > ---
-> >  mm/gup.c | 3 ++-
-> >  1 file changed, 2 insertions(+), 1 deletion(-)
-> >
-> > diff --git a/mm/gup.c b/mm/gup.c
-> > index da3e03185144..a68d11dc232d 100644
-> > --- a/mm/gup.c
-> > +++ b/mm/gup.c
-> > @@ -1230,7 +1230,8 @@ int fixup_user_fault(struct task_struct *tsk, struct mm_struct *mm,
-> >       if (ret & VM_FAULT_RETRY) {
-> >               down_read(&mm->mmap_sem);
-> >               if (!(fault_flags & FAULT_FLAG_TRIED)) {
-> > -                     *unlocked = true;
-> > +                     if (unlocked)
-> > +                             *unlocked = true;
-> >                       fault_flags |= FAULT_FLAG_TRIED;
-> >                       goto retry;
-> >               }
-> > --
-> > 2.18.0
->
+Most importantly, for the sake of convenience to get family devices supported
+in the future, it was concluded to be simpler to have a clean start for this
+generation. This makes maintenance easier and avoids major changes in MT7615,
+which currently shares the codes with low power capable device MT7663. It will
+increase the risk of regressions in existing flow.
 
+MT7915 supports only basic HE for the moment, whereas other 802.11ax specific
+features are work in progress.(e.g. BSS color, TWT, SR, OFDMA and DCM)
+They will be gradually added in upcoming days.
+
+The firmwares are available now from https://github.com/ryderlee1110/wireless-fw ,
+and will be submitted. At last, the developers are all listed in the series.
+
+[1] https://www.mediatek.com/blog/mediatek-mt7915-wi-fi-6-wave-1-chipset-builds-in-a-range-of-industry-firsts 
+
+Thanks,
+Ryder
+
+Changes since v2 -
+- drop hw_amsdu patch
+- fix kconfig license
+- fix debugfs regard to txpower dump issue
+- swtich to use "per-phy" to set runtime stream caps for dual band concurrent operation.
+- move omac_idx to mt7915_phy to make it independent
+- add .get/set_tsf callbacks
+
+Changes since v1 -
+- list a missing developer.
+- drop unused codes in the hw_tx_amsdu patch.
+- add a missing bitwidth change of wcid.
+- add more TODO items in the driver.
+
+Ryder Lee (18):
+  mt76: avoid rx reorder buffer overflow
+  mt76: add support for HE RX rate reporting
+  mt76: add Rx stats support for radiotap
+  mt76: adjust wcid size to support new 802.11ax generation
+  mt76: add HE phy modes and hardware queue
+  mt76: add mac80211 driver for MT7915 PCIe-based chipsets
+  mt76: mt7915: enable Rx HE rate reporting
+  mt76: mt7915: implement HE per-rate tx power support
+  mt76: mt7915: register per-phy HE capabilities for each interface
+  mt76: mt7915: add HE bss_conf support for interfaces
+  mt76: mt7915: add HE capabilities support for peers
+  mt76: mt7915: add Rx radiotap header support
+  mt76: mt7915: add .sta_add_debugfs support
+  mt76: mt7915: add .sta_statistics support
+  mt76: mt7915: set peer Tx fixed rate through debugfs
+  mt76: mt7915: add tsf related callbacks
+  mt76: mt7915: enable firmware module debug support
+  mt76: set runtime stream caps by mt76_phy
+
+ drivers/net/wireless/mediatek/mt76/Kconfig    |    1 +
+ drivers/net/wireless/mediatek/mt76/Makefile   |    1 +
+ drivers/net/wireless/mediatek/mt76/agg-rx.c   |   12 +-
+ drivers/net/wireless/mediatek/mt76/mac80211.c |   26 +-
+ drivers/net/wireless/mediatek/mt76/mt76.h     |   46 +-
+ .../net/wireless/mediatek/mt76/mt7615/init.c  |    4 +-
+ .../net/wireless/mediatek/mt76/mt7615/main.c  |    2 +-
+ .../wireless/mediatek/mt76/mt76x2/pci_main.c  |    2 +-
+ .../net/wireless/mediatek/mt76/mt7915/Kconfig |   13 +
+ .../wireless/mediatek/mt76/mt7915/Makefile    |    6 +
+ .../wireless/mediatek/mt76/mt7915/debugfs.c   |  418 +++
+ .../net/wireless/mediatek/mt76/mt7915/dma.c   |  283 ++
+ .../wireless/mediatek/mt76/mt7915/eeprom.c    |  243 ++
+ .../wireless/mediatek/mt76/mt7915/eeprom.h    |  125 +
+ .../net/wireless/mediatek/mt76/mt7915/init.c  |  589 ++++
+ .../net/wireless/mediatek/mt76/mt7915/mac.c   | 1458 +++++++++
+ .../net/wireless/mediatek/mt76/mt7915/mac.h   |  346 ++
+ .../net/wireless/mediatek/mt76/mt7915/main.c  |  831 +++++
+ .../net/wireless/mediatek/mt76/mt7915/mcu.c   | 2770 +++++++++++++++++
+ .../net/wireless/mediatek/mt76/mt7915/mcu.h   |  982 ++++++
+ .../wireless/mediatek/mt76/mt7915/mt7915.h    |  460 +++
+ .../net/wireless/mediatek/mt76/mt7915/pci.c   |  191 ++
+ .../net/wireless/mediatek/mt76/mt7915/regs.h  |  355 +++
+ 23 files changed, 9132 insertions(+), 32 deletions(-)
+ create mode 100644 drivers/net/wireless/mediatek/mt76/mt7915/Kconfig
+ create mode 100644 drivers/net/wireless/mediatek/mt76/mt7915/Makefile
+ create mode 100644 drivers/net/wireless/mediatek/mt76/mt7915/debugfs.c
+ create mode 100644 drivers/net/wireless/mediatek/mt76/mt7915/dma.c
+ create mode 100644 drivers/net/wireless/mediatek/mt76/mt7915/eeprom.c
+ create mode 100644 drivers/net/wireless/mediatek/mt76/mt7915/eeprom.h
+ create mode 100644 drivers/net/wireless/mediatek/mt76/mt7915/init.c
+ create mode 100644 drivers/net/wireless/mediatek/mt76/mt7915/mac.c
+ create mode 100644 drivers/net/wireless/mediatek/mt76/mt7915/mac.h
+ create mode 100644 drivers/net/wireless/mediatek/mt76/mt7915/main.c
+ create mode 100644 drivers/net/wireless/mediatek/mt76/mt7915/mcu.c
+ create mode 100644 drivers/net/wireless/mediatek/mt76/mt7915/mcu.h
+ create mode 100644 drivers/net/wireless/mediatek/mt76/mt7915/mt7915.h
+ create mode 100644 drivers/net/wireless/mediatek/mt76/mt7915/pci.c
+ create mode 100644 drivers/net/wireless/mediatek/mt76/mt7915/regs.h
+
+-- 
+2.18.0
 _______________________________________________
 Linux-mediatek mailing list
 Linux-mediatek@lists.infradead.org
