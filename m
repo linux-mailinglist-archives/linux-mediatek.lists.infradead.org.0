@@ -2,8 +2,8 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id EEFFC1A7DBF
-	for <lists+linux-mediatek@lfdr.de>; Tue, 14 Apr 2020 15:25:38 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 85DFE1A7DB9
+	for <lists+linux-mediatek@lfdr.de>; Tue, 14 Apr 2020 15:25:35 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
@@ -11,21 +11,21 @@ DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	In-Reply-To:Message-Id:Date:Subject:To:From:Reply-To:Content-ID:
 	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
 	:Resent-Message-ID:List-Owner;
-	bh=qIVBpQR1mQhGunbxKCpPx3wtiOgD9x9zoInk4/4KlHg=; b=jXBsxLUCcrS9DTiQJw5hMHfxKh
-	FS6FCmwXqCqK+8fwQsqwR4yO+YvtlX44NkXUClOVUYpaFZEJyFRjYO+pFdT0hCNwc1PlRWLxyPuHl
-	Kd3FwybGyRxUKLyUuV9DNmuJkOTnzbMLV+mX2puytE5n1iXVkCIeLXPstVxnk9oRqj9qxbaQV9kEB
-	0HbJBNYuO5o3E9r8Y+J7pE0hyCds0Mhh3GjjjpqFjyDnI51pnoOC/o4+ZEhl3U1VTA9yY+BmvWeJE
-	yXeGF1GlyyyseseMFdUbDeRul5ZfDd2YDn2O+tfc4jZMgyNyVU8F/STtFVySJttkU4i9Wy0Z2Cghr
-	qD8nBNiw==;
+	bh=z908pqieKt4xQ3lhMKnPXxfiGcVtNmF/9wqH7uot7ms=; b=UshP6i9SCLFIG4skdF2ezxAcSu
+	SP/oAVJrYlZCZLQKzEQ2ldAyo3NikanJCe3vWQj/5C1b2RHcDZYlLlC0jkBGp441+mrNBToHv4AmD
+	3BRRIStkh4zU+D9qsLL0Kzz8a4DaeoMFeVc+9XRBvIn45VcHr5tIsy8nc+4BuZ2cFOxPkvsh/Z4AA
+	qCPoL43v7XHy8Zj8MRPUp1IzJZyfZPkbohgcTdE2uYRgY5bCp6LQy8BcOd3h3APpUdvHEHYz8lBri
+	U18O9UaWmEgBpSVhJepG/jeEfMQDzt1Dz4EKMcVKvmVVKVchQpfJbWIfIJjegBK1ml3N/s+8asKCt
+	tQjZ9wJA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jOLXn-0004XB-Pk; Tue, 14 Apr 2020 13:24:03 +0000
+	id 1jOLXm-0004V6-21; Tue, 14 Apr 2020 13:24:02 +0000
 Received: from 8bytes.org ([2a01:238:4383:600:38bc:a715:4b6d:a889]
  helo=theia.8bytes.org)
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jOLQ8-0002WX-7m; Tue, 14 Apr 2020 13:16:16 +0000
+ id 1jOLQ8-0002Wc-0Q; Tue, 14 Apr 2020 13:16:15 +0000
 Received: by theia.8bytes.org (Postfix, from userid 1000)
- id D28195D8; Tue, 14 Apr 2020 15:15:53 +0200 (CEST)
+ id 0F20F5FF; Tue, 14 Apr 2020 15:15:53 +0200 (CEST)
 From: Joerg Roedel <joro@8bytes.org>
 To: Joerg Roedel <joro@8bytes.org>, Will Deacon <will@kernel.org>,
  Robin Murphy <robin.murphy@arm.com>,
@@ -40,16 +40,15 @@ To: Joerg Roedel <joro@8bytes.org>, Will Deacon <will@kernel.org>,
  Thierry Reding <thierry.reding@gmail.com>,
  Jonathan Hunter <jonathanh@nvidia.com>,
  Jean-Philippe Brucker <jean-philippe@linaro.org>
-Subject: [PATCH v2 13/33] iommu: Export bus_iommu_probe() and make is safe for
- re-probing
-Date: Tue, 14 Apr 2020 15:15:22 +0200
-Message-Id: <20200414131542.25608-14-joro@8bytes.org>
+Subject: [PATCH v2 14/33] iommu/amd: Remove dev_data->passthrough
+Date: Tue, 14 Apr 2020 15:15:23 +0200
+Message-Id: <20200414131542.25608-15-joro@8bytes.org>
 X-Mailer: git-send-email 2.17.1
 In-Reply-To: <20200414131542.25608-1-joro@8bytes.org>
 References: <20200414131542.25608-1-joro@8bytes.org>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200414_061608_531450_D9812F7B 
-X-CRM114-Status: GOOD (  13.71  )
+X-CRM114-CacheID: sfid-20200414_061608_354752_23582F93 
+X-CRM114-Status: GOOD (  14.93  )
 X-Spam-Score: -0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  Content analysis details:   (-0.0 points)
@@ -81,52 +80,64 @@ Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.o
 
 From: Joerg Roedel <jroedel@suse.de>
 
-Add a check to the bus_iommu_probe() call-path to make sure it ignores
-devices which have already been successfully probed. Then export the
-bus_iommu_probe() function so it can be used by IOMMU drivers.
+Make use of generic IOMMU infrastructure to gather the same information
+carried in dev_data->passthrough and remove the struct member.
 
 Signed-off-by: Joerg Roedel <jroedel@suse.de>
 ---
- drivers/iommu/iommu.c | 6 +++++-
- include/linux/iommu.h | 1 +
- 2 files changed, 6 insertions(+), 1 deletion(-)
+ drivers/iommu/amd_iommu.c       | 10 +++++-----
+ drivers/iommu/amd_iommu_types.h |  1 -
+ 2 files changed, 5 insertions(+), 6 deletions(-)
 
-diff --git a/drivers/iommu/iommu.c b/drivers/iommu/iommu.c
-index 834a45da0ed0..a2ff95424044 100644
---- a/drivers/iommu/iommu.c
-+++ b/drivers/iommu/iommu.c
-@@ -1615,6 +1615,10 @@ static int probe_iommu_group(struct device *dev, void *data)
- 	if (!dev_iommu_get(dev))
- 		return -ENOMEM;
- 
-+	/* Device is probed already if in a group */
-+	if (iommu_group_get(dev) != NULL)
-+		return 0;
-+
- 	if (!try_module_get(ops->owner)) {
- 		ret = -EINVAL;
- 		goto err_free_dev_iommu;
-@@ -1783,7 +1787,7 @@ static int iommu_group_create_direct_mappings(struct iommu_group *group)
- 					  iommu_do_create_direct_mappings);
- }
- 
--static int bus_iommu_probe(struct bus_type *bus)
-+int bus_iommu_probe(struct bus_type *bus)
+diff --git a/drivers/iommu/amd_iommu.c b/drivers/iommu/amd_iommu.c
+index 3e0d27f7622e..0b4b4faa876d 100644
+--- a/drivers/iommu/amd_iommu.c
++++ b/drivers/iommu/amd_iommu.c
+@@ -2047,8 +2047,8 @@ static int pdev_iommuv2_enable(struct pci_dev *pdev)
+ static int attach_device(struct device *dev,
+ 			 struct protection_domain *domain)
  {
- 	const struct iommu_ops *ops = bus->iommu_ops;
+-	struct pci_dev *pdev;
+ 	struct iommu_dev_data *dev_data;
++	struct pci_dev *pdev;
+ 	unsigned long flags;
  	int ret;
-diff --git a/include/linux/iommu.h b/include/linux/iommu.h
-index 30170d191e5e..fea1622408ad 100644
---- a/include/linux/iommu.h
-+++ b/include/linux/iommu.h
-@@ -445,6 +445,7 @@ static inline void iommu_iotlb_gather_init(struct iommu_iotlb_gather *gather)
- #define IOMMU_GROUP_NOTIFY_UNBOUND_DRIVER	6 /* Post Driver unbind */
  
- extern int bus_set_iommu(struct bus_type *bus, const struct iommu_ops *ops);
-+extern int bus_iommu_probe(struct bus_type *bus);
- extern bool iommu_present(struct bus_type *bus);
- extern bool iommu_capable(struct bus_type *bus, enum iommu_cap cap);
- extern struct iommu_domain *iommu_domain_alloc(struct bus_type *bus);
+@@ -2067,8 +2067,10 @@ static int attach_device(struct device *dev,
+ 
+ 	pdev = to_pci_dev(dev);
+ 	if (domain->flags & PD_IOMMUV2_MASK) {
++		struct iommu_domain *def_domain = iommu_get_dma_domain(dev);
++
+ 		ret = -EINVAL;
+-		if (!dev_data->passthrough)
++		if (def_domain->type != IOMMU_DOMAIN_IDENTITY)
+ 			goto out;
+ 
+ 		if (dev_data->iommu_v2) {
+@@ -2189,9 +2191,7 @@ static int amd_iommu_add_device(struct device *dev)
+ 
+ 	/* Domains are initialized for this device - have a look what we ended up with */
+ 	domain = iommu_get_domain_for_dev(dev);
+-	if (domain->type == IOMMU_DOMAIN_IDENTITY)
+-		dev_data->passthrough = true;
+-	else if (domain->type == IOMMU_DOMAIN_DMA)
++	if (domain->type == IOMMU_DOMAIN_DMA)
+ 		iommu_setup_dma_ops(dev, IOVA_START_PFN << PAGE_SHIFT, 0);
+ 
+ out:
+diff --git a/drivers/iommu/amd_iommu_types.h b/drivers/iommu/amd_iommu_types.h
+index ca8c4522045b..d0d7b6a0c3d8 100644
+--- a/drivers/iommu/amd_iommu_types.h
++++ b/drivers/iommu/amd_iommu_types.h
+@@ -640,7 +640,6 @@ struct iommu_dev_data {
+ 	struct pci_dev *pdev;
+ 	u16 devid;			  /* PCI Device ID */
+ 	bool iommu_v2;			  /* Device can make use of IOMMUv2 */
+-	bool passthrough;		  /* Device is identity mapped */
+ 	struct {
+ 		bool enabled;
+ 		int qdep;
 -- 
 2.17.1
 
