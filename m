@@ -2,8 +2,8 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 6D5E81A7DBD
-	for <lists+linux-mediatek@lfdr.de>; Tue, 14 Apr 2020 15:25:37 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 86F381A7DB8
+	for <lists+linux-mediatek@lfdr.de>; Tue, 14 Apr 2020 15:25:34 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
@@ -11,34 +11,34 @@ DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	In-Reply-To:Message-Id:Date:Subject:To:From:Reply-To:Content-ID:
 	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
 	:Resent-Message-ID:List-Owner;
-	bh=VZxQP8Lr82mRWps992Pe+uZmGt9luJCdRNbde5j8FiA=; b=JLSRMu8DmSXQJd8ucodq92XxzM
-	EMkfcTgt5F8jVyojp+aLNW99jYonL2QBpmpTzLGU9Z1nSUbqZY8uScGIzqMPeZLlTLMLD1N6Ei8ei
-	W0AG6/KOv7ASF6xpVI1fwPKOnf0fK0uD+G95jHF83JFhlppEvv+1lEWAywlqla7WqAs2tENwlfNqi
-	+/3TlaGyrO15OrFrklf9/yCQ5jYajvC3JCRSaixgc659kh8FHHUIpi5QGg9bx/aZAKDP5EUoxybB/
-	aAq+k4NcHeG39ndZ3cf05sYtSEDGqweQFMyNp9D+Bdnm3FVvB3n/8vSZy54rQv45G55fXft7vbvLu
-	fzOH1QIg==;
+	bh=OTMNL6AGMA5Jv6BjC+VTO/vY46WW8uojwUh9c/hoprU=; b=Bif+SpdYk8HHw6m+gUVZzafore
+	29rBELfUad32FcmiRV0pj/zDnAmH3TpUWDj7wvsBljgxM/bvIaOXxFHYnyooEopXIrDpeIFHFA/kr
+	uGJ4vJ0ocxIjX6bjHwb6ZJZ6XBMdPBEoj/UpXY4blLZTphULAqAgifpYhxRIfuKUTtE7VBYp1ZiUr
+	ZN/apimEi9mj1FnOk6jLtkGuGDLACEpDSFHve/3dZNdmM4WZhyULpf74wva+d6BhXrnp/ioTKuO+q
+	3bsEHTI+ZSYiSyd7obbyp1kDzLIjeDS0OyE8J/GruFooHL4KFLNTwUNxjtc5nwyLroJBuboqOF5lV
+	if5pPzXQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jOLYJ-0005L3-Sw; Tue, 14 Apr 2020 13:24:35 +0000
+	id 1jOLYB-00055b-Pc; Tue, 14 Apr 2020 13:24:27 +0000
 Received: from merlin.infradead.org ([2001:8b0:10b:1231::1])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jOLQK-0002qr-Te; Tue, 14 Apr 2020 13:16:21 +0000
+ id 1jOLQK-0002r1-V1; Tue, 14 Apr 2020 13:16:21 +0000
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
  d=infradead.org; s=merlin.20170209; h=References:In-Reply-To:Message-Id:Date:
  Subject:Cc:To:From:Sender:Reply-To:MIME-Version:Content-Type:
  Content-Transfer-Encoding:Content-ID:Content-Description;
- bh=ezIcyRMiPGZm7PvEZbHm5gxVf6Pdmy4EhVwWSrt2Oa4=; b=rJTBK+TjnrVO/kI5aXKW2rbmk2
- 0umiqzu/t7pWZfnH+eEPyYQZTwkNkCRXBV7I0chclV7wixxslQ0JhAqghM6HHwLxIVCEewEAFzdL7
- 3nixjtaWTXTffQe6F7arf9emxKJSXBRU6u9BrhtFXwNLGeF85jU8k/Dg4kXWos5G+EmHgUu1xhJzB
- rLbIBdmWZY5sHqTX/40LVp4+DQC3vO1E6tnypLdhC9heUPwo7so1dvX5Yq43CL3wARb2CiUmQdHd1
- PU6gbgbREtxtFMeJF3QKGxWLwYd+gNG7J7NUmCMj8hZm6Y9PwXl3Vg+RoNRgjRdUzJk/bLgDkximY
- RfSX9DVA==;
+ bh=zHFhXPr24C40KrJ7Mzefvyw//VQSUVn593eIysM2U+w=; b=vSqXCVOTfA1uyl7dI9r2aS/LHi
+ Yy65eu09NygSVLNqEgF92LY/pC1JhSlM1wYq2hp4ceVmJM0Uw3sr+GbZPP0p53H0B0QsZi+EtBDsp
+ w+8KlDRNUjndZDEPTyKFEKXehd0C1SRMrpEmB9m9N4hKNqEvze7euWzDR8TKriMO69VSIBruPIecL
+ BagnSSu3Kb7iov3JHk89g1bqtd+40hgygViZUtzZKlsrakEcCLyezfE9cdh+bpQLn7JuxdBUC71GN
+ 53kYpmQUOtf7r52Ep40LK4um/iWy6u1OH4EPn6JWtYRWGTCQ3crrHOquC7u+B7ciRaRxenQPdR0q8
+ xP+O0Fhg==;
 Received: from 8bytes.org ([2a01:238:4383:600:38bc:a715:4b6d:a889]
  helo=theia.8bytes.org)
  by merlin.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jOLQI-0007xq-5i; Tue, 14 Apr 2020 13:16:19 +0000
+ id 1jOLQI-0007xr-7X; Tue, 14 Apr 2020 13:16:19 +0000
 Received: by theia.8bytes.org (Postfix, from userid 1000)
- id 701C280A; Tue, 14 Apr 2020 15:15:57 +0200 (CEST)
+ id ACA86A6A; Tue, 14 Apr 2020 15:15:57 +0200 (CEST)
 From: Joerg Roedel <joro@8bytes.org>
 To: Joerg Roedel <joro@8bytes.org>, Will Deacon <will@kernel.org>,
  Robin Murphy <robin.murphy@arm.com>,
@@ -53,10 +53,9 @@ To: Joerg Roedel <joro@8bytes.org>, Will Deacon <will@kernel.org>,
  Thierry Reding <thierry.reding@gmail.com>,
  Jonathan Hunter <jonathanh@nvidia.com>,
  Jean-Philippe Brucker <jean-philippe@linaro.org>
-Subject: [PATCH v2 31/33] iommu/exynos: Convert to probe/release_device()
- call-backs
-Date: Tue, 14 Apr 2020 15:15:40 +0200
-Message-Id: <20200414131542.25608-32-joro@8bytes.org>
+Subject: [PATCH v2 32/33] iommu: Remove add_device()/remove_device() code-paths
+Date: Tue, 14 Apr 2020 15:15:41 +0200
+Message-Id: <20200414131542.25608-33-joro@8bytes.org>
 X-Mailer: git-send-email 2.17.1
 In-Reply-To: <20200414131542.25608-1-joro@8bytes.org>
 References: <20200414131542.25608-1-joro@8bytes.org>
@@ -92,88 +91,244 @@ Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.o
 
 From: Joerg Roedel <jroedel@suse.de>
 
-Convert the Exynos IOMMU driver to use the probe_device() and
-release_device() call-backs of iommu_ops, so that the iommu core code
-does the group and sysfs setup.
+All drivers are converted to use the probe/release_device()
+call-backs, so the add_device/remove_device() pointers are unused and
+the code using them can be removed.
 
 Signed-off-by: Joerg Roedel <jroedel@suse.de>
 ---
- drivers/iommu/exynos-iommu.c | 26 ++++++--------------------
- 1 file changed, 6 insertions(+), 20 deletions(-)
+ drivers/iommu/iommu.c | 149 ++++++++----------------------------------
+ include/linux/iommu.h |   4 --
+ 2 files changed, 29 insertions(+), 124 deletions(-)
 
-diff --git a/drivers/iommu/exynos-iommu.c b/drivers/iommu/exynos-iommu.c
-index 09cdd163560a..60c8a56e4a3f 100644
---- a/drivers/iommu/exynos-iommu.c
-+++ b/drivers/iommu/exynos-iommu.c
-@@ -1235,19 +1235,13 @@ static phys_addr_t exynos_iommu_iova_to_phys(struct iommu_domain *iommu_domain,
- 	return phys;
+diff --git a/drivers/iommu/iommu.c b/drivers/iommu/iommu.c
+index a2ff95424044..9a7120746b8e 100644
+--- a/drivers/iommu/iommu.c
++++ b/drivers/iommu/iommu.c
+@@ -220,7 +220,7 @@ static int __iommu_probe_device(struct device *dev, struct list_head *group_list
+ 	return ret;
  }
  
--static int exynos_iommu_add_device(struct device *dev)
-+static struct iommu_device *exynos_iommu_probe_device(struct device *dev)
+-static int __iommu_probe_device_helper(struct device *dev)
++int iommu_probe_device(struct device *dev)
  {
- 	struct exynos_iommu_owner *owner = dev->archdata.iommu;
- 	struct sysmmu_drvdata *data;
+ 	const struct iommu_ops *ops = dev->bus->iommu_ops;
+ 	struct iommu_group *group;
+@@ -264,70 +264,17 @@ static int __iommu_probe_device_helper(struct device *dev)
+ 
+ }
+ 
+-int iommu_probe_device(struct device *dev)
++void iommu_release_device(struct device *dev)
+ {
+ 	const struct iommu_ops *ops = dev->bus->iommu_ops;
 -	struct iommu_group *group;
- 
- 	if (!has_sysmmu(dev))
--		return -ENODEV;
+-	int ret;
 -
--	group = iommu_group_get_for_dev(dev);
+-	WARN_ON(dev->iommu_group);
 -
--	if (IS_ERR(group))
--		return PTR_ERR(group);
-+		return ERR_PTR(-ENODEV);
- 
- 	list_for_each_entry(data, &owner->controllers, owner_node) {
- 		/*
-@@ -1259,17 +1253,15 @@ static int exynos_iommu_add_device(struct device *dev)
- 					     DL_FLAG_STATELESS |
- 					     DL_FLAG_PM_RUNTIME);
- 	}
+-	if (!ops)
+-		return -EINVAL;
+-
+-	if (!dev_iommu_get(dev))
+-		return -ENOMEM;
+-
+-	if (!try_module_get(ops->owner)) {
+-		ret = -EINVAL;
+-		goto err_free_dev_param;
+-	}
+-
+-	if (ops->probe_device)
+-		return __iommu_probe_device_helper(dev);
+-
+-	ret = ops->add_device(dev);
+-	if (ret)
+-		goto err_module_put;
+-
+-	group = iommu_group_get(dev);
+-	iommu_create_device_direct_mappings(group, dev);
 -	iommu_group_put(group);
- 
- 	/* There is always at least one entry, see exynos_iommu_of_xlate() */
- 	data = list_first_entry(&owner->controllers,
- 				struct sysmmu_drvdata, owner_node);
--	iommu_device_link(&data->iommu, dev);
+-
+-	if (ops->probe_finalize)
+-		ops->probe_finalize(dev);
  
 -	return 0;
-+	return &data->iommu;
- }
- 
--static void exynos_iommu_remove_device(struct device *dev)
-+static void exynos_iommu_release_device(struct device *dev)
- {
- 	struct exynos_iommu_owner *owner = dev->archdata.iommu;
- 	struct sysmmu_drvdata *data;
-@@ -1287,15 +1279,9 @@ static void exynos_iommu_remove_device(struct device *dev)
- 			iommu_group_put(group);
- 		}
- 	}
--	iommu_group_remove_device(dev);
- 
- 	list_for_each_entry(data, &owner->controllers, owner_node)
- 		device_link_del(data->link);
 -
--	/* There is always at least one entry, see exynos_iommu_of_xlate() */
--	data = list_first_entry(&owner->controllers,
--				struct sysmmu_drvdata, owner_node);
--	iommu_device_unlink(&data->iommu, dev);
+-err_module_put:
+-	module_put(ops->owner);
+-err_free_dev_param:
+-	dev_iommu_free(dev);
+-	return ret;
+-}
+-
+-static void __iommu_release_device(struct device *dev)
+-{
+-	const struct iommu_ops *ops = dev->bus->iommu_ops;
++	if (!dev->iommu)
++		return;
+ 
+ 	iommu_device_unlink(dev->iommu->iommu_dev, dev);
+-
+ 	iommu_group_remove_device(dev);
+ 
+ 	ops->release_device(dev);
+-}
+-
+-void iommu_release_device(struct device *dev)
+-{
+-	const struct iommu_ops *ops = dev->bus->iommu_ops;
+-
+-	if (!dev->iommu)
+-		return;
+-
+-	if (ops->release_device)
+-		__iommu_release_device(dev);
+-	else if (dev->iommu_group)
+-		ops->remove_device(dev);
+ 
+ 	module_put(ops->owner);
+ 	dev_iommu_free(dev);
+@@ -1560,23 +1507,6 @@ struct iommu_group *iommu_group_get_for_dev(struct device *dev)
+ 	if (ret)
+ 		goto out_put_group;
+ 
+-	/*
+-	 * Try to allocate a default domain - needs support from the
+-	 * IOMMU driver. There are still some drivers which don't support
+-	 * default domains, so the return value is not yet checked. Only
+-	 * allocate the domain here when the driver still has the
+-	 * add_device/remove_device call-backs implemented.
+-	 */
+-	if (!ops->probe_device) {
+-		iommu_alloc_default_domain(dev);
+-
+-		if (group->default_domain)
+-			ret = __iommu_attach_device(group->default_domain, dev);
+-
+-		if (ret)
+-			goto out_put_group;
+-	}
+-
+ 	return group;
+ 
+ out_put_group:
+@@ -1591,21 +1521,6 @@ struct iommu_domain *iommu_group_default_domain(struct iommu_group *group)
+ 	return group->default_domain;
  }
  
- static int exynos_iommu_of_xlate(struct device *dev,
-@@ -1341,8 +1327,8 @@ static const struct iommu_ops exynos_iommu_ops = {
- 	.unmap = exynos_iommu_unmap,
- 	.iova_to_phys = exynos_iommu_iova_to_phys,
- 	.device_group = generic_device_group,
--	.add_device = exynos_iommu_add_device,
--	.remove_device = exynos_iommu_remove_device,
-+	.probe_device = exynos_iommu_probe_device,
-+	.release_device = exynos_iommu_release_device,
- 	.pgsize_bitmap = SECT_SIZE | LPAGE_SIZE | SPAGE_SIZE,
- 	.of_xlate = exynos_iommu_of_xlate,
- };
+-static int add_iommu_group(struct device *dev, void *data)
+-{
+-	int ret = iommu_probe_device(dev);
+-
+-	/*
+-	 * We ignore -ENODEV errors for now, as they just mean that the
+-	 * device is not translated by an IOMMU. We still care about
+-	 * other errors and fail to initialize when they happen.
+-	 */
+-	if (ret == -ENODEV)
+-		ret = 0;
+-
+-	return ret;
+-}
+-
+ static int probe_iommu_group(struct device *dev, void *data)
+ {
+ 	const struct iommu_ops *ops = dev->bus->iommu_ops;
+@@ -1789,47 +1704,41 @@ static int iommu_group_create_direct_mappings(struct iommu_group *group)
+ 
+ int bus_iommu_probe(struct bus_type *bus)
+ {
+-	const struct iommu_ops *ops = bus->iommu_ops;
++	struct iommu_group *group, *next;
++	LIST_HEAD(group_list);
+ 	int ret;
+ 
+-	if (ops->probe_device) {
+-		struct iommu_group *group, *next;
+-		LIST_HEAD(group_list);
+-
+-		/*
+-		 * This code-path does not allocate the default domain when
+-		 * creating the iommu group, so do it after the groups are
+-		 * created.
+-		 */
+-		ret = bus_for_each_dev(bus, NULL, &group_list, probe_iommu_group);
+-		if (ret)
+-			return ret;
++	/*
++	 * This code-path does not allocate the default domain when
++	 * creating the iommu group, so do it after the groups are
++	 * created.
++	 */
++	ret = bus_for_each_dev(bus, NULL, &group_list, probe_iommu_group);
++	if (ret)
++		return ret;
+ 
+-		list_for_each_entry_safe(group, next, &group_list, entry) {
+-			/* Remove item from the list */
+-			list_del_init(&group->entry);
++	list_for_each_entry_safe(group, next, &group_list, entry) {
++		/* Remove item from the list */
++		list_del_init(&group->entry);
+ 
+-			mutex_lock(&group->mutex);
++		mutex_lock(&group->mutex);
+ 
+-			/* Try to allocate default domain */
+-			probe_alloc_default_domain(bus, group);
++		/* Try to allocate default domain */
++		probe_alloc_default_domain(bus, group);
+ 
+-			if (!group->default_domain) {
+-				mutex_unlock(&group->mutex);
+-				continue;
+-			}
++		if (!group->default_domain) {
++			mutex_unlock(&group->mutex);
++			continue;
++		}
+ 
+-			iommu_group_create_direct_mappings(group);
++		iommu_group_create_direct_mappings(group);
+ 
+-			ret = __iommu_group_dma_attach(group);
++		ret = __iommu_group_dma_attach(group);
+ 
+-			mutex_unlock(&group->mutex);
++		mutex_unlock(&group->mutex);
+ 
+-			if (ret)
+-				break;
+-		}
+-	} else {
+-		ret = bus_for_each_dev(bus, NULL, NULL, add_iommu_group);
++		if (ret)
++			break;
+ 	}
+ 
+ 	return ret;
+diff --git a/include/linux/iommu.h b/include/linux/iommu.h
+index fea1622408ad..dd076366383f 100644
+--- a/include/linux/iommu.h
++++ b/include/linux/iommu.h
+@@ -223,8 +223,6 @@ struct iommu_iotlb_gather {
+  * @iotlb_sync: Flush all queued ranges from the hardware TLBs and empty flush
+  *            queue
+  * @iova_to_phys: translate iova to physical address
+- * @add_device: add device to iommu grouping
+- * @remove_device: remove device from iommu grouping
+  * @probe_device: Add device to iommu driver handling
+  * @release_device: Remove device from iommu driver handling
+  * @probe_finalize: Do final setup work after the device is added to an IOMMU
+@@ -277,8 +275,6 @@ struct iommu_ops {
+ 	void (*iotlb_sync)(struct iommu_domain *domain,
+ 			   struct iommu_iotlb_gather *iotlb_gather);
+ 	phys_addr_t (*iova_to_phys)(struct iommu_domain *domain, dma_addr_t iova);
+-	int (*add_device)(struct device *dev);
+-	void (*remove_device)(struct device *dev);
+ 	struct iommu_device *(*probe_device)(struct device *dev);
+ 	void (*release_device)(struct device *dev);
+ 	void (*probe_finalize)(struct device *dev);
 -- 
 2.17.1
 
