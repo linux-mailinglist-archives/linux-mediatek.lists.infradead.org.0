@@ -2,87 +2,81 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 26FC71A7029
-	for <lists+linux-mediatek@lfdr.de>; Tue, 14 Apr 2020 02:30:29 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 29D821A7168
+	for <lists+linux-mediatek@lfdr.de>; Tue, 14 Apr 2020 05:03:27 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:Message-ID:
-	In-Reply-To:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
+	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=Xy7nfe9tk+Ror/cIAUGGdk6aW/8D3h3YrpyM0nc6/Oo=; b=RTb9qsQsIy/Ws+
-	Ea7IWKQTWwNuTu16CkvJ38UZU8M+ocR3mrJp3pxix2QkeRJsMET+rXZCpdnC/jx23cwluiRx5CTqf
-	twR3WMgLM+Uf4zHJw8u65LyHE2qkXATw5tv86/I0tgM4YEHns6wPZLAZaSTH6iYAqOtemXj5LDE+W
-	Otb//Ch9saYGNFJiXqsupHxJiO+xmq8AYiwYDAZGclJpPq576ZKInMFN3CQ/Y08ir1oOZKLgX0SRn
-	2rxYNgg2Scf+M11AliRLa25MY0V7neqMKk3AHl/NSnzV85YywU1OS5CEeYgXOD3Gt5lvZt/XnSLW/
-	Ny6rM2Ym3lxG6UtRnT5w==;
+	List-Owner; bh=zr9q7QVkOnQyh+Y6Au9AZMNebKqMcyyQxAxOyZSL8/Y=; b=TEQ4HnviPzNRaX
+	2A0usxrd0j48IAABxWO+9H7HR+HVf44rj1GNa87ZoH6OUFzIWyv01khoCTDgVvzxnYTM0NWku0oon
+	voFp8FWfxZlYEPsx677zL3T3uuFvOcn7LlLOwTrOSDYVCN/BIawgmQaPsrPM9AQvQ1cPy9PKiDaG4
+	PSULSWaTu9Kcqf/dQ25wLburzVp/o86hxiMPdWjjXUvb1oDx8d2LhPDFwWkzo0afYzjNZqplqeplG
+	ZlBolCGKCn1OD0N1pL5EGmlKPnW5PAoH/s1iXX7N9AaL82DSJwvUBslOdMhzWBeBsIG/gTKduk9Gm
+	137WtxEfMuEwt6nOgJsQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jO9T4-0005Cy-8M; Tue, 14 Apr 2020 00:30:22 +0000
-Received: from mail-pf1-x443.google.com ([2607:f8b0:4864:20::443])
+	id 1jOBr3-0004Iz-Kk; Tue, 14 Apr 2020 03:03:17 +0000
+Received: from mail-il1-x143.google.com ([2607:f8b0:4864:20::143])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jO9Si-0002cA-Ve
- for linux-mediatek@lists.infradead.org; Tue, 14 Apr 2020 00:30:03 +0000
-Received: by mail-pf1-x443.google.com with SMTP id m21so1454883pff.13
- for <linux-mediatek@lists.infradead.org>; Mon, 13 Apr 2020 17:30:00 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=20161025;
- h=date:from:to:cc:subject:in-reply-to:message-id:references
- :user-agent:mime-version;
- bh=GtP40NBc6K+wY7TevCqJVJVyGGxw6eyhk3x6njvRZbI=;
- b=PMRE9MFBjRNguCLZJxvQ0tC6cbj5HN/L0mNJHOjg1H5naWvyPaji8Uw6CjXqOQ2azW
- MhWs/LuNrHlvICFisvb7Cy6SJ3VKQrmiHJlokad5hGoOXcGXzDY3vorrrgpyAZrAVUDE
- dUN76VdbMCLvs9G10TRyVoj/R2uKEUPKhrkRhwWPh9Qq6Oj8zqhrDAXwnWHye+K8R3ym
- lDZQumSHVx6+RupP9U0o1EyjztcXPr7zTXefIIyzd+nYkxQBJg3bKkumuWN4k6N/hrZC
- eN210smaNX58gX6QVglgalvDGfi5xzWfnOSt7/cWPG1d3xQeaexIo7gZ03EO3NRYAH/8
- 2wUQ==
+ id 1jOBr0-0004IM-It
+ for linux-mediatek@lists.infradead.org; Tue, 14 Apr 2020 03:03:15 +0000
+Received: by mail-il1-x143.google.com with SMTP id i2so9759122ils.12
+ for <linux-mediatek@lists.infradead.org>; Mon, 13 Apr 2020 20:03:14 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
+ h=mime-version:references:in-reply-to:from:date:message-id:subject:to
+ :cc; bh=MvvX428jhA03WN2yaKHPbkqaFaksfSra1Adu8XMIvnk=;
+ b=lsxWeaXi7KzM9AHRz9I3JGG6nz3zZugSUkekvKuK+DbygExzEtKRUvMtby+huNU2aA
+ 5TmBsboQd/Nosp2M44QZfFkSrPTiuXYBE32zZdQUyoxi0WIkSbIU6LwlqypQSPCRboZW
+ l5rhNUrPpFwa1dW9233XjtmeODqwSj6Y4ZoxPZ5tM+3TBqg+kdGYqAVVm3pjlNIwiKsW
+ vY6dYz3ae12FKAuPJM6v8ZDGaB648qnI03GpkXHf8C7KGRutPeZ5fW49tFykS9j80Qmg
+ w/D7AEXamHkAotXZIzomuXjDJ/HiGpuksmffIfy5OpR3yrl2Yru3EagATt219x95K1iM
+ Oejw==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:date:from:to:cc:subject:in-reply-to:message-id
- :references:user-agent:mime-version;
- bh=GtP40NBc6K+wY7TevCqJVJVyGGxw6eyhk3x6njvRZbI=;
- b=s2OWc/zT3rTj2sPt4Jcqhl5q5Jr95Jtqr8TbRKrTsqb4amVBbSLtSYwTpk8brSpDfN
- wGwWKSjE2knQgb09qashWTuwvxVb2ZaT8G1qPPxRi9yZJ0KAUwjXV8RNHZsC669SeBlx
- GAKcUOlCVV5OZLNVIyfg+Fz3F9mtYIpa6JR0hNDXZ7M+upNpAU+z9Frw6Y7kLOn7+Q7l
- /b7z/N9ymvRKGLUUor/Z9IB5VRYiRAO4/6222BdkIzmpnVReVptQMaTT4IjkFUQimuqn
- rJV3lJMZGUO+pPPWQDZbyhWqD2QZQr9fembWms0Ct/aTcY8elG5/RTXp9yLC3bKylBKR
- b7tw==
-X-Gm-Message-State: AGi0PuaoxCprf5cOMJDqov9JmnZBJ8k4XKUVkRjZcDPugtevnhovtizl
- vRYBg1kA7rQ18UDxsCLDf7dufw==
-X-Google-Smtp-Source: APiQypL5W5g7xmsU3GZXO1UecYYPwVLK1dPD412glciRM3pdZ8NSkRu/LjnNHn8Pg6Fxg4L/cgCpIw==
-X-Received: by 2002:a62:dd48:: with SMTP id w69mr10144721pff.86.1586824199909; 
- Mon, 13 Apr 2020 17:29:59 -0700 (PDT)
-Received: from [2620:15c:17:3:3a5:23a7:5e32:4598]
- ([2620:15c:17:3:3a5:23a7:5e32:4598])
- by smtp.gmail.com with ESMTPSA id g11sm10055136pjs.17.2020.04.13.17.29.58
- (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Mon, 13 Apr 2020 17:29:59 -0700 (PDT)
-Date: Mon, 13 Apr 2020 17:29:58 -0700 (PDT)
-From: David Rientjes <rientjes@google.com>
-X-X-Sender: rientjes@chino.kir.corp.google.com
-To: Waiman Long <longman@redhat.com>
-Subject: Re: [PATCH 1/2] mm, treewide: Rename kzfree() to kfree_sensitive()
-In-Reply-To: <20200413211550.8307-2-longman@redhat.com>
-Message-ID: <alpine.DEB.2.21.2004131729410.260270@chino.kir.corp.google.com>
-References: <20200413211550.8307-1-longman@redhat.com>
- <20200413211550.8307-2-longman@redhat.com>
-User-Agent: Alpine 2.21 (DEB 202 2017-01-01)
+ h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+ :message-id:subject:to:cc;
+ bh=MvvX428jhA03WN2yaKHPbkqaFaksfSra1Adu8XMIvnk=;
+ b=e0WRR7/f+WtGvagotTNMqsKfpvxHy0MdtrpnS/cnNkRce4bCYX+F5LlN1UWy/oxgCS
+ D5VnTnJ3NhTUOTBZ84BCk1k6ciW0EnxANtQQ2k2qTpt7V0wF+fMcI2PlFtP+1BpRtwmt
+ tmk++F7yzvJkVmH3nw+5GHfQ9flEUNuMH50v3yrI+g0EYu2Rdn8rqE4cWoS/gTxh4qr0
+ jSV23bjws35UAIWUQkhh+ARi7dw+v2/DmR0H3T5OxsTv5/VJCW2ctLcfgV1Hx4UWXcAE
+ rX6b6SrhglTnsAxKiQiFbVuiKsWht5CxV2/XhL8GhOzs+qGMdk9j2dmAqghEt9FLTqXr
+ P9pA==
+X-Gm-Message-State: AGi0Puabkqg4WDCyTWp2AcwUd18GV8/+4nTecjsU6mIsXewQbuQ8VKxu
+ kBLDlIDEt+HDiJsPCFr7wo+OSMXI2uPAOqYstaQ=
+X-Google-Smtp-Source: APiQypJdxOiHOVepSY+VJkvtNtZWPvs+Ogm/uxPCVhz3OiBFQ0RTo9yglWG4d2rrW8/Lzr5mGBOtamSbDoyYatU0RkI=
+X-Received: by 2002:a92:c991:: with SMTP id y17mr20440596iln.239.1586833393592; 
+ Mon, 13 Apr 2020 20:03:13 -0700 (PDT)
 MIME-Version: 1.0
+References: <20200409155409.12043-1-dqfext@gmail.com>
+ <20200409.102035.13094168508101122.davem@davemloft.net>
+ <CALW65jbrg1doaRBPdGQkQ-PG6dnh_L4va7RxcMxyKKMqasN7bQ@mail.gmail.com>
+ <c7da2de5-5e25-6284-0b35-fd2dbceb9c4f@gmail.com>
+ <CALW65jZAdFFNfGioAFWPwYN+F4baL0Z-+FX_pAte97uxNK3T6g@mail.gmail.com>
+ <CA+h21hp8LueSfh+Z8f0-Y7dTPB50d+3E3K9n6R5MwNzA3Dh1Lw@mail.gmail.com>
+In-Reply-To: <CA+h21hp8LueSfh+Z8f0-Y7dTPB50d+3E3K9n6R5MwNzA3Dh1Lw@mail.gmail.com>
+From: DENG Qingfang <dqfext@gmail.com>
+Date: Tue, 14 Apr 2020 11:03:02 +0800
+Message-ID: <CALW65jYodd=GoWrGTcAWEO6wNQdvSQjgO=4tmNYNnmbCh7n8sg@mail.gmail.com>
+Subject: Re: [PATCH net-next] net: dsa: mt7530: enable jumbo frame
+To: Vladimir Oltean <olteanv@gmail.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200413_173001_016328_6BDE4F58 
-X-CRM114-Status: GOOD (  12.13  )
-X-Spam-Score: -15.7 (---------------)
+X-CRM114-CacheID: sfid-20200413_200314_643116_3A9153B7 
+X-CRM114-Status: GOOD (  19.97  )
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
- Content analysis details:   (-15.7 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:443 listed in]
+ no trust [2607:f8b0:4864:20:0:0:0:143 listed in]
  [list.dnswl.org]
- -7.5 USER_IN_DEF_SPF_WL     From: address is in the default SPF
- white-list
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider [dqfext[at]gmail.com]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -7.5 USER_IN_DEF_DKIM_WL    From: address is in the default DKIM
- white-list
  -0.0 SPF_PASS               SPF: sender matches SPF record
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
@@ -91,8 +85,6 @@ X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  author's domain
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
- -0.5 ENV_AND_HDR_SPF_MATCH  Env and Hdr From used in default SPF WL
- Match -0.0 DKIMWL_WL_MED          DKIMwl.org - Medium sender
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -104,67 +96,78 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: linux-btrfs@vger.kernel.org,
- Jarkko Sakkinen <jarkko.sakkinen@linux.intel.com>,
- virtualization@lists.linux-foundation.org, David Howells <dhowells@redhat.com>,
- linux-mm@kvack.org, linux-sctp@vger.kernel.org, keyrings@vger.kernel.org,
- kasan-dev@googlegroups.com, samba-technical@lists.samba.org,
- linux-stm32@st-md-mailman.stormreply.com, devel@driverdev.osuosl.org,
- linux-s390@vger.kernel.org, linux-scsi@vger.kernel.org, x86@kernel.org,
- James Morris <jmorris@namei.org>, Matthew Wilcox <willy@infradead.org>,
- cocci@systeme.lip6.fr, Linus Torvalds <torvalds@linux-foundation.org>,
- intel-wired-lan@lists.osuosl.org, "Serge E. Hallyn" <serge@hallyn.com>,
- linux-wpan@vger.kernel.org, linux-pm@vger.kernel.org, ecryptfs@vger.kernel.org,
- linux-nfs@vger.kernel.org, linux-fscrypt@vger.kernel.org,
- linux-mediatek@lists.infradead.org, linux-amlogic@lists.infradead.org,
- linux-integrity@vger.kernel.org, linux-arm-kernel@lists.infradead.org,
- linux-cifs@vger.kernel.org, netdev@vger.kernel.org,
- linux-wireless@vger.kernel.org, linux-kernel@vger.kernel.org,
- linux-bluetooth@vger.kernel.org, linux-security-module@vger.kernel.org,
- target-devel@vger.kernel.org, tipc-discussion@lists.sourceforge.net,
- linux-crypto@vger.kernel.org, linux-ppp@vger.kernel.org,
- Joe Perches <joe@perches.com>, Andrew Morton <akpm@linux-foundation.org>,
- linuxppc-dev@lists.ozlabs.org, wireguard@lists.zx2c4.com
+Cc: Andrew Lunn <andrew@lunn.ch>, Florian Fainelli <f.fainelli@gmail.com>,
+ netdev <netdev@vger.kernel.org>, Sean Wang <sean.wang@mediatek.com>,
+ Weijie Gao <weijie.gao@mediatek.com>,
+ Vivien Didelot <vivien.didelot@gmail.com>,
+ =?UTF-8?Q?Ren=C3=A9_van_Dorst?= <opensource@vdorst.com>,
+ "moderated list:ARM/Mediatek SoC support" <linux-mediatek@lists.infradead.org>,
+ John Crispin <john@phrozen.org>, David Miller <davem@davemloft.net>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Mon, 13 Apr 2020, Waiman Long wrote:
-
-> As said by Linus:
-> 
->   A symmetric naming is only helpful if it implies symmetries in use.
->   Otherwise it's actively misleading.
-> 
->   In "kzalloc()", the z is meaningful and an important part of what the
->   caller wants.
-> 
->   In "kzfree()", the z is actively detrimental, because maybe in the
->   future we really _might_ want to use that "memfill(0xdeadbeef)" or
->   something. The "zero" part of the interface isn't even _relevant_.
-> 
-> The main reason that kzfree() exists is to clear sensitive information
-> that should not be leaked to other future users of the same memory
-> objects.
-> 
-> Rename kzfree() to kfree_sensitive() to follow the example of the
-> recently added kvfree_sensitive() and make the intention of the API
-> more explicit. In addition, memzero_explicit() is used to clear the
-> memory to make sure that it won't get optimized away by the compiler.
-> 
-> The renaming is done by using the command sequence:
-> 
->   git grep -w --name-only kzfree |\
->   xargs sed -i 's/\bkzfree\b/kfree_sensitive/'
-> 
-> followed by some editing of the kfree_sensitive() kerneldoc and the
-> use of memzero_explicit() instead of memset().
-> 
-> Suggested-by: Joe Perches <joe@perches.com>
-> Signed-off-by: Waiman Long <longman@redhat.com>
-
-Acked-by: David Rientjes <rientjes@google.com>
+On Fri, Apr 10, 2020 at 6:46 PM Vladimir Oltean <olteanv@gmail.com> wrote:
+>
+> Hi Qingfang,
+>
+> On Fri, 10 Apr 2020 at 05:51, DENG Qingfang <dqfext@gmail.com> wrote:
+> >
+> > On Fri, Apr 10, 2020 at 10:27 AM Florian Fainelli <f.fainelli@gmail.com> wrote:
+> > >
+> > >
+> > >
+> > > On 4/9/2020 7:19 PM, DENG Qingfang wrote:
+> > > > So, since nothing else uses the mt7530_set_jumbo function, should I
+> > > > remove the function and just add a single rmw to mt7530_setup?
+> > >
+> > > (please do not top-post on netdev)
+> > >
+> > > There is a proper way to support the MTU configuration for DSA switch
+> > > drivers which is:
+> > >
+> > >         /*
+> > >          * MTU change functionality. Switches can also adjust their MRU
+> > > through
+> > >          * this method. By MTU, one understands the SDU (L2 payload) length.
+> > >          * If the switch needs to account for the DSA tag on the CPU
+> > > port, this
+> > >          * method needs to to do so privately.
+> > >          */
+> > >         int     (*port_change_mtu)(struct dsa_switch *ds, int port,
+> > >                                    int new_mtu);
+> > >         int     (*port_max_mtu)(struct dsa_switch *ds, int port);
+> >
+> > MT7530 does not support configuring jumbo frame per-port
+> > The register affects globally
+> >
+> > >
+> > > --
+> > > Florian
+>
+> This is a bit more tricky, but I think you can still deal with it
+> using the port_change_mtu functionality. Basically it is only a
+> problem when the other ports are standalone - otherwise the
+> dsa_bridge_mtu_normalization function should kick in.
+> So if you implement port_change_mtu, you should do something along the lines of:
+>
+> for (i = 0; i < MT7530_NUM_PORTS; i++) {
+>     struct net_device *slave;
+>
+>     if (!dsa_is_user_port(ds, i))
+>         continue;
+>
+>     slave = ds->ports[i].slave;
+>
+>     slave->mtu = new_mtu;
+> }
+>
+> to update the MTU known by the stack for all net devices.
+Should we warn users that all ports will be affected?
+>
+> Hope this helps,
+> -Vladimir
 
 _______________________________________________
 Linux-mediatek mailing list
