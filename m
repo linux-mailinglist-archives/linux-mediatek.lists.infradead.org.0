@@ -2,43 +2,43 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 58C271A73C9
-	for <lists+linux-mediatek@lfdr.de>; Tue, 14 Apr 2020 08:37:59 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 0D2B21A73D3
+	for <lists+linux-mediatek@lfdr.de>; Tue, 14 Apr 2020 08:44:41 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:In-Reply-To:
 	Date:References:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=3h156P1CXTLj1GMY5PaRJOmYRZO7TO1GBPLzU1ltrxM=; b=AJJvvs+iDvtsND
-	yABB6W2zL+0t7060w/WLQKuwvqyz1J8IMF2aXni34VYX90DwRCKmTysAAFsGESE9ZKHcRyNGG4Z1C
-	/0wV4urrQmvvPwaeTTcDr81MJsUxtTEDXzgid9pBG3aG2yVUjwapt+Xv7AlS4C3SqqmkIv9NOeSgI
-	zxPwq7b56oLjiwkXiKLr/LWzwCv9nxQ0pmXNt1xCWF5eBt+Pfbx0e4y7Vx44TWTD+NJvH7IS2u3lq
-	tlXeYKesuVOgSk5ji915Ya8ipoXfX/GEBDoPdYLTJsq6OwrmTIdoPjf2b/xVOL1kcdHSYmRsvZT0i
-	h6GW22YLx/9iPtuC2z/Q==;
+	List-Owner; bh=zfHKfSR/hja+12oQV0y08IjhaUhO9cubtDapBDIhLGE=; b=cnPp1ELOQsJp7f
+	OucPph8ge3cxOcnLjETZ4cddbN87Tlxts+Ro/XzzFqZMA4yqHOauBRVj2zmRFilRNuGB3wtdOlAHT
+	5HCr3xt6Kqo0OOlJVjx3yw/VP5Hz+977k0gqxyE+CCNCXGoeVOc5dOPp74QtKKuBjm+QCwdupmtvy
+	pvzge3wN0faVU1bp5Z+v+razGMSGJkGs9DZ/mCI0zOuI0CmLRPtkQjc/mSW2/iiXbaWuW91YrGQLK
+	Kr7TaP2A8uKl0lqrm/pVGk+P5lb6XBgOQn5hsc/lwfgsn5+PxvCWzBYX4uF3jC7roK2hgz//nqq/C
+	0Y5Awdc9SZbmoBqL74Qw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jOFCi-0007Qo-0V; Tue, 14 Apr 2020 06:37:52 +0000
+	id 1jOFJB-0002Td-Q7; Tue, 14 Apr 2020 06:44:33 +0000
 Received: from mail26.static.mailgun.info ([104.130.122.26])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jOFCe-0007QU-Id
- for linux-mediatek@lists.infradead.org; Tue, 14 Apr 2020 06:37:50 +0000
+ id 1jOFJ8-0002TD-0Q
+ for linux-mediatek@lists.infradead.org; Tue, 14 Apr 2020 06:44:32 +0000
 DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=mg.codeaurora.org;
  q=dns/txt; 
- s=smtp; t=1586846268; h=Content-Type: MIME-Version: Message-ID:
+ s=smtp; t=1586846670; h=Content-Type: MIME-Version: Message-ID:
  In-Reply-To: Date: References: Subject: Cc: To: From: Sender;
- bh=o0Gyh/mmXnEx8d7nkWvk3UTOpVw4EYc81wUWo5sTSfc=;
- b=qKWwT0xu7xOWEP+TADcoIT/athChcOde79AEot4g4rNKQAIPYWiNFvVGJPgkjYDlI05NJG62
- WVdhNm3nK/iTMhYEirxmkCKAi7HLenHsw/FmLJ5z0DmqaeUdI/BoflIoAthhmMAceZf96y2R
- KQW/A6xcTx56ZYMfm46XheaA6u0=
+ bh=C3ECT5036xTgP8EZNyTEoFJ0r3ONhkOOCc7tcoml54c=;
+ b=slrmtDYz42hmOxTGHPvwnMOTvynCG4SDQpY2FgoAkenD5EASdPry0D9vY2CW/dQjQ7w1mE02
+ Nl5Rt2thY17Q3BkXdRNC5CFxsMfshVidJSsqXTrIeWD6Mv89WD039EDkMCUu8yY2TlJwFmHT
+ 1FyjMMRJAoKv4Ym9wc0OY5SkPQg=
 X-Mailgun-Sending-Ip: 104.130.122.26
 X-Mailgun-Sid: WyI0ZDIyMyIsICJsaW51eC1tZWRpYXRla0BsaXN0cy5pbmZyYWRlYWQub3JnIiwgImJlOWU0YSJd
 Received: from smtp.codeaurora.org
  (ec2-35-166-182-171.us-west-2.compute.amazonaws.com [35.166.182.171])
- by mxa.mailgun.org with ESMTP id 5e955a3b.7f17ce44c420-smtp-out-n03;
- Tue, 14 Apr 2020 06:37:47 -0000 (UTC)
+ by mxa.mailgun.org with ESMTP id 5e955bc7.7fe7f38466f8-smtp-out-n02;
+ Tue, 14 Apr 2020 06:44:23 -0000 (UTC)
 Received: by smtp.codeaurora.org (Postfix, from userid 1001)
- id A769FC43636; Tue, 14 Apr 2020 06:37:47 +0000 (UTC)
+ id 22C18C43637; Tue, 14 Apr 2020 06:44:23 +0000 (UTC)
 X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
  aws-us-west-2-caf-mail-1.web.codeaurora.org
 X-Spam-Level: 
@@ -47,28 +47,28 @@ X-Spam-Status: No, score=-1.0 required=2.0 tests=ALL_TRUSTED,SPF_NONE
 Received: from tynnyri.adurom.net (tynnyri.adurom.net [51.15.11.48])
  (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
  (No client certificate requested) (Authenticated sender: kvalo)
- by smtp.codeaurora.org (Postfix) with ESMTPSA id 2AE91C433F2;
- Tue, 14 Apr 2020 06:37:43 +0000 (UTC)
-DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 2AE91C433F2
+ by smtp.codeaurora.org (Postfix) with ESMTPSA id 1001EC433CB;
+ Tue, 14 Apr 2020 06:44:19 +0000 (UTC)
+DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 1001EC433CB
 Authentication-Results: aws-us-west-2-caf-mail-1.web.codeaurora.org;
  dmarc=none (p=none dis=none) header.from=codeaurora.org
 Authentication-Results: aws-us-west-2-caf-mail-1.web.codeaurora.org;
  spf=none smtp.mailfrom=kvalo@codeaurora.org
 From: Kalle Valo <kvalo@codeaurora.org>
 To: Ryder Lee <ryder.lee@mediatek.com>
-Subject: Re: [PATCH 06/16] mt76: add mac80211 driver for MT7915 PCIe-based
- chipsets
+Subject: Re: [PATCH 08/16] mt76: mt7915: add offloading Tx AMSDU support
 References: <cover.1586507878.git.ryder.lee@mediatek.com>
- <3d9a74111aaadde7be00ec7c8c53d095daf4f9d2.1586507878.git.ryder.lee@mediatek.com>
-Date: Tue, 14 Apr 2020 09:37:42 +0300
-In-Reply-To: <3d9a74111aaadde7be00ec7c8c53d095daf4f9d2.1586507878.git.ryder.lee@mediatek.com>
- (Ryder Lee's message of "Fri, 10 Apr 2020 16:54:43 +0800")
-Message-ID: <87mu7elgi1.fsf@tynnyri.adurom.net>
+ <0cf99a5f317b0d41cd4832b14c99b6b9b8e5fefc.1586507878.git.ryder.lee@mediatek.com>
+Date: Tue, 14 Apr 2020 09:44:18 +0300
+In-Reply-To: <0cf99a5f317b0d41cd4832b14c99b6b9b8e5fefc.1586507878.git.ryder.lee@mediatek.com>
+ (Ryder Lee's message of "Fri, 10 Apr 2020 16:54:45 +0800")
+Message-ID: <87imi2lg71.fsf@tynnyri.adurom.net>
 User-Agent: Gnus/5.13 (Gnus v5.13) Emacs/26.1 (gnu/linux)
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200413_233748_814986_D29EC18E 
-X-CRM114-Status: GOOD (  11.82  )
+X-CRM114-CacheID: sfid-20200413_234431_072951_88E922C6 
+X-CRM114-Status: UNSURE (   7.07  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
@@ -105,30 +105,9 @@ Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.o
 
 Ryder Lee <ryder.lee@mediatek.com> writes:
 
-> Add support for the MediaTek latest generation IEEE 802.11ax 4x4
-> device MT7915E, which supports concurrent dual-band operation at
-> both 5GHz and 2.4GHz.
->
-> Note that this patch just add basic part and will add more HE
-> capabilities support in the further patches.
->
-> The driver supports AP, Station, Mesh and monitor mode.
->
-> Signed-off-by: Ryder Lee <ryder.lee@mediatek.com>
-> Signed-off-by: Shayne Chen <shayne.chen@mediatek.com>
-> Signed-off-by: Chih-Min Chen <chih-min.chen@mediatek.com>
-> Tested-by: Evelyn Tsai <evelyn.tsai@mediatek.com>
-> Acked-by: Yiwei Chung <yiwei.chung@mediatek.com>
-> Acked-by: YF Luo <yf.luo@mediatek.com>
+> Add module parameter to enable hw_tx_amsdu.
 
-[...]
-
-> --- /dev/null
-> +++ b/drivers/net/wireless/mediatek/mt76/mt7915/Kconfig
-> @@ -0,0 +1,13 @@
-> +# SPDX-License-Identifier: GPL-2.0-only
-
-Same as in my earlier comment today: mt76 is ISC, why are you using GPL?
+Why is a module parameter needed? And why is it not enabled by default?
 
 -- 
 https://wireless.wiki.kernel.org/en/developers/documentation/submittingpatches
