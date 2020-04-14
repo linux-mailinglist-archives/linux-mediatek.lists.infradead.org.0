@@ -2,61 +2,62 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id BA0F41A8D64
-	for <lists+linux-mediatek@lfdr.de>; Tue, 14 Apr 2020 23:12:04 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id B62EC1A8D62
+	for <lists+linux-mediatek@lfdr.de>; Tue, 14 Apr 2020 23:12:02 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=ORFChiQ/rXyeibeWJBqdnljF8+uU/nt1Y9Gr9c6yOwQ=; b=ER4dyPzBbdA7N5
-	IxErh2gqySlhrLizJyaJ/vp/PH6Oe+ejBxxz7NjWwRleytt6xdkvygC5iAYtqBV080SnMRSyGZilv
-	bryf6dgel1o9f8VSX7Z6q+TsuGcA5LD+0E07ujdVaY5AS6pvSMLmqFfLJuLD1s59V+Z0Jb0QN2G2i
-	BB96eQ+b/3HBnO13Yxw3yGXap1MFfgw8df2a8tFJl0RLrRu5gm45Lv5KMpQY/EQwlXM4z1iG/pK+q
-	bVnLtJ4Z30exBaonUkTrlG36Sm40TCer2xTYUaEPPrfNQFXrNOnnC345OskDnkj6QDTk6KDs6a+eS
-	XAeuJUohcQ7EmWn7fwFg==;
+	List-Owner; bh=EYb1041VsvDGQrqe/NmO2bz7CKcd5gp9s5pP5FYXP4k=; b=LQ60AZP8rNvhsm
+	j2bYjDF5Nq/GeIKXYIeEws/QkSdz4RhGmSmG4X57RPtFftbcLtza2KhVX5OVDz7wHQgpVbpQLo3wL
+	0jDHs+v6C0cV0VF8wStXYQAvI31Q90i4MPxk3dykmlbvugnKAqMQY93YyUAZQ2sFI1NN7+g1KUlp/
+	nMyqWYiJqWy/UrEJstLu30yuchTE1ZxVPqOJmv4+bKFgTwg657loZ8lsaFm155CHLoGC0RtloXGDB
+	1hOwg9S2794uoXJv7K25i0cdN9XdNU3psP9UA06MqXIUG39XqxOpwZueLAADvoV62QER+PZhMctJ5
+	ZjjcmvbKtkAzYTK29JaQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jOSqc-0005fD-6O; Tue, 14 Apr 2020 21:11:58 +0000
+	id 1jOSqZ-0005aA-Eg; Tue, 14 Apr 2020 21:11:55 +0000
 Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jOSqR-0005GL-Mk
- for linux-mediatek@lists.infradead.org; Tue, 14 Apr 2020 21:11:49 +0000
-X-UUID: 585ce27ffa374ba78c1cb486ce27f403-20200414
+ id 1jOSqP-0005GL-HD
+ for linux-mediatek@lists.infradead.org; Tue, 14 Apr 2020 21:11:47 +0000
+X-UUID: e01f5c9e12984ffb9982a45decf6a616-20200414
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
  s=dk; 
  h=Content-Transfer-Encoding:Content-Type:MIME-Version:References:In-Reply-To:Message-ID:Date:Subject:CC:To:From;
- bh=PrMrGQUfXMNhRG58H8+GNHeDRKweulvlAJdxD1OYkqE=; 
- b=VsKlQ8RrM+Gb3FBaYDhKdyxRwK0gsz2+6eQTpVr68y99j2JGnTXD8IRq6OfSu/k5UWYG0tf+33T+yKTCWROjE3ATudPuCnl8PcmR4X+20KyUMA4sp3tIm4UGZrYy1VFXNyysmVDLTc7yE5sh56PNbU73jIek6t9gj+HHUZEGBqE=;
-X-UUID: 585ce27ffa374ba78c1cb486ce27f403-20200414
+ bh=c50YIVxmbOajpC2CO4PdY4Sl7aeZnR2QVqENnNV97Pk=; 
+ b=pqqe5kFFkwxJA5ighgR4QJneHEIXrDiHfgtFe/uM3rmUNdNcAeFKXUaXxLzcRLhIAftEXXDeAxn/1dr8Kwv5VKpKxVrcl61JxwjMgBND1JluXq3g93gJodoIq2E8odMc6/Nyg0QXJ8l6LefkqBUorGsBAVPdRzcuP1wau/NABKU=;
+X-UUID: e01f5c9e12984ffb9982a45decf6a616-20200414
 Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
  (envelope-from <ryder.lee@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1506292485; Tue, 14 Apr 2020 13:11:43 -0800
-Received: from MTKMBS02N1.mediatek.inc (172.21.101.77) by
- MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
- 15.0.1497.2; Tue, 14 Apr 2020 14:01:37 -0700
+ with ESMTP id 190897956; Tue, 14 Apr 2020 13:11:40 -0800
+Received: from MTKMBS06N2.mediatek.inc (172.21.101.130) by
+ MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
+ 15.0.1497.2; Tue, 14 Apr 2020 14:01:56 -0700
 Received: from mtkcas07.mediatek.inc (172.21.101.84) by
- mtkmbs02n1.mediatek.inc (172.21.101.77) with Microsoft SMTP Server (TLS) id
- 15.0.1497.2; Wed, 15 Apr 2020 05:01:38 +0800
+ mtkmbs06n2.mediatek.inc (172.21.101.130) with Microsoft SMTP Server (TLS) id
+ 15.0.1497.2; Wed, 15 Apr 2020 05:01:39 +0800
 Received: from mtksdccf07.mediatek.inc (172.21.84.99) by mtkcas07.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1497.2 via
- Frontend Transport; Wed, 15 Apr 2020 05:01:37 +0800
+ Frontend Transport; Wed, 15 Apr 2020 05:01:38 +0800
 From: Ryder Lee <ryder.lee@mediatek.com>
 To: Felix Fietkau <nbd@nbd.name>, Lorenzo Bianconi
  <lorenzo.bianconi@redhat.com>
-Subject: [PATCH v2 16/18] mt76: mt7915: add tsf related callbacks
-Date: Wed, 15 Apr 2020 05:01:14 +0800
-Message-ID: <ecbe495a0275e9742aa81baf4681a950558dceef.1586895593.git.ryder.lee@mediatek.com>
+Subject: [PATCH v2 17/18] mt76: mt7915: enable firmware module debug support
+Date: Wed, 15 Apr 2020 05:01:15 +0800
+Message-ID: <ca3b5c6dee9cbcc2445175be5babb9a585a3ed66.1586895593.git.ryder.lee@mediatek.com>
 X-Mailer: git-send-email 2.18.0
 In-Reply-To: <cover.1586895593.git.ryder.lee@mediatek.com>
 References: <cover.1586895593.git.ryder.lee@mediatek.com>
 MIME-Version: 1.0
+X-TM-SNTS-SMTP: 83A3483B71DF430FDEE7D25F64F9C5C9969CAF20B4A2E0BECBE012FBA926593D2000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200414_141147_777288_77F6B00A 
-X-CRM114-Status: UNSURE (   7.59  )
+X-CRM114-CacheID: sfid-20200414_141145_623656_FA94932E 
+X-CRM114-Status: UNSURE (   9.86  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
@@ -97,109 +98,209 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-It is useful for IBSS Mesh to adjust t_clockdrift.
+This allows host driver to get useful information of some important modules.
 
 Signed-off-by: Ryder Lee <ryder.lee@mediatek.com>
-Reported-by: Shayne Chen <shayne.chen@mediatek.com>
-Tested-by: Evelyn Tsai <evelyn.tsai@mediatek.com>
+Signed-off-by: Chih-Min Chen <chih-min.chen@mediatek.com>
 ---
- .../net/wireless/mediatek/mt76/mt7915/main.c  | 53 +++++++++++++++++++
- .../net/wireless/mediatek/mt76/mt7915/regs.h  | 11 ++++
- 2 files changed, 64 insertions(+)
+ .../wireless/mediatek/mt76/mt7915/debugfs.c   | 36 ++++++++++++
+ .../net/wireless/mediatek/mt76/mt7915/mcu.c   | 58 +++++++++++++++++++
+ .../net/wireless/mediatek/mt76/mt7915/mcu.h   |  3 +
+ .../wireless/mediatek/mt76/mt7915/mt7915.h    |  2 +
+ 4 files changed, 99 insertions(+)
 
-diff --git a/drivers/net/wireless/mediatek/mt76/mt7915/main.c b/drivers/net/wireless/mediatek/mt76/mt7915/main.c
-index b3e26ff32287..ef0c91990b49 100644
---- a/drivers/net/wireless/mediatek/mt76/mt7915/main.c
-+++ b/drivers/net/wireless/mediatek/mt76/mt7915/main.c
-@@ -655,6 +655,57 @@ mt7915_get_stats(struct ieee80211_hw *hw,
- 	return 0;
- }
+diff --git a/drivers/net/wireless/mediatek/mt76/mt7915/debugfs.c b/drivers/net/wireless/mediatek/mt76/mt7915/debugfs.c
+index cf3b60ded6ef..c6c009cd773e 100644
+--- a/drivers/net/wireless/mediatek/mt76/mt7915/debugfs.c
++++ b/drivers/net/wireless/mediatek/mt76/mt7915/debugfs.c
+@@ -74,6 +74,41 @@ mt7915_dbdc_get(void *data, u64 *val)
+ DEFINE_DEBUGFS_ATTRIBUTE(fops_dbdc, mt7915_dbdc_get,
+ 			 mt7915_dbdc_set, "%lld\n");
  
-+static u64
-+mt7915_get_tsf(struct ieee80211_hw *hw, struct ieee80211_vif *vif)
++static int
++mt7915_fw_debug_set(void *data, u64 val)
 +{
-+	struct mt7915_vif *mvif = (struct mt7915_vif *)vif->drv_priv;
-+	struct mt7915_dev *dev = mt7915_hw_dev(hw);
-+	struct mt7915_phy *phy = mt7915_hw_phy(hw);
-+	bool band = phy != &dev->phy;
-+	union {
-+		u64 t64;
-+		u32 t32[2];
-+	} tsf;
-+	u16 n;
++	struct mt7915_dev *dev = data;
++	enum {
++		DEBUG_TXCMD = 62,
++		DEBUG_CMD_RPT_TX,
++		DEBUG_CMD_RPT_TRIG,
++		DEBUG_SPL,
++		DEBUG_RPT_RX,
++	} debug;
 +
-+	mutex_lock(&dev->mt76.mutex);
++	dev->fw_debug = !!val;
 +
-+	n = mvif->omac_idx > HW_BSSID_MAX ? HW_BSSID_0 : mvif->omac_idx;
-+	/* TSF software read */
-+	mt76_set(dev, MT_LPON_TCR(band, n), MT_LPON_TCR_SW_MODE);
-+	tsf.t32[0] = mt76_rr(dev, MT_LPON_UTTR0(band));
-+	tsf.t32[1] = mt76_rr(dev, MT_LPON_UTTR1(band));
++	mt7915_mcu_fw_log_2_host(dev, dev->fw_debug ? 2 : 0);
 +
-+	mutex_unlock(&dev->mt76.mutex);
++	for (debug = DEBUG_TXCMD; debug <= DEBUG_RPT_RX; debug++)
++		mt7915_mcu_fw_dbg_ctrl(dev, debug, dev->fw_debug);
 +
-+	return tsf.t64;
++	return 0;
 +}
 +
-+static void
-+mt7915_set_tsf(struct ieee80211_hw *hw, struct ieee80211_vif *vif,
-+	       u64 timestamp)
++static int
++mt7915_fw_debug_get(void *data, u64 *val)
 +{
-+	struct mt7915_vif *mvif = (struct mt7915_vif *)vif->drv_priv;
-+	struct mt7915_dev *dev = mt7915_hw_dev(hw);
-+	struct mt7915_phy *phy = mt7915_hw_phy(hw);
-+	bool band = phy != &dev->phy;
-+	union {
-+		u64 t64;
-+		u32 t32[2];
-+	} tsf = { .t64 = timestamp, };
-+	u16 n;
++	struct mt7915_dev *dev = data;
 +
-+	mutex_lock(&dev->mt76.mutex);
++	*val = dev->fw_debug;
 +
-+	n = mvif->omac_idx > HW_BSSID_MAX ? HW_BSSID_0 : mvif->omac_idx;
-+	mt76_wr(dev, MT_LPON_UTTR0(band), tsf.t32[0]);
-+	mt76_wr(dev, MT_LPON_UTTR1(band), tsf.t32[1]);
-+	/* TSF software overwrite */
-+	mt76_set(dev, MT_LPON_TCR(band, n), MT_LPON_TCR_SW_WRITE);
++	return 0;
++}
 +
-+	mutex_unlock(&dev->mt76.mutex);
++DEFINE_DEBUGFS_ATTRIBUTE(fops_fw_debug, mt7915_fw_debug_get,
++			 mt7915_fw_debug_set, "%lld\n");
++
+ static void
+ mt7915_ampdu_stat_read_phy(struct mt7915_phy *phy,
+ 			   struct seq_file *file)
+@@ -290,6 +325,7 @@ int mt7915_init_debugfs(struct mt7915_dev *dev)
+ 				    mt7915_queues_acq);
+ 	debugfs_create_file("tx_stats", 0400, dir, dev, &fops_tx_stats);
+ 	debugfs_create_file("dbdc", 0600, dir, dev, &fops_dbdc);
++	debugfs_create_file("fw_debug", 0600, dir, dev, &fops_fw_debug);
+ 	debugfs_create_u32("dfs_hw_pattern", 0400, dir, &dev->hw_pattern);
+ 	/* test knobs */
+ 	debugfs_create_file("radar_trigger", 0200, dir, dev,
+diff --git a/drivers/net/wireless/mediatek/mt76/mt7915/mcu.c b/drivers/net/wireless/mediatek/mt76/mt7915/mcu.c
+index 32bd9e2c73e3..a93c84ff709b 100644
+--- a/drivers/net/wireless/mediatek/mt76/mt7915/mcu.c
++++ b/drivers/net/wireless/mediatek/mt76/mt7915/mcu.c
+@@ -502,6 +502,28 @@ mt7915_mcu_tx_rate_report(struct mt7915_dev *dev, struct sk_buff *skb)
+ 	}
+ }
+ 
++static void
++mt7915_mcu_rx_log_message(struct mt7915_dev *dev, struct sk_buff *skb)
++{
++	struct mt7915_mcu_rxd *rxd = (struct mt7915_mcu_rxd *)skb->data;
++	const char *data = (char *)&rxd[1];
++	const char *type;
++
++	switch (rxd->s2d_index) {
++	case 0:
++		type = "WM";
++		break;
++	case 2:
++		type = "WA";
++		break;
++	default:
++		type = "unknown";
++		break;
++	}
++
++	wiphy_info(mt76_hw(dev)->wiphy, "%s: %s", type, data);
 +}
 +
  static void
- mt7915_set_coverage_class(struct ieee80211_hw *hw, s16 coverage_class)
+ mt7915_mcu_rx_ext_event(struct mt7915_dev *dev, struct sk_buff *skb)
  {
-@@ -767,6 +818,8 @@ const struct ieee80211_ops mt7915_ops = {
- 	.get_txpower = mt76_get_txpower,
- 	.channel_switch_beacon = mt7915_channel_switch_beacon,
- 	.get_stats = mt7915_get_stats,
-+	.get_tsf = mt7915_get_tsf,
-+	.set_tsf = mt7915_set_tsf,
- 	.get_survey = mt76_get_survey,
- 	.get_antenna = mt76_get_antenna,
- 	.set_antenna = mt7915_set_antenna,
-diff --git a/drivers/net/wireless/mediatek/mt76/mt7915/regs.h b/drivers/net/wireless/mediatek/mt76/mt7915/regs.h
-index 572bdc16fb2d..6600fc625196 100644
---- a/drivers/net/wireless/mediatek/mt76/mt7915/regs.h
-+++ b/drivers/net/wireless/mediatek/mt76/mt7915/regs.h
-@@ -75,6 +75,17 @@
- #define MT_DMA_DCR0_MAX_RX_LEN		GENMASK(15, 3)
- #define MT_DMA_DCR0_RXD_G5_EN		BIT(23)
+@@ -519,6 +541,9 @@ mt7915_mcu_rx_ext_event(struct mt7915_dev *dev, struct sk_buff *skb)
+ 	case MCU_EXT_EVENT_RATE_REPORT:
+ 		mt7915_mcu_tx_rate_report(dev, skb);
+ 		break;
++	case MCU_EXT_EVENT_FW_LOG_2_HOST:
++		mt7915_mcu_rx_log_message(dev, skb);
++		break;
+ 	default:
+ 		break;
+ 	}
+@@ -544,6 +569,7 @@ void mt7915_mcu_rx_event(struct mt7915_dev *dev, struct sk_buff *skb)
+ 	struct mt7915_mcu_rxd *rxd = (struct mt7915_mcu_rxd *)skb->data;
  
-+/* LPON: band 0(0x24200), band 1(0xa4200) */
-+#define MT_WF_LPON_BASE(_band)		((_band) ? 0xa4200 : 0x24200)
-+#define MT_WF_LPON(_band, ofs)		(MT_WF_LPON_BASE(_band) + (ofs))
+ 	if (rxd->ext_eid == MCU_EXT_EVENT_THERMAL_PROTECT ||
++	    rxd->ext_eid == MCU_EXT_EVENT_FW_LOG_2_HOST ||
+ 	    rxd->ext_eid == MCU_EXT_EVENT_ASSERT_DUMP ||
+ 	    rxd->ext_eid == MCU_EXT_EVENT_PS_SYNC ||
+ 	    rxd->ext_eid == MCU_EXT_EVENT_RATE_REPORT ||
+@@ -2271,6 +2297,37 @@ static int mt7915_load_firmware(struct mt7915_dev *dev)
+ 	return 0;
+ }
+ 
++int mt7915_mcu_fw_log_2_host(struct mt7915_dev *dev, u8 ctrl)
++{
++	struct {
++		u8 ctrl_val;
++		u8 pad[3];
++	} data = {
++		.ctrl_val = ctrl
++	};
 +
-+#define MT_LPON_UTTR0(_band)		MT_WF_LPON(_band, 0x080)
-+#define MT_LPON_UTTR1(_band)		MT_WF_LPON(_band, 0x084)
++	return __mt76_mcu_send_msg(&dev->mt76, MCU_EXT_CMD_FW_LOG_2_HOST,
++				   &data, sizeof(data), true);
++}
 +
-+#define MT_LPON_TCR(_band, n)		MT_WF_LPON(_band, 0x0a8 + (n) * 4)
-+#define MT_LPON_TCR_SW_MODE		GENMASK(1, 0)
-+#define MT_LPON_TCR_SW_WRITE		BIT(0)
++int mt7915_mcu_fw_dbg_ctrl(struct mt7915_dev *dev, u32 module, u8 level)
++{
++	struct {
++		u8 ver;
++		u8 pad;
++		u16 len;
++		u8 level;
++		u8 rsv[3];
++		u32 module_idx;
++	} data = {
++		.module_idx = cpu_to_le32(module),
++		.level = level,
++	};
 +
- /* MIB: band 0(0x24800), band 1(0xa4800) */
- #define MT_WF_MIB_BASE(_band)		((_band) ? 0xa4800 : 0x24800)
- #define MT_WF_MIB(_band, ofs)		(MT_WF_MIB_BASE(_band) + (ofs))
++	return __mt76_mcu_send_msg(&dev->mt76, MCU_EXT_CMD_FW_DBG_CTRL,
++				   &data, sizeof(data), false);
++}
++
+ int mt7915_mcu_init(struct mt7915_dev *dev)
+ {
+ 	static const struct mt76_mcu_ops mt7915_mcu_ops = {
+@@ -2292,6 +2349,7 @@ int mt7915_mcu_init(struct mt7915_dev *dev)
+ 		return ret;
+ 
+ 	set_bit(MT76_STATE_MCU_RUNNING, &dev->mphy.state);
++	mt7915_mcu_fw_log_2_host(dev, 0);
+ 
+ 	return 0;
+ }
+diff --git a/drivers/net/wireless/mediatek/mt76/mt7915/mcu.h b/drivers/net/wireless/mediatek/mt76/mt7915/mcu.h
+index b8d28d971974..f68d2094ac6f 100644
+--- a/drivers/net/wireless/mediatek/mt76/mt7915/mcu.h
++++ b/drivers/net/wireless/mediatek/mt76/mt7915/mcu.h
+@@ -38,6 +38,7 @@ enum {
+ /* ext event table */
+ enum {
+ 	MCU_EXT_EVENT_PS_SYNC = 0x5,
++	MCU_EXT_EVENT_FW_LOG_2_HOST = 0x13,
+ 	MCU_EXT_EVENT_THERMAL_PROTECT = 0x22,
+ 	MCU_EXT_EVENT_ASSERT_DUMP = 0x23,
+ 	MCU_EXT_EVENT_RDD_REPORT = 0x3a,
+@@ -192,6 +193,7 @@ enum {
+ 	MCU_EXT_CMD_EFUSE_ACCESS = 0x01,
+ 	MCU_EXT_CMD_PM_STATE_CTRL = 0x07,
+ 	MCU_EXT_CMD_CHANNEL_SWITCH = 0x08,
++	MCU_EXT_CMD_FW_LOG_2_HOST = 0x13,
+ 	MCU_EXT_CMD_EFUSE_BUFFER_MODE = 0x21,
+ 	MCU_EXT_CMD_STA_REC_UPDATE = 0x25,
+ 	MCU_EXT_CMD_BSS_INFO_UPDATE = 0x26,
+@@ -207,6 +209,7 @@ enum {
+ 	MCU_EXT_CMD_SET_SER_TRIGGER = 0x81,
+ 	MCU_EXT_CMD_SCS_CTRL = 0x82,
+ 	MCU_EXT_CMD_RATE_CTRL = 0x87,
++	MCU_EXT_CMD_FW_DBG_CTRL = 0x95,
+ 	MCU_EXT_CMD_SET_RDD_TH = 0x9d,
+ };
+ 
+diff --git a/drivers/net/wireless/mediatek/mt76/mt7915/mt7915.h b/drivers/net/wireless/mediatek/mt76/mt7915/mt7915.h
+index e5821d144c85..43c956bc09f5 100644
+--- a/drivers/net/wireless/mediatek/mt76/mt7915/mt7915.h
++++ b/drivers/net/wireless/mediatek/mt76/mt7915/mt7915.h
+@@ -324,6 +324,8 @@ int mt7915_mcu_get_rate_info(struct mt7915_dev *dev, u32 cmd, u16 wlan_idx);
+ int mt7915_mcu_get_temperature(struct mt7915_dev *dev, int index);
+ int mt7915_mcu_rdd_cmd(struct mt7915_dev *dev, enum mt7915_rdd_cmd cmd,
+ 		       u8 index, u8 rx_sel, u8 val);
++int mt7915_mcu_fw_log_2_host(struct mt7915_dev *dev, u8 ctrl);
++int mt7915_mcu_fw_dbg_ctrl(struct mt7915_dev *dev, u32 module, u8 level);
+ void mt7915_mcu_rx_event(struct mt7915_dev *dev, struct sk_buff *skb);
+ void mt7915_mcu_exit(struct mt7915_dev *dev);
+ 
 -- 
 2.18.0
 _______________________________________________
