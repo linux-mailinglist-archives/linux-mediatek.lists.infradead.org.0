@@ -2,71 +2,83 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 671771ADA65
-	for <lists+linux-mediatek@lfdr.de>; Fri, 17 Apr 2020 11:49:32 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id D19321ADA26
+	for <lists+linux-mediatek@lfdr.de>; Fri, 17 Apr 2020 11:39:52 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=+QPxF1vlOH7StIZYuXJa3V40x8QVDxCLF9AFXHblB9M=; b=CzXfRTWWYemzZF
-	+02zyDgKkioVsb4f9gN4NMP8w7r9U3Au4pV8ex0oZD0ZjYRmSYgSWTZ1g0/jPhmrw1969fawZsI3p
-	PPuj7iU7d6jQR88UQRcteyXAitDRujGn9dqUsZDwV9b7nSzJuyMUpOkRco8KBZ9AfWqBZv4NEX/BD
-	3LTiX7TrYRFqcLvuJ4DWfis80NHba+9vE8qhLUp+9D1gradrsF7deoOfvnXTeRa4uhUHyHTzzO/w9
-	xbEy4H0bkCLt+mFxR2nZRUFbWNaDryKIGGwBijCJ8ha12MTpm54fI59p6FXJranzLrzdcBKC8BrT5
-	o2iyuYrsm4cQJ/Xidm5Q==;
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
+	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
+	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=+npHHXySZCadGp7DAiM2bO8yRrcpBDRJnFJ1TQaTgUs=; b=FTmVRtDTgfdxlh
+	j9by30RQf076RTanJkg2z7vDS8Jg/X1hq6kg3aqeL5kcNOrZuGm2erAURDMlyiCJ+RDBIt37NlKbo
+	arCxF8Lb4xOCmO0zavJDi39LtICRzYM0s69CYu7xW03b3hzbpCimVxmknENIFa0fZDbNd0tbe5Em2
+	ZPTZlYX9XVnIvfT20orha6IvQ0TQ6qn4AI+0eo15RZlglxCVbZ7mFbPDlBBgJMQedwUqoNfpNqWqp
+	9JsiKjxV8so5K3eRL3ND01PsuuAJiNOv4xdIm7Vujs/4i4MBJuL17AJEI8FfFyNk4W1H+1nvVhiFN
+	ib1ICokYDSrIRMNzA7Wg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jPNcj-0003b8-1T; Fri, 17 Apr 2020 09:49:25 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1jPNTK-00050T-Gn; Fri, 17 Apr 2020 09:39:42 +0000
+Received: from nbd.name ([2a01:4f8:221:3d45::2])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jPNcP-0003NC-I1; Fri, 17 Apr 2020 09:49:07 +0000
-X-UUID: a9a84e5a637244c8ab45e7d6426024e6-20200417
-DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
- s=dk; 
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:References:In-Reply-To:Message-ID:Date:Subject:CC:To:From;
- bh=CIwcBFK1x0LbOjDt1BG6/knHFxDHRiqj8ov/jWEZDBY=; 
- b=HdANYfhf7OGPDb8cXa0k9SAlrpBI23GevVFtBgL9k0nMlI44IphJitPTP1z0JojvEyH2skWJGyHV4XolEerxX9EktTZzZySo2TCHrmGc13D0qGwDG3r/vDsLK2aMt20dAELV6GJM2QuBXcNcUdqHK6316tLG8Tdl/2c+HvawlmM=;
-X-UUID: a9a84e5a637244c8ab45e7d6426024e6-20200417
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
- (envelope-from <chuanjia.liu@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 364083877; Fri, 17 Apr 2020 01:48:54 -0800
-Received: from MTKMBS07N2.mediatek.inc (172.21.101.141) by
- MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
- 15.0.1497.2; Fri, 17 Apr 2020 02:39:28 -0700
-Received: from mtkcas08.mediatek.inc (172.21.101.126) by
- mtkmbs07n2.mediatek.inc (172.21.101.141) with Microsoft SMTP Server (TLS) id
- 15.0.1497.2; Fri, 17 Apr 2020 17:39:28 +0800
-Received: from localhost.localdomain (10.17.3.153) by mtkcas08.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1497.2 via Frontend
- Transport; Fri, 17 Apr 2020 17:39:26 +0800
-From: <chuanjia.liu@mediatek.com>
-To: <robh+dt@kernel.org>, <bhelgaas@google.com>, <matthias.bgg@gmail.com>,
- <lorenzo.pieralisi@arm.com>, <amurray@thegoodpenguin.co.uk>
-Subject: [PATCH 4/4] ARM: dts: mediatek: Update mt7629 PCIe node
-Date: Fri, 17 Apr 2020 17:35:05 +0800
-Message-ID: <20200417093505.13978-5-chuanjia.liu@mediatek.com>
-X-Mailer: git-send-email 2.18.0
-In-Reply-To: <20200417093505.13978-1-chuanjia.liu@mediatek.com>
-References: <20200417093505.13978-1-chuanjia.liu@mediatek.com>
+ id 1jPNT1-0004oE-3u; Fri, 17 Apr 2020 09:39:24 +0000
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=nbd.name;
+ s=20160729; h=Content-Transfer-Encoding:Content-Type:In-Reply-To:
+ MIME-Version:Date:Message-ID:From:References:Cc:To:Subject:Sender:Reply-To:
+ Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
+ Resent-To:Resent-Cc:Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:
+ List-Subscribe:List-Post:List-Owner:List-Archive;
+ bh=++83K8n12UE1elxj3tvC65gLwZIqFvSTwUtiFliGXuQ=; b=jzKnREUXO8m3gI6JMiGSZ0cKs5
+ c17vX21fb+mbrZf2xSvRMVHhcacj0XKm9rrFVSEXCxNLZa7lsq3/olBAwgHIfR8ZPVb/tBxzp51cS
+ kjPvk5NOUD+rX58TGZdKcfKIfA/IRWEbSeHpO6K9a56nk1QeaHnA/YtkKYWztWWxRoiM=;
+Received: from p54ae965b.dip0.t-ipconnect.de ([84.174.150.91] helo=nf.local)
+ by ds12 with esmtpsa (TLS1.2:ECDHE_RSA_AES_128_GCM_SHA256:128)
+ (Exim 4.89) (envelope-from <nbd@nbd.name>)
+ id 1jPNSw-0002Wg-IO; Fri, 17 Apr 2020 11:39:18 +0200
+Subject: Re: [PATCH] mt76: mt7615: add support for MT7611N
+To: DENG Qingfang <dqfext@gmail.com>, linux-wireless@vger.kernel.org
+References: <20200412155848.15506-1-dqfext@gmail.com>
+From: Felix Fietkau <nbd@nbd.name>
+Autocrypt: addr=nbd@nbd.name; prefer-encrypt=mutual; keydata=
+ xsDiBEah5CcRBADIY7pu4LIv3jBlyQ/2u87iIZGe6f0f8pyB4UjzfJNXhJb8JylYYRzIOSxh
+ ExKsdLCnJqsG1PY1mqTtoG8sONpwsHr2oJ4itjcGHfn5NJSUGTbtbbxLro13tHkGFCoCr4Z5
+ Pv+XRgiANSpYlIigiMbOkide6wbggQK32tC20QxUIwCg4k6dtV/4kwEeiOUfErq00TVqIiEE
+ AKcUi4taOuh/PQWx/Ujjl/P1LfJXqLKRPa8PwD4j2yjoc9l+7LptSxJThL9KSu6gtXQjcoR2
+ vCK0OeYJhgO4kYMI78h1TSaxmtImEAnjFPYJYVsxrhay92jisYc7z5R/76AaELfF6RCjjGeP
+ wdalulG+erWju710Bif7E1yjYVWeA/9Wd1lsOmx6uwwYgNqoFtcAunDaMKi9xVQW18FsUusM
+ TdRvTZLBpoUAy+MajAL+R73TwLq3LnKpIcCwftyQXK5pEDKq57OhxJVv1Q8XkA9Dn1SBOjNB
+ l25vJDFAT9ntp9THeDD2fv15yk4EKpWhu4H00/YX8KkhFsrtUs69+vZQwc0cRmVsaXggRmll
+ dGthdSA8bmJkQG5iZC5uYW1lPsJgBBMRAgAgBQJGoeQnAhsjBgsJCAcDAgQVAggDBBYCAwEC
+ HgECF4AACgkQ130UHQKnbvXsvgCgjsAIIOsY7xZ8VcSm7NABpi91yTMAniMMmH7FRenEAYMa
+ VrwYTIThkTlQzsFNBEah5FQQCACMIep/hTzgPZ9HbCTKm9xN4bZX0JjrqjFem1Nxf3MBM5vN
+ CYGBn8F4sGIzPmLhl4xFeq3k5irVg/YvxSDbQN6NJv8o+tP6zsMeWX2JjtV0P4aDIN1pK2/w
+ VxcicArw0VYdv2ZCarccFBgH2a6GjswqlCqVM3gNIMI8ikzenKcso8YErGGiKYeMEZLwHaxE
+ Y7mTPuOTrWL8uWWRL5mVjhZEVvDez6em/OYvzBwbkhImrryF29e3Po2cfY2n7EKjjr3/141K
+ DHBBdgXlPNfDwROnA5ugjjEBjwkwBQqPpDA7AYPvpHh5vLbZnVGu5CwG7NAsrb2isRmjYoqk
+ wu++3117AAMFB/9S0Sj7qFFQcD4laADVsabTpNNpaV4wAgVTRHKV/kC9luItzwDnUcsZUPdQ
+ f3MueRJ3jIHU0UmRBG3uQftqbZJj3ikhnfvyLmkCNe+/hXhPu9sGvXyi2D4vszICvc1KL4RD
+ aLSrOsROx22eZ26KqcW4ny7+va2FnvjsZgI8h4sDmaLzKczVRIiLITiMpLFEU/VoSv0m1F4B
+ FtRgoiyjFzigWG0MsTdAN6FJzGh4mWWGIlE7o5JraNhnTd+yTUIPtw3ym6l8P+gbvfoZida0
+ TspgwBWLnXQvP5EDvlZnNaKa/3oBes6z0QdaSOwZCRA3QSLHBwtgUsrT6RxRSweLrcabwkkE
+ GBECAAkFAkah5FQCGwwACgkQ130UHQKnbvW2GgCfTKx80VvCR/PvsUlrvdOLsIgeRGAAn1ee
+ RjMaxwtSdaCKMw3j33ZbsWS4
+Message-ID: <5e02cb52-09fd-f57d-9ba4-8402d76b2d08@nbd.name>
+Date: Fri, 17 Apr 2020 11:39:17 +0200
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:68.0)
+ Gecko/20100101 Thunderbird/68.7.0
 MIME-Version: 1.0
-X-MTK: N
+In-Reply-To: <20200412155848.15506-1-dqfext@gmail.com>
+Content-Language: en-US
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200417_024905_603677_068E170F 
-X-CRM114-Status: GOOD (  10.72  )
+X-CRM114-CacheID: sfid-20200417_023923_464220_E15C7DD0 
+X-CRM114-Status: GOOD (  15.73  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [216.200.240.184 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 MIME_BASE64_TEXT       RAW: Message text disguised using base64
- encoding
+ 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
@@ -74,8 +86,6 @@ X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -87,100 +97,49 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: devicetree@vger.kernel.org, ryder.lee@mediatek.com,
- srv_heupstream@mediatek.com, "chuanjia.liu" <Chuanjia.Liu@mediatek.com>,
- linux-pci@vger.kernel.org, linux-kernel@vger.kernel.org,
- jianjun.wang@mediatek.com, linux-mediatek@lists.infradead.org,
- linux-arm-kernel@lists.infradead.org
+Cc: Ryder Lee <ryder.lee@mediatek.com>,
+ Matthias Brugger <matthias.bgg@gmail.com>, linux-mediatek@lists.infradead.org,
+ linux-arm-kernel@lists.infradead.org, Roy Luo <royluo@google.com>,
+ Lorenzo Bianconi <lorenzo.bianconi83@gmail.com>,
+ Kalle Valo <kvalo@codeaurora.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-From: "chuanjia.liu" <Chuanjia.Liu@mediatek.com>
+On 2020-04-12 17:58, DENG Qingfang wrote:
+> MT7611N is basically the same as MT7615N, except it only supports 5 GHz
+> It is used by some TP-Link and Mercury wireless routers
+> 
+> Signed-off-by: DENG Qingfang <dqfext@gmail.com>
+> ---
+>  drivers/net/wireless/mediatek/mt76/mt7615/debugfs.c | 2 +-
+>  drivers/net/wireless/mediatek/mt76/mt7615/dma.c     | 8 ++++----
+>  drivers/net/wireless/mediatek/mt76/mt7615/eeprom.c  | 7 +++++++
+>  drivers/net/wireless/mediatek/mt76/mt7615/init.c    | 2 +-
+>  drivers/net/wireless/mediatek/mt76/mt7615/mac.c     | 8 ++++----
+>  drivers/net/wireless/mediatek/mt76/mt7615/mt7615.h  | 5 +++++
+>  drivers/net/wireless/mediatek/mt76/mt7615/pci.c     | 1 +
+>  7 files changed, 23 insertions(+), 10 deletions(-)
+> 
+> diff --git a/drivers/net/wireless/mediatek/mt76/mt7615/debugfs.c b/drivers/net/wireless/mediatek/mt76/mt7615/debugfs.c
+> index b4d0795154e3..fac705e1621f 100644
+> --- a/drivers/net/wireless/mediatek/mt76/mt7615/debugfs.c
+> +++ b/drivers/net/wireless/mediatek/mt76/mt7615/debugfs.c
+> @@ -264,7 +264,7 @@ int mt7615_init_debugfs(struct mt7615_dev *dev)
+>  	if (!dir)
+>  		return -ENOMEM;
+>  
+> -	if (is_mt7615(&dev->mt76))
+> +	if (is_mt7615(&dev->mt76) || is_mt7611(&dev->mt76))
+>  		debugfs_create_devm_seqfile(dev->mt76.dev, "queues", dir,
+>  					    mt7615_queues_read);
+>  	else
+I think it would simplify the patch and driver code if you make
+is_mt7615(&dev->mt76) return true for mt7611 as well.
 
-Remove unused property and add pciecfg node.
+- Felix
 
-Signed-off-by: chuanjia.liu <Chuanjia.Liu@mediatek.com>
----
- arch/arm/boot/dts/mt7629-rfb.dts |  3 ++-
- arch/arm/boot/dts/mt7629.dtsi    | 23 +++++++++++++----------
- 2 files changed, 15 insertions(+), 11 deletions(-)
-
-diff --git a/arch/arm/boot/dts/mt7629-rfb.dts b/arch/arm/boot/dts/mt7629-rfb.dts
-index 9980c10c6e29..eb536cbebd9b 100644
---- a/arch/arm/boot/dts/mt7629-rfb.dts
-+++ b/arch/arm/boot/dts/mt7629-rfb.dts
-@@ -140,9 +140,10 @@
- 	};
- };
- 
--&pcie {
-+&pcie1 {
- 	pinctrl-names = "default";
- 	pinctrl-0 = <&pcie_pins>;
-+	status = "okay";
- };
- 
- &pciephy1 {
-diff --git a/arch/arm/boot/dts/mt7629.dtsi b/arch/arm/boot/dts/mt7629.dtsi
-index 5cbb3d244c75..94567307b842 100644
---- a/arch/arm/boot/dts/mt7629.dtsi
-+++ b/arch/arm/boot/dts/mt7629.dtsi
-@@ -360,16 +360,21 @@
- 			#reset-cells = <1>;
- 		};
- 
--		pcie: pcie@1a140000 {
-+		pciecfg: pciecfg@1a140000 {
-+			compatible = "mediatek,mt7629-pciecfg", "syscon";
-+			reg = <0x1a140000 0x1000>;
-+		};
-+
-+		pcie1: pcie@1a145000 {
- 			compatible = "mediatek,mt7629-pcie";
- 			device_type = "pci";
--			reg = <0x1a140000 0x1000>,
--			      <0x1a145000 0x1000>;
--			reg-names = "subsys","port1";
-+			reg = <0x1a145000 0x1000>;
-+			reg-names = "port1";
-+			mediatek,pcie-cfg = <&pciecfg>;
- 			#address-cells = <3>;
- 			#size-cells = <2>;
--			interrupts = <GIC_SPI 176 IRQ_TYPE_LEVEL_LOW>,
--				     <GIC_SPI 229 IRQ_TYPE_LEVEL_LOW>;
-+			interrupts = <GIC_SPI 229 IRQ_TYPE_LEVEL_LOW>;
-+			interrupt-names = "pcie_irq";
- 			clocks = <&pciesys CLK_PCIE_P1_MAC_EN>,
- 				 <&pciesys CLK_PCIE_P0_AHB_EN>,
- 				 <&pciesys CLK_PCIE_P1_AUX_EN>,
-@@ -390,21 +395,19 @@
- 			power-domains = <&scpsys MT7622_POWER_DOMAIN_HIF0>;
- 			bus-range = <0x00 0xff>;
- 			ranges = <0x82000000 0 0x20000000 0x20000000 0 0x10000000>;
-+			status = "disabled";
- 
--			pcie1: pcie@1,0 {
--				device_type = "pci";
-+			slot1: pcie@1,0 {
- 				reg = <0x0800 0 0 0 0>;
- 				#address-cells = <3>;
- 				#size-cells = <2>;
- 				#interrupt-cells = <1>;
- 				ranges;
--				num-lanes = <1>;
- 				interrupt-map-mask = <0 0 0 7>;
- 				interrupt-map = <0 0 0 1 &pcie_intc1 0>,
- 						<0 0 0 2 &pcie_intc1 1>,
- 						<0 0 0 3 &pcie_intc1 2>,
- 						<0 0 0 4 &pcie_intc1 3>;
--
- 				pcie_intc1: interrupt-controller {
- 					interrupt-controller;
- 					#address-cells = <0>;
--- 
-2.18.0
 _______________________________________________
 Linux-mediatek mailing list
 Linux-mediatek@lists.infradead.org
