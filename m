@@ -2,59 +2,93 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id A72A01B08C5
-	for <lists+linux-mediatek@lfdr.de>; Mon, 20 Apr 2020 14:08:00 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 52C491B093B
+	for <lists+linux-mediatek@lfdr.de>; Mon, 20 Apr 2020 14:21:41 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=t6nM8G76QnLLGF/9jm19ntlsIb7N8wgYzSsSyK69Jb8=; b=FFCOE8UomYHfwz
-	41cL44kllX04xUe0ulpjFi7yc8lRZzeo83MCKbfYF5WA4eS0ozpcrGgRvONGtnNlb7mElB/OMOBr+
-	Tyz32uLYPYQub51m8qnVvQA0NtoW8BWELksD4AqpXpmpQPnLterJNk1bAhc244RM65+NnbYBEjPPL
-	Nwin0ZppmIHG4WEFDi4u8xMqL61ePrktZk7SzcLlp21oK53qslL5wA8eHsquhSNeOhn12X5L+pNuv
-	b6lq+j3rBp9UAGZGKVyRCnjaywnwJRkoN9WwfJQ58d1nUjej2z5FJZ9e+IbxYZAprAIXOU04Ixcvj
-	yI0cwvDD7c2xUj/iSDbA==;
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=eMtRxlrjMVL41teflrU7K2sxJ6GZYZ4v1En9lTNcUtA=; b=HQLgEyoKcKu5ci
+	verOj2CFZ9F9FU/Xf2NSlyyrU/DP31SyMT/t6LLiqjhn93f9woIT/AqRQ2dwnX5FUGYDFTHeIRZn3
+	Mg27/SY52aNXQZ5hg3jADeHFBwujG/OLk0oUHf+sSW2xr/FKqkrWuHCAV2JXw+Fn8slV5cXKEf3cg
+	fFGITVcLJYievnCzZqoukhRD640yGjBw7LuherGhWH92rwFoEJgoAPKvWZl+ZAiCpLS4oc6SxSwc5
+	ScJQdUkAIo+/mVXY940zHjwyt4nbjHyIZzJfkPQJ29fOxrxbUsPhWbaqjuqYEbg45p4d9mhNJ38H5
+	ygncREYgGuytwCc2KsEQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jQVDO-0006LB-FW; Mon, 20 Apr 2020 12:07:54 +0000
-Received: from mail.kernel.org ([198.145.29.99])
+	id 1jQVQa-000128-2B; Mon, 20 Apr 2020 12:21:32 +0000
+Received: from userp2120.oracle.com ([156.151.31.85])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jQVDK-0006Kc-OZ
- for linux-mediatek@lists.infradead.org; Mon, 20 Apr 2020 12:07:52 +0000
-Received: from localhost.localdomain.com (unknown [151.48.159.126])
- (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
- (No client certificate requested)
- by mail.kernel.org (Postfix) with ESMTPSA id 1E2BB206DD;
- Mon, 20 Apr 2020 12:07:48 +0000 (UTC)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1587384470;
- bh=hg6wS/HV8kcXH5ugWtUCXLzLdrfCedTehl3Md/SXsXI=;
- h=From:To:Cc:Subject:Date:From;
- b=diTzGR3Q54WwTDRsM5hUHE/MP4FpjLDXsjAOwvF2V1GeY8Y9nOVV73Uv+XNRD1rpW
- /WbbhP6HzWVrCmXqhSSgSIE7sEsa15ejuIR4qbD0WIoVeaFUTX08zqdUjh5Z/ce6rh
- kFwxEXcBGsCs4nlDyURt6EoN1Ff7UiFvclYsFUjQ=
-From: Lorenzo Bianconi <lorenzo@kernel.org>
-To: nbd@nbd.name
-Subject: [PATCH] mt76: mt7615: fix mt7615_firmware_own for mt7663e
-Date: Mon, 20 Apr 2020 14:07:45 +0200
-Message-Id: <0ab0cba65fe838c658dd8e9b61cda618a37ecfca.1587384173.git.lorenzo@kernel.org>
-X-Mailer: git-send-email 2.25.3
+ id 1jQVQX-00011W-Mi; Mon, 20 Apr 2020 12:21:31 +0000
+Received: from pps.filterd (userp2120.oracle.com [127.0.0.1])
+ by userp2120.oracle.com (8.16.0.42/8.16.0.42) with SMTP id 03KCIXSG038800;
+ Mon, 20 Apr 2020 12:21:13 GMT
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=oracle.com;
+ h=date : from : to : cc
+ : subject : message-id : references : mime-version : content-type :
+ in-reply-to; s=corp-2020-01-29;
+ bh=aD9qpxg5CHZYZYk+gzIw6K6GXAhalYWjG3cWxhGETdA=;
+ b=ODWT+u1CrywSLEvva6onNWjNe+MVU4zFVNEqawZ0opl1BgvuePjLbHGxIQlnqYcJfIAg
+ ZjQDB7mMyvRJ/FaoiSUiMCowzTpF4s4Qdnb28RQlOBD6vBWR+ICofcpXfF2m8OzVQ92E
+ pcM39t7RtQlzhGrTmB3vFryHXvXvomN+angy0g9nWC0HsFQ7GWVAt54bAakNollIYIBf
+ 0YYTKbO/xFJRGqx3o5cIiBAttHFFmk8ePAhb2vJ9QGeA3UYmB235OuTi/k1JNf0thhE9
+ wzIcrrHDVYQJLNb3febbpifMaAynkTJkkSiFpqUqhfw2QaB2SWwsCJtJCGLhR9coHcLk vg== 
+Received: from aserp3030.oracle.com (aserp3030.oracle.com [141.146.126.71])
+ by userp2120.oracle.com with ESMTP id 30ft6mxt7v-1
+ (version=TLSv1.2 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=OK);
+ Mon, 20 Apr 2020 12:21:13 +0000
+Received: from pps.filterd (aserp3030.oracle.com [127.0.0.1])
+ by aserp3030.oracle.com (8.16.0.42/8.16.0.42) with SMTP id 03KCDhGo108375;
+ Mon, 20 Apr 2020 12:19:12 GMT
+Received: from userv0121.oracle.com (userv0121.oracle.com [156.151.31.72])
+ by aserp3030.oracle.com with ESMTP id 30gb3qbnay-1
+ (version=TLSv1.2 cipher=ECDHE-RSA-AES256-GCM-SHA384 bits=256 verify=OK);
+ Mon, 20 Apr 2020 12:19:12 +0000
+Received: from abhmp0014.oracle.com (abhmp0014.oracle.com [141.146.116.20])
+ by userv0121.oracle.com (8.14.4/8.13.8) with ESMTP id 03KCJAdh032644;
+ Mon, 20 Apr 2020 12:19:10 GMT
+Received: from kadam (/41.57.98.10) by default (Oracle Beehive Gateway v4.0)
+ with ESMTP ; Mon, 20 Apr 2020 05:19:09 -0700
+Date: Mon, 20 Apr 2020 15:19:00 +0300
+From: Dan Carpenter <dan.carpenter@oracle.com>
+To: Jason Yan <yanaijie@huawei.com>
+Subject: Re: [PATCH] staging: mt7621-pinctrl: Use correct pointer type
+ argument for sizeof
+Message-ID: <20200420121900.GD2659@kadam>
+References: <20200420123755.4353-1-yanaijie@huawei.com>
 MIME-Version: 1.0
+Content-Disposition: inline
+In-Reply-To: <20200420123755.4353-1-yanaijie@huawei.com>
+User-Agent: Mutt/1.9.4 (2018-02-28)
+X-Proofpoint-Virus-Version: vendor=nai engine=6000 definitions=9596
+ signatures=668686
+X-Proofpoint-Spam-Details: rule=notspam policy=default score=0 malwarescore=0
+ spamscore=0 adultscore=0
+ mlxlogscore=999 phishscore=0 suspectscore=0 bulkscore=0 mlxscore=0
+ classifier=spam adjust=0 reason=mlx scancount=1 engine=8.12.0-2003020000
+ definitions=main-2004200108
+X-Proofpoint-Virus-Version: vendor=nai engine=6000 definitions=9596
+ signatures=668686
+X-Proofpoint-Spam-Details: rule=notspam policy=default score=0 suspectscore=0
+ bulkscore=0
+ priorityscore=1501 impostorscore=0 adultscore=0 phishscore=0
+ lowpriorityscore=0 malwarescore=0 clxscore=1011 mlxlogscore=999 mlxscore=0
+ spamscore=0 classifier=spam adjust=0 reason=mlx scancount=1
+ engine=8.12.0-2003020000 definitions=main-2004200108
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200420_050750_824669_58D7B33E 
-X-CRM114-Status: UNSURE (   8.66  )
-X-CRM114-Notice: Please train this message.
-X-Spam-Score: -5.2 (-----)
+X-CRM114-CacheID: sfid-20200420_052129_826052_1FE3582E 
+X-CRM114-Status: GOOD (  18.61  )
+X-Spam-Score: -2.5 (--)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
- Content analysis details:   (-5.2 points)
+ Content analysis details:   (-2.5 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
- high trust [198.145.29.99 listed in list.dnswl.org]
+ -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
+ medium trust [156.151.31.85 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
@@ -62,6 +96,8 @@ X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
  -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
@@ -74,40 +110,46 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: linux-mediatek@lists.infradead.org, lorenzo.bianconi@redhat.com,
- sean.wang@mediatek.com, linux-wireless@vger.kernel.org
+Cc: devel@driverdev.osuosl.org, gregkh@linuxfoundation.org,
+ linux-kernel@vger.kernel.org, linux-mediatek@lists.infradead.org,
+ nishkadg.linux@gmail.com, matthias.bgg@gmail.com,
+ linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Check the firmware-own configuration has been applied polling
-MT_CONN_HIF_ON_LPCTL register
+On Mon, Apr 20, 2020 at 08:37:55PM +0800, Jason Yan wrote:
+> Fix the following coccicheck warning:
+> 
+> drivers/staging/mt7621-pinctrl/pinctrl-rt2880.c:223:14-36: WARNING: Use
+> correct pointer type argument for sizeof
+> 
+> Signed-off-by: Jason Yan <yanaijie@huawei.com>
+> ---
+>  drivers/staging/mt7621-pinctrl/pinctrl-rt2880.c | 2 +-
+>  1 file changed, 1 insertion(+), 1 deletion(-)
+> 
+> diff --git a/drivers/staging/mt7621-pinctrl/pinctrl-rt2880.c b/drivers/staging/mt7621-pinctrl/pinctrl-rt2880.c
+> index d0f06790d38f..8883f2a8ea57 100644
+> --- a/drivers/staging/mt7621-pinctrl/pinctrl-rt2880.c
+> +++ b/drivers/staging/mt7621-pinctrl/pinctrl-rt2880.c
+> @@ -220,7 +220,7 @@ static int rt2880_pinmux_index(struct rt2880_priv *p)
+>  	/* allocate our function and group mapping index buffers */
+>  	f = p->func = devm_kcalloc(p->dev,
+>  				   p->func_count,
+> -				   sizeof(struct rt2880_pmx_func),
+> +				   sizeof(struct rt2880_pmx_func *),
 
-Fixes: f40ac0f3d3c0 ("mt76: mt7615: introduce mt7663e support")
-Signed-off-by: Lorenzo Bianconi <lorenzo@kernel.org>
----
- drivers/net/wireless/mediatek/mt76/mt7615/mcu.c | 5 ++---
- 1 file changed, 2 insertions(+), 3 deletions(-)
+Yes.  This fixes a bug.  We were allocating too much data.  But the
+prefered style is:
 
-diff --git a/drivers/net/wireless/mediatek/mt76/mt7615/mcu.c b/drivers/net/wireless/mediatek/mt76/mt7615/mcu.c
-index d448bbeba1c1..7081bc4723ee 100644
---- a/drivers/net/wireless/mediatek/mt76/mt7615/mcu.c
-+++ b/drivers/net/wireless/mediatek/mt76/mt7615/mcu.c
-@@ -1710,9 +1710,8 @@ static int mt7615_firmware_own(struct mt7615_dev *dev)
- 
- 	mt76_wr(dev, addr, MT_CFG_LPCR_HOST_FW_OWN);
- 
--	if (is_mt7622(&dev->mt76) &&
--	    !mt76_poll_msec(dev, MT_CFG_LPCR_HOST,
--			    MT_CFG_LPCR_HOST_FW_OWN,
-+	if (!is_mt7615(&dev->mt76) &&
-+	    !mt76_poll_msec(dev, addr, MT_CFG_LPCR_HOST_FW_OWN,
- 			    MT_CFG_LPCR_HOST_FW_OWN, 3000)) {
- 		dev_err(dev->mt76.dev, "Timeout for firmware own\n");
- 		return -EIO;
--- 
-2.25.3
+				sizeof(*p->func),
+
+Please could you resend?
+
+regards,
+dan carpenter
 
 
 _______________________________________________
