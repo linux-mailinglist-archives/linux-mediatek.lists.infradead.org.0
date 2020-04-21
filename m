@@ -2,86 +2,102 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id CF8741B187D
-	for <lists+linux-mediatek@lfdr.de>; Mon, 20 Apr 2020 23:31:51 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 34E5C1B1B17
+	for <lists+linux-mediatek@lfdr.de>; Tue, 21 Apr 2020 03:09:48 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
+	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=Uvk/CSJOGheXrVo3h14Gzxqe8vMHAwjIym56lLXZHpc=; b=pjudek26EY3XaE
-	p202sTnsDG3kTYTd50SwCvPw8kDVoMYa8tIyu6ua7c+XGDdqs4ZonFP7SCENSI4+lk2AlAcyrdNA+
-	s61bhkNX4fC/w3Ph3/DO4JrpYhAgDYNLf9TFNG5qrtlq7xZaDa+hI3zJTGvPl983l/NT09o0xCGXc
-	WfN93nGbA9w2fjZkvEvLwINLuUD6KgbfQHE9CgffgxBQbW7jJ0kNI3oQtzfWXoob+ZM/2R+oZhiJe
-	5dvFAJqF9qjF1d6f2CWB7VxAJdJ4dUPudDCIwVF0hdw0LbS6FN1bZ1iRr5+4ih7tbgx5tzA2gRwY7
-	Xfijqy23Rnn7wjlN9WNA==;
+	List-Owner; bh=0oe7n8XMr2lc7iJu05tPVWRZQ42p2duNdwzLzou3eV8=; b=IwWtJCcluyfR27
+	5aDTanZAY3e3Qe4Zsln7btMOIcc8S8GGngjf4t49lG8hChuAcDJldXdGNQAJ4RH8pWdsLac2npXLW
+	ID5PWdtWpyGkORJ7jzau3W+2twdZVscYt18VJeGh8MGKSJ9oIFDkZ8SFE2YKg+ItHPoHPaLhyqzjp
+	Zq9OA351RJU3yedu+QcZkXzCJXxJ/3jrDSQ9WiJFZ3os+YzT1fuemfgl9MT+d2ZU8ROv3o4sI4oGu
+	LLIERMJ2LitGS+3tl40j1qvVkP7iXIxf69KLZDJWr0yPX6b4rVqY53qMVSuvPNXHwx5MAeNd7Lsfg
+	DUB54j/MWGrdCjO+HBtA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jQe0t-0000bk-47; Mon, 20 Apr 2020 21:31:35 +0000
-Received: from mail-oi1-f194.google.com ([209.85.167.194])
+	id 1jQhPr-0004lh-HT; Tue, 21 Apr 2020 01:09:35 +0000
+Received: from mail-qk1-x741.google.com ([2607:f8b0:4864:20::741])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jQe0q-0000as-MY; Mon, 20 Apr 2020 21:31:33 +0000
-Received: by mail-oi1-f194.google.com with SMTP id k133so10183540oih.12;
- Mon, 20 Apr 2020 14:31:32 -0700 (PDT)
+ id 1jQhPo-0004jv-TS
+ for linux-mediatek@lists.infradead.org; Tue, 21 Apr 2020 01:09:34 +0000
+Received: by mail-qk1-x741.google.com with SMTP id 20so12907392qkl.10
+ for <linux-mediatek@lists.infradead.org>; Mon, 20 Apr 2020 18:09:29 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=chromium.org; s=google;
+ h=mime-version:references:in-reply-to:from:date:message-id:subject:to
+ :cc; bh=aFRq3RluqVTW3eItiffvhrul27fygOSDx5LOp792/cY=;
+ b=jGemw2P2rq8+zKge7bcDV6mMP5GeCYSBjW21Yga4LFd+SRnJNGAo1LIyCZsecJrAj+
+ 3Y2nk68i50FiVZkjKg3XewJTSb85k963UHIJB4QyqWe/KfxK1rup1VWPKA6RhXdb/LbF
+ ZALCrIEKJacoE0XvLyBHMyRJFtUd8Qd5IXRqI=
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:date:from:to:cc:subject:message-id:references
- :mime-version:content-disposition:in-reply-to:user-agent;
- bh=xCbMSBWE/K7CMTFoStyxNkJaPmhk/SFie0hTZQJVUuE=;
- b=lvQkZhd4s073R+9rhjCjQE3erWjzhM3KxunZihOUTGWPpiWfYiu8kVZ8oua3nVrrBH
- dN2Sp4SJYnKDBLKLqp7q55/dBPHu+dRSZq+J7Dzzxoau3vELsnnkKxZQ2QNiBrN+zSB2
- OF9whxii53DpZodQGFrzP6/TY6UW4wFL0tGdP5HSEiNgTMsIAsLkx/+vkMjeH6+bR6fu
- t6dV8ON2s9vrE8LS88R/PVsxapl9G+dOKNcq9pk4OhD17WiSBWvqqXZ5LfBsOS4m7DXP
- C6f8+foquWFDZBZesPAEAN/nswLdH8d3q6LylppjRlJ1khIadjISgd3HQg1vwmUoJ/Jk
- HTcA==
-X-Gm-Message-State: AGi0PuZGDH5bVTqZWzafAoGwepPXzOumvxCxu2NS4/vDWNPES21nqZ5D
- JkWX0Wt8LFtE8qVRNwASVA==
-X-Google-Smtp-Source: APiQypKp/aMom3WcZIgx4KD9/tZ1PBp+icqSBiPeREh6uL2GtZ7nUmS6xX3EHcojP7gq2hudxYyZ2A==
-X-Received: by 2002:aca:4155:: with SMTP id o82mr1118364oia.16.1587418291457; 
- Mon, 20 Apr 2020 14:31:31 -0700 (PDT)
-Received: from rob-hp-laptop (24-155-109-49.dyn.grandenetworks.net.
- [24.155.109.49])
- by smtp.gmail.com with ESMTPSA id s73sm171791oih.14.2020.04.20.14.31.29
- (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Mon, 20 Apr 2020 14:31:30 -0700 (PDT)
-Received: (nullmailer pid 22338 invoked by uid 1000);
- Mon, 20 Apr 2020 21:31:29 -0000
-Date: Mon, 20 Apr 2020 16:31:29 -0500
-From: Rob Herring <robh@kernel.org>
-To: Jitao Shi <jitao.shi@mediatek.com>
-Subject: Re: [PATCH v15 2/3] dt-bindings: display: mediatek: convert the
- document format from txt to yaml
-Message-ID: <20200420213129.GA22262@bogus>
-References: <20200415011319.25559-1-jitao.shi@mediatek.com>
- <20200415011319.25559-3-jitao.shi@mediatek.com>
+ h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+ :message-id:subject:to:cc;
+ bh=aFRq3RluqVTW3eItiffvhrul27fygOSDx5LOp792/cY=;
+ b=s3GRgCJbRbUmrijKRgEjBtj5PMLGiB8QyOjOAQJjHsD9ZWUwRIKh/kin2jFZKjYXIh
+ Lkl3rOBkQ+977/PyErpnqZERVO3+uzIngy5dS8Ycv/31KFwYfiluVBK289V/HUMSh1L2
+ 672vTcLu/qarz/OVKOYq4IGNaJgFKl1S1PSVDnXQoVPf8W5VnxPSoDxqEVG7j5pHZ80f
+ Z8HOWtCyGn866uB6oJSGWYFkco2TwLOJu/rI0yRUloz2RbLW2pjw5dOgx9F+b2xtB0qH
+ UF5vYKWrk5olNojSERviOPCiyux7UlJqZY+R+1Qa5S7QpCxtLijliY4WMn7Keq+Z1udn
+ Lj0g==
+X-Gm-Message-State: AGi0PuZutRji11ApyhFyuhCRsk1Sudd822vXcYNeOKvZTFXSX6utm0yH
+ N4lWX0QZtgajrqabA4HxbG7r/v/6KeU=
+X-Google-Smtp-Source: APiQypJqPyDCjXMy+1e8CI3MO9LKruxesrNX2rJ62CH/PRsZDQ4A/50i2bucREohiYsQZz7iNGo4KA==
+X-Received: by 2002:a05:620a:1458:: with SMTP id
+ i24mr18766089qkl.279.1587431368917; 
+ Mon, 20 Apr 2020 18:09:28 -0700 (PDT)
+Received: from mail-qv1-f51.google.com (mail-qv1-f51.google.com.
+ [209.85.219.51])
+ by smtp.gmail.com with ESMTPSA id s125sm873090qkf.9.2020.04.20.18.09.27
+ for <linux-mediatek@lists.infradead.org>
+ (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+ Mon, 20 Apr 2020 18:09:28 -0700 (PDT)
+Received: by mail-qv1-f51.google.com with SMTP id p13so5773837qvt.12
+ for <linux-mediatek@lists.infradead.org>; Mon, 20 Apr 2020 18:09:27 -0700 (PDT)
+X-Received: by 2002:a67:d61c:: with SMTP id n28mr14119322vsj.70.1587431365930; 
+ Mon, 20 Apr 2020 18:09:25 -0700 (PDT)
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <20200415011319.25559-3-jitao.shi@mediatek.com>
-User-Agent: Mutt/1.10.1 (2018-07-13)
+References: <20200403052900.258855-1-evanbenn@chromium.org>
+ <CAKz_xw0gV+w_gMkLfB4qUBdULLfFoiv1TBWp9_PHy33wP_XWyA@mail.gmail.com>
+ <890948ef-7276-fdae-d270-eb30eff3eab2@amlogic.com>
+ <243e107c-35c1-2d14-5285-c9e13744963c@amlogic.com>
+ <CAODwPW9RSB37+4EJ2QXAwz=ShFB23L1GKC2mLYE5L5JuQR2tPw@mail.gmail.com>
+ <20200415231215.GA182398@roeck-us.net>
+ <CAKz_xw0+gKBM1jp-Avnd+4j9vSxUix67RZBX-NNbStb0+ri4+Q@mail.gmail.com>
+ <CAODwPW9Vt7TcWfKYDmRgLndb2-+5HoNvA6XMJJznXCudQDngqw@mail.gmail.com>
+ <9d029a04-2a37-cbbe-1932-be34d34f6b69@gmail.com>
+In-Reply-To: <9d029a04-2a37-cbbe-1932-be34d34f6b69@gmail.com>
+From: Evan Benn <evanbenn@chromium.org>
+Date: Tue, 21 Apr 2020 11:08:57 +1000
+X-Gmail-Original-Message-ID: <CAKz_xw33YBChSCDHcki2JCR=LXrvfEN2pseEN471xVvqhqrUfA@mail.gmail.com>
+Message-ID: <CAKz_xw33YBChSCDHcki2JCR=LXrvfEN2pseEN471xVvqhqrUfA@mail.gmail.com>
+Subject: Re: [PATCH v2 0/2] Add a watchdog driver that uses ARM Secure Monitor
+ Calls.
+To: Florian Fainelli <f.fainelli@gmail.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200420_143132_736201_C5A0EA26 
-X-CRM114-Status: UNSURE (   7.98  )
+X-CRM114-CacheID: sfid-20200420_180932_972647_83D9939F 
+X-CRM114-Status: UNSURE (   9.57  )
 X-CRM114-Notice: Please train this message.
-X-Spam-Score: 0.7 (/)
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
- Content analysis details:   (0.7 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [209.85.167.194 listed in list.dnswl.org]
+ no trust [2607:f8b0:4864:20:0:0:0:741 listed in]
+ [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
- mail domains are different
- 0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
- in digit [robherring2[at]gmail.com]
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider [robherring2[at]gmail.com]
- -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
- [209.85.167.194 listed in wl.mailspike.net]
- 0.2 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
- EnvelopeFrom freemail headers are different
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -93,30 +109,56 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
- Jitao Shi <jitao.shi@mediatek.com>, bibby.hsieh@mediatek.com,
- srv_heupstream@mediatek.com, David Airlie <airlied@linux.ie>,
- huijuan.xie@mediatek.com, stonea168@163.com, linux-kernel@vger.kernel.org,
- dri-devel@lists.freedesktop.org, cawa.cheng@mediatek.com, ck.hu@mediatek.com,
- linux-mediatek@lists.infradead.org, Daniel Vetter <daniel@ffwll.ch>,
- Matthias Brugger <matthias.bgg@gmail.com>, yingjoe.chen@mediatek.com,
- eddie.huang@mediatek.com, linux-arm-kernel@lists.infradead.org
+Cc: Mark Rutland <mark.rutland@arm.com>,
+ Catalin Marinas <catalin.marinas@arm.com>,
+ Bjorn Andersson <bjorn.andersson@linaro.org>,
+ Manivannan Sadhasivam <manivannan.sadhasivam@linaro.org>,
+ Yonghui Yu <yonghui.yu@amlogic.com>, Leonard Crestez <leonard.crestez@nxp.com>,
+ Will Deacon <will@kernel.org>, Xingyu Chen <xingyu.chen@amlogic.com>,
+ Rob Herring <robh@kernel.org>,
+ Andy Shevchenko <andriy.shevchenko@linux.intel.com>,
+ Anson Huang <Anson.Huang@nxp.com>,
+ Mauro Carvalho Chehab <mchehab+huawei@kernel.org>,
+ Marcin Juszkiewicz <marcin.juszkiewicz@linaro.org>,
+ Valentin Schneider <valentin.schneider@arm.com>,
+ Guenter Roeck <linux@roeck-us.net>, devicetree@vger.kernel.org,
+ LINUX-WATCHDOG <linux-watchdog@vger.kernel.org>,
+ Rob Herring <robh+dt@kernel.org>,
+ "moderated list:ARM/Mediatek SoC support" <linux-mediatek@lists.infradead.org>,
+ Jonathan Cameron <Jonathan.Cameron@huawei.com>,
+ Matthias Brugger <matthias.bgg@gmail.com>,
+ "open list:ARM/Amlogic Meson..." <linux-amlogic@lists.infradead.org>,
+ Wim Van Sebroeck <wim@linux-watchdog.org>,
+ "moderated list:ARM/FREESCALE IMX / MXC ARM ARCHITECTURE"
+ <linux-arm-kernel@lists.infradead.org>, Jianxin Pan <jianxin.pan@amlogic.com>,
+ Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
+ LKML <linux-kernel@vger.kernel.org>, Vinod Koul <vkoul@kernel.org>,
+ Olof Johansson <olof@lixom.net>, Julius Werner <jwerner@chromium.org>,
+ Shawn Guo <shawnguo@kernel.org>, "David S. Miller" <davem@davemloft.net>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Wed, 15 Apr 2020 09:13:18 +0800, Jitao Shi wrote:
-> Signed-off-by: Jitao Shi <jitao.shi@mediatek.com>
-> ---
->  .../bindings/display/mediatek/mediatek,dpi.txt     | 42 ----------
->  .../bindings/display/mediatek/mediatek,dpi.yaml    | 97 ++++++++++++++++++++++
->  2 files changed, 97 insertions(+), 42 deletions(-)
->  delete mode 100644 Documentation/devicetree/bindings/display/mediatek/mediatek,dpi.txt
->  create mode 100644 Documentation/devicetree/bindings/display/mediatek/mediatek,dpi.yaml
-> 
+Thanks Florian,
 
-Reviewed-by: Rob Herring <robh@kernel.org>
+> The PSCI binding itself has provision for specifying function IDs for
+> different functions, and this seems to be followed by other subsystems
+> as well like SCMI:
+>
+> https://www.spinics.net/lists/arm-kernel/msg791270.html
+
+Are you referring to this line in the devicetree linked?
+
++- arm,smc-id : SMC id required when using smc or hvc transports
+
+I cannot find any prior definition of this in the devicetree yaml
+format, so I will add that as well.
+Did you have a link for the psci usage that you referenced?
+
+Thanks
+
+Evan
 
 _______________________________________________
 Linux-mediatek mailing list
