@@ -2,85 +2,85 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 791711B51C4
-	for <lists+linux-mediatek@lfdr.de>; Thu, 23 Apr 2020 03:21:31 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id AB3501B53B9
+	for <lists+linux-mediatek@lfdr.de>; Thu, 23 Apr 2020 06:41:16 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
-	Content-Transfer-Encoding:Cc:List-Subscribe:List-Help:List-Post:List-Archive:
-	List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:Message-ID:From:
-	References:To:Subject:Reply-To:Content-ID:Content-Description:Resent-Date:
-	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
-	 bh=pZen7Pfm2vQoWVPhxudiOR86UYZ5iFVVEYg973n8xl8=; b=AN0tLy/5OP+zjjhngz/1V4ZQV
-	wMSRSLkP+/lLhRaNzT1nqoEExg+itIqhwYXle6HCFtqq/wyaDeFQKKpbT1gK6Z4ahJuUawCkJ1tpj
-	BU28EXxKDTLCxEb39P1OIz05qzWbeO7YZfGWa97723iczufpCfXXYPMD+JiwJP8zOhm36EdFZ+v5V
-	kljEeLmYEhulL/XYhsQUhnT4A9ys5hYG8B6pYXGFkrzNCDaawInBDBjLQNfe8eU6usF7rAESd+fdy
-	Tmvh17R63ls5eZysXI9jjWr/YipHwOslzNMAxhJBqAQEZnBynMSFwEto8T0PjwA8k2FIRWMIxtESt
-	Ia6h95l7Q==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=Z6+gjTdp4i5ZMan1Pq/A6MuuNaFlLtrabG/vP9T6k2Q=; b=QSJJUkPWKpMupe
+	bDpeyIlpmsw7gOduYUSjdekIDCp/PFVo1OksDVIEqf8MTUXe93lpRaMudUPSX/e/F8UT6yfJbm673
+	F3/escHNhGXRFwa2rostXwMVHvmQh+mpRoTG7zdCYDZD+5xSrYSAjK54ySAZTG4a9UXAFm5iKCtlJ
+	0BYzzrxO1HolDXNx505FImJpuUeD4WDW/7Ef+AUih1qRJWWCRh3Le87xqlttOESCd9Kp2bhtbfJ8r
+	UDH3uqw3OXwdxackfVIuZ0er1EmMzsmQ/5pc555oSOI4+yh8q4Q/zm7znx0PB1n21mM6qpbo09opq
+	spo7nvc8Y33MEfrW1Hng==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jRQYL-0007Cz-Kj; Thu, 23 Apr 2020 01:21:21 +0000
-Received: from mail-pg1-f194.google.com ([209.85.215.194])
+	id 1jRTfc-0000NS-7N; Thu, 23 Apr 2020 04:41:04 +0000
+Received: from mail-pg1-x543.google.com ([2607:f8b0:4864:20::543])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jRQYI-0007BL-CE; Thu, 23 Apr 2020 01:21:19 +0000
-Received: by mail-pg1-f194.google.com with SMTP id x26so2030042pgc.10;
- Wed, 22 Apr 2020 18:21:17 -0700 (PDT)
+ id 1jRTfS-0000HK-Dh
+ for linux-mediatek@lists.infradead.org; Thu, 23 Apr 2020 04:40:57 +0000
+Received: by mail-pg1-x543.google.com with SMTP id h69so2263238pgc.8
+ for <linux-mediatek@lists.infradead.org>; Wed, 22 Apr 2020 21:40:52 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=chromium.org; s=google;
+ h=from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=ZS/LLxJx1Ds3cx4GyxEdNHynphtX9//TxQ2D60w281c=;
+ b=gYhBQHtg6aVgFNpAsuZicqx3KgF2/EI40v9gzc+TTBaO0INthZs4oK+6OZXVHVVtPe
+ tPKKq9v1HCjoEgO5iaf0wkIiVty4kBHme2dDPZddnnYYIlh5/960j2SdgVnZtDMaofDG
+ eXV23e91++ocupsga5mbViaM8WsQYNSK8c1HE=
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
- h=x-gm-message-state:subject:to:cc:references:from:message-id:date
- :user-agent:mime-version:in-reply-to:content-language
+ h=x-gm-message-state:from:to:cc:subject:date:message-id:mime-version
  :content-transfer-encoding;
- bh=HuA0hxQTe90PJtZs9WSSy8kDWUbxSlnvi9VsPza7S2Y=;
- b=ZDTujw6fZ5jY3XQ65wjFG3v3OifNL8dO72xLpax9866UPGEHX+COqqw8MbkahcsvKK
- +YsqnpA8Ehg+MZn+MG5eYsYvN5OsFOBCjiedGHVCXf4UKWL5NxqksXplCpV3Zc5x7OMa
- NRONt1Ytv3x8F4tiCbsBGVvEDTdGr4+iS2c7Fu+HkLzQzARQCTzqcjsXaXRvbmAoRajw
- ITyL8J4FoZ6XgaTCUKjOEkCmIOoHocqNy6GAYEdz3atKIJxKKM7ZzdbQFOtaa7U+acbB
- UUe2UZwurfNkZ35YUBl9Y6Vw9p7kGHy3h26j7F0bm9fKXT8cZWwxE4/HdhLvtamz5qBq
- Y0Hw==
-X-Gm-Message-State: AGi0PuZrSeekER0SbnDA//1TTcYQFU/GcTgR55vmu4fibCDU12yAJpJu
- j+1X7JfhuGmqtyIMIzspyxs=
-X-Google-Smtp-Source: APiQypKxBlGRT0F6vEFPhi5oneOUM697xMXU65q00ggKMra7UIbFqy/Kx++vjPJ34SrVHIxn8OpClA==
-X-Received: by 2002:aa7:80cf:: with SMTP id a15mr1441540pfn.124.1587604876968; 
- Wed, 22 Apr 2020 18:21:16 -0700 (PDT)
-Received: from [100.124.12.67] ([104.129.198.222])
- by smtp.gmail.com with ESMTPSA id n23sm471545pjq.18.2020.04.22.18.21.15
+ bh=ZS/LLxJx1Ds3cx4GyxEdNHynphtX9//TxQ2D60w281c=;
+ b=sBtrjeHDQQlqlt4p+j333cEA/dWUNk3LuCXZEWRiuP3FJyusIwloX9JrK0VA14kAur
+ jAyu3Ixve4pcRk6SbQgh1oEErPwtUMk/eHgjsqRgwkWKK58JvbhC0kAiYDTv0BUm48wX
+ JpI3K49HTrQDkUgRkjTIdnx2Bi0Aca2faxPernO6p+qfqkqZqS7+mtZsNY/LVgg9ApeE
+ DxV1bIQl3u6nERb2EaeqetGKZUwqg7dq8QguVSOWoPqdMODNcRp1Q29B5JLvuqI/KDTx
+ Mw2bT+vasgDc8pQB4t85dtbAy2xHBnjHfZwU52HK8bu0TnKxzrHnKj7juzfF8PFHhsAr
+ 6ifQ==
+X-Gm-Message-State: AGi0PuZft+TbYs/ayUkab8UvpSAcCffY1KdoUtxURH2g3vvI01aNN8vG
+ +8xUxJ1ZvODGpC/TO5oHZ3ia3Q==
+X-Google-Smtp-Source: APiQypLI+7/YssjfEAqA7mqNn/1Q292p/7jx+m+Js0S3rpVk2pmi9WqX7DsXMBWP/y1GcYjx6h81JA==
+X-Received: by 2002:a62:d104:: with SMTP id z4mr2035568pfg.26.1587616850973;
+ Wed, 22 Apr 2020 21:40:50 -0700 (PDT)
+Received: from localhost ([2401:fa00:9:14:1105:3e8a:838d:e326])
+ by smtp.gmail.com with ESMTPSA id w13sm1174046pfn.192.2020.04.22.21.40.42
  (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
- Wed, 22 Apr 2020 18:21:16 -0700 (PDT)
-Subject: Re: [PATCH v2] stacktrace: cleanup inconsistent variable type
-To: Walter Wu <walter-zh.wu@mediatek.com>,
- Matthias Brugger <matthias.bgg@gmail.com>,
- Thomas Gleixner <tglx@linutronix.de>, Peter Zijlstra <peterz@infradead.org>,
- Ingo Molnar <mingo@kernel.org>, Josh Poimboeuf <jpoimboe@redhat.com>,
- Andrew Morton <akpm@linux-foundation.org>
-References: <20200421013511.5960-1-walter-zh.wu@mediatek.com>
-From: Bart Van Assche <bvanassche@acm.org>
-Message-ID: <d2a9f155-f309-0182-73c9-5c02d7014574@acm.org>
-Date: Wed, 22 Apr 2020 18:21:13 -0700
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101
- Thunderbird/68.6.0
+ Wed, 22 Apr 2020 21:40:50 -0700 (PDT)
+From: Evan Benn <evanbenn@chromium.org>
+To: LKML <linux-kernel@vger.kernel.org>
+Subject: [PATCH v5 0/2] Add a watchdog driver that uses ARM Secure Monitor
+ Calls.
+Date: Thu, 23 Apr 2020 14:40:34 +1000
+Message-Id: <20200423044036.234578-1-evanbenn@chromium.org>
+X-Mailer: git-send-email 2.26.2.303.gf8c07b1a785-goog
 MIME-Version: 1.0
-In-Reply-To: <20200421013511.5960-1-walter-zh.wu@mediatek.com>
-Content-Language: en-US
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200422_182118_418106_091EF4D1 
-X-CRM114-Status: GOOD (  11.39  )
-X-Spam-Score: 0.5 (/)
+X-CRM114-CacheID: sfid-20200422_214054_461481_E17D8B13 
+X-CRM114-Status: GOOD (  11.77  )
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
- Content analysis details:   (0.5 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [209.85.215.194 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider [bart.vanassche[at]gmail.com]
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [2607:f8b0:4864:20:0:0:0:543 listed in]
+ [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
- mail domains are different
- 0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
- [209.85.215.194 listed in wl.mailspike.net]
- 0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
- 0.2 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
- EnvelopeFrom freemail headers are different
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -92,24 +92,84 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: linux-mm@kvack.org, linux-mediatek@lists.infradead.org,
- linux-kernel@vger.kernel.org, linux-arm-kernel@lists.infradead.org,
- wsd_upstream <wsd_upstream@mediatek.com>
+Cc: Geert Uytterhoeven <geert+renesas@glider.be>,
+ Catalin Marinas <catalin.marinas@arm.com>,
+ Bjorn Andersson <bjorn.andersson@linaro.org>,
+ Leonard Crestez <leonard.crestez@nxp.com>, Will Deacon <will@kernel.org>,
+ xingyu.chen@amlogic.com, Rob Herring <robh@kernel.org>,
+ Anson Huang <Anson.Huang@nxp.com>,
+ Mauro Carvalho Chehab <mchehab+huawei@kernel.org>,
+ Marcin Juszkiewicz <marcin.juszkiewicz@linaro.org>,
+ Evan Benn <evanbenn@chromium.org>,
+ Valentin Schneider <valentin.schneider@arm.com>,
+ Guenter Roeck <linux@roeck-us.net>, devicetree@vger.kernel.org,
+ linux-watchdog@vger.kernel.org, Rob Herring <robh+dt@kernel.org>,
+ linux-mediatek@lists.infradead.org, Matthias Brugger <matthias.bgg@gmail.com>,
+ Wim Van Sebroeck <wim@linux-watchdog.org>,
+ linux-arm-kernel@lists.infradead.org,
+ Greg Kroah-Hartman <gregkh@linuxfoundation.org>, Li Yang <leoyang.li@nxp.com>,
+ Olof Johansson <olof@lixom.net>, jwerner@chromium.org,
+ Shawn Guo <shawnguo@kernel.org>, "David S. Miller" <davem@davemloft.net>
+Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
-Content-Type: text/plain; charset="us-ascii"; Format="flowed"
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On 4/20/20 6:35 PM, Walter Wu wrote:
-> Modify the variable type of 'skip' member of struct stack_trace.
-> In theory, the 'skip' variable type should be unsigned int.
-> There are two reasons:
-> - The 'skip' only has two situation, 1)Positive value, 2)Zero
-> - The 'skip' of struct stack_trace has inconsistent type with struct
->    stack_trace_data, it makes a bit confusion in the relationship between
->    struct stack_trace and stack_trace_data.
+This is currently supported in firmware deployed on oak, hana and elm mt8173
+chromebook devices. The kernel driver is written to be a generic SMC
+watchdog driver.
 
-Reviewed-by: Bart Van Assche <bvanassche@acm.org>
+Arm Trusted Firmware upstreaming review:
+    https://review.trustedfirmware.org/c/TF-A/trusted-firmware-a/+/3405
+
+Patch to add oak, hana, elm device tree:
+    https://lore.kernel.org/linux-arm-kernel/20200110073730.213789-1-hsinyi@chromium.org/
+I would like to add the device tree support after the above patch is
+accepted.
+
+Changes in v5:
+- Change compatible to arm,smc-wdt
+- Make timeleft return 0 on error
+- Use type punning on smc_func_id to save an alloc
+- Change compatible to arm,smc-wdt
+
+Changes in v4:
+- Add arm,smc-id property
+- Get smc-id from of property
+- Return a1 instead of a0 in timeleft
+
+Changes in v3:
+- Change name back to arm
+- Add optional get_timeleft op
+- change name to arm_smc_wdt
+
+Changes in v2:
+- Change name arm > mt8173
+- use watchdog_stop_on_reboot
+- use watchdog_stop_on_unregister
+- use devm_watchdog_register_device
+- remove smcwd_shutdown, smcwd_remove
+- change error codes
+
+Evan Benn (1):
+  dt-bindings: watchdog: Add ARM smc wdt for mt8173 watchdog
+
+Julius Werner (1):
+  watchdog: Add new arm_smc_wdt watchdog driver
+
+ .../bindings/watchdog/arm-smc-wdt.yaml        |  36 ++++
+ MAINTAINERS                                   |   7 +
+ arch/arm64/configs/defconfig                  |   1 +
+ drivers/watchdog/Kconfig                      |  13 ++
+ drivers/watchdog/Makefile                     |   1 +
+ drivers/watchdog/arm_smc_wdt.c                | 189 ++++++++++++++++++
+ 6 files changed, 247 insertions(+)
+ create mode 100644 Documentation/devicetree/bindings/watchdog/arm-smc-wdt.yaml
+ create mode 100644 drivers/watchdog/arm_smc_wdt.c
+
+-- 
+2.26.2.303.gf8c07b1a785-goog
+
 
 _______________________________________________
 Linux-mediatek mailing list
