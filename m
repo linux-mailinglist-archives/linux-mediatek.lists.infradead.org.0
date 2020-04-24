@@ -2,43 +2,43 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 817F91B7F06
-	for <lists+linux-mediatek@lfdr.de>; Fri, 24 Apr 2020 21:33:21 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 4CBFD1B7F2B
+	for <lists+linux-mediatek@lfdr.de>; Fri, 24 Apr 2020 21:43:35 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=GbmbN0/VWSPpaQ0Hy8moE/6qJYO+5MIX0OPRyvoYeEo=; b=RAhquABuGeqjF+
-	NvhVSq5cKcbw8cYw0bMa+5OFUCjEM5FFJt0IyN8oUedxAY1VZ0D2CuapM+Di3Pi21aQUR7cCpOyDb
-	siSQV/jMHubbH8OqdNtAMK8Q6z8uQd4+77WerNdsqvjYeFVPXIPls7nA2775G6luLdZXBnnFKe/hl
-	9wRqQxUwKtVChjf6g+cXfjKQqY86+hz3pyFxdbPgVw87c1JdY6ENlq7XRWp2jr35bqg/a1GSY8zdG
-	76k/UepjhXGVQjqNNjaQUfxAcFTsAi0lZU1Rfyj+K5rz2wRM8BfUjtIe0Q7z3bQ/fUphtG2t25sSF
-	1zc2FH1q14uiXeLZYs9Q==;
+	List-Owner; bh=r+6WjxUNkPFikrVE/Z9FaQK+BcCcs90D/q9PnZAGGnA=; b=s3giS1hvuYSnoS
+	RFfEfZVPferwzIWQ5cqVognZY+A12eKxNOr8HVx8npABZ1qWcbk/5S6ntfPoa5i4rZaxW0fVcsePF
+	X5X20nHo/zBU7sAosEL8qlFPawfXkdYQA8bDycktDPy3r17W2wnCSQvKUUYsamMZ3uqUiAQs6S3Vz
+	z3hr3xA3TMcf8/yWhjvgvg0cDb5JMBPWNHVbuJXk+nf0kpTO6f3lO5OgX/kdDw5F7AArqr5O0VnG9
+	WeFgGnfj9JnRWAWl3O1o7nipFC+AiJcEi4FvjBYSlCtjxR40LWA2IWBWsvlToiwj+D3JZDdoE22M3
+	P494wzBPy1L/LL5rTLVg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jS44Z-0007rO-AS; Fri, 24 Apr 2020 19:33:15 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
+	id 1jS4ET-0006Tk-II; Fri, 24 Apr 2020 19:43:29 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jS44R-0007ks-26
- for linux-mediatek@lists.infradead.org; Fri, 24 Apr 2020 19:33:08 +0000
-X-UUID: 7af1b89d297d4b7b83e53801707f7f14-20200424
+ id 1jS4ED-00061n-JZ
+ for linux-mediatek@lists.infradead.org; Fri, 24 Apr 2020 19:43:15 +0000
+X-UUID: 814d14e13d2d480f8ef5aba9adc6ed5b-20200424
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
  s=dk; 
  h=Content-Transfer-Encoding:Content-Type:MIME-Version:References:In-Reply-To:Message-ID:Date:Subject:CC:To:From;
- bh=yEW8X2NnaYwRxQbxBF03TWaDWQpug/aAmvpFQkebjBg=; 
- b=g70uUygvnnPEycQxlKQxqu9RPuRLWgMryzfCP/vMcoAe5zLHh9ECuwWFdj6h6CkLustSjYOnlnEDMe58hzGFp6cJk4bUXSIvnp+l2HTli5h+9oaawd7K2HcdG893uUHx2L590tpYoZqI93fxAuRpojO3VxDKzfda8SHKV8l5tPA=;
-X-UUID: 7af1b89d297d4b7b83e53801707f7f14-20200424
-Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw02.mediatek.com
+ bh=28kyiWh+DJyUahYzVncxWTlfyCRoL0b/vSUBaKQXca8=; 
+ b=Syt9uRrej5CuUgWGAjl9w7X/Rt/ITzY9KX/bf7x6GKLOIza6F15cuAaqMmAjZSkdZdvFVGhRg+6eZpa5ddAsgnc78k0sCRt/JBvZunf7qhLGVva3IKmkF4JG6r/03o7oEWG0iVwBe043D7GtBNaH2e6nGJFg/oNARXvueuERR98=;
+X-UUID: 814d14e13d2d480f8ef5aba9adc6ed5b-20200424
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
  (envelope-from <ryder.lee@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 2016957675; Fri, 24 Apr 2020 11:33:04 -0800
-Received: from mtkmbs08n1.mediatek.inc (172.21.101.55) by
+ with ESMTP id 410285144; Fri, 24 Apr 2020 11:43:06 -0800
+Received: from mtkmbs08n2.mediatek.inc (172.21.101.56) by
  MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1497.2; Fri, 24 Apr 2020 12:33:00 -0700
+ 15.0.1497.2; Fri, 24 Apr 2020 12:33:01 -0700
 Received: from MTKCAS06.mediatek.inc (172.21.101.30) by
- mtkmbs08n1.mediatek.inc (172.21.101.55) with Microsoft SMTP Server (TLS) id
+ mtkmbs08n2.mediatek.inc (172.21.101.56) with Microsoft SMTP Server (TLS) id
  15.0.1497.2; Sat, 25 Apr 2020 03:32:46 +0800
 Received: from mtksdccf07.mediatek.inc (172.21.84.99) by MTKCAS06.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1497.2 via
@@ -46,23 +46,26 @@ Received: from mtksdccf07.mediatek.inc (172.21.84.99) by MTKCAS06.mediatek.inc
 From: Ryder Lee <ryder.lee@mediatek.com>
 To: Felix Fietkau <nbd@nbd.name>, Lorenzo Bianconi
  <lorenzo.bianconi@redhat.com>
-Subject: [PATCH v3 02/18] mt76: add support for HE RX rate reporting
-Date: Sat, 25 Apr 2020 03:32:23 +0800
-Message-ID: <4de594b915945eef1e98c856391f25568f415fcd.1587756404.git.ryder.lee@mediatek.com>
+Subject: [PATCH v3 03/18] mt76: add Rx stats support for radiotap
+Date: Sat, 25 Apr 2020 03:32:24 +0800
+Message-ID: <d3214ff0e88e7002db151364deceede0d2e5d889.1587756404.git.ryder.lee@mediatek.com>
 X-Mailer: git-send-email 2.18.0
 In-Reply-To: <cover.1587756404.git.ryder.lee@mediatek.com>
 References: <cover.1587756404.git.ryder.lee@mediatek.com>
 MIME-Version: 1.0
+X-TM-SNTS-SMTP: 2FE1901E1305162641D7C11B72595574A4AF624437F882A3DDE5620F69FCF0D02000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200424_123307_109563_DBC26A67 
-X-CRM114-Status: UNSURE (   8.37  )
+X-CRM114-CacheID: sfid-20200424_124313_662698_A61E1896 
+X-CRM114-Status: UNSURE (   9.28  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [216.200.240.184 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  0.0 MIME_BASE64_TEXT       RAW: Message text disguised using base64
@@ -97,50 +100,98 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Add support for encoding and reporting HE RX rates.
+HE deivces need to add Rx radiotap header.
 
 Signed-off-by: Ryder Lee <ryder.lee@mediatek.com>
 ---
- drivers/net/wireless/mediatek/mt76/mac80211.c | 4 +++-
- drivers/net/wireless/mediatek/mt76/mt76.h     | 3 ++-
- 2 files changed, 5 insertions(+), 2 deletions(-)
+ drivers/net/wireless/mediatek/mt76/agg-rx.c   |  4 ++--
+ drivers/net/wireless/mediatek/mt76/mac80211.c |  6 +++---
+ drivers/net/wireless/mediatek/mt76/mt76.h     | 19 +++++++++++++++++++
+ 3 files changed, 24 insertions(+), 5 deletions(-)
 
+diff --git a/drivers/net/wireless/mediatek/mt76/agg-rx.c b/drivers/net/wireless/mediatek/mt76/agg-rx.c
+index acdbe6f8248d..df25c00d9e06 100644
+--- a/drivers/net/wireless/mediatek/mt76/agg-rx.c
++++ b/drivers/net/wireless/mediatek/mt76/agg-rx.c
+@@ -119,7 +119,7 @@ static void
+ mt76_rx_aggr_check_ctl(struct sk_buff *skb, struct sk_buff_head *frames)
+ {
+ 	struct mt76_rx_status *status = (struct mt76_rx_status *)skb->cb;
+-	struct ieee80211_bar *bar = (struct ieee80211_bar *)skb->data;
++	struct ieee80211_bar *bar = mt76_skb_get_hdr(skb);
+ 	struct mt76_wcid *wcid = status->wcid;
+ 	struct mt76_rx_tid *tid;
+ 	u16 seqno;
+@@ -147,7 +147,7 @@ mt76_rx_aggr_check_ctl(struct sk_buff *skb, struct sk_buff_head *frames)
+ void mt76_rx_aggr_reorder(struct sk_buff *skb, struct sk_buff_head *frames)
+ {
+ 	struct mt76_rx_status *status = (struct mt76_rx_status *)skb->cb;
+-	struct ieee80211_hdr *hdr = (struct ieee80211_hdr *)skb->data;
++	struct ieee80211_hdr *hdr = mt76_skb_get_hdr(skb);
+ 	struct mt76_wcid *wcid = status->wcid;
+ 	struct ieee80211_sta *sta;
+ 	struct mt76_rx_tid *tid;
 diff --git a/drivers/net/wireless/mediatek/mt76/mac80211.c b/drivers/net/wireless/mediatek/mt76/mac80211.c
-index 176c22a5319a..f13114b07b6e 100644
+index f13114b07b6e..f65e1b3e8f7a 100644
 --- a/drivers/net/wireless/mediatek/mt76/mac80211.c
 +++ b/drivers/net/wireless/mediatek/mt76/mac80211.c
-@@ -676,7 +676,6 @@ mt76_rx_convert(struct mt76_dev *dev, struct sk_buff *skb,
- 		struct ieee80211_hw **hw,
- 		struct ieee80211_sta **sta)
+@@ -726,7 +726,7 @@ mt76_check_ccmp_pn(struct sk_buff *skb)
+ 		 * Validate the first fragment both here and in mac80211
+ 		 * All further fragments will be validated by mac80211 only.
+ 		 */
+-		hdr = (struct ieee80211_hdr *)skb->data;
++		hdr = mt76_skb_get_hdr(skb);
+ 		if (ieee80211_is_frag(hdr) &&
+ 		    !ieee80211_is_first_frag(hdr->frame_control))
+ 			return 0;
+@@ -799,7 +799,7 @@ mt76_airtime_flush_ampdu(struct mt76_dev *dev)
+ static void
+ mt76_airtime_check(struct mt76_dev *dev, struct sk_buff *skb)
  {
--
- 	struct ieee80211_rx_status *status = IEEE80211_SKB_RXCB(skb);
- 	struct mt76_rx_status mstat;
+-	struct ieee80211_hdr *hdr = (struct ieee80211_hdr *)skb->data;
++	struct ieee80211_hdr *hdr = mt76_skb_get_hdr(skb);
+ 	struct mt76_rx_status *status = (struct mt76_rx_status *)skb->cb;
+ 	struct mt76_wcid *wcid = status->wcid;
  
-@@ -688,6 +687,9 @@ mt76_rx_convert(struct mt76_dev *dev, struct sk_buff *skb,
- 	status->enc_flags = mstat.enc_flags;
- 	status->encoding = mstat.encoding;
- 	status->bw = mstat.bw;
-+	status->he_ru = mstat.he_ru;
-+	status->he_gi = mstat.he_gi;
-+	status->he_dcm = mstat.he_dcm;
- 	status->rate_idx = mstat.rate_idx;
- 	status->nss = mstat.nss;
- 	status->band = mstat.band;
+@@ -836,7 +836,7 @@ static void
+ mt76_check_sta(struct mt76_dev *dev, struct sk_buff *skb)
+ {
+ 	struct mt76_rx_status *status = (struct mt76_rx_status *)skb->cb;
+-	struct ieee80211_hdr *hdr = (struct ieee80211_hdr *)skb->data;
++	struct ieee80211_hdr *hdr = mt76_skb_get_hdr(skb);
+ 	struct ieee80211_sta *sta;
+ 	struct ieee80211_hw *hw;
+ 	struct mt76_wcid *wcid = status->wcid;
 diff --git a/drivers/net/wireless/mediatek/mt76/mt76.h b/drivers/net/wireless/mediatek/mt76/mt76.h
-index 6e1dae718602..cebef52fb685 100644
+index cebef52fb685..b2e619bab0e9 100644
 --- a/drivers/net/wireless/mediatek/mt76/mt76.h
 +++ b/drivers/net/wireless/mediatek/mt76/mt76.h
-@@ -460,7 +460,8 @@ struct mt76_rx_status {
- 	u16 freq;
- 	u32 flag;
- 	u8 enc_flags;
--	u8 encoding:2, bw:3;
-+	u8 encoding:2, bw:3, he_ru:3;
-+	u8 he_gi:2, he_dcm:1;
- 	u8 rate_idx;
- 	u8 nss;
- 	u8 band;
+@@ -744,6 +744,25 @@ static inline struct mt76_tx_cb *mt76_tx_skb_cb(struct sk_buff *skb)
+ 	return ((void *)IEEE80211_SKB_CB(skb)->status.status_driver_data);
+ }
+ 
++static inline void *mt76_skb_get_hdr(struct sk_buff *skb)
++{
++	struct mt76_rx_status mstat;
++	u8 *data = skb->data;
++
++	/* Alignment concerns */
++	BUILD_BUG_ON(sizeof(struct ieee80211_radiotap_he) % 4);
++	BUILD_BUG_ON(sizeof(struct ieee80211_radiotap_he_mu) % 4);
++
++	mstat = *((struct mt76_rx_status *)skb->cb);
++
++	if (mstat.flag & RX_FLAG_RADIOTAP_HE)
++		data += sizeof(struct ieee80211_radiotap_he);
++	if (mstat.flag & RX_FLAG_RADIOTAP_HE_MU)
++		data += sizeof(struct ieee80211_radiotap_he_mu);
++
++	return data;
++}
++
+ static inline void mt76_insert_hdr_pad(struct sk_buff *skb)
+ {
+ 	int len = ieee80211_get_hdrlen_from_skb(skb);
 -- 
 2.18.0
 _______________________________________________
