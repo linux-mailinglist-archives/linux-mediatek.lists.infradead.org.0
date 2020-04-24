@@ -2,70 +2,67 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 18EC71B7F25
-	for <lists+linux-mediatek@lfdr.de>; Fri, 24 Apr 2020 21:43:23 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 817F91B7F06
+	for <lists+linux-mediatek@lfdr.de>; Fri, 24 Apr 2020 21:33:21 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=Hww7puxfeJNXtuv75kJ9Q0B1SBF/e+gYgdavS4f4YTg=; b=TekCsrysqb92r9
-	W4/Cy7vWed4fZucg+yydWJjOM9Cy9W0/CLd0JCf7A+7livBI7wpEHK6ZhKni0mW6OSzREjWhh5ERr
-	TEBWGEEDVZGsSd57XvQIGpemBLYF7Ey2+vFO0xhmm5rzO5SHxAry3dYXOFYDNId2+iVDgN2u8o9Ra
-	1lX4jkfeGCWtU4pOxUIcFFkXXxeMXZoDzFnahiGLb5YF1PTV8n5/k54nGnJGzgBStnVyLGDapIhC/
-	9PuSjv3jwKAjd2ODs19EwXlwR+Vtb+/rkJackTjaxB0x4CRLjlVCAkRxRgreXeWwWO4LIl/UQilE6
-	7D9IexbTQizSb86yWXQw==;
+	List-Owner; bh=GbmbN0/VWSPpaQ0Hy8moE/6qJYO+5MIX0OPRyvoYeEo=; b=RAhquABuGeqjF+
+	NvhVSq5cKcbw8cYw0bMa+5OFUCjEM5FFJt0IyN8oUedxAY1VZ0D2CuapM+Di3Pi21aQUR7cCpOyDb
+	siSQV/jMHubbH8OqdNtAMK8Q6z8uQd4+77WerNdsqvjYeFVPXIPls7nA2775G6luLdZXBnnFKe/hl
+	9wRqQxUwKtVChjf6g+cXfjKQqY86+hz3pyFxdbPgVw87c1JdY6ENlq7XRWp2jr35bqg/a1GSY8zdG
+	76k/UepjhXGVQjqNNjaQUfxAcFTsAi0lZU1Rfyj+K5rz2wRM8BfUjtIe0Q7z3bQ/fUphtG2t25sSF
+	1zc2FH1q14uiXeLZYs9Q==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jS4EC-00063H-Ne; Fri, 24 Apr 2020 19:43:12 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1jS44Z-0007rO-AS; Fri, 24 Apr 2020 19:33:15 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jS4E8-00061n-Vn
- for linux-mediatek@lists.infradead.org; Fri, 24 Apr 2020 19:43:10 +0000
-X-UUID: 8dc05d36f21d4a089099ff5cabe9cc83-20200424
+ id 1jS44R-0007ks-26
+ for linux-mediatek@lists.infradead.org; Fri, 24 Apr 2020 19:33:08 +0000
+X-UUID: 7af1b89d297d4b7b83e53801707f7f14-20200424
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
  s=dk; 
  h=Content-Transfer-Encoding:Content-Type:MIME-Version:References:In-Reply-To:Message-ID:Date:Subject:CC:To:From;
- bh=I+YRhVrLNgwRO1l9UFDd9D9zLrcTC4/loe2w8YLs6NE=; 
- b=CKbfVjkVUwUgfB8LbKRIVhfZyMvsgdNwvMEGh4a62yQ0VkdBjgY3djgYNRoVO37NeuDk0VxUtzhCR4Kjb8ztSTqPfX8xoK8txrbzpmrERk3BtI1k/xhcho/K2cIxhp1z+gqFl4zbdME67d9echKww5v0XpWBaOblfTgRuI5wHwo=;
-X-UUID: 8dc05d36f21d4a089099ff5cabe9cc83-20200424
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
+ bh=yEW8X2NnaYwRxQbxBF03TWaDWQpug/aAmvpFQkebjBg=; 
+ b=g70uUygvnnPEycQxlKQxqu9RPuRLWgMryzfCP/vMcoAe5zLHh9ECuwWFdj6h6CkLustSjYOnlnEDMe58hzGFp6cJk4bUXSIvnp+l2HTli5h+9oaawd7K2HcdG893uUHx2L590tpYoZqI93fxAuRpojO3VxDKzfda8SHKV8l5tPA=;
+X-UUID: 7af1b89d297d4b7b83e53801707f7f14-20200424
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw02.mediatek.com
  (envelope-from <ryder.lee@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1093415165; Fri, 24 Apr 2020 11:43:06 -0800
-Received: from mtkmbs08n2.mediatek.inc (172.21.101.56) by
+ with ESMTP id 2016957675; Fri, 24 Apr 2020 11:33:04 -0800
+Received: from mtkmbs08n1.mediatek.inc (172.21.101.55) by
  MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
  15.0.1497.2; Fri, 24 Apr 2020 12:33:00 -0700
 Received: from MTKCAS06.mediatek.inc (172.21.101.30) by
- mtkmbs08n2.mediatek.inc (172.21.101.56) with Microsoft SMTP Server (TLS) id
- 15.0.1497.2; Sat, 25 Apr 2020 03:32:45 +0800
+ mtkmbs08n1.mediatek.inc (172.21.101.55) with Microsoft SMTP Server (TLS) id
+ 15.0.1497.2; Sat, 25 Apr 2020 03:32:46 +0800
 Received: from mtksdccf07.mediatek.inc (172.21.84.99) by MTKCAS06.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1497.2 via
- Frontend Transport; Sat, 25 Apr 2020 03:32:48 +0800
+ Frontend Transport; Sat, 25 Apr 2020 03:32:49 +0800
 From: Ryder Lee <ryder.lee@mediatek.com>
 To: Felix Fietkau <nbd@nbd.name>, Lorenzo Bianconi
  <lorenzo.bianconi@redhat.com>
-Subject: [PATCH v3 01/18] mt76: avoid rx reorder buffer overflow
-Date: Sat, 25 Apr 2020 03:32:22 +0800
-Message-ID: <8ec4dbd2b0254cd16ac9bdae6666141872c6858c.1587756404.git.ryder.lee@mediatek.com>
+Subject: [PATCH v3 02/18] mt76: add support for HE RX rate reporting
+Date: Sat, 25 Apr 2020 03:32:23 +0800
+Message-ID: <4de594b915945eef1e98c856391f25568f415fcd.1587756404.git.ryder.lee@mediatek.com>
 X-Mailer: git-send-email 2.18.0
 In-Reply-To: <cover.1587756404.git.ryder.lee@mediatek.com>
 References: <cover.1587756404.git.ryder.lee@mediatek.com>
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: 841B23960D011988730A4DE0BB38752B0586DEF0F023820815934341FB2751F32000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200424_124309_030578_5AB634B9 
-X-CRM114-Status: UNSURE (   6.75  )
+X-CRM114-CacheID: sfid-20200424_123307_109563_DBC26A67 
+X-CRM114-Status: UNSURE (   8.37  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [216.200.240.184 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  0.0 MIME_BASE64_TEXT       RAW: Message text disguised using base64
@@ -100,72 +97,50 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Enlarge slot to support 11ax 256 BA (256 MPDUs in an AMPDU)
+Add support for encoding and reporting HE RX rates.
 
-Signed-off-by: Chih-Min Chen <chih-min.chen@mediatek.com>
 Signed-off-by: Ryder Lee <ryder.lee@mediatek.com>
 ---
- drivers/net/wireless/mediatek/mt76/agg-rx.c | 8 ++++----
- drivers/net/wireless/mediatek/mt76/mt76.h   | 6 +++---
- 2 files changed, 7 insertions(+), 7 deletions(-)
+ drivers/net/wireless/mediatek/mt76/mac80211.c | 4 +++-
+ drivers/net/wireless/mediatek/mt76/mt76.h     | 3 ++-
+ 2 files changed, 5 insertions(+), 2 deletions(-)
 
-diff --git a/drivers/net/wireless/mediatek/mt76/agg-rx.c b/drivers/net/wireless/mediatek/mt76/agg-rx.c
-index f77f03530259..acdbe6f8248d 100644
---- a/drivers/net/wireless/mediatek/mt76/agg-rx.c
-+++ b/drivers/net/wireless/mediatek/mt76/agg-rx.c
-@@ -152,8 +152,8 @@ void mt76_rx_aggr_reorder(struct sk_buff *skb, struct sk_buff_head *frames)
- 	struct ieee80211_sta *sta;
- 	struct mt76_rx_tid *tid;
- 	bool sn_less;
--	u16 seqno, head, size;
--	u8 ackp, idx;
-+	u16 seqno, head, size, idx;
-+	u8 ackp;
- 
- 	__skb_queue_tail(frames, skb);
- 
-@@ -239,7 +239,7 @@ void mt76_rx_aggr_reorder(struct sk_buff *skb, struct sk_buff_head *frames)
- }
- 
- int mt76_rx_aggr_start(struct mt76_dev *dev, struct mt76_wcid *wcid, u8 tidno,
--		       u16 ssn, u8 size)
-+		       u16 ssn, u16 size)
+diff --git a/drivers/net/wireless/mediatek/mt76/mac80211.c b/drivers/net/wireless/mediatek/mt76/mac80211.c
+index 176c22a5319a..f13114b07b6e 100644
+--- a/drivers/net/wireless/mediatek/mt76/mac80211.c
++++ b/drivers/net/wireless/mediatek/mt76/mac80211.c
+@@ -676,7 +676,6 @@ mt76_rx_convert(struct mt76_dev *dev, struct sk_buff *skb,
+ 		struct ieee80211_hw **hw,
+ 		struct ieee80211_sta **sta)
  {
- 	struct mt76_rx_tid *tid;
+-
+ 	struct ieee80211_rx_status *status = IEEE80211_SKB_RXCB(skb);
+ 	struct mt76_rx_status mstat;
  
-@@ -264,7 +264,7 @@ EXPORT_SYMBOL_GPL(mt76_rx_aggr_start);
- 
- static void mt76_rx_aggr_shutdown(struct mt76_dev *dev, struct mt76_rx_tid *tid)
- {
--	u8 size = tid->size;
-+	u16 size = tid->size;
- 	int i;
- 
- 	spin_lock_bh(&tid->lock);
+@@ -688,6 +687,9 @@ mt76_rx_convert(struct mt76_dev *dev, struct sk_buff *skb,
+ 	status->enc_flags = mstat.enc_flags;
+ 	status->encoding = mstat.encoding;
+ 	status->bw = mstat.bw;
++	status->he_ru = mstat.he_ru;
++	status->he_gi = mstat.he_gi;
++	status->he_dcm = mstat.he_dcm;
+ 	status->rate_idx = mstat.rate_idx;
+ 	status->nss = mstat.nss;
+ 	status->band = mstat.band;
 diff --git a/drivers/net/wireless/mediatek/mt76/mt76.h b/drivers/net/wireless/mediatek/mt76/mt76.h
-index 6106dc4fea44..6e1dae718602 100644
+index 6e1dae718602..cebef52fb685 100644
 --- a/drivers/net/wireless/mediatek/mt76/mt76.h
 +++ b/drivers/net/wireless/mediatek/mt76/mt76.h
-@@ -244,8 +244,8 @@ struct mt76_rx_tid {
- 	struct delayed_work reorder_work;
- 
- 	u16 head;
--	u8 size;
--	u8 nframes;
-+	u16 size;
-+	u16 nframes;
- 
- 	u8 num;
- 
-@@ -796,7 +796,7 @@ int mt76_get_survey(struct ieee80211_hw *hw, int idx,
- void mt76_set_stream_caps(struct mt76_dev *dev, bool vht);
- 
- int mt76_rx_aggr_start(struct mt76_dev *dev, struct mt76_wcid *wcid, u8 tid,
--		       u16 ssn, u8 size);
-+		       u16 ssn, u16 size);
- void mt76_rx_aggr_stop(struct mt76_dev *dev, struct mt76_wcid *wcid, u8 tid);
- 
- void mt76_wcid_key_setup(struct mt76_dev *dev, struct mt76_wcid *wcid,
+@@ -460,7 +460,8 @@ struct mt76_rx_status {
+ 	u16 freq;
+ 	u32 flag;
+ 	u8 enc_flags;
+-	u8 encoding:2, bw:3;
++	u8 encoding:2, bw:3, he_ru:3;
++	u8 he_gi:2, he_dcm:1;
+ 	u8 rate_idx;
+ 	u8 nss;
+ 	u8 band;
 -- 
 2.18.0
 _______________________________________________
