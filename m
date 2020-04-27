@@ -2,141 +2,87 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 048AC1D625E
-	for <lists+linux-mediatek@lfdr.de>; Sat, 16 May 2020 17:41:54 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 6FB451BB091
+	for <lists+linux-mediatek@lfdr.de>; Mon, 27 Apr 2020 23:33:12 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Date:Message-ID:From:To:
-	Subject:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=WIEV7zjzpcr1K78zunPF6vpsi6dH2gzDjo8HboeFcf4=; b=MQlmlOkPKrKvKe
-	JDdbFp7996vMiLADvy8iUGdICnY/KSlipDx7EARNYxNzI2396dfQk475MuHFwkXFrbI/dQjappRA3
-	iiMkuDbJDMa4LwMOo0xOAFAxCIoNz1lKKFuoiHEkKjuaEg7Q6tteF1qxoZB3z8/AgCLp3Qd3dk1G3
-	71X9vX4Ubs3ClKWX0LIZjWZ7s5bgXYSdAh1JjjEr9kg69ZpXIo/Xu2Y10pDXsKKB9E5TI6/acnBHi
-	+dqqOvgOjfXIOFRmrWyQRvBUIGoXXgcZQvsqBSUdtaANypeQu+WjOF1PhOZX3AUtwGeir4GCEC+JZ
-	u0OdiIhgadNgEwH38MoQ==;
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=iFPXMzly5Ko9lKLWDK3ERDD82FgQZzUnNUTL6GCxdjg=; b=Mqp8LgDzHlyaEQ
+	Nbd7my8RLRVEX8PBhR7M/ECjWBIDg2zbW7mGTLena0j52OPRyrXejaconZd0U7kC4rc4Nf4m3z+Xj
+	WGcnevnTiqEgpx3ziXhCn5APBDdsh7+C5hk3Ix2OZHXsHZ89rRxKR8sIi4szZS55Bf5cd+1XVNQV0
+	RHAaT0Rxhw/ajqlXRp8PQmlCITfhtMUF1QKTeBtML+TeGCsDYIdheL1m6cTAy45twKf9hLzDWKc5w
+	SWW5x4JQfSrIo8vdqjmbIobBuYGpPNByDDgj2ObuDYp2t4umS2Z7tZe6VOHDjLiIO6UKftRhnvFBS
+	xFUFakJ1e1dJepnJlSjw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jZywc-0003Hc-5W; Sat, 16 May 2020 15:41:46 +0000
-Received: from mout.web.de ([212.227.17.12])
+	id 1jTBNA-00006Y-NT; Mon, 27 Apr 2020 21:33:04 +0000
+Received: from mail-ot1-f67.google.com ([209.85.210.67])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jSztg-00055y-Dz; Mon, 27 Apr 2020 09:17:53 +0000
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=web.de;
- s=dbaedf251592; t=1587979059;
- bh=tJKIP5/mdsP/vNzNEGPQkFtlyQQVMN8djw+HAazwd7s=;
- h=X-UI-Sender-Class:Cc:Subject:To:From:Date;
- b=bxOzjLv9wCyTxtrCkWsoiIUaQY0sXSLE8QdUGsYDG2ztSgNZlytYiSG85Yp2hg2lC
- hQNzBLt8rgULSQ9E2mTotLauoHMCr8bT3d/RineqxpUmMjEj/ZPLhla27GsgeBtSTo
- ghez2ib7HN3KtzJ4hFXCaCRXRd7ORP5bKC4Hbgtg=
-X-UI-Sender-Class: c548c8c5-30a9-4db5-a2e7-cb6cb037b8f9
-Received: from [192.168.1.2] ([93.131.190.48]) by smtp.web.de (mrweb103
- [213.165.67.124]) with ESMTPSA (Nemesis) id 0LudP2-1j2UqZ1OAS-00zkRC; Mon, 27
- Apr 2020 11:17:39 +0200
-Subject: Re: [PATCH] drm/mediatek: cleanup coding style in mediatek a bit
-To: Bernard Zhao <bernard@vivo.com>, dri-devel@lists.freedesktop.org,
- linux-arm-kernel@lists.infradead.org, linux-mediatek@lists.infradead.org
-From: Markus Elfring <Markus.Elfring@web.de>
-Autocrypt: addr=Markus.Elfring@web.de; prefer-encrypt=mutual; keydata=
- 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 FEE=
-Message-ID: <a637d892-de2c-b31d-bcfc-b3fd5b1d38d0@web.de>
-Date: Mon, 27 Apr 2020 11:17:37 +0200
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101
- Thunderbird/68.7.0
+ id 1jTBMs-0008Ko-HJ; Mon, 27 Apr 2020 21:32:47 +0000
+Received: by mail-ot1-f67.google.com with SMTP id j4so29013298otr.11;
+ Mon, 27 Apr 2020 14:32:45 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:date:from:to:cc:subject:message-id:references
+ :mime-version:content-disposition:in-reply-to:user-agent;
+ bh=VhX0m7XiVUavIDrF8Px+dNHE5Y+gy8GzoSAbvu2Xn34=;
+ b=iBnP0ebLIeKHLx8q06MM0FJOLR1bsWI8GlZa+zfcfFouLDeJHC5vx1srZMazcOSYHf
+ jfSPnUJ8fboF7L5bKPJpdo7toS2tUIDfI/V7rVeGlYiWDJRIheqi+kmYuBLuf1w4wCJx
+ ArI5HapWQE0axt6DfGqQ0f629NK2L4dXxSVSsBnqMjUhf4FvwxPqwSCixcTqmGliShse
+ S5zQDBPb1JaHFf+UYW3OpaB2/OMW678pmhhNrDi4NqevqyfEcVGqUTrOxPzNArR3Lr66
+ xf+mUOfHPH1+wyJHTGAtGUVcne4NgZHZ/gGbCZFyNBk0/nSFrdoIEoALMFVNYix0Ou6F
+ 8nNg==
+X-Gm-Message-State: AGi0PuZVVrlDEWKHbzyoPzJ2N9fRxYMXGzXqCKPdCqesNhFmQ/ZoG+3s
+ zM/ghZDC7lag1zMcC/EQ+eZHo44=
+X-Google-Smtp-Source: APiQypKaNxXTFDM9s/8lHp/0DfHRTlPNydLnDnh9/hUQgcEGUw3vp0iDQdHVuaMxyOuo5fm7o/BuuA==
+X-Received: by 2002:aca:4f09:: with SMTP id d9mr631326oib.172.1588023164944;
+ Mon, 27 Apr 2020 14:32:44 -0700 (PDT)
+Received: from rob-hp-laptop (24-155-109-49.dyn.grandenetworks.net.
+ [24.155.109.49])
+ by smtp.gmail.com with ESMTPSA id j70sm90813oib.53.2020.04.27.14.32.43
+ (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+ Mon, 27 Apr 2020 14:32:44 -0700 (PDT)
+Received: (nullmailer pid 32460 invoked by uid 1000);
+ Mon, 27 Apr 2020 21:32:42 -0000
+Date: Mon, 27 Apr 2020 16:32:42 -0500
+From: Rob Herring <robh@kernel.org>
+To: EastL <EastL.Lee@mediatek.com>
+Subject: Re: [PATCH v3 1/2] dt-bindings: dmaengine: Add MediaTek
+ Command-Queue DMA controller bindings
+Message-ID: <20200427213242.GA32009@bogus>
+References: <1587955977-17207-1-git-send-email-EastL.Lee@mediatek.com>
+ <1587955977-17207-2-git-send-email-EastL.Lee@mediatek.com>
 MIME-Version: 1.0
-Content-Language: en-GB
-X-Provags-ID: V03:K1:7j4GHmZW2bMANUC8DguSnJsY8cIhQHIdrTwtIV9F63WBSjbJtLz
- q5JnZIsbpUJCR7fmCSxMWjHC9TkOY3CuXh3nznN5jkOvaGInSCz8caVtH5ENyz2omKisOAn
- 4nytp5SEYc0l7gQlBdOxcD+Mtg4Nzei1Q45pZ8BBE/oSDnRlKiSIQhFJIcCWkcJufQNPqPh
- XvvRGR8gCJXhGBPQuQJsQ==
-X-Spam-Flag: NO
-X-UI-Out-Filterresults: notjunk:1;V03:K0:bbP7I+VHFPo=:h/eOyi0b4FAVcjvznZTeEX
- CmZ40gnemPLuct6RgEb4t1sxGh1yoxgnQr4sIlG4SnJzSZF+tjb/v8mSdIvbxwrfemz+wvWZt
- /1KsgxL40U83TBJPKeY1jEGN5I9V6lncoFaHyxWtqmuV2lA/fqHCfq7xD5e0NDKzgL/0O/TSO
- /ZBuAtLY7UQGLs2stde1GfpHGiuDDJYLik21fHfyCPToAj4CL70VRW9FC/9PPSfVzN70SSMMD
- +BLNU4WCx2eTTANsPTUdCo4oCLwy6MVmT3lEYvxyMwnPg3ct2w+fCcaWEdiJ5iIvgE4meiNhK
- szxRVpkEa6dYH6MCgy+AUsAnhIPO6QdOSFfAr4bWlU/VvHEa7Tfp08PQIe7jdskrWW7X7yRAf
- +I8BoHwdmSElom4svp3Cq4APLlq72bt3gbJeLwp+kGewhrBX9/6xP2OAjPksWj48ZLNyUkIHY
- /CdDaYNp3PbS3ovE8rsem8aI0XFAtSZud3U11obN1YHZ4TBQR2yw9F3N7E0sDqNxIss1Ch/b6
- Zdo2m5oJ0QiStih22xHNN1NdtbF16X4Z0ojtdL8bZhh3VIoHiQMCftRLjSsC0hyN504jY/gL5
- Z902b+RDrUkquzMZXQA2jlB+GdDb4mz6NFjZQw2YI01yH2UBYi7lrTC/2cSbMh+/AgeJwu6/5
- MRWvQRaga6/rWBMApqPsIjKcKTO28curdwp7v23spmzHP2IrOgtM960kyEL23oDYLM32mjI3D
- FP9twbBWKhwVJ4Hzrctqmhove4PwJW74Rqnv9AImtifdFw/Z4sQIwKtc2+Pqj4WTE9qZgs5+i
- VJdiGD8yt003eXqSmrNkFAY0An5PGgSpGZ7VKwPgHJ0ikwliSlhwskxH52P7k9Py9T2WxdN7k
- PaCMeEyVRAZMMfzkBUyec1oFlyKYXmHbQtmflskt03OsFwgjNEIWa2zkBjebtEq+uCz0IZ1ef
- SLwEeRuK5Y0um4FgvQBsIbIh8kB+4Z4MAHgsN5wJ7v0rvqKqm9Nmxi6/W4FlGXi6s2j3mZ4B3
- OnMrZgOjC1dLryhdPTRxGCQDtxA22j3HKlt5WJwJhGQEjFvxTkbJZmL5e92E1jmFvfDQwulF6
- SFf1gerGQ0Se+Dcx6Eh1a19EtNcG8N2tsSODVOmspHCdC+zxA2IT2jTXDZQnklG/ZixfNbeXq
- Wh2KitXyEdjDaSvABd0/XbAlc/A3YWHVpgzWXPFWmTkSLX9XDIM0ABBEuIZlYGCK6DGfd3yS5
- /tZNVpuyGjDfB7psr
-X-Bad-Reply: 'Re:' in Subject but no References or In-Reply-To headers
+Content-Disposition: inline
+In-Reply-To: <1587955977-17207-2-git-send-email-EastL.Lee@mediatek.com>
+User-Agent: Mutt/1.10.1 (2018-07-13)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200427_021752_761220_E7D92D18 
-X-CRM114-Status: UNSURE (   5.54  )
+X-CRM114-CacheID: sfid-20200427_143246_576028_0E2D6C77 
+X-CRM114-Status: UNSURE (   8.44  )
 X-CRM114-Notice: Please train this message.
-X-Spam-Score: -0.9 (/)
+X-Spam-Score: 0.7 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
- Content analysis details:   (-0.9 points)
+ Content analysis details:   (0.7 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.7 RCVD_IN_DNSWL_LOW      RBL: Sender listed at https://www.dnswl.org/,
- low trust [212.227.17.12 listed in list.dnswl.org]
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [209.85.210.67 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 0.2 FREEMAIL_ENVFROM_END_DIGIT Envelope-from freemail username ends
+ in digit [robherring2[at]gmail.com]
  -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
+ mail domains are different
  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider [markus.elfring[at]web.de]
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ provider [robherring2[at]gmail.com]
  -0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
- [212.227.17.12 listed in wl.mailspike.net]
+ [209.85.210.67 listed in wl.mailspike.net]
  -0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
-X-Mailman-Approved-At: Sat, 16 May 2020 08:41:44 -0700
+ 0.2 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
+ EnvelopeFrom freemail headers are different
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -148,24 +94,40 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: opensource.kernel@vivo.com, Philipp Zabel <p.zabel@pengutronix.de>,
- Chun-Kuang Hu <chunkuang.hu@kernel.org>, David Airlie <airlied@linux.ie>,
- linux-kernel@vger.kernel.org, Daniel Vetter <daniel@ffwll.ch>,
- Matthias Brugger <matthias.bgg@gmail.com>
+Cc: mark.rutland@arm.com, devicetree@vger.kernel.org, wsd_upstream@mediatek.com,
+ Sean Wang <sean.wang@mediatek.com>, linux-kernel@vger.kernel.org,
+ EastL <EastL.Lee@mediatek.com>, dmaengine@vger.kernel.org, vkoul@kernel.org,
+ robh+dt@kernel.org, linux-mediatek@lists.infradead.org, matthias.bgg@gmail.com,
+ linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-> This code change is to make code bit more readable.
-> Optimise array size align to HDMI macro define.
-> Add check if len is overange.
+On Mon, 27 Apr 2020 10:52:56 +0800, EastL wrote:
+> Document the devicetree bindings for MediaTek Command-Queue DMA controller
+> which could be found on MT6779 SoC or other similar Mediatek SoCs.
+> 
+> Signed-off-by: EastL <EastL.Lee@mediatek.com>
+> ---
+>  .../devicetree/bindings/dma/mtk-cqdma.yaml         | 98 ++++++++++++++++++++++
+>  1 file changed, 98 insertions(+)
+>  create mode 100644 Documentation/devicetree/bindings/dma/mtk-cqdma.yaml
+> 
 
-I find it safer to handle also such source code adjustments
-by a small patch series together with improved commit messages.
+My bot found errors running 'make dt_binding_check' on your patch:
 
-Regards,
-Markus
+/builds/robherring/linux-dt-review/Documentation/devicetree/bindings/dma/mtk-cqdma.example.dt.yaml: dma-controller@10212000: interrupts: [[0, 139, 8], [0, 140, 8], [0, 141, 8]] is too short
+/builds/robherring/linux-dt-review/Documentation/devicetree/bindings/dma/mtk-cqdma.example.dt.yaml: dma-controller@10212000: reg: [[0, 270606336, 0, 128], [0, 270606464, 0, 128], [0, 270606592, 0, 128]] is too short
+
+See https://patchwork.ozlabs.org/patch/1277292
+
+If you already ran 'make dt_binding_check' and didn't see the above
+error(s), then make sure dt-schema is up to date:
+
+pip3 install git+https://github.com/devicetree-org/dt-schema.git@master --upgrade
+
+Please check and re-submit.
 
 _______________________________________________
 Linux-mediatek mailing list
