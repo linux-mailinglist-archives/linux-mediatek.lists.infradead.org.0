@@ -2,72 +2,85 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id B37441BBC23
-	for <lists+linux-mediatek@lfdr.de>; Tue, 28 Apr 2020 13:15:28 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 09C601BBC37
+	for <lists+linux-mediatek@lfdr.de>; Tue, 28 Apr 2020 13:17:15 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=rsyf9ZKTG8vz3R2xLju0aD0D9eUxZIersA2qIUvOJ2Q=; b=KehfZlDF+lzxwa
-	vyRfe9JxZmXKhF997MiS54xo1yFpE48HJ36v6qWA3uHSAt9kXX/FRcVw8d30hHyw17B52BCWm3hrf
-	XgH9v4dtwHBGGQ0/jT0q49vbcg+B/oxV/dPv4lU9+yYm2aTRtzS0HQftKQBkhEiCl2b6u4GCEK0xD
-	8WYYWHlQtBr+caD48/eOby3YJP1G1icq+VMZLymaIxNgzzdLzcrif7hDXJ39nbm5fYOlj2b1T8BCz
-	Sz9X/NVWd5tEdLhOcKiMhhyYqi6ltO7WKGyD1FhehKyJeDa/P3N6mfMar6DoTakL6oq2KIqFusOnC
-	szn4BtnbP8rR2anmhBpw==;
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
+	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
+	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=UwOPwJBR/kOGGLox1odnECdTX2F7hCT0QFtAfrr7qMA=; b=YJHusFK7md2m2X
+	X0nIk9n39EWPUApdvgpb151PJNgFCPDE5ALesyIEDy2rtgGymAJt4GI9/DCnFutyh//d2AfGPTXiW
+	nKfTNFd6ZnYSBYoYdMh/ae4dddqCiF0EJAeYH09prOT5u+edJQTWvhOHzAN7G4F1EZo1ZX6eXbPCa
+	QY0gkyvcJlVEKTB8dGPye8LstwZxmmRSLwnuHgdBEN/ggW5gct20m23PTDGfUXlUfLB2SABBe2kp4
+	14LGUbdcohswVa2tBrivVZbkfqK192avOfhaeWmz7/329OjbsgnKsQCDf6R0nIiDXCldntNU23cGa
+	BsEWO8xXFlNFvgzKrEog==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jTOCw-0001vV-Hk; Tue, 28 Apr 2020 11:15:22 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1jTOEc-00036i-GE; Tue, 28 Apr 2020 11:17:06 +0000
+Received: from nbd.name ([2a01:4f8:221:3d45::2])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jTOBs-00072e-28; Tue, 28 Apr 2020 11:14:17 +0000
-X-UUID: d4d370c6497444ef98986e38f3713a13-20200428
-DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
- s=dk; 
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:References:In-Reply-To:Message-ID:Date:Subject:CC:To:From;
- bh=nKbWdvgE69UgAIWRhz8Xhz29+ME91EZp8ag1O4EUF1I=; 
- b=N1doBf06WgcrGgUbjWtPf4QqDR5h1IRl8xOMnDGyAqqrCWSx6Q9sd4slmfU63ejNhfL5dtxz+Cm+z7k6shYBZDGo5fs9UJrqsfkkdN1NNuARGMI7YQ7KNIXuKOPkQs4lNozz+QMECMB97K4ioj0GYVTbEvHOcKdKwEBzMtBnWK4=;
-X-UUID: d4d370c6497444ef98986e38f3713a13-20200428
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
- (envelope-from <stanley.chu@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1467435753; Tue, 28 Apr 2020 03:14:07 -0800
-Received: from MTKMBS02N2.mediatek.inc (172.21.101.101) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1497.2; Tue, 28 Apr 2020 04:14:09 -0700
-Received: from mtkcas07.mediatek.inc (172.21.101.84) by
- mtkmbs02n2.mediatek.inc (172.21.101.101) with Microsoft SMTP Server (TLS) id
- 15.0.1497.2; Tue, 28 Apr 2020 19:13:56 +0800
-Received: from mtksdccf07.mediatek.inc (172.21.84.99) by mtkcas07.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1497.2 via
- Frontend Transport; Tue, 28 Apr 2020 19:13:54 +0800
-From: Stanley Chu <stanley.chu@mediatek.com>
-To: <linux-scsi@vger.kernel.org>, <martin.petersen@oracle.com>,
- <avri.altman@wdc.com>, <alim.akhtar@samsung.com>, <jejb@linux.ibm.com>,
- <asutoshd@codeaurora.org>
-Subject: [PATCH v1 4/4] scsi: ufs-mediatek: enable WriteBooster capability
-Date: Tue, 28 Apr 2020 19:13:55 +0800
-Message-ID: <20200428111355.1776-5-stanley.chu@mediatek.com>
-X-Mailer: git-send-email 2.18.0
-In-Reply-To: <20200428111355.1776-1-stanley.chu@mediatek.com>
-References: <20200428111355.1776-1-stanley.chu@mediatek.com>
+ id 1jTOEZ-00034d-5M
+ for linux-mediatek@lists.infradead.org; Tue, 28 Apr 2020 11:17:04 +0000
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=nbd.name;
+ s=20160729; h=Content-Transfer-Encoding:Content-Type:In-Reply-To:
+ MIME-Version:Date:Message-ID:From:References:Cc:To:Subject:Sender:Reply-To:
+ Content-ID:Content-Description:Resent-Date:Resent-From:Resent-Sender:
+ Resent-To:Resent-Cc:Resent-Message-ID:List-Id:List-Help:List-Unsubscribe:
+ List-Subscribe:List-Post:List-Owner:List-Archive;
+ bh=XOhDfptpwh2eyxeLvzb+d+hOxPoOaH2iB/kxQVxTMjU=; b=h+vklNke7tDARomiV32fLLXcqE
+ c0ikX46g+ToZh/daC5uxCo39tXdxw1Fl330bhsYG3eIpPh0xDE0V8OGsqd0LSrDYIGaognX3uJ+VN
+ DZhCEt0KL7nZTigZr0lqIRObH10ZuGkluowmTkMkc6NYF8dlsOckmVfJ4PbukrMZSrDA=;
+Received: from [80.255.7.108] (helo=nf.local)
+ by ds12 with esmtpsa (TLS1.2:ECDHE_RSA_AES_128_GCM_SHA256:128)
+ (Exim 4.89) (envelope-from <nbd@nbd.name>)
+ id 1jTOET-0000qa-RX; Tue, 28 Apr 2020 13:16:57 +0200
+Subject: Re: [PATCH] mt76: mt7663: add the possibility to load firmware v2
+To: Kalle Valo <kvalo@codeaurora.org>, Lorenzo Bianconi <lorenzo@kernel.org>
+References: <db72b648024aba3243ee3b7deceb548c9bc2bdf1.1587911939.git.lorenzo@kernel.org>
+ <87ftcnj2be.fsf@tynnyri.adurom.net>
+From: Felix Fietkau <nbd@nbd.name>
+Autocrypt: addr=nbd@nbd.name; prefer-encrypt=mutual; keydata=
+ xsDiBEah5CcRBADIY7pu4LIv3jBlyQ/2u87iIZGe6f0f8pyB4UjzfJNXhJb8JylYYRzIOSxh
+ ExKsdLCnJqsG1PY1mqTtoG8sONpwsHr2oJ4itjcGHfn5NJSUGTbtbbxLro13tHkGFCoCr4Z5
+ Pv+XRgiANSpYlIigiMbOkide6wbggQK32tC20QxUIwCg4k6dtV/4kwEeiOUfErq00TVqIiEE
+ AKcUi4taOuh/PQWx/Ujjl/P1LfJXqLKRPa8PwD4j2yjoc9l+7LptSxJThL9KSu6gtXQjcoR2
+ vCK0OeYJhgO4kYMI78h1TSaxmtImEAnjFPYJYVsxrhay92jisYc7z5R/76AaELfF6RCjjGeP
+ wdalulG+erWju710Bif7E1yjYVWeA/9Wd1lsOmx6uwwYgNqoFtcAunDaMKi9xVQW18FsUusM
+ TdRvTZLBpoUAy+MajAL+R73TwLq3LnKpIcCwftyQXK5pEDKq57OhxJVv1Q8XkA9Dn1SBOjNB
+ l25vJDFAT9ntp9THeDD2fv15yk4EKpWhu4H00/YX8KkhFsrtUs69+vZQwc0cRmVsaXggRmll
+ dGthdSA8bmJkQG5iZC5uYW1lPsJgBBMRAgAgBQJGoeQnAhsjBgsJCAcDAgQVAggDBBYCAwEC
+ HgECF4AACgkQ130UHQKnbvXsvgCgjsAIIOsY7xZ8VcSm7NABpi91yTMAniMMmH7FRenEAYMa
+ VrwYTIThkTlQzsFNBEah5FQQCACMIep/hTzgPZ9HbCTKm9xN4bZX0JjrqjFem1Nxf3MBM5vN
+ CYGBn8F4sGIzPmLhl4xFeq3k5irVg/YvxSDbQN6NJv8o+tP6zsMeWX2JjtV0P4aDIN1pK2/w
+ VxcicArw0VYdv2ZCarccFBgH2a6GjswqlCqVM3gNIMI8ikzenKcso8YErGGiKYeMEZLwHaxE
+ Y7mTPuOTrWL8uWWRL5mVjhZEVvDez6em/OYvzBwbkhImrryF29e3Po2cfY2n7EKjjr3/141K
+ DHBBdgXlPNfDwROnA5ugjjEBjwkwBQqPpDA7AYPvpHh5vLbZnVGu5CwG7NAsrb2isRmjYoqk
+ wu++3117AAMFB/9S0Sj7qFFQcD4laADVsabTpNNpaV4wAgVTRHKV/kC9luItzwDnUcsZUPdQ
+ f3MueRJ3jIHU0UmRBG3uQftqbZJj3ikhnfvyLmkCNe+/hXhPu9sGvXyi2D4vszICvc1KL4RD
+ aLSrOsROx22eZ26KqcW4ny7+va2FnvjsZgI8h4sDmaLzKczVRIiLITiMpLFEU/VoSv0m1F4B
+ FtRgoiyjFzigWG0MsTdAN6FJzGh4mWWGIlE7o5JraNhnTd+yTUIPtw3ym6l8P+gbvfoZida0
+ TspgwBWLnXQvP5EDvlZnNaKa/3oBes6z0QdaSOwZCRA3QSLHBwtgUsrT6RxRSweLrcabwkkE
+ GBECAAkFAkah5FQCGwwACgkQ130UHQKnbvW2GgCfTKx80VvCR/PvsUlrvdOLsIgeRGAAn1ee
+ RjMaxwtSdaCKMw3j33ZbsWS4
+Message-ID: <fd49291e-173e-20b0-ee67-c4f519ce8419@nbd.name>
+Date: Tue, 28 Apr 2020 13:16:56 +0200
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:68.0)
+ Gecko/20100101 Thunderbird/68.7.0
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: DA7935DAFEBA11123D058F63C971BD710252B278E9CA6897AC8AC4BD89FB46B02000:8
-X-MTK: N
+In-Reply-To: <87ftcnj2be.fsf@tynnyri.adurom.net>
+Content-Language: en-US
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200428_041416_135847_8F607E01 
-X-CRM114-Status: UNSURE (   7.62  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20200428_041703_397942_D927F176 
+X-CRM114-Status: GOOD (  15.24  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 MIME_BASE64_TEXT       RAW: Message text disguised using base64
- encoding
+ 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
@@ -75,8 +88,6 @@ X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -88,39 +99,75 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: bvanassche@acm.org, andy.teng@mediatek.com, chun-hung.wu@mediatek.com,
- kuohong.wang@mediatek.com, linux-kernel@vger.kernel.org, cang@codeaurora.org,
- linux-mediatek@lists.infradead.org, peter.wang@mediatek.com,
- matthias.bgg@gmail.com, Stanley Chu <stanley.chu@mediatek.com>,
- linux-arm-kernel@lists.infradead.org, beanhuo@micron.com
+Cc: linux-mediatek@lists.infradead.org, lorenzo.bianconi@redhat.com,
+ sean.wang@mediatek.com, linux-wireless@vger.kernel.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Enable WriteBooster capability on MediaTek UFS platforms.
+On 2020-04-28 13:07, Kalle Valo wrote:
+> Lorenzo Bianconi <lorenzo@kernel.org> writes:
+> 
+>> mt7663 firmware v2 is used for embedded devices since it has more completed
+>> features in AP mode.
+>> Add the capability to specify in mt7615 Kconfig which firmware load first
+>> (v3 or v2) and fallback to the other one if the selected firmware fails
+>> to load
+>>
+>> Signed-off-by: Lorenzo Bianconi <lorenzo@kernel.org>
+>> ---
+>>  .../net/wireless/mediatek/mt76/mt7615/Kconfig | 13 +++++
+>>  .../net/wireless/mediatek/mt76/mt7615/mcu.c   | 50 ++++++++++++++++---
+>>  .../wireless/mediatek/mt76/mt7615/mt7615.h    |  6 ++-
+>>  .../net/wireless/mediatek/mt76/mt7615/pci.c   |  2 +
+>>  .../net/wireless/mediatek/mt76/mt7615/usb.c   |  2 +
+>>  5 files changed, 65 insertions(+), 8 deletions(-)
+>>
+>> diff --git a/drivers/net/wireless/mediatek/mt76/mt7615/Kconfig b/drivers/net/wireless/mediatek/mt76/mt7615/Kconfig
+>> index e25db1135eda..c04d6a182bf0 100644
+>> --- a/drivers/net/wireless/mediatek/mt76/mt7615/Kconfig
+>> +++ b/drivers/net/wireless/mediatek/mt76/mt7615/Kconfig
+>> @@ -38,3 +38,16 @@ config MT7663U
+>>  	  This adds support for MT7663U 802.11ax 2x2:2 wireless devices.
+>>  
+>>  	  To compile this driver as a module, choose M here.
+>> +
+>> +config MT7615_OFFLOAD_FIRMWARE
+>> +	bool "Prefer client mode offload firmware (MT7663)"
+>> +	depends on MT7615E || MT7663U
+>> +	default y
+>> +	help
+>> +	  Load MT7663 client mode offload firmware (v3) as primary option
+>> +	  and fallback to MT7663 firmware v2 in case of failure.
+>> +	  If MT7615_OFFLOAD_FIRMWARE is not selected MT7663 firmware v2
+>> +	  will be used as primary option.
+>> +	  MT7663 client mode offload firmware supports low power features
+>> +	  (hw frequency scanning, scheduled frequency scanning, WoW,
+>> +	  802.11 power save) but is more limited in AP mode
+> 
+> Why does this need a compile time config? Wouldn't some kind of runtime
+> configuration be better?
+I don't think supporting runtime configuration is worth the extra
+complexity of adding an API for shutting down and restarting the
+firmware and dealing with potential errors along the way.
 
-Signed-off-by: Stanley Chu <stanley.chu@mediatek.com>
----
- drivers/scsi/ufs/ufs-mediatek.c | 3 +++
- 1 file changed, 3 insertions(+)
+Both firmware types support AP and client mode. Which one you use
+depends on the kind of system you're building for.
 
-diff --git a/drivers/scsi/ufs/ufs-mediatek.c b/drivers/scsi/ufs/ufs-mediatek.c
-index 673c16596fb2..15b9c420a3a5 100644
---- a/drivers/scsi/ufs/ufs-mediatek.c
-+++ b/drivers/scsi/ufs/ufs-mediatek.c
-@@ -263,6 +263,9 @@ static int ufs_mtk_init(struct ufs_hba *hba)
- 	/* Enable clock-gating */
- 	hba->caps |= UFSHCD_CAP_CLK_GATING;
- 
-+	/* Enable WriteBooster */
-+	hba->caps |= UFSHCD_CAP_WB_EN;
-+
- 	/*
- 	 * ufshcd_vops_init() is invoked after
- 	 * ufshcd_setup_clock(true) in ufshcd_hba_init() thus
--- 
-2.18.0
+If you're building an embedded AP, you don't need any low power offloads
+and may want to support more than 32 clients, so you'd disable this
+configuration option.
+
+If you run the driver on a laptop or desktop machine, you will most
+likely stick to the default.
+
+If you want to switch without recompiling, you can always just delete
+the set of firmware files you don't want to use. The driver will fall
+back to the other type.
+
+- Felix
+
 _______________________________________________
 Linux-mediatek mailing list
 Linux-mediatek@lists.infradead.org
