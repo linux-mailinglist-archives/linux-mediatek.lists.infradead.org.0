@@ -2,83 +2,80 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id ED08E1BBBF5
-	for <lists+linux-mediatek@lfdr.de>; Tue, 28 Apr 2020 13:08:20 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 9A6EF1BBC25
+	for <lists+linux-mediatek@lfdr.de>; Tue, 28 Apr 2020 13:15:30 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:In-Reply-To:
-	Date:References:Subject:To:From:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=EaYTHI7HvWV0jC4XEJTIhKqlF27+L8/cckzYekBLf/0=; b=MK7FYwTOQtb2ZX
-	e3NT16zb9RhV0DSMEKAKNECkmRRdpPqWfEjGAEWY1EphKxweZ4LubGh5IeVdSiydMPVGrKnGj7yJ6
-	NnpnWAkL9sLu368QiCpOvAj7OzBirH6fWqjKRvOr4S0aLKwVziybI/aQ4USYPrD2rudfulisqNv1G
-	n/DOyECG3DSndn4kv3H2GlcFO18h9OS6KtbYhy34+bpnNN8H8PcamXmSSUAHopxDDkZG+Wa8VvZNX
-	8A+qPYQdUZODzDt/QLIFBsj5h8o21YwIipGwN9QenbMMH8XM6Z/76t3K7h260SwWK4nDBPY9ou1+l
-	uY2UeI4Q532SWU5YNVDw==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=HAShJdkMgfJqksXbUvDIeWDlZXCycdS1eBcWRT6qlx8=; b=qCJsfrW3XvgFse
+	Bj3xzYjKWF1SaXptMzFzQBYHkFjQQv3aJzIEs+9czW7MYtnCPIxmWtHzMWCbs/b6WYaR1IuB+qMUu
+	rTtklvm+CPhHQUSYBVGNNJWxCCu1vhBKC681MERSbjvv5tRlMFarD2hQvybm+FhhHYYSkgPr3lYc+
+	hycOsJROVaYb+irXvCkwDanjZ/dumLXG527UOQeSnlw0c2L7a2YZx8uAboAS33JVVRJlK3DZkYDDe
+	6D7Y+Dg44SMM/kFcQG9tMzKUUmwfSmo87o9Xtr/N7YSD/K0efOC+l6WYXxbyxBdqwjCj+Qf0fZUIN
+	jGSTr2jadgvxg4vnpt1g==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jTO62-0003ZA-Fe; Tue, 28 Apr 2020 11:08:14 +0000
-Received: from mail27.static.mailgun.info ([104.130.122.27])
+	id 1jTOCy-0001wV-3G; Tue, 28 Apr 2020 11:15:24 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jTO5x-0003Y2-9d
- for linux-mediatek@lists.infradead.org; Tue, 28 Apr 2020 11:08:12 +0000
-DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=mg.codeaurora.org;
- q=dns/txt; 
- s=smtp; t=1588072090; h=Content-Type: MIME-Version: Message-ID:
- In-Reply-To: Date: References: Subject: Cc: To: From: Sender;
- bh=fl4Alxu4pKzzxjaUtTsHaIHRPRq5mkpRWAVTtpGhavE=;
- b=frRLy30h8eLLFYPUPmTbpvmr/BCPnlWtrPzmHe3t3zD6d3XZ4r/EXBl57mk3LvfBjaCdhmtu
- SG0ckEt7dlJLPRJeX8aAKCAwLy59wBQ0UvpmAYnN+if4rg/B0AUxApZ7rGofC8HYomkW73ql
- 1kpJaPopWTZA16NESbkihpz+pTI=
-X-Mailgun-Sending-Ip: 104.130.122.27
-X-Mailgun-Sid: WyI0ZDIyMyIsICJsaW51eC1tZWRpYXRla0BsaXN0cy5pbmZyYWRlYWQub3JnIiwgImJlOWU0YSJd
-Received: from smtp.codeaurora.org
- (ec2-35-166-182-171.us-west-2.compute.amazonaws.com [35.166.182.171])
- by mxa.mailgun.org with ESMTP id 5ea80e89.7fa3e07a9308-smtp-out-n05;
- Tue, 28 Apr 2020 11:07:53 -0000 (UTC)
-Received: by smtp.codeaurora.org (Postfix, from userid 1001)
- id 90856C43637; Tue, 28 Apr 2020 11:07:53 +0000 (UTC)
-X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
- aws-us-west-2-caf-mail-1.web.codeaurora.org
-X-Spam-Level: 
-X-Spam-Status: No, score=-1.0 required=2.0 tests=ALL_TRUSTED,SPF_NONE
- autolearn=unavailable autolearn_force=no version=3.4.0
-Received: from tynnyri.adurom.net (tynnyri.adurom.net [51.15.11.48])
- (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
- (No client certificate requested) (Authenticated sender: kvalo)
- by smtp.codeaurora.org (Postfix) with ESMTPSA id A921EC433CB;
- Tue, 28 Apr 2020 11:07:51 +0000 (UTC)
-DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org A921EC433CB
-Authentication-Results: aws-us-west-2-caf-mail-1.web.codeaurora.org;
- dmarc=none (p=none dis=none) header.from=codeaurora.org
-Authentication-Results: aws-us-west-2-caf-mail-1.web.codeaurora.org;
- spf=none smtp.mailfrom=kvalo@codeaurora.org
-From: Kalle Valo <kvalo@codeaurora.org>
-To: Lorenzo Bianconi <lorenzo@kernel.org>
-Subject: Re: [PATCH] mt76: mt7663: add the possibility to load firmware v2
-References: <db72b648024aba3243ee3b7deceb548c9bc2bdf1.1587911939.git.lorenzo@kernel.org>
-Date: Tue, 28 Apr 2020 14:07:49 +0300
-In-Reply-To: <db72b648024aba3243ee3b7deceb548c9bc2bdf1.1587911939.git.lorenzo@kernel.org>
- (Lorenzo Bianconi's message of "Sun, 26 Apr 2020 16:40:18 +0200")
-Message-ID: <87ftcnj2be.fsf@tynnyri.adurom.net>
-User-Agent: Gnus/5.13 (Gnus v5.13) Emacs/26.1 (gnu/linux)
+ id 1jTOBs-00072g-28; Tue, 28 Apr 2020 11:14:17 +0000
+X-UUID: 51e8df7d3a494bcdb97a8490f5a3b99b-20200428
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
+ s=dk; 
+ h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:Subject:CC:To:From;
+ bh=QzA8ce3Zb+Cb5FxfMleVNOR9S7PdPbiRGLtF5i51lXI=; 
+ b=AYudQjFw9TXnD90EGOP+OamtJm++6VgOE/utM5rRaCMSE8x2dGoM2BObN87B6jf1Br6+MrAQ1VUEfpGrzcYY0s+v0q/O4CsB4xbnZjeTYYtfbVfyKzTwJhlPVsMaF6YxpCeLdNUy44685eBMNJDZHnGpfqE0GpV7TXDVy7x6SwY=;
+X-UUID: 51e8df7d3a494bcdb97a8490f5a3b99b-20200428
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
+ (envelope-from <stanley.chu@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 1553890403; Tue, 28 Apr 2020 03:14:07 -0800
+Received: from MTKMBS02N2.mediatek.inc (172.21.101.101) by
+ MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
+ 15.0.1497.2; Tue, 28 Apr 2020 04:14:09 -0700
+Received: from mtkcas07.mediatek.inc (172.21.101.84) by
+ mtkmbs02n2.mediatek.inc (172.21.101.101) with Microsoft SMTP Server (TLS) id
+ 15.0.1497.2; Tue, 28 Apr 2020 19:13:55 +0800
+Received: from mtksdccf07.mediatek.inc (172.21.84.99) by mtkcas07.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1497.2 via
+ Frontend Transport; Tue, 28 Apr 2020 19:13:53 +0800
+From: Stanley Chu <stanley.chu@mediatek.com>
+To: <linux-scsi@vger.kernel.org>, <martin.petersen@oracle.com>,
+ <avri.altman@wdc.com>, <alim.akhtar@samsung.com>, <jejb@linux.ibm.com>,
+ <asutoshd@codeaurora.org>
+Subject: [PATCH v1 0/4] scsi: ufs: support LU Dedicated buffer type for
+ WriteBooster
+Date: Tue, 28 Apr 2020 19:13:51 +0800
+Message-ID: <20200428111355.1776-1-stanley.chu@mediatek.com>
+X-Mailer: git-send-email 2.18.0
 MIME-Version: 1.0
+X-TM-SNTS-SMTP: 8D70ACAEADA4D6AFA83B01F72597E6A176F44B5E34CCE1D0C1C0C49672F72A882000:8
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200428_040810_967374_D37154E1 
-X-CRM114-Status: GOOD (  16.32  )
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20200428_041416_107258_FDBB20B2 
+X-CRM114-Status: UNSURE (   5.58  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [104.130.122.27 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.0 MIME_BASE64_TEXT       RAW: Message text disguised using base64
+ encoding
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -90,58 +87,37 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: linux-mediatek@lists.infradead.org, lorenzo.bianconi@redhat.com,
- sean.wang@mediatek.com, linux-wireless@vger.kernel.org, nbd@nbd.name
+Cc: bvanassche@acm.org, andy.teng@mediatek.com, chun-hung.wu@mediatek.com,
+ kuohong.wang@mediatek.com, linux-kernel@vger.kernel.org, cang@codeaurora.org,
+ linux-mediatek@lists.infradead.org, peter.wang@mediatek.com,
+ matthias.bgg@gmail.com, Stanley Chu <stanley.chu@mediatek.com>,
+ linux-arm-kernel@lists.infradead.org, beanhuo@micron.com
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Lorenzo Bianconi <lorenzo@kernel.org> writes:
+Hi,
 
-> mt7663 firmware v2 is used for embedded devices since it has more completed
-> features in AP mode.
-> Add the capability to specify in mt7615 Kconfig which firmware load first
-> (v3 or v2) and fallback to the other one if the selected firmware fails
-> to load
->
-> Signed-off-by: Lorenzo Bianconi <lorenzo@kernel.org>
-> ---
->  .../net/wireless/mediatek/mt76/mt7615/Kconfig | 13 +++++
->  .../net/wireless/mediatek/mt76/mt7615/mcu.c   | 50 ++++++++++++++++---
->  .../wireless/mediatek/mt76/mt7615/mt7615.h    |  6 ++-
->  .../net/wireless/mediatek/mt76/mt7615/pci.c   |  2 +
->  .../net/wireless/mediatek/mt76/mt7615/usb.c   |  2 +
->  5 files changed, 65 insertions(+), 8 deletions(-)
->
-> diff --git a/drivers/net/wireless/mediatek/mt76/mt7615/Kconfig b/drivers/net/wireless/mediatek/mt76/mt7615/Kconfig
-> index e25db1135eda..c04d6a182bf0 100644
-> --- a/drivers/net/wireless/mediatek/mt76/mt7615/Kconfig
-> +++ b/drivers/net/wireless/mediatek/mt76/mt7615/Kconfig
-> @@ -38,3 +38,16 @@ config MT7663U
->  	  This adds support for MT7663U 802.11ax 2x2:2 wireless devices.
->  
->  	  To compile this driver as a module, choose M here.
-> +
-> +config MT7615_OFFLOAD_FIRMWARE
-> +	bool "Prefer client mode offload firmware (MT7663)"
-> +	depends on MT7615E || MT7663U
-> +	default y
-> +	help
-> +	  Load MT7663 client mode offload firmware (v3) as primary option
-> +	  and fallback to MT7663 firmware v2 in case of failure.
-> +	  If MT7615_OFFLOAD_FIRMWARE is not selected MT7663 firmware v2
-> +	  will be used as primary option.
-> +	  MT7663 client mode offload firmware supports low power features
-> +	  (hw frequency scanning, scheduled frequency scanning, WoW,
-> +	  802.11 power save) but is more limited in AP mode
+This patchset adds LU dedicated buffer type support for WriteBooster.
 
-Why does this need a compile time config? Wouldn't some kind of runtime
-configuration be better?
+In the meanwhile, enable WriteBooster capability on MediaTek UFS platforms.
+
+Stanley Chu (4):
+  scsi: ufs: allow legacy UFS devices to enable WriteBooster
+  scsi: ufs: add "index" in parameter list of ufshcd_query_flag()
+  scsi: ufs: add LU Dedicated buffer type support for WriteBooster
+  scsi: ufs-mediatek: enable WriteBooster capability
+
+ drivers/scsi/ufs/ufs-mediatek.c |  3 +
+ drivers/scsi/ufs/ufs-sysfs.c    |  2 +-
+ drivers/scsi/ufs/ufs.h          |  7 +++
+ drivers/scsi/ufs/ufshcd.c       | 98 +++++++++++++++++++++++++--------
+ drivers/scsi/ufs/ufshcd.h       |  2 +-
+ 5 files changed, 86 insertions(+), 26 deletions(-)
 
 -- 
-https://wireless.wiki.kernel.org/en/developers/documentation/submittingpatches
-
+2.18.0
 _______________________________________________
 Linux-mediatek mailing list
 Linux-mediatek@lists.infradead.org
