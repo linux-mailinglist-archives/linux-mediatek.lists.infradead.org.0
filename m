@@ -2,29 +2,29 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id D22241BDE07
-	for <lists+linux-mediatek@lfdr.de>; Wed, 29 Apr 2020 15:38:24 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 0D1311BDDD6
+	for <lists+linux-mediatek@lfdr.de>; Wed, 29 Apr 2020 15:37:55 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
-	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Message-Id:Date:
-	Subject:To:From:Reply-To:Content-ID:Content-Description:Resent-Date:
-	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
-	References:List-Owner; bh=FIxLAGYfnI3XfcJM8haSjYsQI9s7im2F1ZUR++dfwLI=; b=anH
-	5xt/fpkTV83rD24tms0FqEopQpMwtofLkM6H6m8vswW1BlFtKR4MOLC/SCF3xu7qc7DYsvrzhGoim
-	k6uURzk7oD8uHcCwY8sOgP35KYe4snXJd8M1Eg3NXu4e/QTyhFV/EsKWu47dq7kxvcRHTKl6zhNVm
-	tZcVwmikukUHszbmmTET62I28QGitqiiDA6AttO8pm9UQWfFFRBKDAiBe2C5MAj/1melrb0jEQ9ta
-	+X8p22I5QtWMThLdQEoZzgpasoDzxJW5j0F/lL7AxtXHXUXcJFTIv2b6WjLkTPvJWikWNrmG5/2BA
-	LStQxuhR3jFueiBizvlOYweFcEcuVdg==;
+	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:References:
+	In-Reply-To:Message-Id:Date:Subject:To:From:Reply-To:Content-ID:
+	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
+	:Resent-Message-ID:List-Owner;
+	bh=cGMjNj6obVEcUmUO+EevgNeJCtP+TlYgZuQj1IRYo5Q=; b=rDWsqMzTudOBlmvRo/U7QIil9p
+	d9JUubpENhmZ8ggdeCbF/ZYMydJB70BKFl7vCEmCyG07e5fVcyhwFO0uAmWZ/6FwO7NBxto5hBYyN
+	XKm1BfpRkYQD1wCvYn6de57Kz/lIkMMdR667TDhBlRHjTh/QYuMWztA2QIpoW/BXEwa+I5glrtzvj
+	wB5pIQYY00J347jjECUcGkVkz8nD1tvvV+qmVfPhfJdiRYDrqaKICARE2Hi0JsRkBtBQ4IR230/Zr
+	0jygGWQucx3i2la7OOfY6Zh80lxTYSg+sFASSUgFBzPUxa4hhpPPID//tyhFZ+4ZEq5A7U4TOBQ8E
+	WZiCMdcQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jTmup-0006t1-23; Wed, 29 Apr 2020 13:38:19 +0000
-Received: from 8bytes.org ([2a01:238:4383:600:38bc:a715:4b6d:a889]
- helo=theia.8bytes.org)
+	id 1jTmuI-0006FY-CV; Wed, 29 Apr 2020 13:37:46 +0000
+Received: from 8bytes.org ([81.169.241.247] helo=theia.8bytes.org)
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jTmuF-0006CM-1o; Wed, 29 Apr 2020 13:37:46 +0000
+ id 1jTmuE-0006CN-Vw; Wed, 29 Apr 2020 13:37:44 +0000
 Received: by theia.8bytes.org (Postfix, from userid 1000)
- id 49DD72E2; Wed, 29 Apr 2020 15:37:35 +0200 (CEST)
+ id 545071AF; Wed, 29 Apr 2020 15:37:35 +0200 (CEST)
 From: Joerg Roedel <joro@8bytes.org>
 To: Joerg Roedel <joro@8bytes.org>, Will Deacon <will@kernel.org>,
  Robin Murphy <robin.murphy@arm.com>,
@@ -39,18 +39,23 @@ To: Joerg Roedel <joro@8bytes.org>, Will Deacon <will@kernel.org>,
  Thierry Reding <thierry.reding@gmail.com>,
  Jonathan Hunter <jonathanh@nvidia.com>,
  Jean-Philippe Brucker <jean-philippe@linaro.org>
-Subject: [PATCH v3 00/34] iommu: Move iommu_group setup to IOMMU core code
-Date: Wed, 29 Apr 2020 15:36:38 +0200
-Message-Id: <20200429133712.31431-1-joro@8bytes.org>
+Subject: [PATCH v3 01/34] iommu: Move default domain allocation to separate
+ function
+Date: Wed, 29 Apr 2020 15:36:39 +0200
+Message-Id: <20200429133712.31431-2-joro@8bytes.org>
 X-Mailer: git-send-email 2.17.1
+In-Reply-To: <20200429133712.31431-1-joro@8bytes.org>
+References: <20200429133712.31431-1-joro@8bytes.org>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200429_063743_398744_C8401725 
-X-CRM114-Status: GOOD (  11.00  )
+X-CRM114-CacheID: sfid-20200429_063743_188819_613B384B 
+X-CRM114-Status: GOOD (  14.86  )
 X-Spam-Score: -0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  Content analysis details:   (-0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [81.169.241.247 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
 X-BeenThere: linux-mediatek@lists.infradead.org
@@ -67,108 +72,124 @@ List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>,
 Cc: linux-s390@vger.kernel.org, linux-samsung-soc@vger.kernel.org,
  linux-arm-msm@vger.kernel.org, linux-kernel@vger.kernel.org,
  Daniel Drake <drake@endlessm.com>, linux-rockchip@lists.infradead.org,
- iommu@lists.linux-foundation.org, linux-mediatek@lists.infradead.org,
- linux-tegra@vger.kernel.org, virtualization@lists.linux-foundation.org,
- jonathan.derrick@intel.com
+ iommu@lists.linux-foundation.org, Joerg Roedel <jroedel@suse.de>,
+ linux-mediatek@lists.infradead.org, linux-tegra@vger.kernel.org,
+ virtualization@lists.linux-foundation.org, jonathan.derrick@intel.com
 MIME-Version: 1.0
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi,
+From: Joerg Roedel <jroedel@suse.de>
 
-here is the third version of this patch-set. Older versions can be found
-here:
+Move the code out of iommu_group_get_for_dev() into a separate
+function.
 
-	v1: https://lore.kernel.org/lkml/20200407183742.4344-1-joro@8bytes.org/
-	    (Has some more introductory text)
+Tested-by: Marek Szyprowski <m.szyprowski@samsung.com>
+Acked-by: Marek Szyprowski <m.szyprowski@samsung.com>
+Signed-off-by: Joerg Roedel <jroedel@suse.de>
+---
+ drivers/iommu/iommu.c | 74 ++++++++++++++++++++++++++-----------------
+ 1 file changed, 45 insertions(+), 29 deletions(-)
 
-	v2: https://lore.kernel.org/lkml/20200414131542.25608-1-joro@8bytes.org/
-
-Changes v2 -> v3:
-
-	* Rebased v5.7-rc3
-
-	* Added a missing iommu_group_put() as reported by Lu Baolu.
-
-	* Added a patch to consolidate more initialization work in
-	  __iommu_probe_device(), fixing a bug where no 'struct
-	  device_iommu' was allocated in the hotplug path.
-
-There is also a git-branch available with these patches applied:
-
-	https://git.kernel.org/pub/scm/linux/kernel/git/joro/linux.git/log/?h=iommu-probe-device-v3
-
-Please review. If there are no objections I plan to put these patches
-into the IOMMU tree early next week.
-
-Thanks,
-
-	Joerg
-
-Joerg Roedel (33):
-  iommu: Move default domain allocation to separate function
-  iommu/amd: Implement iommu_ops->def_domain_type call-back
-  iommu/vt-d: Wire up iommu_ops->def_domain_type
-  iommu/amd: Remove dma_mask check from check_device()
-  iommu/amd: Return -ENODEV in add_device when device is not handled by
-    IOMMU
-  iommu: Add probe_device() and release_device() call-backs
-  iommu: Move default domain allocation to iommu_probe_device()
-  iommu: Keep a list of allocated groups in __iommu_probe_device()
-  iommu: Move new probe_device path to separate function
-  iommu: Split off default domain allocation from group assignment
-  iommu: Move iommu_group_create_direct_mappings() out of
-    iommu_group_add_device()
-  iommu: Export bus_iommu_probe() and make is safe for re-probing
-  iommu/amd: Remove dev_data->passthrough
-  iommu/amd: Convert to probe/release_device() call-backs
-  iommu/vt-d: Convert to probe/release_device() call-backs
-  iommu/arm-smmu: Convert to probe/release_device() call-backs
-  iommu/pamu: Convert to probe/release_device() call-backs
-  iommu/s390: Convert to probe/release_device() call-backs
-  iommu/virtio: Convert to probe/release_device() call-backs
-  iommu/msm: Convert to probe/release_device() call-backs
-  iommu/mediatek: Convert to probe/release_device() call-backs
-  iommu/mediatek-v1 Convert to probe/release_device() call-backs
-  iommu/qcom: Convert to probe/release_device() call-backs
-  iommu/rockchip: Convert to probe/release_device() call-backs
-  iommu/tegra: Convert to probe/release_device() call-backs
-  iommu/renesas: Convert to probe/release_device() call-backs
-  iommu/omap: Remove orphan_dev tracking
-  iommu/omap: Convert to probe/release_device() call-backs
-  iommu/exynos: Use first SYSMMU in controllers list for IOMMU core
-  iommu/exynos: Convert to probe/release_device() call-backs
-  iommu: Remove add_device()/remove_device() code-paths
-  iommu: Move more initialization to __iommu_probe_device()
-  iommu: Unexport iommu_group_get_for_dev()
-
-Sai Praneeth Prakhya (1):
-  iommu: Add def_domain_type() callback in iommu_ops
-
- drivers/iommu/amd_iommu.c       |  97 ++++----
- drivers/iommu/amd_iommu_types.h |   1 -
- drivers/iommu/arm-smmu-v3.c     |  38 +---
- drivers/iommu/arm-smmu.c        |  39 ++--
- drivers/iommu/exynos-iommu.c    |  24 +-
- drivers/iommu/fsl_pamu_domain.c |  22 +-
- drivers/iommu/intel-iommu.c     |  68 +-----
- drivers/iommu/iommu.c           | 387 +++++++++++++++++++++++++-------
- drivers/iommu/ipmmu-vmsa.c      |  60 ++---
- drivers/iommu/msm_iommu.c       |  34 +--
- drivers/iommu/mtk_iommu.c       |  24 +-
- drivers/iommu/mtk_iommu_v1.c    |  50 ++---
- drivers/iommu/omap-iommu.c      |  99 ++------
- drivers/iommu/qcom_iommu.c      |  24 +-
- drivers/iommu/rockchip-iommu.c  |  26 +--
- drivers/iommu/s390-iommu.c      |  22 +-
- drivers/iommu/tegra-gart.c      |  24 +-
- drivers/iommu/tegra-smmu.c      |  31 +--
- drivers/iommu/virtio-iommu.c    |  41 +---
- include/linux/iommu.h           |  21 +-
- 20 files changed, 531 insertions(+), 601 deletions(-)
-
+diff --git a/drivers/iommu/iommu.c b/drivers/iommu/iommu.c
+index 2b471419e26c..bfe011760ed1 100644
+--- a/drivers/iommu/iommu.c
++++ b/drivers/iommu/iommu.c
+@@ -1361,6 +1361,41 @@ struct iommu_group *fsl_mc_device_group(struct device *dev)
+ }
+ EXPORT_SYMBOL_GPL(fsl_mc_device_group);
+ 
++static int iommu_alloc_default_domain(struct device *dev,
++				      struct iommu_group *group)
++{
++	struct iommu_domain *dom;
++
++	if (group->default_domain)
++		return 0;
++
++	dom = __iommu_domain_alloc(dev->bus, iommu_def_domain_type);
++	if (!dom && iommu_def_domain_type != IOMMU_DOMAIN_DMA) {
++		dom = __iommu_domain_alloc(dev->bus, IOMMU_DOMAIN_DMA);
++		if (dom) {
++			dev_warn(dev,
++				 "failed to allocate default IOMMU domain of type %u; falling back to IOMMU_DOMAIN_DMA",
++				 iommu_def_domain_type);
++		}
++	}
++
++	if (!dom)
++		return -ENOMEM;
++
++	group->default_domain = dom;
++	if (!group->domain)
++		group->domain = dom;
++
++	if (!iommu_dma_strict) {
++		int attr = 1;
++		iommu_domain_set_attr(dom,
++				      DOMAIN_ATTR_DMA_USE_FLUSH_QUEUE,
++				      &attr);
++	}
++
++	return 0;
++}
++
+ /**
+  * iommu_group_get_for_dev - Find or create the IOMMU group for a device
+  * @dev: target device
+@@ -1393,40 +1428,21 @@ struct iommu_group *iommu_group_get_for_dev(struct device *dev)
+ 
+ 	/*
+ 	 * Try to allocate a default domain - needs support from the
+-	 * IOMMU driver.
++	 * IOMMU driver. There are still some drivers which don't support
++	 * default domains, so the return value is not yet checked.
+ 	 */
+-	if (!group->default_domain) {
+-		struct iommu_domain *dom;
+-
+-		dom = __iommu_domain_alloc(dev->bus, iommu_def_domain_type);
+-		if (!dom && iommu_def_domain_type != IOMMU_DOMAIN_DMA) {
+-			dom = __iommu_domain_alloc(dev->bus, IOMMU_DOMAIN_DMA);
+-			if (dom) {
+-				dev_warn(dev,
+-					 "failed to allocate default IOMMU domain of type %u; falling back to IOMMU_DOMAIN_DMA",
+-					 iommu_def_domain_type);
+-			}
+-		}
+-
+-		group->default_domain = dom;
+-		if (!group->domain)
+-			group->domain = dom;
+-
+-		if (dom && !iommu_dma_strict) {
+-			int attr = 1;
+-			iommu_domain_set_attr(dom,
+-					      DOMAIN_ATTR_DMA_USE_FLUSH_QUEUE,
+-					      &attr);
+-		}
+-	}
++	iommu_alloc_default_domain(dev, group);
+ 
+ 	ret = iommu_group_add_device(group, dev);
+-	if (ret) {
+-		iommu_group_put(group);
+-		return ERR_PTR(ret);
+-	}
++	if (ret)
++		goto out_put_group;
+ 
+ 	return group;
++
++out_put_group:
++	iommu_group_put(group);
++
++	return ERR_PTR(ret);
+ }
+ EXPORT_SYMBOL(iommu_group_get_for_dev);
+ 
 -- 
 2.17.1
 
