@@ -2,80 +2,57 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 211981BDD53
-	for <lists+linux-mediatek@lfdr.de>; Wed, 29 Apr 2020 15:16:02 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id D22241BDE07
+	for <lists+linux-mediatek@lfdr.de>; Wed, 29 Apr 2020 15:38:24 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=hKCvFtcFtVH3/VdEOso3s2Mp3/e3njsLtrUqpt5Hons=; b=tQ+4cbCmh47Drz
-	s5C50orhguF2uR8+FuuTmKm3oWgBZBoj7LYCLnFUxaYQv2KWzg0U3IP9Ce5mrzsePSsYVReojEA0J
-	ubS61f01lllelGx+cJiSGZdOwZs2gnH98BAVvTVfC3Mm7eg/EDW2LsDBIVH3iKux6bl7PmnTKpV6i
-	TcM4UXueWRfVVsdpWTp2r5vONmg9zsdPF4ZSIlWceB/1ikv7blMLUMHqQTgFf4CXo//IL2zK2Y+Hj
-	zavwn+olCk5VoZva93IrwQCnKHIzDv+ADxZQ0zhq92sZsRng3ENr2l5+yEhpK89G+CHBkl1WEMD3T
-	QuF3p7skD6xorpv706xg==;
+	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
+	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Message-Id:Date:
+	Subject:To:From:Reply-To:Content-ID:Content-Description:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+	References:List-Owner; bh=FIxLAGYfnI3XfcJM8haSjYsQI9s7im2F1ZUR++dfwLI=; b=anH
+	5xt/fpkTV83rD24tms0FqEopQpMwtofLkM6H6m8vswW1BlFtKR4MOLC/SCF3xu7qc7DYsvrzhGoim
+	k6uURzk7oD8uHcCwY8sOgP35KYe4snXJd8M1Eg3NXu4e/QTyhFV/EsKWu47dq7kxvcRHTKl6zhNVm
+	tZcVwmikukUHszbmmTET62I28QGitqiiDA6AttO8pm9UQWfFFRBKDAiBe2C5MAj/1melrb0jEQ9ta
+	+X8p22I5QtWMThLdQEoZzgpasoDzxJW5j0F/lL7AxtXHXUXcJFTIv2b6WjLkTPvJWikWNrmG5/2BA
+	LStQxuhR3jFueiBizvlOYweFcEcuVdg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jTmYx-0003YC-9b; Wed, 29 Apr 2020 13:15:43 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
+	id 1jTmup-0006t1-23; Wed, 29 Apr 2020 13:38:19 +0000
+Received: from 8bytes.org ([2a01:238:4383:600:38bc:a715:4b6d:a889]
+ helo=theia.8bytes.org)
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jTmYk-0003NC-V4; Wed, 29 Apr 2020 13:15:32 +0000
-X-UUID: f9da96a498344fc289dd043ad1045506-20200429
-DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
- s=dk; 
- h=Content-Transfer-Encoding:MIME-Version:Content-Type:References:In-Reply-To:Date:CC:To:From:Subject:Message-ID;
- bh=PNI0WDJmz/9JD0UtP8DMHGZ8r8zpffAaucvWKOp0H/M=; 
- b=VlACrPdzGlk4pWpXWSA3twIItfS+zLbZwllyohmvhu3rW8OE30iE05HMdM3lWsxkQdQP0exRENm27vJNNV+XP+EIzmPheshVam/XdhXlKgw5hWGAyBGvf7WPzzLhr2agwghH6iOxMXpkQ3j6t6BUBicxZx/bAYQyf66SG86x9HA=;
-X-UUID: f9da96a498344fc289dd043ad1045506-20200429
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
- (envelope-from <stanley.chu@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 851175677; Wed, 29 Apr 2020 05:16:24 -0800
-Received: from MTKMBS02N2.mediatek.inc (172.21.101.101) by
- MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
- 15.0.1497.2; Wed, 29 Apr 2020 06:05:19 -0700
-Received: from mtkcas08.mediatek.inc (172.21.101.126) by
- mtkmbs02n2.mediatek.inc (172.21.101.101) with Microsoft SMTP Server (TLS) id
- 15.0.1497.2; Wed, 29 Apr 2020 21:05:04 +0800
-Received: from [172.21.77.33] (172.21.77.33) by mtkcas08.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1497.2 via Frontend
- Transport; Wed, 29 Apr 2020 21:05:03 +0800
-Message-ID: <1588165506.3197.0.camel@mtkswgap22>
-Subject: Re: [PATCH v1 3/4] scsi: ufs: add LU Dedicated buffer type support
- for WriteBooster
-From: Stanley Chu <stanley.chu@mediatek.com>
-To: "Bean Huo (beanhuo)" <beanhuo@micron.com>
-Date: Wed, 29 Apr 2020 21:05:06 +0800
-In-Reply-To: <BN7PR08MB5684630793F03282E4C6F3D7DBAD0@BN7PR08MB5684.namprd08.prod.outlook.com>
-References: <20200428111355.1776-1-stanley.chu@mediatek.com>
- <20200428111355.1776-4-stanley.chu@mediatek.com>
- <BN7PR08MB5684630793F03282E4C6F3D7DBAD0@BN7PR08MB5684.namprd08.prod.outlook.com>
-X-Mailer: Evolution 3.2.3-0ubuntu6 
-MIME-Version: 1.0
-X-TM-SNTS-SMTP: 93D7F8DB1FC187A36CBACEF22410B86BFB7E58962EFD80A220FFCC8E333837BA2000:8
-X-MTK: N
+ id 1jTmuF-0006CM-1o; Wed, 29 Apr 2020 13:37:46 +0000
+Received: by theia.8bytes.org (Postfix, from userid 1000)
+ id 49DD72E2; Wed, 29 Apr 2020 15:37:35 +0200 (CEST)
+From: Joerg Roedel <joro@8bytes.org>
+To: Joerg Roedel <joro@8bytes.org>, Will Deacon <will@kernel.org>,
+ Robin Murphy <robin.murphy@arm.com>,
+ Marek Szyprowski <m.szyprowski@samsung.com>, Kukjin Kim <kgene@kernel.org>,
+ Krzysztof Kozlowski <krzk@kernel.org>,
+ David Woodhouse <dwmw2@infradead.org>, Lu Baolu <baolu.lu@linux.intel.com>,
+ Andy Gross <agross@kernel.org>,
+ Bjorn Andersson <bjorn.andersson@linaro.org>,
+ Matthias Brugger <matthias.bgg@gmail.com>, Rob Clark <robdclark@gmail.com>,
+ Heiko Stuebner <heiko@sntech.de>,
+ Gerald Schaefer <gerald.schaefer@de.ibm.com>,
+ Thierry Reding <thierry.reding@gmail.com>,
+ Jonathan Hunter <jonathanh@nvidia.com>,
+ Jean-Philippe Brucker <jean-philippe@linaro.org>
+Subject: [PATCH v3 00/34] iommu: Move iommu_group setup to IOMMU core code
+Date: Wed, 29 Apr 2020 15:36:38 +0200
+Message-Id: <20200429133712.31431-1-joro@8bytes.org>
+X-Mailer: git-send-email 2.17.1
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200429_061531_010334_7AA3850B 
-X-CRM114-Status: UNSURE (   8.81  )
-X-CRM114-Notice: Please train this message.
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20200429_063743_398744_C8401725 
+X-CRM114-Status: GOOD (  11.00  )
+X-Spam-Score: -0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (-0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
+ -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -87,46 +64,114 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: "linux-scsi@vger.kernel.org" <linux-scsi@vger.kernel.org>,
- "martin.petersen@oracle.com" <martin.petersen@oracle.com>,
- "andy.teng@mediatek.com" <andy.teng@mediatek.com>,
- "jejb@linux.ibm.com" <jejb@linux.ibm.com>,
- "chun-hung.wu@mediatek.com" <chun-hung.wu@mediatek.com>,
- "kuohong.wang@mediatek.com" <kuohong.wang@mediatek.com>,
- "linux-kernel@vger.kernel.org" <linux-kernel@vger.kernel.org>,
- "avri.altman@wdc.com" <avri.altman@wdc.com>,
- "cang@codeaurora.org" <cang@codeaurora.org>,
- "linux-mediatek@lists.infradead.org" <linux-mediatek@lists.infradead.org>,
- "peter.wang@mediatek.com" <peter.wang@mediatek.com>,
- "alim.akhtar@samsung.com" <alim.akhtar@samsung.com>,
- "matthias.bgg@gmail.com" <matthias.bgg@gmail.com>,
- "bvanassche@acm.org" <bvanassche@acm.org>,
- "linux-arm-kernel@lists.infradead.org" <linux-arm-kernel@lists.infradead.org>,
- "asutoshd@codeaurora.org" <asutoshd@codeaurora.org>
+Cc: linux-s390@vger.kernel.org, linux-samsung-soc@vger.kernel.org,
+ linux-arm-msm@vger.kernel.org, linux-kernel@vger.kernel.org,
+ Daniel Drake <drake@endlessm.com>, linux-rockchip@lists.infradead.org,
+ iommu@lists.linux-foundation.org, linux-mediatek@lists.infradead.org,
+ linux-tegra@vger.kernel.org, virtualization@lists.linux-foundation.org,
+ jonathan.derrick@intel.com
+MIME-Version: 1.0
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi Bean,
+Hi,
 
-On Wed, 2020-04-29 at 10:39 +0000, Bean Huo (beanhuo) wrote:
-> > 
-> > +/* WriteBooster buffer type */
-> > +enum {
-> > +	WB_TYPE_LU_DEDICATED	= 0x0,
-> > +	WB_TYPE_SINGLE_SHARED	= 0x1
-> > +};
-> 
-> 
-> Hi,  Stanly
-> WB_TYPE_SINGLE_SHARED might be WB_TYPE_SHARED_BUFFER.  I think,
-> we should try to make the name definition correspond to Spec
+here is the third version of this patch-set. Older versions can be found
+here:
 
-Make sense. I will fix this in next version.
+	v1: https://lore.kernel.org/lkml/20200407183742.4344-1-joro@8bytes.org/
+	    (Has some more introductory text)
+
+	v2: https://lore.kernel.org/lkml/20200414131542.25608-1-joro@8bytes.org/
+
+Changes v2 -> v3:
+
+	* Rebased v5.7-rc3
+
+	* Added a missing iommu_group_put() as reported by Lu Baolu.
+
+	* Added a patch to consolidate more initialization work in
+	  __iommu_probe_device(), fixing a bug where no 'struct
+	  device_iommu' was allocated in the hotplug path.
+
+There is also a git-branch available with these patches applied:
+
+	https://git.kernel.org/pub/scm/linux/kernel/git/joro/linux.git/log/?h=iommu-probe-device-v3
+
+Please review. If there are no objections I plan to put these patches
+into the IOMMU tree early next week.
 
 Thanks,
-Stanley Chu
+
+	Joerg
+
+Joerg Roedel (33):
+  iommu: Move default domain allocation to separate function
+  iommu/amd: Implement iommu_ops->def_domain_type call-back
+  iommu/vt-d: Wire up iommu_ops->def_domain_type
+  iommu/amd: Remove dma_mask check from check_device()
+  iommu/amd: Return -ENODEV in add_device when device is not handled by
+    IOMMU
+  iommu: Add probe_device() and release_device() call-backs
+  iommu: Move default domain allocation to iommu_probe_device()
+  iommu: Keep a list of allocated groups in __iommu_probe_device()
+  iommu: Move new probe_device path to separate function
+  iommu: Split off default domain allocation from group assignment
+  iommu: Move iommu_group_create_direct_mappings() out of
+    iommu_group_add_device()
+  iommu: Export bus_iommu_probe() and make is safe for re-probing
+  iommu/amd: Remove dev_data->passthrough
+  iommu/amd: Convert to probe/release_device() call-backs
+  iommu/vt-d: Convert to probe/release_device() call-backs
+  iommu/arm-smmu: Convert to probe/release_device() call-backs
+  iommu/pamu: Convert to probe/release_device() call-backs
+  iommu/s390: Convert to probe/release_device() call-backs
+  iommu/virtio: Convert to probe/release_device() call-backs
+  iommu/msm: Convert to probe/release_device() call-backs
+  iommu/mediatek: Convert to probe/release_device() call-backs
+  iommu/mediatek-v1 Convert to probe/release_device() call-backs
+  iommu/qcom: Convert to probe/release_device() call-backs
+  iommu/rockchip: Convert to probe/release_device() call-backs
+  iommu/tegra: Convert to probe/release_device() call-backs
+  iommu/renesas: Convert to probe/release_device() call-backs
+  iommu/omap: Remove orphan_dev tracking
+  iommu/omap: Convert to probe/release_device() call-backs
+  iommu/exynos: Use first SYSMMU in controllers list for IOMMU core
+  iommu/exynos: Convert to probe/release_device() call-backs
+  iommu: Remove add_device()/remove_device() code-paths
+  iommu: Move more initialization to __iommu_probe_device()
+  iommu: Unexport iommu_group_get_for_dev()
+
+Sai Praneeth Prakhya (1):
+  iommu: Add def_domain_type() callback in iommu_ops
+
+ drivers/iommu/amd_iommu.c       |  97 ++++----
+ drivers/iommu/amd_iommu_types.h |   1 -
+ drivers/iommu/arm-smmu-v3.c     |  38 +---
+ drivers/iommu/arm-smmu.c        |  39 ++--
+ drivers/iommu/exynos-iommu.c    |  24 +-
+ drivers/iommu/fsl_pamu_domain.c |  22 +-
+ drivers/iommu/intel-iommu.c     |  68 +-----
+ drivers/iommu/iommu.c           | 387 +++++++++++++++++++++++++-------
+ drivers/iommu/ipmmu-vmsa.c      |  60 ++---
+ drivers/iommu/msm_iommu.c       |  34 +--
+ drivers/iommu/mtk_iommu.c       |  24 +-
+ drivers/iommu/mtk_iommu_v1.c    |  50 ++---
+ drivers/iommu/omap-iommu.c      |  99 ++------
+ drivers/iommu/qcom_iommu.c      |  24 +-
+ drivers/iommu/rockchip-iommu.c  |  26 +--
+ drivers/iommu/s390-iommu.c      |  22 +-
+ drivers/iommu/tegra-gart.c      |  24 +-
+ drivers/iommu/tegra-smmu.c      |  31 +--
+ drivers/iommu/virtio-iommu.c    |  41 +---
+ include/linux/iommu.h           |  21 +-
+ 20 files changed, 531 insertions(+), 601 deletions(-)
+
+-- 
+2.17.1
+
 
 _______________________________________________
 Linux-mediatek mailing list
