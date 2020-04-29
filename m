@@ -2,8 +2,8 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 6D7E61BDE8C
-	for <lists+linux-mediatek@lfdr.de>; Wed, 29 Apr 2020 15:39:20 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id D87EF1BDEAF
+	for <lists+linux-mediatek@lfdr.de>; Wed, 29 Apr 2020 15:39:53 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
@@ -11,20 +11,21 @@ DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	In-Reply-To:Message-Id:Date:Subject:To:From:Reply-To:Content-ID:
 	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
 	:Resent-Message-ID:List-Owner;
-	bh=3X0SGjmEMVXZIyHVYfiuKkBDCzdpE3Xmjlb+JLewgh4=; b=XOgx+7a4xIzX02HHzzQ1Px7Mjf
-	Tvs8lUmByor8F4njAN97/yhV5+Tlaabq/TTSdMPREgkjkD390J9ZnunVbOuOsPYr487Nmsad92kjy
-	tNBvdWxlfzEP0VzTdktQw0dOXErh9szelI0iZbZkVJMJCag4dm4habP997Ma+dqbL8oxD2KqnzncH
-	XdJsDscBsbPf84vqSoma4yNQSftRzzLyQG9lqPzdwreYO34R/OKju1/5v67JoTyqsKiWjZzJCl4cg
-	HZnuwif3UuRc1XpwkbRtWMV/l1YaYpqS42cDvSBrW/L6aLgSfo8xF7rvSQp1sA3ULni2xxgks6OBP
-	PLOYs0Fg==;
+	bh=aQQLiInroiC/9haUgJ78hNOv5Z/QkWSqzNrtk1FWYiQ=; b=QNfvPfH2r4to4ZM9l2ak9Y3zXu
+	9KkcLuMfJ6Ws1bZkG6n9seVdrNCk/j/LLPi7kF5fAx/T9+8bm7CkbWo34RjAyf4gWUdGrcgBIyKz4
+	/yQ1klxe5PReEmO6hDz7IfNdXD3P/tFxDhWPp8/0T+7zdCPoiVlFFU1nY4LYq9JodI/usxp5F3wk5
+	cb98WE91O9tCwg95s/8YECCe6xEvMjR613LIbD6DsG0yAh/wbqZtzSdedIb7zVidNHMcZh48dzZWb
+	2yjmsrOLsriP4FAcQVeyMLVSvX15gzlQ//7gVXpGfC8sS3UAEt+CUmIBdRG7waTw0E/xkn/ktOFOH
+	wn5jWcYA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jTmvi-0008Hh-Su; Wed, 29 Apr 2020 13:39:14 +0000
-Received: from 8bytes.org ([81.169.241.247] helo=theia.8bytes.org)
+	id 1jTmwF-0000bi-Iu; Wed, 29 Apr 2020 13:39:47 +0000
+Received: from 8bytes.org ([2a01:238:4383:600:38bc:a715:4b6d:a889]
+ helo=theia.8bytes.org)
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jTmuS-0006Rt-DK; Wed, 29 Apr 2020 13:38:01 +0000
+ id 1jTmuS-0006Rs-Cs; Wed, 29 Apr 2020 13:38:01 +0000
 Received: by theia.8bytes.org (Postfix, from userid 1000)
- id A52A0F14; Wed, 29 Apr 2020 15:37:41 +0200 (CEST)
+ id E8433F15; Wed, 29 Apr 2020 15:37:41 +0200 (CEST)
 From: Joerg Roedel <joro@8bytes.org>
 To: Joerg Roedel <joro@8bytes.org>, Will Deacon <will@kernel.org>,
  Robin Murphy <robin.murphy@arm.com>,
@@ -39,23 +40,20 @@ To: Joerg Roedel <joro@8bytes.org>, Will Deacon <will@kernel.org>,
  Thierry Reding <thierry.reding@gmail.com>,
  Jonathan Hunter <jonathanh@nvidia.com>,
  Jean-Philippe Brucker <jean-philippe@linaro.org>
-Subject: [PATCH v3 33/34] iommu: Move more initialization to
- __iommu_probe_device()
-Date: Wed, 29 Apr 2020 15:37:11 +0200
-Message-Id: <20200429133712.31431-34-joro@8bytes.org>
+Subject: [PATCH v3 34/34] iommu: Unexport iommu_group_get_for_dev()
+Date: Wed, 29 Apr 2020 15:37:12 +0200
+Message-Id: <20200429133712.31431-35-joro@8bytes.org>
 X-Mailer: git-send-email 2.17.1
 In-Reply-To: <20200429133712.31431-1-joro@8bytes.org>
 References: <20200429133712.31431-1-joro@8bytes.org>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200429_063756_674222_0FD657FD 
-X-CRM114-Status: GOOD (  15.56  )
+X-CRM114-CacheID: sfid-20200429_063756_676571_DC6B20BC 
+X-CRM114-Status: GOOD (  13.23  )
 X-Spam-Score: -0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  Content analysis details:   (-0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [81.169.241.247 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
 X-BeenThere: linux-mediatek@lists.infradead.org
@@ -83,109 +81,58 @@ Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.o
 
 From: Joerg Roedel <jroedel@suse.de>
 
-Move the calls to dev_iommu_get() and try_module_get() into
-__iommu_probe_device(), so that the callers don't have to do it on
-their own.
+The function is now only used in IOMMU core code and shouldn't be used
+outside of it anyway, so remove the export for it.
 
 Tested-by: Marek Szyprowski <m.szyprowski@samsung.com>
 Acked-by: Marek Szyprowski <m.szyprowski@samsung.com>
 Signed-off-by: Joerg Roedel <jroedel@suse.de>
 ---
- drivers/iommu/iommu.c | 47 +++++++++++++++++--------------------------
- 1 file changed, 18 insertions(+), 29 deletions(-)
+ drivers/iommu/iommu.c | 4 ++--
+ include/linux/iommu.h | 1 -
+ 2 files changed, 2 insertions(+), 3 deletions(-)
 
 diff --git a/drivers/iommu/iommu.c b/drivers/iommu/iommu.c
-index 7f99e5ae432c..48a95f7d7999 100644
+index 48a95f7d7999..a9e5618cde80 100644
 --- a/drivers/iommu/iommu.c
 +++ b/drivers/iommu/iommu.c
-@@ -194,9 +194,19 @@ static int __iommu_probe_device(struct device *dev, struct list_head *group_list
- 	struct iommu_group *group;
- 	int ret;
+@@ -91,6 +91,7 @@ static void __iommu_detach_group(struct iommu_domain *domain,
+ 				 struct iommu_group *group);
+ static int iommu_create_device_direct_mappings(struct iommu_group *group,
+ 					       struct device *dev);
++static struct iommu_group *iommu_group_get_for_dev(struct device *dev);
  
-+	if (!dev_iommu_get(dev))
-+		return -ENOMEM;
-+
-+	if (!try_module_get(ops->owner)) {
-+		ret = -EINVAL;
-+		goto err_free;
-+	}
-+
- 	iommu_dev = ops->probe_device(dev);
--	if (IS_ERR(iommu_dev))
--		return PTR_ERR(iommu_dev);
-+	if (IS_ERR(iommu_dev)) {
-+		ret = PTR_ERR(iommu_dev);
-+		goto out_module_put;
-+	}
- 
- 	dev->iommu->iommu_dev = iommu_dev;
- 
-@@ -217,6 +227,12 @@ static int __iommu_probe_device(struct device *dev, struct list_head *group_list
- out_release:
- 	ops->release_device(dev);
- 
-+out_module_put:
-+	module_put(ops->owner);
-+
-+err_free:
-+	dev_iommu_free(dev);
-+
- 	return ret;
- }
- 
-@@ -226,14 +242,6 @@ int iommu_probe_device(struct device *dev)
- 	struct iommu_group *group;
- 	int ret;
- 
--	if (!dev_iommu_get(dev))
--		return -ENOMEM;
--
--	if (!try_module_get(ops->owner)) {
--		ret = -EINVAL;
--		goto err_out;
--	}
--
- 	ret = __iommu_probe_device(dev, NULL);
- 	if (ret)
- 		goto err_out;
-@@ -1532,14 +1540,10 @@ struct iommu_domain *iommu_group_default_domain(struct iommu_group *group)
- 
- static int probe_iommu_group(struct device *dev, void *data)
+ #define IOMMU_GROUP_ATTR(_name, _mode, _show, _store)		\
+ struct iommu_group_attribute iommu_group_attr_##_name =		\
+@@ -1500,7 +1501,7 @@ static int iommu_alloc_default_domain(struct device *dev)
+  * to the returned IOMMU group, which will already include the provided
+  * device.  The reference should be released with iommu_group_put().
+  */
+-struct iommu_group *iommu_group_get_for_dev(struct device *dev)
++static struct iommu_group *iommu_group_get_for_dev(struct device *dev)
  {
--	const struct iommu_ops *ops = dev->bus->iommu_ops;
- 	struct list_head *group_list = data;
+ 	const struct iommu_ops *ops = dev->bus->iommu_ops;
  	struct iommu_group *group;
- 	int ret;
+@@ -1531,7 +1532,6 @@ struct iommu_group *iommu_group_get_for_dev(struct device *dev)
  
--	if (!dev_iommu_get(dev))
--		return -ENOMEM;
--
- 	/* Device is probed already if in a group */
- 	group = iommu_group_get(dev);
- 	if (group) {
-@@ -1547,22 +1551,7 @@ static int probe_iommu_group(struct device *dev, void *data)
- 		return 0;
- 	}
+ 	return ERR_PTR(ret);
+ }
+-EXPORT_SYMBOL(iommu_group_get_for_dev);
  
--	if (!try_module_get(ops->owner)) {
--		ret = -EINVAL;
--		goto err_free_dev_iommu;
--	}
--
- 	ret = __iommu_probe_device(dev, group_list);
--	if (ret)
--		goto err_module_put;
--
--	return 0;
--
--err_module_put:
--	module_put(ops->owner);
--err_free_dev_iommu:
--	dev_iommu_free(dev);
--
- 	if (ret == -ENODEV)
- 		ret = 0;
+ struct iommu_domain *iommu_group_default_domain(struct iommu_group *group)
+ {
+diff --git a/include/linux/iommu.h b/include/linux/iommu.h
+index dd076366383f..7cfd2dddb49d 100644
+--- a/include/linux/iommu.h
++++ b/include/linux/iommu.h
+@@ -527,7 +527,6 @@ extern int iommu_page_response(struct device *dev,
+ 			       struct iommu_page_response *msg);
  
+ extern int iommu_group_id(struct iommu_group *group);
+-extern struct iommu_group *iommu_group_get_for_dev(struct device *dev);
+ extern struct iommu_domain *iommu_group_default_domain(struct iommu_group *);
+ 
+ extern int iommu_domain_get_attr(struct iommu_domain *domain, enum iommu_attr,
 -- 
 2.17.1
 
