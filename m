@@ -2,8 +2,8 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 4BF4F1BDDFD
-	for <lists+linux-mediatek@lfdr.de>; Wed, 29 Apr 2020 15:38:17 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id CA59C1BDE00
+	for <lists+linux-mediatek@lfdr.de>; Wed, 29 Apr 2020 15:38:18 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
@@ -11,20 +11,20 @@ DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	In-Reply-To:Message-Id:Date:Subject:To:From:Reply-To:Content-ID:
 	Content-Description:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc
 	:Resent-Message-ID:List-Owner;
-	bh=92HHElTGoxxIBKC/BsbzvOtyFk7ZZW/xyeTdrXC8MYA=; b=iywMfMazAtxhA/8iT2v8di7KFe
-	Eck2CB81I0bELOfblB4f46Vs42mmE97ZRMmhXvlyEIkXG3Wp5VpbfPq7/4NAdhJ3NeVwXqoY1Atgh
-	YXCqPB010fUk+HdM4H5VNUA+pio8rubOFNTBdetG5sxa7pLKe+OU71LOdTXbJv2ixBHKJRMSp11aK
-	QeYm4jT4CVl/O+jG/nuKLZ6bv046jHoLPAc12/LzM3Rs1DC0lWo4WZh2QDx+lbYhulczsSgyDvGHi
-	8lBd8CdvhL5y6SMw/UT4Rywy6eY0lyUv7SvW9Gh879ihZOGPw61j6DOdcyxQ01MX5yxHsyY60E1CM
-	qWPVuZ7Q==;
+	bh=ckxmVyusM9oi4ezVrzrPXx53VoujgMWhfK/IbsVHD24=; b=lYzz08oq44pmk7m/Q7NmAP35/2
+	PD6pDfQ15pq/d3ag38CT8Ap1u1RBn+L95XE3QeYrLBpOZgrs1dktet9XtmKzCD5FnR99W38jk8goM
+	DPaByyLJXgJJi3WO/6ff2pxnrfk5eOPSSOaMgfTQYj+aBP3bfmExNeJxZhtoEyVLLYfQYJuck4xOT
+	nAXYBz798DQziQMo0opzbRgeSIJfqBiIoVrQAH3ixlkSjIfqMyz/jhw1DYAAH7RRNzwDmglVky5Ud
+	0klAZwfBQwM3g08zqadB4KVTbm5wjcoxnsgtS1HMjCEPtBbAp4chP6weBEA8y0RfWHnbr/46jKrNo
+	ksPwhZuw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jTmug-0006iz-B0; Wed, 29 Apr 2020 13:38:10 +0000
+	id 1jTmuh-0006l0-NS; Wed, 29 Apr 2020 13:38:11 +0000
 Received: from 8bytes.org ([81.169.241.247] helo=theia.8bytes.org)
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jTmuE-0006CP-Vy; Wed, 29 Apr 2020 13:37:45 +0000
+ id 1jTmuF-0006Ct-16; Wed, 29 Apr 2020 13:37:45 +0000
 Received: by theia.8bytes.org (Postfix, from userid 1000)
- id B843B6BB; Wed, 29 Apr 2020 15:37:35 +0200 (CEST)
+ id 0084D70B; Wed, 29 Apr 2020 15:37:35 +0200 (CEST)
 From: Joerg Roedel <joro@8bytes.org>
 To: Joerg Roedel <joro@8bytes.org>, Will Deacon <will@kernel.org>,
  Robin Murphy <robin.murphy@arm.com>,
@@ -39,16 +39,15 @@ To: Joerg Roedel <joro@8bytes.org>, Will Deacon <will@kernel.org>,
  Thierry Reding <thierry.reding@gmail.com>,
  Jonathan Hunter <jonathanh@nvidia.com>,
  Jean-Philippe Brucker <jean-philippe@linaro.org>
-Subject: [PATCH v3 03/34] iommu/amd: Implement iommu_ops->def_domain_type
- call-back
-Date: Wed, 29 Apr 2020 15:36:41 +0200
-Message-Id: <20200429133712.31431-4-joro@8bytes.org>
+Subject: [PATCH v3 04/34] iommu/vt-d: Wire up iommu_ops->def_domain_type
+Date: Wed, 29 Apr 2020 15:36:42 +0200
+Message-Id: <20200429133712.31431-5-joro@8bytes.org>
 X-Mailer: git-send-email 2.17.1
 In-Reply-To: <20200429133712.31431-1-joro@8bytes.org>
 References: <20200429133712.31431-1-joro@8bytes.org>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200429_063743_202821_81307ECE 
-X-CRM114-Status: GOOD (  10.08  )
+X-CRM114-CacheID: sfid-20200429_063743_217116_A2AE0C76 
+X-CRM114-Status: GOOD (  10.48  )
 X-Spam-Score: -0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  Content analysis details:   (-0.0 points)
@@ -83,46 +82,26 @@ Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.o
 
 From: Joerg Roedel <jroedel@suse.de>
 
-Implement the new def_domain_type call-back for the AMD IOMMU driver.
+The Intel VT-d driver already has a matching function to determine the
+default domain type for a device. Wire it up in intel_iommu_ops.
 
 Signed-off-by: Joerg Roedel <jroedel@suse.de>
 ---
- drivers/iommu/amd_iommu.c | 15 +++++++++++++++
- 1 file changed, 15 insertions(+)
+ drivers/iommu/intel-iommu.c | 1 +
+ 1 file changed, 1 insertion(+)
 
-diff --git a/drivers/iommu/amd_iommu.c b/drivers/iommu/amd_iommu.c
-index 20cce366e951..73b4f84cf449 100644
---- a/drivers/iommu/amd_iommu.c
-+++ b/drivers/iommu/amd_iommu.c
-@@ -2661,6 +2661,20 @@ static void amd_iommu_iotlb_sync(struct iommu_domain *domain,
- 	amd_iommu_flush_iotlb_all(domain);
- }
- 
-+static int amd_iommu_def_domain_type(struct device *dev)
-+{
-+	struct iommu_dev_data *dev_data;
-+
-+	dev_data = get_dev_data(dev);
-+	if (!dev_data)
-+		return 0;
-+
-+	if (dev_data->iommu_v2)
-+		return IOMMU_DOMAIN_IDENTITY;
-+
-+	return 0;
-+}
-+
- const struct iommu_ops amd_iommu_ops = {
- 	.capable = amd_iommu_capable,
- 	.domain_alloc = amd_iommu_domain_alloc,
-@@ -2680,6 +2694,7 @@ const struct iommu_ops amd_iommu_ops = {
- 	.pgsize_bitmap	= AMD_IOMMU_PGSIZES,
- 	.flush_iotlb_all = amd_iommu_flush_iotlb_all,
- 	.iotlb_sync = amd_iommu_iotlb_sync,
-+	.def_domain_type = amd_iommu_def_domain_type,
+diff --git a/drivers/iommu/intel-iommu.c b/drivers/iommu/intel-iommu.c
+index ef0a5246700e..b9f905a55dda 100644
+--- a/drivers/iommu/intel-iommu.c
++++ b/drivers/iommu/intel-iommu.c
+@@ -6209,6 +6209,7 @@ const struct iommu_ops intel_iommu_ops = {
+ 	.dev_enable_feat	= intel_iommu_dev_enable_feat,
+ 	.dev_disable_feat	= intel_iommu_dev_disable_feat,
+ 	.is_attach_deferred	= intel_iommu_is_attach_deferred,
++	.def_domain_type	= device_def_domain_type,
+ 	.pgsize_bitmap		= INTEL_IOMMU_PGSIZES,
  };
  
- /*****************************************************************************
 -- 
 2.17.1
 
