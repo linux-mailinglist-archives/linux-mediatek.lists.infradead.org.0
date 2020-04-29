@@ -2,77 +2,54 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id C8FC31BDFC6
-	for <lists+linux-mediatek@lfdr.de>; Wed, 29 Apr 2020 15:58:17 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 3EC6C1BDFE3
+	for <lists+linux-mediatek@lfdr.de>; Wed, 29 Apr 2020 16:02:42 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=sQnog+fnyGQ4PJuCabGffVMyMchaMCBMaFVld5G63Z0=; b=TT3j21fK7mDfIr
-	pfBXmVp2nigPqvYcpFIl4URRjopWc15Uy56KKM88F3RQZ1t0/wPbz7I89FQMycrUeNCTaKKtlDD5X
-	Ix4mokXdYObJDxRlO8aER7asvjuEcpyc6l6FzNBqLZmjqe4+rK4k73noc+78iKlAS04k3+b8kCBdT
-	nJJYU6MSTyKEDVXCJmoU4o7+BKrJ80EPEId9oaE1VkjGt5Xeig4U0N0yflBwFhOQUEZ7iiw06Oz4k
-	UezW+OZ0tCyYfyaX033eCmaNllG8OaZsgJPcEkKelGP2Dtj7mfxCLD07/X1F6j1pkaMx0PIh7VVDp
-	sITGy93RLVAqA8Un18vg==;
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
+	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
+	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=SH3wR1WHSpZ4TY0ExTiTrCur0EGGsyIjLVSxBxaWbRs=; b=OR9Zsl1nyl4Lvv
+	7XVG0ctTurqitQBroppL45VctkjMJAKPWoRhOS66xe5VWUYCFyqW9Uh6yk+q7rGN29NJ0mGOOXAOi
+	cu5h1QKULgYzIw6tBxjZ/g5k6w5haysV6oHjOYl7IAdJwhGbnVqQNTmqqy2GITrLdWPukB4FO7PDz
+	mosnEcyOn4vEjP72iixGsfF6Tqy4b7S1IdUfb698AQal3p0IwGNVGzpy1tnVZ9o34lWCgdQwY40tJ
+	v1z4mu5zVvL5Mex5AjlTa0LtPiWKKfPPeMQMzIrN+A5s01JeCkrE2+yIG1iN28QHJtyBYMGZtWOTB
+	/apCSDjJOgV461bPqgHg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jTnE2-0001do-HW; Wed, 29 Apr 2020 13:58:10 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1jTnIK-0007pl-84; Wed, 29 Apr 2020 14:02:36 +0000
+Received: from bhuna.collabora.co.uk ([46.235.227.227])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jTnCT-00009S-I2; Wed, 29 Apr 2020 13:56:37 +0000
-X-UUID: 029daba1c181478983540cac79f35442-20200429
-DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
- s=dk; 
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:References:In-Reply-To:Message-ID:Date:Subject:CC:To:From;
- bh=uOKiKTYYqQLiuxh1KEUt52dRf/z8h0HlHCLgLAeY+fU=; 
- b=uexSR17LdXRVO1V/8Fle/i3ZWIbUAdl96AIE9KwcAL3Cn/inTrMTFicvvuZsXH80QZa3FEBkXN7cuSwjMPlWCaroIfnQ8mNtaWvnAHwt5nfz/mZmgDIfFpKepuv16LMop3f37JS9DAhEi4IPz7/FzqtXJl1RE6nHIplHGbvez14=;
-X-UUID: 029daba1c181478983540cac79f35442-20200429
-Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw01.mediatek.com
- (envelope-from <stanley.chu@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 15372092; Wed, 29 Apr 2020 05:57:27 -0800
-Received: from mtkmbs08n1.mediatek.inc (172.21.101.55) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1497.2; Wed, 29 Apr 2020 06:56:23 -0700
-Received: from mtkcas07.mediatek.inc (172.21.101.84) by
- mtkmbs08n1.mediatek.inc (172.21.101.55) with Microsoft SMTP Server (TLS) id
- 15.0.1497.2; Wed, 29 Apr 2020 21:56:11 +0800
-Received: from mtksdccf07.mediatek.inc (172.21.84.99) by mtkcas07.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1497.2 via
- Frontend Transport; Wed, 29 Apr 2020 21:56:10 +0800
-From: Stanley Chu <stanley.chu@mediatek.com>
-To: <linux-scsi@vger.kernel.org>, <martin.petersen@oracle.com>,
- <avri.altman@wdc.com>, <alim.akhtar@samsung.com>, <jejb@linux.ibm.com>,
- <asutoshd@codeaurora.org>
-Subject: [PATCH v2 5/5] scsi: ufs: cleanup WriteBooster feature
-Date: Wed, 29 Apr 2020 21:56:10 +0800
-Message-ID: <20200429135610.23750-6-stanley.chu@mediatek.com>
-X-Mailer: git-send-email 2.18.0
-In-Reply-To: <20200429135610.23750-1-stanley.chu@mediatek.com>
-References: <20200429135610.23750-1-stanley.chu@mediatek.com>
+ id 1jTnI7-0007gB-71; Wed, 29 Apr 2020 14:02:24 +0000
+Received: from [127.0.0.1] (localhost [127.0.0.1])
+ (Authenticated sender: eballetbo) with ESMTPSA id CB2E32A05D5
+Subject: Re: [PATCH v3 -next] drm/mediatek: Fix Kconfig warning
+To: YueHaibing <yuehaibing@huawei.com>, chunkuang.hu@kernel.org,
+ p.zabel@pengutronix.de, airlied@linux.ie, daniel@ffwll.ch,
+ matthias.bgg@gmail.com, ck.hu@mediatek.com
+References: <20200420135045.27984-1-yuehaibing@huawei.com>
+ <20200429071337.49528-1-yuehaibing@huawei.com>
+From: Enric Balletbo i Serra <enric.balletbo@collabora.com>
+Message-ID: <178db061-7068-e688-dd5a-0d767e57c22c@collabora.com>
+Date: Wed, 29 Apr 2020 16:02:17 +0200
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101
+ Thunderbird/68.7.0
 MIME-Version: 1.0
-X-MTK: N
+In-Reply-To: <20200429071337.49528-1-yuehaibing@huawei.com>
+Content-Language: en-US
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200429_065633_790814_754465CA 
-X-CRM114-Status: GOOD (  10.90  )
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20200429_070223_384698_CE2C43D8 
+X-CRM114-Status: GOOD (  14.74  )
+X-Spam-Score: -0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (-0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [46.235.227.227 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 MIME_BASE64_TEXT       RAW: Message text disguised using base64
- encoding
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
  0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
  lines
 X-BeenThere: linux-mediatek@lists.infradead.org
@@ -86,118 +63,61 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: bvanassche@acm.org, andy.teng@mediatek.com, chun-hung.wu@mediatek.com,
- kuohong.wang@mediatek.com, linux-kernel@vger.kernel.org, cang@codeaurora.org,
- linux-mediatek@lists.infradead.org, peter.wang@mediatek.com,
- matthias.bgg@gmail.com, Stanley Chu <stanley.chu@mediatek.com>,
- linux-arm-kernel@lists.infradead.org, beanhuo@micron.com
+Cc: linux-arm-kernel@lists.infradead.org, linux-kernel@vger.kernel.orc,
+ linux-mediatek@lists.infradead.org, linux-kernel@vger.kernel.org,
+ dri-devel@lists.freedesktop.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Small cleanup as below items,
+Hi YueHaibing,
 
-1. Use ufshcd_is_wb_allowed() directly instead of ufshcd_wb_sup()
-   since ufshcd_wb_sup() just returns the result of
-   ufshcd_is_wb_allowed().
+Thank you for your patch.
 
-2. In ufshcd_suspend(), "else if (!ufshcd_is_runtime_pm(pm_op))
-   can be simplified to "else" since both have the same meaning.
+On 29/4/20 9:13, YueHaibing wrote:
+> WARNING: unmet direct dependencies detected for MTK_MMSYS
+>   Depends on [n]: (ARCH_MEDIATEK [=y] || COMPILE_TEST [=n]) && COMMON_CLK_MT8173_MMSYS [=n]
+>   Selected by [y]:
+>   - DRM_MEDIATEK [=y] && HAS_IOMEM [=y] && DRM [=y] && (ARCH_MEDIATEK [=y] || ARM && COMPILE_TEST [=n]) && COMMON_CLK [=y] && HAVE_ARM_SMCCC [=y] && OF [=y]
+> 
+> Make DRM_MEDIATEK depend on MTK_MMSYS to fix this.
+> 
+> Fixes: 2c758e301ed9 ("soc / drm: mediatek: Move routing control to mmsys device")
+> Signed-off-by: YueHaibing <yuehaibing@huawei.com>
 
-This patch does not change any functionality.
+Definitively we shouldn't select the MTK_MMSYS and we should depend on MTK_MMSYS
+instead, so
 
-Signed-off-by: Stanley Chu <stanley.chu@mediatek.com>
----
- drivers/scsi/ufs/ufshcd.c | 20 +++++++-------------
- 1 file changed, 7 insertions(+), 13 deletions(-)
+Reviewed-by: Enric Balletbo i Serra <enric.balletbo@collabora.com>
 
-diff --git a/drivers/scsi/ufs/ufshcd.c b/drivers/scsi/ufs/ufshcd.c
-index b970a422a5ea..883a46f7fcc9 100644
---- a/drivers/scsi/ufs/ufshcd.c
-+++ b/drivers/scsi/ufs/ufshcd.c
-@@ -253,7 +253,6 @@ static int ufshcd_scale_clks(struct ufs_hba *hba, bool scale_up);
- static irqreturn_t ufshcd_intr(int irq, void *__hba);
- static int ufshcd_change_power_mode(struct ufs_hba *hba,
- 			     struct ufs_pa_layer_attr *pwr_mode);
--static bool ufshcd_wb_sup(struct ufs_hba *hba);
- static int ufshcd_wb_buf_flush_enable(struct ufs_hba *hba);
- static int ufshcd_wb_buf_flush_disable(struct ufs_hba *hba);
- static int ufshcd_wb_ctrl(struct ufs_hba *hba, bool enable);
-@@ -285,7 +284,7 @@ static inline void ufshcd_wb_config(struct ufs_hba *hba)
- {
- 	int ret;
- 
--	if (!ufshcd_wb_sup(hba))
-+	if (!ufshcd_is_wb_allowed(hba))
- 		return;
- 
- 	ret = ufshcd_wb_ctrl(hba, true);
-@@ -5197,11 +5196,6 @@ static void ufshcd_bkops_exception_event_handler(struct ufs_hba *hba)
- 				__func__, err);
- }
- 
--static bool ufshcd_wb_sup(struct ufs_hba *hba)
--{
--	return ufshcd_is_wb_allowed(hba);
--}
--
- static int ufshcd_wb_get_index(struct ufs_hba *hba)
- {
- 	if (hba->dev_info.b_wb_buffer_type == WB_BUF_MODE_LU_DEDICATED)
-@@ -5216,7 +5210,7 @@ static int ufshcd_wb_ctrl(struct ufs_hba *hba, bool enable)
- 	u8 index;
- 	enum query_opcode opcode;
- 
--	if (!ufshcd_wb_sup(hba))
-+	if (!ufshcd_is_wb_allowed(hba))
- 		return 0;
- 
- 	if (!(enable ^ hba->wb_enabled))
-@@ -5272,7 +5266,7 @@ static int ufshcd_wb_buf_flush_enable(struct ufs_hba *hba)
- 	int ret;
- 	u8 index;
- 
--	if (!ufshcd_wb_sup(hba) || hba->wb_buf_flush_enabled)
-+	if (!ufshcd_is_wb_allowed(hba) || hba->wb_buf_flush_enabled)
- 		return 0;
- 
- 	index = ufshcd_wb_get_index(hba);
-@@ -5294,7 +5288,7 @@ static int ufshcd_wb_buf_flush_disable(struct ufs_hba *hba)
- 	int ret;
- 	u8 index;
- 
--	if (!ufshcd_wb_sup(hba) || !hba->wb_buf_flush_enabled)
-+	if (!ufshcd_is_wb_allowed(hba) || !hba->wb_buf_flush_enabled)
- 		return 0;
- 
- 	index = ufshcd_wb_get_index(hba);
-@@ -5344,7 +5338,7 @@ static bool ufshcd_wb_keep_vcc_on(struct ufs_hba *hba)
- 	int ret;
- 	u32 avail_buf;
- 
--	if (!ufshcd_wb_sup(hba))
-+	if (!ufshcd_is_wb_allowed(hba))
- 		return false;
- 	/*
- 	 * The ufs device needs the vcc to be ON to flush.
-@@ -8225,12 +8219,12 @@ static int ufshcd_suspend(struct ufs_hba *hba, enum ufs_pm_op pm_op)
- 		 * configured WB type is 70% full, keep vcc ON
- 		 * for the device to flush the wb buffer
- 		 */
--		if ((hba->auto_bkops_enabled && ufshcd_wb_sup(hba)) ||
-+		if ((hba->auto_bkops_enabled && ufshcd_is_wb_allowed(hba)) ||
- 		    ufshcd_wb_keep_vcc_on(hba))
- 			hba->dev_info.keep_vcc_on = true;
- 		else
- 			hba->dev_info.keep_vcc_on = false;
--	} else if (!ufshcd_is_runtime_pm(pm_op)) {
-+	} else {
- 		hba->dev_info.keep_vcc_on = false;
- 	}
- 
--- 
-2.18.0
+> ---
+> v3: make DRM_MEDIATEK depends on MTK_MMSYS
+> v2: select COMMON_CLK_MT8173_MMSYS instead of adding DRM_MEDIATEK dependency  
+> ---
+>  drivers/gpu/drm/mediatek/Kconfig | 2 +-
+>  1 file changed, 1 insertion(+), 1 deletion(-)
+> 
+> diff --git a/drivers/gpu/drm/mediatek/Kconfig b/drivers/gpu/drm/mediatek/Kconfig
+> index c420f5a3d33b..aa74aac3cbcc 100644
+> --- a/drivers/gpu/drm/mediatek/Kconfig
+> +++ b/drivers/gpu/drm/mediatek/Kconfig
+> @@ -6,12 +6,12 @@ config DRM_MEDIATEK
+>  	depends on COMMON_CLK
+>  	depends on HAVE_ARM_SMCCC
+>  	depends on OF
+> +	depends on MTK_MMSYS
+>  	select DRM_GEM_CMA_HELPER
+>  	select DRM_KMS_HELPER
+>  	select DRM_MIPI_DSI
+>  	select DRM_PANEL
+>  	select MEMORY
+> -	select MTK_MMSYS
+>  	select MTK_SMI
+>  	select VIDEOMODE_HELPERS
+>  	help
+> 
+
 _______________________________________________
 Linux-mediatek mailing list
 Linux-mediatek@lists.infradead.org
