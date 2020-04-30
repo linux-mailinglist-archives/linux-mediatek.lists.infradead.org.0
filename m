@@ -2,62 +2,64 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 566431BF390
-	for <lists+linux-mediatek@lfdr.de>; Thu, 30 Apr 2020 10:53:07 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id CF76D1BF384
+	for <lists+linux-mediatek@lfdr.de>; Thu, 30 Apr 2020 10:51:40 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=iyTQlvpYq1PSds/+iyvmfy5+kIAJlcv1xKVBT0yoqFQ=; b=tq9mgMGKm4b2Cm
-	lQQtFNHx3TjzR5mJaVT7LGaRRrinrh5//jwtTAPUROyzbx2TvPAZL6QsljZ1o3+sPPqrZN62itvGJ
-	ElCYRfeq1syKlY4m3FqbCCiM0lgH1kLL/SGWTm7wqzn2aCBcdcaSo6Gad08RJ0thSny3+SHtsZvYY
-	21InLLeSILXHA3CDX1Z1j3rp7HF6Nk52HbZGHYUPkclKdcN1DX0DIEEdsgCzQ1z+gQZILpYh99lyb
-	uXYo/9V1a3pwrNEvyYCxTctN2l0Nc3TXndChMYG5PEynsFMcg3oO2FjV4B0E6JBOYXkVi8CDMUnpy
-	+sKZbo9e2Wag4olJwEXA==;
+	List-Owner; bh=Yp5VgfchWwfB37ek08xQIWHHb+Sj+LnCxaMkL6xEtvc=; b=IEqlkz0K+SgRoK
+	WZ2zT7CkWZyKZ5nzeA0XeeB2OyhTgPWAcPWzYclRIUZmIql4H1aYPMUCGNjHCUYxSGPkaE1ssaf3f
+	HpkZ6QWctTADowg240H0Fb0o2g0BoHvD6MaypK67nJuoQ8gsTXRxPa9MnY4z4GnOtfLiADU9UEpHa
+	tyf54lIY07o8+LnIA0btPFEZnK0/B0WVAiVASB3Zbm5SMIpeOWt7TVQaygZcnk1d9oYPcmrNvu6Vh
+	fs5yGDTz0LH4FDTZ7VAFyOabS9yIXMQx7glFqLMgE+SefG+ObCP6quoVVsUHGOX2ZgHRkOitYZ7lV
+	UrbBZyuVtkPj6B6I/3Yw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jU4wF-0003dI-Vx; Thu, 30 Apr 2020 08:52:59 +0000
+	id 1jU4ur-00039H-6Q; Thu, 30 Apr 2020 08:51:33 +0000
 Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jU4wC-0003ck-Qz; Thu, 30 Apr 2020 08:52:58 +0000
-X-UUID: 50d981712e534e598780660e3cadc618-20200430
+ id 1jU4tV-0000Ra-3m; Thu, 30 Apr 2020 08:50:11 +0000
+X-UUID: 56bbe1b7c2144b25b49a3942c0b40f8a-20200430
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
  s=dk; 
  h=Content-Transfer-Encoding:MIME-Version:Content-Type:References:In-Reply-To:Date:CC:To:From:Subject:Message-ID;
- bh=wmJJNzcR3k9GVE2jLM5Fa1SIp2IO4dqVkL3WED3AOeo=; 
- b=i/1K6zjNXZJi+oSRhdM8EvkjycK5IKRIg1T7ZY0DwPOjR4tamk41h6GExHbLrMGrBRzc2SrENvbF69goI6zafnOaWdiztrzBewaA7pg8kSC8aQfN7nDXF633Hkjc959YfOKr8KYTHBkOg9Pzd9GM0lS9pv5rr+6ya4DOV60YH6w=;
-X-UUID: 50d981712e534e598780660e3cadc618-20200430
+ bh=qEHPZ0vJ9YaDzRAN0qw3MdQ9byhSepyxaXxCWBvrE5g=; 
+ b=gfi1O1nLD0z/k7SSqXn5aLDlASNVa2jqazrXSiMBWSm2XEQeEdl1nmbd/eRtrSKW8kCDgzRlk64tC4QkpcBTyJiyIDu/1D+epSsbdGihsrDXZjExysMK/1tSULoN4dqicEskW9a98ZDMWz9z8uDTrLhlRfcoIIEN7QS2JwW0hH4=;
+X-UUID: 56bbe1b7c2144b25b49a3942c0b40f8a-20200430
 Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
  (envelope-from <dongchun.zhu@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1469614275; Thu, 30 Apr 2020 00:52:46 -0800
-Received: from MTKMBS31N2.mediatek.inc (172.27.4.87) by
- MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
- 15.0.1497.2; Thu, 30 Apr 2020 01:43:26 -0700
-Received: from MTKCAS32.mediatek.inc (172.27.4.184) by MTKMBS31N2.mediatek.inc
- (172.27.4.87) with Microsoft SMTP Server (TLS) id 15.0.1497.2;
- Thu, 30 Apr 2020 16:43:22 +0800
-Received: from [10.17.3.153] (10.17.3.153) by MTKCAS32.mediatek.inc
+ with ESMTP id 667662918; Thu, 30 Apr 2020 00:49:59 -0800
+Received: from MTKMBS31N1.mediatek.inc (172.27.4.69) by
+ MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
+ 15.0.1497.2; Thu, 30 Apr 2020 01:48:40 -0700
+Received: from MTKCAS36.mediatek.inc (172.27.4.186) by MTKMBS31N1.mediatek.inc
+ (172.27.4.69) with Microsoft SMTP Server (TLS) id 15.0.1497.2;
+ Thu, 30 Apr 2020 16:48:37 +0800
+Received: from [10.17.3.153] (10.17.3.153) by MTKCAS36.mediatek.inc
  (172.27.4.170) with Microsoft SMTP Server id 15.0.1497.2 via Frontend
- Transport; Thu, 30 Apr 2020 16:43:21 +0800
-Message-ID: <1588236152.8804.88.camel@mhfsdcap03>
-Subject: Re: [V4, 1/2] media: i2c: dw9768: Add DT support and MAINTAINERS entry
+ Transport; Thu, 30 Apr 2020 16:48:36 +0800
+Message-ID: <1588236466.8804.92.camel@mhfsdcap03>
+Subject: Re: [V4, 2/2] media: i2c: Add DW9768 VCM driver
 From: Dongchun Zhu <dongchun.zhu@mediatek.com>
-To: Rob Herring <robh@kernel.org>
-Date: Thu, 30 Apr 2020 16:42:32 +0800
-In-Reply-To: <20200410172527.GA24529@bogus>
+To: Andy Shevchenko <andriy.shevchenko@linux.intel.com>
+Date: Thu, 30 Apr 2020 16:47:46 +0800
+In-Reply-To: <20200331101456.GG1922688@smile.fi.intel.com>
 References: <20200330123634.363-1-dongchun.zhu@mediatek.com>
- <20200330123634.363-2-dongchun.zhu@mediatek.com>
- <20200410172527.GA24529@bogus>
+ <20200330123634.363-3-dongchun.zhu@mediatek.com>
+ <20200330135751.GQ1922688@smile.fi.intel.com>
+ <1585620980.5781.80.camel@mhfsdcap03>
+ <20200331101456.GG1922688@smile.fi.intel.com>
 X-Mailer: Evolution 3.10.4-0ubuntu2 
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: ECC204BF1CE98C25F6F81482310D100CC86CD6865F2FBC31D2991D5DB77265862000:8
+X-TM-SNTS-SMTP: E3566C996091720B35FA9D701A04146A9F434F3E2FE424D79D363A9BF88C6DB62000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200430_015256_874075_C64F90BA 
-X-CRM114-Status: GOOD (  17.66  )
+X-CRM114-CacheID: sfid-20200430_015009_244689_898EC6EF 
+X-CRM114-Status: GOOD (  12.14  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
@@ -86,139 +88,55 @@ List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
 Cc: mark.rutland@arm.com, devicetree@vger.kernel.org, drinkcat@chromium.org,
- srv_heupstream@mediatek.com, shengnan.wang@mediatek.com,
- andriy.shevchenko@linux.intel.com, tfiga@chromium.org, louis.kuo@mediatek.com,
- sj.huang@mediatek.com, linux-mediatek@lists.infradead.org,
- sakari.ailus@linux.intel.com, matthias.bgg@gmail.com, bingbu.cao@intel.com,
- mchehab@kernel.org, linux-arm-kernel@lists.infradead.org,
- linux-media@vger.kernel.org
+ srv_heupstream@mediatek.com, shengnan.wang@mediatek.com, tfiga@chromium.org,
+ louis.kuo@mediatek.com, sj.huang@mediatek.com, robh+dt@kernel.org,
+ linux-mediatek@lists.infradead.org, sakari.ailus@linux.intel.com,
+ matthias.bgg@gmail.com, bingbu.cao@intel.com, mchehab@kernel.org,
+ linux-arm-kernel@lists.infradead.org, linux-media@vger.kernel.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hello Rob,
+Hello Andy,
 
 Thanks for the review.
 
-On Fri, 2020-04-10 at 12:25 -0500, Rob Herring wrote:
-> On Mon, Mar 30, 2020 at 08:36:33PM +0800, Dongchun Zhu wrote:
-> > This patch is to add the Devicetreee binding documentation and
-> > MAINTAINERS entry for dw9768 actuator.
+On Tue, 2020-03-31 at 13:14 +0300, Andy Shevchenko wrote:
+> On Tue, Mar 31, 2020 at 10:16:20AM +0800, Dongchun Zhu wrote:
+> > On Mon, 2020-03-30 at 16:57 +0300, Andy Shevchenko wrote:
+> > > On Mon, Mar 30, 2020 at 08:36:34PM +0800, Dongchun Zhu wrote:
+> > > > This patch adds a V4L2 sub-device driver for DW9768 voice coil moter,
+> > > > providing control to set the desired focus via I2C serial interface.
+> > > 
+> > > ...
+> > > 
+> > > > +static const struct dev_pm_ops dw9768_pm_ops = {
+> > > > +	SET_SYSTEM_SLEEP_PM_OPS(pm_runtime_force_suspend,
+> > > > +				pm_runtime_force_resume)
+> > > > +	SET_RUNTIME_PM_OPS(dw9768_runtime_suspend, dw9768_runtime_resume, NULL)
+> > > > +};
+> > > > +
+> > > > +static struct i2c_driver dw9768_i2c_driver = {
+> > > > +	.driver = {
+> > > > +		.name = DW9768_NAME,
+> > > 
+> > > > +		.pm = IS_ENABLED(CONFIG_PM) ? &dw9768_pm_ops : NULL,
+> > > 
+> > > What is this conditional for?
+> > > 
 > > 
-> > Signed-off-by: Dongchun Zhu <dongchun.zhu@mediatek.com>
-> > ---
-> >  .../bindings/media/i2c/dongwoon,dw9768.yaml        | 62 ++++++++++++++++++++++
-> >  MAINTAINERS                                        |  7 +++
-> >  2 files changed, 69 insertions(+)
-> >  create mode 100644 Documentation/devicetree/bindings/media/i2c/dongwoon,dw9768.yaml
-> > 
-> > diff --git a/Documentation/devicetree/bindings/media/i2c/dongwoon,dw9768.yaml b/Documentation/devicetree/bindings/media/i2c/dongwoon,dw9768.yaml
-> > new file mode 100644
-> > index 0000000..8a353dc
-> > --- /dev/null
-> > +++ b/Documentation/devicetree/bindings/media/i2c/dongwoon,dw9768.yaml
-> > @@ -0,0 +1,62 @@
-> > +# SPDX-License-Identifier: (GPL-2.0 OR BSD-2-Clause)
-> > +# Copyright (c) 2020 MediaTek Inc.
-> > +%YAML 1.2
-> > +---
-> > +$id: http://devicetree.org/schemas/media/i2c/dongwoon,dw9768.yaml#
-> > +$schema: http://devicetree.org/meta-schemas/core.yaml#
-> > +
-> > +title: Dongwoon Anatech DW9768 Voice Coil Motor (VCM) Device Tree Bindings
-> > +
-> > +maintainers:
-> > +  - Dongchun Zhu <dongchun.zhu@mediatek.com>
-> > +
-> > +description: |-
-> > +  The Dongwoon DW9768 is a single 10-bit digital-to-analog (DAC) converter
-> > +  with 100 mA output current sink capability. VCM current is controlled with
-> > +  a linear mode driver. The DAC is controlled via a 2-wire (I2C-compatible)
-> > +  serial interface that operates at clock rates up to 1MHz. This chip
-> > +  integrates Advanced Actuator Control (AAC) technology and is intended for
-> > +  driving voice coil lenses in camera modules.
-> > +
-> > +properties:
-> > +  compatible:
-> > +    const: dongwoon,dw9768
-> > +
-> > +  reg:
-> > +    maxItems: 1
-> > +
-> > +  vin-supply:
-> > +    description:
-> > +      Definition of the regulator used as I2C I/O interface power supply.
-> > +    maxItems: 1
+> > For the dw9768_pm_ops, here my idea is to use an IS_ENABLED() check to
+> > avoid defining the structure when CONFIG_PM is not set.
 > 
-> You can drop this. *-supply is always a single entry.
+> Have you looked at the implementation of SET_SYSTEM_SLEEP_OPS() and another one?
+> 
+> Have you tried to actually compile with !CONFIG_PM? In your case the warning
+> should be issued.
 > 
 
-Fixed in next release.
-
-> > +
-> > +  vdd-supply:
-> > +    description:
-> > +      Definition of the regulator used as VCM chip power supply.
-> > +    maxItems: 1
-> 
-> Same here.
-> 
-
-Fixed in next release.
-
-> > +
-> > +required:
-> > +  - compatible
-> > +  - reg
-> > +  - vin-supply
-> > +  - vdd-supply
-> > +
-> > +additionalProperties: false
-> > +
-> > +examples:
-> > +  - |
-> > +    i2c2: i2c@11009000 {
-> 
-> i2c {
-> 
-
-Fixed in next release.
-
-> > +        clock-frequency = <400000>;
-> > +        #address-cells = <1>;
-> > +        #size-cells = <0>;
-> > +
-> > +        dw9768: camera-lens@c {
-> > +            compatible = "dongwoon,dw9768";
-> > +            reg = <0x0c>;
-> > +
-> > +            vin-supply = <&mt6358_vcamio_reg>;
-> > +            vdd-supply = <&mt6358_vcama2_reg>;
-> > +        };
-> > +    };
-> > +
-> > +...
-> > diff --git a/MAINTAINERS b/MAINTAINERS
-> > index 38fe2f3..5e124d2 100644
-> > --- a/MAINTAINERS
-> > +++ b/MAINTAINERS
-> > @@ -5134,6 +5134,13 @@ S:	Maintained
-> >  F:	drivers/media/i2c/dw9714.c
-> >  F:	Documentation/devicetree/bindings/media/i2c/dongwoon,dw9714.txt
-> >  
-> > +DONGWOON DW9768 LENS VOICE COIL DRIVER
-> > +M:	Dongchun Zhu <dongchun.zhu@mediatek.com>
-> > +L:	linux-media@vger.kernel.org
-> > +S:	Maintained
-> > +T:	git git://linuxtv.org/media_tree.git
-> > +F:	Documentation/devicetree/bindings/media/i2c/dongwoon,dw9768.yaml
-> > +
-> >  DONGWOON DW9807 LENS VOICE COIL DRIVER
-> >  M:	Sakari Ailus <sakari.ailus@linux.intel.com>
-> >  L:	linux-media@vger.kernel.org
-> > -- 
-> > 2.9.2
+Understood.
+Follow Sakari's advice, the condition would be dropped in next release.
 
 _______________________________________________
 Linux-mediatek mailing list
