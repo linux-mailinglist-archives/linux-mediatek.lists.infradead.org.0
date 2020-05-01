@@ -2,42 +2,42 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 031B81C17F3
-	for <lists+linux-mediatek@lfdr.de>; Fri,  1 May 2020 16:39:34 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 9B73F1C17F8
+	for <lists+linux-mediatek@lfdr.de>; Fri,  1 May 2020 16:40:25 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=yjzdvDKHX1Z5jxwuh7HLPfrjbEzzs5WyNqVQ7LrrT6o=; b=oKFGTdT3RVd29+
-	1YyhtYaIZfXSw3k6T5HjRtQeOBHYZAHbEzxJQft+Sl+HZGUTZcxwm+MVR+eLKTMHoiocpfhk7fMOF
-	AAxO3sb5R0BuNwPqvvLq0dDhWa4IcqOwlQABxdGratFU+C8wzsh1pH3tJZ/m06NEnkGBdmg30Y1WP
-	Awhwlh6Z9wTcZQTHO/dt2xC8aPnXdRyRGDa/fmPYiL5rfOortJbgnRjFxfjgQ+Y9wrCkpXxHjiazP
-	MTsgulocFF/8GsLaZkC6uqOvTG8af0ydouYo54zWM2EnxrWlprAUU015HAdiHSYmHJSx/GTsf36NH
-	mzWfie6BZ37AftB4nMeA==;
+	List-Owner; bh=2abtnaQhC+9VBNzN30ujy4d750xs3ulG4fUC+a4B3fg=; b=M9IRaEEEJpfKIg
+	/68h9q6gbSKQT+ANQBOcJ1PQe5ACl3h+mSLACG2hs6jMQQ5fg9MzbJQI3kz+Qx3bzOKCAahG7UyAP
+	Bh96arHn66qPvwfWHLENUIk6tQ4VdGbKYggg3kJoGIiLolfMlPrlFPwWysKng7J3+NnNZp4bUaRCJ
+	PDPl1FWuzG+GUzrQih8/xH1IXiAloSytWmY087gwEVS4fRkjHZ9hcGXc9jcfK0XDaw8ZSDkBHk9Aj
+	b7WqO8lg19M2TscEFRYA1QgjgYRWlo0t5ZQfCSVpesiL+rQjTEIILK7daKCZV7yNMtZYIE073dmh/
+	T+DZ1uyrRv6usE0h2IFg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jUWp4-0000pj-1W; Fri, 01 May 2020 14:39:26 +0000
+	id 1jUWpu-0003eB-Sd; Fri, 01 May 2020 14:40:18 +0000
 Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jUWoU-0000D3-0k; Fri, 01 May 2020 14:38:51 +0000
-X-UUID: 295c2dbb783f4b74948dfe5345424926-20200501
+ id 1jUWoZ-0000KB-0k; Fri, 01 May 2020 14:38:56 +0000
+X-UUID: d8487ce07a944dd59aa05e14febb57b9-20200501
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
  s=dk; 
  h=Content-Transfer-Encoding:Content-Type:MIME-Version:References:In-Reply-To:Message-ID:Date:Subject:CC:To:From;
- bh=eBu6n9Q7M7tHJH+fRBo2sVMNVovtAv6ga0Cyd+P4xQE=; 
- b=ael/lEBeWDJS0PCXUXyAjfOGqDBKvSXeGhVE7I3k4RH9603yY7K94S11faA2MJx4OOtzCwa5VQQiw+UIMVB0TmrcYRigf530rYCZ4jvleOm7HxSvsBDcNRz1BhFZnYZYDuHBXN6qsSOg+kkQPNW99twf88POBJNaeGrCzDC7E3o=;
-X-UUID: 295c2dbb783f4b74948dfe5345424926-20200501
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
+ bh=8VIPLSkqrglgjQeSr66OR8BmnSuUsZPHpl18x7zMDIc=; 
+ b=IZU8/YvOIE9a4e01gZpZ8v+vYpYTDojkZ9miupSb6dyc+8Ax0NLRdOw6khuHppd98ALoToetflJkAEaB5Udib70P5K5bpcRfw4ETIPYEb9L5HqD1xsQIumRgA/LO664kg+PYFlB0A2eJ08UVTN2ALYBBJLDRx8T0I8ebm6uJHnE=;
+X-UUID: d8487ce07a944dd59aa05e14febb57b9-20200501
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw01.mediatek.com
  (envelope-from <stanley.chu@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1873128022; Fri, 01 May 2020 06:38:32 -0800
-Received: from mtkmbs05n2.mediatek.inc (172.21.101.140) by
- MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
- 15.0.1497.2; Fri, 1 May 2020 07:38:36 -0700
+ with ESMTP id 189929514; Fri, 01 May 2020 06:38:46 -0800
+Received: from mtkmbs08n1.mediatek.inc (172.21.101.55) by
+ MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
+ 15.0.1497.2; Fri, 1 May 2020 07:38:49 -0700
 Received: from MTKCAS06.mediatek.inc (172.21.101.30) by
- mtkmbs05n2.mediatek.inc (172.21.101.140) with Microsoft SMTP Server (TLS) id
+ mtkmbs08n1.mediatek.inc (172.21.101.55) with Microsoft SMTP Server (TLS) id
  15.0.1497.2; Fri, 1 May 2020 22:38:34 +0800
 Received: from mtksdccf07.mediatek.inc (172.21.84.99) by MTKCAS06.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1497.2 via
@@ -46,18 +46,17 @@ From: Stanley Chu <stanley.chu@mediatek.com>
 To: <linux-scsi@vger.kernel.org>, <martin.petersen@oracle.com>,
  <avri.altman@wdc.com>, <alim.akhtar@samsung.com>, <jejb@linux.ibm.com>,
  <asutoshd@codeaurora.org>
-Subject: [PATCH v3 4/5] scsi: ufs-mediatek: enable WriteBooster capability
-Date: Fri, 1 May 2020 22:38:34 +0800
-Message-ID: <20200501143835.26032-5-stanley.chu@mediatek.com>
+Subject: [PATCH v3 5/5] scsi: ufs: cleanup WriteBooster feature
+Date: Fri, 1 May 2020 22:38:35 +0800
+Message-ID: <20200501143835.26032-6-stanley.chu@mediatek.com>
 X-Mailer: git-send-email 2.18.0
 In-Reply-To: <20200501143835.26032-1-stanley.chu@mediatek.com>
 References: <20200501143835.26032-1-stanley.chu@mediatek.com>
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200501_073850_070566_E222E63B 
-X-CRM114-Status: UNSURE (   7.54  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20200501_073855_071429_08BD555B 
+X-CRM114-Status: GOOD (  10.47  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
@@ -97,28 +96,106 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Enable WriteBooster capability on MediaTek UFS platforms.
+Small cleanup as below items,
+
+1. Use ufshcd_is_wb_allowed() directly instead of ufshcd_wb_sup()
+   since ufshcd_wb_sup() just returns the result of
+   ufshcd_is_wb_allowed().
+
+2. In ufshcd_suspend(), "else if (!ufshcd_is_runtime_pm(pm_op))
+   can be simplified to "else" since both have the same meaning.
+
+This patch does not change any functionality.
 
 Signed-off-by: Stanley Chu <stanley.chu@mediatek.com>
-Reviewed-by: Bean Huo <beanhuo@micron.com>
 ---
- drivers/scsi/ufs/ufs-mediatek.c | 3 +++
- 1 file changed, 3 insertions(+)
+ drivers/scsi/ufs/ufshcd.c | 20 +++++++-------------
+ 1 file changed, 7 insertions(+), 13 deletions(-)
 
-diff --git a/drivers/scsi/ufs/ufs-mediatek.c b/drivers/scsi/ufs/ufs-mediatek.c
-index 673c16596fb2..15b9c420a3a5 100644
---- a/drivers/scsi/ufs/ufs-mediatek.c
-+++ b/drivers/scsi/ufs/ufs-mediatek.c
-@@ -263,6 +263,9 @@ static int ufs_mtk_init(struct ufs_hba *hba)
- 	/* Enable clock-gating */
- 	hba->caps |= UFSHCD_CAP_CLK_GATING;
+diff --git a/drivers/scsi/ufs/ufshcd.c b/drivers/scsi/ufs/ufshcd.c
+index 8c256f6f4a65..420d1476b3e1 100644
+--- a/drivers/scsi/ufs/ufshcd.c
++++ b/drivers/scsi/ufs/ufshcd.c
+@@ -255,7 +255,6 @@ static int ufshcd_scale_clks(struct ufs_hba *hba, bool scale_up);
+ static irqreturn_t ufshcd_intr(int irq, void *__hba);
+ static int ufshcd_change_power_mode(struct ufs_hba *hba,
+ 			     struct ufs_pa_layer_attr *pwr_mode);
+-static bool ufshcd_wb_sup(struct ufs_hba *hba);
+ static int ufshcd_wb_buf_flush_enable(struct ufs_hba *hba);
+ static int ufshcd_wb_buf_flush_disable(struct ufs_hba *hba);
+ static int ufshcd_wb_ctrl(struct ufs_hba *hba, bool enable);
+@@ -287,7 +286,7 @@ static inline void ufshcd_wb_config(struct ufs_hba *hba)
+ {
+ 	int ret;
  
-+	/* Enable WriteBooster */
-+	hba->caps |= UFSHCD_CAP_WB_EN;
-+
+-	if (!ufshcd_wb_sup(hba))
++	if (!ufshcd_is_wb_allowed(hba))
+ 		return;
+ 
+ 	ret = ufshcd_wb_ctrl(hba, true);
+@@ -5199,11 +5198,6 @@ static void ufshcd_bkops_exception_event_handler(struct ufs_hba *hba)
+ 				__func__, err);
+ }
+ 
+-static bool ufshcd_wb_sup(struct ufs_hba *hba)
+-{
+-	return ufshcd_is_wb_allowed(hba);
+-}
+-
+ int ufshcd_wb_get_flag_index(struct ufs_hba *hba)
+ {
+ 	if (hba->dev_info.b_wb_buffer_type == WB_BUF_MODE_LU_DEDICATED)
+@@ -5218,7 +5212,7 @@ static int ufshcd_wb_ctrl(struct ufs_hba *hba, bool enable)
+ 	u8 index;
+ 	enum query_opcode opcode;
+ 
+-	if (!ufshcd_wb_sup(hba))
++	if (!ufshcd_is_wb_allowed(hba))
+ 		return 0;
+ 
+ 	if (!(enable ^ hba->wb_enabled))
+@@ -5274,7 +5268,7 @@ static int ufshcd_wb_buf_flush_enable(struct ufs_hba *hba)
+ 	int ret;
+ 	u8 index;
+ 
+-	if (!ufshcd_wb_sup(hba) || hba->wb_buf_flush_enabled)
++	if (!ufshcd_is_wb_allowed(hba) || hba->wb_buf_flush_enabled)
+ 		return 0;
+ 
+ 	index = ufshcd_wb_get_flag_index(hba);
+@@ -5296,7 +5290,7 @@ static int ufshcd_wb_buf_flush_disable(struct ufs_hba *hba)
+ 	int ret;
+ 	u8 index;
+ 
+-	if (!ufshcd_wb_sup(hba) || !hba->wb_buf_flush_enabled)
++	if (!ufshcd_is_wb_allowed(hba) || !hba->wb_buf_flush_enabled)
+ 		return 0;
+ 
+ 	index = ufshcd_wb_get_flag_index(hba);
+@@ -5346,7 +5340,7 @@ static bool ufshcd_wb_keep_vcc_on(struct ufs_hba *hba)
+ 	int ret;
+ 	u32 avail_buf;
+ 
+-	if (!ufshcd_wb_sup(hba))
++	if (!ufshcd_is_wb_allowed(hba))
+ 		return false;
  	/*
- 	 * ufshcd_vops_init() is invoked after
- 	 * ufshcd_setup_clock(true) in ufshcd_hba_init() thus
+ 	 * The ufs device needs the vcc to be ON to flush.
+@@ -8231,12 +8225,12 @@ static int ufshcd_suspend(struct ufs_hba *hba, enum ufs_pm_op pm_op)
+ 		 * configured WB type is 70% full, keep vcc ON
+ 		 * for the device to flush the wb buffer
+ 		 */
+-		if ((hba->auto_bkops_enabled && ufshcd_wb_sup(hba)) ||
++		if ((hba->auto_bkops_enabled && ufshcd_is_wb_allowed(hba)) ||
+ 		    ufshcd_wb_keep_vcc_on(hba))
+ 			hba->dev_info.keep_vcc_on = true;
+ 		else
+ 			hba->dev_info.keep_vcc_on = false;
+-	} else if (!ufshcd_is_runtime_pm(pm_op)) {
++	} else {
+ 		hba->dev_info.keep_vcc_on = false;
+ 	}
+ 
 -- 
 2.18.0
 _______________________________________________
