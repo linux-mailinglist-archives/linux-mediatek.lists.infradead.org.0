@@ -2,61 +2,69 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 50C451C4366
-	for <lists+linux-mediatek@lfdr.de>; Mon,  4 May 2020 19:56:32 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 373101C46AE
+	for <lists+linux-mediatek@lfdr.de>; Mon,  4 May 2020 21:04:32 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=OQSAdMiEOqRjg9480pGinhyDmV3ChDx+V16KEXMikxQ=; b=fDQRXmE6X4TjNW
-	8kzKGBY9n+bdQiZf+58XEfAmm9q5Tm0ZxsQkjldA6/kciSZxJtNTLRiLEop3Ikaxlm4Jv7twlA34G
-	gH/O1mVSyMjekvdEK0atUy18hTrEuFKIapFYiZHFrzbfO7zvXUYJZPsCj/6krdxtXmnQKkQ1+yX9V
-	KkOhbP7D+mpE4/aTnUqfQjWLu0Wc3KAA4l72IEEvBHVqCCnjHYx8CRZr+oYlvZjdsiI4F9QzDKT27
-	CuJa3qogrO24fCEcXmN7fIJcNrsTNKr5q1msZdcZAi84BbOLjyCItr17l0d101obU4pQ8F9WTb3v4
-	S6rlkeGSuflZtIdezqtg==;
+	List-Owner; bh=A2OHcMeJ9bQLbz+OWz5Roy6UgxTajViyK/Qzpeb5cZM=; b=hJ81OJxf1hAOkA
+	YoVD5dpk1rV4l1nadCizY7bGXeRc5vOj+yodwDs16o8zDCUPsLjvTpXnEc2iT47dhR6c7jLFgFLOo
+	rndf/slOwOO96oer8fR92ePcZddo7279HQmOjkWr/97NyFXG205rCIjnAbXP63Vuu6+lmjn0+vCOF
+	MSQwxjTKxPdKcLBd5rUkwzYREWrhP/a8GslW8GeRc1MjNXpjlDP+XItTTEKrS4Ne5ixFir+EfJPeq
+	YpbvETzG9dHquBmvvhmwMjsPBSTbCE0WLfKmKIeqW3sgVBdSN9Yi3qL+RnEZXvWbEc6t5o4NjUKNg
+	Zzdpw5Bc1TrbF7UCxWTg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jVfKL-00089b-Ba; Mon, 04 May 2020 17:56:25 +0000
-Received: from metis.ext.pengutronix.de ([2001:67c:670:201:290:27ff:fe1d:cc33])
+	id 1jVgO9-0000sf-5H; Mon, 04 May 2020 19:04:25 +0000
+Received: from smtprelay0128.hostedemail.com ([216.40.44.128]
+ helo=smtprelay.hostedemail.com)
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jVfKH-00087c-Uf
- for linux-mediatek@lists.infradead.org; Mon, 04 May 2020 17:56:23 +0000
-Received: from pty.hi.pengutronix.de ([2001:67c:670:100:1d::c5])
- by metis.ext.pengutronix.de with esmtps
- (TLS1.2:ECDHE_RSA_AES_256_GCM_SHA384:256) (Exim 4.92)
- (envelope-from <ukl@pengutronix.de>)
- id 1jVfJy-0004nF-Rx; Mon, 04 May 2020 19:56:02 +0200
-Received: from ukl by pty.hi.pengutronix.de with local (Exim 4.89)
- (envelope-from <ukl@pengutronix.de>)
- id 1jVfJp-0002rR-TC; Mon, 04 May 2020 19:55:53 +0200
-Date: Mon, 4 May 2020 19:55:53 +0200
-From: Uwe =?iso-8859-1?Q?Kleine-K=F6nig?= <u.kleine-koenig@pengutronix.de>
-To: Sam Ravnborg <sam@ravnborg.org>
+ id 1jVgNv-0000hL-QL; Mon, 04 May 2020 19:04:13 +0000
+Received: from filter.hostedemail.com (clb03-v110.bra.tucows.net
+ [216.40.38.60])
+ by smtprelay06.hostedemail.com (Postfix) with ESMTP id 90A1018022F46;
+ Mon,  4 May 2020 19:04:05 +0000 (UTC)
+X-Session-Marker: 6A6F6540706572636865732E636F6D
+X-Spam-Summary: 2, 0, 0, , d41d8cd98f00b204, joe@perches.com, ,
+ RULES_HIT:41:355:379:599:973:982:988:989:1260:1277:1311:1313:1314:1345:1359:1437:1515:1516:1518:1534:1540:1593:1594:1711:1730:1747:1777:1792:2198:2199:2393:2553:2559:2562:2693:2731:2828:2895:2902:3138:3139:3140:3141:3142:3352:3622:3867:3868:3870:3872:3874:4321:5007:6742:6743:7903:10004:10400:10848:11232:11658:11914:12043:12297:12740:12895:13069:13075:13161:13229:13311:13357:13439:13894:14096:14097:14180:14659:14721:14777:21060:21080:21627:21939:30026:30054:30060:30070:30090:30091,
+ 0, RBL:none, CacheIP:none, Bayesian:0.5, 0.5, 0.5, Netcheck:none,
+ DomainCache:0, MSF:not bulk, SPF:, MSBL:0, DNSBL:none, Custom_rules:0:0:0,
+ LFtime:2, LUA_SUMMARY:none
+X-HE-Tag: scarf42_6021543c5600
+X-Filterd-Recvd-Size: 2806
+Received: from XPS-9350.home (unknown [47.151.136.130])
+ (Authenticated sender: joe@perches.com)
+ by omf07.hostedemail.com (Postfix) with ESMTPA;
+ Mon,  4 May 2020 19:04:01 +0000 (UTC)
+Message-ID: <7af4a2979fb5c060af769a996d3e5917b4d265d0.camel@perches.com>
 Subject: Re: [PATCH] docs: dt: fix broken links due to txt->yaml renames
-Message-ID: <20200504175553.jdm7a7aabloevxba@pengutronix.de>
+From: Joe Perches <joe@perches.com>
+To: Uwe =?ISO-8859-1?Q?Kleine-K=F6nig?= <u.kleine-koenig@pengutronix.de>, 
+ Sam Ravnborg <sam@ravnborg.org>
+Date: Mon, 04 May 2020 12:04:00 -0700
+In-Reply-To: <20200504175553.jdm7a7aabloevxba@pengutronix.de>
 References: <967df5c3303b478b76199d4379fe40f5094f3f9b.1588584538.git.mchehab+huawei@kernel.org>
  <20200504174522.GA3383@ravnborg.org>
+ <20200504175553.jdm7a7aabloevxba@pengutronix.de>
+User-Agent: Evolution 3.36.1-2 
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <20200504174522.GA3383@ravnborg.org>
-User-Agent: NeoMutt/20170113 (1.7.2)
-X-SA-Exim-Connect-IP: 2001:67c:670:100:1d::c5
-X-SA-Exim-Mail-From: ukl@pengutronix.de
-X-SA-Exim-Scanned: No (on metis.ext.pengutronix.de);
- SAEximRunCond expanded to false
-X-PTX-Original-Recipient: linux-mediatek@lists.infradead.org
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200504_105621_988336_F675CEBD 
-X-CRM114-Status: GOOD (  10.87  )
+X-CRM114-CacheID: sfid-20200504_120411_909976_F924065E 
+X-CRM114-Status: GOOD (  10.96  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [216.40.44.128 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
+ -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
+ [216.40.44.128 listed in wl.mailspike.net]
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -90,33 +98,32 @@ Content-Transfer-Encoding: quoted-printable
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi Sam,
+On Mon, 2020-05-04 at 19:55 +0200, Uwe Kleine-K=F6nig wrote:
+> Hi Sam,
+> =
 
-On Mon, May 04, 2020 at 07:45:22PM +0200, Sam Ravnborg wrote:
-> On Mon, May 04, 2020 at 11:30:20AM +0200, Mauro Carvalho Chehab wrote:
-> > There are some new broken doc links due to yaml renames
-> > at DT. Developers should really run:
-> > =
+> On Mon, May 04, 2020 at 07:45:22PM +0200, Sam Ravnborg wrote:
+> > On Mon, May 04, 2020 at 11:30:20AM +0200, Mauro Carvalho Chehab wrote:
+> > > There are some new broken doc links due to yaml renames
+> > > at DT. Developers should really run:
+> > > =
 
-> > 	./scripts/documentation-file-ref-check
-> > =
+> > > 	./scripts/documentation-file-ref-check
+> > > =
 
-> > in order to solve those issues while submitting patches.
-> Would love if some bot could do this for me on any patches that creates
-> .yaml files or so.
-> I know I will forget this and it can be automated.
-> If I get a bot mail that my patch would broke a link I would
-> have it fixed before it hits any tree.
+> > > in order to solve those issues while submitting patches.
+> > Would love if some bot could do this for me on any patches that creates
+> > .yaml files or so.
+> > I know I will forget this and it can be automated.
+> > If I get a bot mail that my patch would broke a link I would
+> > have it fixed before it hits any tree.
+> =
 
-What about adding a check to check_patch?
+> What about adding a check to check_patch?
 
-Best regards
-Uwe
+There's already a checkpatch warning when a patch renames
+a file without a MAINTAINERS update.
 
--- =
-
-Pengutronix e.K.                           | Uwe Kleine-K=F6nig            |
-Industrial Linux Solutions                 | https://www.pengutronix.de/ |
 
 _______________________________________________
 Linux-mediatek mailing list
