@@ -2,80 +2,80 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 400A71C39CF
-	for <lists+linux-mediatek@lfdr.de>; Mon,  4 May 2020 14:47:50 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 508081C3B0F
+	for <lists+linux-mediatek@lfdr.de>; Mon,  4 May 2020 15:15:34 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
 	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=9UQQ0msIo50NhW6OxTf8c7/arDtMbhYK5iotomv02VQ=; b=L92seRqRxy0OS7
-	BV/rrv00qxfrgN4JuUtIp62ISimphMPkaXmtWcIZ4uQ7UVflI9yUj+IPl8IdPkrjJuAahD6u6uz4B
-	PNOul9qlqEL9NuUyqt4qlu6y6npFyD+QJP8LFd+5AJ59UbizkdYa+zVQk5GCjH4UDkSAKgoHABgkm
-	dvCWjerVCrwC5UVrBsdH7+n9wu8ThOTwhzTJLmBpv6DCuhpE/2O6+pqtags26jE4xJgwpsR9Il2RU
-	6jUDkXaIyawRb8tNNi65SdMn5nemqBh3SOoQFJvdDfcCfZQ2FiVo3WHFDD8Tc1e8v579/JCbgUum+
-	MbFjnth83HX9vFeaahsg==;
+	List-Owner; bh=UgHl6mROdXa4EJ2xOtZ+JWKi10MkgM/rYSQn9BIbcRw=; b=XeZiJAxSM2+rdP
+	DrMHuuKzp44fUSjjhKZMJwEybEqHf3/R3b8awpS4Lvi5uKfXDYTlo4Zg+UyWBNC3ut+3nG6xypgT6
+	9xnaCVT9OZkWybNC9Y+t0Dfe5Za6muOqyILC5uBJ+8CPsF0ZuYEVrNaqvDRPekMeYeE9FOsnuHyR0
+	IeNU3IJv9IzbMS9uVyx/ecqtVhnVUfJBFG0wewOgQ8IR3VXXjvalfIhCLi6xCgTnE/2gmD4GDP2Zi
+	CtKFv9aY1MftNRapYqkHMBnGlv9IkQmJ/+kpVWTThohIMByy3BMmo5ioONgwQZ7u2wVg03zAFTUcK
+	VxkjKno2sSnOjiy/1ffQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jVaVb-0006m5-Hw; Mon, 04 May 2020 12:47:43 +0000
-Received: from mail-il1-x141.google.com ([2607:f8b0:4864:20::141])
+	id 1jVawP-0001mL-U7; Mon, 04 May 2020 13:15:25 +0000
+Received: from mail-ed1-x542.google.com ([2a00:1450:4864:20::542])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jVaVX-0006l1-JL
- for linux-mediatek@lists.infradead.org; Mon, 04 May 2020 12:47:41 +0000
-Received: by mail-il1-x141.google.com with SMTP id f82so11050989ilh.8
- for <linux-mediatek@lists.infradead.org>; Mon, 04 May 2020 05:47:38 -0700 (PDT)
+ id 1jVawM-0001lJ-Gg
+ for linux-mediatek@lists.infradead.org; Mon, 04 May 2020 13:15:24 +0000
+Received: by mail-ed1-x542.google.com with SMTP id g16so13475601eds.1
+ for <linux-mediatek@lists.infradead.org>; Mon, 04 May 2020 06:15:21 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
  h=mime-version:references:in-reply-to:from:date:message-id:subject:to
- :cc; bh=PgaD51dpZoUQrQwC3rrOuRfLFfcUYGw0vyRmubj90k4=;
- b=WIYaYN8T/Gr8LKpuvsLi+frCBd9j2X0XbqOzWuigrxytd1DsldlMK5W39EUXiAs1wL
- 4FE8XXJixHe+uaoLYVUR0YLXLhv3xGl2IN96xpTYIo/RBqvXIVQd39Pa3q/o+u0KT/0g
- umhdzPtdOgeSdp872Yt61x9m9y2jFRCHNuegZ9PPDao2jeBN710vHGCUvpV/yCjaxV8B
- to5ry89mnlbc/hl5C3DPrjw5y2La34FkKVG2ymWnTRGWb6C880o+sZGGSODBcQPCwRcn
- Ca/4sVMG3BtANAlHyjawa+brMoI+FDuGv4DXgqCaxTT99ydiUaY58j/wrcqWZ60fJaka
- tTrQ==
+ :cc; bh=xXEa0UDgr6Sm1oxU98rlFxrrOQrsTyDffYdHdbwRax0=;
+ b=PpXTUOs5creydWHMCtoXQcyYihf8bhTtsnUlZf4q8R8MS7trUpZfbPOVaF37dAufN4
+ tOqP/8bW9H05mZfBvbMRWeBnXRjddOgvWR5yvtg8GBnmfAP+JD94/omczqFibmsMOokg
+ IRFya0xN9uRvtki/VZc8NeY5XJkwLeJyKauqDRL7a+BTdXi1fpbGBFCBWWMImWXz5BPy
+ shvjBf+KAeinPX5AA35qbn45d4pMYT5/DF2+uYqJ/jPhiav0J498liEumEa8wwUkFAf8
+ pGeGf+2fVnEN1E+1ym8aKEVExU2Yj3ac91wu6pFfsg0BOMEfF4JuTnN9tAsNg+/NCdRB
+ N95A==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:mime-version:references:in-reply-to:from:date
  :message-id:subject:to:cc;
- bh=PgaD51dpZoUQrQwC3rrOuRfLFfcUYGw0vyRmubj90k4=;
- b=oYBxC0hTHBFXjUFs+1rFMU+ZcL2iAFhPlCGVlAB5t/Yvlh6MM0LlgeRuyZdGmEL2Zh
- FLFTvlaoYrZW9kEAgvFj+2zDffdG3TmpQiEfhnJn7dEI8ZWcqUAJ7ifYWygXlJr+K3Ss
- 5L5GK3EQucwAp4NVCk8Rdra079izS0hhS0dTTbvniggTebGUnQIEfXw/WRTBVAatxpkZ
- PpntMeEIzBM102rYZ+D/+m/PNypqps4usGugGEmdRZHwsiZWRnO45qAP+FpCOfV5EUEJ
- Z3QVdU8WfYFC1RYQZTOn0lpkG8+B9rlxcG6N4zQ4Y/Vlt9N4y6SPHHsd7v0pzLveuZko
- ixmA==
-X-Gm-Message-State: AGi0PubcMGnV7UUX/t/k1WUXKjg/tkglDi2HntLAZuDrhCcHS4oHT6Qe
- 0yjISKAZRAn6dMyUH5C7PMSelrNqxS3LCgv1x1E=
-X-Google-Smtp-Source: APiQypIZAMDEitUO2Hh64G2YMAOFVlB59XhIgI11KetbzuX1QLHiK/bPleJrA/ivGWHgpDObbXBH2b4s72IJSsMvCkc=
-X-Received: by 2002:a05:6e02:cc4:: with SMTP id
- c4mr15477997ilj.31.1588596457717; 
- Mon, 04 May 2020 05:47:37 -0700 (PDT)
+ bh=xXEa0UDgr6Sm1oxU98rlFxrrOQrsTyDffYdHdbwRax0=;
+ b=YR0S6G6PI8Rjvl9ue4v6irNmws4JZ9ek280cPvbdHIAux6Gym26Bfixf3gTRKsuTA0
+ plEJ34oU88wwQ2o6q3b7KQvER7db+/DQZI5pAveI38GMCrGhd8/ZoSTGfa7H3skbghRo
+ qRxKB0+gD3OC8FkX/KFuyR0nXI+QkBPb27vv6rFc9YxTT+zxo7LRv6cdzteaK+RLNRvj
+ lAHqPw9HCPiauJ5QYIWxIfOpybj0Q8QEW/GOgjURMmL/dNQHAfK6tZAdUw7TsRGSf0Tj
+ 2ChsjfZnl9t4AWI9tCRCxwaes5j8OKTRPhDHxpvV72W2wjlDckK9ZMWXBup0K6MLx2Ww
+ YoGg==
+X-Gm-Message-State: AGi0PuZAcQPdKlt2KnfUl+7DSidwVbP7HSNiphFHzxJRiUnlsBy5V1Vg
+ 9I2fTEnM1B2PH7i21Atv0V0QxdDl8VIIqJtqcEk=
+X-Google-Smtp-Source: APiQypKXiDanSVgOWaslcdJGl6DeLhTEFB8aK0dXtclxWxdNhm3Tvkglp60pS3/QEJQaMCiem82V+RzJp14r0AKVxts=
+X-Received: by 2002:a50:8dc2:: with SMTP id s2mr15190448edh.318.1588598120565; 
+ Mon, 04 May 2020 06:15:20 -0700 (PDT)
 MIME-Version: 1.0
 References: <20200425120207.5400-1-dqfext@gmail.com>
  <CA+h21hpeJK8mHduKoWn5rbmz=BEz_6HQdz3Xf63NsXpZxsky0A@mail.gmail.com>
-In-Reply-To: <CA+h21hpeJK8mHduKoWn5rbmz=BEz_6HQdz3Xf63NsXpZxsky0A@mail.gmail.com>
-From: DENG Qingfang <dqfext@gmail.com>
-Date: Mon, 4 May 2020 20:47:29 +0800
-Message-ID: <CALW65jb_n49+jTo8kd6QT7AwXdCxJOR1bOFA72fyhjReM2688Q@mail.gmail.com>
+ <CALW65jb_n49+jTo8kd6QT7AwXdCxJOR1bOFA72fyhjReM2688Q@mail.gmail.com>
+In-Reply-To: <CALW65jb_n49+jTo8kd6QT7AwXdCxJOR1bOFA72fyhjReM2688Q@mail.gmail.com>
+From: Vladimir Oltean <olteanv@gmail.com>
+Date: Mon, 4 May 2020 16:15:09 +0300
+Message-ID: <CA+h21hrhcqpF+nTmG6057ckB+CzHQGC+F5_bbAK7TXxmpvzNBQ@mail.gmail.com>
 Subject: Re: [RFC PATCH net-next] net: dsa: mt7530: fix roaming from DSA user
  ports
-To: Vladimir Oltean <olteanv@gmail.com>
+To: DENG Qingfang <dqfext@gmail.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200504_054739_637708_6777F429 
-X-CRM114-Status: GOOD (  34.93  )
+X-CRM114-CacheID: sfid-20200504_061522_918676_4AC908A4 
+X-CRM114-Status: GOOD (  29.42  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:141 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:542 listed in]
  [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider [dqfext[at]gmail.com]
+ provider [olteanv[at]gmail.com]
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
@@ -109,179 +109,95 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi Vladimir,
+Hi Qingfang,
 
-On Mon, May 4, 2020 at 6:23 PM Vladimir Oltean <olteanv@gmail.com> wrote:
+On Mon, 4 May 2020 at 15:47, DENG Qingfang <dqfext@gmail.com> wrote:
 >
-> Hi Qingfang,
+> Hi Vladimir,
 >
-> On Sat, 25 Apr 2020 at 15:03, DENG Qingfang <dqfext@gmail.com> wrote:
+> On Mon, May 4, 2020 at 6:23 PM Vladimir Oltean <olteanv@gmail.com> wrote:
 > >
-> > When a client moves from a DSA user port to a software port in a bridge,
-> > it cannot reach any other clients that connected to the DSA user ports.
-> > That is because SA learning on the CPU port is disabled, so the switch
-> > ignores the client's frames from the CPU port and still thinks it is at
-> > the user port.
+> > Hi Qingfang,
 > >
-> > Fix it by enabling SA learning on the CPU port.
+> > On Sat, 25 Apr 2020 at 15:03, DENG Qingfang <dqfext@gmail.com> wrote:
+> > >
+> > > When a client moves from a DSA user port to a software port in a bridge,
+> > > it cannot reach any other clients that connected to the DSA user ports.
+> > > That is because SA learning on the CPU port is disabled, so the switch
+> > > ignores the client's frames from the CPU port and still thinks it is at
+> > > the user port.
+> > >
+> > > Fix it by enabling SA learning on the CPU port.
+> > >
+> > > To prevent the switch from learning from flooding frames from the CPU
+> > > port, set skb->offload_fwd_mark to 1 for unicast and broadcast frames,
+> > > and let the switch flood them instead of trapping to the CPU port.
+> > > Multicast frames still need to be trapped to the CPU port for snooping,
+> > > so set the SA_DIS bit of the MTK tag to 1 when transmitting those frames
+> > > to disable SA learning.
+> > >
+> > > Fixes: b8f126a8d543 ("net-next: dsa: add dsa support for Mediatek MT7530 switch")
+> > > Signed-off-by: DENG Qingfang <dqfext@gmail.com>
+> > > ---
 > >
-> > To prevent the switch from learning from flooding frames from the CPU
-> > port, set skb->offload_fwd_mark to 1 for unicast and broadcast frames,
-> > and let the switch flood them instead of trapping to the CPU port.
-> > Multicast frames still need to be trapped to the CPU port for snooping,
-> > so set the SA_DIS bit of the MTK tag to 1 when transmitting those frames
-> > to disable SA learning.
-> >
-> > Fixes: b8f126a8d543 ("net-next: dsa: add dsa support for Mediatek MT7530 switch")
-> > Signed-off-by: DENG Qingfang <dqfext@gmail.com>
-> > ---
+> > I think enabling learning on the CPU port would fix the problem
+> > sometimes, but not always. (actually nothing can solve it always, see
+> > below)
+> > The switch learns the new route only if it receives any packets from
+> > the CPU port, with a SA equal to the station you're trying to reach.
+> > But what if the station is not sending any traffic at the moment,
+> > because it is simply waiting for connections to it first (just an
+> > example)?
+> > Unless there is any traffic already coming from the destination
+> > station too, your patch won't work.
+> > I am currently facing a similar situation with the ocelot/felix
+> > switches, but in that case, enabling SA learning on the CPU port is
+> > not possible.
 >
-> I think enabling learning on the CPU port would fix the problem
-> sometimes, but not always. (actually nothing can solve it always, see
-> below)
-> The switch learns the new route only if it receives any packets from
-> the CPU port, with a SA equal to the station you're trying to reach.
-> But what if the station is not sending any traffic at the moment,
-> because it is simply waiting for connections to it first (just an
-> example)?
-> Unless there is any traffic already coming from the destination
-> station too, your patch won't work.
-> I am currently facing a similar situation with the ocelot/felix
-> switches, but in that case, enabling SA learning on the CPU port is
-> not possible.
+> Why is it not possible?
+>
 
-Why is it not possible?
+Because learning on the CPU port is not supported on this hardware.
 
-Then try my previous RFC patch
-"net: bridge: fix client roaming from DSA user port"
-It tries removing entries from the switch when the client moves to another port.
-
-> The way I dealt with it is by forcing a flush of the FDB entries on
-> the port, in the following scenarios:
-> - link goes down
-> - port leaves its bridge
-> So traffic towards a destination that has migrated away will
-> temporarily be flooded again (towards the CPU port as well).
-> There is still one case which isn't treated using this approach: when
-> the station migrates away from a switch port that is not directly
-> connected to this one. So no "link down" events would get generated in
-> that case. We would still have to wait until the address expires in
-> that case. I don't think that particular situation can be solved.
-
-You're right. Every switch has this issue, even Linux bridge.
-
-> My point is: if we agree that this is a larger problem, then DSA
-> should have a .port_fdb_flush method and schedule a workqueue whenever
-> necessary. Yes, it is a costly operation, but it will still probably
-> take a lot less than the 300 seconds that the bridge configures for
-> address ageing.
+> Then try my previous RFC patch
+> "net: bridge: fix client roaming from DSA user port"
+> It tries removing entries from the switch when the client moves to another port.
 >
-> Thoughts?
+
+Your patch only deletes FDB entries of packets received in the
+fastpath by the software bridge, which as I said, won't work if the
+software bridge doesn't receive packets in the first place due to a
+stale FDB entry.
+
+> > The way I dealt with it is by forcing a flush of the FDB entries on
+> > the port, in the following scenarios:
+> > - link goes down
+> > - port leaves its bridge
+> > So traffic towards a destination that has migrated away will
+> > temporarily be flooded again (towards the CPU port as well).
+> > There is still one case which isn't treated using this approach: when
+> > the station migrates away from a switch port that is not directly
+> > connected to this one. So no "link down" events would get generated in
+> > that case. We would still have to wait until the address expires in
+> > that case. I don't think that particular situation can be solved.
 >
-> >  drivers/net/dsa/mt7530.c |  9 ++-------
-> >  drivers/net/dsa/mt7530.h |  1 +
-> >  net/dsa/tag_mtk.c        | 15 +++++++++++++++
-> >  3 files changed, 18 insertions(+), 7 deletions(-)
-> >
-> > diff --git a/drivers/net/dsa/mt7530.c b/drivers/net/dsa/mt7530.c
-> > index 5c444cd722bd..34e4aadfa705 100644
-> > --- a/drivers/net/dsa/mt7530.c
-> > +++ b/drivers/net/dsa/mt7530.c
-> > @@ -628,11 +628,8 @@ mt7530_cpu_port_enable(struct mt7530_priv *priv,
-> >         mt7530_write(priv, MT7530_PVC_P(port),
-> >                      PORT_SPEC_TAG);
-> >
-> > -       /* Disable auto learning on the cpu port */
-> > -       mt7530_set(priv, MT7530_PSC_P(port), SA_DIS);
-> > -
-> > -       /* Unknown unicast frame fordwarding to the cpu port */
-> > -       mt7530_set(priv, MT7530_MFC, UNU_FFP(BIT(port)));
-> > +       /* Unknown multicast frame forwarding to the cpu port */
-> > +       mt7530_rmw(priv, MT7530_MFC, UNM_FFP_MASK, UNM_FFP(BIT(port)));
-> >
-> >         /* Set CPU port number */
-> >         if (priv->id == ID_MT7621)
-> > @@ -1294,8 +1291,6 @@ mt7530_setup(struct dsa_switch *ds)
-> >         /* Enable and reset MIB counters */
-> >         mt7530_mib_reset(ds);
-> >
-> > -       mt7530_clear(priv, MT7530_MFC, UNU_FFP_MASK);
-> > -
-> >         for (i = 0; i < MT7530_NUM_PORTS; i++) {
-> >                 /* Disable forwarding by default on all ports */
-> >                 mt7530_rmw(priv, MT7530_PCR_P(i), PCR_MATRIX_MASK,
-> > diff --git a/drivers/net/dsa/mt7530.h b/drivers/net/dsa/mt7530.h
-> > index 979bb6374678..82af4d2d406e 100644
-> > --- a/drivers/net/dsa/mt7530.h
-> > +++ b/drivers/net/dsa/mt7530.h
-> > @@ -31,6 +31,7 @@ enum {
-> >  #define MT7530_MFC                     0x10
-> >  #define  BC_FFP(x)                     (((x) & 0xff) << 24)
-> >  #define  UNM_FFP(x)                    (((x) & 0xff) << 16)
-> > +#define  UNM_FFP_MASK                  UNM_FFP(~0)
-> >  #define  UNU_FFP(x)                    (((x) & 0xff) << 8)
-> >  #define  UNU_FFP_MASK                  UNU_FFP(~0)
-> >  #define  CPU_EN                                BIT(7)
-> > diff --git a/net/dsa/tag_mtk.c b/net/dsa/tag_mtk.c
-> > index b5705cba8318..d6619edd53e5 100644
-> > --- a/net/dsa/tag_mtk.c
-> > +++ b/net/dsa/tag_mtk.c
-> > @@ -15,6 +15,7 @@
-> >  #define MTK_HDR_XMIT_TAGGED_TPID_8100  1
-> >  #define MTK_HDR_RECV_SOURCE_PORT_MASK  GENMASK(2, 0)
-> >  #define MTK_HDR_XMIT_DP_BIT_MASK       GENMASK(5, 0)
-> > +#define MTK_HDR_XMIT_SA_DIS            BIT(6)
-> >
-> >  static struct sk_buff *mtk_tag_xmit(struct sk_buff *skb,
-> >                                     struct net_device *dev)
-> > @@ -22,6 +23,9 @@ static struct sk_buff *mtk_tag_xmit(struct sk_buff *skb,
-> >         struct dsa_port *dp = dsa_slave_to_port(dev);
-> >         u8 *mtk_tag;
-> >         bool is_vlan_skb = true;
-> > +       unsigned char *dest = eth_hdr(skb)->h_dest;
-> > +       bool is_multicast_skb = is_multicast_ether_addr(dest) &&
-> > +                               !is_broadcast_ether_addr(dest);
-> >
-> >         /* Build the special tag after the MAC Source Address. If VLAN header
-> >          * is present, it's required that VLAN header and special tag is
-> > @@ -47,6 +51,10 @@ static struct sk_buff *mtk_tag_xmit(struct sk_buff *skb,
-> >                      MTK_HDR_XMIT_UNTAGGED;
-> >         mtk_tag[1] = (1 << dp->index) & MTK_HDR_XMIT_DP_BIT_MASK;
-> >
-> > +       /* Disable SA learning for multicast frames */
-> > +       if (unlikely(is_multicast_skb))
-> > +               mtk_tag[1] |= MTK_HDR_XMIT_SA_DIS;
-> > +
-> >         /* Tag control information is kept for 802.1Q */
-> >         if (!is_vlan_skb) {
-> >                 mtk_tag[2] = 0;
-> > @@ -61,6 +69,9 @@ static struct sk_buff *mtk_tag_rcv(struct sk_buff *skb, struct net_device *dev,
-> >  {
-> >         int port;
-> >         __be16 *phdr, hdr;
-> > +       unsigned char *dest = eth_hdr(skb)->h_dest;
-> > +       bool is_multicast_skb = is_multicast_ether_addr(dest) &&
-> > +                               !is_broadcast_ether_addr(dest);
-> >
-> >         if (unlikely(!pskb_may_pull(skb, MTK_HDR_LEN)))
-> >                 return NULL;
-> > @@ -86,6 +97,10 @@ static struct sk_buff *mtk_tag_rcv(struct sk_buff *skb, struct net_device *dev,
-> >         if (!skb->dev)
-> >                 return NULL;
-> >
-> > +       /* Only unicast or broadcast frames are offloaded */
-> > +       if (likely(!is_multicast_skb))
-> > +               skb->offload_fwd_mark = 1;
-> > +
-> >         return skb;
-> >  }
-> >
-> > --
-> > 2.26.1
-> >
+> You're right. Every switch has this issue, even Linux bridge.
 >
-> Thanks,
-> -Vladimir
+> > My point is: if we agree that this is a larger problem, then DSA
+> > should have a .port_fdb_flush method and schedule a workqueue whenever
+> > necessary. Yes, it is a costly operation, but it will still probably
+> > take a lot less than the 300 seconds that the bridge configures for
+> > address ageing.
+> >
+> > Thoughts?
+> >
+
+> >
+> > Thanks,
+> > -Vladimir
+
+Regards,
+-Vladimir
 
 _______________________________________________
 Linux-mediatek mailing list
