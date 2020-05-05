@@ -2,77 +2,88 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id AE9461C56CA
-	for <lists+linux-mediatek@lfdr.de>; Tue,  5 May 2020 15:26:34 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 1B12A1C57E2
+	for <lists+linux-mediatek@lfdr.de>; Tue,  5 May 2020 16:04:26 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
-	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=tEDiXxBW3OdIoSbfDiNw8nFe2eONv53JVGxyH0ZRUwg=; b=loUldV8UHA4vzF
-	mdKYD2f/BdRRXq50vd3r1BQqOcZrDSpmoKZN7gkxxafpffK6PD5dlIeIVWZT9R1i4SVe2W9GAPt6f
-	0HkAfMokTvTNZ4HX+o02+1In+8byTXmNmAWiFS6pMgd8IgbK3i099waOFuLly93KRPaQpIGaWB+6g
-	//6J4SlIebhuCK9VTbLLCzTtjIE1aiYTXZMu6aI9uOOocdEEyg3VPiYxFHnDlSbzY/7Rxoxm+SP1X
-	728A0Y558Ro0JLS7aH3nmMLtaueWUH0370rWkebEVUuIu4t8iyRegD8ZZLqqeKEnPgPGZIOQ1qj9H
-	pluE4w7pBnBwAtloL6jg==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=1W1yQG0cXHcx2FDxr/6Fo6GON7lSfXv2asMmRBdQZgU=; b=EzvgKIgGeLJFbi
+	aP6jpKDT3rS7UqoKzQ6NQy4aiZi/gMMLbFKVn0LVMqHZ5AES4QAJdV6B+QbXOdoWCYPUWbX0Ey5KF
+	PjoZVzVePyY4b4zm8fibB0Q9vx8tqyqNr+yOWjZPLEPb7H2nkTSX9JLW6jgBRJ/3OJHMotifFi5av
+	ERnzNH9BsHT2xAIkLvgrNeuyiiQKp4uXoIGnsotlAzJs/AvzYYHU8M+Ft4sPcGCD7hEx7XMkP/cD8
+	/iseMAt5el69WM2tynzrZow6Uf5ADlOvTM2wADByJ7kHmi6p8hIucKUV2+2Fm7PvLzBWaEMWQM2Me
+	ZylFTCR/TwrLb0nbD/pg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jVxad-0008Ej-TG; Tue, 05 May 2020 13:26:27 +0000
-Received: from mail.kernel.org ([198.145.29.99])
+	id 1jVyBG-0003QM-So; Tue, 05 May 2020 14:04:18 +0000
+Received: from mail-wr1-x441.google.com ([2a00:1450:4864:20::441])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jVxaV-00086h-Bn; Tue, 05 May 2020 13:26:20 +0000
-Received: from mail-ej1-f50.google.com (mail-ej1-f50.google.com
- [209.85.218.50])
- (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
- (No client certificate requested)
- by mail.kernel.org (Postfix) with ESMTPSA id C52392083B;
- Tue,  5 May 2020 13:26:18 +0000 (UTC)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1588685179;
- bh=Cg3Aww/DWiRcPHXAAcy63wB+BBaJMxE4W5SjVqI52xM=;
- h=References:In-Reply-To:From:Date:Subject:To:Cc:From;
- b=Jl6xMq65m2X3WEe5EWx7+ejjvCPFF50UyIRkX3tbpEfiDyIj1915/uLUMrzdtJfaw
- 6iqUX04UY73+GzpazFnWSkIkB5sok0LeDe9adoCvV8vdgJ9jAbOWhaT/RPnEuGXDM0
- FaX+THGQl4IkBFpR2xkMR512gckbveC1akdYSSOE=
-Received: by mail-ej1-f50.google.com with SMTP id n17so1638182ejh.7;
- Tue, 05 May 2020 06:26:18 -0700 (PDT)
-X-Gm-Message-State: AGi0PubPb/lCWZWe4becTGmiNvfbUaVLpbJ9XSsHjrqE1k5RVxuGsJdy
- coWekjNaPyOflFEZrUTM989kBf4qdW8FD4HPsg==
-X-Google-Smtp-Source: APiQypJhGBe4KM2v2+R7Tdau70M9ldxuxhIcdizZA6GeTupSyTsy4bkN4GwbSWQLG63deM2MBxQgW+u07ypp/LcOr8Q=
-X-Received: by 2002:a17:906:2ad4:: with SMTP id
- m20mr2786571eje.324.1588685177209; 
- Tue, 05 May 2020 06:26:17 -0700 (PDT)
+ id 1jVyA9-0002E5-6R
+ for linux-mediatek@lists.infradead.org; Tue, 05 May 2020 14:03:11 +0000
+Received: by mail-wr1-x441.google.com with SMTP id g13so2863395wrb.8
+ for <linux-mediatek@lists.infradead.org>; Tue, 05 May 2020 07:03:04 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=bgdev-pl.20150623.gappssmtp.com; s=20150623;
+ h=from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=PK31tVWfgrccN1MBhDjrbakpYyyD2tO24v7BYQEkurI=;
+ b=a8DMxibRqTrZGmyZ0KLtsYlfgQSvtBtYx+i51AoL6kzVb3a3Zcw5KFc8r5emhX2L/e
+ qLVl57SKF7PdhjnPEnfYmiBsHkXDn94m+UKH2rLq8YYGcxS7EN5GAv4eWBPvoY1byN7N
+ QxZMFs3Qb+qVtydhG5IbCi+FEqOcJ0waPkxXqf2ILV3oLLL0N8BnwvrKySVqhV+H6q/X
+ 68KP5IqC6ZqPMnSBCsQ0mVeuFaW8UzGdm+AMBhfl1Jooa4pbk4UE+wnG551wvwjBL9yZ
+ yo8Kq56xX0wXRuQs1Lf5bbGGIUhYjKU0+mCWMv1cZeNM2eZ0NXSh3Pl4lvUmp2tjq5pt
+ c2Dw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=PK31tVWfgrccN1MBhDjrbakpYyyD2tO24v7BYQEkurI=;
+ b=PQETGhyWFcdvsvjrOxtuTyal/4cUpTv5qLjAPu2LFMHkIYuVUk/fIOxBosCUlSbUAP
+ v4O4y2eTcmf1U3IJcoNRvS0W3W6JEZAGhWiA/14+qvojAMMoRLH1PWbCbHeNL9TuAgqw
+ jRb91KPHAFKjp6gh2vvs3V8oVrn4ke0LYVJvBlpfJFpsgesTmyC6f9acCt+HNd6c8s5T
+ hzn4gPyW6aXqeCOLNi93ZneLlguugcNs2ofLQXtOJiW3q4jEwav/L/wykS2x/GIsoDT8
+ 4CEXz3x+8v9puEBd7RWC8bx+mwJLidbYU7Ga1WBr5RO72v3gCVsWJ5sTCFQcnfHER/V0
+ APKw==
+X-Gm-Message-State: AGi0PublZGSRg1o70Jpa2nynxn65FZESV6bGyIlmKRZuFjIBgQ4DSuyx
+ cpBEb3kGCU9Gz3IWgH+tyhPWQg==
+X-Google-Smtp-Source: APiQypJK0fRzPjzYsRI0o6WTCpJIb10ZVt2+vpQjB2QmGMKqpkl9pQ80cS/ZweDjU4zPMeSAzrIc8g==
+X-Received: by 2002:a5d:4711:: with SMTP id y17mr3781592wrq.49.1588687383658; 
+ Tue, 05 May 2020 07:03:03 -0700 (PDT)
+Received: from localhost.localdomain (lfbn-nic-1-65-232.w2-15.abo.wanadoo.fr.
+ [2.15.156.232])
+ by smtp.gmail.com with ESMTPSA id c190sm4075755wme.4.2020.05.05.07.03.02
+ (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+ Tue, 05 May 2020 07:03:03 -0700 (PDT)
+From: Bartosz Golaszewski <brgl@bgdev.pl>
+To: Rob Herring <robh+dt@kernel.org>, "David S . Miller" <davem@davemloft.net>,
+ Matthias Brugger <matthias.bgg@gmail.com>, Felix Fietkau <nbd@openwrt.org>,
+ John Crispin <john@phrozen.org>, Sean Wang <sean.wang@mediatek.com>,
+ Mark Lee <Mark-MC.Lee@mediatek.com>, Jakub Kicinski <kuba@kernel.org>,
+ Arnd Bergmann <arnd@arndb.de>, Fabien Parent <fparent@baylibre.com>
+Subject: [PATCH 00/11] mediatek: add support for MediaTek Ethernet MAC
+Date: Tue,  5 May 2020 16:02:20 +0200
+Message-Id: <20200505140231.16600-1-brgl@bgdev.pl>
+X-Mailer: git-send-email 2.25.0
 MIME-Version: 1.0
-References: <20200504141408.60877-1-enric.balletbo@collabora.com>
- <20200504141408.60877-4-enric.balletbo@collabora.com>
-In-Reply-To: <20200504141408.60877-4-enric.balletbo@collabora.com>
-From: Chun-Kuang Hu <chunkuang.hu@kernel.org>
-Date: Tue, 5 May 2020 21:26:03 +0800
-X-Gmail-Original-Message-ID: <CAAOTY_9pFfrKjg6qD5fF0gnuj0aLG7DZh1k0htg=YZGaJE9Hww@mail.gmail.com>
-Message-ID: <CAAOTY_9pFfrKjg6qD5fF0gnuj0aLG7DZh1k0htg=YZGaJE9Hww@mail.gmail.com>
-Subject: Re: [PATCH 3/3] drm/mediatek: mtk_dpi: Use simple encoder
-To: Enric Balletbo i Serra <enric.balletbo@collabora.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200505_062619_441116_8F7D52C0 
-X-CRM114-Status: GOOD (  15.34  )
-X-Spam-Score: -5.2 (-----)
+X-CRM114-CacheID: sfid-20200505_070309_230007_017286F4 
+X-CRM114-Status: GOOD (  11.28  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
- Content analysis details:   (-5.2 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
- high trust [198.145.29.99 listed in list.dnswl.org]
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [2a00:1450:4864:20:0:0:0:441 listed in]
+ [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -84,57 +95,65 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Chun-Kuang Hu <chunkuang.hu@kernel.org>,
- Nicolas Boichat <drinkcat@chromium.org>,
- Philipp Zabel <p.zabel@pengutronix.de>, David Airlie <airlied@linux.ie>,
- linux-kernel <linux-kernel@vger.kernel.org>,
- DRI Development <dri-devel@lists.freedesktop.org>,
- "moderated list:ARM/Mediatek SoC support" <linux-mediatek@lists.infradead.org>,
- Laurent Pinchart <laurent.pinchart@ideasonboard.com>,
- Daniel Vetter <daniel@ffwll.ch>, Hsin-Yi Wang <hsinyi@chromium.org>,
- Matthias Brugger <matthias.bgg@gmail.com>,
- Collabora Kernel ML <kernel@collabora.com>,
- Linux ARM <linux-arm-kernel@lists.infradead.org>
-Content-Type: text/plain; charset="utf-8"
-Content-Transfer-Encoding: base64
+Cc: devicetree@vger.kernel.org, netdev@vger.kernel.org,
+ linux-kernel@vger.kernel.org, Bartosz Golaszewski <bgolaszewski@baylibre.com>,
+ linux-mediatek@lists.infradead.org, linux-arm-kernel@lists.infradead.org
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-SGksIEVucmljOgoKRW5yaWMgQmFsbGV0Ym8gaSBTZXJyYSA8ZW5yaWMuYmFsbGV0Ym9AY29sbGFi
-b3JhLmNvbT4g5pa8IDIwMjDlubQ15pyINOaXpSDpgLHkuIAg5LiL5Y2IMTA6MTTlr6vpgZPvvJoK
-Pgo+IFRoZSBtdGtfZHBpIGRyaXZlciB1c2VzIGFuIGVtcHR5IGltcGxlbWVudGF0aW9uIGZvciBp
-dHMgZW5jb2Rlci4gUmVwbGFjZQo+IHRoZSBjb2RlIHdpdGggdGhlIGdlbmVyaWMgc2ltcGxlIGVu
-Y29kZXIuCgpSZXZpZXdlZC1ieTogQ2h1bi1LdWFuZyBIdSA8Y2h1bmt1YW5nLmh1QGtlcm5lbC5v
-cmc+Cgo+Cj4gU2lnbmVkLW9mZi1ieTogRW5yaWMgQmFsbGV0Ym8gaSBTZXJyYSA8ZW5yaWMuYmFs
-bGV0Ym9AY29sbGFib3JhLmNvbT4KPiAtLS0KPgo+ICBkcml2ZXJzL2dwdS9kcm0vbWVkaWF0ZWsv
-bXRrX2RwaS5jIHwgMTQgKysrLS0tLS0tLS0tLS0KPiAgMSBmaWxlIGNoYW5nZWQsIDMgaW5zZXJ0
-aW9ucygrKSwgMTEgZGVsZXRpb25zKC0pCj4KPiBkaWZmIC0tZ2l0IGEvZHJpdmVycy9ncHUvZHJt
-L21lZGlhdGVrL210a19kcGkuYyBiL2RyaXZlcnMvZ3B1L2RybS9tZWRpYXRlay9tdGtfZHBpLmMK
-PiBpbmRleCBiYWFkMTk4YzY5ZWIuLjgwNzc4YjJhYWMyYSAxMDA2NDQKPiAtLS0gYS9kcml2ZXJz
-L2dwdS9kcm0vbWVkaWF0ZWsvbXRrX2RwaS5jCj4gKysrIGIvZHJpdmVycy9ncHUvZHJtL21lZGlh
-dGVrL210a19kcGkuYwo+IEBAIC0yMCw2ICsyMCw3IEBACj4gICNpbmNsdWRlIDxkcm0vZHJtX2Jy
-aWRnZS5oPgo+ICAjaW5jbHVkZSA8ZHJtL2RybV9jcnRjLmg+Cj4gICNpbmNsdWRlIDxkcm0vZHJt
-X29mLmg+Cj4gKyNpbmNsdWRlIDxkcm0vZHJtX3NpbXBsZV9rbXNfaGVscGVyLmg+Cj4KPiAgI2lu
-Y2x1ZGUgIm10a19kcGlfcmVncy5oIgo+ICAjaW5jbHVkZSAibXRrX2RybV9kZHBfY29tcC5oIgo+
-IEBAIC01MTAsMTUgKzUxMSw2IEBAIHN0YXRpYyBpbnQgbXRrX2RwaV9zZXRfZGlzcGxheV9tb2Rl
-KHN0cnVjdCBtdGtfZHBpICpkcGksCj4gICAgICAgICByZXR1cm4gMDsKPiAgfQo+Cj4gLXN0YXRp
-YyB2b2lkIG10a19kcGlfZW5jb2Rlcl9kZXN0cm95KHN0cnVjdCBkcm1fZW5jb2RlciAqZW5jb2Rl
-cikKPiAtewo+IC0gICAgICAgZHJtX2VuY29kZXJfY2xlYW51cChlbmNvZGVyKTsKPiAtfQo+IC0K
-PiAtc3RhdGljIGNvbnN0IHN0cnVjdCBkcm1fZW5jb2Rlcl9mdW5jcyBtdGtfZHBpX2VuY29kZXJf
-ZnVuY3MgPSB7Cj4gLSAgICAgICAuZGVzdHJveSA9IG10a19kcGlfZW5jb2Rlcl9kZXN0cm95LAo+
-IC19Owo+IC0KPiAgc3RhdGljIGludCBtdGtfZHBpX2JyaWRnZV9hdHRhY2goc3RydWN0IGRybV9i
-cmlkZ2UgKmJyaWRnZSwKPiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBlbnVtIGRy
-bV9icmlkZ2VfYXR0YWNoX2ZsYWdzIGZsYWdzKQo+ICB7Cj4gQEAgLTU5MSw4ICs1ODMsOCBAQCBz
-dGF0aWMgaW50IG10a19kcGlfYmluZChzdHJ1Y3QgZGV2aWNlICpkZXYsIHN0cnVjdCBkZXZpY2Ug
-Km1hc3Rlciwgdm9pZCAqZGF0YSkKPiAgICAgICAgICAgICAgICAgcmV0dXJuIHJldDsKPiAgICAg
-ICAgIH0KPgo+IC0gICAgICAgcmV0ID0gZHJtX2VuY29kZXJfaW5pdChkcm1fZGV2LCAmZHBpLT5l
-bmNvZGVyLCAmbXRrX2RwaV9lbmNvZGVyX2Z1bmNzLAo+IC0gICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICBEUk1fTU9ERV9FTkNPREVSX1RNRFMsIE5VTEwpOwo+ICsgICAgICAgcmV0ID0gZHJt
-X3NpbXBsZV9lbmNvZGVyX2luaXQoZHJtX2RldiwgJmRwaS0+ZW5jb2RlciwKPiArICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICAgICAgICAgIERSTV9NT0RFX0VOQ09ERVJfVE1EUyk7Cj4gICAg
-ICAgICBpZiAocmV0KSB7Cj4gICAgICAgICAgICAgICAgIGRldl9lcnIoZGV2LCAiRmFpbGVkIHRv
-IGluaXRpYWxpemUgZGVjb2RlcjogJWRcbiIsIHJldCk7Cj4gICAgICAgICAgICAgICAgIGdvdG8g
-ZXJyX3VucmVnaXN0ZXI7Cj4gLS0KPiAyLjI2LjIKPgoKX19fX19fX19fX19fX19fX19fX19fX19f
-X19fX19fX19fX19fX19fX19fX19fX18KTGludXgtbWVkaWF0ZWsgbWFpbGluZyBsaXN0CkxpbnV4
-LW1lZGlhdGVrQGxpc3RzLmluZnJhZGVhZC5vcmcKaHR0cDovL2xpc3RzLmluZnJhZGVhZC5vcmcv
-bWFpbG1hbi9saXN0aW5mby9saW51eC1tZWRpYXRlawo=
+From: Bartosz Golaszewski <bgolaszewski@baylibre.com>
+
+This adds support for the Ethernet Controller present on MediaTeK SoCs
+from the MT8* family.
+
+The first two patches add binding documents for the PERICFG syscon and
+for the MAC itself.
+
+Patches 3/11 & 4/11 do some cleanup of the mediatek ethernet drivers
+directory.
+
+Patch 5/11 provides a devres variant of register_netdev().
+
+Patch 6/11 adds the new ethernet driver.
+
+The rest of the patches add DT fixups for the boards already supported
+upstream.
+
+Bartosz Golaszewski (11):
+  dt-bindings: add a binding document for MediaTek PERICFG controller
+  dt-bindings: new: add yaml bindings for MediaTek Ethernet MAC
+  net: ethernet: mediatek: rename Kconfig prompt
+  net: ethernet: mediatek: remove unnecessary spaces from Makefile
+  net: core: provide devm_register_netdev()
+  net: ethernet: mtk-eth-mac: new driver
+  ARM64: dts: mediatek: add pericfg syscon to mt8516.dtsi
+  ARM64: dts: mediatek: add the ethernet node to mt8516.dtsi
+  ARM64: dts: mediatek: add an alias for ethernet0 for pumpkin boards
+  ARM64: dts: mediatek: add ethernet pins for pumpkin boards
+  ARM64: dts: mediatek: enable ethernet on pumpkin boards
+
+ .../arm/mediatek/mediatek,pericfg.yaml        |   34 +
+ .../bindings/net/mediatek,eth-mac.yaml        |   80 +
+ arch/arm64/boot/dts/mediatek/mt8516.dtsi      |   17 +
+ .../boot/dts/mediatek/pumpkin-common.dtsi     |   34 +
+ drivers/net/ethernet/mediatek/Kconfig         |    8 +-
+ drivers/net/ethernet/mediatek/Makefile        |    3 +-
+ drivers/net/ethernet/mediatek/mtk_eth_mac.c   | 1476 +++++++++++++++++
+ include/linux/netdevice.h                     |    4 +
+ net/core/dev.c                                |   48 +
+ net/ethernet/eth.c                            |    1 +
+ 10 files changed, 1703 insertions(+), 2 deletions(-)
+ create mode 100644 Documentation/devicetree/bindings/arm/mediatek/mediatek,pericfg.yaml
+ create mode 100644 Documentation/devicetree/bindings/net/mediatek,eth-mac.yaml
+ create mode 100644 drivers/net/ethernet/mediatek/mtk_eth_mac.c
+
+-- 
+2.25.0
+
+
+_______________________________________________
+Linux-mediatek mailing list
+Linux-mediatek@lists.infradead.org
+http://lists.infradead.org/mailman/listinfo/linux-mediatek
