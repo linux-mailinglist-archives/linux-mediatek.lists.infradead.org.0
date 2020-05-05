@@ -2,85 +2,84 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 78B071C57E4
-	for <lists+linux-mediatek@lfdr.de>; Tue,  5 May 2020 16:04:29 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id CA3481C5808
+	for <lists+linux-mediatek@lfdr.de>; Tue,  5 May 2020 16:05:17 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=GVUhL1nCzbFMryJx1ChACGcb28fKI2TfemS6Nwp0+eQ=; b=Ki+s8GaQ/+uMyA
-	coPVRhYJAzAHs/1okIIdJpLYK7X3o7x11Bc688Jb3uZb//ruzy6GOQib5ca+fe0sAPfEmbJYshP41
-	MwF0FydPr6GxiiHwf2qlsV3Og3Zhn+126OwoDDKlJihCzEl+QS6sGpw7anh8lBjuSHA/QxMKpBgkG
-	vqtQBloHKnGP5zise8r86SZOLe1ftV8hALPD4uLXzAD5jTeYz3a6Pg10OtMq2rkD4u0aIpKRNK8bC
-	qbBsTIwnoLTahQX9MtLL6xnl+Rf7YG53jiXrTaB81V+8JejRNhIYlce5daBokkeaD02ZuW37fZsuG
-	OLOCVSNYzE2RVGXqwvtg==;
+	List-Owner; bh=CUOSFI1Jbzr+jmbUc0xhz77QkQfLUnVNZzPFu+68cHY=; b=XMWgjOOcrn4Ypb
+	kczuOMKpFIE53rt8tJy1zErPBI4Q/3z/UPig1SX6lrE2Fjl7arSP6/UzzrH49BJUPX2gYdUQYtisS
+	jtqHRFAY3dY/i2idJiOxVKUkh3WWaTvTtxTnH/O3nBOKMPKuYVJyoGvtan7feT/C8H5RzeQaIZgYs
+	fQvVlbKULmOCGWMfMYbD7BJf57rO1uxaJx/EK0++oC4Be+w1HwXt0OjvEkNvCexOikefILWsaeLWP
+	DHitn/9o8IScjz3DKmb3KcOO9NNg3rXBy7SLgv5km4K8jNaMeS8ew1GKv07eF7KhO9zHlQd0r5+Z0
+	P5dtmtMFRW0q0yIxtUDA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jVyBI-0003S1-IU; Tue, 05 May 2020 14:04:20 +0000
-Received: from mail-wm1-x341.google.com ([2a00:1450:4864:20::341])
+	id 1jVyC4-0004CM-BY; Tue, 05 May 2020 14:05:08 +0000
+Received: from mail-wr1-x443.google.com ([2a00:1450:4864:20::443])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jVyA8-0002F0-TV
- for linux-mediatek@lists.infradead.org; Tue, 05 May 2020 14:03:11 +0000
-Received: by mail-wm1-x341.google.com with SMTP id u127so2484164wmg.1
- for <linux-mediatek@lists.infradead.org>; Tue, 05 May 2020 07:03:08 -0700 (PDT)
+ id 1jVyAE-0002FZ-N6
+ for linux-mediatek@lists.infradead.org; Tue, 05 May 2020 14:03:16 +0000
+Received: by mail-wr1-x443.google.com with SMTP id x17so2907417wrt.5
+ for <linux-mediatek@lists.infradead.org>; Tue, 05 May 2020 07:03:09 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=bgdev-pl.20150623.gappssmtp.com; s=20150623;
  h=from:to:cc:subject:date:message-id:in-reply-to:references
  :mime-version:content-transfer-encoding;
- bh=1RBYv7clwofuc4RomuNetMbXz5K8VN7BlCrpLgWGuKQ=;
- b=exa1u54LNh7NcTBkr9fjj1LtLgzCEkb41a3/XAcPpRhDL8uYlIw1yKBcaC3npPnAq+
- iNlvvzM/LMlufPMoM4dQZJ662snagyOfwpwmeJEqzq61YYz64HYeJRj+t1eanmoFGCCm
- ddLdtP3LKdxRSHIxe+vrvt/nhHYJVAn1o3UPfgDEWejxezv/4+QjsbqAvxgBe7whd+5j
- 77G9QNzigkGdn3zaHrl1amKuP74s0sgTujd8o+/gAP4984gyy9fEV9GjDIQFQWbcI7X3
- 11cm8fOu0E7dE+1WWNOwcnos+18bfhkHGHvtTqVQaqq7TSYiyOSef5MYIBHFOkOkZSnf
- cUQQ==
+ bh=hGk6SHkwZ0/IFFGnE1iOAP01F59WjRCQF/3H+v3exE4=;
+ b=kvPVV59bLwvQgCRXMMdalhwBGJXiNTAb3RXUaXffdzF/CnPAYnbZfbo5XFRy/U6Hmn
+ UYDrC8U2QoSOzSL6kGoZRN+trWItJsZE5rzGhy9yuYPhWqlj27+0bcwhKKCOlWh3BJTz
+ l98EqUfia2miyFfDeTxIe2M54ZAExtU1gQ4zySphZmhTJmKHOCSN/LRtVxgdZyy0jInD
+ wO02lzvY3Qbg7bm454+9uzwwhlluP7XjN3Ti461uWWCrAgdX/Yj4Iw4pSLlI3+6vKsfZ
+ 1RqRrgrWqUsGXLeFN6IFuiLJoSlwRD/aG0+tqgvGYmGcLsB9nQQPQtqFBO1K/kBh/rYb
+ XAEA==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:from:to:cc:subject:date:message-id:in-reply-to
  :references:mime-version:content-transfer-encoding;
- bh=1RBYv7clwofuc4RomuNetMbXz5K8VN7BlCrpLgWGuKQ=;
- b=YO3Yvj72w+ZWkdLkDJzoe9AlRM2BchwLKlxcaG7gH58M3xPJLlv8hEXjm+9BOBIyrg
- mjSv6/1aSpcKfLHUPXOVv12FbPL5ms8Y8IOcWkFXqk84dM+cgy2tLaTYkfVHCn1ZEMAr
- kgNf310hItpevi4lveiQHWKIUuxR66hfBhiyrZrakoNWeXJywiIRriSUcysmc87rwqy6
- dhVhIL1+zXYxcASGrnWoiQKSTKTHTQUIN2IrPQfmTz1oqwnvSVGuEL12NWKmcDUCE97h
- sGkufV+2V5HJoNR55vHPN6Xq9xNq0/5UsvFlrGDw09YI9dKFpujTSmvnQkb0QqOeCqhb
- kRng==
-X-Gm-Message-State: AGi0PuaMiajrpQOcaMVwsfsRjQaNbCfB5izu7VwkXcSdViaQf2ApvDgw
- 3sIttxVZ6Ci4w2TTKNjDl7B2dA==
-X-Google-Smtp-Source: APiQypKyODJ/h2tkRj/3s4Rn7dN4YkXrc4seYlCWxagOZmnAKutgDsCqy57VDKSasTPAC6+hVxwWqw==
-X-Received: by 2002:a1c:9c0a:: with SMTP id f10mr3688664wme.139.1588687386996; 
- Tue, 05 May 2020 07:03:06 -0700 (PDT)
+ bh=hGk6SHkwZ0/IFFGnE1iOAP01F59WjRCQF/3H+v3exE4=;
+ b=hmRe4S2I7fPM8BEoFbZaD1OlJw/OMwJFZ9Sfmpa4H3S87UKWLQBNAT81qPNf1eo9b5
+ 8nvjx6csU2ns2zDCOO7raNgAy1sIw+H8Vhel7odTRYlpjZ1OXYr32dMfgnIpzxKf+g8/
+ kMf5/cXYoHN91Xjp6O7lSDyA/iCth4UHMVd0MlgboP7KwKUXfLVuy+u1a7GkVC1F7o6P
+ /Uc7ZFN5cC5+DlIykf7CtW6OQkyDyWfTNjC+lHNO8mJbzEyhvzin2I1MtsWX1FXzKycf
+ IF6K6j3SFqck6tshlCGhE3Gv35+4hsaJxwRiMWykO5n/QTERuMJteJY1PNMNqUZHYkZn
+ RMWw==
+X-Gm-Message-State: AGi0PuZuRtDobsrFwWlTHYhtgiyKpaaNC1HqqXt9EKrmgq/DKqqP1d6X
+ k5bCBTeWeR5INssjo1+fcOYb1A==
+X-Google-Smtp-Source: APiQypIPk6Gmfh+TOm1lNpI6ui+UW11cc/DzL7lShUJ6Uv4UPglvQgiExWM6SHeIDM9Wlw/jZVJSDQ==
+X-Received: by 2002:adf:8169:: with SMTP id 96mr3846446wrm.283.1588687388304; 
+ Tue, 05 May 2020 07:03:08 -0700 (PDT)
 Received: from localhost.localdomain (lfbn-nic-1-65-232.w2-15.abo.wanadoo.fr.
  [2.15.156.232])
- by smtp.gmail.com with ESMTPSA id c190sm4075755wme.4.2020.05.05.07.03.05
+ by smtp.gmail.com with ESMTPSA id c190sm4075755wme.4.2020.05.05.07.03.07
  (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Tue, 05 May 2020 07:03:06 -0700 (PDT)
+ Tue, 05 May 2020 07:03:07 -0700 (PDT)
 From: Bartosz Golaszewski <brgl@bgdev.pl>
 To: Rob Herring <robh+dt@kernel.org>, "David S . Miller" <davem@davemloft.net>,
  Matthias Brugger <matthias.bgg@gmail.com>, Felix Fietkau <nbd@openwrt.org>,
  John Crispin <john@phrozen.org>, Sean Wang <sean.wang@mediatek.com>,
  Mark Lee <Mark-MC.Lee@mediatek.com>, Jakub Kicinski <kuba@kernel.org>,
  Arnd Bergmann <arnd@arndb.de>, Fabien Parent <fparent@baylibre.com>
-Subject: [PATCH 02/11] dt-bindings: new: add yaml bindings for MediaTek
- Ethernet MAC
-Date: Tue,  5 May 2020 16:02:22 +0200
-Message-Id: <20200505140231.16600-3-brgl@bgdev.pl>
+Subject: [PATCH 03/11] net: ethernet: mediatek: rename Kconfig prompt
+Date: Tue,  5 May 2020 16:02:23 +0200
+Message-Id: <20200505140231.16600-4-brgl@bgdev.pl>
 X-Mailer: git-send-email 2.25.0
 In-Reply-To: <20200505140231.16600-1-brgl@bgdev.pl>
 References: <20200505140231.16600-1-brgl@bgdev.pl>
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200505_070308_956320_D3D965A1 
-X-CRM114-Status: GOOD (  11.18  )
+X-CRM114-CacheID: sfid-20200505_070314_761027_EC42EC1B 
+X-CRM114-Status: GOOD (  10.28  )
 X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:341 listed in]
+ no trust [2a00:1450:4864:20:0:0:0:443 listed in]
  [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  0.0 SPF_NONE               SPF: sender does not publish an SPF Record
@@ -108,101 +107,26 @@ Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.o
 
 From: Bartosz Golaszewski <bgolaszewski@baylibre.com>
 
-This adds yaml DT bindings for the MediaTek Ethernet MAC present on the
-mt8* family of SoCs.
+We'll soon by adding a second MediaTek Ethernet driver so modify the
+Kconfig prompt.
 
 Signed-off-by: Bartosz Golaszewski <bgolaszewski@baylibre.com>
 ---
- .../bindings/net/mediatek,eth-mac.yaml        | 80 +++++++++++++++++++
- 1 file changed, 80 insertions(+)
- create mode 100644 Documentation/devicetree/bindings/net/mediatek,eth-mac.yaml
+ drivers/net/ethernet/mediatek/Kconfig | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
 
-diff --git a/Documentation/devicetree/bindings/net/mediatek,eth-mac.yaml b/Documentation/devicetree/bindings/net/mediatek,eth-mac.yaml
-new file mode 100644
-index 000000000000..7682fe9d8109
---- /dev/null
-+++ b/Documentation/devicetree/bindings/net/mediatek,eth-mac.yaml
-@@ -0,0 +1,80 @@
-+# SPDX-License-Identifier: (GPL-2.0-only OR BSD-2-Clause)
-+%YAML 1.2
-+---
-+$id: http://devicetree.org/schemas/net/mediatek,eth-mac.yaml#
-+$schema: http://devicetree.org/meta-schemas/core.yaml#
-+
-+title: MediaTek Ethernet MAC Controller
-+
-+maintainers:
-+  - Bartosz Golaszewski <bgolaszewski@baylibre.com>
-+
-+description:
-+  This Ethernet MAC is used on the MT8* family of SoCs from MediaTek.
-+  It's compliant with 802.3 standards and supports half- and full-duplex
-+  modes with flow-control as well as CRC offloading and VLAN tags.
-+
-+properties:
-+  compatible:
-+    enum:
-+      - mediatek,mt8516-eth
-+      - mediatek,mt8518-eth
-+      - mediatek,mt8175-eth
-+
-+  reg:
-+    maxItems: 1
-+
-+  interrupts:
-+    maxItems: 1
-+
-+  clocks:
-+    minItems: 3
-+    maxItems: 3
-+
-+  clock-names:
-+    additionalItems: false
-+    items:
-+      - const: core
-+      - const: reg
-+      - const: trans
-+
-+  mediatek,pericfg:
-+    $ref: /schemas/types.yaml#definitions/phandle
-+    description:
-+      Phandle to the device containing the PERICFG register range.
-+
-+required:
-+  - compatible
-+  - reg
-+  - interrupts
-+  - clocks
-+  - clock-names
-+  - mediatek,pericfg
-+  - phy-handle
-+
-+examples:
-+  - |
-+    #include <dt-bindings/interrupt-controller/arm-gic.h>
-+    #include <dt-bindings/clock/mt8516-clk.h>
-+
-+    ethernet: ethernet@11180000 {
-+        compatible = "mediatek,mt8516-eth";
-+        reg = <0 0x11180000 0 0x1000>;
-+        mediatek,pericfg = <&pericfg>;
-+        interrupts = <GIC_SPI 111 IRQ_TYPE_LEVEL_LOW>;
-+        clocks = <&topckgen CLK_TOP_RG_ETH>,
-+                 <&topckgen CLK_TOP_66M_ETH>,
-+                 <&topckgen CLK_TOP_133M_ETH>;
-+        clock-names = "core", "reg", "trans";
-+        phy-handle = <&eth_phy>;
-+        phy-mode = "rmii";
-+
-+        mdio {
-+            #address-cells = <1>;
-+            #size-cells = <0>;
-+
-+            eth_phy: ethernet-phy@0 {
-+                reg = <0>;
-+            };
-+        };
-+    };
+diff --git a/drivers/net/ethernet/mediatek/Kconfig b/drivers/net/ethernet/mediatek/Kconfig
+index 4968352ba188..5079b8090f16 100644
+--- a/drivers/net/ethernet/mediatek/Kconfig
++++ b/drivers/net/ethernet/mediatek/Kconfig
+@@ -1,6 +1,6 @@
+ # SPDX-License-Identifier: GPL-2.0-only
+ config NET_VENDOR_MEDIATEK
+-	bool "MediaTek ethernet driver"
++	bool "MediaTek devices"
+ 	depends on ARCH_MEDIATEK || SOC_MT7621 || SOC_MT7620
+ 	---help---
+ 	  If you have a Mediatek SoC with ethernet, say Y.
 -- 
 2.25.0
 
