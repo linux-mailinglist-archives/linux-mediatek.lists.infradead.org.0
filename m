@@ -2,69 +2,81 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 5ECA71C82D1
-	for <lists+linux-mediatek@lfdr.de>; Thu,  7 May 2020 08:47:47 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 856BD1C846B
+	for <lists+linux-mediatek@lfdr.de>; Thu,  7 May 2020 10:11:18 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=QlOQnVZIdGzqiTtS5HtBM55sPRxMRbD8k1m+/Dh/C1M=; b=BIfmzDO5gspbXt
-	QVX7lVFb7Ir/WIftftETmk1Ft8xu161P2b6xtyXEgHQlrZs54dxzygjwOVl8HRQrYKcHQg8pxQu5N
-	qIndoemg48G2a8yH1a2CyGtlmLdOmRbjFJUA+tF48CSoAMePpacHm+h+YA8Zj1pgfJnVrwW2uoefj
-	u9z+NVIc108a+tuwetiiSd7CYJwAbFpbdmOWWUBYVeMMGfxethfG+GlkT85iYwVkjYc/MsTfQTQg/
-	lz9S2VicbgK5IA4Wniy/4+m/pJOpGH3IMqjJBQ5579gkbo/cpLmQNWfyVFxEN03YD8DTMQ4V5XzNu
-	tvCvKPUUvI/tGef5mWsA==;
+	List-Owner; bh=I4hY0fE4qYYQo8lGKsfDmItXeDoYka6SycMjht5S/Jk=; b=n9vq14XwQRSUVh
+	IAJDOgX900n1sxqfBFaKbghh1nvKt+iKLS6aGlkpW3my4j6z9sEn8W91e0KndC2LpcOwvO+fsgiMC
+	1UOJFmzamweLNk23JO+AcY/XXpfJZK37x+ZA7IFYv0jk0KrHsRuHgdMf4RY5lbAB2rbhlqzO2sDB4
+	kI3HWjudbTP4j2VwfDBPsrWdGyqTUvCWkC0Sjhtcg6cZLUpemcbrOh9ggW1wkovi0ATX1WZ8j+0/N
+	4HVaTVpWgkGbWKfpw3ifsOf59jSIyvQhW3bcKGkoFODe4574b+QOKwbMW/gLO6c9Fi2UZ+jE6hDGC
+	HxXPlijRiPWs4ZZuJ5iA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jWaJp-0000sl-9O; Thu, 07 May 2020 06:47:41 +0000
-Received: from mail.kernel.org ([198.145.29.99])
+	id 1jWbca-00048l-Aw; Thu, 07 May 2020 08:11:08 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jWaJl-0000ry-Co
- for linux-mediatek@lists.infradead.org; Thu, 07 May 2020 06:47:38 +0000
-Received: from localhost (83-86-89-107.cable.dynamic.v4.ziggo.nl
- [83.86.89.107])
- (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
- (No client certificate requested)
- by mail.kernel.org (Postfix) with ESMTPSA id D794F2078C;
- Thu,  7 May 2020 06:47:35 +0000 (UTC)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1588834056;
- bh=hUD5exA4dNKvCcKV83BYNh5VFO685TqU5GU5ToDg3us=;
- h=Date:From:To:Cc:Subject:References:In-Reply-To:From;
- b=dCZ6mLUcN1lIcruUpjFnEcOhlyrmSgxjeyHHlnFw/4co12Hwb9W/Qsgzq6nZ+HnJp
- DibKlr9P4RQGxGYL3/8X8BfHpXRz53ezegCOp/1lVZvRByJvVXChNS4+D1DL4tpB3T
- fOVh6T5cCACfVwnSp8ZDtkKBDaj/Y7C6rRFAF5rg=
-Date: Thu, 7 May 2020 08:47:34 +0200
-From: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
-To: Johan Hovold <johan@kernel.org>
-Subject: Re: [PATCH net 11/16] net: ethernet: marvell: mvneta: fix fixed-link
- phydev leaks
-Message-ID: <20200507064734.GA798308@kroah.com>
-References: <1480357509-28074-1-git-send-email-johan@kernel.org>
- <1480357509-28074-12-git-send-email-johan@kernel.org>
- <CA+G9fYvBjUVkVhtRHVm6xXcKe2+tZN4rGdB9FzmpcfpaLhY1+g@mail.gmail.com>
- <20200507064412.GL2042@localhost>
+ id 1jWbcX-00047n-IA
+ for linux-mediatek@lists.infradead.org; Thu, 07 May 2020 08:11:06 +0000
+X-UUID: 7a7319712be04ffe94adcc826b0c8b68-20200507
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
+ s=dk; 
+ h=Content-Transfer-Encoding:Content-Type:MIME-Version:References:In-Reply-To:Message-ID:Date:Subject:CC:To:From;
+ bh=U3rOHmbZkfyZYNk3QoGRcI8HUwADaDcQDbyBxnNmq/4=; 
+ b=rTqaBwSBnzuq0adkIykxKC1DinYI46SFK22FHeqc1aSi7nBSec6UGF8w5rF7399MUBvEP/GF2pg71EVTsOkEZ2lzoag75uBRaCvp6KjhW76OSTL7ayC/HaVfV7dzEBBimPl88/r1cszFnS03GuE1aJsahXukQx+YFp6Pvg0m4yU=;
+X-UUID: 7a7319712be04ffe94adcc826b0c8b68-20200507
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
+ (envelope-from <frankie.chang@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 805833829; Thu, 07 May 2020 00:11:03 -0800
+Received: from MTKMBS01N2.mediatek.inc (172.21.101.79) by
+ MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
+ 15.0.1497.2; Thu, 7 May 2020 01:11:00 -0700
+Received: from MTKCAS06.mediatek.inc (172.21.101.30) by
+ mtkmbs01n2.mediatek.inc (172.21.101.79) with Microsoft SMTP Server (TLS) id
+ 15.0.1497.2; Thu, 7 May 2020 16:10:56 +0800
+Received: from mtkswgap22.mediatek.inc (172.21.77.33) by MTKCAS06.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1497.2 via
+ Frontend Transport; Thu, 7 May 2020 16:10:55 +0800
+From: Frankie Chang <Frankie.Chang@mediatek.com>
+To: Greg Kroah-Hartman <gregkh@linuxfoundation.org>, Todd Kjos
+ <tkjos@google.com>, Joel Fernandes <joel@joelfernandes.org>
+Subject: binder: transaction latency tracking for user build
+Date: Thu, 7 May 2020 16:10:52 +0800
+Message-ID: <1588839055-26677-1-git-send-email-Frankie.Chang@mediatek.com>
+X-Mailer: git-send-email 1.7.9.5
+In-Reply-To: <20200430085105.GF2496467@kroah.com>
+References: <20200430085105.GF2496467@kroah.com>
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <20200507064412.GL2042@localhost>
+X-TM-SNTS-SMTP: BA4C6F361779C1B7134FD62D3A807F06C4F8C4209677814ABEA4A00D1DC073DE2000:8
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200506_234737_475538_142F3EB2 
-X-CRM114-Status: GOOD (  17.36  )
-X-Spam-Score: -5.0 (-----)
+X-CRM114-CacheID: sfid-20200507_011105_605493_4C8D71EF 
+X-CRM114-Status: UNSURE (   5.21  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
- Content analysis details:   (-5.0 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
- high trust [198.145.29.99 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.0 MIME_BASE64_TEXT       RAW: Message text disguised using base64
+ encoding
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
- -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -76,84 +88,30 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Andrew Lunn <andrew@lunn.ch>,
- "open list:OPEN FIRMWARE AND FLATTENED DEVICE TREE BINDINGS"
- <devicetree@vger.kernel.org>, lkft-triage@lists.linaro.org,
- Pantelis Antoniou <pantelis.antoniou@gmail.com>,
- Frank Rowand <frowand.list@gmail.com>, Sasha Levin <sashal@kernel.org>,
- Felix Fietkau <nbd@openwrt.org>, Florian Fainelli <f.fainelli@gmail.com>,
- Naresh Kamboju <naresh.kamboju@linaro.org>,
- Claudiu Manoil <claudiu.manoil@freescale.com>, Li Yang <leoli@freescale.com>,
- Mugunthan V N <mugunthanvnm@ti.com>,
- Grygorii Strashko <grygorii.strashko@ti.com>, linuxppc-dev@lists.ozlabs.org,
- Rob Herring <robh+dt@kernel.org>, linux-mediatek@lists.infradead.org,
- Lars Persson <lars.persson@axis.com>,
- Matthias Brugger <matthias.bgg@gmail.com>, linux-omap@vger.kernel.org,
- John Crispin <blogic@openwrt.org>,
- Thomas Petazzoni <thomas.petazzoni@free-electrons.com>,
- Fugang Duan <fugang.duan@nxp.com>,
- Sergei Shtylyov <sergei.shtylyov@cogentembedded.com>,
- Vivien Didelot <vivien.didelot@savoirfairelinux.com>,
- Netdev <netdev@vger.kernel.org>, open list <linux-kernel@vger.kernel.org>,
- linux- stable <stable@vger.kernel.org>, linux-renesas-soc@vger.kernel.org,
- Vitaly Bordug <vbordug@ru.mvista.com>, nios2-dev@lists.rocketboards.org,
- Vince Bridgers <vbridger@opensource.altera.com>,
- "David S. Miller" <davem@davemloft.net>
+Cc: wsd_upstream <wsd_upstream@mediatek.com>,
+ LKML <linux-kernel@vger.kernel.org>,
+ =?UTF-8?q?Arve=20Hj=C3=B8nnev=C3=A5g?= <arve@android.com>,
+ Jian-Min Liu <Jian-Min.Liu@mediatek.com>, linux-mediatek@lists.infradead.org,
+ Martijn Coenen <maco@android.com>, Christian Brauner <christian@brauner.io>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Thu, May 07, 2020 at 08:44:12AM +0200, Johan Hovold wrote:
-> On Thu, May 07, 2020 at 12:27:53AM +0530, Naresh Kamboju wrote:
-> > On Tue, 29 Nov 2016 at 00:00, Johan Hovold <johan@kernel.org> wrote:
-> > >
-> > > Make sure to deregister and free any fixed-link PHY registered using
-> > > of_phy_register_fixed_link() on probe errors and on driver unbind.
-> > >
-> > > Fixes: 83895bedeee6 ("net: mvneta: add support for fixed links")
-> > > Signed-off-by: Johan Hovold <johan@kernel.org>
-> > > ---
-> > >  drivers/net/ethernet/marvell/mvneta.c | 5 +++++
-> > >  1 file changed, 5 insertions(+)
-> > >
-> > > diff --git a/drivers/net/ethernet/marvell/mvneta.c b/drivers/net/ethernet/marvell/mvneta.c
-> > > index 0c0a45af950f..707bc4680b9b 100644
-> > > --- a/drivers/net/ethernet/marvell/mvneta.c
-> > > +++ b/drivers/net/ethernet/marvell/mvneta.c
-> > > @@ -4191,6 +4191,8 @@ static int mvneta_probe(struct platform_device *pdev)
-> > >         clk_disable_unprepare(pp->clk);
-> > >  err_put_phy_node:
-> > >         of_node_put(phy_node);
-> > > +       if (of_phy_is_fixed_link(dn))
-> > > +               of_phy_deregister_fixed_link(dn);
-> > 
-> > While building kernel Image for arm architecture on stable-rc 4.4 branch
-> > the following build error found.
-> > 
-> > drivers/net/ethernet/marvell/mvneta.c:3442:3: error: implicit
-> > declaration of function 'of_phy_deregister_fixed_link'; did you mean
-> > 'of_phy_register_fixed_link'? [-Werror=implicit-function-declaration]
-> > |    of_phy_deregister_fixed_link(dn);
-> > |    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
-> > |    of_phy_register_fixed_link
-> > 
-> > ref:
-> > https://gitlab.com/Linaro/lkft/kernel-runs/-/jobs/541374729
-> 
-> Greg, 3f65047c853a ("of_mdio: add helper to deregister fixed-link
-> PHYs") needs to be backported as well for these.
-> 
-> Original series can be found here:
-> 
-> 	https://lkml.kernel.org/r/1480357509-28074-1-git-send-email-johan@kernel.org
 
-Ah, thanks for that, I thought I dropped all of the ones that caused
-build errors, but missed the above one.  I'll go take the whole series
-instead.
+Frankie.Chang (3):
+  binder: move structs from core file to header file
+  binder: add trace at free transaction.
+  binder: add transaction latency tracer
 
-greg k-h
-
+ drivers/android/Kconfig                 |   8 +
+ drivers/android/Makefile                |   1 +
+ drivers/android/binder.c                | 408 +----------------------
+ drivers/android/binder_internal.h       | 416 ++++++++++++++++++++++++
+ drivers/android/binder_latency_tracer.c | 105 ++++++
+ drivers/android/binder_trace.h          |  47 +++
+ 6 files changed, 581 insertions(+), 404 deletions(-)
+ create mode 100644 drivers/android/binder_latency_tracer.c
 _______________________________________________
 Linux-mediatek mailing list
 Linux-mediatek@lists.infradead.org
