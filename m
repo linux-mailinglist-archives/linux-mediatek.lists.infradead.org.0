@@ -2,80 +2,91 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 395FF1CB5A7
-	for <lists+linux-mediatek@lfdr.de>; Fri,  8 May 2020 19:17:00 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id BE49B1CB6C7
+	for <lists+linux-mediatek@lfdr.de>; Fri,  8 May 2020 20:13:05 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=1IZEdZ/AZbM52wDdxG4nxDDZEiUCQATC2lk1/Pzd5YM=; b=rvIcb/bRMy8L7E
-	WEYdRzkKgzVacDd8AfZMOby/4IlD+7ZvqJw5dnmTFGZr08V8AI/n4g0BqLAH/xt0eJISxxLuZSNfN
-	B/TCVplobFZH1ea0KsFJqY4KYWJV8IPyI3Da0Xm4S9OPOkt9AaG0DZ08wdSarwNQK8od/1t0luPgP
-	4d3eq0HQGA55Z8Zg7rgbUpgjcg4xIFYmU28nznEvRo6ha3WK89YnvjxEuWnDkfsBn+ThW1SeGRV7U
-	dNTCf1ilF+mjZ/amiE+d+Y+42xQh39X1Twjs2ekVh9DeJkC2UeHYq8Rwj+ChrRcHQqXXdSvZWdVXD
-	Qb4poORqsCoI7MHPOG4w==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:
+	Content-Transfer-Encoding:Cc:List-Subscribe:List-Help:List-Post:List-Archive:
+	List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:Message-ID:From:
+	References:To:Subject:Reply-To:Content-ID:Content-Description:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
+	 bh=wjRZqcfjI+vo9qg+SBr636KqxNNIHboPxbrycXXvsPI=; b=BFKicqFn7BF36I5Zk+d15OrZy
+	oyXwVH+O1itTfR1d/fVoYc1rdHOtzMSnhtO7hk2f8z+BVwv9mYYlFQHEM4AgrkgtkFGrNGeGvsueR
+	WfyFLw2CPi9qw9Jl2hkKOjuxHy9Gv9ErzoskUKtKPW5gUm6zkXi/Mnvw1uOoTcU35XOKsMYya3c06
+	yXvQIUfOpPkxyKXB4jgq5HvNISIB61uZP2mTHg4/7cWB2leKmrDNhPZY4sDtBbjH0wn3aKwgTxZrY
+	pfLuEmQf2s9lgFadyE/q7jWngmY37BcOLulBQDFTT/D6QbTkywutMgVpAdtr65gT5B2secQx4+kPf
+	jPU+FxAJw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jX6cF-0002mT-BQ; Fri, 08 May 2020 17:16:51 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1jX7UZ-0004OS-P7; Fri, 08 May 2020 18:12:59 +0000
+Received: from mail26.static.mailgun.info ([104.130.122.26])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jX6ao-0001KK-FN; Fri, 08 May 2020 17:15:29 +0000
-X-UUID: 934d5f62859241b7bc50abf3f399a508-20200508
-DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
- s=dk; 
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:References:In-Reply-To:Message-ID:Date:Subject:CC:To:From;
- bh=+7J/Ls/qZVPDQuRiUUjEeGW9nmJ58u2HwRnHyuO/vGQ=; 
- b=I/j5hLj9mNdY0ka1ODGwW/30hk89NdVQTy7ivuyit6YXb0IHlAUa2jexrkZs1S6UhKgyuTnqX1FSlUWXxXCBey/gkU7EChPYMR9Vz2M0bKbY17gAPN25OeIgHsPLBGt6ltcXTj9Ush21LwW+vTi7d9zBg43RcLgOLcgNhZd/YVQ=;
-X-UUID: 934d5f62859241b7bc50abf3f399a508-20200508
-Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw01.mediatek.com
- (envelope-from <stanley.chu@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1202100510; Fri, 08 May 2020 09:15:02 -0800
-Received: from mtkmbs08n1.mediatek.inc (172.21.101.55) by
- MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
- 15.0.1497.2; Fri, 8 May 2020 10:15:12 -0700
-Received: from mtkcas08.mediatek.inc (172.21.101.126) by
- mtkmbs08n1.mediatek.inc (172.21.101.55) with Microsoft SMTP Server (TLS) id
- 15.0.1497.2; Sat, 9 May 2020 01:15:12 +0800
-Received: from mtksdccf07.mediatek.inc (172.21.84.99) by mtkcas08.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1497.2 via
- Frontend Transport; Sat, 9 May 2020 01:15:12 +0800
-From: Stanley Chu <stanley.chu@mediatek.com>
-To: <linux-scsi@vger.kernel.org>, <martin.petersen@oracle.com>,
- <avri.altman@wdc.com>, <alim.akhtar@samsung.com>, <jejb@linux.ibm.com>,
- <asutoshd@codeaurora.org>
-Subject: [PATCH v1 5/5] scsi: ufs-mediatek: customize WriteBooster flush policy
-Date: Sat, 9 May 2020 01:15:13 +0800
-Message-ID: <20200508171513.14665-6-stanley.chu@mediatek.com>
-X-Mailer: git-send-email 2.18.0
-In-Reply-To: <20200508171513.14665-1-stanley.chu@mediatek.com>
+ id 1jX7U8-0003z0-V1
+ for linux-mediatek@lists.infradead.org; Fri, 08 May 2020 18:12:36 +0000
+DKIM-Signature: a=rsa-sha256; v=1; c=relaxed/relaxed; d=mg.codeaurora.org;
+ q=dns/txt; 
+ s=smtp; t=1588961554; h=Content-Transfer-Encoding: Content-Type:
+ In-Reply-To: MIME-Version: Date: Message-ID: From: References: Cc: To:
+ Subject: Sender; bh=wPiyQjSJF8vUdRxJrjwFgYJTIXhq+dC/nAsEoueYbiA=;
+ b=P8Qwb/7mQf4LJMQpSpqJ+bkCnTzHpDT38Ijj4qb4VEcWYoofcmIW5PLRbe6HOpun7lyUZO5O
+ Rcklyc4rjHOLGERpGPhbj9P36hvD7EEte+5LJFOiJ8t8IyxMZAymZ5vMx/bKA5qUlVZ0nMEU
+ pQEPP96qF/GfbSoljLFlLEc4AeE=
+X-Mailgun-Sending-Ip: 104.130.122.26
+X-Mailgun-Sid: WyI0ZDIyMyIsICJsaW51eC1tZWRpYXRla0BsaXN0cy5pbmZyYWRlYWQub3JnIiwgImJlOWU0YSJd
+Received: from smtp.codeaurora.org
+ (ec2-35-166-182-171.us-west-2.compute.amazonaws.com [35.166.182.171])
+ by mxa.mailgun.org with ESMTP id 5eb5a10a.7f0590c69618-smtp-out-n01;
+ Fri, 08 May 2020 18:12:26 -0000 (UTC)
+Received: by smtp.codeaurora.org (Postfix, from userid 1001)
+ id A759AC433BA; Fri,  8 May 2020 18:12:25 +0000 (UTC)
+X-Spam-Checker-Version: SpamAssassin 3.4.0 (2014-02-07) on
+ aws-us-west-2-caf-mail-1.web.codeaurora.org
+X-Spam-Level: 
+X-Spam-Status: No, score=-1.0 required=2.0 tests=ALL_TRUSTED,SPF_NONE
+ autolearn=unavailable autolearn_force=no version=3.4.0
+Received: from [192.168.8.176] (cpe-70-95-149-85.san.res.rr.com [70.95.149.85])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
+ (No client certificate requested) (Authenticated sender: asutoshd)
+ by smtp.codeaurora.org (Postfix) with ESMTPSA id 0B44CC433D2;
+ Fri,  8 May 2020 18:12:23 +0000 (UTC)
+DMARC-Filter: OpenDMARC Filter v1.3.2 smtp.codeaurora.org 0B44CC433D2
+Authentication-Results: aws-us-west-2-caf-mail-1.web.codeaurora.org;
+ dmarc=none (p=none dis=none) header.from=codeaurora.org
+Authentication-Results: aws-us-west-2-caf-mail-1.web.codeaurora.org;
+ spf=none smtp.mailfrom=asutoshd@codeaurora.org
+Subject: Re: [PATCH v1 3/5] scsi: ufs: customize flush threshold for
+ WriteBooster
+To: Stanley Chu <stanley.chu@mediatek.com>, linux-scsi@vger.kernel.org,
+ martin.petersen@oracle.com, avri.altman@wdc.com, alim.akhtar@samsung.com,
+ jejb@linux.ibm.com
 References: <20200508171513.14665-1-stanley.chu@mediatek.com>
+ <20200508171513.14665-4-stanley.chu@mediatek.com>
+From: "Asutosh Das (asd)" <asutoshd@codeaurora.org>
+Message-ID: <4196ff98-093e-3708-d166-a7a7c6046c57@codeaurora.org>
+Date: Fri, 8 May 2020 11:12:23 -0700
+User-Agent: Mozilla/5.0 (Windows NT 10.0; WOW64; rv:68.0) Gecko/20100101
+ Thunderbird/68.7.0
 MIME-Version: 1.0
-X-MTK: N
+In-Reply-To: <20200508171513.14665-4-stanley.chu@mediatek.com>
+Content-Language: en-US
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200508_101522_582704_00E60C32 
-X-CRM114-Status: UNSURE (   7.71  )
-X-CRM114-Notice: Please train this message.
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20200508_111234_767961_20FABA21 
+X-CRM114-Status: GOOD (  20.67  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [104.130.122.26 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 0.0 RCVD_IN_MSPIKE_H4      RBL: Very Good reputation (+4)
+ [104.130.122.26 listed in wl.mailspike.net]
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 MIME_BASE64_TEXT       RAW: Message text disguised using base64
- encoding
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
+ 0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -90,36 +101,80 @@ List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>,
 Cc: bvanassche@acm.org, andy.teng@mediatek.com, chun-hung.wu@mediatek.com,
  kuohong.wang@mediatek.com, linux-kernel@vger.kernel.org, cang@codeaurora.org,
  linux-mediatek@lists.infradead.org, peter.wang@mediatek.com,
- matthias.bgg@gmail.com, Stanley Chu <stanley.chu@mediatek.com>,
- linux-arm-kernel@lists.infradead.org, beanhuo@micron.com
-Content-Type: text/plain; charset="us-ascii"
+ matthias.bgg@gmail.com, linux-arm-kernel@lists.infradead.org,
+ beanhuo@micron.com
 Content-Transfer-Encoding: 7bit
+Content-Type: text/plain; charset="us-ascii"; Format="flowed"
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Change the WriteBooster policy to keep VCC on during
-runtime suspend if available WriteBooster buffer is less
-than 80%.
+On 5/8/2020 10:15 AM, Stanley Chu wrote:
+> Allow flush threshold for WriteBooster to be customizable by
+> vendors. To achieve this, make the value as a variable in struct
+> ufs_hba first.
+> 
+> Signed-off-by: Stanley Chu <stanley.chu@mediatek.com>
+> ---
+>   drivers/scsi/ufs/ufshcd.c | 6 ++++--
+>   drivers/scsi/ufs/ufshcd.h | 1 +
+>   2 files changed, 5 insertions(+), 2 deletions(-)
+> 
+> diff --git a/drivers/scsi/ufs/ufshcd.c b/drivers/scsi/ufs/ufshcd.c
+> index cdacbe6378a1..9a0ce6550c2f 100644
+> --- a/drivers/scsi/ufs/ufshcd.c
+> +++ b/drivers/scsi/ufs/ufshcd.c
+> @@ -5301,8 +5301,8 @@ static bool ufshcd_wb_presrv_usrspc_keep_vcc_on(struct ufs_hba *hba,
+>   			 cur_buf);
+>   		return false;
+>   	}
+> -	/* Let it continue to flush when >60% full */
+> -	if (avail_buf < UFS_WB_40_PERCENT_BUF_REMAIN)
+> +	/* Let it continue to flush when available buffer exceeds threshold */
+> +	if (avail_buf < hba->vps->wb_flush_threshold)
+>   		return true;
+>   
+>   	return false;
+> @@ -6839,6 +6839,7 @@ static void ufshcd_wb_probe(struct ufs_hba *hba, u8 *desc_buf)
+>   		if (!d_lu_wb_buf_alloc)
+>   			goto wb_disabled;
+>   	}
+> +
+Is this newline needed?
 
-Signed-off-by: Stanley Chu <stanley.chu@mediatek.com>
----
- drivers/scsi/ufs/ufs-mediatek.c | 1 +
- 1 file changed, 1 insertion(+)
+>   	return;
+>   
+>   wb_disabled:
+> @@ -7462,6 +7463,7 @@ static const struct attribute_group *ufshcd_driver_groups[] = {
+>   
+>   static struct ufs_hba_variant_params ufs_hba_vps = {
+>   	.hba_enable_delay_us		= 1000,
+> +	.wb_flush_threshold		= UFS_WB_40_PERCENT_BUF_REMAIN,
+>   	.devfreq_profile.polling_ms	= 100,
+>   	.devfreq_profile.target		= ufshcd_devfreq_target,
+>   	.devfreq_profile.get_dev_status	= ufshcd_devfreq_get_dev_status,
+> diff --git a/drivers/scsi/ufs/ufshcd.h b/drivers/scsi/ufs/ufshcd.h
+> index f7bdf52ba8b0..e3dfb48e669e 100644
+> --- a/drivers/scsi/ufs/ufshcd.h
+> +++ b/drivers/scsi/ufs/ufshcd.h
+> @@ -570,6 +570,7 @@ struct ufs_hba_variant_params {
+>   	struct devfreq_dev_profile devfreq_profile;
+>   	struct devfreq_simple_ondemand_data ondemand_data;
+>   	u16 hba_enable_delay_us;
+> +	u32 wb_flush_threshold;
+>   };
+>   
+>   /**
+> 
 
-diff --git a/drivers/scsi/ufs/ufs-mediatek.c b/drivers/scsi/ufs/ufs-mediatek.c
-index 56620f7d88ce..94e97701f456 100644
---- a/drivers/scsi/ufs/ufs-mediatek.c
-+++ b/drivers/scsi/ufs/ufs-mediatek.c
-@@ -271,6 +271,7 @@ static int ufs_mtk_init(struct ufs_hba *hba)
- 
- 	/* Enable WriteBooster */
- 	hba->caps |= UFSHCD_CAP_WB_EN;
-+	hba->vps->wb_flush_threshold = UFS_WB_BUF_REMAIN_PERCENT(80);
- 
- 	/*
- 	 * ufshcd_vops_init() is invoked after
+Patch[3] & [4] may be combined into a single patch perhaps?
+Patch[4] just redoes what [3] did in a different way, so might as well 
+just do what patch[4] does right away.
+
+
 -- 
-2.18.0
+The Qualcomm Innovation Center, Inc. is a member of the Code Aurora Forum,
+Linux Foundation Collaborative Project
+
 _______________________________________________
 Linux-mediatek mailing list
 Linux-mediatek@lists.infradead.org
