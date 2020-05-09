@@ -2,61 +2,63 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 1DF8E1CBC69
-	for <lists+linux-mediatek@lfdr.de>; Sat,  9 May 2020 04:20:45 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 360DC1CBC5B
+	for <lists+linux-mediatek@lfdr.de>; Sat,  9 May 2020 04:11:40 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=8vYUqDQqODf2jDPVu7mELmylviKqkUnulRsYv6VDN54=; b=gRV4B9AkSlgW1/
-	aLRsH4jl1YJViKjSpJV2b1kWnb4NgxNm0Y4sQYTTsae8M6KO51bLlSXnrjXC8QxBibPBjb2iWc3jn
-	rqEudgOzgafWB1bF4XTMH7cmQ21iZ77GwdgNVwHYeL4abw2cbqkvQDQIwjeB/XA4OfokNjJhIfPg4
-	FarDuRDgct9B9Y4I/G5nNgAwUs3AT9f75d1QhWS28Pbv8A0RkYYMrOR8rwCzYfVG5z2tgV/n7JQ1c
-	7GM1i789GudtWaRyQuSglheNRLoEB/oVElMvoprhjyvULz9izjOmKNitXOm76MNjlHPi1i6ZNBFGG
-	1RtqdTlG2IAk+SAZ6H7w==;
+	List-Owner; bh=ai7oRg2V3AwpyR2dxridBfNh37VNykcituZ6DoNHdFQ=; b=udt7a7Xcbk7TZU
+	CrQyBe0NNf+z1A6JNvEyLLUAFCRGp5W5buAgnPb7BI8c045wSk1NfQ+PGGVHNH03f+hIwzGeUGZJ6
+	4ve5+2LzBwrtcPexBCuUfz1ch2Exlr35VSilELGHG8JDMYVrhM7I9nlrgAhGXDbgHOfmS4gc3lslc
+	xR2/Z7uPGWcoFAiPiykqI69HGT3BdyGsF7QUCBX4M7sh7NZxzhNSnlSq1h4v3bXhKNGs56BFrgoc3
+	9BYNt4lxRHJ1Fmz55PqP4cmkM5SsF5rPydyM0HrkX1SkysfH3hmTnbM8ZaCX84i3tHNTvI/+kl7U/
+	xPmkwTKxhKLHvKg9KTIw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jXF6S-0002NU-UW; Sat, 09 May 2020 02:20:36 +0000
+	id 1jXExh-00040g-Od; Sat, 09 May 2020 02:11:33 +0000
 Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jXF5w-0000HP-PZ; Sat, 09 May 2020 02:20:07 +0000
-X-UUID: e8eec0de03a843ac8f38c68eb3278e60-20200508
+ id 1jXExW-0003s2-SX; Sat, 09 May 2020 02:11:24 +0000
+X-UUID: 75704eff49934046887191641b39f049-20200508
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
  s=dk; 
  h=Content-Transfer-Encoding:Content-Type:MIME-Version:References:In-Reply-To:Message-ID:Date:Subject:CC:To:From;
- bh=81xNTuoRWHQ1E+Co+6xQL3nZR4fkw6v75tZFfgWakrM=; 
- b=Vz+kHNaYTQjYWmHI0DxDyThW21MQ+UxOEddIbfobzU/tGAvWwsD+LzvhJH7ikCMY55tqiudoGy3TJLMdYMxzcteiBsoWJneApRDavAkN+LyYSg9m50nu16RCO9qcIklz7Mx84t4pcu+8pwrsBNOO2saOpqivV4XYkf92U2FdzBU=;
-X-UUID: e8eec0de03a843ac8f38c68eb3278e60-20200508
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
+ bh=HTuAwQCBdXgvzm3xbEDiwOqzl1HXsQN9gZyGP3iYBws=; 
+ b=P/v6ztqmbV0uHqZl/Zs6t2c63tZRJ1IhuEMWnccLwGGXLdBLBXfNjzwnI/XQuZjpzaNLDL6x634NfeYymu6D/g3R48VPYzj2VMlP9Ru+xhQE3CnSNiBvCHW3AgdQDzMHJxbdYSZz9Gu7pPKEMjLGdyoUkxTZOR9BfNGL31OJ3jQ=;
+X-UUID: 75704eff49934046887191641b39f049-20200508
+Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw01.mediatek.com
  (envelope-from <fengping.yu@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1409651018; Fri, 08 May 2020 18:19:56 -0800
-Received: from MTKMBS02N1.mediatek.inc (172.21.101.77) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1497.2; Fri, 8 May 2020 19:10:19 -0700
+ with ESMTP id 101874581; Fri, 08 May 2020 18:11:15 -0800
+Received: from MTKMBS02N2.mediatek.inc (172.21.101.101) by
+ MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
+ 15.0.1497.2; Fri, 8 May 2020 19:10:43 -0700
 Received: from MTKCAS06.mediatek.inc (172.21.101.30) by
- mtkmbs02n1.mediatek.inc (172.21.101.77) with Microsoft SMTP Server (TLS) id
- 15.0.1497.2; Sat, 9 May 2020 10:10:19 +0800
+ mtkmbs02n2.mediatek.inc (172.21.101.101) with Microsoft SMTP Server (TLS) id
+ 15.0.1497.2; Sat, 9 May 2020 10:10:40 +0800
 Received: from localhost.localdomain (10.15.20.246) by MTKCAS06.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1497.2 via Frontend
- Transport; Sat, 9 May 2020 10:10:06 +0800
+ Transport; Sat, 9 May 2020 10:10:36 +0800
 From: Fengping Yu <fengping.yu@mediatek.com>
 To: Marco Felsch <m.felsch@pengutronix.de>, Andy Shevchenko
  <andriy.shevchenko@linux.intel.com>, Dmitry Torokhov
  <dmitry.torokhov@gmail.com>, Yingjoe Chen <yingjoe.chen@mediatek.com>
-Subject: [PATCH v6 2/3] drivers: input: keyboard: Add mtk keypad driver
-Date: Sat, 9 May 2020 10:05:01 +0800
-Message-ID: <20200509020458.8359-3-fengping.yu@mediatek.com>
+Subject: [PATCH v6 3/3] configs: defconfig: Add CONFIG_KEYBOARD_MTK_KPD=y
+Date: Sat, 9 May 2020 10:05:03 +0800
+Message-ID: <20200509020458.8359-4-fengping.yu@mediatek.com>
 X-Mailer: git-send-email 2.18.0
 In-Reply-To: <20200509020458.8359-1-fengping.yu@mediatek.com>
 References: <20200509020458.8359-1-fengping.yu@mediatek.com>
 MIME-Version: 1.0
+X-TM-SNTS-SMTP: CF2C098CE9B34A2263C5666380456D08079DD07514599DAB651C0E9BD794A0782000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200508_192004_894699_9E6C750B 
-X-CRM114-Status: GOOD (  17.07  )
+X-CRM114-CacheID: sfid-20200508_191122_928688_7A23872F 
+X-CRM114-Status: UNSURE (   7.18  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
@@ -96,319 +98,25 @@ Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.o
 
 From: "fengping.yu" <fengping.yu@mediatek.com>
 
-This adds matrix keypad support for Mediatek SoCs.
+Add Mediatek matrix keypad support in defconfig.
 
 Signed-off-by: fengping.yu <fengping.yu@mediatek.com>
 ---
- drivers/input/keyboard/Kconfig   |   5 +-
- drivers/input/keyboard/mtk-kpd.c | 151 ++++++++++++++-----------------
- 2 files changed, 69 insertions(+), 87 deletions(-)
+ arch/arm64/configs/defconfig | 1 +
+ 1 file changed, 1 insertion(+)
 
-diff --git a/drivers/input/keyboard/Kconfig b/drivers/input/keyboard/Kconfig
-index 4a387d8683b1..4ed9eff681f1 100644
---- a/drivers/input/keyboard/Kconfig
-+++ b/drivers/input/keyboard/Kconfig
-@@ -774,9 +774,10 @@ config KEYBOARD_BCM
- 
- config KEYBOARD_MTK_KPD
- 	tristate "MediaTek Keypad Support"
-+	depends on OF && HAVE_CLK
- 	help
--	  Say Y here if you want to use the keypad.
--	  If unuse, say N.
-+	  Say Y here if you want to use the keypad on MediaTek SoCs.
-+	  If unsure, say N.
- 
- 	  To compile this driver as a module, choose M here: the
- 	  module will be called mtk-kpd.
-diff --git a/drivers/input/keyboard/mtk-kpd.c b/drivers/input/keyboard/mtk-kpd.c
-index 7f8f091b2734..a538f89d6696 100644
---- a/drivers/input/keyboard/mtk-kpd.c
-+++ b/drivers/input/keyboard/mtk-kpd.c
-@@ -4,16 +4,14 @@
-  * Author Terry Chang <terry.chang@mediatek.com>
-  */
- #include <linux/clk.h>
--#include <linux/gpio.h>
--#include <linux/init.h>
- #include <linux/input/matrix_keypad.h>
- #include <linux/interrupt.h>
--#include <linux/io.h>
- #include <linux/module.h>
--#include <linux/of_address.h>
--#include <linux/of_irq.h>
-+#include <linux/property.h>
- #include <linux/pinctrl/consumer.h>
- #include <linux/platform_device.h>
-+#include <linux/regmap.h>
-+#include <linux/bitops.h>
- 
- #define KPD_NAME	"mtk-kpd"
- 
-@@ -21,26 +19,30 @@
- #define KP_DEBOUNCE	0x0018
- 
- #define KPD_DEBOUNCE_MASK	GENMASK(13, 0)
--#define KPD_DEBOUNCE_MAX	256000
-+#define KPD_DEBOUNCE_MAX_US	256000 /*256ms */
- #define KPD_NUM_MEMS	5
- #define KPD_NUM_BITS	136	/* 4 * 32 + 8 MEM5 only use 8 BITS */
--#define BITS_TO_U32(nr)	DIV_ROUND_UP(nr, BITS_PER_BYTE * sizeof(u32))
- 
- struct mtk_keypad {
-+	struct regmap *regmap;
- 	struct input_dev *input_dev;
- 	struct clk *clk;
- 	void __iomem *base;
--	unsigned int irqnr;
- 	bool wakeup;
--	u32 key_debounce;
- 	u32 n_rows;
- 	u32 n_cols;
- 	DECLARE_BITMAP(keymap_state, KPD_NUM_BITS);
- };
- 
-+static const struct regmap_config keypad_regmap_cfg = {
-+	.reg_bits = 32,
-+	.val_bits = 32,
-+	.reg_stride = sizeof(u32),
-+	.max_register = 0x0024,
-+};
-+
- static irqreturn_t kpd_irq_handler(int irq, void *dev_id)
- {
--	/* use _nosync to avoid deadlock */
- 	struct mtk_keypad *keypad = dev_id;
- 	unsigned short *keycode = keypad->input_dev->keycode;
- 	DECLARE_BITMAP(new_state, KPD_NUM_BITS);
-@@ -49,16 +51,17 @@ static irqreturn_t kpd_irq_handler(int irq, void *dev_id)
- 	int pressed;
- 	unsigned short code;
- 
--	memcpy_fromio(new_state, keypad->base + KP_MEM, KPD_NUM_MEMS);
-+	regmap_raw_read(keypad->regmap, KP_MEM, new_state, KPD_NUM_MEMS);
- 
- 	bitmap_xor(change, new_state, keypad->keymap_state, KPD_NUM_BITS);
- 
- 	for_each_set_bit(bit_nr, change, KPD_NUM_BITS) {
--		pressed = test_bit(bit_nr, new_state) == 0U;
-+		/* 1: not pressed, 0: pressed */
-+		pressed = !test_bit(bit_nr, new_state);
- 		dev_dbg(&keypad->input_dev->dev, "%s",
- 			pressed ? "pressed" : "released");
- 
--	/* per 32bit register only use low 16bit as keypad mem register */
-+		/* 32bit register only use low 16bit as keypad mem register */
- 		code = keycode[bit_nr - 16 * (BITS_TO_U32(bit_nr) - 1)];
- 
- 		input_report_key(keypad->input_dev, code, pressed);
-@@ -73,51 +76,29 @@ static irqreturn_t kpd_irq_handler(int irq, void *dev_id)
- 	return IRQ_HANDLED;
- }
- 
--static int kpd_get_dts_info(struct mtk_keypad *keypad)
--{
--	int ret;
--	struct device *dev = keypad->input_dev->dev.parent;
--	struct device_node *node = dev->of_node;
--
--	ret = matrix_keypad_parse_properties(dev, &keypad->n_rows,
--					     &keypad->n_cols);
--
--	if (ret) {
--		dev_err(dev, "Failed to parse keypad params\n");
--		return ret;
--	}
--
--	ret = device_property_read_u32(dev, "mediatek,debounce-us",
--				   &keypad->key_debounce);
--	if (ret) {
--		dev_err(dev, "Failed to read mediatek debounce time\n");
--		return ret;
--	}
--
--	if (keypad->key_debounce > KPD_DEBOUNCE_MAX) {
--		dev_err(dev, "Debounce time exceeds the maximum allowed time 256ms\n");
--		return -EINVAL;
--	}
--
--	keypad->wakeup = device_property_read_bool(node, "wakeup-source");
--
--	dev_dbg(dev, "n_row=%d n_col=%d debounce=%d\n",
--		keypad->n_rows, keypad->n_cols,
--		keypad->key_debounce);
--
--	return 0;
--}
--
- static int kpd_pdrv_probe(struct platform_device *pdev)
- {
- 	struct mtk_keypad *keypad;
- 	struct pinctrl *keypad_pinctrl;
- 	struct pinctrl_state *kpd_default;
-+	unsigned int irqnr;
-+	u32 debounce;
- 	int ret;
- 
- 	keypad = devm_kzalloc(&pdev->dev, sizeof(*keypad), GFP_KERNEL);
- 	if (!keypad)
- 		return -ENOMEM;
-+	keypad->base = devm_platform_ioremap_resource(pdev, 0);
-+	if (IS_ERR(keypad->base))
-+		return PTR_ERR(keypad->base);
-+
-+	keypad->regmap = devm_regmap_init_mmio_clk(&pdev->dev, NULL,
-+				keypad->base, &keypad_regmap_cfg);
-+	if (IS_ERR(keypad->regmap)) {
-+		dev_err(&pdev->dev,
-+			"regmap init failed:%ld\n", PTR_ERR(keypad->regmap));
-+		return PTR_ERR(keypad->regmap);
-+	}
- 
- 	bitmap_fill(keypad->keymap_state, KPD_NUM_BITS);
- 
-@@ -130,18 +111,35 @@ static int kpd_pdrv_probe(struct platform_device *pdev)
- 	keypad->input_dev->name = KPD_NAME;
- 	keypad->input_dev->id.bustype = BUS_HOST;
- 
--	ret = kpd_get_dts_info(keypad);
-+	ret = matrix_keypad_parse_properties(&pdev->dev, &keypad->n_rows,
-+					     &keypad->n_cols);
-+	if (ret) {
-+		dev_err(&pdev->dev, "Failed to parse keypad params\n");
-+		return ret;
-+	}
-+
-+	ret = device_property_read_u32(&pdev->dev, "mediatek,debounce-us",
-+					&debounce);
- 	if (ret) {
--		dev_err(&pdev->dev, "Failed to get dts info\n");
-+		dev_err(&pdev->dev, "Failed to read mediatek debounce time\n");
- 		return ret;
- 	}
- 
-+	if (debounce > KPD_DEBOUNCE_MAX_US) {
-+		dev_err(&pdev->dev, "Debounce time exceeds the maximum allowed time 256ms\n");
-+		return -EINVAL;
-+	}
-+
-+	keypad->wakeup = device_property_read_bool(&pdev->dev, "wakeup-source");
-+
-+	dev_dbg(&pdev->dev, "n_row=%d n_col=%d debounce=%d\n",
-+		keypad->n_rows, keypad->n_cols, debounce);
-+
- 	ret = matrix_keypad_build_keymap(NULL, NULL,
- 					keypad->n_rows,
- 					keypad->n_cols,
- 					NULL,
- 					keypad->input_dev);
--
- 	if (ret) {
- 		dev_err(&pdev->dev, "Failed to build keymap\n");
- 		return ret;
-@@ -149,19 +147,8 @@ static int kpd_pdrv_probe(struct platform_device *pdev)
- 
- 	input_set_drvdata(keypad->input_dev, keypad);
- 
--	keypad->base = devm_platform_ioremap_resource(pdev, 0);
--	if (IS_ERR(keypad->base)) {
--		dev_err(&pdev->dev, "Failed to get resource and iomap keypad\n");
--		return PTR_ERR(keypad->base);
--	}
--
--	if (keypad->key_debounce > KPD_DEBOUNCE_MAX) {
--		dev_err(&pdev->dev, "Invalid debounce time value.\n");
--		return -EINVAL;
--	}
--
--	writew(keypad->key_debounce * 32 / 1000 & KPD_DEBOUNCE_MASK,
--		keypad->base + KP_DEBOUNCE);
-+	regmap_write(keypad->regmap, KP_DEBOUNCE,
-+			debounce * 32 / 1000 & KPD_DEBOUNCE_MASK);
- 
- 	keypad->clk = devm_clk_get(&pdev->dev, "kpd");
- 	if (IS_ERR(keypad->clk)) {
-@@ -174,57 +161,52 @@ static int kpd_pdrv_probe(struct platform_device *pdev)
- 		return ret;
- 	}
- 
-+	devm_add_action_or_reset(&pdev->dev,
-+				(void (*)(void *))clk_disable_unprepare,
-+				keypad->clk);
-+
- 	keypad_pinctrl = devm_pinctrl_get(&pdev->dev);
- 	if (IS_ERR(keypad_pinctrl)) {
--		ret = PTR_ERR(keypad_pinctrl);
--		goto disable_kpd_clk;
-+		return PTR_ERR(keypad_pinctrl);
- 	}
- 
- 	kpd_default = pinctrl_lookup_state(keypad_pinctrl, "default");
- 	if (IS_ERR(kpd_default)) {
- 		dev_err(&pdev->dev, "No default pinctrl state\n");
--		ret = PTR_ERR(kpd_default);
--		goto disable_kpd_clk;
-+		return PTR_ERR(kpd_default);
- 	}
- 
- 	pinctrl_select_state(keypad_pinctrl, kpd_default);
- 
--	keypad->irqnr = platform_get_irq(pdev, 0);
--	if (keypad->irqnr < 0) {
-+	irqnr = platform_get_irq(pdev, 0);
-+	if (irqnr < 0) {
- 		dev_err(&pdev->dev, "Failed to get irq\n");
--		ret = -keypad->irqnr;
--		goto disable_kpd_clk;
-+		return -irqnr;
- 	}
- 
--	ret = devm_request_irq(&pdev->dev, keypad->irqnr,
--				kpd_irq_handler, 0,
-+	ret = devm_request_threaded_irq(&pdev->dev, irqnr,
-+				NULL, kpd_irq_handler, 0,
- 				KPD_NAME, keypad);
- 	if (ret) {
- 		dev_err(&pdev->dev, "Failed to request IRQ#%d:%d\n",
--						keypad->irqnr, ret);
--		goto disable_kpd_clk;
-+						irqnr, ret);
-+		return ret;
- 	}
- 
- 	ret = input_register_device(keypad->input_dev);
- 	if (ret) {
- 		dev_err(&pdev->dev, "Failed to register device\n");
--		goto disable_kpd_clk;
-+		return ret;
- 	}
- 
- 	device_init_wakeup(&pdev->dev, keypad->wakeup);
- 
--	platform_set_drvdata(pdev, keypad);
--
- 	return 0;
--
--disable_kpd_clk:
--	clk_disable_unprepare(keypad->clk);
--	return ret;
- }
- 
- static const struct of_device_id kpd_of_match[] = {
- 	{.compatible = "mediatek,kp"},
--	{}
-+	{/*sentinel*/}
- };
- 
- static struct platform_driver kpd_pdrv = {
-@@ -234,7 +216,6 @@ static struct platform_driver kpd_pdrv = {
- 		   .of_match_table = kpd_of_match,
- 	},
- };
--
- module_platform_driver(kpd_pdrv);
- 
- MODULE_AUTHOR("Mediatek Corporation");
+diff --git a/arch/arm64/configs/defconfig b/arch/arm64/configs/defconfig
+index 7863352521e5..140c7a5832f7 100644
+--- a/arch/arm64/configs/defconfig
++++ b/arch/arm64/configs/defconfig
+@@ -317,6 +317,7 @@ CONFIG_KEYBOARD_SNVS_PWRKEY=m
+ CONFIG_KEYBOARD_IMX_SC_KEY=m
+ CONFIG_KEYBOARD_CROS_EC=y
+ CONFIG_KEYBOARD_MTK_KPD=y
++# CONFIG_KEYBOARD_MTK_PMIC is not set
+ CONFIG_INPUT_TOUCHSCREEN=y
+ CONFIG_TOUCHSCREEN_ATMEL_MXT=m
+ CONFIG_INPUT_MISC=y
 -- 
 2.18.0
 _______________________________________________
