@@ -2,55 +2,78 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 7F0F61CBA48
-	for <lists+linux-mediatek@lfdr.de>; Fri,  8 May 2020 23:57:57 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id E04431CBC56
+	for <lists+linux-mediatek@lfdr.de>; Sat,  9 May 2020 04:10:29 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Subject:To:From
-	:Date:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
 	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=fLrbaspoKeImtO4mZBUhZdiGGXcIt/cQBZEAjzp3srE=; b=kFuZ+SSGksVRj0
-	V+ibJVxi4sSpkKoJAn3qGjb0H9WZx3FWTTbNPdM52PFiEsnIL5uB3cHUC47Bvx6tKx4bcIVcHZzJ3
-	66sEUTMIW22kuIWW0kvCYyMmAtkBMEi7467yAbAkW62dZqy6XyMAZV+urYXp7bXkpzkGcXa5ZyEOk
-	PtsnUvi0PlmcSQ+bTJLkbfoQun9l4YPFwhNIMDAb9q3VbQOzSACiNxdUU66j5KiqWMxdmAzvSuMwk
-	tnSLTXfaiQCXsuce5HGpwEt1kbc0ldS71kVlEZsQRY4a8PHfw3RUTrKkbL53b0ax6qgfPtlNPnsMM
-	hmDQXWhLfa5jyt4joRNA==;
+	List-Owner; bh=sFD5jElCGXFNVyPjSpM9Hk8ig8ipYfq3IIPpkLgrnyU=; b=G/4rZ0sxT81LEB
+	izkv+syyuzq1OytyyJ1bdfXwptBKaIDQGlXtHr5MRZI3WbQiR+cYVypWAKlvZZfg+IWX0XasQKAHX
+	nNH6W+8rM59nHhreV8tysqX/k3FTeg89iHafj7ahDC4Kt4R2nSBZg0UfHKa6qdohtYp2uyb+vBmDa
+	NIKcez1XW/1E6YfxAU06lr3ahtRcgpE2k+smlkWin4Uc4N5cfZCRGpAI3t11XxGguX53NkWnKBFyX
+	qoxBHMWLwM2oi2mTNl4CUQZsQ4N+ooc+nbW6P1IvpM+Klrw8lk5rRHHQajnXUpEodnQBWp2XnCHqw
+	tprXG6v9r2BbYtFXGFhA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jXB0A-0002Vo-Ai; Fri, 08 May 2020 21:57:50 +0000
-Received: from mail2-relais-roc.national.inria.fr ([192.134.164.83])
+	id 1jXEwW-0003g8-BN; Sat, 09 May 2020 02:10:20 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jXB07-0002Ug-GS
- for linux-mediatek@lists.infradead.org; Fri, 08 May 2020 21:57:49 +0000
-X-IronPort-AV: E=Sophos;i="5.73,369,1583190000"; d="scan'208";a="448862514"
-Received: from abo-173-121-68.mrs.modulonet.fr (HELO hadrien) ([85.68.121.173])
- by mail2-relais-roc.national.inria.fr with ESMTP/TLS/DHE-RSA-AES256-GCM-SHA384;
- 08 May 2020 23:57:17 +0200
-Date: Fri, 8 May 2020 23:57:17 +0200 (CEST)
-From: Julia Lawall <julia.lawall@inria.fr>
-X-X-Sender: jll@hadrien
-To: sean.wang@mediatek.com, vkoul@kernel.org, matthias.bgg@gmail.com
-Subject: question about drivers/dma/mediatek/mtk-cqdma.c
-Message-ID: <alpine.DEB.2.21.2005082352340.6525@hadrien>
-User-Agent: Alpine 2.21 (DEB 202 2017-01-01)
+ id 1jXEwC-00017p-Gl; Sat, 09 May 2020 02:10:03 +0000
+X-UUID: f97ec90435d743c2bc57d1ed1fb37359-20200508
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
+ s=dk; 
+ h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:Subject:CC:To:From;
+ bh=1B+choKMEWf5xgsDH1Xvz4r98si4Toef2xxzNstIEMc=; 
+ b=WVPofjpp0VLBguQpJu5sO7PG4xp585zhHL5kaY5GN4ax6yZyup7ckNf1CfzJCQp/XLQthBFtWydoIccdvERs23acVXpSpUglCYB8UH7mrTzk761XMMrKpPJbKs76zGETv/kNtGgEyB5KaCYcKNJXhpsh9zjT5mi3gzPS7/aqn4o=;
+X-UUID: f97ec90435d743c2bc57d1ed1fb37359-20200508
+Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw02.mediatek.com
+ (envelope-from <fengping.yu@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 403766129; Fri, 08 May 2020 18:09:49 -0800
+Received: from MTKMBS02N1.mediatek.inc (172.21.101.77) by
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1497.2; Fri, 8 May 2020 19:09:36 -0700
+Received: from MTKCAS06.mediatek.inc (172.21.101.30) by
+ mtkmbs02n1.mediatek.inc (172.21.101.77) with Microsoft SMTP Server (TLS) id
+ 15.0.1497.2; Sat, 9 May 2020 10:09:23 +0800
+Received: from localhost.localdomain (10.15.20.246) by MTKCAS06.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1497.2 via Frontend
+ Transport; Sat, 9 May 2020 10:09:17 +0800
+From: Fengping Yu <fengping.yu@mediatek.com>
+To: Marco Felsch <m.felsch@pengutronix.de>, Andy Shevchenko
+ <andriy.shevchenko@linux.intel.com>, Dmitry Torokhov
+ <dmitry.torokhov@gmail.com>, Yingjoe Chen <yingjoe.chen@mediatek.com>
+Subject: [PATCH v6] Add mtk matrix keypad driver for keypad on MTK SoC
+Date: Sat, 9 May 2020 10:04:56 +0800
+Message-ID: <20200509020458.8359-1-fengping.yu@mediatek.com>
+X-Mailer: git-send-email 2.18.0
 MIME-Version: 1.0
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200508_145747_821460_51626020 
-X-CRM114-Status: UNSURE (   5.02  )
+X-CRM114-CacheID: sfid-20200508_191000_556749_7187CFE9 
+X-CRM114-Status: UNSURE (   7.41  )
 X-CRM114-Notice: Please train this message.
-X-Spam-Score: -5.0 (-----)
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
- Content analysis details:   (-5.0 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
- high trust [192.134.164.83 listed in list.dnswl.org]
- 0.0 RCVD_IN_MSPIKE_H4      RBL: Very Good reputation (+4)
- [192.134.164.83 listed in wl.mailspike.net]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
+ 0.0 MIME_BASE64_TEXT       RAW: Message text disguised using base64
+ encoding
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -62,35 +85,40 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: dmaengine@vger.kernel.org, Nic Volanschi <eugene.volanschi@inria.fr>,
- linux-mediatek@lists.infradead.org
+Cc: linux-mediatek@lists.infradead.org, linux-kernel@vger.kernel.org,
+ linux-arm-kernel@lists.infradead.org, linux-input@vger.kernel.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hello,
+Change since v5:
+- remove unnecessary include files
+- remove redundant comments and newlines
+- use local irqnr variable instead of member variable of mtk_keypad struct
+- use regmap to read and write registers
+- drop kpd_get_dts_info directly into probe function
+- use devm_add_action_or_reset to avoid goto error handling when do clk setting
+- use devm_request_threaded_irq api to request irq
+- remove platform_set_drvdata
 
-The function mtk_cqdma_find_active_desc contains the following code:
+fengping.yu (3):
+  dt-bindings: Change keypad documentation schema
+  drivers: input: keyboard: Add mtk keypad driver
+  configs: defconfig: Add CONFIG_KEYBOARD_MTK_KPD=y
 
-        struct virt_dma_desc *vd;
-        unsigned long flags;
+ .../devicetree/bindings/input/mtk-kpd.txt     |  61 -------
+ .../devicetree/bindings/input/mtk-kpd.yaml    |  93 +++++++++++
+ arch/arm64/configs/defconfig                  |   1 +
+ drivers/input/keyboard/Kconfig                |   5 +-
+ drivers/input/keyboard/mtk-kpd.c              | 151 ++++++++----------
+ 5 files changed, 163 insertions(+), 148 deletions(-)
+ delete mode 100644 Documentation/devicetree/bindings/input/mtk-kpd.txt
+ create mode 100644 Documentation/devicetree/bindings/input/mtk-kpd.yaml
 
-        spin_lock_irqsave(&cvc->pc->lock, flags);
-        list_for_each_entry(vd, &cvc->pc->queue, node)
-                if (vd->tx.cookie == cookie) {
-                        spin_unlock_irqrestore(&cvc->pc->lock, flags);
-                        return vd;
-                }
+--
+2.18.0
 
-That is, from a &cvc->pc->queue there is an iteration over elements of
-type virt_dma_desc.  But other uses of &cvc->pc->queue, such as in
-mtk_cqdma_is_vchan_active, seem to indicate that the elements of this list
-have type mtk_cqdma_vdesc.  It is not clear to me how the body of the loop
-should be updated to account for this.
-
-thanks,
-julia
 
 _______________________________________________
 Linux-mediatek mailing list
