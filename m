@@ -2,71 +2,80 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id F16F91CDA63
-	for <lists+linux-mediatek@lfdr.de>; Mon, 11 May 2020 14:45:42 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 3E1161CDA54
+	for <lists+linux-mediatek@lfdr.de>; Mon, 11 May 2020 14:43:49 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
+	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=n/hlR8w+jGFUvH9GW4XWxgix5w/zXLe8StLpwA9oQsQ=; b=UZ7GG7tA7Keiuw
-	Kx/+1BB0JK15g/PgGxXcP65nT8rWxLZleBu4XUptnAuxn2auVhBLY6+nCRMDVRWBSN253Ej3tAFhH
-	R0HdJ5vbqr1r1TJAL0fc4GP0ClrRXGSXtH2IsfQHVOPGs5Q12GqWzPicKYn0qRfi/+Z+O1B0C8dg5
-	4hyuNE3g3PVKSEfWu+IXOv1sq1jYC5jlDsc93iAhgA2wQAnQ8kTyTYw8x24j6pEAWkMR6QYHZS/TU
-	l3Mj53jaLwjcEYJXlwUVID+lYWJ4ynbDbnr6pTSvR9MzBII7diWPNRuppoMbIcv9fgJU+QJpBVgcl
-	XJIoXzQ160ZR8gzT+9pg==;
+	List-Owner; bh=AY0nTJ2o3oxhZ64G4sbVVCZNJNRcmvvFiGP0iYEocNQ=; b=PD9ZaMZBAAcvqp
+	m7F/LbnBQhcOsAmct6sY1zwjhSHitGhdEZ6mWGSwdM0X8MIWJmqVa2IMtC/U/Vznu3mwvcPzMIC2o
+	KwuBVMFs9rRquIC1fQoMpVgU/ng3GE8ntLvz+xXiGOrzlKPKd3wx4Mi4NTCkK6rnxf8ZTHjQCPMFr
+	No74g9Sn8BuHMR7zVCIe2Hut9VW6fWEb4AxQak45F1MMJrYD0XdtPodYv6N5g+h63+aUjjGOgQuWW
+	s1SRNBpNX3CL+6UBF645k7Evk4fL9nNmxOdwQulrCecT7bstcwitgLm5aO+MdcM5XKDHBtIYkdDZV
+	gkjEjsSEJ5u3o9jVk43w==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jY7oO-0001Yi-27; Mon, 11 May 2020 12:45:36 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1jY7mV-0006wM-Mp; Mon, 11 May 2020 12:43:39 +0000
+Received: from mail-qt1-x842.google.com ([2607:f8b0:4864:20::842])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jY7oH-0001Vv-TU
- for linux-mediatek@lists.infradead.org; Mon, 11 May 2020 12:45:33 +0000
-X-UUID: aba604f3805349b19b4e9489781ef41c-20200511
-DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
- s=dk; 
- h=Content-Transfer-Encoding:MIME-Version:Content-Type:References:In-Reply-To:Date:CC:To:From:Subject:Message-ID;
- bh=ScFat6Pa4tC8GIO7yMXhY/Gj+vMADl48YQIv9wF9FiU=; 
- b=dkw8jnpS7xIiDmEw4x4vM8fjNonO3xdXdYyQQN9bF6//EH23lxZa2jzoN+S9arLYOZIraIaZvR+N53m9BUdq6lNFZAn8ulrxawUJ6AU5aFYq9W9xMuSt2vEl1E2nfALbr8XxT6fmCsPGwIMtdYrpWgBXyZ8r+LWIGGbxuRe/WL0=;
-X-UUID: aba604f3805349b19b4e9489781ef41c-20200511
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
- (envelope-from <frankie.chang@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1842647480; Mon, 11 May 2020 04:45:21 -0800
-Received: from MTKMBS01N2.mediatek.inc (172.21.101.79) by
- MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
- 15.0.1497.2; Mon, 11 May 2020 05:35:22 -0700
-Received: from mtkcas08.mediatek.inc (172.21.101.126) by
- mtkmbs01n2.mediatek.inc (172.21.101.79) with Microsoft SMTP Server (TLS) id
- 15.0.1497.2; Mon, 11 May 2020 20:35:19 +0800
-Received: from [172.21.77.33] (172.21.77.33) by mtkcas08.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1497.2 via Frontend
- Transport; Mon, 11 May 2020 20:35:19 +0800
-Message-ID: <1589200521.22902.18.camel@mtkswgap22>
-Subject: Re: [PATCH v4 3/3] binder: add transaction latency tracer
-From: Frankie Chang <Frankie.Chang@mediatek.com>
-To: Todd Kjos <tkjos@google.com>
-Date: Mon, 11 May 2020 20:35:21 +0800
-In-Reply-To: <CAHRSSEwqxiJqbaMHVPMWPPpLiy_raa-Zncr3VBPpcwpRbTzThg@mail.gmail.com>
-References: <20200430085105.GF2496467@kroah.com>
- <1588839055-26677-1-git-send-email-Frankie.Chang@mediatek.com>
- <1588839055-26677-4-git-send-email-Frankie.Chang@mediatek.com>
- <CAHRSSEwqxiJqbaMHVPMWPPpLiy_raa-Zncr3VBPpcwpRbTzThg@mail.gmail.com>
-X-Mailer: Evolution 3.2.3-0ubuntu6 
+ id 1jY7mR-0006vO-Ue
+ for linux-mediatek@lists.infradead.org; Mon, 11 May 2020 12:43:38 +0000
+Received: by mail-qt1-x842.google.com with SMTP id i68so7739563qtb.5
+ for <linux-mediatek@lists.infradead.org>; Mon, 11 May 2020 05:43:35 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=20161025;
+ h=mime-version:references:in-reply-to:from:date:message-id:subject:to
+ :cc; bh=o4SNxN2a4GN4w0hp5AlLi4G8AluIsrQ7+PBJOL3vihk=;
+ b=iG294TZ8yidGFHZCDHBq7971UjDJpfr7kQXWgQ3Rtm6AfViavOj+yWm1lJuGVC6eEr
+ 8HtOkrDs7xTZp0hIyNToKFmVbRe/81PNY7SWBGCYYXZApQ5C0zdkhswwa02RD8lwoYXl
+ BnfXDGmhC0/rwtsvyCZAsgUgbj1nn6Kzcjg4SttOBIYcSlwZi+hthQeWJRG7hXNS7Fwv
+ 753N94QTiyAXrq+hGHah5RxBMBySrs/i7bfuLNaQMisSkGnlSPqdQWgau4Wvwam1m5Hx
+ k1bzG8i1JVNjiHegDf35+2AEhNCwuDPIwkLKZu5TrFsF39/yS/Amu6nveALWpj+eDqrw
+ 6ekQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+ :message-id:subject:to:cc;
+ bh=o4SNxN2a4GN4w0hp5AlLi4G8AluIsrQ7+PBJOL3vihk=;
+ b=KQAcGAzFJCOzckOlWTZtQL9Mq0lvQy48KWdolwejGPvF3YYirKxznydMwrjXcfsgou
+ jJ5429EuLxxNQZFLwciK9BQyMPTKbPPf5/ljhNqcs9BR16x2nSdgSKrNgGBMJ6CasviK
+ JCsq5AJ83cWeLr4F13rJhmRIQIMtlAodV2BuFhN9KefBirxEr4Gs3zyWnpw+Tz2KJ1qm
+ yVzULlR3xBVnSFOBbGeawguJFMg3Y/T2KNjycv6F9PchTa9e/thKNQvtEOxMX3wFxCLM
+ s9yC3uyY5FDcN6b4+FZcGauxIHCUSD4hn84aqjqBBQmcAQVPhVTiT8g8E/4sV8gy8SDX
+ 2rrQ==
+X-Gm-Message-State: AGi0PubyPTcqA75vo7GrBFmnlymHvZHIpHqybk6q5DxROn/x0ngYCDo0
+ RPLE5x/zpDMVjsre1DgGCHoskqdS1cU5t4binFm+ig==
+X-Google-Smtp-Source: APiQypLxWnWBejHuxheVClg52Wbnthyvkqx5hvIbyW8Wrlmw5P/bcod8joWA1HXygSNtZPQhEli3Vk7O9DHn3bICv5c=
+X-Received: by 2002:ac8:6642:: with SMTP id j2mr16145758qtp.158.1589201014239; 
+ Mon, 11 May 2020 05:43:34 -0700 (PDT)
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: CC48858346226CA8B7EC6C233185EE787C958762BDB48983C94AD29317A15B422000:8
-X-MTK: N
+References: <20200511023111.15310-1-walter-zh.wu@mediatek.com>
+ <CACT4Y+YWNwTSoheJhc3nMdQi9m719F3PzpGo3TfRY3zAg9EwuQ@mail.gmail.com>
+In-Reply-To: <CACT4Y+YWNwTSoheJhc3nMdQi9m719F3PzpGo3TfRY3zAg9EwuQ@mail.gmail.com>
+From: Dmitry Vyukov <dvyukov@google.com>
+Date: Mon, 11 May 2020 14:43:22 +0200
+Message-ID: <CACT4Y+bO1Zg_jgFHbOWgp7fLAADOQ_-AZmjEHz0WG7=oyOt4Gg@mail.gmail.com>
+Subject: Re: [PATCH v2 1/3] rcu/kasan: record and print call_rcu() call stack
+To: Walter Wu <walter-zh.wu@mediatek.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200511_054529_972506_FE8AB4D2 
-X-CRM114-Status: GOOD (  31.38  )
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20200511_054336_021995_0743CA2B 
+X-CRM114-Status: GOOD (  26.34  )
+X-Spam-Score: -15.7 (---------------)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (-15.7 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [2607:f8b0:4864:20:0:0:0:842 listed in]
+ [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
+ -7.5 USER_IN_DEF_DKIM_WL    From: address is in the default DKIM
+ white-list
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ -7.5 USER_IN_DEF_SPF_WL     From: address is in the default SPF
+ white-list
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
@@ -74,8 +83,8 @@ X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
+ -0.5 ENV_AND_HDR_SPF_MATCH  Env and Hdr From used in default SPF WL
+ Match -0.0 DKIMWL_WL_MED          DKIMwl.org - Medium sender
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -88,374 +97,295 @@ List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
 Cc: wsd_upstream <wsd_upstream@mediatek.com>,
- Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
- LKML <linux-kernel@vger.kernel.org>,
- Arve =?ISO-8859-1?Q?Hj=F8nnev=E5g?= <arve@android.com>,
- Jian-Min Liu <Jian-Min.Liu@mediatek.com>, linux-mediatek@lists.infradead.org,
- Joel Fernandes <joel@joelfernandes.org>, Martijn Coenen <maco@android.com>,
- Christian Brauner <christian@brauner.io>
+ "Paul E . McKenney" <paulmck@kernel.org>, Linux-MM <linux-mm@kvack.org>,
+ Lai Jiangshan <jiangshanlai@gmail.com>, Josh Triplett <josh@joshtriplett.org>,
+ kasan-dev <kasan-dev@googlegroups.com>, LKML <linux-kernel@vger.kernel.org>,
+ Joel Fernandes <joel@joelfernandes.org>, linux-mediatek@lists.infradead.org,
+ Alexander Potapenko <glider@google.com>,
+ Matthias Brugger <matthias.bgg@gmail.com>,
+ Andrey Ryabinin <aryabinin@virtuozzo.com>,
+ Andrew Morton <akpm@linux-foundation.org>,
+ Linux ARM <linux-arm-kernel@lists.infradead.org>,
+ Mathieu Desnoyers <mathieu.desnoyers@efficios.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Thu, 2020-05-07 at 11:21 -0700, Todd Kjos wrote:
-> On Thu, May 7, 2020 at 1:11 AM Frankie Chang <Frankie.Chang@mediatek.com> wrote:
+On Mon, May 11, 2020 at 2:31 PM Dmitry Vyukov <dvyukov@google.com> wrote:
+>
+> On Mon, May 11, 2020 at 4:31 AM Walter Wu <walter-zh.wu@mediatek.com> wrote:
 > >
-> > From: "Frankie.Chang" <Frankie.Chang@mediatek.com>
+> > This feature will record first and last call_rcu() call stack and
+> > print two call_rcu() call stack in KASAN report.
 > >
-> > Record start/end timestamp for binder transaction.
-> > When transaction is completed or transaction is free,
-> > it would be checked if transaction latency over threshold (2 sec),
-> 
-> If this is a hard-coded threshold, provide rationale for why 2 sec is
-> the right value and it doesn't need to be tunable
-> 
-
-Some of modules would trigger timeout NE if their binder transaction
-don't finish in time, such as audio timeout (5 sec), even BT command
-timeout (2 sec), etc.
-
-Therefore, we want to record related transactions which exceed 2 sec. It
-could be helpful to debug.
-
-> > if yes, printing related information for tracing.
+> > When call_rcu() is called, we store the call_rcu() call stack into
+> > slub alloc meta-data, so that KASAN report can print rcu stack.
 > >
-> > /* Implement details */
-> > - Add latency tracer module to monitor slow transaction.
-> >   The trace_binder_free_transaction would not be enabled
-> >   by default. Monitoring which transaction is too slow to
-> >   cause some of exceptions is important. So we hook the
-> >   tracepoint to call the monitor function.
-> 
-> Please add a more complete description. This patch adds a module to
-> monitor transaction latency by attaching to new tracepoints introduced
-> when transactions are allocated and freed. Describe this in the commit
-> message.
-> 
-
-Okay, we would add these description in next version.
-
+> > It doesn't increase the cost of memory consumption. Because we don't
+> > enlarge struct kasan_alloc_meta size.
+> > - add two call_rcu() call stack into kasan_alloc_meta, size is 8 bytes.
+> > - remove free track from kasan_alloc_meta, size is 8 bytes.
 > >
-> > Signed-off-by: Frankie.Chang <Frankie.Chang@mediatek.com>
+> > [1]https://bugzilla.kernel.org/show_bug.cgi?id=198437
+> > [2]https://groups.google.com/forum/#!searchin/kasan-dev/better$20stack$20traces$20for$20rcu%7Csort:date/kasan-dev/KQsjT_88hDE/7rNUZprRBgAJ
+> >
+> > Signed-off-by: Walter Wu <walter-zh.wu@mediatek.com>
+> > Suggested-by: Dmitry Vyukov <dvyukov@google.com>
+> > Cc: Andrey Ryabinin <aryabinin@virtuozzo.com>
+> > Cc: Dmitry Vyukov <dvyukov@google.com>
+> > Cc: Alexander Potapenko <glider@google.com>
+> > Cc: Andrew Morton <akpm@linux-foundation.org>
+> > Cc: Paul E. McKenney <paulmck@kernel.org>
+> > Cc: Josh Triplett <josh@joshtriplett.org>
+> > Cc: Mathieu Desnoyers <mathieu.desnoyers@efficios.com>
+> > Cc: Lai Jiangshan <jiangshanlai@gmail.com>
+> > Cc: Joel Fernandes <joel@joelfernandes.org>
 > > ---
-> >  drivers/android/Kconfig                 |    8 +++
-> >  drivers/android/Makefile                |    1 +
-> >  drivers/android/binder.c                |    2 +
-> >  drivers/android/binder_internal.h       |   13 ++++
-> >  drivers/android/binder_latency_tracer.c |  105 +++++++++++++++++++++++++++++++
-> >  drivers/android/binder_trace.h          |   26 +++++++-
-> >  6 files changed, 152 insertions(+), 3 deletions(-)
-> >  create mode 100644 drivers/android/binder_latency_tracer.c
+> >  include/linux/kasan.h |  2 ++
+> >  kernel/rcu/tree.c     |  3 +++
+> >  lib/Kconfig.kasan     |  2 ++
+> >  mm/kasan/common.c     |  4 ++--
+> >  mm/kasan/generic.c    | 29 +++++++++++++++++++++++++++++
+> >  mm/kasan/kasan.h      | 19 +++++++++++++++++++
+> >  mm/kasan/report.c     | 21 +++++++++++++++++----
+> >  7 files changed, 74 insertions(+), 6 deletions(-)
 > >
-> >  Change from v4:
-> >    split up into patch series.
+> > diff --git a/include/linux/kasan.h b/include/linux/kasan.h
+> > index 31314ca7c635..23b7ee00572d 100644
+> > --- a/include/linux/kasan.h
+> > +++ b/include/linux/kasan.h
+> > @@ -174,11 +174,13 @@ static inline size_t kasan_metadata_size(struct kmem_cache *cache) { return 0; }
 > >
-> >  Change from v3:
-> >    use tracepoints for binder_update_info and print_binder_transaction_ext,
-> >    instead of custom registration functions.
+> >  void kasan_cache_shrink(struct kmem_cache *cache);
+> >  void kasan_cache_shutdown(struct kmem_cache *cache);
+> > +void kasan_record_aux_stack(void *ptr);
 > >
-> >  Change from v2:
-> >    create transaction latency module to monitor slow transaction.
+> >  #else /* CONFIG_KASAN_GENERIC */
 > >
-> >  Change from v1:
-> >    first patchset.
+> >  static inline void kasan_cache_shrink(struct kmem_cache *cache) {}
+> >  static inline void kasan_cache_shutdown(struct kmem_cache *cache) {}
+> > +static inline void kasan_record_aux_stack(void *ptr) {}
 > >
-> > diff --git a/drivers/android/Kconfig b/drivers/android/Kconfig
-> > index 6fdf2ab..7ba80eb 100644
-> > --- a/drivers/android/Kconfig
-> > +++ b/drivers/android/Kconfig
-> > @@ -54,6 +54,14 @@ config ANDROID_BINDER_IPC_SELFTEST
-> >           exhaustively with combinations of various buffer sizes and
-> >           alignments.
+> >  #endif /* CONFIG_KASAN_GENERIC */
 > >
-> > +config BINDER_USER_TRACKING
-> 
-> Why not "BINDER_TRANSACTION_LATENCY_TRACKING"?
-> 
-
-Thanks for your advice. We would modify the config name to this proper
-one.
-
-> > +       bool "Android Binder transaction tracking"
-> > +       help
-> > +         Used for track abnormal binder transaction which is over 2 seconds,
-> > +         when the transaction is done or be free, this transaction would be
-> > +         checked whether it executed overtime.
-> > +         If yes, printing out the detail info about it.
-> 
-> "If yes, print out the detailed info"
-> 
-
-We would modify it, thanks.
-
+> > diff --git a/kernel/rcu/tree.c b/kernel/rcu/tree.c
+> > index 06548e2ebb72..de872b6cc261 100644
+> > --- a/kernel/rcu/tree.c
+> > +++ b/kernel/rcu/tree.c
+> > @@ -57,6 +57,7 @@
+> >  #include <linux/slab.h>
+> >  #include <linux/sched/isolation.h>
+> >  #include <linux/sched/clock.h>
+> > +#include <linux/kasan.h>
+> >  #include "../time/tick-internal.h"
+> >
+> >  #include "tree.h"
+> > @@ -2694,6 +2695,8 @@ __call_rcu(struct rcu_head *head, rcu_callback_t func)
+> >                 trace_rcu_callback(rcu_state.name, head,
+> >                                    rcu_segcblist_n_cbs(&rdp->cblist));
+> >
+> > +       kasan_record_aux_stack(head);
 > > +
-> >  endif # if ANDROID
+> >         /* Go handle any RCU core processing required. */
+> >         if (IS_ENABLED(CONFIG_RCU_NOCB_CPU) &&
+> >             unlikely(rcu_segcblist_is_offloaded(&rdp->cblist))) {
+> > diff --git a/lib/Kconfig.kasan b/lib/Kconfig.kasan
+> > index 81f5464ea9e1..56a89291f1cc 100644
+> > --- a/lib/Kconfig.kasan
+> > +++ b/lib/Kconfig.kasan
+> > @@ -58,6 +58,8 @@ config KASAN_GENERIC
+> >           For better error detection enable CONFIG_STACKTRACE.
+> >           Currently CONFIG_KASAN_GENERIC doesn't work with CONFIG_DEBUG_SLAB
+> >           (the resulting kernel does not boot).
+> > +         Currently CONFIG_KASAN_GENERIC will print first and last call_rcu()
+> > +         call stack. It doesn't increase the cost of memory consumption.
 > >
-> >  endmenu
-> > diff --git a/drivers/android/Makefile b/drivers/android/Makefile
-> > index c9d3d0c9..552e8ac 100644
-> > --- a/drivers/android/Makefile
-> > +++ b/drivers/android/Makefile
-> > @@ -4,3 +4,4 @@ ccflags-y += -I$(src)                   # needed for trace events
-> >  obj-$(CONFIG_ANDROID_BINDERFS)         += binderfs.o
-> >  obj-$(CONFIG_ANDROID_BINDER_IPC)       += binder.o binder_alloc.o
-> >  obj-$(CONFIG_ANDROID_BINDER_IPC_SELFTEST) += binder_alloc_selftest.o
-> > +obj-$(CONFIG_BINDER_USER_TRACKING)     += binder_latency_tracer.o
-> > diff --git a/drivers/android/binder.c b/drivers/android/binder.c
-> > index 4c3dd98..b89d75a 100644
-> > --- a/drivers/android/binder.c
-> > +++ b/drivers/android/binder.c
-> > @@ -2657,6 +2657,7 @@ static void binder_transaction(struct binder_proc *proc,
-> >                 return_error_line = __LINE__;
-> >                 goto err_alloc_t_failed;
-> >         }
-> > +       trace_binder_update_info(t, e);
-> 
-> Can this be a more descriptive name? Perhaps "trace_binder_txn_create()"
-> 
-
-Okay, we would replace the original name with
-trace_binder_txn_latency_alloc.
-
-> >         INIT_LIST_HEAD(&t->fd_fixups);
-> >         binder_stats_created(BINDER_STAT_TRANSACTION);
-> >         spin_lock_init(&t->lock);
-> > @@ -5145,6 +5146,7 @@ static void print_binder_transaction_ilocked(struct seq_file *m,
-> >                    t->to_thread ? t->to_thread->pid : 0,
-> >                    t->code, t->flags, t->priority, t->need_reply);
-> >         spin_unlock(&t->lock);
-> > +       trace_print_binder_transaction_ext(m, t);
-> 
-> Why do you need to trace when dumping out the transaction info?
-> 
-
-Because we want to get the start time about this transaction, to check
-whether these transactions consume too much time.
-
-Converting kernel time to android time let us easily correspond kernel
-log to android log. But it is not necessary if you think that is too
-redundant.
-
+> >  config KASAN_SW_TAGS
+> >         bool "Software tag-based mode"
+> > diff --git a/mm/kasan/common.c b/mm/kasan/common.c
+> > index 2906358e42f0..8bc618289bb1 100644
+> > --- a/mm/kasan/common.c
+> > +++ b/mm/kasan/common.c
+> > @@ -41,7 +41,7 @@
+> >  #include "kasan.h"
+> >  #include "../slab.h"
 > >
-> >         if (proc != to_proc) {
-> >                 /*
-> > diff --git a/drivers/android/binder_internal.h b/drivers/android/binder_internal.h
-> > index ed61b3e..24d7beb 100644
-> > --- a/drivers/android/binder_internal.h
-> > +++ b/drivers/android/binder_internal.h
-> > @@ -12,6 +12,11 @@
-> >  #include <linux/types.h>
-> >  #include <linux/uidgid.h>
+> > -static inline depot_stack_handle_t save_stack(gfp_t flags)
+> > +depot_stack_handle_t kasan_save_stack(gfp_t flags)
+> >  {
+> >         unsigned long entries[KASAN_STACK_DEPTH];
+> >         unsigned int nr_entries;
+> > @@ -54,7 +54,7 @@ static inline depot_stack_handle_t save_stack(gfp_t flags)
+> >  static inline void set_track(struct kasan_track *track, gfp_t flags)
+> >  {
+> >         track->pid = current->pid;
+> > -       track->stack = save_stack(flags);
+> > +       track->stack = kasan_save_stack(flags);
+> >  }
 > >
-> > +#ifdef CONFIG_BINDER_USER_TRACKING
-> > +#include <linux/rtc.h>
-> > +#include <linux/time.h>
-> > +#endif
+> >  void kasan_enable_current(void)
+> > diff --git a/mm/kasan/generic.c b/mm/kasan/generic.c
+> > index 56ff8885fe2e..b86880c338e2 100644
+> > --- a/mm/kasan/generic.c
+> > +++ b/mm/kasan/generic.c
+> > @@ -325,3 +325,32 @@ DEFINE_ASAN_SET_SHADOW(f2);
+> >  DEFINE_ASAN_SET_SHADOW(f3);
+> >  DEFINE_ASAN_SET_SHADOW(f5);
+> >  DEFINE_ASAN_SET_SHADOW(f8);
 > > +
-> >  struct binder_context {
-> >         struct binder_node *binder_context_mgr_node;
-> >         struct mutex context_mgr_node_lock;
-> > @@ -131,6 +136,10 @@ struct binder_transaction_log_entry {
-> >         uint32_t return_error;
-> >         uint32_t return_error_param;
-> >         char context_name[BINDERFS_MAX_NAME + 1];
-> > +#ifdef CONFIG_BINDER_USER_TRACKING
-> > +       struct timespec timestamp;
-> > +       struct timeval tv;
-> > +#endif
-> >  };
-> >
-> >  struct binder_transaction_log {
-> > @@ -520,6 +529,10 @@ struct binder_transaction {
-> >          * during thread teardown
-> >          */
-> >         spinlock_t lock;
-> > +#ifdef CONFIG_BINDER_USER_TRACKING
-> > +       struct timespec timestamp;
-> > +       struct timeval tv;
-> > +#endif
-> >  };
-> >
-> >  /**
-> > diff --git a/drivers/android/binder_latency_tracer.c b/drivers/android/binder_latency_tracer.c
-> > new file mode 100644
-> > index 0000000..45c14fb
-> > --- /dev/null
-> > +++ b/drivers/android/binder_latency_tracer.c
-> > @@ -0,0 +1,105 @@
-> > +// SPDX-License-Identifier: GPL-2.0
-> > +/*
-> > + * Copyright (C) 2019 MediaTek Inc.
-> > + */
-> > +
-> > +#include <linux/module.h>
-> > +#include <uapi/linux/android/binder.h>
-> > +#include "binder_alloc.h"
-> > +#include "binder_internal.h"
-> > +#include "binder_trace.h"
-> > +
-> > +/*
-> > + * probe_binder_free_transaction - Output info of a delay transaction
-> > + * @t:          pointer to the over-time transaction
-> > + */
-> > +void probe_binder_free_transaction(void *ignore, struct binder_transaction *t)
+> > +void kasan_record_aux_stack(void *addr)
 > > +{
-> > +       struct rtc_time tm;
-> > +       struct timespec *startime;
-> > +       struct timespec cur, sub_t;
+> > +       struct page *page = kasan_addr_to_page(addr);
+> > +       struct kmem_cache *cache;
+> > +       struct kasan_alloc_meta *alloc_info;
+> > +       void *object;
 > > +
-> > +       ktime_get_ts(&cur);
-> > +       startime = &t->timestamp;
-> > +       sub_t = timespec_sub(cur, *startime);
-> > +
-> > +       /* if transaction time is over than 2 sec,
-> > +        * show timeout warning log.
-> > +        */
-> > +       if (sub_t.tv_sec < 2)
+> > +       if (!(page && PageSlab(page)))
 > > +               return;
 > > +
-> > +       rtc_time_to_tm(t->tv.tv_sec, &tm);
+> > +       cache = page->slab_cache;
+> > +       object = nearest_obj(cache, page, addr);
+> > +       alloc_info = get_alloc_info(cache, object);
 > > +
-> > +       spin_lock(&t->lock);
-> > +       pr_info_ratelimited("%d: from %d:%d to %d:%d",
-> > +                       t->debug_id,
-> > +                       t->from ? t->from->proc->pid : 0,
-> > +                       t->from ? t->from->pid : 0,
-> > +                       t->to_proc ? t->to_proc->pid : 0,
-> > +                       t->to_thread ? t->to_thread->pid : 0);
-> > +       spin_unlock(&t->lock);
-> > +
-> > +       pr_info_ratelimited(" total %u.%03ld s code %u start %lu.%03ld android %d-%02d-%02d %02d:%02d:%02d.%03lu\n",
-> > +                       (unsigned int)sub_t.tv_sec,
-> > +                       (sub_t.tv_nsec / NSEC_PER_MSEC),
-> > +                       t->code,
-> > +                       (unsigned long)startime->tv_sec,
-> > +                       (startime->tv_nsec / NSEC_PER_MSEC),
-> > +                       (tm.tm_year + 1900), (tm.tm_mon + 1), tm.tm_mday,
-> > +                       tm.tm_hour, tm.tm_min, tm.tm_sec,
-> > +                       (unsigned long)(t->tv.tv_usec / USEC_PER_MSEC));
+> > +       if (!alloc_info->rcu_stack[0])
+> > +               /* record first call_rcu() call stack */
+> > +               alloc_info->rcu_stack[0] = kasan_save_stack(GFP_NOWAIT);
+> > +       else
+> > +               /* record last call_rcu() call stack */
+> > +               alloc_info->rcu_stack[1] = kasan_save_stack(GFP_NOWAIT);
 > > +}
 > > +
-> > +static void probe_binder_update_info(void *ignore, struct binder_transaction *t,
-> > +                          struct binder_transaction_log_entry *e)
+> > +struct kasan_track *kasan_get_aux_stack(struct kasan_alloc_meta *alloc_info,
+> > +                                               u8 idx)
 > > +{
-> > +       ktime_get_ts(&e->timestamp);
-> > +       do_gettimeofday(&e->tv);
-> > +       e->tv.tv_sec -= (sys_tz.tz_minuteswest * 60);
-> > +       memcpy(&t->timestamp, &e->timestamp, sizeof(struct timespec));
-> > +       memcpy(&t->tv, &e->tv, sizeof(struct timeval));
+> > +       return container_of(&alloc_info->rcu_stack[idx],
+> > +                                               struct kasan_track, stack);
 > > +}
-> > +
-> > +static void probe_print_binder_transaction_ext(void *ignore, struct seq_file *m,
-> > +                                        struct binder_transaction *t)
-> > +{
-> > +       struct rtc_time tm;
-> > +
-> > +       rtc_time_to_tm(t->tv.tv_sec, &tm);
-> > +       seq_printf(m,
-> > +                  " start %lu.%06lu android %d-%02d-%02d %02d:%02d:%02d.%03lu",
-> > +                  (unsigned long)t->timestamp.tv_sec,
-> > +                  (t->timestamp.tv_nsec / NSEC_PER_USEC),
-> > +                  (tm.tm_year + 1900), (tm.tm_mon + 1), tm.tm_mday,
-> > +                  tm.tm_hour, tm.tm_min, tm.tm_sec,
-> > +                  (unsigned long)(t->tv.tv_usec / USEC_PER_MSEC));
-> > +
-> > +}
-> > +
-> > +static int __init init_binder_latency_tracer(void)
-> > +{
-> > +       register_trace_binder_free_transaction(
-> > +                       probe_binder_free_transaction, NULL);
-> > +       register_trace_binder_update_info(
-> > +                       probe_binder_update_info, NULL);
-> > +       register_trace_print_binder_transaction_ext(
-> > +                       probe_print_binder_transaction_ext, NULL);
-> 
-> Ah, now the trace in the print path makes sense. Please add a more
-> detailed description to the commit message. Also add a comment at the
-> trace point that it is for modules to attach to so additional
-> information can be printed. Also, make the names of the tracepoints
-> more descriptive of what they really are ...something like
-> trace_binder_txn_latency_(alloc|info|free)
-> 
-
-Yes, we agree that this is a better way to make these tracepoints more
-meaningful, and we would change it.
-
-> > +
-> > +       return 0;
-> > +}
-> > +
-> > +static void exit_binder_latency_tracer(void)
-> > +{
-> > +       unregister_trace_binder_free_transaction(
-> > +                       probe_binder_free_transaction, NULL);
-> > +       unregister_trace_binder_update_info(
-> > +                       probe_binder_update_info, NULL);
-> > +       unregister_trace_print_binder_transaction_ext(
-> > +                       probe_print_binder_transaction_ext, NULL);
-> > +}
-> > +
-> > +module_init(init_binder_latency_tracer);
-> > +module_exit(exit_binder_latency_tracer);
-> > +
-> > +MODULE_LICENSE("GPL v2");
-> > diff --git a/drivers/android/binder_trace.h b/drivers/android/binder_trace.h
-> > index 7acc18d..466993e 100644
-> > --- a/drivers/android/binder_trace.h
-> > +++ b/drivers/android/binder_trace.h
-> > @@ -18,6 +18,7 @@
-> >  struct binder_ref_data;
-> >  struct binder_thread;
-> >  struct binder_transaction;
-> > +struct binder_transaction_log_entry;
+> > diff --git a/mm/kasan/kasan.h b/mm/kasan/kasan.h
+> > index e8f37199d885..1cc1fb7b0de3 100644
+> > --- a/mm/kasan/kasan.h
+> > +++ b/mm/kasan/kasan.h
+> > @@ -96,15 +96,28 @@ struct kasan_track {
+> >         depot_stack_handle_t stack;
+> >  };
 > >
-> >  TRACE_EVENT(binder_ioctl,
-> >         TP_PROTO(unsigned int cmd, unsigned long arg),
-> > @@ -95,6 +96,18 @@
-> >                   __entry->thread_todo)
-> >  );
+> > +#ifdef CONFIG_KASAN_GENERIC
+> > +#define SIZEOF_PTR sizeof(void *)
+>
+> Please move this to generic.c closer to kasan_set_free_info.
+> Unnecessary in the header.
+>
+> > +#define KASAN_NR_RCU_CALL_STACKS 2
+>
+> Since KASAN_NR_RCU_CALL_STACKS is only used once below, you could as
+> well use 2 instead of it.
+> Reduces level of indirection and cognitive load.
+>
+> > +#else /* CONFIG_KASAN_GENERIC */
+> >  #ifdef CONFIG_KASAN_SW_TAGS_IDENTIFY
+> >  #define KASAN_NR_FREE_STACKS 5
+> >  #else
+> >  #define KASAN_NR_FREE_STACKS 1
+> >  #endif
+> > +#endif /* CONFIG_KASAN_GENERIC */
 > >
-> > +DECLARE_TRACE(binder_update_info,
-> > +       TP_PROTO(struct binder_transaction *t,
-> > +                struct binder_transaction_log_entry *e),
-> > +       TP_ARGS(t, e)
-> > +);
-> > +
-> > +DECLARE_TRACE(print_binder_transaction_ext,
-> > +       TP_PROTO(struct seq_file *m,
-> > +                struct binder_transaction *t),
-> > +       TP_ARGS(m, t)
-> > +);
-> > +
-> >  TRACE_EVENT(binder_free_transaction,
-> >         TP_PROTO(struct binder_transaction *t),
-> >         TP_ARGS(t),
-> > @@ -115,11 +128,18 @@
-> >                 __entry->to_thread = t->to_thread ? t->to_thread->pid : 0;
-> >                 __entry->code = t->code;
-> >                 __entry->flags = t->flags;
-> > -       ),
-> > -       TP_printk("transaction=%d from %d:%d to %d:%d flags=0x%x code=0x%x",
-> > +#ifdef CONFIG_BINDER_USER_TRACKING
-> > +               __entry->start_sec = t->timestamp.tv_sec;
-> > +               __entry->start_nsec = t->timestamp.tv_nsec / NSEC_PER_MSEC;
+> >  struct kasan_alloc_meta {
+> >         struct kasan_track alloc_track;
+> > +#ifdef CONFIG_KASAN_GENERIC
+> > +       /*
+> > +        * call_rcu() call stack is stored into struct kasan_alloc_meta.
+> > +        * The free stack is stored into freed object.
+> > +        */
+> > +       depot_stack_handle_t rcu_stack[KASAN_NR_RCU_CALL_STACKS];
 > > +#else
-> > +               __entry->start_sec = 0;
-> > +               __entry->start_nsec = 0;
+> >         struct kasan_track free_track[KASAN_NR_FREE_STACKS];
 > > +#endif
-> > +       ),
-> > +       TP_printk("transaction=%d from %d:%d to %d:%d flags=0x%x code=0x%x start %lu.%03ld",
-> >                   __entry->debug_id, __entry->from_proc, __entry->from_thread,
-> >                   __entry->to_proc, __entry->to_thread, __entry->code,
-> > -                 __entry->flags)
-> > +                 __entry->flags, __entry->start_sec, __entry->start_nsec)
-> >  );
+> >  #ifdef CONFIG_KASAN_SW_TAGS_IDENTIFY
+> >         u8 free_pointer_tag[KASAN_NR_FREE_STACKS];
+> >         u8 free_track_idx;
+> > @@ -159,16 +172,22 @@ void kasan_report_invalid_free(void *object, unsigned long ip);
 > >
-> >  TRACE_EVENT(binder_transaction,
-> > --
-> > 1.7.9.5
+> >  struct page *kasan_addr_to_page(const void *addr);
+> >
+> > +depot_stack_handle_t kasan_save_stack(gfp_t flags);
+> > +
+> >  #if defined(CONFIG_KASAN_GENERIC) && \
+> >         (defined(CONFIG_SLAB) || defined(CONFIG_SLUB))
+> >  void quarantine_put(struct kasan_free_meta *info, struct kmem_cache *cache);
+> >  void quarantine_reduce(void);
+> >  void quarantine_remove_cache(struct kmem_cache *cache);
+> > +struct kasan_track *kasan_get_aux_stack(struct kasan_alloc_meta *alloc_info,
+> > +                       u8 idx);
+> >  #else
+> >  static inline void quarantine_put(struct kasan_free_meta *info,
+> >                                 struct kmem_cache *cache) { }
+> >  static inline void quarantine_reduce(void) { }
+> >  static inline void quarantine_remove_cache(struct kmem_cache *cache) { }
+> > +static inline struct kasan_track *kasan_get_aux_stack(
+> > +                       struct kasan_alloc_meta *alloc_info, u8 idx) { return NULL; }
+> >  #endif
+> >
+> >  #ifdef CONFIG_KASAN_SW_TAGS
+> > diff --git a/mm/kasan/report.c b/mm/kasan/report.c
+> > index 80f23c9da6b0..f16a1a210815 100644
+> > --- a/mm/kasan/report.c
+> > +++ b/mm/kasan/report.c
+> > @@ -105,9 +105,13 @@ static void end_report(unsigned long *flags)
+> >         kasan_enable_current();
+> >  }
+> >
+> > -static void print_track(struct kasan_track *track, const char *prefix)
+> > +static void print_track(struct kasan_track *track, const char *prefix,
+> > +                                               bool is_callrcu)
+> >  {
+> > -       pr_err("%s by task %u:\n", prefix, track->pid);
+> > +       if (is_callrcu)
+> > +               pr_err("%s:\n", prefix);
+> > +       else
+> > +               pr_err("%s by task %u:\n", prefix, track->pid);
+> >         if (track->stack) {
+> >                 unsigned long *entries;
+> >                 unsigned int nr_entries;
+> > @@ -187,11 +191,20 @@ static void describe_object(struct kmem_cache *cache, void *object,
+> >         if (cache->flags & SLAB_KASAN) {
+> >                 struct kasan_track *free_track;
+> >
+> > -               print_track(&alloc_info->alloc_track, "Allocated");
+> > +               print_track(&alloc_info->alloc_track, "Allocated", false);
+> >                 pr_err("\n");
+> >                 free_track = kasan_get_free_track(cache, object, tag);
+> > -               print_track(free_track, "Freed");
+> > +               print_track(free_track, "Freed", false);
+> >                 pr_err("\n");
+> > +
+> > +               if (IS_ENABLED(CONFIG_KASAN_GENERIC)) {
+> > +                       free_track = kasan_get_aux_stack(alloc_info, 0);
+> > +                       print_track(free_track, "First call_rcu() call stack", true);
+> > +                       pr_err("\n");
+> > +                       free_track = kasan_get_aux_stack(alloc_info, 1);
+> > +                       print_track(free_track, "Last call_rcu() call stack", true);
+> > +                       pr_err("\n");
+> > +               }
+> >         }
+> >
+> >         describe_object_addr(cache, object, addr);
+
+Some higher level comments.
+
+1. I think we need to put the free track into kasan_free_meta as it
+was before. It looks like exactly the place for it. We have logic to
+properly place it and to do the casts.
+
+2. We need to zero aux stacks when we reallocate the object. Otherwise
+we print confusing garbage.
+
+3. __kasan_slab_free now contains a window of inconsistency when it
+marked the object as KASAN_KMALLOC_FREE, but did not store the free
+track yet. If another thread prints a report now, it will print random
+garbage.
+
+4. We need some tests. At least (2) should be visible on tests.
 
 _______________________________________________
 Linux-mediatek mailing list
