@@ -2,62 +2,62 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id A8FE11CE00B
-	for <lists+linux-mediatek@lfdr.de>; Mon, 11 May 2020 18:07:18 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id EA4301CE009
+	for <lists+linux-mediatek@lfdr.de>; Mon, 11 May 2020 18:07:14 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=ynqcqjg2Z6a/QTOr7k9SHuvRrslbJs6R8D8Kfplf990=; b=ayJsEbYI3cCmFW
-	CbJOn7+UuYJlaZB2eDKiT00yPxzMv7PkUxUBLFIErWmhNYU6rwDQ1hYYv23uF9xUZUgTLfn4sYkgn
-	3JRTQ1STTUCToV8RWuijIaWGaLGyBu19HWtafM/9RLWMxUVdqucdncCGVaU4NTxKaKuAq+FjDO6HR
-	HlqaXJnGYfA74ctrFlKKP8lj2TVlKfcloM/uwYbIy9vSOsGxcBU/jZ1U+3DYTsoCEPYyD5XgWqNzn
-	O+uCymMGjyIdiq6o+1taoHMUBjlDuZTIWIJ2PRoz7lDg4Kkp8I1j2/8nql1DQdR0D6I+VzZWWIREJ
-	UOGnuhRZqRRbgYLX0jEw==;
+	List-Owner; bh=7PLWXz+tt62h0sg5Twaw9gjRPtdpPZLQB3lLCNHyWKo=; b=WRAwkMgo6+b5r3
+	19SGPGYQ9IIdfzWXoB/jyeg4Vz6H5vGhdmInopofv5CoW8Xy3GLO2a1hlpGWUCzRBqhadTwc3Ev8S
+	Vzo0hef1fBeRE1rO4Xz52brdD/+T5r1qifFvETkg99GLM4dJjaDXmW+Q7L/6l/4VaJTwSxeXXT6Li
+	UY4DWIjfDk8H8UHnzjlVI35S3/+GSdBLfxPaTAMQA59kLHwWWREQbZN23rhdmonKo/IiMph3ew/3R
+	mV177c4bbENAa94F8Ock+pRIlHkKoOfMaJORwQXNr3GhbB+F4Hp8SdeZSwfxnrBUuTmhfXkRs1zRy
+	AnnsDLms22djNqLIrY6Q==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jYAxU-0005Aq-Qa; Mon, 11 May 2020 16:07:12 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1jYAxQ-00055P-Fd; Mon, 11 May 2020 16:07:08 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jYAxM-00050Z-3j
- for linux-mediatek@lists.infradead.org; Mon, 11 May 2020 16:07:06 +0000
-X-UUID: 7bcbf6c796c1484c8430f7073d3eebd5-20200511
+ id 1jYAxK-0004we-NY
+ for linux-mediatek@lists.infradead.org; Mon, 11 May 2020 16:07:04 +0000
+X-UUID: fb06e11a311f42f496f233e2d7192c71-20200511
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
  s=dk; 
  h=Content-Transfer-Encoding:Content-Type:MIME-Version:References:In-Reply-To:Message-ID:Date:Subject:CC:To:From;
- bh=KdEJCbD2s9K+W/vcfNTp8drNRu/seK7PZMooYFxkvME=; 
- b=Y/pQrYPaXu8+OHLklpJczXGvPNPppCusQf+OkbbPPK9s6v5kgch7/sxnu3q7yj+fXgmT2UvBou7/23gLxGv7YKTqSpTXQr7uJ4E6lzLs1uIh8LW3bOdFdMIVrd6KJcxmfGwPUe3w853MURjM+GN+UaVPkjTBg+4O6tRfikg6nvw=;
-X-UUID: 7bcbf6c796c1484c8430f7073d3eebd5-20200511
-Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw01.mediatek.com
+ bh=iqLbPXSZEh+NBhvm0FnTNsHDsy4qGYixGJzBK4ImsXw=; 
+ b=GahBo0Zv5gfu+hQ+lwt9ja+NkSFRTo45FwGhqMOTZYBh83vs/DuUbKSLqEPEL9qjOcQ+jGNU9u/nxN6iQEFOZ/7GwVBNTiKKPw2MNiGvqwZ5GanZcrcXyF2e0HE97UpAz3OldSwERinipRioCAFHRC/w4ZashrqW1esnbUqAcFU=;
+X-UUID: fb06e11a311f42f496f233e2d7192c71-20200511
+Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw02.mediatek.com
  (envelope-from <ryder.lee@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1314837966; Mon, 11 May 2020 08:06:36 -0800
-Received: from mtkmbs08n2.mediatek.inc (172.21.101.56) by
- MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
- 15.0.1497.2; Mon, 11 May 2020 09:06:55 -0700
+ with ESMTP id 1916221756; Mon, 11 May 2020 08:06:26 -0800
+Received: from mtkmbs08n1.mediatek.inc (172.21.101.55) by
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1497.2; Mon, 11 May 2020 09:06:46 -0700
 Received: from mtkcas07.mediatek.inc (172.21.101.84) by
- mtkmbs08n2.mediatek.inc (172.21.101.56) with Microsoft SMTP Server (TLS) id
+ mtkmbs08n1.mediatek.inc (172.21.101.55) with Microsoft SMTP Server (TLS) id
  15.0.1497.2; Tue, 12 May 2020 00:06:41 +0800
 Received: from mtksdccf07.mediatek.inc (172.21.84.99) by mtkcas07.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1497.2 via
- Frontend Transport; Tue, 12 May 2020 00:06:40 +0800
+ Frontend Transport; Tue, 12 May 2020 00:06:41 +0800
 From: Ryder Lee <ryder.lee@mediatek.com>
 To: Felix Fietkau <nbd@nbd.name>, Lorenzo Bianconi
  <lorenzo.bianconi@redhat.com>
-Subject: [PATCH 4/7] mt76: mt7915: add TxBF capabilities
-Date: Tue, 12 May 2020 00:06:35 +0800
-Message-ID: <6b21733f3d01759ca71cc6c7b018b59482be879c.1589212457.git.ryder.lee@mediatek.com>
+Subject: [PATCH 5/7] mt76: mt7915: add debugfs to track TxBF status
+Date: Tue, 12 May 2020 00:06:36 +0800
+Message-ID: <e8d3288f7b7bb2a26c06a5dfbfa57c5904aaf8a1.1589212457.git.ryder.lee@mediatek.com>
 X-Mailer: git-send-email 2.18.0
 In-Reply-To: <cover.1589212457.git.ryder.lee@mediatek.com>
 References: <cover.1589212457.git.ryder.lee@mediatek.com>
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: 058D4E69D12599D3E898DA4ED4C7F5626ACAE910ADCFE90931D59D34A91244622000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200511_090704_249133_BFAD28FC 
-X-CRM114-Status: GOOD (  10.96  )
+X-CRM114-CacheID: sfid-20200511_090702_796613_788FC59F 
+X-CRM114-Status: UNSURE (   7.91  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
@@ -95,177 +95,116 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-This allows to set HE TxBF runtime stream capabilities
+Add debug counters to track status of beamformer and beamformee.
 
 Signed-off-by: Ryder Lee <ryder.lee@mediatek.com>
-Tested-by: Evelyn Tsai <evelyn.tsai@mediatek.com
 ---
- .../net/wireless/mediatek/mt76/mt7915/init.c  | 95 ++++++++++++++++++-
- .../net/wireless/mediatek/mt76/mt7915/main.c  |  1 +
- .../wireless/mediatek/mt76/mt7915/mt7915.h    |  1 +
- 3 files changed, 95 insertions(+), 2 deletions(-)
+ .../wireless/mediatek/mt76/mt7915/debugfs.c   | 45 +++++++++++++++++++
+ .../net/wireless/mediatek/mt76/mt7915/regs.h  | 20 +++++++++
+ 2 files changed, 65 insertions(+)
 
-diff --git a/drivers/net/wireless/mediatek/mt76/mt7915/init.c b/drivers/net/wireless/mediatek/mt76/mt7915/init.c
-index 3721bd632b4d..e2b0ea33053c 100644
---- a/drivers/net/wireless/mediatek/mt76/mt7915/init.c
-+++ b/drivers/net/wireless/mediatek/mt76/mt7915/init.c
-@@ -259,6 +259,94 @@ mt7915_init_wiphy(struct ieee80211_hw *hw)
- 	hw->max_tx_fragments = 4;
+diff --git a/drivers/net/wireless/mediatek/mt76/mt7915/debugfs.c b/drivers/net/wireless/mediatek/mt76/mt7915/debugfs.c
+index c6c009cd773e..ee0066fedd04 100644
+--- a/drivers/net/wireless/mediatek/mt76/mt7915/debugfs.c
++++ b/drivers/net/wireless/mediatek/mt76/mt7915/debugfs.c
+@@ -143,6 +143,48 @@ mt7915_ampdu_stat_read_phy(struct mt7915_phy *phy,
+ 	seq_printf(file, "BA miss count: %d\n", phy->mib.ba_miss_cnt);
  }
  
-+void mt7915_set_stream_vht_txbf_caps(struct mt7915_phy *phy)
-+{
-+	int nss = hweight8(phy->chainmask);
-+	u32 *cap = &phy->mt76->sband_5g.sband.vht_cap.cap;
-+
-+	*cap |= IEEE80211_VHT_CAP_SU_BEAMFORMEE_CAPABLE |
-+		IEEE80211_VHT_CAP_MU_BEAMFORMEE_CAPABLE |
-+		(3 << IEEE80211_VHT_CAP_BEAMFORMEE_STS_SHIFT);
-+
-+	*cap &= ~(IEEE80211_VHT_CAP_SOUNDING_DIMENSIONS_MASK |
-+		  IEEE80211_VHT_CAP_SU_BEAMFORMER_CAPABLE |
-+		  IEEE80211_VHT_CAP_MU_BEAMFORMER_CAPABLE);
-+
-+	if (nss < 2)
-+		return;
-+
-+	*cap |= IEEE80211_VHT_CAP_SU_BEAMFORMER_CAPABLE |
-+		IEEE80211_VHT_CAP_MU_BEAMFORMER_CAPABLE |
-+		FIELD_PREP(IEEE80211_VHT_CAP_SOUNDING_DIMENSIONS_MASK,
-+			   nss - 1);
-+}
-+
 +static void
-+mt7915_set_stream_he_txbf_caps(struct ieee80211_sta_he_cap *he_cap,
-+			       int vif, int nss)
++mt7915_txbf_stat_read_phy(struct mt7915_phy *phy, struct seq_file *s)
 +{
-+	struct ieee80211_he_cap_elem *elem = &he_cap->he_cap_elem;
-+	struct ieee80211_he_mcs_nss_supp *mcs = &he_cap->he_mcs_nss_supp;
-+	u8 c;
++	struct mt7915_dev *dev = s->private;
++	bool ext_phy = phy != &dev->phy;
++	int cnt;
 +
-+#ifdef CONFIG_MAC80211_MESH
-+	if (vif == NL80211_IFTYPE_MESH_POINT)
-+		return;
-+#endif
-+
-+	elem->phy_cap_info[3] &= ~IEEE80211_HE_PHY_CAP3_SU_BEAMFORMER;
-+	elem->phy_cap_info[4] &= ~IEEE80211_HE_PHY_CAP4_MU_BEAMFORMER;
-+
-+	c = IEEE80211_HE_PHY_CAP5_BEAMFORMEE_NUM_SND_DIM_UNDER_80MHZ_MASK |
-+	    IEEE80211_HE_PHY_CAP5_BEAMFORMEE_NUM_SND_DIM_ABOVE_80MHZ_MASK;
-+	elem->phy_cap_info[5] &= ~c;
-+
-+	c = IEEE80211_HE_PHY_CAP6_TRIG_SU_BEAMFORMER_FB |
-+	    IEEE80211_HE_PHY_CAP6_TRIG_MU_BEAMFORMER_FB;
-+	elem->phy_cap_info[6] &= ~c;
-+
-+	elem->phy_cap_info[7] &= ~IEEE80211_HE_PHY_CAP7_MAX_NC_MASK;
-+
-+	c = IEEE80211_HE_PHY_CAP2_NDP_4x_LTF_AND_3_2US |
-+	    IEEE80211_HE_PHY_CAP2_UL_MU_FULL_MU_MIMO |
-+	    IEEE80211_HE_PHY_CAP2_UL_MU_PARTIAL_MU_MIMO;
-+	elem->phy_cap_info[2] |= c;
-+
-+	c = IEEE80211_HE_PHY_CAP4_SU_BEAMFORMEE |
-+	    IEEE80211_HE_PHY_CAP4_BEAMFORMEE_MAX_STS_UNDER_80MHZ_4 |
-+	    IEEE80211_HE_PHY_CAP4_BEAMFORMEE_MAX_STS_ABOVE_80MHZ_4;
-+	elem->phy_cap_info[4] |= c;
-+
-+	/* do not support NG16 due to spec D4.0 changes subcarrier idx */
-+	c = IEEE80211_HE_PHY_CAP6_CODEBOOK_SIZE_42_SU |
-+	    IEEE80211_HE_PHY_CAP6_CODEBOOK_SIZE_75_MU;
-+
-+	if (vif == NL80211_IFTYPE_STATION)
-+		c |= IEEE80211_HE_PHY_CAP6_PARTIAL_BANDWIDTH_DL_MUMIMO;
-+
-+	elem->phy_cap_info[6] |= c;
-+
-+	if (nss < 2)
++	if (!phy)
 +		return;
 +
-+	if (vif != NL80211_IFTYPE_AP)
-+		return;
++	/* Tx Beamformer monitor */
++	seq_puts(s, "\nTx Beamformer applied PPDU counts: ");
 +
-+	elem->phy_cap_info[3] |= IEEE80211_HE_PHY_CAP3_SU_BEAMFORMER;
-+	elem->phy_cap_info[4] |= IEEE80211_HE_PHY_CAP4_MU_BEAMFORMER;
++	cnt = mt76_rr(dev, MT_ETBF_TX_APP_CNT(ext_phy));
++	seq_printf(s, "iBF: %ld, eBF: %ld\n",
++		   FIELD_GET(MT_ETBF_TX_IBF_CNT, cnt),
++		   FIELD_GET(MT_ETBF_TX_EBF_CNT, cnt));
 +
-+	/* num_snd_dim */
-+	c = (nss - 1) | (max_t(int, mcs->tx_mcs_160, 1) << 3);
-+	elem->phy_cap_info[5] |= c;
++	/* Tx Beamformer Rx feedback monitor */
++	seq_puts(s, "Tx Beamformer Rx feedback statistics: ");
 +
-+	c = IEEE80211_HE_PHY_CAP6_TRIG_SU_BEAMFORMER_FB |
-+	    IEEE80211_HE_PHY_CAP6_TRIG_MU_BEAMFORMER_FB;
-+	elem->phy_cap_info[6] |= c;
++	cnt = mt76_rr(dev, MT_ETBF_RX_FB_CNT(ext_phy));
++	seq_printf(s, "All: %ld, HE: %ld, VHT: %ld, HT: %ld\n",
++		   FIELD_GET(MT_ETBF_RX_FB_ALL, cnt),
++		   FIELD_GET(MT_ETBF_RX_FB_HE, cnt),
++		   FIELD_GET(MT_ETBF_RX_FB_VHT, cnt),
++		   FIELD_GET(MT_ETBF_RX_FB_HT, cnt));
 +
-+	/* the maximum cap is 4 x 3, (Nr, Nc) = (3, 2) */
-+	elem->phy_cap_info[7] |= min_t(int, nss - 1, 2) << 3;
++	/* Tx Beamformee Rx NDPA & Tx feedback report */
++	cnt = mt76_rr(dev, MT_ETBF_TX_NDP_BFRP(ext_phy));
++	seq_printf(s, "Tx Beamformee sucessful feedback frames: %ld\n",
++		   FIELD_GET(MT_ETBF_TX_FB_CPL, cnt));
++	seq_printf(s, "Tx Beamformee feedback triggerd counts: %ld\n",
++		   FIELD_GET(MT_ETBF_TX_FB_TRI, cnt));
++
++	/* Tx SU counters */
++	cnt = mt76_rr(dev, MT_MIB_DR11(ext_phy));
++	seq_printf(s, "Tx single-user sucessful MPDU counts: %d\n", cnt);
++
++	seq_puts(s, "\n");
 +}
 +
- static void
- mt7915_gen_ppe_thresh(u8 *he_ppet)
+ static int
+ mt7915_tx_stats_read(struct seq_file *file, void *data)
  {
-@@ -352,11 +440,10 @@ mt7915_init_he_caps(struct mt7915_phy *phy, enum nl80211_band band,
- 		he_cap_elem->phy_cap_info[1] =
- 			IEEE80211_HE_PHY_CAP1_LDPC_CODING_IN_PAYLOAD;
- 		he_cap_elem->phy_cap_info[2] =
--			IEEE80211_HE_PHY_CAP2_NDP_4x_LTF_AND_3_2US |
- 			IEEE80211_HE_PHY_CAP2_STBC_TX_UNDER_80MHZ |
- 			IEEE80211_HE_PHY_CAP2_STBC_RX_UNDER_80MHZ;
+@@ -150,7 +192,10 @@ mt7915_tx_stats_read(struct seq_file *file, void *data)
+ 	int stat[8], i, n;
  
--		/* TODO: TxBF & MU & MESH */
-+		/* TODO: OFDMA */
- 
- 		switch (i) {
- 		case NL80211_IFTYPE_AP:
-@@ -407,6 +494,8 @@ mt7915_init_he_caps(struct mt7915_phy *phy, enum nl80211_band band,
- 		he_mcs->rx_mcs_80p80 = cpu_to_le16(mcs_map);
- 		he_mcs->tx_mcs_80p80 = cpu_to_le16(mcs_map);
- 
-+		mt7915_set_stream_he_txbf_caps(he_cap, i, nss);
+ 	mt7915_ampdu_stat_read_phy(&dev->phy, file);
++	mt7915_txbf_stat_read_phy(&dev->phy, file);
 +
- 		memset(he_cap->ppe_thres, 0, sizeof(he_cap->ppe_thres));
- 		if (he_cap_elem->phy_cap_info[6] &
- 		    IEEE80211_HE_PHY_CAP6_PPE_THRESHOLD_PRESENT) {
-@@ -464,6 +553,7 @@ mt7915_cap_dbdc_enable(struct mt7915_dev *dev)
- 	dev->mphy.hw->wiphy->available_antennas_tx = dev->phy.chainmask;
+ 	mt7915_ampdu_stat_read_phy(mt7915_ext_phy(dev), file);
++	mt7915_txbf_stat_read_phy(mt7915_ext_phy(dev), file);
  
- 	mt76_set_stream_caps(&dev->mphy, true);
-+	mt7915_set_stream_vht_txbf_caps(&dev->phy);
- 	mt7915_set_stream_he_caps(&dev->phy);
- }
+ 	/* Tx amsdu info */
+ 	seq_puts(file, "Tx MSDU stat:\n");
+diff --git a/drivers/net/wireless/mediatek/mt76/mt7915/regs.h b/drivers/net/wireless/mediatek/mt76/mt7915/regs.h
+index 6600fc625196..c121715f8bff 100644
+--- a/drivers/net/wireless/mediatek/mt76/mt7915/regs.h
++++ b/drivers/net/wireless/mediatek/mt76/mt7915/regs.h
+@@ -75,6 +75,24 @@
+ #define MT_DMA_DCR0_MAX_RX_LEN		GENMASK(15, 3)
+ #define MT_DMA_DCR0_RXD_G5_EN		BIT(23)
  
-@@ -480,6 +570,7 @@ mt7915_cap_dbdc_disable(struct mt7915_dev *dev)
- 	dev->mphy.hw->wiphy->available_antennas_tx = dev->chainmask;
++/* ETBF: band 0(0x24000), band 1(0xa4000) */
++#define MT_WF_ETBF_BASE(_band)		((_band) ? 0xa4000 : 0x24000)
++#define MT_WF_ETBF(_band, ofs)		(MT_WF_ETBF_BASE(_band) + (ofs))
++
++#define MT_ETBF_TX_NDP_BFRP(_band)	MT_WF_ETBF(_band, 0x040)
++#define MT_ETBF_TX_FB_CPL		GENMASK(31, 16)
++#define MT_ETBF_TX_FB_TRI		GENMASK(15, 0)
++
++#define MT_ETBF_TX_APP_CNT(_band)	MT_WF_ETBF(_band, 0x0f0)
++#define MT_ETBF_TX_IBF_CNT		GENMASK(31, 16)
++#define MT_ETBF_TX_EBF_CNT		GENMASK(15, 0)
++
++#define MT_ETBF_RX_FB_CNT(_band)	MT_WF_ETBF(_band, 0x0f8)
++#define MT_ETBF_RX_FB_ALL		GENMASK(31, 24)
++#define MT_ETBF_RX_FB_HE		GENMASK(23, 16)
++#define MT_ETBF_RX_FB_VHT		GENMASK(15, 8)
++#define MT_ETBF_RX_FB_HT		GENMASK(7, 0)
++
+ /* LPON: band 0(0x24200), band 1(0xa4200) */
+ #define MT_WF_LPON_BASE(_band)		((_band) ? 0xa4200 : 0x24200)
+ #define MT_WF_LPON(_band, ofs)		(MT_WF_LPON_BASE(_band) + (ofs))
+@@ -104,6 +122,8 @@
+ #define MT_MIB_SDR37(_band)		MT_WF_MIB(_band, 0x09c)
+ #define MT_MIB_SDR37_RXTIME_MASK	GENMASK(23, 0)
  
- 	mt76_set_stream_caps(&dev->mphy, true);
-+	mt7915_set_stream_vht_txbf_caps(&dev->phy);
- 	mt7915_set_stream_he_caps(&dev->phy);
- }
- 
-diff --git a/drivers/net/wireless/mediatek/mt76/mt7915/main.c b/drivers/net/wireless/mediatek/mt76/mt7915/main.c
-index f3a373fc07e5..147ab7da7aa9 100644
---- a/drivers/net/wireless/mediatek/mt76/mt7915/main.c
-+++ b/drivers/net/wireless/mediatek/mt76/mt7915/main.c
-@@ -745,6 +745,7 @@ mt7915_set_antenna(struct ieee80211_hw *hw, u32 tx_ant, u32 rx_ant)
- 	phy->chainmask = tx_ant;
- 
- 	mt76_set_stream_caps(phy->mt76, true);
-+	mt7915_set_stream_vht_txbf_caps(phy);
- 	mt7915_set_stream_he_caps(phy);
- 
- 	mutex_unlock(&dev->mt76.mutex);
-diff --git a/drivers/net/wireless/mediatek/mt76/mt7915/mt7915.h b/drivers/net/wireless/mediatek/mt76/mt7915/mt7915.h
-index 0d5b448292b5..537fc126289f 100644
---- a/drivers/net/wireless/mediatek/mt76/mt7915/mt7915.h
-+++ b/drivers/net/wireless/mediatek/mt76/mt7915/mt7915.h
-@@ -454,6 +454,7 @@ void mt7915_txp_skb_unmap(struct mt76_dev *dev,
- int mt76_dfs_start_rdd(struct mt7915_dev *dev, bool force);
- int mt7915_dfs_init_radar_detector(struct mt7915_phy *phy);
- void mt7915_set_stream_he_caps(struct mt7915_phy *phy);
-+void mt7915_set_stream_vht_txbf_caps(struct mt7915_phy *phy);
- void mt7915_update_channel(struct mt76_dev *mdev);
- int mt7915_init_debugfs(struct mt7915_dev *dev);
- #ifdef CONFIG_MAC80211_DEBUGFS
++#define MT_MIB_DR11(_band)		MT_WF_MIB(_band, 0x0cc)
++
+ #define MT_MIB_MB_SDR0(_band, n)	MT_WF_MIB(_band, 0x100 + ((n) << 4))
+ #define MT_MIB_RTS_RETRIES_COUNT_MASK	GENMASK(31, 16)
+ #define MT_MIB_RTS_COUNT_MASK		GENMASK(15, 0)
 -- 
 2.18.0
 _______________________________________________
