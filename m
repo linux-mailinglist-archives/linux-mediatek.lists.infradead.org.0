@@ -2,59 +2,62 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id EC7641CE008
-	for <lists+linux-mediatek@lfdr.de>; Mon, 11 May 2020 18:07:13 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id BE4D31CE005
+	for <lists+linux-mediatek@lfdr.de>; Mon, 11 May 2020 18:07:10 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=JVA8q8RpmlkfN5tYDhui2+OYDmJG+Sjr9VuZszKTyz4=; b=gv6wDBjyp50FPy
-	S8Usvz82yUl2juRD0TBkM1iDlsgo0nleZ4NLMOrKtLcdYAvZUK4Q3vOd1i+aLGXGE0Trz+KreIzyW
-	OT6rqZ0sUxcpAFyss4TIgHVQ8uGJkJt3IM3KiN1DlNOp3UObx54jWfW0JbPDHTiK6FGZ6Vo13hi/t
-	xoV7P5EVsr6IT9tptLHkvZtNK0gnU7qdv04QKbgkW5+WgadrWVhWIG+D7KYwvXAqX6NCwFnwoyoCa
-	THnjqA1i/wCN2KALXNRYrgRJt9R/4K1h9hr+MC+iuC8e4VJkbRtLOqoPesEovKcvoDzEU69kLo0Kp
-	nbT8QtYBJULD3Wy8Pz0w==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=REyWGrqa6mzfNrdE0gYVTM+3MB9c16Y/g/IuLcPB4CA=; b=dor0fx0Kqr2uPZ
+	9ru3nAMQtqz5Zt4BcnPVShxMpc6JYxZ5pG5yFQzvOtSUiAfAC9oTfvTIjaSmFGebodQeuKvvDzKfP
+	uiIaDvIyUFRy0D+OPwvR2tgnSn5tjxvzu4oGthezxMGgJvffdvgDBv9EBBu/kSW2iQfnDoQy92g0/
+	mfuWv4hE5CHn5AccGnXnHZERGL/40DM0YoybRSdIQBR64wrH8Llntlo+KYj78PRo5b+yjXqbL7SyF
+	ErsNgX+ULKM75eoAXH/oyYzjlgOMlCYGN4WYVaog0TuJaOHNxacnFKet+ch1OzTZS1AKmqo847Hp4
+	Y8WazbuMDRcBVGc683HQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jYAxP-00054R-Kk; Mon, 11 May 2020 16:07:07 +0000
+	id 1jYAxM-00050M-KW; Mon, 11 May 2020 16:07:04 +0000
 Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jYAxK-0004x3-Kq
- for linux-mediatek@lists.infradead.org; Mon, 11 May 2020 16:07:04 +0000
-X-UUID: 62dd076eecf745379442601778eb77ef-20200511
+ id 1jYAxJ-0004x3-5c
+ for linux-mediatek@lists.infradead.org; Mon, 11 May 2020 16:07:02 +0000
+X-UUID: 4cdaa2bfc0a14706a4aa89f3a29a18b6-20200511
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
  s=dk; 
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:Subject:CC:To:From;
- bh=GiF5ILJq4wBAN4esndmcCiavOhFccrw4Q/IlNZ6dRuQ=; 
- b=NizgOmG0S93BlGeHZ/7WiyP5HqPnbY0LTl3JokMzE9C8HM1F9/G0RAMeufjMtSgHEDkZQt0KGRVoQTGDcmv3ClHgl5KhsUl85xHOEVIJlCeFYO7HJq+rFLe54is1CvElf1PmeBkaf5Wraiex8lnkoWfOmSK59103WMQFl33lmWM=;
-X-UUID: 62dd076eecf745379442601778eb77ef-20200511
-Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw02.mediatek.com
+ h=Content-Transfer-Encoding:Content-Type:MIME-Version:References:In-Reply-To:Message-ID:Date:Subject:CC:To:From;
+ bh=FHEMH0BW/B3IHs8+yf1A994YLQsxOjuJtYLfdF1XWY4=; 
+ b=IuE7zNlkdntWxNzkOVb7sIgdJb/BTG2YE/ECuQ7D1DrQtAv4GXLu0jMRwSUzWRfoOVhGVEXONbnMnlhVCGUO6XyKIgHSQPtRT0ExC4O3qXAWB8Kfs45huEUKkUWCaxFe+s13FbsvOphDvTcUm3j1/R++RcC9OMQmetAstadL/qU=;
+X-UUID: 4cdaa2bfc0a14706a4aa89f3a29a18b6-20200511
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw02.mediatek.com
  (envelope-from <ryder.lee@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1969053287; Mon, 11 May 2020 08:06:26 -0800
-Received: from mtkmbs08n1.mediatek.inc (172.21.101.55) by
- MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
- 15.0.1497.2; Mon, 11 May 2020 09:06:45 -0700
+ with ESMTP id 217721899; Mon, 11 May 2020 08:06:23 -0800
+Received: from MTKMBS06N2.mediatek.inc (172.21.101.130) by
+ MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
+ 15.0.1497.2; Mon, 11 May 2020 09:06:42 -0700
 Received: from mtkcas07.mediatek.inc (172.21.101.84) by
- mtkmbs08n1.mediatek.inc (172.21.101.55) with Microsoft SMTP Server (TLS) id
- 15.0.1497.2; Tue, 12 May 2020 00:06:39 +0800
+ mtkmbs06n2.mediatek.inc (172.21.101.130) with Microsoft SMTP Server (TLS) id
+ 15.0.1497.2; Tue, 12 May 2020 00:06:38 +0800
 Received: from mtksdccf07.mediatek.inc (172.21.84.99) by mtkcas07.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1497.2 via
  Frontend Transport; Tue, 12 May 2020 00:06:39 +0800
 From: Ryder Lee <ryder.lee@mediatek.com>
 To: Felix Fietkau <nbd@nbd.name>, Lorenzo Bianconi
  <lorenzo.bianconi@redhat.com>
-Subject: [PATCH 0/7] MT7915: add TxBF support
-Date: Tue, 12 May 2020 00:06:31 +0800
-Message-ID: <cover.1589212457.git.ryder.lee@mediatek.com>
+Subject: [PATCH 1/7] mt76: mt7915: introduce mt7915_get_he_phy_cap
+Date: Tue, 12 May 2020 00:06:32 +0800
+Message-ID: <388715592e47739507970be49766ffb35af95afb.1589212457.git.ryder.lee@mediatek.com>
 X-Mailer: git-send-email 2.18.0
+In-Reply-To: <cover.1589212457.git.ryder.lee@mediatek.com>
+References: <cover.1589212457.git.ryder.lee@mediatek.com>
 MIME-Version: 1.0
+X-TM-SNTS-SMTP: A76AA779FF5C4AF74D3C76B7265B4893BA8FC5ED108C5E0E47693D5A5BD4FCA62000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200511_090702_694863_CB959B76 
-X-CRM114-Status: UNSURE (   5.71  )
+X-CRM114-CacheID: sfid-20200511_090701_225922_8D36B1DB 
+X-CRM114-Status: UNSURE (   8.99  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
@@ -93,29 +96,75 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-This enables the SU Tx beamforming support on MT7915, and will enable MU part soon.
+Add a helper to reduce duplicate codes.
+This is a preliminary patch to add Tx beamforming support.
 
-Ryder
+Signed-off-by: Ryder Lee <ryder.lee@mediatek.com>
+---
+ .../net/wireless/mediatek/mt76/mt7915/mcu.c   | 31 +++++++++++--------
+ 1 file changed, 18 insertions(+), 13 deletions(-)
 
-Ryder Lee (7):
-  mt76: mt7915: introduce mt7915_get_he_phy_cap
-  mt76: mt7915: add Tx beamformer support
-  mt76: mt7915: add Tx beamformee support
-  mt76: mt7915: add TxBF capabilities
-  mt76: mt7915: add debugfs to track TxBF status
-  mt76: mt7915: allocate proper size for tlv tags
-  mt76: mt7915: fix possible deadlock in mt7915_stop
-
- .../wireless/mediatek/mt76/mt7915/debugfs.c   |  45 ++
- .../net/wireless/mediatek/mt76/mt7915/init.c  | 118 ++++-
- .../net/wireless/mediatek/mt76/mt7915/mac.c   |  49 +-
- .../net/wireless/mediatek/mt76/mt7915/main.c  |  28 +-
- .../net/wireless/mediatek/mt76/mt7915/mcu.c   | 457 ++++++++++++++++--
- .../net/wireless/mediatek/mt76/mt7915/mcu.h   |  99 +++-
- .../wireless/mediatek/mt76/mt7915/mt7915.h    |   9 +-
- .../net/wireless/mediatek/mt76/mt7915/regs.h  |  20 +
- 8 files changed, 734 insertions(+), 91 deletions(-)
-
+diff --git a/drivers/net/wireless/mediatek/mt76/mt7915/mcu.c b/drivers/net/wireless/mediatek/mt76/mt7915/mcu.c
+index 3e3d6f1d555a..c147a033250a 100644
+--- a/drivers/net/wireless/mediatek/mt76/mt7915/mcu.c
++++ b/drivers/net/wireless/mediatek/mt76/mt7915/mcu.c
+@@ -134,6 +134,18 @@ static u8 mt7915_mcu_chan_bw(struct cfg80211_chan_def *chandef)
+ 	return width_to_bw[chandef->width];
+ }
+ 
++static const struct ieee80211_sta_he_cap *
++mt7915_get_he_phy_cap(struct mt7915_phy *phy, struct ieee80211_vif *vif)
++{
++	struct ieee80211_supported_band *sband;
++	enum nl80211_band band;
++
++	band = phy->mt76->chandef.chan->band;
++	sband = phy->mt76->hw->wiphy->bands[band];
++
++	return ieee80211_get_he_iftype_cap(sband, vif->type);
++}
++
+ static u8
+ mt7915_get_phy_mode(struct mt7915_dev *dev, struct ieee80211_vif *vif,
+ 		    enum nl80211_band band, struct ieee80211_sta *sta)
+@@ -149,11 +161,12 @@ mt7915_get_phy_mode(struct mt7915_dev *dev, struct ieee80211_vif *vif,
+ 		he_cap = &sta->he_cap;
+ 	} else {
+ 		struct ieee80211_supported_band *sband;
++		struct mt7915_phy *phy;
++		struct mt7915_vif *mvif;
+ 
+-		if (band == NL80211_BAND_2GHZ)
+-			sband = &dev->mphy.sband_2g.sband;
+-		else
+-			sband = &dev->mphy.sband_5g.sband;
++		mvif = (struct mt7915_vif *)vif->drv_priv;
++		phy = mvif->band_idx ? mt7915_ext_phy(dev) : &dev->phy;
++		sband = phy->mt76->hw->wiphy->bands[band];
+ 
+ 		ht_cap = &sband->ht_cap;
+ 		vht_cap = &sband->vht_cap;
+@@ -884,19 +897,11 @@ mt7915_mcu_bss_he_tlv(struct sk_buff *skb, struct ieee80211_vif *vif,
+ {
+ #define DEFAULT_HE_PE_DURATION		4
+ #define DEFAULT_HE_DURATION_RTS_THRES	1023
+-	struct cfg80211_chan_def *chandef = &phy->mt76->chandef;
+-	enum nl80211_band band = chandef->chan->band;
+-	struct ieee80211_supported_band *sband;
+ 	const struct ieee80211_sta_he_cap *cap;
+ 	struct bss_info_he *he;
+ 	struct tlv *tlv;
+ 
+-	if (band == NL80211_BAND_2GHZ)
+-		sband = &phy->mt76->sband_2g.sband;
+-	else
+-		sband = &phy->mt76->sband_5g.sband;
+-
+-	cap = ieee80211_get_he_iftype_cap(sband, vif->type);
++	cap = mt7915_get_he_phy_cap(phy, vif);
+ 
+ 	tlv = mt7915_mcu_add_tlv(skb, BSS_INFO_HE_BASIC, sizeof(*he));
+ 
 -- 
 2.18.0
 _______________________________________________
