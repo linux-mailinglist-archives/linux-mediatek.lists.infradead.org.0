@@ -2,80 +2,67 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 3E1161CDA54
-	for <lists+linux-mediatek@lfdr.de>; Mon, 11 May 2020 14:43:49 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id AAC891CDA86
+	for <lists+linux-mediatek@lfdr.de>; Mon, 11 May 2020 14:54:40 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
-	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=AY0nTJ2o3oxhZ64G4sbVVCZNJNRcmvvFiGP0iYEocNQ=; b=PD9ZaMZBAAcvqp
-	m7F/LbnBQhcOsAmct6sY1zwjhSHitGhdEZ6mWGSwdM0X8MIWJmqVa2IMtC/U/Vznu3mwvcPzMIC2o
-	KwuBVMFs9rRquIC1fQoMpVgU/ng3GE8ntLvz+xXiGOrzlKPKd3wx4Mi4NTCkK6rnxf8ZTHjQCPMFr
-	No74g9Sn8BuHMR7zVCIe2Hut9VW6fWEb4AxQak45F1MMJrYD0XdtPodYv6N5g+h63+aUjjGOgQuWW
-	s1SRNBpNX3CL+6UBF645k7Evk4fL9nNmxOdwQulrCecT7bstcwitgLm5aO+MdcM5XKDHBtIYkdDZV
-	gkjEjsSEJ5u3o9jVk43w==;
+	List-Owner; bh=FpzXUiYMzl/Tnuf/N6tUADEk/DiNpAIfu1/9bkvgP8g=; b=HCbvNuGsaJqG8H
+	yC30yYmQvb6bYt9SqxZaYd2AzVTsMAn8l94bpJqkGh0hjpGoSAABxZXURwZOvZAyxNBSHNMVXoxQk
+	EpQCAoUx0rqV2HDB5tLqlEglZrFEtjvRIHQfYEGil6yGwANxdEaWZ3SwdHgDg8sc4YlndIWda2PPl
+	q5fxTkDTzcsareLZI7pHvpNZiTY8ibzUr4OsWUaC7mDhZ1M4pUUAec+XjtIiChfTQX+J/OVRgJBIq
+	DIjd6ap+Enj1Pozhgp8nwMn8nsbiiNWtuQ6bafNjpf4tHIE8oNiQ3QRu1i70mtPoJOP0PS2OsGR2M
+	rZp4s4YE3LrsfBng/Gng==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jY7mV-0006wM-Mp; Mon, 11 May 2020 12:43:39 +0000
-Received: from mail-qt1-x842.google.com ([2607:f8b0:4864:20::842])
+	id 1jY7x1-0006C4-Mg; Mon, 11 May 2020 12:54:31 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jY7mR-0006vO-Ue
- for linux-mediatek@lists.infradead.org; Mon, 11 May 2020 12:43:38 +0000
-Received: by mail-qt1-x842.google.com with SMTP id i68so7739563qtb.5
- for <linux-mediatek@lists.infradead.org>; Mon, 11 May 2020 05:43:35 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=20161025;
- h=mime-version:references:in-reply-to:from:date:message-id:subject:to
- :cc; bh=o4SNxN2a4GN4w0hp5AlLi4G8AluIsrQ7+PBJOL3vihk=;
- b=iG294TZ8yidGFHZCDHBq7971UjDJpfr7kQXWgQ3Rtm6AfViavOj+yWm1lJuGVC6eEr
- 8HtOkrDs7xTZp0hIyNToKFmVbRe/81PNY7SWBGCYYXZApQ5C0zdkhswwa02RD8lwoYXl
- BnfXDGmhC0/rwtsvyCZAsgUgbj1nn6Kzcjg4SttOBIYcSlwZi+hthQeWJRG7hXNS7Fwv
- 753N94QTiyAXrq+hGHah5RxBMBySrs/i7bfuLNaQMisSkGnlSPqdQWgau4Wvwam1m5Hx
- k1bzG8i1JVNjiHegDf35+2AEhNCwuDPIwkLKZu5TrFsF39/yS/Amu6nveALWpj+eDqrw
- 6ekQ==
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:mime-version:references:in-reply-to:from:date
- :message-id:subject:to:cc;
- bh=o4SNxN2a4GN4w0hp5AlLi4G8AluIsrQ7+PBJOL3vihk=;
- b=KQAcGAzFJCOzckOlWTZtQL9Mq0lvQy48KWdolwejGPvF3YYirKxznydMwrjXcfsgou
- jJ5429EuLxxNQZFLwciK9BQyMPTKbPPf5/ljhNqcs9BR16x2nSdgSKrNgGBMJ6CasviK
- JCsq5AJ83cWeLr4F13rJhmRIQIMtlAodV2BuFhN9KefBirxEr4Gs3zyWnpw+Tz2KJ1qm
- yVzULlR3xBVnSFOBbGeawguJFMg3Y/T2KNjycv6F9PchTa9e/thKNQvtEOxMX3wFxCLM
- s9yC3uyY5FDcN6b4+FZcGauxIHCUSD4hn84aqjqBBQmcAQVPhVTiT8g8E/4sV8gy8SDX
- 2rrQ==
-X-Gm-Message-State: AGi0PubyPTcqA75vo7GrBFmnlymHvZHIpHqybk6q5DxROn/x0ngYCDo0
- RPLE5x/zpDMVjsre1DgGCHoskqdS1cU5t4binFm+ig==
-X-Google-Smtp-Source: APiQypLxWnWBejHuxheVClg52Wbnthyvkqx5hvIbyW8Wrlmw5P/bcod8joWA1HXygSNtZPQhEli3Vk7O9DHn3bICv5c=
-X-Received: by 2002:ac8:6642:: with SMTP id j2mr16145758qtp.158.1589201014239; 
- Mon, 11 May 2020 05:43:34 -0700 (PDT)
-MIME-Version: 1.0
-References: <20200511023111.15310-1-walter-zh.wu@mediatek.com>
- <CACT4Y+YWNwTSoheJhc3nMdQi9m719F3PzpGo3TfRY3zAg9EwuQ@mail.gmail.com>
-In-Reply-To: <CACT4Y+YWNwTSoheJhc3nMdQi9m719F3PzpGo3TfRY3zAg9EwuQ@mail.gmail.com>
-From: Dmitry Vyukov <dvyukov@google.com>
-Date: Mon, 11 May 2020 14:43:22 +0200
-Message-ID: <CACT4Y+bO1Zg_jgFHbOWgp7fLAADOQ_-AZmjEHz0WG7=oyOt4Gg@mail.gmail.com>
+ id 1jY7wo-00063A-T0; Mon, 11 May 2020 12:54:22 +0000
+X-UUID: d5f9136d318a44cf93e48a7bfd9dc0bb-20200511
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
+ s=dk; 
+ h=Content-Transfer-Encoding:MIME-Version:Content-Type:References:In-Reply-To:Date:CC:To:From:Subject:Message-ID;
+ bh=rIZGhVrxXRjoXUn4E3hst+RuZALYvR1HEad0mjZszc0=; 
+ b=U1/AQ1XoIDKwCvJGAO2CkVnPWv067Z3yZMtILKQG5IoU6egb8MynA/LZzBj3yt+2qidvAGhaU+xcwJp/lDOXUkJcVo02kXRGLIabdu69d/biLe0n8fLr0oA878SdUV5PQyrfPp4LQh24isejVb3DJkgLTt/BgxoFbTfd9H3bgOM=;
+X-UUID: d5f9136d318a44cf93e48a7bfd9dc0bb-20200511
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw01.mediatek.com
+ (envelope-from <walter-zh.wu@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 1916523167; Mon, 11 May 2020 04:54:12 -0800
+Received: from MTKMBS01N1.mediatek.inc (172.21.101.68) by
+ MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
+ 15.0.1497.2; Mon, 11 May 2020 05:54:12 -0700
+Received: from MTKCAS06.mediatek.inc (172.21.101.30) by
+ mtkmbs01n1.mediatek.inc (172.21.101.68) with Microsoft SMTP Server (TLS) id
+ 15.0.1497.2; Mon, 11 May 2020 20:54:04 +0800
+Received: from [172.21.84.99] (172.21.84.99) by MTKCAS06.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1497.2 via Frontend
+ Transport; Mon, 11 May 2020 20:53:58 +0800
+Message-ID: <1589201640.21284.8.camel@mtksdccf07>
 Subject: Re: [PATCH v2 1/3] rcu/kasan: record and print call_rcu() call stack
-To: Walter Wu <walter-zh.wu@mediatek.com>
+From: Walter Wu <walter-zh.wu@mediatek.com>
+To: Dmitry Vyukov <dvyukov@google.com>
+Date: Mon, 11 May 2020 20:54:00 +0800
+In-Reply-To: <CACT4Y+beDTzGrDx9uWSjbr67j0encwBa_1PKpyQCejiddLhOxA@mail.gmail.com>
+References: <20200511023111.15310-1-walter-zh.wu@mediatek.com>
+ <CACT4Y+beDTzGrDx9uWSjbr67j0encwBa_1PKpyQCejiddLhOxA@mail.gmail.com>
+X-Mailer: Evolution 3.2.3-0ubuntu6 
+MIME-Version: 1.0
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200511_054336_021995_0743CA2B 
-X-CRM114-Status: GOOD (  26.34  )
-X-Spam-Score: -15.7 (---------------)
+X-CRM114-CacheID: sfid-20200511_055420_875649_7A7B2D04 
+X-CRM114-Status: GOOD (  24.33  )
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
- Content analysis details:   (-15.7 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:842 listed in]
- [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
- -7.5 USER_IN_DEF_DKIM_WL    From: address is in the default DKIM
- white-list
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -7.5 USER_IN_DEF_SPF_WL     From: address is in the default SPF
- white-list
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
@@ -83,8 +70,8 @@ X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.5 ENV_AND_HDR_SPF_MATCH  Env and Hdr From used in default SPF WL
- Match -0.0 DKIMWL_WL_MED          DKIMwl.org - Medium sender
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -96,24 +83,23 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: wsd_upstream <wsd_upstream@mediatek.com>,
- "Paul E . McKenney" <paulmck@kernel.org>, Linux-MM <linux-mm@kvack.org>,
+Cc: wsd_upstream <wsd_upstream@mediatek.com>, "Paul E .
+ McKenney" <paulmck@kernel.org>, Linux-MM <linux-mm@kvack.org>,
  Lai Jiangshan <jiangshanlai@gmail.com>, Josh Triplett <josh@joshtriplett.org>,
  kasan-dev <kasan-dev@googlegroups.com>, LKML <linux-kernel@vger.kernel.org>,
  Joel Fernandes <joel@joelfernandes.org>, linux-mediatek@lists.infradead.org,
  Alexander Potapenko <glider@google.com>,
  Matthias Brugger <matthias.bgg@gmail.com>,
- Andrey Ryabinin <aryabinin@virtuozzo.com>,
- Andrew Morton <akpm@linux-foundation.org>,
- Linux ARM <linux-arm-kernel@lists.infradead.org>,
+ Andrey Ryabinin <aryabinin@virtuozzo.com>, Andrew
+ Morton <akpm@linux-foundation.org>, Linux
+ ARM <linux-arm-kernel@lists.infradead.org>,
  Mathieu Desnoyers <mathieu.desnoyers@efficios.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Mon, May 11, 2020 at 2:31 PM Dmitry Vyukov <dvyukov@google.com> wrote:
->
+On Mon, 2020-05-11 at 14:20 +0200, 'Dmitry Vyukov' via kasan-dev wrote:
 > On Mon, May 11, 2020 at 4:31 AM Walter Wu <walter-zh.wu@mediatek.com> wrote:
 > >
 > > This feature will record first and last call_rcu() call stack and
@@ -261,6 +247,69 @@ On Mon, May 11, 2020 at 2:31 PM Dmitry Vyukov <dvyukov@google.com> wrote:
 > > +{
 > > +       return container_of(&alloc_info->rcu_stack[idx],
 > > +                                               struct kasan_track, stack);
+> 
+> This is not type safe, there is no kasan_track object. And we create a
+> pointer to kasan_track just to carefully not treat it as valid
+> kasan_track in print_track.
+> 
+
+Good catch.
+
+> This adds an unnecessary if to print_track. And does not seem to be
+> useful/nice to print:
+> 
+> First call_rcu() call stack:
+> (stack is not available)
+> 
+> Last call_rcu() call stack:
+> (stack is not available)
+> 
+> when no rcu stacks are memorized.
+> Your intention seems to be to reuse 2 lines of code from print_track.
+> I would factor them out into a function:
+> 
+> static void print_stack(depot_stack_handle_t stack)
+> {
+>         unsigned long *entries;
+>         unsigned int nr_entries;
+> 
+>         nr_entries = stack_depot_fetch(stack, &entries);
+>         stack_trace_print(entries, nr_entries, 0);
+> }
+> 
+> And then this can expressed as:
+> 
+>         if (IS_ENABLED(CONFIG_KASAN_GENERIC)) {
+>             stack = alloc_info->rcu_stack[0];
+>             if (stack) {
+>                 pr_err("First call_rcu() call stack:\n");
+>                 print_stack(stack);
+>                 pr_err("\n");
+>             }
+>             stack = alloc_info->rcu_stack[1];
+>             if (stack) {
+>                 pr_err("Last call_rcu() call stack:\n");
+>                 print_stack(stack);
+>                 pr_err("\n");
+>             }
+>         }
+> 
+
+rcu_stack doesn't exist at report.c, it need at generic.c,
+otherwise it will have build error, unless add the #ifdef GENERIC_KASAN
+
+Maybe we can make kasan_get_aux_stack() return NULL? then print_stack()
+determine whether it will print aux stack.
+
+> 
+> Or with another helper function it becomes:
+> 
+>         if (IS_ENABLED(CONFIG_KASAN_GENERIC)) {
+>             print_aux_stack(alloc_info->rcu_stack[0], "First");
+>             print_aux_stack(alloc_info->rcu_stack[1], "Last");
+>         }
+> 
+> 
 > > +}
 > > diff --git a/mm/kasan/kasan.h b/mm/kasan/kasan.h
 > > index e8f37199d885..1cc1fb7b0de3 100644
@@ -272,16 +321,7 @@ On Mon, May 11, 2020 at 2:31 PM Dmitry Vyukov <dvyukov@google.com> wrote:
 > >
 > > +#ifdef CONFIG_KASAN_GENERIC
 > > +#define SIZEOF_PTR sizeof(void *)
->
-> Please move this to generic.c closer to kasan_set_free_info.
-> Unnecessary in the header.
->
 > > +#define KASAN_NR_RCU_CALL_STACKS 2
->
-> Since KASAN_NR_RCU_CALL_STACKS is only used once below, you could as
-> well use 2 instead of it.
-> Reduces level of indirection and cognitive load.
->
 > > +#else /* CONFIG_KASAN_GENERIC */
 > >  #ifdef CONFIG_KASAN_SW_TAGS_IDENTIFY
 > >  #define KASAN_NR_FREE_STACKS 5
@@ -370,22 +410,14 @@ On Mon, May 11, 2020 at 2:31 PM Dmitry Vyukov <dvyukov@google.com> wrote:
 > >         }
 > >
 > >         describe_object_addr(cache, object, addr);
-
-Some higher level comments.
-
-1. I think we need to put the free track into kasan_free_meta as it
-was before. It looks like exactly the place for it. We have logic to
-properly place it and to do the casts.
-
-2. We need to zero aux stacks when we reallocate the object. Otherwise
-we print confusing garbage.
-
-3. __kasan_slab_free now contains a window of inconsistency when it
-marked the object as KASAN_KMALLOC_FREE, but did not store the free
-track yet. If another thread prints a report now, it will print random
-garbage.
-
-4. We need some tests. At least (2) should be visible on tests.
+> > --
+> > 2.18.0
+> >
+> > --
+> > You received this message because you are subscribed to the Google Groups "kasan-dev" group.
+> > To unsubscribe from this group and stop receiving emails from it, send an email to kasan-dev+unsubscribe@googlegroups.com.
+> > To view this discussion on the web visit https://groups.google.com/d/msgid/kasan-dev/20200511023111.15310-1-walter-zh.wu%40mediatek.com.
+> 
 
 _______________________________________________
 Linux-mediatek mailing list
