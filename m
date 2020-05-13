@@ -2,68 +2,77 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id EB77F1D1ADA
-	for <lists+linux-mediatek@lfdr.de>; Wed, 13 May 2020 18:17:22 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 6E5D51D1ADD
+	for <lists+linux-mediatek@lfdr.de>; Wed, 13 May 2020 18:18:09 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
-	MIME-Version:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=GbqZ7cxCkP2ZEYza+Dlxg5I5ovISg4PLfPPVtT/gOM0=; b=kiDJdBxHxzSYd8
-	kRqipEV5fDMcFwa+VU3HeIBPwSxHZGOvArztvIl2ahMDmR8Zzre6+/l4K9BvOdQc4+aictwOcgFOs
-	vaub/eUzdgxI1vPJdWZLml0J8Q1aF1jnZPIOgcnqCk5Aar4HcuiPHvQBvgBN0IkPTcDKCbcCDjpnY
-	I0YhRLzAq+MzadEyWhkN5z2ZM71QzUJN38LZr0v/7ryYxQjTxPOjQGXx6SQ8EMxfo16w2q804qXkR
-	glv5ouw86p/o6/Gu0vB9hn4QWvqDGFEe1IEwLY75UgUlpwvsUWlmMs6Xdka8fjbs03FbY1reY82oE
-	gk0hKnTNQ9Dx0qxb1XlQ==;
+	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=TZlyu0JyMekxsHFdbTHhBBO7wYGXWLp3FHac/lc4Nmg=; b=CBQwX569dDyfuV
+	1VsBP/C9O7ghxYnCT3+2Met3ki3Kf0du2EzoOnjNjeWxvX9QTLDylzO7Cq7eaCYgs4TVOPQwEfmYi
+	CmdK1dlQTFdbDRLbGhpnV0ucqnoRMo8Lq7R4o42rVmwp0Ld4cYd1ew5gZp6XK8RzbC0tie0Nz9Nu/
+	H/bS8VhTriiQPEGO9JtvvRJTEepRAr/sBCMHKGAYUQqJNgY/BEc+84nqXWQrOIwbUZg9VvqZg73oj
+	YfF571myMsA1+N1AD+dWf60bx+xKGU9516h//9EFTdQPGWHTP2bjHH6q0bYpRvcUl91XztIEyxtdO
+	t8FlpHpcNIZSO+9T+2Rw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jYu4K-0006zJ-3x; Wed, 13 May 2020 16:17:16 +0000
-Received: from mail.kernel.org ([198.145.29.99])
+	id 1jYu55-0007Am-2N; Wed, 13 May 2020 16:18:03 +0000
+Received: from mail-ed1-x543.google.com ([2a00:1450:4864:20::543])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jYu4H-0006x2-J7
- for linux-mediatek@lists.infradead.org; Wed, 13 May 2020 16:17:14 +0000
-Received: from mail-ej1-f46.google.com (mail-ej1-f46.google.com
- [209.85.218.46])
- (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
- (No client certificate requested)
- by mail.kernel.org (Postfix) with ESMTPSA id 0174420794
- for <linux-mediatek@lists.infradead.org>; Wed, 13 May 2020 16:17:13 +0000 (UTC)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1589386633;
- bh=LqHMqv+cs54oc1DGAOIwvhYA+eUxtjbD/21x+c7zW7Q=;
- h=From:Date:Subject:To:Cc:From;
- b=fq/2WmyHGrM5dZ688uGEcuSqe9mKSQ0Wg3B3Tm2aRh0sgsX6xy0wPrc8QVu0/rtgf
- 7mnqdJFLs5uZU7BTpnIbWt9Y1dxpGxiyISyggz9R/jp0hxuXzBOM5F413aXeKQzM+t
- 1jTiD14ootBIWZkieoipXtmA7azYd4bobbRf5EEU=
-Received: by mail-ej1-f46.google.com with SMTP id a2so8796ejx.5
- for <linux-mediatek@lists.infradead.org>; Wed, 13 May 2020 09:17:12 -0700 (PDT)
-X-Gm-Message-State: AGi0PuZMAlHR3QDh+T7rW64DOOjq/mQsgHDAAGJo5jGFwDYgyXZXxBxC
- 4zJocCX00U0ehwZ2SQckBazuQTQNR/jPEQYE/g==
-X-Google-Smtp-Source: APiQypJiwyFCj/xngtINH3ad241V/T5agFVkQac23GNp0Mcffi69VPaa3fS6ljkNwUHqspKhdrJDpZOwAHa1JPxGv/8=
-X-Received: by 2002:a17:906:2503:: with SMTP id
- i3mr22035962ejb.293.1589386630979; 
- Wed, 13 May 2020 09:17:10 -0700 (PDT)
+ id 1jYu51-0007AG-O5
+ for linux-mediatek@lists.infradead.org; Wed, 13 May 2020 16:18:01 +0000
+Received: by mail-ed1-x543.google.com with SMTP id k19so557921edv.9
+ for <linux-mediatek@lists.infradead.org>; Wed, 13 May 2020 09:17:59 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
+ h=mime-version:references:in-reply-to:from:date:message-id:subject:to
+ :cc; bh=y5fECBTmpQhsAZTvaek3WaiP6WwedZB41pWrMS8HIJQ=;
+ b=b2BP4Zfej6fy15hMuOOTr4x1ySeq/7XOrnaC6tUnNbYRtXJvjXoZh2bLCYG6+9aPYr
+ ueek2rYxtjRVxRev9LQPuwINJNoSBEy2ODB/MHGuw/N8JviIQu1T8tC8mFdLFevOnKG4
+ HPLAwXPBFyMI/ceBYbe6yhKmld1aWgwjkD1faYqgnXZOChzxorHpj4vq+HNwDG6R0nEF
+ kDosYKiZqDynDQzCfak3obrVqG7FaCR2UR6nBYE3fGxLMNhOeqiA1wtyOByz7s86h8m2
+ aQB8l8dw3+tMD5XdUqLXqS29eotUFwRtTrjytDVzCW9sMFl7HBNGFjjbkFE3Pk490O2q
+ fbrQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:mime-version:references:in-reply-to:from:date
+ :message-id:subject:to:cc;
+ bh=y5fECBTmpQhsAZTvaek3WaiP6WwedZB41pWrMS8HIJQ=;
+ b=r+S2gsLr2nd4sVqrY5UUS7xEDi/HxoW++VB3Lrix35ZAPguDzFZv5fWGAw11Wpqqey
+ VLdjXevHuAbH+9JFSV7f2sPCgxNU6JTCrPDjp2B3Djmf9OvyVouVa7izcAz+ywiiOHz7
+ zklYfSycdhhWc13N71qzJdivr05FRzGr7vf7je8e151P9xUcQzbBCbVJZ3RrCv5Js2HG
+ XvdbYg2YQ3NQBxjXBhXfVmhKXAcCFMH9aBPh/qbZBWA6PkV6hRmFrZIWy38DqmOiwRKv
+ 2T21VR2v7lOFxW2psV2vXhSuqWELMRUVs35UOL48JcNDYXMA6kTsmlgEJpIBa+rIAg5H
+ oogg==
+X-Gm-Message-State: AOAM532HWTbpWwgGo+yZQv2lCZwj/g4FtfrjGSi7NOsfWeihbL5OTCgf
+ xzMiIumPq7/DdvdBIC0rX7qFbJah9VFnU2UO6uA=
+X-Google-Smtp-Source: ABdhPJxmcbGv7nRJXf0zPKiuTQvX8RblDkGx4sHIuHt3fNVmwep7SuCBuPB4Vv/ahBEtKk281J7a6R3BEj9QiMURj64=
+X-Received: by 2002:a50:8dc2:: with SMTP id s2mr409304edh.318.1589386677859;
+ Wed, 13 May 2020 09:17:57 -0700 (PDT)
 MIME-Version: 1.0
-From: Chun-Kuang Hu <chunkuang.hu@kernel.org>
-Date: Thu, 14 May 2020 00:16:59 +0800
-X-Gmail-Original-Message-ID: <CAAOTY_8gJNpWXcMnHiZzg_sgyiJ6BDsBYRxaLX0OXWRuLF1NCg@mail.gmail.com>
-Message-ID: <CAAOTY_8gJNpWXcMnHiZzg_sgyiJ6BDsBYRxaLX0OXWRuLF1NCg@mail.gmail.com>
-Subject: [GIT PULL] mediatek drm next for 5.8
-To: David Airlie <airlied@linux.ie>, Daniel Vetter <daniel@ffwll.ch>, 
- DRI Development <dri-devel@lists.freedesktop.org>, 
- "moderated list:ARM/Mediatek SoC support" <linux-mediatek@lists.infradead.org>
+References: <20200513153717.15599-1-dqfext@gmail.com>
+ <5d77da58-694a-7f9c-53fb-9d107e271d40@gmail.com>
+In-Reply-To: <5d77da58-694a-7f9c-53fb-9d107e271d40@gmail.com>
+From: Vladimir Oltean <olteanv@gmail.com>
+Date: Wed, 13 May 2020 19:17:46 +0300
+Message-ID: <CA+h21hr_TyWQyvGukXqS0SocmvOBWUp6keghuhZh6HSaxAGb8A@mail.gmail.com>
+Subject: Re: [PATCH net-next] net: dsa: mt7530: set CPU port to fallback mode
+To: Florian Fainelli <f.fainelli@gmail.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200513_091713_676458_C8259899 
-X-CRM114-Status: GOOD (  13.72  )
-X-Spam-Score: -5.2 (-----)
+X-CRM114-CacheID: sfid-20200513_091759_811637_0E6A4680 
+X-CRM114-Status: GOOD (  17.15  )
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
- Content analysis details:   (-5.2 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
- high trust [198.145.29.99 listed in list.dnswl.org]
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [2a00:1450:4864:20:0:0:0:543 listed in]
+ [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider [olteanv[at]gmail.com]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
  author's domain
@@ -72,7 +81,6 @@ X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -84,102 +92,59 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Jitao Shi <jitao.shi@mediatek.com>, Bernard Zhao <bernard@vivo.com>,
- YueHaibing <yuehaibing@huawei.com>, Hsin-Yi Wang <hsinyi@chromium.org>,
- Enric Balletbo i Serra <enric.balletbo@collabora.com>,
- Anand K Mistry <amistry@chromium.org>
+Cc: Andrew Lunn <andrew@lunn.ch>,
+ =?UTF-8?Q?Ren=C3=A9_van_Dorst?= <opensource@vdorst.com>,
+ Paul Fertser <fercerpav@gmail.com>, netdev <netdev@vger.kernel.org>,
+ Sean Wang <sean.wang@mediatek.com>, Russell King <linux@armlinux.org.uk>,
+ Vivien Didelot <vivien.didelot@gmail.com>, DENG Qingfang <dqfext@gmail.com>,
+ "moderated list:ARM/Mediatek SoC support" <linux-mediatek@lists.infradead.org>,
+ Stijn Segers <foss@volatilesystems.org>, Szabolcs Hubai <szab.hu@gmail.com>,
+ Matthias Brugger <matthias.bgg@gmail.com>, riddlariddla@hotmail.com,
+ "David S . Miller" <davem@davemloft.net>, Tom James <tj17@me.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi, Dave & Daniel:
+On Wed, 13 May 2020 at 18:49, Florian Fainelli <f.fainelli@gmail.com> wrote:
+>
+>
+>
+> On 5/13/2020 8:37 AM, DENG Qingfang wrote:
+> > Currently, setting a bridge's self PVID to other value and deleting
+> > the default VID 1 renders untagged ports of that VLAN unable to talk to
+> > the CPU port:
+> >
+> >       bridge vlan add dev br0 vid 2 pvid untagged self
+> >       bridge vlan del dev br0 vid 1 self
+> >       bridge vlan add dev sw0p0 vid 2 pvid untagged
+> >       bridge vlan del dev sw0p0 vid 1
+> >       # br0 cannot send untagged frames out of sw0p0 anymore
+> >
+> > That is because the CPU port is set to security mode and its PVID is
+> > still 1, and untagged frames are dropped due to VLAN member violation.
+> >
+> > Set the CPU port to fallback mode so untagged frames can pass through.
+>
+> How about if the bridge has vlan_filtering=1? The use case you present
+> seems to be valid to me, that is, you may create a VLAN just for the
+> user ports and not have the CPU port be part of it at all.
+>
 
-This include dpi pin mode swap, config mipi_tx current and impedance,
-convert mtk-dpi to drm_bridge API, and some fixup.
+What Qingfang is doing is in effect (but not by intention) removing
+the front panel port sw0p0 from the membership list of the CPU port's
+pvid. What you seem to be thinking of (VLAN of which the CPU is not a
+member of) does not seem to be supported in DSA at the moment.
 
-The following changes since commit 8f3d9f354286745c751374f5f1fcafee6b3f3136:
-  Linux 5.7-rc1 (2020-04-12 12:35:55 -0700)
-are available in the Git repository at:
-  ssh://git@gitolite.kernel.org/pub/scm/linux/kernel/git/chunkuang.hu/linux.git
-tags/mediatek-drm-next-5.8
-for you to fetch changes up to 23b29ff9f13a8fb5a12be9fedb8b614b9dede46a:
-  drm/mediatek: Eliminate the magic number in array size (2020-05-10
-09:08:30 +0800)
-----------------------------------------------------------------
-Mediatek DRM Next for Linux 5.8
-----------------------------------------------------------------
-Anand K Mistry (1):
-      drm/mediatek: Stop iterating dma addresses when sg_dma_len() == 0
-Bernard Zhao (2):
-      drm/mediatek: Cleanup coding style in mediatek a bit
-      drm/mediatek: Eliminate the magic number in array size
-Chun-Kuang Hu (1):
-      Merge tag 'v5.7-next-drm-stable' of
-ssh://gitolite.kernel.org/.../matthias.bgg/linux into
-mediatek-drm-next
-Enric Balletbo i Serra (7):
-      dt-bindings: mediatek: Update mmsys binding to reflect it is a
-system controller
-      soc / drm: mediatek: Move routing control to mmsys device
-      soc / drm: mediatek: Fix mediatek-drm device probing
-      drm/mediatek: Remove debug messages for function calls
-      drm/mediatek: mtk_dpi: Rename bridge to next_bridge
-      drm/mediatek: mtk_dpi: Convert to bridge driver
-      drm/mediatek: mtk_dpi: Use simple encoder
-Hsin-Yi Wang (1):
-      drm/mediatek: Fix device passed to cmdq
-Jitao Shi (6):
-      dt-bindings: display: mediatek: control dpi pins mode to avoid leakage
-      drm/mediatek: set dpi pin mode to gpio low to avoid leakage current
-      dt-bindings: display: mediatek: add property to control mipi tx
-drive current
-      dt-bindings: display: mediatek: get mipitx calibration data from nvmem
-      drm/mediatek: add the mipitx driving control
-      drm/mediatek: config mipitx impedance with calibration data
-Matthias Brugger (2):
-      drm/mediatek: Omit warning on probe defers
-      clk / soc: mediatek: Move mt8173 MMSYS to platform driver
-YueHaibing (1):
-      drm/mediatek: Fix Kconfig warning
- Documentation/devicetree/bindings/arm/mediatek/mediatek,mmsys.txt   |   7 +-
- Documentation/devicetree/bindings/display/mediatek/mediatek,dpi.txt |   6 +
- Documentation/devicetree/bindings/display/mediatek/mediatek,dsi.txt |  10 ++
- drivers/clk/mediatek/Kconfig                                        |   7 +
- drivers/clk/mediatek/Makefile                                       |   1 +
- drivers/clk/mediatek/clk-mt8173-mm.c                                |
-146 +++++++++++++++++++
- drivers/clk/mediatek/clk-mt8173.c                                   |
-104 --------------
- drivers/gpu/drm/mediatek/Kconfig                                    |   1 +
- drivers/gpu/drm/mediatek/mtk_disp_color.c                           |   5 +-
- drivers/gpu/drm/mediatek/mtk_disp_ovl.c                             |   5 +-
- drivers/gpu/drm/mediatek/mtk_disp_rdma.c                            |   5 +-
- drivers/gpu/drm/mediatek/mtk_dpi.c                                  |
-127 ++++++++++-------
- drivers/gpu/drm/mediatek/mtk_drm_crtc.c                             |  27 ++--
- drivers/gpu/drm/mediatek/mtk_drm_ddp.c                              |
-259 +---------------------------------
- drivers/gpu/drm/mediatek/mtk_drm_ddp.h                              |   7 -
- drivers/gpu/drm/mediatek/mtk_drm_drv.c                              |
- 50 +++----
- drivers/gpu/drm/mediatek/mtk_drm_drv.h                              |   2 +-
- drivers/gpu/drm/mediatek/mtk_drm_gem.c                              |   3 +
- drivers/gpu/drm/mediatek/mtk_dsi.c                                  |   8 +-
- drivers/gpu/drm/mediatek/mtk_hdmi.c                                 |  22 ++-
- drivers/gpu/drm/mediatek/mtk_mipi_tx.c                              |
- 54 +++++++
- drivers/gpu/drm/mediatek/mtk_mipi_tx.h                              |   4 +
- drivers/gpu/drm/mediatek/mtk_mt8183_mipi_tx.c                       |  28 ++++
- drivers/soc/mediatek/Kconfig                                        |   8 ++
- drivers/soc/mediatek/Makefile                                       |   1 +
- drivers/soc/mediatek/mtk-mmsys.c                                    |
-337 ++++++++++++++++++++++++++++++++++++++++++++
- include/linux/soc/mediatek/mtk-mmsys.h                              |  20 +++
- 27 files changed, 778 insertions(+), 476 deletions(-)
- create mode 100644 drivers/clk/mediatek/clk-mt8173-mm.c
- create mode 100644 drivers/soc/mediatek/mtk-mmsys.c
- create mode 100644 include/linux/soc/mediatek/mtk-mmsys.h
+As a fix, there's nothing wrong with the patch actually, I don't even
+know how it would work otherwise. DSA doesn't change the pvid of the
+CPU port when the pvid of a slave changes, because 4 slave ports could
+have 4 different pvids and the CPU port pvid would keep changing.
+Fallback mode should only apply on ingress from CPU, so there's no
+danger really.
+
+Thanks,
+-Vladimir
 
 _______________________________________________
 Linux-mediatek mailing list
