@@ -2,42 +2,42 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 875C41D345A
-	for <lists+linux-mediatek@lfdr.de>; Thu, 14 May 2020 17:04:11 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 83EAF1D345C
+	for <lists+linux-mediatek@lfdr.de>; Thu, 14 May 2020 17:04:13 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=+pQEc2QQEW8lXDbBJDbhl9i+LnwRQhiSzlAStBF6k9k=; b=Dm8pFomJkuBpuf
-	eCxY1Hb4fY4xEJ2r1bHTGN89B7qCTGvZocrdevdM/CReOqg0OCG2ULYBHVx81+L3LgIPHl2gCEwtj
-	EbloVoXdGxQv1WViNXPpZWWDDwUymmL+mSfNl0Z7H+SdgNRowt+p0XeQsuGx7/l73xDpBV1IIx2aO
-	tbx9BHUY+KAjJ2F9GrZldGFrP91iVBFWkF7UAIyWwV4Eg/t2Kj8wuaAG50ibaF297uE/zLnpLRZNT
-	Sx8kPX9zWKgm/9n3G/LPU4EoX7gXs7RCjthayo82GeiWxRxogI45ha8MngzAEnB8V1bThkxLcKac9
-	/0t6NKxQEBaHR7ImpMXA==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=xqL6yUgJn/H7XA/5h9zWCyL5opn/ylgBsY0QlotZrlc=; b=pl1nnIxbaaLPXw
+	89RnGOM5a79YlcrcB24LXqJykPj45eQi362YlUKtVj65U+AuTsK7keyKFpKr5ToZSD3Finp6BP19e
+	xHm71bkriDSqEkoHoyluIqH6mrKnA5TsjWUXigVok4MlqMy3yD7eZjwDk0l2O3/NuTO6S9yNAxUjH
+	q9Iu6iyRZgv6Fb2GvMbQnq1yENoZ9PdKbUVq5CTudZ6XzvzVXDE7/dpzrmCTcd8aPo+RSmLB6lnKn
+	p+7r+uDNHu0HAOfcHe1fEB4Dcx1PX274OHd8rYAtZDuMfdNyKnxdUUysOs5g4wgeWqUemfptrDMCW
+	QShNtONAHRsD5O4Nk68g==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jZFP1-0000ST-Q5; Thu, 14 May 2020 15:04:03 +0000
+	id 1jZFP3-0000Tp-53; Thu, 14 May 2020 15:04:05 +0000
 Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jZFMe-0007D4-SQ; Thu, 14 May 2020 15:01:43 +0000
-X-UUID: 3fa5a61dc5c6414188ce228bf50b5266-20200514
+ id 1jZFMe-0007DP-SQ; Thu, 14 May 2020 15:01:43 +0000
+X-UUID: b356949b5a004fd9be8c230bb67a23c2-20200514
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
  s=dk; 
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:Subject:CC:To:From;
- bh=oQJZc3MeYI2g59uaOgNPF1yMp/cTZbERUuTkSYQyTrQ=; 
- b=q926edJ2JqFC1RyS5iDL2Vl2ac5uA/AtJqQ8RYzBUSNILRtJLmlhnhqlSKalpgvx+yfsyghsj8QZ1eWStdlbqUlkWmAnkiAabUi6vi21GbJLH+DIukVVFcfrx09oNc+pNyFCERKzdEqGSzvil19CJvnEhwX/ASmtkOyvN71UWHE=;
-X-UUID: 3fa5a61dc5c6414188ce228bf50b5266-20200514
+ h=Content-Transfer-Encoding:Content-Type:MIME-Version:References:In-Reply-To:Message-ID:Date:Subject:CC:To:From;
+ bh=SfDQhGdBasCQf6xPUtgVXlprnq+Pu6y0OxSgqJwkc34=; 
+ b=I8zuKm1WOipjNk5rAHraTkv0ffYS6qzg35jEfEelkXc4+esp7cZhsLPJ5uuI9nSJuLRSj2EMaLggOehvZSpcxavcOOPDlGkwXo2saH3gQg4KvrmhoN9fTPPWgtkw3NxIhnBFaMDQRd2JiGS0bpXX0ZTu0BAP1sEbh8q4L1/RjIs=;
+X-UUID: b356949b5a004fd9be8c230bb67a23c2-20200514
 Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
  (envelope-from <stanley.chu@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1489654614; Thu, 14 May 2020 07:01:33 -0800
-Received: from mtkmbs08n2.mediatek.inc (172.21.101.56) by
+ with ESMTP id 647024344; Thu, 14 May 2020 07:01:33 -0800
+Received: from MTKMBS02N1.mediatek.inc (172.21.101.77) by
  MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
- 15.0.1497.2; Thu, 14 May 2020 08:01:30 -0700
+ 15.0.1497.2; Thu, 14 May 2020 08:01:29 -0700
 Received: from mtkcas07.mediatek.inc (172.21.101.84) by
- mtkmbs08n2.mediatek.inc (172.21.101.56) with Microsoft SMTP Server (TLS) id
+ mtkmbs02n1.mediatek.inc (172.21.101.77) with Microsoft SMTP Server (TLS) id
  15.0.1497.2; Thu, 14 May 2020 23:01:20 +0800
 Received: from mtksdccf07.mediatek.inc (172.21.84.99) by mtkcas07.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1497.2 via
@@ -46,16 +46,17 @@ From: Stanley Chu <stanley.chu@mediatek.com>
 To: <linux-scsi@vger.kernel.org>, <martin.petersen@oracle.com>,
  <avri.altman@wdc.com>, <alim.akhtar@samsung.com>, <jejb@linux.ibm.com>,
  <asutoshd@codeaurora.org>
-Subject: [PATCH v2 0/4] scsi: ufs: Fix WriteBooster and cleanup UFS driver
-Date: Thu, 14 May 2020 23:01:18 +0800
-Message-ID: <20200514150122.32110-1-stanley.chu@mediatek.com>
+Subject: [PATCH v2 1/4] scsi: ufs: Remove unnecessary memset for dev_info
+Date: Thu, 14 May 2020 23:01:19 +0800
+Message-ID: <20200514150122.32110-2-stanley.chu@mediatek.com>
 X-Mailer: git-send-email 2.18.0
+In-Reply-To: <20200514150122.32110-1-stanley.chu@mediatek.com>
+References: <20200514150122.32110-1-stanley.chu@mediatek.com>
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: 7A70CB63B83E9314C8CEA15F10C51D8DEFD06F744864204F25234DFCB60B92172000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200514_080136_917641_979FDF07 
-X-CRM114-Status: UNSURE (   6.85  )
+X-CRM114-CacheID: sfid-20200514_080136_919191_4CB6823A 
+X-CRM114-Status: UNSURE (   7.64  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
@@ -96,26 +97,31 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi,
+The whole UFS host instance has been zero-initialized by
+scsi_host_alloc(), thus UFS driver does not need to clear
+"dev_info" member specifically in ufshcd_device_params_init().
 
-This patch set fixes some WriteBooster issues and do small cleanup in UFS driver
+Simply remove the unnecessary code.
 
-v1 -> v2
-  - Remove dummy new line in patch [4] (Asutosh)
-  - Add more limitation to allow WriteBooster flush during Hibern8 in runtime-suspend. Now the device power mode is kept as Active power mode only if link is put in Hibern8 or Auto-Hibern8 is enabled during runtime-suspend (Asutosh)
+Signed-off-by: Stanley Chu <stanley.chu@mediatek.com>
+---
+ drivers/scsi/ufs/ufshcd.c | 3 ---
+ 1 file changed, 3 deletions(-)
 
-Stanley Chu (4):
-  scsi: ufs: Remove unnecessary memset for dev_info
-  scsi: ufs: Allow WriteBooster on UFS 2.2 devices
-  scsi: ufs: Fix index of attributes query for WriteBooster feature
-  scsi: ufs: Fix WriteBooster flush during runtime suspend
-
- drivers/scsi/ufs/ufs-sysfs.c | 13 ++++++--
- drivers/scsi/ufs/ufs.h       |  1 -
- drivers/scsi/ufs/ufshcd.c    | 62 +++++++++++++++++++-----------------
- drivers/scsi/ufs/ufshcd.h    |  2 +-
- 4 files changed, 45 insertions(+), 33 deletions(-)
-
+diff --git a/drivers/scsi/ufs/ufshcd.c b/drivers/scsi/ufs/ufshcd.c
+index 426073a518ef..41ad4501b0d0 100644
+--- a/drivers/scsi/ufs/ufshcd.c
++++ b/drivers/scsi/ufs/ufshcd.c
+@@ -7279,9 +7279,6 @@ static int ufshcd_device_params_init(struct ufs_hba *hba)
+ 	bool flag;
+ 	int ret;
+ 
+-	/* Clear any previous UFS device information */
+-	memset(&hba->dev_info, 0, sizeof(hba->dev_info));
+-
+ 	/* Init check for device descriptor sizes */
+ 	ufshcd_init_desc_sizes(hba);
+ 
 -- 
 2.18.0
 _______________________________________________
