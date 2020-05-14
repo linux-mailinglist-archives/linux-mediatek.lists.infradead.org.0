@@ -2,67 +2,69 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id E0DB81D32D8
-	for <lists+linux-mediatek@lfdr.de>; Thu, 14 May 2020 16:29:11 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id AF32C1D33CF
+	for <lists+linux-mediatek@lfdr.de>; Thu, 14 May 2020 16:59:59 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
-	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=DldADGMdBL85gyV4OoZdlP3kx7inlSF3F+I3dW8geUk=; b=gmrJ9YSc4B8Yd1
-	250Qy5QM0kzUncWah5eiiaBwBV0ksy6YIzDgsk2b/OuDOPGmp1i+1L9Ap97qd1GDS/3JAczJXdl/E
-	o0tgAzuhmcSsXZ24Ey8QiGGT5vL6fBBw4zBOhnwrrz4Asrx053KYiWAFo4ch+F0B5ASNG0wNthSZt
-	n3GCEcT7sogMPH0eyGrNzGPECgsKbc4d9fA1jtQJWFydyFtvqFw1+ClYXKRJoaVIQM0UGiY8COfDk
-	io+6j7K3Tz3mG3N5wrHtOAWL9nBMEya3hMn4Xrp0U3eOiYqm2BEcszKVcKhw19ju3An03KuWXliME
-	lxvkw4ttEaB6Zb+7GolA==;
+	List-Owner; bh=lvOok6m9DOtd6SLcQfWnW0Q2M68CUw/L0IsF/p10y1I=; b=VSAw6QjtMAH4qt
+	Y5P/IZrusCWAGLpZ7ymWDv84SZwTldlpceHHpUuv3jJOyiekmf4TIPtszl5DmXUZ3ziRbAP/ga9Ai
+	rIqDpBh2rQ6lVB0pZKQDoDHL5ErMjFsLuFUbNo1jMLaQXnPk3Co9QXcANSKlPgN4ZyeuyayiCT/rz
+	/T4taNzG8zydbI7sbyeEsOPD2kZcLyu/EHlVYZ91QQFM0G/ooLSEXbZlKu2kJCbSWjGdC8mamBku/
+	XVVJZYc3kRCQVj3C9oW5qzdYdLzDYJYAhLBZJskRGSdSRiR7QHHHvmKINrYpleLtuB3rZYUT91lGe
+	kOZCEKQY8bUC96YSP+kw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jZEr8-0003ao-0t; Thu, 14 May 2020 14:29:02 +0000
-Received: from mail.kernel.org ([198.145.29.99])
+	id 1jZFKu-0003Pl-1M; Thu, 14 May 2020 14:59:48 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jZEqt-0003RE-60; Thu, 14 May 2020 14:28:48 +0000
-Received: from mail-ed1-f52.google.com (mail-ed1-f52.google.com
- [209.85.208.52])
- (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
- (No client certificate requested)
- by mail.kernel.org (Postfix) with ESMTPSA id 729732070A;
- Thu, 14 May 2020 14:28:46 +0000 (UTC)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1589466526;
- bh=c9L1O1InlStlIGidxd6wkgttvIpBEDDoT/skiDV3RvQ=;
- h=References:In-Reply-To:From:Date:Subject:To:Cc:From;
- b=JxDecQBn7l1dJvcoAMtJKzjbkyoPCFe3jN6GE9bIN4vNpmS0jZ4BL8QmgWPYGhjdx
- 98XZLTISx3rmSGgsqNb9oJHtZnynI6zR0DVGcAvfrbFtKT3rANG5o1pYzdwIFJnaVV
- 3fYXikXicKhyaywo187A9P+UdGinb8CG40vHH6cI=
-Received: by mail-ed1-f52.google.com with SMTP id r7so2523195edo.11;
- Thu, 14 May 2020 07:28:46 -0700 (PDT)
-X-Gm-Message-State: AOAM533C4OGi4r0rp1aNEF9pC77KW/0CQP9UunBB6v9V0GqGqP+Mg5pQ
- SalI6TE5iHkL/NUAsQ2XKnWHlaPdjiVwm7rc/w==
-X-Google-Smtp-Source: ABdhPJwIyb+lTea2pZcVEwHLHdT4AKiwC3a2Q/WIWGftFZnpe494JxoCIClrf22bFDtgFzG2+qSq9oUl8aupkmV1SZA=
-X-Received: by 2002:a50:ea87:: with SMTP id d7mr4038661edo.48.1589466524869;
- Thu, 14 May 2020 07:28:44 -0700 (PDT)
+ id 1jZFKp-0003ME-DK; Thu, 14 May 2020 14:59:47 +0000
+X-UUID: c9d63fa0fc8146e2b2432f1cd24697ae-20200514
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
+ s=dk; 
+ h=Content-Transfer-Encoding:MIME-Version:Content-Type:References:In-Reply-To:Date:CC:To:From:Subject:Message-ID;
+ bh=uTJlwni3Pyu0Wbuq7O34MNOI0GdhWDymx/mWX/Hdhgg=; 
+ b=asseTBgVOYdMFIYoaAJFVhAnJ+oZ7vYlIOPdkz8Ld0LmDnGsm7R46lnq4it5Ylpo01q6dSM02yJW1w+DD5bjnU+PpjsB6eGRp6IX9RJ/3EkPOPmmPPvcA+wZNkMBFJcZf8aFkXuWYHC6Eu79rBJNjSAHxYHttLuHSAQAkSkLg90=;
+X-UUID: c9d63fa0fc8146e2b2432f1cd24697ae-20200514
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
+ (envelope-from <stanley.chu@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 506614466; Thu, 14 May 2020 06:59:40 -0800
+Received: from MTKMBS02N2.mediatek.inc (172.21.101.101) by
+ MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
+ 15.0.1497.2; Thu, 14 May 2020 07:49:35 -0700
+Received: from mtkcas08.mediatek.inc (172.21.101.126) by
+ mtkmbs02n2.mediatek.inc (172.21.101.101) with Microsoft SMTP Server (TLS) id
+ 15.0.1497.2; Thu, 14 May 2020 22:49:23 +0800
+Received: from [172.21.77.33] (172.21.77.33) by mtkcas08.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1497.2 via Frontend
+ Transport; Thu, 14 May 2020 22:49:23 +0800
+Message-ID: <1589467766.3197.100.camel@mtkswgap22>
+Subject: Re: [PATCH v1 4/4] scsi: ufs: Fix WriteBooster flush during runtime
+ suspend
+From: Stanley Chu <stanley.chu@mediatek.com>
+To: "Asutosh Das (asd)" <asutoshd@codeaurora.org>
+Date: Thu, 14 May 2020 22:49:26 +0800
+In-Reply-To: <1589423030.3197.94.camel@mtkswgap22>
+References: <20200512104750.8711-1-stanley.chu@mediatek.com>
+ <20200512104750.8711-5-stanley.chu@mediatek.com>
+ <725d057c-2379-710e-287f-ac11a59c08bc@codeaurora.org>
+ <1589423030.3197.94.camel@mtkswgap22>
+X-Mailer: Evolution 3.2.3-0ubuntu6 
 MIME-Version: 1.0
-References: <20200501152335.1805790-1-enric.balletbo@collabora.com>
- <20200501152335.1805790-8-enric.balletbo@collabora.com>
- <CAFqH_53h=3OXzwLnw1XT3rHYkMPOPNFBdQdPeFmNubN9qq_Twg@mail.gmail.com>
-In-Reply-To: <CAFqH_53h=3OXzwLnw1XT3rHYkMPOPNFBdQdPeFmNubN9qq_Twg@mail.gmail.com>
-From: Chun-Kuang Hu <chunkuang.hu@kernel.org>
-Date: Thu, 14 May 2020 22:28:33 +0800
-X-Gmail-Original-Message-ID: <CAAOTY_-pOUuM7LQ1jm6gqpg8acMqDWOHxGucY5XOjq0ctGUkzA@mail.gmail.com>
-Message-ID: <CAAOTY_-pOUuM7LQ1jm6gqpg8acMqDWOHxGucY5XOjq0ctGUkzA@mail.gmail.com>
-Subject: Re: [PATCH v4 7/7] drm/mediatek: mtk_dsi: Create connector for bridges
-To: Enric Balletbo Serra <eballetbo@gmail.com>
+X-TM-SNTS-SMTP: 4780976ACDCE7F1FDB5960240E507B019A505AEB464268F722DFBF7EFC13B6632000:8
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200514_072847_263669_D0100E73 
-X-CRM114-Status: GOOD (  22.67  )
-X-Spam-Score: -5.2 (-----)
+X-CRM114-CacheID: sfid-20200514_075943_459627_27E7268B 
+X-CRM114-Status: GOOD (  31.97  )
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
- Content analysis details:   (-5.2 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
- high trust [198.145.29.99 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
@@ -72,7 +74,8 @@ X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
  author's domain
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -84,89 +87,217 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Chun-Kuang Hu <chunkuang.hu@kernel.org>,
- Nicolas Boichat <drinkcat@chromium.org>, Daniel Vetter <daniel@ffwll.ch>,
- David Airlie <airlied@linux.ie>, linux-kernel <linux-kernel@vger.kernel.org>,
- dri-devel <dri-devel@lists.freedesktop.org>,
- Matthias Brugger <matthias.bgg@gmail.com>,
- "moderated list:ARM/Mediatek SoC support" <linux-mediatek@lists.infradead.org>,
- Laurent Pinchart <laurent.pinchart@ideasonboard.com>,
- Philipp Zabel <p.zabel@pengutronix.de>, Hsin-Yi Wang <hsinyi@chromium.org>,
- Enric Balletbo i Serra <enric.balletbo@collabora.com>,
- Collabora Kernel ML <kernel@collabora.com>, Sam Ravnborg <sam@ravnborg.org>,
- Linux ARM <linux-arm-kernel@lists.infradead.org>
-Content-Type: text/plain; charset="utf-8"
-Content-Transfer-Encoding: base64
+Cc: "linux-scsi@vger.kernel.org" <linux-scsi@vger.kernel.org>,
+ "martin.petersen@oracle.com" <martin.petersen@oracle.com>, "Andy Teng
+ \($B{}G!9\(\(B\)" <Andy.Teng@mediatek.com>,
+ "jejb@linux.ibm.com" <jejb@linux.ibm.com>,
+ Chun-Hung Wu =?UTF-8?Q?=28=E5=B7=AB=E9=A7=BF=E5=AE=8F=29?=
+ <Chun-hung.Wu@mediatek.com>,
+ Kuohong Wang =?UTF-8?Q?=28=E7=8E=8B=E5=9C=8B=E9=B4=BB=29?=
+ <kuohong.wang@mediatek.com>,
+ "linux-kernel@vger.kernel.org" <linux-kernel@vger.kernel.org>,
+ "avri.altman@wdc.com" <avri.altman@wdc.com>,
+ "cang@codeaurora.org" <cang@codeaurora.org>,
+ "linux-mediatek@lists.infradead.org" <linux-mediatek@lists.infradead.org>,
+ Peter Wang =?UTF-8?Q?=28=E7=8E=8B=E4=BF=A1=E5=8F=8B=29?=
+ <peter.wang@mediatek.com>, "alim.akhtar@samsung.com" <alim.akhtar@samsung.com>,
+ "matthias.bgg@gmail.com" <matthias.bgg@gmail.com>,
+ "beanhuo@micron.com" <beanhuo@micron.com>,
+ "linux-arm-kernel@lists.infradead.org" <linux-arm-kernel@lists.infradead.org>,
+ "bvanassche@acm.org" <bvanassche@acm.org>
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-SGksIEVucmljOgoKRW5yaWMgQmFsbGV0Ym8gU2VycmEgPGViYWxsZXRib0BnbWFpbC5jb20+IOaW
-vCAyMDIw5bm0NeaciDE05pelIOmAseWbmyDkuIrljYgxMjo0MeWvq+mBk++8mgo+Cj4gSGkgQ2h1
-bi1LdWFuZywKPgo+IE1pc3NhdGdlIGRlIEVucmljIEJhbGxldGJvIGkgU2VycmEgPGVucmljLmJh
-bGxldGJvQGNvbGxhYm9yYS5jb20+IGRlbAo+IGRpYSBkdi4sIDEgZGUgbWFpZyAyMDIwIGEgbGVz
-IDE3OjI1Ogo+ID4KPiA+IFVzZSB0aGUgZHJtX2JyaWRnZV9jb25uZWN0b3IgaGVscGVyIHRvIGNy
-ZWF0ZSBhIGNvbm5lY3RvciBmb3IgcGlwZWxpbmVzCj4gPiB0aGF0IHVzZSBkcm1fYnJpZGdlLiBU
-aGlzIGFsbG93cyBzcGxpdHRpbmcgY29ubmVjdG9yIG9wZXJhdGlvbnMgYWNyb3NzCj4gPiBtdWx0
-aXBsZSBicmlkZ2VzIHdoZW4gbmVjZXNzYXJ5LCBpbnN0ZWFkIG9mIGhhdmluZyB0aGUgbGFzdCBi
-cmlkZ2UgaW4KPiA+IHRoZSBjaGFpbiBjcmVhdGluZyB0aGUgY29ubmVjdG9yIGFuZCBoYW5kbGlu
-ZyBhbGwgY29ubmVjdG9yIG9wZXJhdGlvbnMKPiA+IGludGVybmFsbHkuCj4gPgo+ID4gU2lnbmVk
-LW9mZi1ieTogRW5yaWMgQmFsbGV0Ym8gaSBTZXJyYSA8ZW5yaWMuYmFsbGV0Ym9AY29sbGFib3Jh
-LmNvbT4KPiA+IEFja2VkLWJ5OiBTYW0gUmF2bmJvcmcgPHNhbUByYXZuYm9yZy5vcmc+Cj4KPiBB
-IGdlbnRsZSBwaW5nIG9uIHRoaXMsIEkgdGhpbmsgdGhhdCB0aGlzIG9uZSBpcyB0aGUgb25seSBv
-bmUgdGhhdAo+IHN0aWxsIG5lZWRzIGEgcmV2aWV3IGluIHRoZSBzZXJpZXMuCgpUaGlzIGlzIHdo
-YXQgSSByZXBseSBpbiBwYXRjaCB2MzoKCkkgdGhpbmsgdGhlIHBhbmVsIGlzIHdyYXBwZWQgaW50
-byBuZXh0X2JyaWRnZSBoZXJlLAoKaWYgKHBhbmVsKSB7CiAgICBkc2ktPm5leHRfYnJpZGdlID0g
-ZGV2bV9kcm1fcGFuZWxfYnJpZGdlX2FkZChkZXYsIHBhbmVsKTsKCnNvIHRoZSBuZXh0X2JyaWRn
-ZSBpcyBhIHBhbmVsX2JyaWRnZSwgaW4gaXRzIGF0dGFjaCBmdW5jdGlvbgpwYW5lbF9icmlkZ2Vf
-YXR0YWNoKCksCmFjY29yZGluZyB0byB0aGUgZmxhZyBEUk1fQlJJREdFX0FUVEFDSF9OT19DT05O
-RUNUT1IsIGlmIG5vdCBleGlzdCwKaXQgd291bGQgY3JlYXRlIGNvbm5lY3RvciBhbmQgYXR0YWNo
-IGNvbm5lY3RvciB0byBwYW5lbC4KCkknbSBub3Qgc3VyZSB0aGlzIGZsYWcgd291bGQgZXhpc3Qg
-b3Igbm90LCBidXQgZm9yIGJvdGggY2FzZSwgaXQncyBzdHJhbmdlLgpJZiBleGlzdCwgeW91IGNy
-ZWF0ZSBjb25uZWN0b3IgaW4gdGhpcyBwYXRjaCBidXQgbm8gd2hlcmUgdG8gYXR0YWNoCmNvbm5l
-Y3RvciB0byBwYW5lbC4KSWYgbm90IGV4aXN0LCB0aGUgbmV4dF9icmlnZSB3b3VsZCBjcmVhdGUg
-b25lIGNvbm5lY3RvciBhbmQgdGhpcyBicmlnZQp3b3VsZCBjcmVhdGUgYW5vdGhlciBjb25uZWN0
-b3IuCgpJIHRoaW5rIGluIHlvdXIgY2FzZSwgbXRrX2RzaSBkb2VzIG5vdCBkaXJlY3RseSBjb25u
-ZWN0IHRvIGEgcGFuZWwsIHNvCkkgbmVlZCBhIGV4YWN0IGV4cGxhaW4uIE9yIHNvbWVvbmUgY291
-bGQgdGVzdCB0aGlzIG9uIGEKZGlyZWN0bHktY29ubmVjdC1wYW5lbCBwbGF0Zm9ybS4KClJlZ2Fy
-ZHMsCkNodW4tS3VhbmcuCgo+Cj4gVGhhbmtzLAo+ICBFbnJpYwo+Cj4gPiAtLS0KPiA+Cj4gPiBD
-aGFuZ2VzIGluIHY0OiBOb25lCj4gPiBDaGFuZ2VzIGluIHYzOgo+ID4gLSBNb3ZlIHRoZSBicmlk
-Z2UudHlwZSBsaW5lIHRvIHRoZSBwYXRjaCB0aGF0IGFkZHMgZHJtX2JyaWRnZSBzdXBwb3J0LiAo
-TGF1cmVudCBQaW5jaGFydCkKPiA+Cj4gPiBDaGFuZ2VzIGluIHYyOiBOb25lCj4gPgo+ID4gIGRy
-aXZlcnMvZ3B1L2RybS9tZWRpYXRlay9tdGtfZHNpLmMgfCAxMyArKysrKysrKysrKystCj4gPiAg
-MSBmaWxlIGNoYW5nZWQsIDEyIGluc2VydGlvbnMoKyksIDEgZGVsZXRpb24oLSkKPiA+Cj4gPiBk
-aWZmIC0tZ2l0IGEvZHJpdmVycy9ncHUvZHJtL21lZGlhdGVrL210a19kc2kuYyBiL2RyaXZlcnMv
-Z3B1L2RybS9tZWRpYXRlay9tdGtfZHNpLmMKPiA+IGluZGV4IDRmM2JkMDk1YzFlZS4uNDcxZmNh
-ZmRmMzQ4IDEwMDY0NAo+ID4gLS0tIGEvZHJpdmVycy9ncHUvZHJtL21lZGlhdGVrL210a19kc2ku
-Ywo+ID4gKysrIGIvZHJpdmVycy9ncHUvZHJtL21lZGlhdGVrL210a19kc2kuYwo+ID4gQEAgLTE3
-LDYgKzE3LDcgQEAKPiA+Cj4gPiAgI2luY2x1ZGUgPGRybS9kcm1fYXRvbWljX2hlbHBlci5oPgo+
-ID4gICNpbmNsdWRlIDxkcm0vZHJtX2JyaWRnZS5oPgo+ID4gKyNpbmNsdWRlIDxkcm0vZHJtX2Jy
-aWRnZV9jb25uZWN0b3IuaD4KPiA+ICAjaW5jbHVkZSA8ZHJtL2RybV9taXBpX2RzaS5oPgo+ID4g
-ICNpbmNsdWRlIDxkcm0vZHJtX29mLmg+Cj4gPiAgI2luY2x1ZGUgPGRybS9kcm1fcGFuZWwuaD4K
-PiA+IEBAIC0xODMsNiArMTg0LDcgQEAgc3RydWN0IG10a19kc2kgewo+ID4gICAgICAgICBzdHJ1
-Y3QgZHJtX2VuY29kZXIgZW5jb2RlcjsKPiA+ICAgICAgICAgc3RydWN0IGRybV9icmlkZ2UgYnJp
-ZGdlOwo+ID4gICAgICAgICBzdHJ1Y3QgZHJtX2JyaWRnZSAqbmV4dF9icmlkZ2U7Cj4gPiArICAg
-ICAgIHN0cnVjdCBkcm1fY29ubmVjdG9yICpjb25uZWN0b3I7Cj4gPiAgICAgICAgIHN0cnVjdCBw
-aHkgKnBoeTsKPiA+Cj4gPiAgICAgICAgIHZvaWQgX19pb21lbSAqcmVnczsKPiA+IEBAIC05Nzcs
-MTAgKzk3OSwxOSBAQCBzdGF0aWMgaW50IG10a19kc2lfZW5jb2Rlcl9pbml0KHN0cnVjdCBkcm1f
-ZGV2aWNlICpkcm0sIHN0cnVjdCBtdGtfZHNpICpkc2kpCj4gPiAgICAgICAgICAqLwo+ID4gICAg
-ICAgICBkc2ktPmVuY29kZXIucG9zc2libGVfY3J0Y3MgPSAxOwo+ID4KPiA+IC0gICAgICAgcmV0
-ID0gZHJtX2JyaWRnZV9hdHRhY2goJmRzaS0+ZW5jb2RlciwgJmRzaS0+YnJpZGdlLCBOVUxMLCAw
-KTsKPiA+ICsgICAgICAgcmV0ID0gZHJtX2JyaWRnZV9hdHRhY2goJmRzaS0+ZW5jb2RlciwgJmRz
-aS0+YnJpZGdlLCBOVUxMLAo+ID4gKyAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBEUk1f
-QlJJREdFX0FUVEFDSF9OT19DT05ORUNUT1IpOwo+ID4gICAgICAgICBpZiAocmV0KQo+ID4gICAg
-ICAgICAgICAgICAgIGdvdG8gZXJyX2NsZWFudXBfZW5jb2RlcjsKPiA+Cj4gPiArICAgICAgIGRz
-aS0+Y29ubmVjdG9yID0gZHJtX2JyaWRnZV9jb25uZWN0b3JfaW5pdChkcm0sICZkc2ktPmVuY29k
-ZXIpOwo+ID4gKyAgICAgICBpZiAoSVNfRVJSKGRzaS0+Y29ubmVjdG9yKSkgewo+ID4gKyAgICAg
-ICAgICAgICAgIERSTV9FUlJPUigiVW5hYmxlIHRvIGNyZWF0ZSBicmlkZ2UgY29ubmVjdG9yXG4i
-KTsKPiA+ICsgICAgICAgICAgICAgICByZXQgPSBQVFJfRVJSKGRzaS0+Y29ubmVjdG9yKTsKPiA+
-ICsgICAgICAgICAgICAgICBnb3RvIGVycl9jbGVhbnVwX2VuY29kZXI7Cj4gPiArICAgICAgIH0K
-PiA+ICsgICAgICAgZHJtX2Nvbm5lY3Rvcl9hdHRhY2hfZW5jb2Rlcihkc2ktPmNvbm5lY3Rvciwg
-JmRzaS0+ZW5jb2Rlcik7Cj4gPiArCj4gPiAgICAgICAgIHJldHVybiAwOwo+ID4KPiA+ICBlcnJf
-Y2xlYW51cF9lbmNvZGVyOgo+ID4gLS0KPiA+IDIuMjYuMgo+ID4KPiA+Cj4gPiBfX19fX19fX19f
-X19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fXwo+ID4gTGludXgtbWVkaWF0ZWsg
-bWFpbGluZyBsaXN0Cj4gPiBMaW51eC1tZWRpYXRla0BsaXN0cy5pbmZyYWRlYWQub3JnCj4gPiBo
-dHRwOi8vbGlzdHMuaW5mcmFkZWFkLm9yZy9tYWlsbWFuL2xpc3RpbmZvL2xpbnV4LW1lZGlhdGVr
-CgpfX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fXwpMaW51eC1t
-ZWRpYXRlayBtYWlsaW5nIGxpc3QKTGludXgtbWVkaWF0ZWtAbGlzdHMuaW5mcmFkZWFkLm9yZwpo
-dHRwOi8vbGlzdHMuaW5mcmFkZWFkLm9yZy9tYWlsbWFuL2xpc3RpbmZvL2xpbnV4LW1lZGlhdGVr
-Cg==
+Hi Asutosh,
+
+On Thu, 2020-05-14 at 10:23 +0800, Stanley Chu wrote:
+> Hi Asutosh,
+> 
+> On Wed, 2020-05-13 at 12:31 -0700, Asutosh Das (asd) wrote:
+> > On 5/12/2020 3:47 AM, Stanley Chu wrote:
+> > > Currently UFS host driver promises VCC supply if UFS device
+> > > needs to do WriteBooster flush during runtime suspend.
+> > > 
+> > > However the UFS specification mentions,
+> > > 
+> > > "While the flushing operation is in progress, the device is
+> > > in Active power mode."
+> > > 
+> > > Therefore UFS host driver needs to promise more: Keep UFS
+> > > device as "Active power mode", otherwise UFS device shall not
+> > > do any flush if device enters Sleep or PowerDown power mode.
+> > > 
+> > > Fix this by not changing device power mode if WriteBooster
+> > > flush is required in ufshcd_suspend().
+> > > 
+> > > Signed-off-by: Stanley Chu <stanley.chu@mediatek.com>
+> > > ---
+> > >   drivers/scsi/ufs/ufs.h    |  1 -
+> > >   drivers/scsi/ufs/ufshcd.c | 39 +++++++++++++++++++--------------------
+> > >   2 files changed, 19 insertions(+), 21 deletions(-)
+> > > 
+> > > diff --git a/drivers/scsi/ufs/ufs.h b/drivers/scsi/ufs/ufs.h
+> > > index b3135344ab3f..9e4bc2e97ada 100644
+> > > --- a/drivers/scsi/ufs/ufs.h
+> > > +++ b/drivers/scsi/ufs/ufs.h
+> > > @@ -577,7 +577,6 @@ struct ufs_dev_info {
+> > >   	u32 d_ext_ufs_feature_sup;
+> > >   	u8 b_wb_buffer_type;
+> > >   	u32 d_wb_alloc_units;
+> > > -	bool keep_vcc_on;
+> > >   	u8 b_presrv_uspc_en;
+> > >   };
+> > >   
+> > > diff --git a/drivers/scsi/ufs/ufshcd.c b/drivers/scsi/ufs/ufshcd.c
+> > > index 169a3379e468..2d0aff8ac260 100644
+> > > --- a/drivers/scsi/ufs/ufshcd.c
+> > > +++ b/drivers/scsi/ufs/ufshcd.c
+> > > @@ -8101,8 +8101,7 @@ static void ufshcd_vreg_set_lpm(struct ufs_hba *hba)
+> > >   	    !hba->dev_info.is_lu_power_on_wp) {
+> > >   		ufshcd_setup_vreg(hba, false);
+> > >   	} else if (!ufshcd_is_ufs_dev_active(hba)) {
+> > > -		if (!hba->dev_info.keep_vcc_on)
+> > > -			ufshcd_toggle_vreg(hba->dev, hba->vreg_info.vcc, false);
+> > > +		ufshcd_toggle_vreg(hba->dev, hba->vreg_info.vcc, false);
+> > >   		if (!ufshcd_is_link_active(hba)) {
+> > >   			ufshcd_config_vreg_lpm(hba, hba->vreg_info.vccq);
+> > >   			ufshcd_config_vreg_lpm(hba, hba->vreg_info.vccq2);
+> > > @@ -8172,6 +8171,7 @@ static int ufshcd_suspend(struct ufs_hba *hba, enum ufs_pm_op pm_op)
+> > >   	enum ufs_pm_level pm_lvl;
+> > >   	enum ufs_dev_pwr_mode req_dev_pwr_mode;
+> > >   	enum uic_link_state req_link_state;
+> > > +	bool keep_curr_dev_pwr_mode = false;
+> > >   
+> > >   	hba->pm_op_in_progress = 1;
+> > >   	if (!ufshcd_is_shutdown_pm(pm_op)) {
+> > > @@ -8226,28 +8226,27 @@ static int ufshcd_suspend(struct ufs_hba *hba, enum ufs_pm_op pm_op)
+> > >   			/* make sure that auto bkops is disabled */
+> > >   			ufshcd_disable_auto_bkops(hba);
+> > >   		}
+> > > +
+> > Unnecessary newline, perhaps?
+> 
+> Yap, I will remove it in next version.
+> 
+> > >   		/*
+> > > -		 * With wb enabled, if the bkops is enabled or if the
+> > > -		 * configured WB type is 70% full, keep vcc ON
+> > > -		 * for the device to flush the wb buffer
+> > > +		 * If device needs to do BKOP or WB buffer flush, keep device
+> > > +		 * power mode as "active power mode" and its VCC supply.
+> > >   		 */
+> > > -		if ((hba->auto_bkops_enabled && ufshcd_is_wb_allowed(hba)) ||
+> > > -		    ufshcd_wb_keep_vcc_on(hba))
+> > > -			hba->dev_info.keep_vcc_on = true;
+> > > -		else
+> > > -			hba->dev_info.keep_vcc_on = false;
+> > > -	} else {
+> > > -		hba->dev_info.keep_vcc_on = false;
+> > > +		keep_curr_dev_pwr_mode = hba->auto_bkops_enabled ||
+> > > +			ufshcd_wb_keep_vcc_on(hba);
+> > Should the device be in UFS_ACTIVE_PWR_MODE to perform auto-bkops?
+> > 
+> > Also, is it needed to keep the device in UFS_ACTIVE_PWR_MODE , if flush 
+> > on hibern8 is enabled and the link is being put to hibern8 mode during 
+> > runtime-suspend? Perhaps that should also be factored in here?
+> 
+> Both auto-bkops and WriteBooster flush during Hibern8 need device power
+> mode to be "Active Power Mode".
+> 
+> For auto-bkops, the spec mentions,
+> 
+> "If the background operations enable bit is set and the device is in
+> Active power mode or Idle power mode, then the device is allowed to
+> execute any internal operations."
+> 
+> For WriteBooster flush during Hibern8, the spec mentions,
+> 
+> "While the flushing operation is in progress, the device is in Active
+> power mode."
+> 
+> Therefore here we can use an unified "keep_curr_dev_pwr_mode" to
+> indicate the same requirements of above both features.
+> 
+> Besides, both operations may access flash array inside UFS device thus
+> VCC supply shall be also kept.
+> 
+> Before this patch, the original code will keep device power mode (stay
+> in Active Power Mode) if hba->auto_bkops_enabled is set as true during
+> runtime-suspend with UFSHCD_CAP_AUTO_BKOPS_SUSPEND capability is
+> enabled. This patch will not change this decision, just add
+> "WriteBooster flush during Hibern8" feature as another condition to do
+> so.
+> 
+> Thank you so much to remind me that "Link shall be put in Hibern8" is a
+> necessary condition for "WriteBooster flush during Hibern8". I will add
+> more checking for keep_curr_dev_pwr_mode to prevent unnecessary power
+> drain.  
+> 
+> > >   	}
+> > >   
+> > > -	if ((req_dev_pwr_mode != hba->curr_dev_pwr_mode) &&
+> > > -	    ((ufshcd_is_runtime_pm(pm_op) && !hba->auto_bkops_enabled) ||
+> > > -	    !ufshcd_is_runtime_pm(pm_op))) {
+> > > -		/* ensure that bkops is disabled */
+> > > -		ufshcd_disable_auto_bkops(hba);
+> > > -		ret = ufshcd_set_dev_pwr_mode(hba, req_dev_pwr_mode);
+> > > -		if (ret)
+> > > -			goto enable_gating;
+> > > +	if (req_dev_pwr_mode != hba->curr_dev_pwr_mode) {
+> > > +		if ((ufshcd_is_runtime_pm(pm_op) && !hba->auto_bkops_enabled) ||
+> > > +		    !ufshcd_is_runtime_pm(pm_op)) {
+> > > +			/* ensure that bkops is disabled */
+> > > +			ufshcd_disable_auto_bkops(hba);
+> > > +		}
+> > > +
+> > > +		if (!keep_curr_dev_pwr_mode) {
+> > > +			ret = ufshcd_set_dev_pwr_mode(hba, req_dev_pwr_mode);
+> > 
+> > Now, when the WB buffer is completely flushed out, the device should be 
+> > put back into UFS_SLEEP_PWR_MODE or UFS_POWERDOWN_PWR_MODE. Say, the 
+> > device buffer has to be flushed and during runtime-suspend, the device 
+> > is put to UFS_ACTIVE_PWR_MODE and Vcc is kept ON; the device doesn't 
+> > resume nor does the system enters suspend for a very long time, and with 
+> > AH8 and hibern8 disabled, there will be an unnecessary power drain for 
+> > that much time.
+
+Another thought is that if keep_curr_dev_pwr_mode will be set as true
+only if link is put in Hibern8 or Auto-Hibern8 is enabled. By this way,
+the power consumption shall be very small after flush or auto-bkop is
+finished.
+
+Then the checking of flush status during runtime-suspend may be not
+necessary.
+
+> > 
+> > How about a periodic interval checking of flush status if 
+> > keep_curr_dev_pwr_mode evaluates to be true?
+> 
+> This is a good point!
+> 
+> The same thing also happens for auto-bkops. How about add a timer to
+> leave runtime suspend if keep_curr_dev_pwr_mode is set as true? This is
+> simple and also favors power. The timeout value could be adjustable
+> according to the available WriteBooster buffer size.
+> 
+> A periodic interval checking of flush status needs to re-activate link
+> to communicate with the device. This would be tricky and the
+> re-activation flow is just like runtime-resume.
+> 
+> What would you think?
+> 
+> Thanks.
+> Stanley Chu
+> 
+> 
+> _______________________________________________
+> Linux-mediatek mailing list
+> Linux-mediatek@lists.infradead.org
+> http://lists.infradead.org/mailman/listinfo/linux-mediatek
+
+_______________________________________________
+Linux-mediatek mailing list
+Linux-mediatek@lists.infradead.org
+http://lists.infradead.org/mailman/listinfo/linux-mediatek
