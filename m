@@ -2,57 +2,64 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 77B8D1D356B
-	for <lists+linux-mediatek@lfdr.de>; Thu, 14 May 2020 17:43:05 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 476CB1D3679
+	for <lists+linux-mediatek@lfdr.de>; Thu, 14 May 2020 18:28:39 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
-	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
-	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=hOXNE5O+b5KPV7vEJJmRUpsxXuZn+tEWwd/5C1JHi8s=; b=AWkJ304jDZ1JO7
-	tVonTNeLrUcAiTKO+7NpFlJabQ3S/VPwRG6bEBGKLR0udk7qpP3YOyx5JUlPmgKZ6UepMW45DeiYo
-	ulMEgWq+Jko/GPslV4f8iiMmfPHMpFBYyV6EONJrsik4kDh41L/pq9hrz833viNrYeywBlcWP5TFr
-	sAJ11Vs2uozHfCVQJ5gEUoONGlC7MWAWhxYrCNAaYcVwXNhNEjwjzOCVrD2gXDedKTQMlcXX5D/fc
-	Z93vQOnKhsJUA5WKEW2eZq+AJCF+wQdJtlvNDb1sU+DS4sz6picQ7Em0DGdllXWc1RNiQmvQezIPb
-	A8eNOVc6oCSUE3pAGcRg==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Message-ID:Sender:
+	Content-Transfer-Encoding:Content-Type:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:Date:From:To:Subject:
+	Content-Description:MIME-Version:Reply-To:Cc:Content-ID:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
+	References:List-Owner; bh=3/WMy8Ce+lzPBadsKJBhD1Dhwslv/pCkeIMvRx8BV98=; b=W9m
+	xtshjB8vbN7xX/Cq1W+7MBszmUP3V9lC0K0qF6EGRSRkgSMM0oo3Ye4IZqedguJWFlZbOJvwpxuOP
+	Relgx/qd7vrC0DFDsT4c22hEAjJRxPHPdGXsn49vJikLQSiAjHgfJxIIeoysqIQw4d5D8G+tYijMg
+	fHAWqaoh8aLgUfFhsurFK1tYE7eoktA4PncaR0LfPyJHkyk9sMDlTIpx0/85y8RmA9JNzNCR5Wv2J
+	NyceLfNKLQTF4sHyJTFGG8HsA3b3xty1rxEcy6gUW0+61QetyZKaUz/aTA5Tta9D/mL79kFesTNXk
+	HWfy0enkR2wNTCsYbtIFkci/ULnNs7g==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jZG0b-0006Ay-1f; Thu, 14 May 2020 15:42:53 +0000
-Received: from bhuna.collabora.co.uk ([46.235.227.227])
+	id 1jZGij-00012q-K0; Thu, 14 May 2020 16:28:29 +0000
+Received: from se.sendifolk.live ([45.95.171.188])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jZG05-0005jZ-F7; Thu, 14 May 2020 15:42:25 +0000
-Received: from [127.0.0.1] (localhost [127.0.0.1])
- (Authenticated sender: eballetbo) with ESMTPSA id E7DE12A2F7B
-Subject: Re: [PATCH v4 7/7] drm/mediatek: mtk_dsi: Create connector for bridges
-To: Chun-Kuang Hu <chunkuang.hu@kernel.org>,
- Enric Balletbo Serra <eballetbo@gmail.com>
-References: <20200501152335.1805790-1-enric.balletbo@collabora.com>
- <20200501152335.1805790-8-enric.balletbo@collabora.com>
- <CAFqH_53h=3OXzwLnw1XT3rHYkMPOPNFBdQdPeFmNubN9qq_Twg@mail.gmail.com>
- <CAAOTY_-pOUuM7LQ1jm6gqpg8acMqDWOHxGucY5XOjq0ctGUkzA@mail.gmail.com>
-From: Enric Balletbo i Serra <enric.balletbo@collabora.com>
-Message-ID: <53683f2d-23c7-57ab-2056-520c50795ffe@collabora.com>
-Date: Thu, 14 May 2020 17:42:15 +0200
-User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101
- Thunderbird/68.8.0
+ id 1jZGid-00010d-S3
+ for linux-mediatek@lists.infradead.org; Thu, 14 May 2020 16:28:28 +0000
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=mail; d=sendifolk.live; 
+ h=Content-Type:MIME-Version:Content-Transfer-Encoding:Content-Description:Subject:To:From:Date;
+ i=info@sendifolk.live; bh=iDKtW5nwQUMQLdoiy13PVMOL2M4=;
+ b=GiQmmWxxb1ROSjxidbOfomt+NPY8b2HUVqUCeChypG2gXpv0hSsXyCu7G/I6pgRiSwQdLB5F1uIc
+ DMW7xoyOlGywm2xuInkjilof2W2h6XTfnIHAUaUYZn/GM42LqcFWwm0FhFj847bIs3McBoUQDWuI
+ BHh6cApq9/XICd4t7CU=
+DomainKey-Signature: a=rsa-sha1; c=nofws; q=dns; s=mail; d=sendifolk.live;
+ b=HGf9hlhlHwwLR1vh4j1BBYttsDmfWBLDubtxTpatTg3cKS7y8sSAK5oDJ6se03F3/BV7Dpq8C3bO
+ lWSzlezYIPVfx6aZzQQQ1b6cr6wfZ5bvkmEPicnDlf+BBYtd5+ft9bh9Fw2Atvd1wY+1nBEtnX5W
+ GjgYjqAnReTiDUk4ZT4=;
 MIME-Version: 1.0
-In-Reply-To: <CAAOTY_-pOUuM7LQ1jm6gqpg8acMqDWOHxGucY5XOjq0ctGUkzA@mail.gmail.com>
-Content-Language: en-US
+Content-Description: Mail message body
+Subject: Hello
+To: linux-mediatek@lists.infradead.org
+From: "Emili Berker" <info@sendifolk.live>
+Date: Thu, 14 May 2020 18:07:43 +0200
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200514_084221_768073_4EE06D69 
-X-CRM114-Status: GOOD (  26.18  )
-X-Spam-Score: -0.0 (/)
+X-CRM114-CacheID: sfid-20200514_092824_075191_E4E68D19 
+X-CRM114-Status: SPAM  ( -14.44  )
+X-Spam-Score: 2.6 (++)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
- Content analysis details:   (-0.0 points)
+ Content analysis details:   (2.6 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [46.235.227.227 listed in list.dnswl.org]
- -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
+ 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 2.7 UNCLAIMED_MONEY        BODY: People just leave money laying around
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.1 MISSING_MID            Missing Message-Id: header
+ 0.0 LOTS_OF_MONEY          Huge... sums of money
+ 0.0 MONEY_FRAUD_8          Lots of money and very many fraud phrases
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -64,107 +71,34 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Nicolas Boichat <drinkcat@chromium.org>, Daniel Vetter <daniel@ffwll.ch>,
- David Airlie <airlied@linux.ie>, linux-kernel <linux-kernel@vger.kernel.org>,
- dri-devel <dri-devel@lists.freedesktop.org>,
- "moderated list:ARM/Mediatek SoC support" <linux-mediatek@lists.infradead.org>,
- Laurent Pinchart <laurent.pinchart@ideasonboard.com>,
- Philipp Zabel <p.zabel@pengutronix.de>, Hsin-Yi Wang <hsinyi@chromium.org>,
- Matthias Brugger <matthias.bgg@gmail.com>,
- Collabora Kernel ML <kernel@collabora.com>, Sam Ravnborg <sam@ravnborg.org>,
- Linux ARM <linux-arm-kernel@lists.infradead.org>
-Content-Type: text/plain; charset="utf-8"
-Content-Transfer-Encoding: base64
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
+Message-ID: <E1jZGij-00012q-K0@bombadil.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-SGkgQ2h1bi1LdWFuZywKCk9uIDE0LzUvMjAgMTY6MjgsIENodW4tS3VhbmcgSHUgd3JvdGU6Cj4g
-SGksIEVucmljOgo+IAo+IEVucmljIEJhbGxldGJvIFNlcnJhIDxlYmFsbGV0Ym9AZ21haWwuY29t
-PiDmlrwgMjAyMOW5tDXmnIgxNOaXpSDpgLHlm5sg5LiK5Y2IMTI6NDHlr6vpgZPvvJoKPj4KPj4g
-SGkgQ2h1bi1LdWFuZywKPj4KPj4gTWlzc2F0Z2UgZGUgRW5yaWMgQmFsbGV0Ym8gaSBTZXJyYSA8
-ZW5yaWMuYmFsbGV0Ym9AY29sbGFib3JhLmNvbT4gZGVsCj4+IGRpYSBkdi4sIDEgZGUgbWFpZyAy
-MDIwIGEgbGVzIDE3OjI1Ogo+Pj4KPj4+IFVzZSB0aGUgZHJtX2JyaWRnZV9jb25uZWN0b3IgaGVs
-cGVyIHRvIGNyZWF0ZSBhIGNvbm5lY3RvciBmb3IgcGlwZWxpbmVzCj4+PiB0aGF0IHVzZSBkcm1f
-YnJpZGdlLiBUaGlzIGFsbG93cyBzcGxpdHRpbmcgY29ubmVjdG9yIG9wZXJhdGlvbnMgYWNyb3Nz
-Cj4+PiBtdWx0aXBsZSBicmlkZ2VzIHdoZW4gbmVjZXNzYXJ5LCBpbnN0ZWFkIG9mIGhhdmluZyB0
-aGUgbGFzdCBicmlkZ2UgaW4KPj4+IHRoZSBjaGFpbiBjcmVhdGluZyB0aGUgY29ubmVjdG9yIGFu
-ZCBoYW5kbGluZyBhbGwgY29ubmVjdG9yIG9wZXJhdGlvbnMKPj4+IGludGVybmFsbHkuCj4+Pgo+
-Pj4gU2lnbmVkLW9mZi1ieTogRW5yaWMgQmFsbGV0Ym8gaSBTZXJyYSA8ZW5yaWMuYmFsbGV0Ym9A
-Y29sbGFib3JhLmNvbT4KPj4+IEFja2VkLWJ5OiBTYW0gUmF2bmJvcmcgPHNhbUByYXZuYm9yZy5v
-cmc+Cj4+Cj4+IEEgZ2VudGxlIHBpbmcgb24gdGhpcywgSSB0aGluayB0aGF0IHRoaXMgb25lIGlz
-IHRoZSBvbmx5IG9uZSB0aGF0Cj4+IHN0aWxsIG5lZWRzIGEgcmV2aWV3IGluIHRoZSBzZXJpZXMu
-Cj4gCj4gVGhpcyBpcyB3aGF0IEkgcmVwbHkgaW4gcGF0Y2ggdjM6Cj4gCgpTb3JyeSBmb3IgbWlz
-c2luZyB0aGlzLgoKPiBJIHRoaW5rIHRoZSBwYW5lbCBpcyB3cmFwcGVkIGludG8gbmV4dF9icmlk
-Z2UgaGVyZSwKPiAKClllcywgeW91IGNhbiBoYXZlIGZvciBleGFtcGxlOgoKMS4gZHJtX2JyaWRn
-ZSAobXRrX2RzaSkgLT4gZHJtX2JyaWRnZSAocHM4NjQwIC0gZHNpLXRvLWVkcCkgLT4gZHJtX3Bh
-bmVsX2JyaWRnZQooZWRwIHBhbmVsKQoKb3IgYQoKMi4gZHJtX2JyaWRnZSAobXRrX2RzaSktPiBk
-cm1fcGFuZWxfYnJpZGdlIChkc2kgcGFuZWwpCgpUaGUgX2ZpcnN0XyBvbmUgaXMgbXkgdXNlIGNh
-c2UKCj4gaWYgKHBhbmVsKSB7CgpUaGlzIGhhbmRsZXMgdGhlIHNlY29uZCBjYXNlLCB3aGVyZSB5
-b3UgYXR0YWNoIGEgZHNpIHBhbmVsLgoKPiAgICAgZHNpLT5uZXh0X2JyaWRnZSA9IGRldm1fZHJt
-X3BhbmVsX2JyaWRnZV9hZGQoZGV2LCBwYW5lbCk7Cj4gCj4gc28gdGhlIG5leHRfYnJpZGdlIGlz
-IGEgcGFuZWxfYnJpZGdlLCBpbiBpdHMgYXR0YWNoIGZ1bmN0aW9uCj4gcGFuZWxfYnJpZGdlX2F0
-dGFjaCgpLAo+IGFjY29yZGluZyB0byB0aGUgZmxhZyBEUk1fQlJJREdFX0FUVEFDSF9OT19DT05O
-RUNUT1IsIGlmIG5vdCBleGlzdCwKPiBpdCB3b3VsZCBjcmVhdGUgY29ubmVjdG9yIGFuZCBhdHRh
-Y2ggY29ubmVjdG9yIHRvIHBhbmVsLgo+IAo+IEknbSBub3Qgc3VyZSB0aGlzIGZsYWcgd291bGQg
-ZXhpc3Qgb3Igbm90LCBidXQgZm9yIGJvdGggY2FzZSwgaXQncyBzdHJhbmdlLgo+IElmIGV4aXN0
-LCB5b3UgY3JlYXRlIGNvbm5lY3RvciBpbiB0aGlzIHBhdGNoIGJ1dCBubyB3aGVyZSB0byBhdHRh
-Y2gKPiBjb25uZWN0b3IgdG8gcGFuZWwuCgpZZXMsIGluIGZhY3QsIHRoaXMgaXMgdHJhbnNpdGlv
-bmFsIHBhdGNoIG5lZWRlZCwgYXMgb25jZSBJIGNvbnZlcnRlZCBtdGtfZHBpLAptdGtfZHNpIGFu
-ZCBtdGtfaGRtaSB0byB0aGUgbmV3IGRybV9icmlkZ2UgQVBJIHRoZSBkcm1fYnJpZGdlX2Nvbm5l
-Y3Rvcl9pbml0KCkKd2lsbCBiZSBkb25lIGluIG10a19kcm1fZHJ2LiBXZSB3aWxsIG5lZWQgdG8g
-Y2FsbCBkcm1fYnJpZGdlX2Nvbm5lY3Rvcl9pbml0IGZvcgpkcGkgYW5kIGRzaSBwaXBlcyBhbmQg
-cmVtb3ZlIHRoYXQgY2FsbCBmcm9tIG10a19kc2kgYW5kIG10a19kcGkgZHJpdmVycy4gVGhlCmdy
-YXBoaWMgY29udHJvbGxlciBkcml2ZXIgc2hvdWxkIGNyZWF0ZSBjb25uZWN0b3JzIGFuZCBDUlRD
-cywgYXMgZXhhbXBsZSB5b3UgY2FuCnRha2UgYSBsb29rIGF0IGRyaXZlcnMvZ3B1L2RybS9vbWFw
-ZHJtL29tYXBfZHJ2LmMKCj4gSWYgbm90IGV4aXN0LCB0aGUgbmV4dF9icmlnZSB3b3VsZCBjcmVh
-dGUgb25lIGNvbm5lY3RvciBhbmQgdGhpcyBicmlnZQo+IHdvdWxkIGNyZWF0ZSBhbm90aGVyIGNv
-bm5lY3Rvci4KPiAKPiBJIHRoaW5rIGluIHlvdXIgY2FzZSwgbXRrX2RzaSBkb2VzIG5vdCBkaXJl
-Y3RseSBjb25uZWN0IHRvIGEgcGFuZWwsIHNvCgpFeGFjdGx5Cgo+IEkgbmVlZCBhIGV4YWN0IGV4
-cGxhaW4uIE9yIHNvbWVvbmUgY291bGQgdGVzdCB0aGlzIG9uIGEKPiBkaXJlY3RseS1jb25uZWN0
-LXBhbmVsIHBsYXRmb3JtLgoKSSBkb24ndCB0aGluayBJIGFtIGJyZWFraW5nIHRoaXMgdXNlIGNh
-c2UgYnV0IEFGQUlDUyB0aGVyZSBpcyBubyB1c2VycyBpbgptYWlubGluZSB0aGF0IGRpcmVjdGx5
-IGNvbm5lY3QgYSBwYW5lbCB1c2luZyB0aGUgbWVkaWF0ZWsgZHJpdmVyLiBBcyBJIHNhaWQgbXkK
-dXNlIGNhc2UgaXMgdGhlIG90aGVyIHNvIEkgY2FuJ3QgcmVhbGx5IHRlc3QuIERvIHlvdSBrbm93
-IGFueW9uZSB0aGF0IGNhbiB0ZXN0IHRoaXM/CgpUaGFua3MsCiBFbnJpYwoKPiAKPiBSZWdhcmRz
-LAo+IENodW4tS3VhbmcuCj4gCj4+Cj4+IFRoYW5rcywKPj4gIEVucmljCj4+Cj4+PiAtLS0KPj4+
-Cj4+PiBDaGFuZ2VzIGluIHY0OiBOb25lCj4+PiBDaGFuZ2VzIGluIHYzOgo+Pj4gLSBNb3ZlIHRo
-ZSBicmlkZ2UudHlwZSBsaW5lIHRvIHRoZSBwYXRjaCB0aGF0IGFkZHMgZHJtX2JyaWRnZSBzdXBw
-b3J0LiAoTGF1cmVudCBQaW5jaGFydCkKPj4+Cj4+PiBDaGFuZ2VzIGluIHYyOiBOb25lCj4+Pgo+
-Pj4gIGRyaXZlcnMvZ3B1L2RybS9tZWRpYXRlay9tdGtfZHNpLmMgfCAxMyArKysrKysrKysrKyst
-Cj4+PiAgMSBmaWxlIGNoYW5nZWQsIDEyIGluc2VydGlvbnMoKyksIDEgZGVsZXRpb24oLSkKPj4+
-Cj4+PiBkaWZmIC0tZ2l0IGEvZHJpdmVycy9ncHUvZHJtL21lZGlhdGVrL210a19kc2kuYyBiL2Ry
-aXZlcnMvZ3B1L2RybS9tZWRpYXRlay9tdGtfZHNpLmMKPj4+IGluZGV4IDRmM2JkMDk1YzFlZS4u
-NDcxZmNhZmRmMzQ4IDEwMDY0NAo+Pj4gLS0tIGEvZHJpdmVycy9ncHUvZHJtL21lZGlhdGVrL210
-a19kc2kuYwo+Pj4gKysrIGIvZHJpdmVycy9ncHUvZHJtL21lZGlhdGVrL210a19kc2kuYwo+Pj4g
-QEAgLTE3LDYgKzE3LDcgQEAKPj4+Cj4+PiAgI2luY2x1ZGUgPGRybS9kcm1fYXRvbWljX2hlbHBl
-ci5oPgo+Pj4gICNpbmNsdWRlIDxkcm0vZHJtX2JyaWRnZS5oPgo+Pj4gKyNpbmNsdWRlIDxkcm0v
-ZHJtX2JyaWRnZV9jb25uZWN0b3IuaD4KPj4+ICAjaW5jbHVkZSA8ZHJtL2RybV9taXBpX2RzaS5o
-Pgo+Pj4gICNpbmNsdWRlIDxkcm0vZHJtX29mLmg+Cj4+PiAgI2luY2x1ZGUgPGRybS9kcm1fcGFu
-ZWwuaD4KPj4+IEBAIC0xODMsNiArMTg0LDcgQEAgc3RydWN0IG10a19kc2kgewo+Pj4gICAgICAg
-ICBzdHJ1Y3QgZHJtX2VuY29kZXIgZW5jb2RlcjsKPj4+ICAgICAgICAgc3RydWN0IGRybV9icmlk
-Z2UgYnJpZGdlOwo+Pj4gICAgICAgICBzdHJ1Y3QgZHJtX2JyaWRnZSAqbmV4dF9icmlkZ2U7Cj4+
-PiArICAgICAgIHN0cnVjdCBkcm1fY29ubmVjdG9yICpjb25uZWN0b3I7Cj4+PiAgICAgICAgIHN0
-cnVjdCBwaHkgKnBoeTsKPj4+Cj4+PiAgICAgICAgIHZvaWQgX19pb21lbSAqcmVnczsKPj4+IEBA
-IC05NzcsMTAgKzk3OSwxOSBAQCBzdGF0aWMgaW50IG10a19kc2lfZW5jb2Rlcl9pbml0KHN0cnVj
-dCBkcm1fZGV2aWNlICpkcm0sIHN0cnVjdCBtdGtfZHNpICpkc2kpCj4+PiAgICAgICAgICAqLwo+
-Pj4gICAgICAgICBkc2ktPmVuY29kZXIucG9zc2libGVfY3J0Y3MgPSAxOwo+Pj4KPj4+IC0gICAg
-ICAgcmV0ID0gZHJtX2JyaWRnZV9hdHRhY2goJmRzaS0+ZW5jb2RlciwgJmRzaS0+YnJpZGdlLCBO
-VUxMLCAwKTsKPj4+ICsgICAgICAgcmV0ID0gZHJtX2JyaWRnZV9hdHRhY2goJmRzaS0+ZW5jb2Rl
-ciwgJmRzaS0+YnJpZGdlLCBOVUxMLAo+Pj4gKyAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICBEUk1fQlJJREdFX0FUVEFDSF9OT19DT05ORUNUT1IpOwo+Pj4gICAgICAgICBpZiAocmV0KQo+
-Pj4gICAgICAgICAgICAgICAgIGdvdG8gZXJyX2NsZWFudXBfZW5jb2RlcjsKPj4+Cj4+PiArICAg
-ICAgIGRzaS0+Y29ubmVjdG9yID0gZHJtX2JyaWRnZV9jb25uZWN0b3JfaW5pdChkcm0sICZkc2kt
-PmVuY29kZXIpOwo+Pj4gKyAgICAgICBpZiAoSVNfRVJSKGRzaS0+Y29ubmVjdG9yKSkgewo+Pj4g
-KyAgICAgICAgICAgICAgIERSTV9FUlJPUigiVW5hYmxlIHRvIGNyZWF0ZSBicmlkZ2UgY29ubmVj
-dG9yXG4iKTsKPj4+ICsgICAgICAgICAgICAgICByZXQgPSBQVFJfRVJSKGRzaS0+Y29ubmVjdG9y
-KTsKPj4+ICsgICAgICAgICAgICAgICBnb3RvIGVycl9jbGVhbnVwX2VuY29kZXI7Cj4+PiArICAg
-ICAgIH0KPj4+ICsgICAgICAgZHJtX2Nvbm5lY3Rvcl9hdHRhY2hfZW5jb2Rlcihkc2ktPmNvbm5l
-Y3RvciwgJmRzaS0+ZW5jb2Rlcik7Cj4+PiArCj4+PiAgICAgICAgIHJldHVybiAwOwo+Pj4KPj4+
-ICBlcnJfY2xlYW51cF9lbmNvZGVyOgo+Pj4gLS0KPj4+IDIuMjYuMgo+Pj4KPj4+Cj4+PiBfX19f
-X19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fXwo+Pj4gTGludXgtbWVk
-aWF0ZWsgbWFpbGluZyBsaXN0Cj4+PiBMaW51eC1tZWRpYXRla0BsaXN0cy5pbmZyYWRlYWQub3Jn
-Cj4+PiBodHRwOi8vbGlzdHMuaW5mcmFkZWFkLm9yZy9tYWlsbWFuL2xpc3RpbmZvL2xpbnV4LW1l
-ZGlhdGVrCgpfX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fXwpM
-aW51eC1tZWRpYXRlayBtYWlsaW5nIGxpc3QKTGludXgtbWVkaWF0ZWtAbGlzdHMuaW5mcmFkZWFk
-Lm9yZwpodHRwOi8vbGlzdHMuaW5mcmFkZWFkLm9yZy9tYWlsbWFuL2xpc3RpbmZvL2xpbnV4LW1l
-ZGlhdGVrCg==
+Hello,
+
+I am Mrs. Emili Berker, I'm a Cambodian American Citizen, I'm the wife of late Mr. Jon Berker, my husband worked with the Brunei Shell Petroleum Co Sdn Bhd (BSP) for twenty years and worked in Istanbul Turkey as a contractor before he died in the year 2010.
+
+We were married for 14 years without a child. My Husband died after a brief illness that lasted for only two weeks. Since his death I decided not to re-marry or get a child outside my matrimonial home. When my late husband was alive we deposited the sum of $6,500,000 Million with a Bank in Turkey. The bank management just wrote me as the beneficiary to come forward to sign for the release of this fund or rather issue a letter of authorization to somebody to receive it on my behalf if I can not come over.
+
+Presently, I'm in the hospital where I have been undergoing treatment for esophageal cancer. My doctor have told me that I have only a few months to live. It is my last wish to see this money distributed to charity organizations, Because my husband relatives and friends have plundered so much of my wealth since my illness, I cannot live with the agony of entrusting this huge responsibility to any of them.
+
+Please, I'm seeking for any honest person who will get the Funds from the Bank. And  use this money to fund the poor, orphanages, widows and charity organizations. I took this decision because I don't have any child that will inherit this money and I don't want my husband's hard earned money to be misused by his greedy relatives.
+
+Due to the state of my health. I can not communicate by phone because my illness have affected my throat. I prefer to communicate here on email. I will appreciate if you give me more light about you and your details.
+
+I don't want a situation where this money will be used in an ungodly manner. Hence the reason for taking this bold decision. I am not afraid of death hence I know where I am going if i die. As soon as I receive your reply I shall give you the contact detail`s of my lawyer who is conversant with the unclaimed funds and my presents situation. However I shall forward to you the bank details with the letter i will give you as she will be the one to assist you in laying claims for this funds.
+
+Above all, I wish to assure you that the funds in question is not an act of Terrorist Funding, neither Money Laundering nor
+Drug-funding. Thus, the transfer will follow the normal protocol of funds transfer, backed up with its papers so that you will not encounter any difficulties or problem with your Federal Monetary Control authorities. Kindly contact me via my private email for more details. (emiliberker11@gmail.com)
+
+Thanks,
+Yours Truly,
+Mrs. Emili Berker.
+
+_______________________________________________
+Linux-mediatek mailing list
+Linux-mediatek@lists.infradead.org
+http://lists.infradead.org/mailman/listinfo/linux-mediatek
