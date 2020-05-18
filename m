@@ -2,61 +2,64 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 609B61D7100
-	for <lists+linux-mediatek@lfdr.de>; Mon, 18 May 2020 08:31:40 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id EDC201D715D
+	for <lists+linux-mediatek@lfdr.de>; Mon, 18 May 2020 08:55:53 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=Mel0axzgbNhg7kyggkd2qgR9RZZj5YaYJ/aPd1J5+wM=; b=RFmA8FTCzhDYtr
-	kgE4EsGh9/I/XDYVJyxypl82gycSeJ+MQJOR6itugHKxzK4o9Rb/5t7Ea8hMA05nYbuIXhakRb1lx
-	p8G4efVIViqEkQI14/1x5GMXff3TjInkeCUpLYakoEBl7nlqvXEFDOBPuY4U5cXxL5EiqBl2FirJr
-	5QlKTjfqNx4hE+XwDGZpXkky+QNeqbQl8eOl1fc4YzZkE7xerCNTLBnjrEjzNpcpIBGRTL0PXIKDN
-	1ltgFmgwhVIX5uW5xnc3PBkCxtqvSZh95trS31R8uZdFiIqcjyuO0ypc0OQN1NV1NjgXzC9NP8sGO
-	2UIFx2+hyqkn8J5ZmZpw==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=i0eHyN6rbSnluA7Nw75SJM3xm3CaO3L0rSyMeQT5Rfw=; b=uVTrchL7m+PlXx
+	wI4/GRYPs0dT+AD0hyZztDxjX0Vun4xCaXp53alLD7EAwBw50EJhuur3pLH7xwzTdo+0fnTHW76Y4
+	Getx/rbRDnAAzzs4MDmUKIH8GZmEMydKVdDbQPiX0W2Y7FdrfBAbPGQA22N2YFEXIaTdso/kBxHbq
+	yqaaAFzZRIq2lBTEJpR0D6JFgi2pAcvvyTfnLNj/coA7ekSwKE5yqHIjKhhTnOC+vQOBMUCT/C/YX
+	0I3VYLTE7ofY/ih0A+mooOFHG4GR4ECL1BFniOnuU+sT4uQi7oOm6WN7a7UIkvvCQUv5JUkBnWL5P
+	lClm4dv9PCCN0HtYkqgQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jaZJF-0005qn-IX; Mon, 18 May 2020 06:31:33 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1jaZge-0004pr-KK; Mon, 18 May 2020 06:55:44 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jaZJ6-0005ih-Dk; Mon, 18 May 2020 06:31:25 +0000
-X-UUID: dc8767a4681549e49f2f693cde66debf-20200517
+ id 1jaZga-0004pF-Ol
+ for linux-mediatek@lists.infradead.org; Mon, 18 May 2020 06:55:42 +0000
+X-UUID: dcc079fdc6d143b6982f9aa4130ba5f6-20200517
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
  s=dk; 
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:Subject:CC:To:From;
- bh=opBrR/j4yNpYI9GLAoGb+LP86AmZJLpZ4GTLHbq+76M=; 
- b=b/cuiUVMCTMRmlXe+Do/1NeASFeflcaguasracDFK8kUWDP+LRb09NKC3We9UHhKA7BmuHxcl027NCG5TqYjl5/Z3lM2Be7DY/LImtdPW2K5oAXVyLrzE6oN/jmN4nFl5yhZtrKO9TAH/p7J19G9LnEjqIZB4vXiNeGxjgywP48=;
-X-UUID: dc8767a4681549e49f2f693cde66debf-20200517
-Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw01.mediatek.com
- (envelope-from <walter-zh.wu@mediatek.com>)
+ h=Content-Transfer-Encoding:MIME-Version:Content-Type:References:In-Reply-To:Date:CC:To:From:Subject:Message-ID;
+ bh=BE27p8cgAXdiOJaTc4rLjiLgh00VCcwZpGfoS4OOzsM=; 
+ b=ptpOJFQJPFBPL0cXkOqi5XQq0/yJTcAYzd6Xd1kQWwUg4VdHh2mnbGPt0mbD9ULSgjuY9RuCQsxe6WDM+RcppeVDqP5klDWQdDGAiu8iiqef6Im9IPnivLimwGbVBzh1ZnPdTsfZL3fSYtLAJ1PlFQquB/C2sLu1OEw+FwOZ+Sc=;
+X-UUID: dcc079fdc6d143b6982f9aa4130ba5f6-20200517
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
+ (envelope-from <yong.wu@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 629052408; Sun, 17 May 2020 22:30:58 -0800
-Received: from MTKMBS01N2.mediatek.inc (172.21.101.79) by
- MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
- 15.0.1497.2; Sun, 17 May 2020 23:31:16 -0700
-Received: from mtkcas08.mediatek.inc (172.21.101.126) by
- mtkmbs01n2.mediatek.inc (172.21.101.79) with Microsoft SMTP Server (TLS) id
- 15.0.1497.2; Mon, 18 May 2020 14:31:15 +0800
-Received: from mtksdccf07.mediatek.inc (172.21.84.99) by mtkcas08.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1497.2 via
- Frontend Transport; Mon, 18 May 2020 14:31:15 +0800
-From: Walter Wu <walter-zh.wu@mediatek.com>
-To: Andrey Ryabinin <aryabinin@virtuozzo.com>, Alexander Potapenko
- <glider@google.com>, Dmitry Vyukov <dvyukov@google.com>, Jonathan Corbet
- <corbet@lwn.net>
-Subject: [PATCH v3 4/4] kasan: update documentation for generic kasan
-Date: Mon, 18 May 2020 14:31:15 +0800
-Message-ID: <20200518063115.4827-1-walter-zh.wu@mediatek.com>
-X-Mailer: git-send-email 2.18.0
+ with ESMTP id 847130598; Sun, 17 May 2020 22:55:16 -0800
+Received: from MTKMBS31N2.mediatek.inc (172.27.4.87) by
+ MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
+ 15.0.1497.2; Sun, 17 May 2020 23:52:52 -0700
+Received: from MTKCAS36.mediatek.inc (172.27.4.186) by MTKMBS31N2.mediatek.inc
+ (172.27.4.87) with Microsoft SMTP Server (TLS) id 15.0.1497.2;
+ Mon, 18 May 2020 14:52:46 +0800
+Received: from [10.17.3.153] (10.17.3.153) by MTKCAS36.mediatek.inc
+ (172.27.4.170) with Microsoft SMTP Server id 15.0.1497.2 via Frontend
+ Transport; Mon, 18 May 2020 14:52:46 +0800
+Message-ID: <1589784680.15083.19.camel@mhfsdcap03>
+Subject: Re: [PATCH v2 23/33] iommu/mediatek-v1 Convert to
+ probe/release_device() call-backs
+From: Yong Wu <yong.wu@mediatek.com>
+To: Joerg Roedel <joro@8bytes.org>
+Date: Mon, 18 May 2020 14:51:20 +0800
+In-Reply-To: <20200515100718.GS18353@8bytes.org>
+References: <20200414131542.25608-1-joro@8bytes.org>
+ <20200414131542.25608-24-joro@8bytes.org>
+ <1589528699.26119.9.camel@mhfsdcap03> <20200515100718.GS18353@8bytes.org>
+X-Mailer: Evolution 3.10.4-0ubuntu2 
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: ED675643220DB99B8C2E7E6E1D9CE046C7ED0213B08C9DA93969DC6F10C244012000:8
+X-TM-SNTS-SMTP: 645326C83BAFED16ABAF80B4AAC8D7BA842597586DFE9CAF78B92A85A256ADAF2000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200517_233124_465271_325D57A2 
-X-CRM114-Status: UNSURE (   7.07  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20200517_235540_814932_50CA4522 
+X-CRM114-Status: GOOD (  22.59  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
@@ -64,8 +67,6 @@ X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  ---- ---------------------- --------------------------------------------------
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 MIME_BASE64_TEXT       RAW: Message text disguised using base64
- encoding
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
@@ -86,43 +87,136 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Walter Wu <walter-zh.wu@mediatek.com>,
- wsd_upstream <wsd_upstream@mediatek.com>, linux-kernel@vger.kernel.org,
- kasan-dev@googlegroups.com, linux-mm@kvack.org,
- linux-mediatek@lists.infradead.org, linux-arm-kernel@lists.infradead.org
+Cc: Joerg Roedel <jroedel@suse.de>, Robin Murphy <robin.murphy@arm.com>,
+ linux-kernel@vger.kernel.org, iommu@lists.linux-foundation.org,
+ linux-mediatek@lists.infradead.org, Matthias Brugger <matthias.bgg@gmail.com>,
+ Will Deacon <will@kernel.org>, Marek Szyprowski <m.szyprowski@samsung.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Generic KASAN will support to record the last two call_rcu() call
-stacks and print them in KASAN report. so we update documentation.
+On Fri, 2020-05-15 at 12:07 +0200, Joerg Roedel wrote:
+> Hi,
+> 
+> On Fri, May 15, 2020 at 03:44:59PM +0800, Yong Wu wrote:
+> > On Tue, 2020-04-14 at 15:15 +0200, Joerg Roedel wrote:
+> > > -	return iommu_device_link(&data->iommu, dev);
+> > > +	err = arm_iommu_attach_device(dev, mtk_mapping);
+> > > +	if (err)
+> > > +		dev_err(dev, "Can't create IOMMU mapping - DMA-OPS will not work\n");
+> > 
+> > 
+> > Hi Joerg,
+> > 
+> >      Thanks very much for this patch.
+> > 
+> >      This arm_iommu_attach_device is called just as we expected.
+> > 
+> >      But it will fail in this callstack as the group->mutex was tried to
+> > be re-locked...
+> > 
+> > [<c0938e8c>] (iommu_attach_device) from [<c0317590>]
+> > (__arm_iommu_attach_device+0x34/0x90)
+> > [<c0317590>] (__arm_iommu_attach_device) from [<c03175f8>]
+> > (arm_iommu_attach_device+0xc/0x20)
+> > [<c03175f8>] (arm_iommu_attach_device) from [<c09432cc>]
+> > (mtk_iommu_probe_finalize+0x34/0x50)
+> > [<c09432cc>] (mtk_iommu_probe_finalize) from [<c093a8ac>]
+> > (bus_iommu_probe+0x2a8/0x2c4)
+> > [<c093a8ac>] (bus_iommu_probe) from [<c093a950>] (bus_set_iommu
+> > +0x88/0xd4)
+> > [<c093a950>] (bus_set_iommu) from [<c0943c74>] (mtk_iommu_probe
+> > +0x2f8/0x364)
+> 
+> Thanks for the report, is
+> 
+> 	https://lore.kernel.org/lkml/1589530123-30240-1-git-send-email-yong.wu@mediatek.com/
+> 
+> The fix for this issue or is something else required?
 
-Signed-off-by: Walter Wu <walter-zh.wu@mediatek.com>
-Cc: Andrey Ryabinin <aryabinin@virtuozzo.com>
-Cc: Dmitry Vyukov <dvyukov@google.com>
-Cc: Alexander Potapenko <glider@google.com>
-Cc: Jonathan Corbet <corbet@lwn.net>
----
- Documentation/dev-tools/kasan.rst | 3 +++
- 1 file changed, 3 insertions(+)
+No. That patch only adjust the internal flow to satisfy the latest
+framework, it's not for fixing this mutex issue. 
 
-diff --git a/Documentation/dev-tools/kasan.rst b/Documentation/dev-tools/kasan.rst
-index c652d740735d..fede42e6536b 100644
---- a/Documentation/dev-tools/kasan.rst
-+++ b/Documentation/dev-tools/kasan.rst
-@@ -193,6 +193,9 @@ function calls GCC directly inserts the code to check the shadow memory.
- This option significantly enlarges kernel but it gives x1.1-x2 performance
- boost over outline instrumented kernel.
+Here I only reported this issue.
+
+below is my local patch. split "dma_attach" to attach_device and
+probe_finalize. About attach_device, Use the existed
+__iommu_attach_group instead. Then rename from the "dma_attach" to
+"probe_finalize" to do the probe_finalize job. And move it outside of
+the mutex_unlock.
+
+I'm not sure if it is right. and of course I will test if you have any
+other solution. Thanks.
+
+
+--- a/drivers/iommu/iommu.c
++++ b/drivers/iommu/iommu.c
+@@ -1665,26 +1665,20 @@ static void probe_alloc_default_domain(struct
+bus_type *bus,
  
-+Generic KASAN prints up to 2 call_rcu() call stacks in reports, the last one
-+and the second to last.
+ }
+ 
+-static int iommu_group_do_dma_attach(struct device *dev, void *data)
++static int iommu_group_do_probe_finalize(struct device *dev, void
+*data)
+ {
+ 	struct iommu_domain *domain = data;
+-	const struct iommu_ops *ops;
+-	int ret;
+-
+-	ret = __iommu_attach_device(domain, dev);
+-
+-	ops = domain->ops;
++	const struct iommu_ops *ops = domain->ops;
+ 
+-	if (ret == 0 && ops->probe_finalize)
++	if (ops->probe_finalize)
+ 		ops->probe_finalize(dev);
+-
+-	return ret;
++	return 0;
+ }
+ 
+-static int __iommu_group_dma_attach(struct iommu_group *group)
++static int iommu_group_probe_finalize(struct iommu_group *group)
+ {
+ 	return __iommu_group_for_each_dev(group, group->default_domain,
+-					  iommu_group_do_dma_attach);
++					  iommu_group_do_probe_finalize);
+ }
+ 
+ static int iommu_do_create_direct_mappings(struct device *dev, void
+*data)
+@@ -1731,12 +1725,14 @@ int bus_iommu_probe(struct bus_type *bus)
+ 
+ 		iommu_group_create_direct_mappings(group);
+ 
+-		ret = __iommu_group_dma_attach(group);
++		ret = __iommu_attach_group(group->default_domain, group);
+ 
+ 		mutex_unlock(&group->mutex);
+ 
+ 		if (ret)
+ 			break;
 +
- Software tag-based KASAN
- ~~~~~~~~~~~~~~~~~~~~~~~~
++		iommu_group_probe_finalize(group);
+ 	}
  
+ 	return ret;
 -- 
-2.18.0
+
+> 
+> 
+> Thanks,
+> 
+> 	Joerg
+> 
+> _______________________________________________
+> Linux-mediatek mailing list
+> Linux-mediatek@lists.infradead.org
+> http://lists.infradead.org/mailman/listinfo/linux-mediatek
+
 _______________________________________________
 Linux-mediatek mailing list
 Linux-mediatek@lists.infradead.org
