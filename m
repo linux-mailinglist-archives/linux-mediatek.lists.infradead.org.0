@@ -2,47 +2,46 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id AD7651D8071
-	for <lists+linux-mediatek@lfdr.de>; Mon, 18 May 2020 19:40:03 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id DC9581D8075
+	for <lists+linux-mediatek@lfdr.de>; Mon, 18 May 2020 19:40:04 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=x6/1RGAmyGN1XFNazaJXlDOL7iMGakbe0f4gkDuoe1c=; b=XS2s8uOEwoOYMu
-	0tqr4IKCpVEzEAjQfdLhy30URlNSQwzmjdVjZowtqez8AYIfuV+L8udLjHNoVIUE2wvVaqemFspGS
-	JSlypPwLsBwtctd5ZdcziT21u4q8DK9+m5mwr8bwOqUa3Q/ngeam0ouVA5Xi5+lXLjB6uT58vWqHi
-	qjQNv6+1B9fVQL3rNRl/E6a0G2Msu0RtEUqcPeoSnRa8ALuqTQ47xKunh1FvN9uOH8D+FBDh2b/b9
-	6HA3nnS+cxokI6RRRjP4rFZh+Z7HTwSWjXFrt9ADAJ3YNZVXUpx3fOtpIEG/EZISetYGlPdX0L8t0
-	kRloRQs0qX9s4nFYFwTA==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=ZYR/D6V/rplEFb9nX7qGNsdvE7i62OJfD9MgGb3HBOc=; b=g0bCvQ//eF0UCZ
+	uatStKCNXVzjwbSmaCr1uDTYmBnEqBVarmqmF1ne+3OuWv29S51SuFn6v9E7nhEURLJiXbxUgUtAA
+	ex5IkubihHKo3I6iqmwg6tq1Rj1v0wUIM8+2DbgpiPvZ+IuFsHIymamaALETcbau9ClRdMyBxXIry
+	+y4uG20CwTLN7/q38v9025tbJr4EPKOAvSTioO1A039gF69rcsLLX35dnm4O+rSlNanwSyXh1Kz5h
+	2Yrb542ZKUljKrUhWfyqX/x0Vhkkb8vQz+PSepcYKni5yf4wSfd9TsNQ/HxYdT5GH0dHrG/Ak3t61
+	Qknuz6/EN6PytV1H+LMw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jajk5-0000Fa-7t; Mon, 18 May 2020 17:39:57 +0000
-Received: from bhuna.collabora.co.uk ([46.235.227.227])
+	id 1jajk4-0000BN-7T; Mon, 18 May 2020 17:39:56 +0000
+Received: from bhuna.collabora.co.uk ([2a00:1098:0:82:1000:25:2eeb:e3e3])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jajjX-0007wn-FH; Mon, 18 May 2020 17:39:25 +0000
+ id 1jajjX-0007ws-Lg; Mon, 18 May 2020 17:39:25 +0000
 Received: from [127.0.0.1] (localhost [127.0.0.1])
- (Authenticated sender: eballetbo) with ESMTPSA id 614452A0C85
+ (Authenticated sender: eballetbo) with ESMTPSA id 91C232A0C9C
 From: Enric Balletbo i Serra <enric.balletbo@collabora.com>
 To: linux-kernel@vger.kernel.org,
 	Collabora Kernel ML <kernel@collabora.com>
-Subject: [RESEND PATCH 0/3] Convert mtk-dpi to drm_bridge API
-Date: Mon, 18 May 2020 19:39:06 +0200
-Message-Id: <20200518173909.2259259-1-enric.balletbo@collabora.com>
+Subject: [RESEND PATCH 1/3] drm/mediatek: mtk_dpi: Rename bridge to next_bridge
+Date: Mon, 18 May 2020 19:39:07 +0200
+Message-Id: <20200518173909.2259259-2-enric.balletbo@collabora.com>
 X-Mailer: git-send-email 2.26.2
+In-Reply-To: <20200518173909.2259259-1-enric.balletbo@collabora.com>
+References: <20200518173909.2259259-1-enric.balletbo@collabora.com>
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200518_103923_666022_87258B50 
-X-CRM114-Status: UNSURE (   7.49  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20200518_103923_844333_5990E469 
+X-CRM114-Status: GOOD (  10.35  )
 X-Spam-Score: -0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  Content analysis details:   (-0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [46.235.227.227 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
  0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
@@ -70,27 +69,54 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-The reason for this resend is because I forget to add some bridge
-maintainers. So adding them and collect the actual tags.
+This is really a cosmetic change just to make a bit more readable the
+code after convert the driver to drm_bridge. The bridge variable name
+will be used by the encoder drm_bridge, and the chained bridge will be
+named next_bridge.
 
-The mtk-dpi driver still uses the drm_encoder API which is now somewhat
-deprecated. We started to move all the Mediatek drivers to the drm_bridge API,
-like we did for the mtk-dsi driver [1], this is another small step to be able to
-fully convert the DRM Mediatek drivers to the drm_bridge API. A dummy
-drm_encoder is maintained in the mtk-dpi driver but the end goal is move all the
-dummy drm_encoder (mtk-dsi, mtk-dpi, etc) to the main mtk_drm_drv driver.
+Signed-off-by: Enric Balletbo i Serra <enric.balletbo@collabora.com>
+Reviewed-by: Chun-Kuang Hu <chunkuang.hu@kernel.org>
+---
 
-[1] https://lore.kernel.org/patchwork/project/lkml/list/?series=441559
+ drivers/gpu/drm/mediatek/mtk_dpi.c | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
 
-
-Enric Balletbo i Serra (3):
-  drm/mediatek: mtk_dpi: Rename bridge to next_bridge
-  drm/mediatek: mtk_dpi: Convert to bridge driver
-  drm/mediatek: mtk_dpi: Use simple encoder
-
- drivers/gpu/drm/mediatek/mtk_dpi.c | 84 ++++++++++++++----------------
- 1 file changed, 39 insertions(+), 45 deletions(-)
-
+diff --git a/drivers/gpu/drm/mediatek/mtk_dpi.c b/drivers/gpu/drm/mediatek/mtk_dpi.c
+index 7fbfa95bab09..7112125dc3d1 100644
+--- a/drivers/gpu/drm/mediatek/mtk_dpi.c
++++ b/drivers/gpu/drm/mediatek/mtk_dpi.c
+@@ -61,7 +61,7 @@ enum mtk_dpi_out_color_format {
+ struct mtk_dpi {
+ 	struct mtk_ddp_comp ddp_comp;
+ 	struct drm_encoder encoder;
+-	struct drm_bridge *bridge;
++	struct drm_bridge *next_bridge;
+ 	void __iomem *regs;
+ 	struct device *dev;
+ 	struct clk *engine_clk;
+@@ -607,7 +607,7 @@ static int mtk_dpi_bind(struct device *dev, struct device *master, void *data)
+ 	/* Currently DPI0 is fixed to be driven by OVL1 */
+ 	dpi->encoder.possible_crtcs = BIT(1);
+ 
+-	ret = drm_bridge_attach(&dpi->encoder, dpi->bridge, NULL, 0);
++	ret = drm_bridge_attach(&dpi->encoder, dpi->next_bridge, NULL, 0);
+ 	if (ret) {
+ 		dev_err(dev, "Failed to attach bridge: %d\n", ret);
+ 		goto err_cleanup;
+@@ -747,11 +747,11 @@ static int mtk_dpi_probe(struct platform_device *pdev)
+ 	}
+ 
+ 	ret = drm_of_find_panel_or_bridge(dev->of_node, 0, 0,
+-					  NULL, &dpi->bridge);
++					  NULL, &dpi->next_bridge);
+ 	if (ret)
+ 		return ret;
+ 
+-	dev_info(dev, "Found bridge node: %pOF\n", dpi->bridge->of_node);
++	dev_info(dev, "Found bridge node: %pOF\n", dpi->next_bridge->of_node);
+ 
+ 	comp_id = mtk_ddp_comp_get_id(dev->of_node, MTK_DPI);
+ 	if (comp_id < 0) {
 -- 
 2.26.2
 
