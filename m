@@ -2,82 +2,76 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 00AAA1D7BF4
-	for <lists+linux-mediatek@lfdr.de>; Mon, 18 May 2020 16:57:15 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 7F42E1D7CC6
+	for <lists+linux-mediatek@lfdr.de>; Mon, 18 May 2020 17:23:47 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
+	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=qSLqbOWLhvZLIja6u4KTllLFEGCtJqPtfLTvOupzKFc=; b=JAe1+Nk+tUR2SY
-	52tR0c3hBLS6H42yXfEqrAB2lZ5PCP0F5NGA7jffYZ1wEUL25QzDNMVzX3X8IACbO+DpFvbCu5L3g
-	+9GB943GQnvsZqf6jmZfGbAPj/qN9dk4eV5LLXyO1uLG4yD50Pikm4zlyRhBiKyVlvOdR9bgUhJP3
-	A0nX/9OIi/olwCYsu3BodjY6vQaT3gDLQRqgl+FqSHkicStbwXoxc16iO1z/Ge75iSMk6+94/DgcJ
-	clp9iZkTofrChoJ3KFBUgOIicXcjLUw4rq+NKLl0D3VBsetV2UNYYJgnGqVtnlznQSZpq9IbUvGtk
-	JPtl1UsKh8YW/b84TBgQ==;
+	List-Owner; bh=9mlp3vyWnDFICM6NRlWvXQxf/sieogMPurA3fMDbsh0=; b=GDMVHJSbgi5n9E
+	d9RH6NxeZgQQI2Yoi9iedZjMCLWl274BHd14/v7+aorS5tXWbX+F++RGAiEMLvuXyO6chaA4zviE5
+	p24iEDYMHrTxjjx13O+OCTzYotfhJwU8+GmQ86s6iFb1IVeJEgldqpoQIyPx7nYgt1pHJOoV8Gqr9
+	8MMiGymjr3yUZwr0HnA6DdnmMYhwYL8sKGYi39iRi7Z0k1uvtmByepiy7g17KVZnpbZULyTD+uUHj
+	54Z/NVEu+PGk9JEkiJQMg49/OcCICkSZhfFxEnNTcg7GOCLyEv3NhfF8dvIYJAJISbVz27VatVqSh
+	O9XK3UQ7tZbVxrWc1pyA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jahCR-0007gL-R3; Mon, 18 May 2020 14:57:03 +0000
-Received: from mail-lf1-x143.google.com ([2a00:1450:4864:20::143])
+	id 1jahc8-0002d6-VE; Mon, 18 May 2020 15:23:36 +0000
+Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jahCP-0007fe-BU
- for linux-mediatek@lists.infradead.org; Mon, 18 May 2020 14:57:02 +0000
-Received: by mail-lf1-x143.google.com with SMTP id 82so8347990lfh.2
- for <linux-mediatek@lists.infradead.org>; Mon, 18 May 2020 07:56:58 -0700 (PDT)
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:date:from:to:cc:subject:message-id:references
- :mime-version:content-disposition:in-reply-to;
- bh=py+NSpkp68bZvDketQ0LHFlU7cQ4OapcQ54P+6JzKs4=;
- b=hJ0W2sY6xY4h/4yPcIn+IueZcTnRcxkA1H+TTx694Z4BSYqsTLKp51KNvTyzHQRPW3
- Uu3bD7M3M0+vMTF7l00dL8VThyImgbjwNx/k3j9DMECaxKfrlBBLXMGrlVUICk7s5W0h
- n1fisBGuhuQNl2zIOagLrgFtrXVQ2UuqDOjruYzumbRgq5bcQIs8naign6KqN/IOyJOH
- BiDegZdQB6If9lZYWwn1ebh2w3LxvbMzWunzSJQd5/m+W+0LX2KnaU6R1Xd42I0sfC8L
- 0jzuXDj4lu65yK0ShTbILhihWZYVz0pKS2birQkBH84vwfPi3fO8Cl2QcTHiNsaUQzRy
- qRWA==
-X-Gm-Message-State: AOAM531I1nCes+xRkw38M2faLyyN6ukZm7iJVZBXpRzKVfg/jFaCwRIk
- zwcDSceOWtdLJ4V07VsPcds=
-X-Google-Smtp-Source: ABdhPJx+XZWZVGWM9nNpq7eb8MJwagwl3MdlS+Oya7jXIfgJ6ix2JYoNLOYvub/lc0afK3SzKDkuUg==
-X-Received: by 2002:ac2:4105:: with SMTP id b5mr12178529lfi.94.1589813807316; 
- Mon, 18 May 2020 07:56:47 -0700 (PDT)
-Received: from xi.terra (c-beaee455.07-184-6d6c6d4.bbcust.telenor.se.
- [85.228.174.190])
- by smtp.gmail.com with ESMTPSA id x10sm3000527ljd.25.2020.05.18.07.56.46
- (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Mon, 18 May 2020 07:56:46 -0700 (PDT)
-Received: from johan by xi.terra with local (Exim 4.92.3)
- (envelope-from <johan@kernel.org>)
- id 1jahCF-0004MN-Vd; Mon, 18 May 2020 16:56:52 +0200
-Date: Mon, 18 May 2020 16:56:51 +0200
-From: Johan Hovold <johan@kernel.org>
-To: Claire Chang <tientzu@chromium.org>
-Subject: Re: [PATCH 1/3] serdev: ttyport: add devt for tty port
-Message-ID: <20200518145651.GL25962@localhost>
-References: <20200506072314.112409-1-tientzu@chromium.org>
- <20200506072314.112409-2-tientzu@chromium.org>
+ id 1jahbw-0002TN-QP; Mon, 18 May 2020 15:23:26 +0000
+Received: from mail-ej1-f41.google.com (mail-ej1-f41.google.com
+ [209.85.218.41])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
+ (No client certificate requested)
+ by mail.kernel.org (Postfix) with ESMTPSA id 32DE720758;
+ Mon, 18 May 2020 15:23:24 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
+ s=default; t=1589815404;
+ bh=yxtbYhqiBpX0vaCKJ8nincWDlOttWPQGQYeL0KqTH88=;
+ h=References:In-Reply-To:From:Date:Subject:To:Cc:From;
+ b=rejD3Cq3JkMBTzUozSEQ/NMDN4wNabDl16h10hnxRO/FeHWgmHuBR1gpptZvSLEmk
+ MerhXjFPxqumyVcS4pDPVo779TNtQyQiVWYUsMSyf/WgUSilWfXZfG2UVY6cyEzsRH
+ qEihdwS5ax4XJoPtGyu0LU44g3M2x4HNHH/cZuEo=
+Received: by mail-ej1-f41.google.com with SMTP id o10so9128758ejn.10;
+ Mon, 18 May 2020 08:23:24 -0700 (PDT)
+X-Gm-Message-State: AOAM533HiYz0L6v8v4vIdJ6VuOzmAhyc9xaEM6/Gr4QUU1BpTtbgy02M
+ LH341K1kfwRh8IHoAjKovxHuk7/yrFwnHz/gwQ==
+X-Google-Smtp-Source: ABdhPJx1xmRv1Gbqt6X2HaH4typf9wcXv81hsB28v44g5GQNU5bFmryX50AtKCXktDvePVh8ZZJSpwAS+KTHOyiTrIE=
+X-Received: by 2002:a17:906:924a:: with SMTP id
+ c10mr10734314ejx.360.1589815402680; 
+ Mon, 18 May 2020 08:23:22 -0700 (PDT)
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <20200506072314.112409-2-tientzu@chromium.org>
+References: <20200518112254.23692-1-matthias.bgg@kernel.org>
+In-Reply-To: <20200518112254.23692-1-matthias.bgg@kernel.org>
+From: Chun-Kuang Hu <chunkuang.hu@kernel.org>
+Date: Mon, 18 May 2020 23:23:09 +0800
+X-Gmail-Original-Message-ID: <CAAOTY_-kBsnBk3RRUb_ks96c1Cf6hJ+SeSE4T52Djoqjzxk3jA@mail.gmail.com>
+Message-ID: <CAAOTY_-kBsnBk3RRUb_ks96c1Cf6hJ+SeSE4T52Djoqjzxk3jA@mail.gmail.com>
+Subject: Re: [PATCH] drm/mediatek: Delete not used of_device_get_match_data
+To: matthias.bgg@kernel.org
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200518_075701_389117_4BB5519B 
-X-CRM114-Status: GOOD (  12.22  )
-X-Spam-Score: 0.5 (/)
+X-CRM114-CacheID: sfid-20200518_082324_879096_C9E77D58 
+X-CRM114-Status: GOOD (  15.82  )
+X-Spam-Score: -5.2 (-----)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
- Content analysis details:   (0.5 points)
+ Content analysis details:   (-5.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:143 listed in]
- [list.dnswl.org]
+ -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
+ high trust [198.145.29.99 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider [jhovold[at]gmail.com]
- 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
- mail domains are different
- 0.2 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
- EnvelopeFrom freemail headers are different
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -89,58 +83,41 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: robh@kernel.org, changqi.hu@mediatek.com, gregkh@linuxfoundation.org,
- linux-kernel@vger.kernel.org, long.cheng@mediatek.com,
- linux-mediatek@lists.infradead.org, linux-serial@vger.kernel.org,
- jslaby@suse.com
-Content-Type: text/plain; charset="us-ascii"
-Content-Transfer-Encoding: 7bit
+Cc: Chun-Kuang Hu <chunkuang.hu@kernel.org>,
+ Philipp Zabel <p.zabel@pengutronix.de>, David Airlie <airlied@linux.ie>,
+ linux-kernel <linux-kernel@vger.kernel.org>,
+ DRI Development <dri-devel@lists.freedesktop.org>,
+ Matthias Brugger <matthias.bgg@gmail.com>,
+ "moderated list:ARM/Mediatek SoC support" <linux-mediatek@lists.infradead.org>,
+ Daniel Vetter <daniel@ffwll.ch>,
+ Enric Balletbo i Serra <enric.balletbo@collabora.com>,
+ Linux ARM <linux-arm-kernel@lists.infradead.org>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: base64
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Wed, May 06, 2020 at 03:23:12PM +0800, Claire Chang wrote:
-> serial_match_port() uses devt to match devices. However, when serdev
-> registers a tty port, devt has never been set. This makes
-> device_find_child() always return NULL.
-> 
-> Assign devt in serdev_tty_port_register() to fix this.
-> 
-> Signed-off-by: Claire Chang <tientzu@chromium.org>
-> ---
->  drivers/tty/serdev/serdev-ttyport.c | 2 ++
->  1 file changed, 2 insertions(+)
-> 
-> diff --git a/drivers/tty/serdev/serdev-ttyport.c b/drivers/tty/serdev/serdev-ttyport.c
-> index d367803e2044f..9238119173a47 100644
-> --- a/drivers/tty/serdev/serdev-ttyport.c
-> +++ b/drivers/tty/serdev/serdev-ttyport.c
-> @@ -267,6 +267,7 @@ struct device *serdev_tty_port_register(struct tty_port *port,
->  {
->  	struct serdev_controller *ctrl;
->  	struct serport *serport;
-> +	dev_t devt = MKDEV(drv->major, drv->minor_start) + idx;
->  	int ret;
->  
->  	if (!port || !drv || !parent)
-> @@ -282,6 +283,7 @@ struct device *serdev_tty_port_register(struct tty_port *port,
->  	serport->tty_drv = drv;
->  
->  	ctrl->ops = &ctrl_ops;
-> +	ctrl->dev.devt = devt;
-
-This is conceptually wrong. A serdev controller is not a tty class
-device with a corresponding character device.
-
-It seems you need to rethink how serial core should handle the wakeup
-flags with respect to serdev.
-
->  
->  	port->client_ops = &client_ops;
->  	port->client_data = ctrl;
-
-Johan
-
-_______________________________________________
-Linux-mediatek mailing list
-Linux-mediatek@lists.infradead.org
-http://lists.infradead.org/mailman/listinfo/linux-mediatek
+SGksIE1hdHRoaWFzOgoKPG1hdHRoaWFzLmJnZ0BrZXJuZWwub3JnPiDmlrwgMjAyMOW5tDXmnIgx
+OOaXpSDpgLHkuIAg5LiL5Y2INzoyM+Wvq+mBk++8mgo+Cj4gRnJvbTogTWF0dGhpYXMgQnJ1Z2dl
+ciA8bWF0dGhpYXMuYmdnQGdtYWlsLmNvbT4KPgo+IFRoZSBkcml2ZXIgd2lsbCBiZSBsb2FkZWQg
+YnkgdmlhIGEgcGxhdGZvcm0gZGV2aWNlLiBTbyB3ZQo+IHdpbGwgbmVlZCB0byBnZXQgdGhlIGRl
+dmljZV9ub2RlIGZyb20gdGhlIHBhcmVudCBkZXZpY2UuCj4gRGVwZW5kaW5nIG9uIHRoaXMgd2Ug
+d2lsbCBzZXQgdGhlIGRyaXZlciBkYXRhLgo+IEFzIGFsbCB0aGlzIGlzIGRvbmUgbGF0ZXIgYWxy
+ZWFkeSwganVzdCBkZWxldGUgdGhlIGNhbGwgdG8KPiBvZl9kZXZpY2VfZ2V0X21hdGNoX2RhdGEu
+Cj4KClJldmlld2VkLWJ5OiBDaHVuLUt1YW5nIEh1IDxjaHVua3VhbmcuaHVAa2VybmVsLm9yZz4K
+Cj4gU2lnbmVkLW9mZi1ieTogTWF0dGhpYXMgQnJ1Z2dlciA8bWF0dGhpYXMuYmdnQGdtYWlsLmNv
+bT4KPiAtLS0KPiAgZHJpdmVycy9ncHUvZHJtL21lZGlhdGVrL210a19kcm1fZHJ2LmMgfCAxIC0K
+PiAgMSBmaWxlIGNoYW5nZWQsIDEgZGVsZXRpb24oLSkKPgo+IGRpZmYgLS1naXQgYS9kcml2ZXJz
+L2dwdS9kcm0vbWVkaWF0ZWsvbXRrX2RybV9kcnYuYyBiL2RyaXZlcnMvZ3B1L2RybS9tZWRpYXRl
+ay9tdGtfZHJtX2Rydi5jCj4gaW5kZXggZTJiYjBkMTllZjk5Li42M2VjOTJiYTBlOTIgMTAwNjQ0
+Cj4gLS0tIGEvZHJpdmVycy9ncHUvZHJtL21lZGlhdGVrL210a19kcm1fZHJ2LmMKPiArKysgYi9k
+cml2ZXJzL2dwdS9kcm0vbWVkaWF0ZWsvbXRrX2RybV9kcnYuYwo+IEBAIC00NDcsNyArNDQ3LDYg
+QEAgc3RhdGljIGludCBtdGtfZHJtX3Byb2JlKHN0cnVjdCBwbGF0Zm9ybV9kZXZpY2UgKnBkZXYp
+Cj4gICAgICAgICBpZiAoIXByaXZhdGUpCj4gICAgICAgICAgICAgICAgIHJldHVybiAtRU5PTUVN
+Owo+Cj4gLSAgICAgICBwcml2YXRlLT5kYXRhID0gb2ZfZGV2aWNlX2dldF9tYXRjaF9kYXRhKGRl
+dik7Cj4gICAgICAgICBwcml2YXRlLT5tbXN5c19kZXYgPSBkZXYtPnBhcmVudDsKPiAgICAgICAg
+IGlmICghcHJpdmF0ZS0+bW1zeXNfZGV2KSB7Cj4gICAgICAgICAgICAgICAgIGRldl9lcnIoZGV2
+LCAiRmFpbGVkIHRvIGdldCBNTVNZUyBkZXZpY2VcbiIpOwo+IC0tCj4gMi4yNi4yCj4KCl9fX19f
+X19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fCkxpbnV4LW1lZGlhdGVr
+IG1haWxpbmcgbGlzdApMaW51eC1tZWRpYXRla0BsaXN0cy5pbmZyYWRlYWQub3JnCmh0dHA6Ly9s
+aXN0cy5pbmZyYWRlYWQub3JnL21haWxtYW4vbGlzdGluZm8vbGludXgtbWVkaWF0ZWsK
