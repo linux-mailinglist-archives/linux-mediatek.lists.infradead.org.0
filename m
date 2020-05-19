@@ -2,51 +2,51 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id BDBC81D99AA
-	for <lists+linux-mediatek@lfdr.de>; Tue, 19 May 2020 16:29:26 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 6C8D01D99AD
+	for <lists+linux-mediatek@lfdr.de>; Tue, 19 May 2020 16:30:05 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=MP7WWO/N8ZtVT/3bV9WoVx3VJK4At7Y7Pq5IBfU2vqY=; b=kWG/J6FLDg5RAB
-	um7po8atL4ixyUzGXC9p8Y9Fgn7TRTuaRn/ElDL0Bs6x6f5bvcdy2Xi0L3HkaSp29XehLXEr4wNf7
-	LwUDZJlJqxoSCGdnRyhJUSp7GTx/2TQflpJPr5nbWC7j3JBvSeTBmIIYUawb54wA1V6f/SaJcU3e8
-	luCOsr3bIvn7Ce0Nj3Znbr+0eD7Rawvz7pk+dgWCQXc23Ob8MUg3gX/IGAkwjH4VQXtgflRS6inHU
-	GRZIwMYYYT5Lz2dXsyweLa6C13aorDgCprlhgOwVB2H/j5av8+KlMWJ+xx9d84Z7jiXGbkis638k4
-	C5SGoGIclgkMuefIKnTw==;
+	List-Owner; bh=XP6EFpMmQ6pqqPqAgBQPhzdI+isF5ZL380/qgAkilCo=; b=o8lv+cwTrvalRf
+	V1oo4WkvIIaNSqI/9QsXkrzhARK65/mcQYu+y4HmvbPRAt/pji03Gfv0MXT+shH3ny8shMjNyVfBr
+	kLWuItaN9umb8zWP1Wm8P2Op3HSCBaK4V1UUQlVEyTJ+JxidOD2WfTE5o7FMtDfrAVkqdD5u67I2P
+	UCOtLKo4AsJvM2OPGz0UwDD7vvQpC/kcMI9gTtB21RnIcz4Gf2Ei2ffPsRyxO/EsQIYAV0isnP1Dm
+	UiIxqXwHnZ8dakTrg5j9UcPdYK0SKFsD/BT+fa6x0ADdr+LxxG4rCR9ryS0NUKxNXR6yhBqO6qzdw
+	c2kBdPOC89rJyEShYMeg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jb3F8-0001hw-9g; Tue, 19 May 2020 14:29:18 +0000
-Received: from lelv0143.ext.ti.com ([198.47.23.248])
+	id 1jb3Fk-0002ED-7j; Tue, 19 May 2020 14:29:56 +0000
+Received: from lelv0142.ext.ti.com ([198.47.23.249])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jb3Cx-0008Uv-Tl; Tue, 19 May 2020 14:27:05 +0000
+ id 1jb3D3-00008x-K4; Tue, 19 May 2020 14:27:11 +0000
 Received: from fllv0035.itg.ti.com ([10.64.41.0])
- by lelv0143.ext.ti.com (8.15.2/8.15.2) with ESMTP id 04JEQwxs062575;
- Tue, 19 May 2020 09:26:58 -0500
+ by lelv0142.ext.ti.com (8.15.2/8.15.2) with ESMTP id 04JER3Mp005249;
+ Tue, 19 May 2020 09:27:03 -0500
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=ti.com;
- s=ti-com-17Q1; t=1589898418;
- bh=sf1taodJLPAeYagyTVLo7kxF1+8mkUMEfQy4tR56ABs=;
+ s=ti-com-17Q1; t=1589898423;
+ bh=8wsmxHh8Fj6nnuOv4RqixX/76ikZXmO9s3dBnceWxdw=;
  h=From:To:CC:Subject:Date:In-Reply-To:References;
- b=Ay6Nbi33dRGG8IIuloKIhy/aazVG9751/m7j6KV7D26uLV/xjJGtqbgdy0gJmEnLU
- fD0wd1Z/54QFPAae8mJIhaNRLihwZvAqog8xc0ubK0gBAMmdhIB0k4iXQ/zuSmsIHK
- QZa1ukKKiu8Tp3aOrza1qAx83wBUhsUK5bhnPY2M=
-Received: from DLEE109.ent.ti.com (dlee109.ent.ti.com [157.170.170.41])
- by fllv0035.itg.ti.com (8.15.2/8.15.2) with ESMTP id 04JEQwXG037487;
- Tue, 19 May 2020 09:26:58 -0500
-Received: from DLEE101.ent.ti.com (157.170.170.31) by DLEE109.ent.ti.com
- (157.170.170.41) with Microsoft SMTP Server (version=TLS1_2,
+ b=sTNGSLoHgIbZldl7H5+uVC20Pf2pG9ekXgjXgkNBY8SbtsRpdN09a9leXDHl+9ybt
+ Q6/Tj/OZRDWK/4tqj2lW31Yk57bicxoQCbDo8UZnu+ATbfq37ijMXewSV9/TaNb5k4
+ bReo/wFDviBlwRrvG+OjEOiwfea/X/dz3qELbXgE=
+Received: from DFLE113.ent.ti.com (dfle113.ent.ti.com [10.64.6.34])
+ by fllv0035.itg.ti.com (8.15.2/8.15.2) with ESMTP id 04JER3Hr037848;
+ Tue, 19 May 2020 09:27:03 -0500
+Received: from DFLE111.ent.ti.com (10.64.6.32) by DFLE113.ent.ti.com
+ (10.64.6.34) with Microsoft SMTP Server (version=TLS1_2,
  cipher=TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256_P256) id 15.1.1979.3; Tue, 19
- May 2020 09:26:57 -0500
-Received: from lelv0327.itg.ti.com (10.180.67.183) by DLEE101.ent.ti.com
- (157.170.170.31) with Microsoft SMTP Server (version=TLS1_2,
+ May 2020 09:27:03 -0500
+Received: from lelv0327.itg.ti.com (10.180.67.183) by DFLE111.ent.ti.com
+ (10.64.6.32) with Microsoft SMTP Server (version=TLS1_2,
  cipher=TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256_P256) id 15.1.1979.3 via
- Frontend Transport; Tue, 19 May 2020 09:26:58 -0500
+ Frontend Transport; Tue, 19 May 2020 09:27:03 -0500
 Received: from pratyush-OptiPlex-790.dhcp.ti.com (ileax41-snat.itg.ti.com
  [10.172.224.153])
- by lelv0327.itg.ti.com (8.15.2/8.15.2) with ESMTP id 04JEQgjK008313;
- Tue, 19 May 2020 09:26:53 -0500
+ by lelv0327.itg.ti.com (8.15.2/8.15.2) with ESMTP id 04JEQgjL008313;
+ Tue, 19 May 2020 09:26:58 -0500
 From: Pratyush Yadav <p.yadav@ti.com>
 To: Tudor Ambarus <tudor.ambarus@microchip.com>, Miquel Raynal
  <miquel.raynal@bootlin.com>, Richard Weinberger <richard@nod.at>, Vignesh
@@ -58,24 +58,24 @@ To: Tudor Ambarus <tudor.ambarus@microchip.com>, Miquel Raynal
  <linux-mtd@lists.infradead.org>, <linux-kernel@vger.kernel.org>,
  <linux-spi@vger.kernel.org>, <linux-arm-kernel@lists.infradead.org>,
  <linux-mediatek@lists.infradead.org>
-Subject: [PATCH v5 02/19] spi: atmel-quadspi: reject DTR ops
-Date: Tue, 19 May 2020 19:56:24 +0530
-Message-ID: <20200519142642.24131-3-p.yadav@ti.com>
+Subject: [PATCH v5 03/19] spi: spi-mtk-nor: reject DTR ops
+Date: Tue, 19 May 2020 19:56:25 +0530
+Message-ID: <20200519142642.24131-4-p.yadav@ti.com>
 X-Mailer: git-send-email 2.25.0
 In-Reply-To: <20200519142642.24131-1-p.yadav@ti.com>
 References: <20200519142642.24131-1-p.yadav@ti.com>
 MIME-Version: 1.0
 X-EXCLAIMER-MD-CONFIG: e1e8a2fd-e40a-4ac6-ac9b-f7e9cc9ee180
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200519_072704_047009_2CE5EFAE 
-X-CRM114-Status: GOOD (  10.73  )
+X-CRM114-CacheID: sfid-20200519_072709_769088_65776069 
+X-CRM114-Status: GOOD (  10.74  )
 X-Spam-Score: -2.5 (--)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  Content analysis details:   (-2.5 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
- medium trust [198.47.23.248 listed in list.dnswl.org]
+ medium trust [198.47.23.249 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
@@ -112,24 +112,24 @@ supports_op().
 
 Signed-off-by: Pratyush Yadav <p.yadav@ti.com>
 ---
- drivers/spi/atmel-quadspi.c | 4 ++++
+ drivers/spi/spi-mtk-nor.c | 4 ++++
  1 file changed, 4 insertions(+)
 
-diff --git a/drivers/spi/atmel-quadspi.c b/drivers/spi/atmel-quadspi.c
-index cb44d1e169aa..4a29fa7ebdac 100644
---- a/drivers/spi/atmel-quadspi.c
-+++ b/drivers/spi/atmel-quadspi.c
-@@ -285,6 +285,10 @@ static bool atmel_qspi_supports_op(struct spi_mem *mem,
- 		op->dummy.nbytes == 0)
+diff --git a/drivers/spi/spi-mtk-nor.c b/drivers/spi/spi-mtk-nor.c
+index 7bc302b50396..7015dccedf00 100644
+--- a/drivers/spi/spi-mtk-nor.c
++++ b/drivers/spi/spi-mtk-nor.c
+@@ -211,6 +211,10 @@ static bool mtk_nor_supports_op(struct spi_mem *mem,
+ 	if (op->cmd.buswidth != 1)
  		return false;
  
 +	/* DTR ops not supported. */
 +	if (op->cmd.dtr || op->addr.dtr || op->dummy.dtr || op->data.dtr)
 +		return false;
 +
- 	return true;
- }
- 
+ 	if ((op->addr.nbytes == 3) || (op->addr.nbytes == 4)) {
+ 		if ((op->data.dir == SPI_MEM_DATA_IN) && mtk_nor_match_read(op))
+ 			return true;
 -- 
 2.26.2
 
