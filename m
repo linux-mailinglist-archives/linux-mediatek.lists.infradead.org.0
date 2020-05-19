@@ -2,60 +2,62 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 1C3981D8DA5
-	for <lists+linux-mediatek@lfdr.de>; Tue, 19 May 2020 04:30:36 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 4CE3D1D8DF2
+	for <lists+linux-mediatek@lfdr.de>; Tue, 19 May 2020 04:59:53 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=pFEKmziTFyN3MohOwgBCaiGoUbL8fQwHqbNyUtiF+EE=; b=B79WLi2Nai/dbW
-	XFbsW1RIvQDZGYFi26Nx3CMSIjCdSOdVyrVI9JDEsWCTC5NcRTiT0H9ofYns69b5at6QJa5nQAqqu
-	27yith8rnBdsiuRRgp3y6l5DZ238NICbzefT+bl+d7YPVaIid6Do2kIyJRCiLkZAPfqE8ZKfbHW1F
-	4FyClJ8jR0qZhUlG5SYcOKqKTo5LkTeCYe1Gjf67jGReR63qDBchjNWqNx+cUFHFaD3sPLZhpwCwU
-	FuOkSAF3Ywj+dZRyXv3sc8qs4HTFufgwWZ42e1HCNx1BnLUK+ELGWq2te1NkWBOtC42p9tQnQGRme
-	smdlWyQaurQWarVG32iQ==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=fEL0Fu3UTUTBDjswmiUcZ+SjTugSzKXuX+5zYIbkW7A=; b=kLPlTPdl9KMmt+
+	2b23p07U6Ei9KL4eXOef1TtFp9GQrxIDJzkrOOuRuOSdkQ7BHaQScK+DSy/BfdYGZOzmqoGS1GTDg
+	wxBAt8+NiqO9QbEwwS15oItoqeML6rGKMNBHG8MaSMqV/nM2UQ1qgYv5ObEUsWzXMo9RJKg3SYTsV
+	RqqO+TEjcLNCzpU+wLYANWOdrd3oYcvO4BoxSxokcRn07DfE1m5cnqnY7eQLjTJbyv4USrvlRLiMh
+	qDVHrHMam9fo1VkKHfOgcUPQoSSM6SWCfbsR3fB/sdFSXWj3QrgknvrqVKGEPN53FpcavdxdQJxg7
+	aT79tEtJFAfr0hqWoMtA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jas1Q-00014A-Qu; Tue, 19 May 2020 02:30:24 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
+	id 1jasTo-0001pd-Np; Tue, 19 May 2020 02:59:44 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jas18-00070a-DU; Tue, 19 May 2020 02:30:07 +0000
-X-UUID: f085b9eccf8240a6be8e9719f70bdf9a-20200518
+ id 1jasTc-0001gQ-GQ; Tue, 19 May 2020 02:59:33 +0000
+X-UUID: 252051eb575b46c18f0f01d725b0f314-20200518
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
  s=dk; 
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:Subject:CC:To:From;
- bh=+1T6h4ks8LG74RTkqrEoFP7s8tKRSn96p/OdYqATlnk=; 
- b=CwEr/lgMRQcsWV12OU5NpdJX5g/an5AUTivJgbQRzXex6S+3m1n961tjFeQkSvpPfK7EfQdC9W/cgt9dvJufMh+3qKaMKhdAS3x3mnW1zRE3LEr9YjIWsvdGSnRr/KXUgL0wS+KkGZSiaMW6cA2b8dRy30BzPozTz6tj6an2awQ=;
-X-UUID: f085b9eccf8240a6be8e9719f70bdf9a-20200518
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
- (envelope-from <walter-zh.wu@mediatek.com>)
+ h=Content-Transfer-Encoding:MIME-Version:Content-Type:References:In-Reply-To:Date:CC:To:From:Subject:Message-ID;
+ bh=M+o0Anz4/UQjLm5nYoVibliTyzmVqym+xJdpP5blyMg=; 
+ b=Hfb1/kAcOMyc62ESYxEaNe9rl85iTGBbye1u2kksbh65RXJ/yGx23mtBAhLKezkSCdBF8Q3sh19OqhMixugH6/LkpgS4Y3+k+Nlp/GnY0FoSR4Y7kqF9mJDxD0EA4nBnOLW8vDTEyeIenlvNDv23Kp2epA7Xr+UARfVcANG+sOM=;
+X-UUID: 252051eb575b46c18f0f01d725b0f314-20200518
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw01.mediatek.com
+ (envelope-from <qii.wang@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1787550371; Mon, 18 May 2020 18:30:06 -0800
-Received: from MTKMBS01N1.mediatek.inc (172.21.101.68) by
- MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
- 15.0.1497.2; Mon, 18 May 2020 19:26:28 -0700
-Received: from mtkcas08.mediatek.inc (172.21.101.126) by
- mtkmbs01n1.mediatek.inc (172.21.101.68) with Microsoft SMTP Server (TLS) id
- 15.0.1497.2; Tue, 19 May 2020 10:26:27 +0800
-Received: from mtksdccf07.mediatek.inc (172.21.84.99) by mtkcas08.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1497.2 via
- Frontend Transport; Tue, 19 May 2020 10:26:27 +0800
-From: Walter Wu <walter-zh.wu@mediatek.com>
-To: Andrey Ryabinin <aryabinin@virtuozzo.com>, Alexander Potapenko
- <glider@google.com>, Dmitry Vyukov <dvyukov@google.com>, Jonathan Corbet
- <corbet@lwn.net>
-Subject: [PATCH v4 4/4] kasan: update documentation for generic kasan
-Date: Tue, 19 May 2020 10:26:26 +0800
-Message-ID: <20200519022626.24305-1-walter-zh.wu@mediatek.com>
-X-Mailer: git-send-email 2.18.0
+ with ESMTP id 652344176; Mon, 18 May 2020 18:59:30 -0800
+Received: from MTKMBS31DR.mediatek.inc (172.27.6.102) by
+ MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
+ 15.0.1497.2; Mon, 18 May 2020 19:59:26 -0700
+Received: from MTKCAS36.mediatek.inc (172.27.4.186) by MTKMBS31DR.mediatek.inc
+ (172.27.6.102) with Microsoft SMTP Server (TLS) id 15.0.1497.2;
+ Tue, 19 May 2020 10:59:22 +0800
+Received: from [10.17.3.153] (10.17.3.153) by MTKCAS36.mediatek.inc
+ (172.27.4.170) with Microsoft SMTP Server id 15.0.1497.2 via Frontend
+ Transport; Tue, 19 May 2020 10:59:21 +0800
+Message-ID: <1589857073.25512.34.camel@mhfsdcap03>
+Subject: Re: [PATCH v2 2/2] i2c: mediatek: Add i2c ac-timing adjust support
+From: Qii Wang <qii.wang@mediatek.com>
+To: Joe Perches <joe@perches.com>, Geert Uytterhoeven <geert@linux-m68k.org>
+Date: Tue, 19 May 2020 10:57:53 +0800
+In-Reply-To: <CAMuHMdXjLakWDDEy=02prC7XjAs_xBnt2mArPFNwyHgUoWw6-g@mail.gmail.com>
+References: <1589461844-15614-1-git-send-email-qii.wang@mediatek.com>
+ <1589461844-15614-3-git-send-email-qii.wang@mediatek.com>
+ <CAMuHMdXjLakWDDEy=02prC7XjAs_xBnt2mArPFNwyHgUoWw6-g@mail.gmail.com>
+X-Mailer: Evolution 3.10.4-0ubuntu2 
 MIME-Version: 1.0
+X-TM-SNTS-SMTP: 2E488EF03A7622D1ADEEB7C7CD1CCABA41B9EB17953038A2511499CEDEE1E7E62000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200518_193006_470607_255C653F 
-X-CRM114-Status: UNSURE (   7.45  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20200518_195932_553660_66057EF0 
+X-CRM114-Status: GOOD (  19.83  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
@@ -63,8 +65,6 @@ X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  ---- ---------------------- --------------------------------------------------
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 MIME_BASE64_TEXT       RAW: Message text disguised using base64
- encoding
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
@@ -85,43 +85,132 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Walter Wu <walter-zh.wu@mediatek.com>,
- wsd_upstream <wsd_upstream@mediatek.com>, linux-kernel@vger.kernel.org,
- kasan-dev@googlegroups.com, linux-mm@kvack.org,
- linux-mediatek@lists.infradead.org, linux-arm-kernel@lists.infradead.org
+Cc: "open list:OPEN FIRMWARE AND FLATTENED
+ DEVICE TREE BINDINGS" <devicetree@vger.kernel.org>, srv_heupstream@mediatek.com,
+ Wolfram Sang <wsa@the-dreams.de>, leilk.liu@mediatek.com, Linux Kernel
+ Mailing List <linux-kernel@vger.kernel.org>, linux-mediatek@lists.infradead.org,
+ Linux I2C <linux-i2c@vger.kernel.org>,
+ Linux ARM <linux-arm-kernel@lists.infradead.org>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Generic KASAN will support to record the last two call_rcu() call
-stacks and print them in KASAN report. So need to update documentation.
+On Mon, 2020-05-18 at 17:44 +0200, Geert Uytterhoeven wrote:
+> On Thu, May 14, 2020 at 3:13 PM Qii Wang <qii.wang@mediatek.com> wrote:
+> > This patch adds a algorithm to calculate some ac-timing parameters
+> > which can fully meet I2C Spec.
+> >
+> > Signed-off-by: Qii Wang <qii.wang@mediatek.com>
+> > ---
+> >  drivers/i2c/busses/i2c-mt65xx.c | 328 +++++++++++++++++++++++++++++++++-------
+> >  1 file changed, 277 insertions(+), 51 deletions(-)
+> >
+> > diff --git a/drivers/i2c/busses/i2c-mt65xx.c b/drivers/i2c/busses/i2c-mt65xx.c
+> > index 0ca6c38a..7020618 100644
+> > --- a/drivers/i2c/busses/i2c-mt65xx.c
+> > +++ b/drivers/i2c/busses/i2c-mt65xx.c
+> 
+> > +/*
+> > + * Check and Calculate i2c ac-timing
+> > + *
+> > + * Hardware design:
+> > + * sample_ns = (1000000000 * (sample_cnt + 1)) / clk_src
+> > + * xxx_cnt_div =  spec->min_xxx_ns / sample_ns
+> > + *
+> > + * Sample_ns is rounded down for xxx_cnt_div would be greater
+> > + * than the smallest spec.
+> > + * The sda_timing is chosen as the middle value between
+> > + * the largest and smallest.
+> > + */
+> > +static int mtk_i2c_check_ac_timing(struct mtk_i2c *i2c,
+> > +                                  unsigned int clk_src,
+> > +                                  unsigned int check_speed,
+> > +                                  unsigned int step_cnt,
+> > +                                  unsigned int sample_cnt)
+> > +{
+> > +       const struct i2c_spec_values *spec;
+> > +       unsigned int su_sta_cnt, low_cnt, high_cnt, max_step_cnt;
+> > +       unsigned int sda_max, sda_min, clk_ns, max_sta_cnt = 0x3f;
+> > +       long long sample_ns = (1000000000 * (sample_cnt + 1)) / clk_src;
+> 
+> So sample_ns is a 64-bit value. Is that really needed?
+> 
 
-Signed-off-by: Walter Wu <walter-zh.wu@mediatek.com>
-Cc: Andrey Ryabinin <aryabinin@virtuozzo.com>
-Cc: Dmitry Vyukov <dvyukov@google.com>
-Cc: Alexander Potapenko <glider@google.com>
-Cc: Jonathan Corbet <corbet@lwn.net>
----
- Documentation/dev-tools/kasan.rst | 3 +++
- 1 file changed, 3 insertions(+)
+(1000000000 * (sample_cnt + 1)) / clk_src value is a 32-bit, (1000000000
+* (sample_cnt + 1)) will over 32-bit if sample_cnt is 7.
 
-diff --git a/Documentation/dev-tools/kasan.rst b/Documentation/dev-tools/kasan.rst
-index c652d740735d..fede42e6536b 100644
---- a/Documentation/dev-tools/kasan.rst
-+++ b/Documentation/dev-tools/kasan.rst
-@@ -193,6 +193,9 @@ function calls GCC directly inserts the code to check the shadow memory.
- This option significantly enlarges kernel but it gives x1.1-x2 performance
- boost over outline instrumented kernel.
- 
-+Generic KASAN prints up to 2 call_rcu() call stacks in reports, the last one
-+and the second to last.
-+
- Software tag-based KASAN
- ~~~~~~~~~~~~~~~~~~~~~~~~
- 
--- 
-2.18.0
+I think 1000000000 and clk_src is too big, maybe I can reduce then with
+be divided all by 1000.
+example:
+
+unsigned int sample_ns;
+unsigned int clk_src_khz = clk_src / 1000;
+
+if(clk_src_khz)
+	sample_ns = (1000000 * (sample_cnt + 1)) / clk_src_khz;
+else
+	return -EINVAL;
+
+> > +       if (!i2c->dev_comp->timing_adjust)
+> > +               return 0;
+> > +
+> > +       if (i2c->dev_comp->ltiming_adjust)
+> > +               max_sta_cnt = 0x100;
+> > +
+> > +       spec = mtk_i2c_get_spec(check_speed);
+> > +
+> > +       if (i2c->dev_comp->ltiming_adjust)
+> > +               clk_ns = 1000000000 / clk_src;
+> > +       else
+> > +               clk_ns = sample_ns / 2;
+> > +
+> > +       su_sta_cnt = DIV_ROUND_UP(spec->min_su_sta_ns, clk_ns);
+> > +       if (su_sta_cnt > max_sta_cnt)
+> > +               return -1;
+> > +
+> > +       low_cnt = DIV_ROUND_UP(spec->min_low_ns, sample_ns);
+> 
+> So this is a 32-bit by 64-bit division (indeed, not 64-by-32!)
+> 
+> noreply@ellerman.id.au reports:
+> 
+>     ERROR: modpost: "__udivdi3" [drivers/i2c/busses/i2c-mt65xx.ko] undefined!
+>     ERROR: modpost: "__divdi3" [drivers/i2c/busses/i2c-mt65xx.ko] undefined!
+> 
+> for 32-bit builds.
+> 
+> > +       max_step_cnt = mtk_i2c_max_step_cnt(check_speed);
+> > +       if ((2 * step_cnt) > low_cnt && low_cnt < max_step_cnt) {
+> > +               if (low_cnt > step_cnt) {
+> > +                       high_cnt = 2 * step_cnt - low_cnt;
+> > +               } else {
+> > +                       high_cnt = step_cnt;
+> > +                       low_cnt = step_cnt;
+> > +               }
+> > +       } else {
+> > +               return -2;
+> > +       }
+> > +
+> > +       sda_max = spec->max_hd_dat_ns / sample_ns;
+> > +       if (sda_max > low_cnt)
+> > +               sda_max = 0;
+> > +
+> > +       sda_min = DIV_ROUND_UP(spec->min_su_dat_ns, sample_ns);
+> 
+> One more.
+> 
+> Gr{oetje,eeting}s,
+> 
+>                         Geert
+> 
+> --
+> Geert Uytterhoeven -- There's lots of Linux beyond ia32 -- geert@linux-m68k.org
+> 
+> In personal conversations with technical people, I call myself a hacker. But
+> when I'm talking to journalists I just say "programmer" or something like that.
+>                                 -- Linus Torvalds
+
 _______________________________________________
 Linux-mediatek mailing list
 Linux-mediatek@lists.infradead.org
