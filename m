@@ -2,79 +2,50 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id EB38F1DB420
-	for <lists+linux-mediatek@lfdr.de>; Wed, 20 May 2020 14:50:10 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 91FB21DB500
+	for <lists+linux-mediatek@lfdr.de>; Wed, 20 May 2020 15:29:49 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=2Os2PmriZA61+ZVO5U1nRNfjBY3bFV2K3d/4bKHq93k=; b=Yh8slkQP0UvnTz
-	oRN9ni3fLFnFw702CH0eds/jqtBhw8cRKTqKIeoup6OZe8vzlEZ/5lroet/XpRQADwK3wbMrFbx1v
-	MiOQim8E+JPWZpZzFajDvzE1brwgZuH78JF8PC21O5a816TLd65rfn/9vXNFaGuutRp1nHQM+dru/
-	qDeAtaJRSXQIPsaUlamGy0IIEgiy1X3YZF9+3UJXIFmeMss8H3Z51LPXxheKUh8ciC8UoFr78k95m
-	gt7MFbc47fhU1w1XmtTaLkF2gl8eoxXvFwjo5AKOnS5B2JUuSG6OSYyRji6CVyWlP+p5QQe/RMbds
-	jwJxiHLz1or5Tbmxf93w==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:Cc:
+	List-Subscribe:List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:
+	In-Reply-To:MIME-Version:References:Message-ID:Subject:To:From:Date:Reply-To:
+	Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
+	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
+	 bh=uxeyD5Qi3VUvHjr0KC2yasgoIkQ65jeD75R6YC7QC2M=; b=gKeN3X5bJTJ73q5s7VotnpIjB
+	d+9Sfai/rcGd/R3gAdXi608MDNm1gE3G6H1morB0uJWLQHmQ9JXXl8teZa67D1NWc6W+r4RM3AgXw
+	bx5bV+2nYXn+reHZ9t3jVkiVqJpPeGD9fYPaFU7srbx9diMLfplTYflrCZdnrxOWb7OYBEWdN96nQ
+	KIyiM3dIZ4FtqP/ZWDZTOjwpCQ4oPINB8QGHoTnESy7YWg0cKHwE+jcD8TgxzzPHB2vnn7moryGMz
+	CHsuNu6hpCQ4wRzsbcHfzuspUY5BCvApqwBRCSGcBAIrkYAY+1xjNi4pMxaax9Z8wKGZMWblOXnCo
+	Mlei+lgyg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jbOAZ-0000gF-8I; Wed, 20 May 2020 12:49:59 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
- by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jbO7I-0006Uc-C2; Wed, 20 May 2020 12:46:41 +0000
-X-UUID: 0d6c917e855d43a797366c91e36fa95d-20200520
-DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
- s=dk; 
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:Subject:CC:To:From;
- bh=qIWtxoGuZ5P6mO49eH/CrXHztmv7j3tYchUpE2BMWOE=; 
- b=HImQAotZvxIugtxKGRZUqyNfAMNzmUGg+kHxsyHV+gJkrfRDukizdLuMP2ssx4ggsY8iB+vCwTWTiu7bnbfUOxEPB1NAStFPDxfpbn0rKnxhLSyTQqIwitFNZCgb+SxG6EDm0xAid5Ntn9E/yrSFMGJS6l8PfqJnM1hKqC9vCOU=;
-X-UUID: 0d6c917e855d43a797366c91e36fa95d-20200520
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
- (envelope-from <walter-zh.wu@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 270549559; Wed, 20 May 2020 04:46:33 -0800
-Received: from MTKMBS01N2.mediatek.inc (172.21.101.79) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1497.2; Wed, 20 May 2020 05:39:53 -0700
-Received: from mtkcas08.mediatek.inc (172.21.101.126) by
- mtkmbs01n2.mediatek.inc (172.21.101.79) with Microsoft SMTP Server (TLS) id
- 15.0.1497.2; Wed, 20 May 2020 20:39:51 +0800
-Received: from mtksdccf07.mediatek.inc (172.21.84.99) by mtkcas08.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1497.2 via
- Frontend Transport; Wed, 20 May 2020 20:39:50 +0800
-From: Walter Wu <walter-zh.wu@mediatek.com>
-To: Andrey Ryabinin <aryabinin@virtuozzo.com>, Alexander Potapenko
- <glider@google.com>, Dmitry Vyukov <dvyukov@google.com>, Jonathan Corbet
- <corbet@lwn.net>
-Subject: [PATCH v5 4/4] kasan: update documentation for generic kasan
-Date: Wed, 20 May 2020 20:39:48 +0800
-Message-ID: <20200520123948.4069-1-walter-zh.wu@mediatek.com>
-X-Mailer: git-send-email 2.18.0
+	id 1jbOmy-0002Vk-Jd; Wed, 20 May 2020 13:29:40 +0000
+Received: from sauhun.de ([88.99.104.3] helo=pokefinder.org)
+ by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
+ id 1jbOmo-0002Pb-CN; Wed, 20 May 2020 13:29:32 +0000
+Received: from localhost (p5486cd24.dip0.t-ipconnect.de [84.134.205.36])
+ by pokefinder.org (Postfix) with ESMTPSA id 98CC72C1FD1;
+ Wed, 20 May 2020 15:29:13 +0200 (CEST)
+Date: Wed, 20 May 2020 15:29:13 +0200
+From: Wolfram Sang <wsa@the-dreams.de>
+To: qii.wang@mediatek.com
+Subject: Re: [next] i2c: mediatek: Use div_u64 for 64-bit division to fix
+ 32-bit kernels
+Message-ID: <20200520132913.GB5759@ninjato>
+References: <1589970713-19944-1-git-send-email-qii.wang@mediatek.com>
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: 53A25556DB809A33935C8E07C4C4E7616D5CC73601E447850F8F6E6A8049B3E22000:8
-X-MTK: N
+In-Reply-To: <1589970713-19944-1-git-send-email-qii.wang@mediatek.com>
+User-Agent: Mutt/1.10.1 (2018-07-13)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200520_054636_450113_90F93E2F 
-X-CRM114-Status: UNSURE (   7.40  )
+X-CRM114-CacheID: sfid-20200520_062930_571338_7D796742 
+X-CRM114-Status: UNSURE (   7.15  )
 X-CRM114-Notice: Please train this message.
-X-Spam-Score: -0.2 (/)
+X-Spam-Score: -0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (-0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 MIME_BASE64_TEXT       RAW: Message text disguised using base64
- encoding
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
+ -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -86,44 +57,71 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Walter Wu <walter-zh.wu@mediatek.com>,
- wsd_upstream <wsd_upstream@mediatek.com>, linux-kernel@vger.kernel.org,
- kasan-dev@googlegroups.com, linux-mm@kvack.org,
- linux-mediatek@lists.infradead.org, linux-arm-kernel@lists.infradead.org
-Content-Type: text/plain; charset="us-ascii"
-Content-Transfer-Encoding: 7bit
+Cc: devicetree@vger.kernel.org, srv_heupstream@mediatek.com,
+ leilk.liu@mediatek.com, linux-kernel@vger.kernel.org,
+ linux-mediatek@lists.infradead.org, linux-i2c@vger.kernel.org,
+ linux-arm-kernel@lists.infradead.org
+Content-Type: multipart/mixed; boundary="===============2703720941032650607=="
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Generic KASAN will support to record the last two call_rcu() call stacks
-and print them in KASAN report. So that need to update documentation.
 
-Signed-off-by: Walter Wu <walter-zh.wu@mediatek.com>
-Cc: Andrey Ryabinin <aryabinin@virtuozzo.com>
-Cc: Dmitry Vyukov <dvyukov@google.com>
-Cc: Alexander Potapenko <glider@google.com>
-Cc: Jonathan Corbet <corbet@lwn.net>
----
- Documentation/dev-tools/kasan.rst | 3 +++
- 1 file changed, 3 insertions(+)
+--===============2703720941032650607==
+Content-Type: multipart/signed; micalg=pgp-sha512;
+	protocol="application/pgp-signature"; boundary="ZoaI/ZTpAVc4A5k6"
+Content-Disposition: inline
 
-diff --git a/Documentation/dev-tools/kasan.rst b/Documentation/dev-tools/kasan.rst
-index c652d740735d..fede42e6536b 100644
---- a/Documentation/dev-tools/kasan.rst
-+++ b/Documentation/dev-tools/kasan.rst
-@@ -193,6 +193,9 @@ function calls GCC directly inserts the code to check the shadow memory.
- This option significantly enlarges kernel but it gives x1.1-x2 performance
- boost over outline instrumented kernel.
- 
-+Generic KASAN prints up to 2 call_rcu() call stacks in reports, the last one
-+and the second to last.
-+
- Software tag-based KASAN
- ~~~~~~~~~~~~~~~~~~~~~~~~
- 
--- 
-2.18.0
+
+--ZoaI/ZTpAVc4A5k6
+Content-Type: text/plain; charset=us-ascii
+Content-Disposition: inline
+Content-Transfer-Encoding: quoted-printable
+
+On Wed, May 20, 2020 at 06:31:53PM +0800, qii.wang@mediatek.com wrote:
+> From: Qii Wang <qii.wang@mediatek.com>
+>=20
+> Use div_u64 for 64-bit division, and change sample_ns type to
+> unsigned int. Otherwise, the module will reference __udivdi3
+> under 32-bit kernels, which is not allowed in kernel space.
+>=20
+> Signed-off-by: Qii Wang <qii.wang@mediatek.com>
+
+Applied to for-next by squashing it into the relevant commit, thanks!
+
+
+--ZoaI/ZTpAVc4A5k6
+Content-Type: application/pgp-signature; name="signature.asc"
+
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAABCgAdFiEEOZGx6rniZ1Gk92RdFA3kzBSgKbYFAl7FMKkACgkQFA3kzBSg
+KbbynRAAmwCukXP9v4Fs9sjBIrxVil2vgnjXCEmpHgr7IZ37e9uoqxlUndj/oHhs
+YuDiSBGBVXU/ZYFP2VDsUdMRBa11pyoNALMiO0uIThiQ4gkn132Ej4DJ+s9o54cz
+nh74h8be69a0EmvvYY99oBfIFZ7ORRtvL5lIktHUaP9h4YvU1CC/neJ5o97q4bVU
+GBugpXgWfXEBApFPyXr3ShOaUyxnCJKYHAFyHShqoEtgIwXlyurDYG9yzkeI3d6w
+U5jKdhAp97EwNf+b1iLj/2EEOpE0G1wEWke8rTL1mjJMJRVCwUQqzeFzPORfGMK+
+YpphdJtvU6mvl2wjnybBcc4gb9WoQP7wRkb7lEdgW9kmlNIqPgzuds7F6ePHMNRD
+GxdMBnOiLFC6UnTih18N4gMnH9AwjX/1Hz4k8g9riHdF1+BGpcytZsosCXXE7n7C
+9rVPE/9HE9juuEWLBTqdonrOje8DOtOtOqX1b7DwEbHotanakMQY1C5xPbX6Wzr3
+QnKeVyuTbd0nUVkLgMCOJP/d9/1mJWWNvJSKdG/7zRyyz2nhOr4C8lJhLLH14Hub
+XKK5/K8qiufXzdhryt/EmiThF5WbhcRHQ4HH+irt9droO08MkBlZfnuW7NT0NPuY
+uk3OkrWasxCtb9udRSUrM6rGmfcueB//OzLR3xiq8GH/AykuwaM=
+=gKRd
+-----END PGP SIGNATURE-----
+
+--ZoaI/ZTpAVc4A5k6--
+
+
+--===============2703720941032650607==
+Content-Type: text/plain; charset="us-ascii"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 7bit
+Content-Disposition: inline
+
 _______________________________________________
 Linux-mediatek mailing list
 Linux-mediatek@lists.infradead.org
 http://lists.infradead.org/mailman/listinfo/linux-mediatek
+
+--===============2703720941032650607==--
+
