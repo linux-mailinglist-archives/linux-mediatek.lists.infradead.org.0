@@ -2,7 +2,7 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 3B8DE1DAD66
+	by mail.lfdr.de (Postfix) with ESMTPS id B04D41DAD67
 	for <lists+linux-mediatek@lfdr.de>; Wed, 20 May 2020 10:28:33 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
@@ -10,66 +10,66 @@ DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=6+yUPdATw/TPsh/IK1VQJMS4AkNWLH2znMpKUJpbOew=; b=Fd0o55RlymQteB
-	vjNsiJi+9zZBwy2G3kH33n3vv1wr46LEbnR4kev0ZMOg+2UgF5KGlPXNRHVYmG7FSzWN7/MtQTZcw
-	lW9UPHRrclL9v6v9nQIU4d9n+4T/b6ma069jt1w/jyVFcMb2P1+HgrZHjVwi9E4srib/CmvIrBjYI
-	eaySJ3PZ6sOEMdNuBtX7Pj9KiUKmLTh008pJd+kQVZKs650jrEMQYc45lSWfLsO51XNP7jXRpGB7z
-	z8VD7OVfdz5AOsoX0cGCUavqQbCZy/uWTke0Vja209buLsM4WW2JukcruK2p5JxuOOaQ1EvMVMGt8
-	8HxSY1eNgckYA0aGv09Q==;
+	List-Owner; bh=CgGZDU80OaSWE4AEm1tXwEmSgui/KLhUJrUb2gwbDT0=; b=StDqrILCMJD+9N
+	nM14qyPJL9i1rom4x+C3u8EpXHRf6Pt1ujPj8igrHSvUdDS/XBNqiv2FZlfW0BZdrKDmu0hPOnUOZ
+	o38VAoe+G0AKClu2bEPhv1PO6fMzmFo+9zUBFnhHdgIcT7CgKziIeBdchlqwfgRVBLNCbVgskPxxM
+	PGy92Dlm4UoVyv2cDyPNocKy6EW/dSRRM9kgZikJK46uzM+gqeqq/TEgXcuw2nHdZQIdJOUcJJXzd
+	DPGx1TOOO9VnZzZok9x/EwUr3ATpgPMmDhWL3kfG3jWruRVg5HoKwhSjBVfcuqpUH2UYNs/r8Mzl8
+	uIgt+MtCP+PE/sU6G1pA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jbK5T-0002wA-HB; Wed, 20 May 2020 08:28:27 +0000
-Received: from mail-pj1-x1042.google.com ([2607:f8b0:4864:20::1042])
+	id 1jbK5U-0002yE-An; Wed, 20 May 2020 08:28:28 +0000
+Received: from mail-pf1-x444.google.com ([2607:f8b0:4864:20::444])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jbK5E-0002hs-KY
+ id 1jbK5I-0002jw-3I
  for linux-mediatek@lists.infradead.org; Wed, 20 May 2020 08:28:20 +0000
-Received: by mail-pj1-x1042.google.com with SMTP id q24so916727pjd.1
- for <linux-mediatek@lists.infradead.org>; Wed, 20 May 2020 01:28:12 -0700 (PDT)
+Received: by mail-pf1-x444.google.com with SMTP id y18so1195557pfl.9
+ for <linux-mediatek@lists.infradead.org>; Wed, 20 May 2020 01:28:15 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=chromium.org; s=google;
  h=from:to:cc:subject:date:message-id:in-reply-to:references
  :mime-version:content-transfer-encoding;
- bh=ll8NxVtMtfVOyEZFFQDfClPq5aIFoMbY7TDtR4kV3zQ=;
- b=kI33MLAoCd0TxRti1KqGfffMmFCe7Qu+9zJ9GzgvLmIhvWroMh2PK76BMUA9xvXNN3
- BeTyj3uDBE9zEEC9mrGi7btmBWv1HKDYmi4AFLoegQbxFbzAiNC0xk//stOr6yOaHvmJ
- RFZ60+RwMPuvjP3Y2vhaAM16aSKaOTZXVNebc=
+ bh=AFsCpw0e2sBJ3SKzImAxY1nX0ns77l6D7lZ5pyXVq7c=;
+ b=NxYuD+W0eHByIVffmtX4cSE7Q15AfQjBOiJE0aaMyKH5qn8hRwM5tVCX+EYAbDZH54
+ qFIOrLUElAH7aRgCsYUmbLYaOkS4LIg2VhrzWH6UchyRtXem6pBKNr0u9yy8yT20OjJW
+ LY20zeuWDmsjsQyjkW43bgAIlBvCd1kVB0GpQ=
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:from:to:cc:subject:date:message-id:in-reply-to
  :references:mime-version:content-transfer-encoding;
- bh=ll8NxVtMtfVOyEZFFQDfClPq5aIFoMbY7TDtR4kV3zQ=;
- b=eWeUnWuV0iSxaeNJHmw3FbdxtlCOZmDKooVDcT0KbgA24JBwg+BMQx0ePhi0WwFl8I
- vmiQdA+0ubtfNjzOwnSYST6XQnBU+ZINmcl5C22Zs5EalFFSSQtmj4EipdvC+MO9I51B
- GVwK7Tc5Xb4Je2YQKjVJsdERBaHEi8JKux11R1ch3YJai52U+HR7Z04Rz8n7w0ufbmQZ
- b9kmaC7Z/cz3zk0r97UjIEZbwjpYfgqOzhoJnJi+8bp7qvyt2fFn/yXcO8Y+a1lcJWRn
- t5bEFisxMykWhd7BgP2WmSFTqmfVd+HWA1JcDw2y4se5syoQQPMadyBeShiGmbQpBVI6
- AmTQ==
-X-Gm-Message-State: AOAM533w40frU/K6kpYGWFPV005ScKSRwN9S5/YrE57/E7e2Uiui/1NN
- ADIyRlXjupaBVvNaedEbzhf2LQ==
-X-Google-Smtp-Source: ABdhPJyLQteFuXuVc69SpcsEFfMjArlHWm8lgkG4Ws0al46mciJZZn5XJ5qdF3eWNGJdzMi89qu6gw==
-X-Received: by 2002:a17:902:bf43:: with SMTP id
- u3mr3434302pls.240.1589963292039; 
- Wed, 20 May 2020 01:28:12 -0700 (PDT)
+ bh=AFsCpw0e2sBJ3SKzImAxY1nX0ns77l6D7lZ5pyXVq7c=;
+ b=BA5EgokBpR2FoZ4f3gdJ5hfgSHRp6YlK6VaJqYrV2oPhyQ1TrvdR4XTWPOfrI/MmCK
+ Ev9ikijB8k1Zohqsc84QU6H6vrBIV3K8LCpop3QqMO8pmlWjCT6rfbTvwettRGl59EeI
+ 5PORu9RjL0Xn1iLsJoYyTfnPfRtguUE7W/PsPelYVH9cv9YXoFbQ7xZwuVSz2vA820wL
+ dBB9fZwHhW14TDiraGhYNPbU8SDTAdj8+0OSgFY4QU2DVc10aa1XVH9FCoect4HNQzn3
+ gl58QWcdKkPOSPoHhu3WH+680rgShffvHAehA5H5WEoQeSOoWrDurMRQoij0e9Q7rBy0
+ QZpA==
+X-Gm-Message-State: AOAM530RfHzUkZGlh2/BxPFfa4IjCNVg1l0RLks+GCiF3JLH3fIfsoc0
+ 5ZDXBz+bLA5dxj4ZzWCGW9+/DA==
+X-Google-Smtp-Source: ABdhPJwolvvdLtZTp/E/v1cgUwBNoOO4dJkGghCUnaIE6/nVSj9qiTNvax2QtVKvxMZxYBPTADizHQ==
+X-Received: by 2002:a62:14d6:: with SMTP id 205mr3261015pfu.75.1589963295152; 
+ Wed, 20 May 2020 01:28:15 -0700 (PDT)
 Received: from acourbot.tok.corp.google.com
  ([2401:fa00:8f:203:93d9:de4d:e834:3086])
- by smtp.gmail.com with ESMTPSA id gg8sm1447775pjb.39.2020.05.20.01.28.08
+ by smtp.gmail.com with ESMTPSA id gg8sm1447775pjb.39.2020.05.20.01.28.12
  (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Wed, 20 May 2020 01:28:11 -0700 (PDT)
+ Wed, 20 May 2020 01:28:14 -0700 (PDT)
 From: Alexandre Courbot <acourbot@chromium.org>
 To: Tiffany Lin <tiffany.lin@mediatek.com>,
  Andrew-CT Chen <andrew-ct.chen@mediatek.com>,
  Rui Wang <gtk_ruiwang@mediatek.com>,
  Yunfei Dong <yunfei.dong@mediatek.com>, Pi-Hsun Shih <pihsun@chromium.org>,
  Maoguang Meng <maoguang.meng@mediatek.com>
-Subject: [PATCH 09/10] media: dt-bindings: mtk-vcodec: specify SCP node
-Date: Wed, 20 May 2020 17:27:22 +0900
-Message-Id: <20200520082723.96136-10-acourbot@chromium.org>
+Subject: [PATCH 10/10] media: dt-bindings: mtk-vcodec: document mediatek,
+ mt8183-vcodec-enc
+Date: Wed, 20 May 2020 17:27:23 +0900
+Message-Id: <20200520082723.96136-11-acourbot@chromium.org>
 X-Mailer: git-send-email 2.26.2.761.g0e0b3e54be-goog
 In-Reply-To: <20200520082723.96136-1-acourbot@chromium.org>
 References: <20200520082723.96136-1-acourbot@chromium.org>
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200520_012812_681574_8093514F 
-X-CRM114-Status: UNSURE (   9.66  )
+X-CRM114-CacheID: sfid-20200520_012816_185931_5FB153AD 
+X-CRM114-Status: UNSURE (   9.38  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
@@ -77,7 +77,7 @@ X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:1042 listed in]
+ no trust [2607:f8b0:4864:20:0:0:0:444 listed in]
  [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
@@ -107,29 +107,30 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-The mediatek codecs can use either the VPU or the SCP as their interface
-to firmware. Reflect this in the DT bindings.
+Support for the MT8183 encoder has been added, document the
+corresponding DT bindings.
 
 Signed-off-by: Alexandre Courbot <acourbot@chromium.org>
 ---
- Documentation/devicetree/bindings/media/mediatek-vcodec.txt | 4 +++-
- 1 file changed, 3 insertions(+), 1 deletion(-)
+ Documentation/devicetree/bindings/media/mediatek-vcodec.txt | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
 
 diff --git a/Documentation/devicetree/bindings/media/mediatek-vcodec.txt b/Documentation/devicetree/bindings/media/mediatek-vcodec.txt
-index b6b5dde6abd8..7aef0a4fe207 100644
+index 7aef0a4fe207..8093335afecb 100644
 --- a/Documentation/devicetree/bindings/media/mediatek-vcodec.txt
 +++ b/Documentation/devicetree/bindings/media/mediatek-vcodec.txt
-@@ -19,7 +19,9 @@ Required properties:
- - iommus : should point to the respective IOMMU block with master port as
-   argument, see Documentation/devicetree/bindings/iommu/mediatek,iommu.txt
-   for details.
--- mediatek,vpu : the node of video processor unit
-+One of the two following nodes:
-+- mediatek,vpu : the node of the video processor unit, if using VPU.
-+- mediatek,scp : the noode of the SCP unit, if using SCP.
+@@ -4,8 +4,9 @@ Mediatek Video Codec is the video codec hw present in Mediatek SoCs which
+ supports high resolution encoding and decoding functionalities.
  
- 
- Example:
+ Required properties:
+-- compatible : "mediatek,mt8173-vcodec-enc" for encoder
+-  "mediatek,mt8173-vcodec-dec" for decoder.
++- compatible : "mediatek,mt8173-vcodec-enc" for MT8173 encoder
++  "mediatek,mt8183-vcodec-enc" for MT8183 encoder.
++  "mediatek,mt8173-vcodec-dec" for MT8173 decoder.
+ - reg : Physical base address of the video codec registers and length of
+   memory mapped region.
+ - interrupts : interrupt number to the cpu.
 -- 
 2.26.2.761.g0e0b3e54be-goog
 
