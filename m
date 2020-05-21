@@ -2,88 +2,62 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id A52731DC9B8
-	for <lists+linux-mediatek@lfdr.de>; Thu, 21 May 2020 11:15:25 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id B17C01DC9F5
+	for <lists+linux-mediatek@lfdr.de>; Thu, 21 May 2020 11:24:59 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:Date:From:Message-ID:MIME-Version:
+	Subject:To:References:In-Reply-To:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=FFzR+e97Zy+5oQ98SpTSqQyzzPE1oCWXkXHBtQAqz9Y=; b=m7vnbekx2BBHhr
-	M+ZA0zli3ZyF0EZSTmz2+UIT1u503DO9/VVhiY1SY5Q6Pi4sAHJRRaAWEYVCTE4iG4fuCIbZy9aiM
-	PVW23TOzzsNbgN/Ede56JoNMgjPjPnw+1ZhBHeAEr78+f33sGNSc0smEhNzc36IgymCZTWH2z5QkQ
-	/7UwGSbgSvyl2vpfEtxFHMse2mz1zu6mQnUbvB1Pt3A0wF3YCLAgsrpJ4D0xsylls7HQBe21YqoCs
-	bg35PRzHhBBlvpW0U6iMy3DopcRXGmzlC12LEvhIEoZwPXZ0FIrfGYFP5/wzP22T5+T5ur/42e3jA
-	01HIPW87J3aN3bQRNNFg==;
+	List-Owner; bh=uwW7qSWmoXSwYd3zzWh/d4t+0Cu1kHbFLu/xeMWo0+w=; b=Hf7G6XqA+j6DA0
+	EjiD/2c2hmB4IpG4DPYcD17aEbOH2232DDYDC3SeTB+DrqAWRTWTeGgg0A4yH/E6/eXysEmUep/rK
+	LtlwuWUQJpWhi8nzsdLJFRLOXSWQ9OcnKvra9TY5D0pxv4Q6oddLWPrKb+xAvikGCxiBM9ZH58e97
+	Be1JHMadduqzdZf6gm4hUFn3oiGqLbxV6Nn01eL/Cm974wysKLAfn+Mv5fDeN1le/O3rb1F7WS5fr
+	TLbNX5Xcch8DN7c0ump9H6mwEMvVL2pm/ZY5Aok+XxHGZZTnp5NdSgXlpf0lrEWMa8QLOVfixguVK
+	c2AKmHY+JDJxgx3faLzQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jbhIL-0000xD-1B; Thu, 21 May 2020 09:15:17 +0000
-Received: from lelv0142.ext.ti.com ([198.47.23.249])
+	id 1jbhRZ-00011Q-T9; Thu, 21 May 2020 09:24:49 +0000
+Received: from twhmllg3.macronix.com ([122.147.135.201])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jbhHu-00084Z-CH; Thu, 21 May 2020 09:14:51 +0000
-Received: from fllv0034.itg.ti.com ([10.64.40.246])
- by lelv0142.ext.ti.com (8.15.2/8.15.2) with ESMTP id 04L9EdMR013665;
- Thu, 21 May 2020 04:14:39 -0500
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=ti.com;
- s=ti-com-17Q1; t=1590052479;
- bh=6TWapEuxg8nAckEhBpE445YKmDj0TJ/xlqg6Fj94UN0=;
- h=Date:From:To:CC:Subject:References:In-Reply-To;
- b=MaaiESZ6aMqcrpmJHO1mfIi6xcBPy89FLOWsTC7LaSKeRbpKblQVGffGtUkHPmsGz
- KtTJ6G2zE9wgGcvBYU37tyagCvHpizRCMMgOcroPyoWwWwrT8AucyU/I2e2Pw/IwO9
- c3yoOkpPkfW2mWbh18+Ej1+oCaJOw0jBQh2uczPA=
-Received: from DFLE108.ent.ti.com (dfle108.ent.ti.com [10.64.6.29])
- by fllv0034.itg.ti.com (8.15.2/8.15.2) with ESMTPS id 04L9EdvO010693
- (version=TLSv1.2 cipher=AES256-GCM-SHA384 bits=256 verify=FAIL);
- Thu, 21 May 2020 04:14:39 -0500
-Received: from DFLE108.ent.ti.com (10.64.6.29) by DFLE108.ent.ti.com
- (10.64.6.29) with Microsoft SMTP Server (version=TLS1_2,
- cipher=TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256_P256) id 15.1.1979.3; Thu, 21
- May 2020 04:14:39 -0500
-Received: from lelv0327.itg.ti.com (10.180.67.183) by DFLE108.ent.ti.com
- (10.64.6.29) with Microsoft SMTP Server (version=TLS1_2,
- cipher=TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256_P256) id 15.1.1979.3 via
- Frontend Transport; Thu, 21 May 2020 04:14:39 -0500
-Received: from localhost (ileax41-snat.itg.ti.com [10.172.224.153])
- by lelv0327.itg.ti.com (8.15.2/8.15.2) with ESMTP id 04L9EcT0062434;
- Thu, 21 May 2020 04:14:39 -0500
-Date: Thu, 21 May 2020 14:44:36 +0530
-From: Pratyush Yadav <p.yadav@ti.com>
-To: <masonccyang@mxic.com.tw>
-Subject: Re: [PATCH v5 09/19] mtd: spi-nor: sfdp: parse xSPI Profile 1.0 table
-Message-ID: <20200521091434.rigqlyuwszyyikj4@ti.com>
+ id 1jbhRM-0000q7-6h; Thu, 21 May 2020 09:24:37 +0000
+Received: from twhfmlp1.macronix.com (twhfmlp1.macronix.com [172.17.20.91])
+ by TWHMLLG3.macronix.com with ESMTP id 04L9O5xV009999;
+ Thu, 21 May 2020 17:24:05 +0800 (GMT-8)
+ (envelope-from masonccyang@mxic.com.tw)
+Received: from MXML06C.mxic.com.tw (mxml06c.macronix.com [172.17.14.55])
+ by Forcepoint Email with ESMTP id 625C4A326BAAEB7806BC;
+ Thu, 21 May 2020 17:24:06 +0800 (CST)
+In-Reply-To: <20200519142642.24131-6-p.yadav@ti.com>
 References: <20200519142642.24131-1-p.yadav@ti.com>
- <20200519142642.24131-10-p.yadav@ti.com>
- <OF83616464.480FA751-ON4825856E.002A4483-4825856E.002BE6AF@mxic.com.tw>
- <20200520085534.yra4f5ww5xs23c4j@ti.com>
- <OF98344913.4BF4C313-ON4825856E.0032A810-4825856E.00352141@mxic.com.tw>
- <20200520103728.jtbslowdfrv3o5yz@ti.com>
- <OFF5A6BA99.395182B5-ON4825856F.002B2F98-4825856F.002CD973@mxic.com.tw>
+ <20200519142642.24131-6-p.yadav@ti.com>
+To: "Pratyush Yadav" <p.yadav@ti.com>
+Subject: Re: [PATCH v5 05/19] mtd: spi-nor: add support for DTR protocol
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <OFF5A6BA99.395182B5-ON4825856F.002B2F98-4825856F.002CD973@mxic.com.tw>
-User-Agent: NeoMutt/20171215
-X-EXCLAIMER-MD-CONFIG: e1e8a2fd-e40a-4ac6-ac9b-f7e9cc9ee180
+X-KeepSent: 6C754784:29BF11CD-4825856F:0032D83F;
+ type=4; name=$KeepSent
+X-Mailer: Lotus Notes Release 8.5.3FP4 SHF90 June 10, 2013
+Message-ID: <OF6C754784.29BF11CD-ON4825856F.0032D83F-4825856F.0033A4F1@mxic.com.tw>
+From: masonccyang@mxic.com.tw
+Date: Thu, 21 May 2020 17:24:05 +0800
+X-MIMETrack: Serialize by Router on MXML06C/TAIWAN/MXIC(Release 9.0.1FP10
+ HF265|July 25, 2018) at 2020/05/21 PM 05:24:06,
+ Serialize complete at 2020/05/21 PM 05:24:06
+X-MAIL: TWHMLLG3.macronix.com 04L9O5xV009999
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200521_021450_517525_5FDE6658 
-X-CRM114-Status: GOOD (  22.65  )
-X-Spam-Score: -2.5 (--)
+X-CRM114-CacheID: sfid-20200521_022436_538545_1B74C6FF 
+X-CRM114-Status: UNSURE (   5.58  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
- Content analysis details:   (-2.5 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
- medium trust [198.47.23.249 listed in list.dnswl.org]
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [122.147.135.201 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -97,7 +71,7 @@ List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>,
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
 Cc: Alexandre Belloni <alexandre.belloni@bootlin.com>,
  Vignesh Raghavendra <vigneshr@ti.com>,
- Tudor Ambarus <tudor.ambarus@microchip.com>, juliensu@mxic.com.tw,
+ Tudor Ambarus <tudor.ambarus@microchip.com>,
  Richard Weinberger <richard@nod.at>, Mark Brown <broonie@kernel.org>,
  Nicolas Ferre <nicolas.ferre@microchip.com>, Sekhar Nori <nsekhar@ti.com>,
  linux-kernel@vger.kernel.org, linux-spi@vger.kernel.org,
@@ -105,91 +79,59 @@ Cc: Alexandre Belloni <alexandre.belloni@bootlin.com>,
  Boris Brezillon <boris.brezillon@collabora.com>,
  linux-mediatek@lists.infradead.org, Miquel Raynal <miquel.raynal@bootlin.com>,
  Matthias Brugger <matthias.bgg@gmail.com>, linux-mtd@lists.infradead.org,
- linux-arm-kernel@lists.infradead.org
+ Pratyush Yadav <p.yadav@ti.com>, linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On 21/05/20 04:09PM, masonccyang@mxic.com.tw wrote:
-> 
-> Hi Pratyush, 
-> 
-> > > > > > +   /* Get 8D-8D-8D fast read opcode and dummy cycles. */
-> > > > > > +   opcode = FIELD_GET(PROFILE1_DWORD1_RD_FAST_CMD, table[0]);
-> > > > > > +
-> > > > > > +   /*
-> > > > > > +    * Update the fast read settings. We set the default dummy 
-> > > cycles to 
-> > > > > 20
-> > > > > > +    * here. Flashes can change this value if they need to when 
-> > > enabling
-> > > > > > +    * octal mode.
-> > > > > > +    */
-> > > > > > + 
-> spi_nor_set_read_settings(&params->reads[SNOR_CMD_READ_8_8_8_DTR],
-> > > > > > +              0, 20, opcode,
-> > > > > > +              SNOR_PROTO_8_8_8_DTR);
-> > > > > > +
-> > > > > 
-> > > > > 
-> > > > > I thought we have a agreement that only do parse here, no other 
-> read 
-> > > > > parameters setting.
-> > > > 
-> > > > Yes, and I considered it. But it didn't make much sense to me to 
-> > > > introduce an extra member in struct spi_nor just to make this call 
-> in 
-> > > > some other function later.
-> > > > 
-> > > > Why exactly do you think doing this here is bad? The way I see it, 
-> we 
-> > > > avoid carrying around an extra member in spi_nor and this also 
-> allows 
-> > > > flashes to change the read settings easily in a post-sfdp hook. The 
-> > > > 4bait parsing function does something similar.
-> > > 
-> > > I think it's not a question for good or bad. 
-> > > 
-> > > 4bait parsing function parse the 4-Byte Address Instruction Table
-> > > and set up read/pp parameters there for sure.
-> > > 
-> > > Here we give the function name spi_nor_parse_profile1() but also 
-> > 
-> > But the function that parses 4bait table is also called 
-> > spi_nor_parse_4bait(). 
-> > 
-> > > do others setting that has nothing to do with it, 
-> > 
-> > Why has setting read opcode and dummy cycles got nothing to do with it? 
-> > The purpose of the Profile 1.0 table is to tell us the Read Fast 
-> > command and dummy cycles, among other things. I think it _does_ have 
-> > something to do with it.
-> 
-> As you know I mean this function just do parse parameter of profile 1 
-> table
-> and keep these value data for later usage.
-> 
-> A device supports xSPI profile table could work in either 8S-8S-8S or 
-> 8D-8D-8D mode.
-> It seems to setup these parameters somewhere out here is betters.
 
-As far as I know, the Profile 1.0 table only describes 8D-8D-8D mode. I 
-see no mention of 8S-8S-8S in JESD251 or JESD216D.01. No field in the 
-table describes anything related to 8S. In fact, searching for "8S" in 
-the JESD251 spec yields 0 results. 
+Hi Pratyush,
 
-Anyway, you should set up 8S parameters in SNOR_CMD_READ_8_8_8, not 
-SNOR_CMD_READ_8_8_8_DTR. 8D configuration is independent of 8S 
-configuration.
 
-PS: If you have any more comments, please send them now. The merge 
-window is getting close, and I'd like to see this make it in.
+> @@ -311,6 +313,7 @@ struct flash_info {
+>                  * BP3 is bit 6 of status register.
+>                  * Must be used with SPI_NOR_4BIT_BP.
+>                  */
+> +#define SPI_NOR_OCTAL_DTR_READ   BIT(19) /* Flash supports octal DTR 
+Read. */
 
--- 
-Regards,
-Pratyush Yadav
-Texas Instruments India
+#define SPI_NOR_OCTAL_DTR_RDWR  BIT(19) /* Support Octal DTR Read & Write 
+*/
+
+more precisely and clearly ?
+
+thanks,
+Mason
+
+CONFIDENTIALITY NOTE:
+
+This e-mail and any attachments may contain confidential information 
+and/or personal data, which is protected by applicable laws. Please be 
+reminded that duplication, disclosure, distribution, or use of this e-mail 
+(and/or its attachments) or any part thereof is prohibited. If you receive 
+this e-mail in error, please notify us immediately and delete this mail as 
+well as its attachment(s) from your system. In addition, please be 
+informed that collection, processing, and/or use of personal data is 
+prohibited unless expressly permitted by personal data protection laws. 
+Thank you for your attention and cooperation.
+
+Macronix International Co., Ltd.
+
+=====================================================================
+
+
+
+============================================================================
+
+CONFIDENTIALITY NOTE:
+
+This e-mail and any attachments may contain confidential information and/or personal data, which is protected by applicable laws. Please be reminded that duplication, disclosure, distribution, or use of this e-mail (and/or its attachments) or any part thereof is prohibited. If you receive this e-mail in error, please notify us immediately and delete this mail as well as its attachment(s) from your system. In addition, please be informed that collection, processing, and/or use of personal data is prohibited unless expressly permitted by personal data protection laws. Thank you for your attention and cooperation.
+
+Macronix International Co., Ltd.
+
+=====================================================================
+
 
 _______________________________________________
 Linux-mediatek mailing list
