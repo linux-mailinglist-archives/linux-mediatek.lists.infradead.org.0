@@ -2,60 +2,62 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 30EB51DDE8A
-	for <lists+linux-mediatek@lfdr.de>; Fri, 22 May 2020 06:09:53 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id BFD121DDF9E
+	for <lists+linux-mediatek@lfdr.de>; Fri, 22 May 2020 08:02:14 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=jY1+HSqWXqNF9bjoY84bsjp/453kQtxqECuPA18n5q4=; b=Uc+Oy530Q3f1v/
-	I8tQbzKe+zs1bvmugTPF/oWdP9jH409Ka7QVPEGJ/BVWdnZ5YOn5xdfQr9xyEv0pW/qPY9EJ/N+Fm
-	+ng0ANdseSDWF4yKmsyGulXyx5fMLBEFjj/3A9uHl70++oEo/cS9QU4nBXq0Qh1pvtTeBSm8kGPRO
-	DLOV8mragfLSkiFCuX7xPdtqPcF7n8f6DnfWMlTt8D8+y0VkeaQz6tmZc5Ow5gR5emj+9FY1vwYSd
-	OMqnjEnlxGT4N7wGfqpYcTm9AFCYooVwniU9QWEG0Hxb2E5lwuLQiL8UCJqgrzf77t8Nd1iZfX2aK
-	KBrehQFXInaxs9tKKa0Q==;
+	List-Owner; bh=uA+zOBJVwG7RQVJhXsSxvVT1rt34tt1KPFGx5zYdPOE=; b=nibbo/CCh+qt5T
+	MdaFM9ZaaPqAycLhG09ZCCeSnaMThRkCHsdlxeYA5ANidmY/7t2TUjTFGvmVHyiWo95Y9rG2oJxwA
+	WQw6p1lW1/HXlb/SM1kBs5EdBagP62xm29pMKZbHXyLbqiEa8bjBlKsZ6B/HGNnHJiRc21rB+teww
+	zqFwiqJwsTqPIBBcfNiKQ7y8uMsfmM0/0jj1UP3k2XczPLZHjQ8zw7U9mDDQTW7nbscMGOAyPxV1X
+	uci/yfP2KnytDmoYa8owkGWzCq9jA8Yn37Dj/9G/9yhMlN0Ti0F4RElMuons0QWb9PXzW6huYfBiH
+	HNzZ2bunMPykLJjpC/8w==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jbz0A-0004vd-Vz; Fri, 22 May 2020 04:09:42 +0000
+	id 1jc0kt-0004Nr-Hr; Fri, 22 May 2020 06:02:03 +0000
 Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jbz07-0004un-Lk; Fri, 22 May 2020 04:09:41 +0000
-X-UUID: 70e790e626c74bc28dcefc8cd916dd6b-20200521
+ id 1jc0kg-0004FP-2b; Fri, 22 May 2020 06:01:53 +0000
+X-UUID: 3884cfe726374df1ba8a59c7440f9f35-20200521
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
  s=dk; 
  h=Content-Transfer-Encoding:MIME-Version:Content-Type:References:In-Reply-To:Date:CC:To:From:Subject:Message-ID;
- bh=X47htdhmQH4NMD8VYo9Wr+NebWgg/Igukck/NyzLjDY=; 
- b=FVd2BM88NwlDWXM+H49UDz6JLO63itSZEJExahDZlDYS0b8yVRQI8pi9r/iJ/JlkIUNluCjiqRYEgh3f5dRNnnLu6210C/X35dGCHp5jzAjlixfjpjucvBHg9j6i5gSgIxGewVpQ41Dj0QAQHDh/Q8m9e8wiedFjo8LEbk9lEO0=;
-X-UUID: 70e790e626c74bc28dcefc8cd916dd6b-20200521
-Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw02.mediatek.com
- (envelope-from <michael.kao@mediatek.com>)
+ bh=qqEHW95WdmSOAWr9riOJVXKketJrkFgXfouzxJOvWDQ=; 
+ b=etQwEyKNvFcEhO5WbLfBescJVRQXY9OrUTJ/OABaLscv6yz2Ne0sU9ZXyTJ+gHN+fHQVcJHa8hzdpHzI6TDay5aGngSxMuRb0nA7PVHS7HjgGbSBkhvCDnLidELWkVt6ezLbS0xhjFXTOzb9WCBgkXwsAoSwZjgzh0z9faPSba0=;
+X-UUID: 3884cfe726374df1ba8a59c7440f9f35-20200521
+Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw02.mediatek.com
+ (envelope-from <jerry-ch.chen@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 45983275; Thu, 21 May 2020 20:09:22 -0800
-Received: from MTKMBS07N2.mediatek.inc (172.21.101.141) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1497.2; Thu, 21 May 2020 21:09:33 -0700
-Received: from mtkcas07.mediatek.inc (172.21.101.84) by
- mtkmbs07n2.mediatek.inc (172.21.101.141) with Microsoft SMTP Server (TLS) id
- 15.0.1497.2; Fri, 22 May 2020 12:09:30 +0800
-Received: from [172.21.84.99] (172.21.84.99) by mtkcas07.mediatek.inc
+ with ESMTP id 1070749144; Thu, 21 May 2020 22:01:29 -0800
+Received: from mtkmbs05n2.mediatek.inc (172.21.101.140) by
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1497.2; Thu, 21 May 2020 23:01:42 -0700
+Received: from MTKCAS06.mediatek.inc (172.21.101.30) by
+ mtkmbs05n2.mediatek.inc (172.21.101.140) with Microsoft SMTP Server (TLS) id
+ 15.0.1497.2; Fri, 22 May 2020 14:01:41 +0800
+Received: from [172.21.84.99] (172.21.84.99) by MTKCAS06.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1497.2 via Frontend
- Transport; Fri, 22 May 2020 12:09:30 +0800
-Message-ID: <1590120571.22249.25.camel@mtksdccf07>
-Subject: Re: [v4,0/7] Add Mediatek thermal dirver and dtsi
-From: Michael Kao <michael.kao@mediatek.com>
-To: Matthias Brugger <matthias.bgg@gmail.com>
-Date: Fri, 22 May 2020 12:09:31 +0800
-In-Reply-To: <7e205390-c7a7-b8c9-3ba2-344a04dc6696@gmail.com>
-References: <20200323121537.22697-1-michael.kao@mediatek.com>
- <7e205390-c7a7-b8c9-3ba2-344a04dc6696@gmail.com>
+ Transport; Fri, 22 May 2020 14:01:41 +0800
+Message-ID: <1590127302.27807.3.camel@mtksdccf07>
+Subject: Re: [RFC PATCH V4 1/4] media: v4l2-mem2mem: add v4l2_m2m_suspend,
+ v4l2_m2m_resume
+From: Jerry-ch Chen <Jerry-ch.Chen@mediatek.com>
+To: Tomasz Figa <tfiga@chromium.org>
+Date: Fri, 22 May 2020 14:01:42 +0800
+In-Reply-To: <20200521171101.GA243874@chromium.org>
+References: <20191204124732.10932-1-Jerry-Ch.chen@mediatek.com>
+ <20191204124732.10932-2-Jerry-Ch.chen@mediatek.com>
+ <20200521171101.GA243874@chromium.org>
 X-Mailer: Evolution 3.2.3-0ubuntu6 
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200521_210939_716596_053AF181 
-X-CRM114-Status: GOOD (  18.12  )
+X-CRM114-CacheID: sfid-20200521_230150_127770_906C0E4A 
+X-CRM114-Status: GOOD (  22.56  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
@@ -83,93 +85,171 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
- srv_heupstream@mediatek.com, linux-pm@vger.kernel.org,
- Daniel Lezcano <daniel.lezcano@linaro.org>, linux-kernel@vger.kernel.org,
- Eduardo Valentin <edubezval@gmail.com>, Rob Herring <robh+dt@kernel.org>,
- linux-mediatek@lists.infradead.org, hsinyi@chromium.org,
- Zhang Rui <rui.zhang@intel.com>, linux-arm-kernel@lists.infradead.org
+Cc: devicetree@vger.kernel.org, Sean.Cheng@mediatek.com,
+ laurent.pinchart+renesas@ideasonboard.com, Rynn.Wu@mediatek.com,
+ zwisler@chromium.org, srv_heupstream@mediatek.com,
+ Jerry-ch Chen <jerry-ch.chen@mediatek.corp-partner.google.com>,
+ Hans Verkuil <hverkuil@xs4all.nl>, jungo.lin@mediatek.com,
+ sj.huang@mediatek.com, yuzhao@chromium.org, linux-mediatek@lists.infradead.org,
+ pihsun@chromium.org, frederic.chen@mediatek.com, matthias.bgg@gmail.com,
+ christie.yu@mediatek.com, mchehab@kernel.org,
+ linux-arm-kernel@lists.infradead.org, linux-media@vger.kernel.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Thu, 2020-05-21 at 14:51 +0200, Matthias Brugger wrote:
-> Hi Michael,
+Hi Tomasz,
+
+On Thu, 2020-05-21 at 17:11 +0000, Tomasz Figa wrote:
+> Hi Jerry,
 > 
-> On 23/03/2020 13:15, Michael Kao wrote:
-> > This patchset supports for MT8183 chip to mtk_thermal.c.
-> > Add thermal zone of all the thermal sensor in SoC for
-> > another get temperatrue. They don't need to thermal throttle.
-> > And we bind coolers for thermal zone nodes of cpu_thermal.
+> On Wed, Dec 04, 2019 at 08:47:29PM +0800, Jerry-ch Chen wrote:
+> > From: Pi-Hsun Shih <pihsun@chromium.org>
 > > 
-> > Rebase to kernel-5.6-rc1.
+> > Add two functions that can be used to stop new jobs from being queued /
+> > continue running queued job. This can be used while a driver using m2m
+> > helper is going to suspend / wake up from resume, and can ensure that
+> > there's no job running in suspend process.
 > > 
-> > Update content:
+> > BUG=b:143046833
+> > TEST=build
 > > 
-> > [1/7]
-> >     - Squash thermal zone settings in the dtsi from [v3,5/8]
-> >       arm64: dts: mt8183: Increase polling frequency for CPU thermal zone
+> > Signed-off-by: Pi-Hsun Shih <pihsun@chromium.org>
+> > Signed-off-by: Jerry-ch Chen <jerry-ch.chen@mediatek.corp-partner.google.com>
+> > ---
+> >  drivers/media/v4l2-core/v4l2-mem2mem.c | 40 ++++++++++++++++++++++++++
+> >  include/media/v4l2-mem2mem.h           | 22 ++++++++++++++
+> >  2 files changed, 62 insertions(+)
 > > 
-> >     - Remove the property of interrupts and mediatek,hw-reset-temp
-> > 
-> > [2/7]
-> >     - Correct commit message
-> > 
-> > [4/7]
-> >     - Change the target temperature to the 80C and change the commit message
-> > 
-> > [6/7]
-> >     - Adjust newline alignment
-> > 
-> >     - Fix the judgement on the return value of registering thermal zone
-> > 
-> > This patch series base on these patches [1].
-> > 
-> > [v7,3/3] PM / AVS: SVS: Introduce SVS engine (https://patchwork.kernel.org/patch/11439829/)
-> > 
-> > Matthias Kaehlcke (1):
-> >   arm64: dts: mt8183: Configure CPU cooling
-> > 
-> > Michael Kao (6):
-> >   arm64: dts: mt8183: add thermal zone node
-> >   arm64: dts: mt8183: add dynamic power coefficients
-> >   arm64: dts: mt8183: Add #cooling-cells to CPU nodes
-> >   thermal: mediatek: mt8183: fix bank number settings
+> > diff --git a/drivers/media/v4l2-core/v4l2-mem2mem.c b/drivers/media/v4l2-core/v4l2-mem2mem.c
+> > index 5bbdec55b7d7..76ba203e0035 100644
+> > --- a/drivers/media/v4l2-core/v4l2-mem2mem.c
+> > +++ b/drivers/media/v4l2-core/v4l2-mem2mem.c
+> > @@ -47,6 +47,10 @@ module_param(debug, bool, 0644);
+> >  #define TRANS_ABORT		(1 << 2)
+> >  
+> >  
+> > +/* The job queue is not running new jobs */
+> > +#define QUEUE_PAUSED		(1 << 0)
+> > +
+> > +
+> >  /* Offset base for buffers on the destination queue - used to distinguish
+> >   * between source and destination buffers when mmapping - they receive the same
+> >   * offsets but for different queues */
+> > @@ -88,6 +92,7 @@ static const char * const m2m_entity_name[] = {
+> >   * @job_queue:		instances queued to run
+> >   * @job_spinlock:	protects job_queue
+> >   * @job_work:		worker to run queued jobs.
+> > + * @job_queue_flags:	flags of the queue status, %QUEUE_PAUSED.
+> >   * @m2m_ops:		driver callbacks
+> >   */
+> >  struct v4l2_m2m_dev {
+> > @@ -105,6 +110,7 @@ struct v4l2_m2m_dev {
+> >  	struct list_head	job_queue;
+> >  	spinlock_t		job_spinlock;
+> >  	struct work_struct	job_work;
+> > +	unsigned long		job_queue_flags;
+> >  
+> >  	const struct v4l2_m2m_ops *m2m_ops;
+> >  };
+> > @@ -267,6 +273,12 @@ static void v4l2_m2m_try_run(struct v4l2_m2m_dev *m2m_dev)
+> >  		return;
+> >  	}
+> >  
+> > +	if (m2m_dev->job_queue_flags & QUEUE_PAUSED) {
+> > +		spin_unlock_irqrestore(&m2m_dev->job_spinlock, flags);
+> > +		dprintk("Running new jobs is paused\n");
+> > +		return;
+> > +	}
+> > +
+> >  	m2m_dev->curr_ctx = list_first_entry(&m2m_dev->job_queue,
+> >  				   struct v4l2_m2m_ctx, queue);
+> >  	m2m_dev->curr_ctx->job_flags |= TRANS_RUNNING;
+> > @@ -447,6 +459,34 @@ void v4l2_m2m_job_finish(struct v4l2_m2m_dev *m2m_dev,
+> >  }
+> >  EXPORT_SYMBOL(v4l2_m2m_job_finish);
+> >  
+> > +void v4l2_m2m_suspend(struct v4l2_m2m_dev *m2m_dev)
+> > +{
+> > +	unsigned long flags;
+> > +	struct v4l2_m2m_ctx *curr_ctx;
+> > +
+> > +	spin_lock_irqsave(&m2m_dev->job_spinlock, flags);
+> > +	m2m_dev->job_queue_flags |= QUEUE_PAUSED;
+> > +	curr_ctx = m2m_dev->curr_ctx;
+> > +	spin_unlock_irqrestore(&m2m_dev->job_spinlock, flags);
+> > +
+> > +	if (curr_ctx)
+> > +		wait_event(curr_ctx->finished,
+> > +			   !(curr_ctx->job_flags & TRANS_RUNNING));
+> > +}
+> > +EXPORT_SYMBOL(v4l2_m2m_suspend);
+> > +
+> > +void v4l2_m2m_resume(struct v4l2_m2m_dev *m2m_dev)
+> > +{
+> > +	unsigned long flags;
+> > +
+> > +	spin_lock_irqsave(&m2m_dev->job_spinlock, flags);
+> > +	m2m_dev->job_queue_flags &= ~QUEUE_PAUSED;
+> > +	spin_unlock_irqrestore(&m2m_dev->job_spinlock, flags);
+> > +
+> > +	v4l2_m2m_try_run(m2m_dev);
+> > +}
+> > +EXPORT_SYMBOL(v4l2_m2m_resume);
+> > +
+> >  int v4l2_m2m_reqbufs(struct file *file, struct v4l2_m2m_ctx *m2m_ctx,
+> >  		     struct v4l2_requestbuffers *reqbufs)
+> >  {
+> > diff --git a/include/media/v4l2-mem2mem.h b/include/media/v4l2-mem2mem.h
+> > index 5467264771ec..119a195da390 100644
+> > --- a/include/media/v4l2-mem2mem.h
+> > +++ b/include/media/v4l2-mem2mem.h
+> > @@ -183,6 +183,28 @@ v4l2_m2m_buf_done(struct vb2_v4l2_buffer *buf, enum vb2_buffer_state state)
+> >  	vb2_buffer_done(&buf->vb2_buf, state);
+> >  }
+> >  
+> > +/**
+> > + * v4l2_m2m_suspend() - stop new jobs from being run and wait for current job
+> > + * to finish
+> > + *
+> > + * @m2m_dev: opaque pointer to the internal data to handle M2M context
+> > + *
+> > + * Called by a driver in the suspend hook. Stop new jobs from being run, and
+> > + * wait for current running job to finish.
+> > + */
+> > +void v4l2_m2m_suspend(struct v4l2_m2m_dev *m2m_dev);
+> > +
+> > +/**
+> > + * v4l2_m2m_resume() - resume job running and try to run a queued job
+> > + *
+> > + * @m2m_dev: opaque pointer to the internal data to handle M2M context
+> > + *
+> > + * Called by a driver in the resume hook. This reverts the operation of
+> > + * v4l2_m2m_suspend() and allows job to be run. Also try to run a queued job if
+> > + * there is any.
+> > + */
+> > +void v4l2_m2m_resume(struct v4l2_m2m_dev *m2m_dev);
+> > +
+> >  /**
+> >   * v4l2_m2m_reqbufs() - multi-queue-aware REQBUFS multiplexer
+> >   *
+> > -- 
+> > 2.18.0
 > 
-> Do I understand correctly that we need to fix the bank number before we can add
-> the device tree changes. And that the last two patches are enhancements for the
-> driver but needed to get a working version?
+> Reviewed-by: Tomasz Figa <tfiga@chromium.org>
 > 
-> Regards,
-> Matthias
+Ok, I've added it in the commit message.
+
+Thanks and Best regards,
+Jerry
+
+> [Corrected Hans's email address.]
+> Hans, does this look good to you?
 > 
-Hi Matthias,
-
-There is one bank setting of mt8183 config.
-If the device tree merged first. I worry that it will crash when the
-thermal zone read temperature.
-It will access the invalid index of bank.
-So please wait the patch "fix bank number settings " merged first.
-Thanks!
-
-/* MT8183 thermal sensor data */
-static const int mt8183_bank_data[MT8183_NUM_SENSORS] = {
-	MT8183_TS1, MT8183_TS2, MT8183_TS3, MT8183_TS4, MT8183_TS5,
-MT8183_TSABB
-}; 
-
-Best Regards,
-Michael
-
-
-> >   thermal: mediatek: add another get_temp ops for thermal sensors
-> >   thermal: mediatek: use spinlock to protect PTPCORESEL
-> > 
-> >  arch/arm64/boot/dts/mediatek/mt8183.dtsi | 156 +++++++++++++++++++++++
-> >  drivers/thermal/mtk_thermal.c            |  88 +++++++++++--
-> >  2 files changed, 231 insertions(+), 13 deletions(-)
-> > 
+> Best regards,
+> Tomasz
+> 
 
 _______________________________________________
 Linux-mediatek mailing list
