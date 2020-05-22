@@ -2,78 +2,62 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id BFD121DDF9E
-	for <lists+linux-mediatek@lfdr.de>; Fri, 22 May 2020 08:02:14 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 2DC5A1DDFE9
+	for <lists+linux-mediatek@lfdr.de>; Fri, 22 May 2020 08:31:59 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:Date:From:Message-ID:MIME-Version:
+	Subject:To:References:In-Reply-To:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=uA+zOBJVwG7RQVJhXsSxvVT1rt34tt1KPFGx5zYdPOE=; b=nibbo/CCh+qt5T
-	MdaFM9ZaaPqAycLhG09ZCCeSnaMThRkCHsdlxeYA5ANidmY/7t2TUjTFGvmVHyiWo95Y9rG2oJxwA
-	WQw6p1lW1/HXlb/SM1kBs5EdBagP62xm29pMKZbHXyLbqiEa8bjBlKsZ6B/HGNnHJiRc21rB+teww
-	zqFwiqJwsTqPIBBcfNiKQ7y8uMsfmM0/0jj1UP3k2XczPLZHjQ8zw7U9mDDQTW7nbscMGOAyPxV1X
-	uci/yfP2KnytDmoYa8owkGWzCq9jA8Yn37Dj/9G/9yhMlN0Ti0F4RElMuons0QWb9PXzW6huYfBiH
-	HNzZ2bunMPykLJjpC/8w==;
+	List-Owner; bh=kJGZBm+N+iWOz1SHXD6qQSJwrncVeyxyzJBEuNNEtVU=; b=cXCUFOc1dr975W
+	gIFndlL/KiK9UNv/J/fa0UM7fZBFPxvsAs5qD7KtcNRzLG/rer/1WHRORNVL/DWiSEn0XmAEhOnvt
+	khcRaOyv7KumDIzCTQiqAvj6UfTebjuRJYaTcKd/JfGyFjsfU9Wvcz/vT3dMLks8DXffcAXXRZIor
+	ZLLIMppok3Xn/DIkb9kfgbT/3pqqM4dnVRzpNGQDRmfDBTqMhnA+3WZulQs0dwFd+9OgLFEBppQWr
+	J3vzdk7t9ZczcELxzvBc5thAmepExEcgieuW5wBptoVttYxoqbhbno70TJhtArwm0kgat5QIeoFzy
+	5NPW3pAH6vM/vxTl14wQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jc0kt-0004Nr-Hr; Fri, 22 May 2020 06:02:03 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
+	id 1jc1Dg-000748-W6; Fri, 22 May 2020 06:31:49 +0000
+Received: from twhmllg4.macronix.com ([211.75.127.132])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jc0kg-0004FP-2b; Fri, 22 May 2020 06:01:53 +0000
-X-UUID: 3884cfe726374df1ba8a59c7440f9f35-20200521
-DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
- s=dk; 
- h=Content-Transfer-Encoding:MIME-Version:Content-Type:References:In-Reply-To:Date:CC:To:From:Subject:Message-ID;
- bh=qqEHW95WdmSOAWr9riOJVXKketJrkFgXfouzxJOvWDQ=; 
- b=etQwEyKNvFcEhO5WbLfBescJVRQXY9OrUTJ/OABaLscv6yz2Ne0sU9ZXyTJ+gHN+fHQVcJHa8hzdpHzI6TDay5aGngSxMuRb0nA7PVHS7HjgGbSBkhvCDnLidELWkVt6ezLbS0xhjFXTOzb9WCBgkXwsAoSwZjgzh0z9faPSba0=;
-X-UUID: 3884cfe726374df1ba8a59c7440f9f35-20200521
-Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw02.mediatek.com
- (envelope-from <jerry-ch.chen@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1070749144; Thu, 21 May 2020 22:01:29 -0800
-Received: from mtkmbs05n2.mediatek.inc (172.21.101.140) by
- MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
- 15.0.1497.2; Thu, 21 May 2020 23:01:42 -0700
-Received: from MTKCAS06.mediatek.inc (172.21.101.30) by
- mtkmbs05n2.mediatek.inc (172.21.101.140) with Microsoft SMTP Server (TLS) id
- 15.0.1497.2; Fri, 22 May 2020 14:01:41 +0800
-Received: from [172.21.84.99] (172.21.84.99) by MTKCAS06.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1497.2 via Frontend
- Transport; Fri, 22 May 2020 14:01:41 +0800
-Message-ID: <1590127302.27807.3.camel@mtksdccf07>
-Subject: Re: [RFC PATCH V4 1/4] media: v4l2-mem2mem: add v4l2_m2m_suspend,
- v4l2_m2m_resume
-From: Jerry-ch Chen <Jerry-ch.Chen@mediatek.com>
-To: Tomasz Figa <tfiga@chromium.org>
-Date: Fri, 22 May 2020 14:01:42 +0800
-In-Reply-To: <20200521171101.GA243874@chromium.org>
-References: <20191204124732.10932-1-Jerry-Ch.chen@mediatek.com>
- <20191204124732.10932-2-Jerry-Ch.chen@mediatek.com>
- <20200521171101.GA243874@chromium.org>
-X-Mailer: Evolution 3.2.3-0ubuntu6 
+ id 1jc1DP-0006t8-C9; Fri, 22 May 2020 06:31:32 +0000
+Received: from twhfm1p2.macronix.com (twhfmlp2.macronix.com [172.17.20.92])
+ by TWHMLLG4.macronix.com with ESMTP id 04M6Uv0L024143;
+ Fri, 22 May 2020 14:30:57 +0800 (GMT-8)
+ (envelope-from masonccyang@mxic.com.tw)
+Received: from MXML06C.mxic.com.tw (mxml06c.mxic.com.tw [172.17.14.55])
+ by Forcepoint Email with ESMTP id 392FE906D490C16CE7F1;
+ Fri, 22 May 2020 14:30:58 +0800 (CST)
+In-Reply-To: <20200519142642.24131-6-p.yadav@ti.com>
+References: <20200519142642.24131-1-p.yadav@ti.com>
+ <20200519142642.24131-6-p.yadav@ti.com>
+To: "Pratyush Yadav" <p.yadav@ti.com>
+Subject: Re: [PATCH v5 05/19] mtd: spi-nor: add support for DTR protocol
 MIME-Version: 1.0
-X-MTK: N
+X-KeepSent: AC48157A:F337A12A-48258570:0021F23B;
+ type=4; name=$KeepSent
+X-Mailer: Lotus Notes Release 8.5.3FP4 SHF90 June 10, 2013
+Message-ID: <OFAC48157A.F337A12A-ON48258570.0021F23B-48258570.0023CB62@mxic.com.tw>
+From: masonccyang@mxic.com.tw
+Date: Fri, 22 May 2020 14:30:58 +0800
+X-MIMETrack: Serialize by Router on MXML06C/TAIWAN/MXIC(Release 9.0.1FP10
+ HF265|July 25, 2018) at 2020/05/22 PM 02:30:58,
+ Serialize complete at 2020/05/22 PM 02:30:58
+X-MAIL: TWHMLLG4.macronix.com 04M6Uv0L024143
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200521_230150_127770_906C0E4A 
-X-CRM114-Status: GOOD (  22.56  )
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20200521_233131_676622_28B0BCEF 
+X-CRM114-Status: UNSURE (   8.77  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [211.75.127.132 listed in list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -85,171 +69,117 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: devicetree@vger.kernel.org, Sean.Cheng@mediatek.com,
- laurent.pinchart+renesas@ideasonboard.com, Rynn.Wu@mediatek.com,
- zwisler@chromium.org, srv_heupstream@mediatek.com,
- Jerry-ch Chen <jerry-ch.chen@mediatek.corp-partner.google.com>,
- Hans Verkuil <hverkuil@xs4all.nl>, jungo.lin@mediatek.com,
- sj.huang@mediatek.com, yuzhao@chromium.org, linux-mediatek@lists.infradead.org,
- pihsun@chromium.org, frederic.chen@mediatek.com, matthias.bgg@gmail.com,
- christie.yu@mediatek.com, mchehab@kernel.org,
- linux-arm-kernel@lists.infradead.org, linux-media@vger.kernel.org
+Cc: Alexandre Belloni <alexandre.belloni@bootlin.com>,
+ Vignesh Raghavendra <vigneshr@ti.com>,
+ Tudor Ambarus <tudor.ambarus@microchip.com>, juliensu@mxic.com.tw,
+ Richard Weinberger <richard@nod.at>, Mark Brown <broonie@kernel.org>,
+ Nicolas Ferre <nicolas.ferre@microchip.com>, Sekhar Nori <nsekhar@ti.com>,
+ linux-kernel@vger.kernel.org, linux-spi@vger.kernel.org,
+ Ludovic Desroches <ludovic.desroches@microchip.com>,
+ Boris Brezillon <boris.brezillon@collabora.com>,
+ linux-mediatek@lists.infradead.org, Miquel Raynal <miquel.raynal@bootlin.com>,
+ Matthias Brugger <matthias.bgg@gmail.com>, linux-mtd@lists.infradead.org,
+ Pratyush Yadav <p.yadav@ti.com>, linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi Tomasz,
 
-On Thu, 2020-05-21 at 17:11 +0000, Tomasz Figa wrote:
-> Hi Jerry,
-> 
-> On Wed, Dec 04, 2019 at 08:47:29PM +0800, Jerry-ch Chen wrote:
-> > From: Pi-Hsun Shih <pihsun@chromium.org>
-> > 
-> > Add two functions that can be used to stop new jobs from being queued /
-> > continue running queued job. This can be used while a driver using m2m
-> > helper is going to suspend / wake up from resume, and can ensure that
-> > there's no job running in suspend process.
-> > 
-> > BUG=b:143046833
-> > TEST=build
-> > 
-> > Signed-off-by: Pi-Hsun Shih <pihsun@chromium.org>
-> > Signed-off-by: Jerry-ch Chen <jerry-ch.chen@mediatek.corp-partner.google.com>
-> > ---
-> >  drivers/media/v4l2-core/v4l2-mem2mem.c | 40 ++++++++++++++++++++++++++
-> >  include/media/v4l2-mem2mem.h           | 22 ++++++++++++++
-> >  2 files changed, 62 insertions(+)
-> > 
-> > diff --git a/drivers/media/v4l2-core/v4l2-mem2mem.c b/drivers/media/v4l2-core/v4l2-mem2mem.c
-> > index 5bbdec55b7d7..76ba203e0035 100644
-> > --- a/drivers/media/v4l2-core/v4l2-mem2mem.c
-> > +++ b/drivers/media/v4l2-core/v4l2-mem2mem.c
-> > @@ -47,6 +47,10 @@ module_param(debug, bool, 0644);
-> >  #define TRANS_ABORT		(1 << 2)
-> >  
-> >  
-> > +/* The job queue is not running new jobs */
-> > +#define QUEUE_PAUSED		(1 << 0)
-> > +
-> > +
-> >  /* Offset base for buffers on the destination queue - used to distinguish
-> >   * between source and destination buffers when mmapping - they receive the same
-> >   * offsets but for different queues */
-> > @@ -88,6 +92,7 @@ static const char * const m2m_entity_name[] = {
-> >   * @job_queue:		instances queued to run
-> >   * @job_spinlock:	protects job_queue
-> >   * @job_work:		worker to run queued jobs.
-> > + * @job_queue_flags:	flags of the queue status, %QUEUE_PAUSED.
-> >   * @m2m_ops:		driver callbacks
-> >   */
-> >  struct v4l2_m2m_dev {
-> > @@ -105,6 +110,7 @@ struct v4l2_m2m_dev {
-> >  	struct list_head	job_queue;
-> >  	spinlock_t		job_spinlock;
-> >  	struct work_struct	job_work;
-> > +	unsigned long		job_queue_flags;
-> >  
-> >  	const struct v4l2_m2m_ops *m2m_ops;
-> >  };
-> > @@ -267,6 +273,12 @@ static void v4l2_m2m_try_run(struct v4l2_m2m_dev *m2m_dev)
-> >  		return;
-> >  	}
-> >  
-> > +	if (m2m_dev->job_queue_flags & QUEUE_PAUSED) {
-> > +		spin_unlock_irqrestore(&m2m_dev->job_spinlock, flags);
-> > +		dprintk("Running new jobs is paused\n");
-> > +		return;
-> > +	}
-> > +
-> >  	m2m_dev->curr_ctx = list_first_entry(&m2m_dev->job_queue,
-> >  				   struct v4l2_m2m_ctx, queue);
-> >  	m2m_dev->curr_ctx->job_flags |= TRANS_RUNNING;
-> > @@ -447,6 +459,34 @@ void v4l2_m2m_job_finish(struct v4l2_m2m_dev *m2m_dev,
-> >  }
-> >  EXPORT_SYMBOL(v4l2_m2m_job_finish);
-> >  
-> > +void v4l2_m2m_suspend(struct v4l2_m2m_dev *m2m_dev)
-> > +{
-> > +	unsigned long flags;
-> > +	struct v4l2_m2m_ctx *curr_ctx;
-> > +
-> > +	spin_lock_irqsave(&m2m_dev->job_spinlock, flags);
-> > +	m2m_dev->job_queue_flags |= QUEUE_PAUSED;
-> > +	curr_ctx = m2m_dev->curr_ctx;
-> > +	spin_unlock_irqrestore(&m2m_dev->job_spinlock, flags);
-> > +
-> > +	if (curr_ctx)
-> > +		wait_event(curr_ctx->finished,
-> > +			   !(curr_ctx->job_flags & TRANS_RUNNING));
-> > +}
-> > +EXPORT_SYMBOL(v4l2_m2m_suspend);
-> > +
-> > +void v4l2_m2m_resume(struct v4l2_m2m_dev *m2m_dev)
-> > +{
-> > +	unsigned long flags;
-> > +
-> > +	spin_lock_irqsave(&m2m_dev->job_spinlock, flags);
-> > +	m2m_dev->job_queue_flags &= ~QUEUE_PAUSED;
-> > +	spin_unlock_irqrestore(&m2m_dev->job_spinlock, flags);
-> > +
-> > +	v4l2_m2m_try_run(m2m_dev);
-> > +}
-> > +EXPORT_SYMBOL(v4l2_m2m_resume);
-> > +
-> >  int v4l2_m2m_reqbufs(struct file *file, struct v4l2_m2m_ctx *m2m_ctx,
-> >  		     struct v4l2_requestbuffers *reqbufs)
-> >  {
-> > diff --git a/include/media/v4l2-mem2mem.h b/include/media/v4l2-mem2mem.h
-> > index 5467264771ec..119a195da390 100644
-> > --- a/include/media/v4l2-mem2mem.h
-> > +++ b/include/media/v4l2-mem2mem.h
-> > @@ -183,6 +183,28 @@ v4l2_m2m_buf_done(struct vb2_v4l2_buffer *buf, enum vb2_buffer_state state)
-> >  	vb2_buffer_done(&buf->vb2_buf, state);
-> >  }
-> >  
-> > +/**
-> > + * v4l2_m2m_suspend() - stop new jobs from being run and wait for current job
-> > + * to finish
-> > + *
-> > + * @m2m_dev: opaque pointer to the internal data to handle M2M context
-> > + *
-> > + * Called by a driver in the suspend hook. Stop new jobs from being run, and
-> > + * wait for current running job to finish.
-> > + */
-> > +void v4l2_m2m_suspend(struct v4l2_m2m_dev *m2m_dev);
-> > +
-> > +/**
-> > + * v4l2_m2m_resume() - resume job running and try to run a queued job
-> > + *
-> > + * @m2m_dev: opaque pointer to the internal data to handle M2M context
-> > + *
-> > + * Called by a driver in the resume hook. This reverts the operation of
-> > + * v4l2_m2m_suspend() and allows job to be run. Also try to run a queued job if
-> > + * there is any.
-> > + */
-> > +void v4l2_m2m_resume(struct v4l2_m2m_dev *m2m_dev);
-> > +
-> >  /**
-> >   * v4l2_m2m_reqbufs() - multi-queue-aware REQBUFS multiplexer
-> >   *
-> > -- 
-> > 2.18.0
-> 
-> Reviewed-by: Tomasz Figa <tfiga@chromium.org>
-> 
-Ok, I've added it in the commit message.
+Hi Pratyush,
 
-Thanks and Best regards,
-Jerry
 
-> [Corrected Hans's email address.]
-> Hans, does this look good to you?
-> 
-> Best regards,
-> Tomasz
-> 
+> +/**
+> + * spi_nor_spimem_setup_op() - Set up common properties of a spi-mem 
+op.
+> + * @nor:      pointer to a 'struct spi_nor'
+> + * @op:         pointer to the 'struct spi_mem_op' whose properties
+> + *         need to be initialized.
+> + * @proto:      the protocol from which the properties need to be set.
+> + */
+> +void spi_nor_spimem_setup_op(const struct spi_nor *nor,
+> +              struct spi_mem_op *op,
+> +              const enum spi_nor_protocol proto)
+> +{
+> +   u8 ext;
+> +
+> +   op->cmd.buswidth = spi_nor_get_protocol_inst_nbits(proto);
+> +
+> +   if (op->addr.nbytes)
+> +      op->addr.buswidth = spi_nor_get_protocol_addr_nbits(proto);
+> +
+> +   if (op->dummy.nbytes)
+> +      op->dummy.buswidth = spi_nor_get_protocol_addr_nbits(proto);
+> +
+> +   if (op->data.nbytes)
+> +      op->data.buswidth = spi_nor_get_protocol_data_nbits(proto);
+> +
+> +   if (spi_nor_protocol_is_dtr(proto)) {
+
+As mentioned before that I am also patching mx25* which supports 8S-8S-8S 
+and 
+8D-8D-8D mode.
+
+please patch to spi_nor_protocol_is_8_8_8(proto) for 8S-8S-8S mode 
+support.
+
+> +      /*
+> +       * spi-mem supports mixed DTR modes, but right now we can only
+> +       * have all phases either DTR or STR. IOW, spi-mem can have
+> +       * something like 4S-4D-4D, but spi-nor can't. So, set all 4
+> +       * phases to either DTR or STR.
+> +       */
+
+        if (spi_nor_protocol_is_8D_8D_8D(proto) {
+
+> +      op->cmd.dtr = op->addr.dtr = op->dummy.dtr
+> +                = op->data.dtr = true;
+> +
+> +      /* 2 bytes per clock cycle in DTR mode. */
+> +      op->dummy.nbytes *= 2;
+
+        }
+
+> +
+> +      ext = spi_nor_get_cmd_ext(nor, op);
+> +      op->cmd.opcode = (op->cmd.opcode << 8) | ext;
+> +      op->cmd.nbytes = 2;
+> +   }
+> +}
+> +
+
+thanks & best regards,
+Mason
+
+
+CONFIDENTIALITY NOTE:
+
+This e-mail and any attachments may contain confidential information 
+and/or personal data, which is protected by applicable laws. Please be 
+reminded that duplication, disclosure, distribution, or use of this e-mail 
+(and/or its attachments) or any part thereof is prohibited. If you receive 
+this e-mail in error, please notify us immediately and delete this mail as 
+well as its attachment(s) from your system. In addition, please be 
+informed that collection, processing, and/or use of personal data is 
+prohibited unless expressly permitted by personal data protection laws. 
+Thank you for your attention and cooperation.
+
+Macronix International Co., Ltd.
+
+=====================================================================
+
+
+
+============================================================================
+
+CONFIDENTIALITY NOTE:
+
+This e-mail and any attachments may contain confidential information and/or personal data, which is protected by applicable laws. Please be reminded that duplication, disclosure, distribution, or use of this e-mail (and/or its attachments) or any part thereof is prohibited. If you receive this e-mail in error, please notify us immediately and delete this mail as well as its attachment(s) from your system. In addition, please be informed that collection, processing, and/or use of personal data is prohibited unless expressly permitted by personal data protection laws. Thank you for your attention and cooperation.
+
+Macronix International Co., Ltd.
+
+=====================================================================
+
 
 _______________________________________________
 Linux-mediatek mailing list
