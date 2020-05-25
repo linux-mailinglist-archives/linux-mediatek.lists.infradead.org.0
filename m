@@ -2,63 +2,62 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 488211E04B7
-	for <lists+linux-mediatek@lfdr.de>; Mon, 25 May 2020 04:32:02 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 4B4861E06B6
+	for <lists+linux-mediatek@lfdr.de>; Mon, 25 May 2020 08:13:45 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=3Q/unX/l2IHnGUd9rjXzhPbYHCRN6LyoQUs7M695FlU=; b=rF+TtNWKy7fgp0
-	xNcO0nE2vztcPpRrUVRLF8wrqudMfiBuAL1qdJxucGyq4LSHzxpAq1rFylt5LhMODuca/2ghDMpjY
-	qjNQfLE+IfdUi0vXo9EbAYgqDtH1D//d53LMwYKO2giOBOOryfNJ/Zx20drC7O8qFMNPPQ3UoRSAG
-	Z5+GLwEPyDa5A9qCXF62mcYfdQVjlXQJI68bELtwCbiky7bmTxVUwqUxdkTKtGAOuWCHjQ8eePGrQ
-	51p5PB/fjU+zlaLAB7tuTbxdvcWhMSF59+WX4rd6UJcHoro8l0DqiQ9qEq7tSZEqvND3F3xphfivL
-	eI1TvGcF8cFwFXftOR1w==;
+	List-Owner; bh=hzqIUEIJSACLdNDl8UP/q0CjyqwnEnjxZFZIB67jQn8=; b=gOkppqNDEKX/MN
+	2VY/Hle7jdrQZqExLiO/c9ne34r5+Mm1idO2OXwo8Nl3+/NDXZEOrA84yLoAgMLBwCZb3b5ni88w7
+	36OfV9r71flN4lHWkLX90ECa6rVUUvQFsyIAzf7byKEBinh5m48tcaXv9WouuYfLqstekKxquH3PE
+	p0fHvOiNkkM+SsyZD3nlz/1ziAvG/vZuY3scFiUijCCrZ5dEIznYUoyRnnFyM1i/3T00x0qd3HQCY
+	1eHPHZig0wU8XBH1CiUT3X5nFF1Pstlr+Zx5osWEP4fUArRrtJDqaKQnVjLrmoRt1Ym6sGCzBHphE
+	NpTHZpNiaCvVCadx2SfA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jd2u0-0001j7-Sd; Mon, 25 May 2020 02:31:44 +0000
+	id 1jd6Mc-0001Zk-5J; Mon, 25 May 2020 06:13:30 +0000
 Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jd2tx-0001iI-JD; Mon, 25 May 2020 02:31:43 +0000
-X-UUID: 1197afc85e2b46edbff5a177b7f9bb6c-20200524
+ id 1jd6MY-0001Ye-P9; Mon, 25 May 2020 06:13:28 +0000
+X-UUID: 24f877816aa444ceb2dcb59c3f258e11-20200524
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
  s=dk; 
  h=Content-Transfer-Encoding:MIME-Version:Content-Type:References:In-Reply-To:Date:CC:To:From:Subject:Message-ID;
- bh=iCgaqwFsUfvQyQOBvfXfyk2ReBUFB1D+FN/5yAizTjQ=; 
- b=A9+20zyQu4UmAW9DpAVHlg23ZdynfSZzOahsLkXaj9IjywU/R0exT/SAOvQ+G1ZxjSwrVRtzwmk2Ed8QQV7vvX6f2RSCETJwMS88O9FUxRN6O3exb2WLAuBDn7BMJ+MJuw87j/JNBhW2/oaMZZAylBZDVSN7uyH+aAwNRr2stx4=;
-X-UUID: 1197afc85e2b46edbff5a177b7f9bb6c-20200524
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
- (envelope-from <dennis-yc.hsieh@mediatek.com>)
+ bh=4/4tyFF13ExXdeCjudAPME2PjshhSd+G5yUb+3jQX6c=; 
+ b=nZpWku+XTtMahBn/LjboqmblxblN2CRw87eFqZhwAYFVTTjkpCOBlQfpygSMc8ZtYkpj8+EnvIfCZEXZG6K3Fn3JONHhns8bX4IanYFlVyjZDPJ3czfKKOW0BhK5kdR38uRrXIfCDbUAytZjuyTxhuBFM0iWtIQ0UtgKyBrn8mE=;
+X-UUID: 24f877816aa444ceb2dcb59c3f258e11-20200524
+Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw02.mediatek.com
+ (envelope-from <yong.wu@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1017087324; Sun, 24 May 2020 18:31:32 -0800
-Received: from mtkmbs05n1.mediatek.inc (172.21.101.15) by
+ with ESMTP id 1275175774; Sun, 24 May 2020 22:13:13 -0800
+Received: from MTKMBS32N2.mediatek.inc (172.27.4.72) by
  MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1497.2; Sun, 24 May 2020 19:27:02 -0700
-Received: from MTKCAS06.mediatek.inc (172.21.101.30) by
- mtkmbs05n1.mediatek.inc (172.21.101.15) with Microsoft SMTP Server (TLS) id
- 15.0.1497.2; Mon, 25 May 2020 10:27:00 +0800
-Received: from [172.21.77.33] (172.21.77.33) by MTKCAS06.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1497.2 via Frontend
- Transport; Mon, 25 May 2020 10:27:00 +0800
-Message-ID: <1590373621.31522.7.camel@mtkswgap22>
-Subject: Re: [PATCH v5 09/13] soc: mediatek: cmdq: add write_s value function
-From: Dennis-YC Hsieh <dennis-yc.hsieh@mediatek.com>
-To: Matthias Brugger <matthias.bgg@gmail.com>
-Date: Mon, 25 May 2020 10:27:01 +0800
-In-Reply-To: <eb604637-28f0-fa8f-ce4b-3e87f6c944ad@gmail.com>
-References: <1583664775-19382-1-git-send-email-dennis-yc.hsieh@mediatek.com>
- <1583664775-19382-10-git-send-email-dennis-yc.hsieh@mediatek.com>
- <f9fd9ea8-f706-ed4a-4c83-c53ad092035c@gmail.com>
- <1590341462.31286.19.camel@mtkswgap22>
- <eb604637-28f0-fa8f-ce4b-3e87f6c944ad@gmail.com>
-X-Mailer: Evolution 3.2.3-0ubuntu6 
+ 15.0.1497.2; Sun, 24 May 2020 23:13:12 -0700
+Received: from MTKCAS36.mediatek.inc (172.27.4.186) by MTKMBS32N2.mediatek.inc
+ (172.27.4.72) with Microsoft SMTP Server (TLS) id 15.0.1497.2;
+ Mon, 25 May 2020 14:13:08 +0800
+Received: from [10.17.3.153] (10.17.3.153) by MTKCAS36.mediatek.inc
+ (172.27.4.170) with Microsoft SMTP Server id 15.0.1497.2 via Frontend
+ Transport; Mon, 25 May 2020 14:13:07 +0800
+Message-ID: <1590387086.13912.4.camel@mhfsdcap03>
+Subject: Re: [PATCH v3 2/7] iommu/mediatek: Rename the register
+ STANDARD_AXI_MODE(0x48) to MISC_CTRL
+From: Yong Wu <yong.wu@mediatek.com>
+To: Chao Hao <chao.hao@mediatek.com>
+Date: Mon, 25 May 2020 14:11:26 +0800
+In-Reply-To: <20200509083654.5178-3-chao.hao@mediatek.com>
+References: <20200509083654.5178-1-chao.hao@mediatek.com>
+ <20200509083654.5178-3-chao.hao@mediatek.com>
+X-Mailer: Evolution 3.10.4-0ubuntu2 
 MIME-Version: 1.0
+X-TM-SNTS-SMTP: 9F19ACAE1B3DEF7E5400D3D9BC819389FFCDC31F868E03319EA154150F0F08962000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200524_193141_638558_17FCD0BC 
-X-CRM114-Status: GOOD (  20.72  )
+X-CRM114-CacheID: sfid-20200524_231326_825635_32089064 
+X-CRM114-Status: GOOD (  17.63  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
@@ -86,138 +85,93 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
- Philipp Zabel <p.zabel@pengutronix.de>, wsd_upstream@mediatek.com,
- David Airlie <airlied@linux.ie>, Jassi Brar <jassisinghbrar@gmail.com>,
- linux-kernel@vger.kernel.org, dri-devel@lists.freedesktop.org,
- HS Liao <hs.liao@mediatek.com>, Rob Herring <robh+dt@kernel.org>,
- linux-mediatek@lists.infradead.org, Houlong Wei <houlong.wei@mediatek.com>,
- Daniel Vetter <daniel@ffwll.ch>, CK Hu <ck.hu@mediatek.com>,
- Bibby Hsieh <bibby.hsieh@mediatek.com>, linux-arm-kernel@lists.infradead.org
+Cc: devicetree@vger.kernel.org, FY Yang <fy.yang@mediatek.com>,
+ wsd_upstream@mediatek.com, Joerg Roedel <joro@8bytes.org>,
+ linux-kernel@vger.kernel.org, iommu@lists.linux-foundation.org,
+ Rob Herring <robh+dt@kernel.org>, linux-mediatek@lists.infradead.org,
+ Matthias Brugger <matthias.bgg@gmail.com>, Jun Yan <jun.yan@mediatek.com>,
+ linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-
-On Sun, 2020-05-24 at 20:13 +0200, Matthias Brugger wrote:
+On Sat, 2020-05-09 at 16:36 +0800, Chao Hao wrote:
+> For iommu offset=0x48 register, only the previous mt8173/mt8183 use the
+> name STANDARD_AXI_MODE, all the latest SoC extend the register more
+> feature by different bits, for example: axi_mode, in_order_en, coherent_en
+> and so on. So rename REG_MMU_MISC_CTRL may be more proper.
 > 
-> On 24/05/2020 19:31, Dennis-YC Hsieh wrote:
-> > Hi Matthias,
-> > 
-> > Thanks for your comment.
-> > 
-> > On Sat, 2020-05-16 at 20:20 +0200, Matthias Brugger wrote:
-> >>
-> >> On 08/03/2020 11:52, Dennis YC Hsieh wrote:
-> >>> add write_s function in cmdq helper functions which
-> >>> writes a constant value to address with large dma
-> >>> access support.
-> >>>
-> >>> Signed-off-by: Dennis YC Hsieh <dennis-yc.hsieh@mediatek.com>
-> >>> Reviewed-by: CK Hu <ck.hu@mediatek.com>
-> >>> ---
-> >>>  drivers/soc/mediatek/mtk-cmdq-helper.c | 26 ++++++++++++++++++++++++++
-> >>>  include/linux/soc/mediatek/mtk-cmdq.h  | 14 ++++++++++++++
-> >>>  2 files changed, 40 insertions(+)
-> >>>
-> >>> diff --git a/drivers/soc/mediatek/mtk-cmdq-helper.c b/drivers/soc/mediatek/mtk-cmdq-helper.c
-> >>> index 03c129230cd7..a9ebbabb7439 100644
-> >>> --- a/drivers/soc/mediatek/mtk-cmdq-helper.c
-> >>> +++ b/drivers/soc/mediatek/mtk-cmdq-helper.c
-> >>> @@ -269,6 +269,32 @@ int cmdq_pkt_write_s(struct cmdq_pkt *pkt, u16 high_addr_reg_idx,
-> >>>  }
-> >>>  EXPORT_SYMBOL(cmdq_pkt_write_s);
-> >>>  
-> >>> +int cmdq_pkt_write_s_value(struct cmdq_pkt *pkt, u16 high_addr_reg_idx,
-> >>> +			   u16 addr_low, u32 value, u32 mask)
-> >>> +{
-> >>> +	struct cmdq_instruction inst = { {0} };
-> >>> +	int err;
-> >>> +
-> >>> +	if (mask != U32_MAX) {
-> >>> +		inst.op = CMDQ_CODE_MASK;
-> >>> +		inst.mask = ~mask;
-> >>> +		err = cmdq_pkt_append_command(pkt, inst);
-> >>> +		if (err < 0)
-> >>> +			return err;
-> >>> +
-> >>> +		inst.op = CMDQ_CODE_WRITE_S_MASK;
-> >>> +	} else {
-> >>> +		inst.op = CMDQ_CODE_WRITE_S;
-> >>> +	}
-> >>> +
-> >>> +	inst.sop = high_addr_reg_idx;
-> >>
-> >> Writing u16 value in a 5 bit wide variable?
-> > 
-> > We need only 5 bits in this case. I'll change high_addr_reg_idx
-> > parameter to u8.
-> > 
+> This patch only rename the register name, no functional change.
 > 
-> Ok, please make sure to mask the value, so that it's explicit in the code that
-> we only use the lowest 5 bits of high_addr_reg_idx.
+> Signed-off-by: Chao Hao <chao.hao@mediatek.com>
 
-Is it necessary to mask the value?
-Since sop already defined as "u8 sop:5;", I thought it is explicit that
-only use 5 bits and compiler should do the rest jobs.
+Reviewed-by: Yong Wu <yong.wu@mediatek.com>
 
-
-Regards,
-Dennis
-
+> ---
+>  drivers/iommu/mtk_iommu.c | 14 +++++++-------
+>  drivers/iommu/mtk_iommu.h |  2 +-
+>  2 files changed, 8 insertions(+), 8 deletions(-)
 > 
-> Regards,
-> Matthias
-> 
-> >>
-> >>> +	inst.offset = addr_low;
-> >>> +	inst.value = value;
-> >>> +
-> >>> +	return cmdq_pkt_append_command(pkt, inst);
-> >>> +}
-> >>> +EXPORT_SYMBOL(cmdq_pkt_write_s_value);
-> >>> +
-> >>>  int cmdq_pkt_wfe(struct cmdq_pkt *pkt, u16 event)
-> >>>  {
-> >>>  	struct cmdq_instruction inst = { {0} };
-> >>> diff --git a/include/linux/soc/mediatek/mtk-cmdq.h b/include/linux/soc/mediatek/mtk-cmdq.h
-> >>> index 01b4184af310..fec292aac83c 100644
-> >>> --- a/include/linux/soc/mediatek/mtk-cmdq.h
-> >>> +++ b/include/linux/soc/mediatek/mtk-cmdq.h
-> >>> @@ -135,6 +135,20 @@ int cmdq_pkt_read_s(struct cmdq_pkt *pkt, u16 high_addr_reg_idx, u16 addr_low,
-> >>>  int cmdq_pkt_write_s(struct cmdq_pkt *pkt, u16 high_addr_reg_idx,
-> >>>  		     u16 addr_low, u16 src_reg_idx, u32 mask);
-> >>>  
-> >>> +/**
-> >>> + * cmdq_pkt_write_s_value() - append write_s command with mask to the CMDQ
-> >>> + *			      packet which write value to a physical address
-> >>> + * @pkt:	the CMDQ packet
-> >>> + * @high_addr_reg_idx:	internal regisger ID which contains high address of pa
-> >>
-> >> register
-> > 
-> > will fix
-> > 
-> > 
-> > Regards,
-> > Dennis
-> > 
-> >>
-> >>> + * @addr_low:	low address of pa
-> >>> + * @value:	the specified target value
-> >>> + * @mask:	the specified target mask
-> >>> + *
-> >>> + * Return: 0 for success; else the error code is returned
-> >>> + */
-> >>> +int cmdq_pkt_write_s_value(struct cmdq_pkt *pkt, u16 high_addr_reg_idx,
-> >>> +			   u16 addr_low, u32 value, u32 mask);
-> >>> +
-> >>>  /**
-> >>>   * cmdq_pkt_wfe() - append wait for event command to the CMDQ packet
-> >>>   * @pkt:	the CMDQ packet
-> >>>
-> > 
+> diff --git a/drivers/iommu/mtk_iommu.c b/drivers/iommu/mtk_iommu.c
+> index 5f4d6df59cf6..e7e7c7695ed1 100644
+> --- a/drivers/iommu/mtk_iommu.c
+> +++ b/drivers/iommu/mtk_iommu.c
+> @@ -41,7 +41,7 @@
+>  #define F_INVLD_EN0				BIT(0)
+>  #define F_INVLD_EN1				BIT(1)
+>  
+> -#define REG_MMU_STANDARD_AXI_MODE		0x048
+> +#define REG_MMU_MISC_CTRL			0x048
+>  #define REG_MMU_DCM_DIS				0x050
+>  
+>  #define REG_MMU_CTRL_REG			0x110
+> @@ -585,8 +585,10 @@ static int mtk_iommu_hw_init(const struct mtk_iommu_data *data)
+>  	}
+>  	writel_relaxed(0, data->base + REG_MMU_DCM_DIS);
+>  
+> -	if (data->plat_data->reset_axi)
+> -		writel_relaxed(0, data->base + REG_MMU_STANDARD_AXI_MODE);
+> +	if (data->plat_data->reset_axi) {
+> +		/* The register is called STANDARD_AXI_MODE in this case */
+> +		writel_relaxed(0, data->base + REG_MMU_MISC_CTRL);
+> +	}
+>  
+>  	if (devm_request_irq(data->dev, data->irq, mtk_iommu_isr, 0,
+>  			     dev_name(data->dev), (void *)data)) {
+> @@ -730,8 +732,7 @@ static int __maybe_unused mtk_iommu_suspend(struct device *dev)
+>  	struct mtk_iommu_suspend_reg *reg = &data->reg;
+>  	void __iomem *base = data->base;
+>  
+> -	reg->standard_axi_mode = readl_relaxed(base +
+> -					       REG_MMU_STANDARD_AXI_MODE);
+> +	reg->misc_ctrl = readl_relaxed(base + REG_MMU_MISC_CTRL);
+>  	reg->dcm_dis = readl_relaxed(base + REG_MMU_DCM_DIS);
+>  	reg->ctrl_reg = readl_relaxed(base + REG_MMU_CTRL_REG);
+>  	reg->int_control0 = readl_relaxed(base + REG_MMU_INT_CONTROL0);
+> @@ -755,8 +756,7 @@ static int __maybe_unused mtk_iommu_resume(struct device *dev)
+>  		dev_err(data->dev, "Failed to enable clk(%d) in resume\n", ret);
+>  		return ret;
+>  	}
+> -	writel_relaxed(reg->standard_axi_mode,
+> -		       base + REG_MMU_STANDARD_AXI_MODE);
+> +	writel_relaxed(reg->misc_ctrl, base + REG_MMU_MISC_CTRL);
+>  	writel_relaxed(reg->dcm_dis, base + REG_MMU_DCM_DIS);
+>  	writel_relaxed(reg->ctrl_reg, base + REG_MMU_CTRL_REG);
+>  	writel_relaxed(reg->int_control0, base + REG_MMU_INT_CONTROL0);
+> diff --git a/drivers/iommu/mtk_iommu.h b/drivers/iommu/mtk_iommu.h
+> index ea949a324e33..1b6ea839b92c 100644
+> --- a/drivers/iommu/mtk_iommu.h
+> +++ b/drivers/iommu/mtk_iommu.h
+> @@ -18,7 +18,7 @@
+>  #include <soc/mediatek/smi.h>
+>  
+>  struct mtk_iommu_suspend_reg {
+> -	u32				standard_axi_mode;
+> +	u32				misc_ctrl;
+>  	u32				dcm_dis;
+>  	u32				ctrl_reg;
+>  	u32				int_control0;
 
 _______________________________________________
 Linux-mediatek mailing list
