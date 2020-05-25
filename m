@@ -2,68 +2,66 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id EB3BF1E0426
-	for <lists+linux-mediatek@lfdr.de>; Mon, 25 May 2020 02:23:53 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 646BF1E04BC
+	for <lists+linux-mediatek@lfdr.de>; Mon, 25 May 2020 04:32:28 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
-	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=Xc8duh0ma/jBnGmoO4EZCXBv3PNbzr1oaDVS9keuGG4=; b=G8E+Uh4/+zk62h
-	YulsfKpdU0zfL0SkdBwlqjBLU9EBI9z37GKP3UO6SQQl44rZBUh37goonbkNYRy9ZqGU+NFcKtFDD
-	3D39gwJbbKz2xOJPfrZKqaklIoV/mn0K+q1EhYenGyennmQvACtM6nHzadEtJdKWTALrpRmdHums1
-	JbDS+n7orLD+9pVPa2pPAEJaKk1wGg/i5IfU9Lzrl2GD/BvJPW3i5oxCYrJ7I65pQoG5V/VGkxYAx
-	x8wRlwb7HYkUPcfyve0M3gNSAZDp4pipnZL3ML3OVf9nUihKYSC7ypQZ1WqTB0EzfqqHcUHjS1o27
-	xA2lN6jGjGB/pejtVOYQ==;
+	List-Owner; bh=LV0KPKwP5EX1jYiLBMavv7uH8Do1ASgureVSy5SvCA0=; b=HIqzfokvnxtDmO
+	TMLK9D51nimfi6p8XEgZRRJrast96TnC/VeVEJciN+8+vS7GUuTlGanSxA1+xIJCodeZeCmBxtic6
+	IpmsGkmvmZ89ek+RGOBjkCxeTMqKFa7yu2OK4dyKY7gPzqAOjYRwwVuRLNls7m366sZwgXaxU9g6a
+	t9Pc0n3VfHo7AWvtcGIINhyjpa0CaHvqN8V8VY8YBZlhhmGFFdupvN2i/oQsYnw8JlGugQvqxi/ni
+	MXL/r0DcWNujRedU1izIm5hAXVcoAjwybLMZoTWJoflKhV2d/pHDmJIeJZ3/ZQqYtlS9qg+HTr4cT
+	Y9Zxl2YBHGr4W47vhDQw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jd0u5-00016Y-IG; Mon, 25 May 2020 00:23:41 +0000
-Received: from mail.kernel.org ([198.145.29.99])
+	id 1jd2ub-0002GV-Ty; Mon, 25 May 2020 02:32:21 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jd0ts-000101-Bs; Mon, 25 May 2020 00:23:29 +0000
-Received: from mail-ej1-f52.google.com (mail-ej1-f52.google.com
- [209.85.218.52])
- (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
- (No client certificate requested)
- by mail.kernel.org (Postfix) with ESMTPSA id C595E20823;
- Mon, 25 May 2020 00:23:26 +0000 (UTC)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1590366207;
- bh=3fQWdb2Uv3qePojZmO+4tSxfnjltQG0nFeUsHQam6o4=;
- h=References:In-Reply-To:From:Date:Subject:To:Cc:From;
- b=SSsZhLY9EfC5qU/BYZB5juZ2bjSbJoVAyMNtCB7kiCirQUkaYGHR55KJ0c1fF7/Ef
- VbIV+wO8v8USBpPo7WhacJSxyY2972LW49K4/yNGsQd4kX8QkJ8G82crzuzRp9LtTq
- tAeBF9wRdr/GFOIc6eBUm4nZKEJx0SEgWEXwPRpQ=
-Received: by mail-ej1-f52.google.com with SMTP id x1so18839608ejd.8;
- Sun, 24 May 2020 17:23:26 -0700 (PDT)
-X-Gm-Message-State: AOAM532O+9cuoO2d1pgBsL5hbGVZrU0IqN/HPGgdfpN8o36KnxAjzxWM
- Pa1Igu8D9mg0d/XeKiEqv4WGhzDFCliwj/4BEA==
-X-Google-Smtp-Source: ABdhPJwUQS45aN6Ho1zx5rWy7SPdbMvS7/nnetQcqChrnsfFeME43g1GOq9VgR+o2PMTCTxZRcZhBKuPj3a+20kllCw=
-X-Received: by 2002:a17:906:3041:: with SMTP id
- d1mr17295243ejd.7.1590366205137; 
- Sun, 24 May 2020 17:23:25 -0700 (PDT)
-MIME-Version: 1.0
-References: <1583664775-19382-1-git-send-email-dennis-yc.hsieh@mediatek.com>
- <1583664775-19382-11-git-send-email-dennis-yc.hsieh@mediatek.com>
- <5d6b61b2-23c9-647f-fa22-73e779010bd8@gmail.com>
-In-Reply-To: <5d6b61b2-23c9-647f-fa22-73e779010bd8@gmail.com>
-From: Chun-Kuang Hu <chunkuang.hu@kernel.org>
-Date: Mon, 25 May 2020 08:23:13 +0800
-X-Gmail-Original-Message-ID: <CAAOTY___HNcRPr8Jq-wNPO_G9pLVjf2D7ezbpPcGbXVNYy1_nA@mail.gmail.com>
-Message-ID: <CAAOTY___HNcRPr8Jq-wNPO_G9pLVjf2D7ezbpPcGbXVNYy1_nA@mail.gmail.com>
-Subject: Re: [PATCH v5 10/13] soc: mediatek: cmdq: export finalize function
+ id 1jd2tz-0001i9-Q8; Mon, 25 May 2020 02:31:45 +0000
+X-UUID: e6ce3daf9c914beabf01cb587a3a05d2-20200524
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
+ s=dk; 
+ h=Content-Transfer-Encoding:MIME-Version:Content-Type:References:In-Reply-To:Date:CC:To:From:Subject:Message-ID;
+ bh=ooK+iIy0dqz3B+xhJunMUOu6PJzalddKbdB9jFuuiGs=; 
+ b=u7VuTHcf3wfTIbRVMWoptP87ILwu8lhZR4uArS31w8+PdGNRLcy2IFCsDTc+p1ftoyee6+jgE0zjl4IiEi7pYH+u5t8hQ4QQMDGF/G+pRxzhP0lqb6ZXkC5/LAMNXwgzxEPAP/BnmQH/uSP4SWYVRIFU/dawKz6RGBzmqWjHrA4=;
+X-UUID: e6ce3daf9c914beabf01cb587a3a05d2-20200524
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
+ (envelope-from <andrew-sh.cheng@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 1472562909; Sun, 24 May 2020 18:31:32 -0800
+Received: from MTKMBS07N2.mediatek.inc (172.21.101.141) by
+ MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
+ 15.0.1497.2; Sun, 24 May 2020 19:21:30 -0700
+Received: from mtkcas07.mediatek.inc (172.21.101.84) by
+ mtkmbs07n2.mediatek.inc (172.21.101.141) with Microsoft SMTP Server (TLS) id
+ 15.0.1497.2; Mon, 25 May 2020 10:21:28 +0800
+Received: from [172.21.77.4] (172.21.77.4) by mtkcas07.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1497.2 via Frontend
+ Transport; Mon, 25 May 2020 10:21:27 +0800
+Message-ID: <1590373289.12854.3.camel@mtksdaap41>
+Subject: Re: [PATCH V3] arm64: dts: mediatek: add cpufreq and cci devfreq
+ nodes for mt8183
+From: andrew-sh.cheng <andrew-sh.cheng@mediatek.com>
 To: Matthias Brugger <matthias.bgg@gmail.com>
+Date: Mon, 25 May 2020 10:21:29 +0800
+In-Reply-To: <085be59e-76d5-4743-0f0c-12f6440715fe@gmail.com>
+References: <1576826785-3867-1-git-send-email-andrew-sh.cheng@mediatek.com>
+ <085be59e-76d5-4743-0f0c-12f6440715fe@gmail.com>
+X-Mailer: Evolution 3.10.4-0ubuntu2 
+MIME-Version: 1.0
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200524_172328_447108_02AD8187 
-X-CRM114-Status: GOOD (  21.19  )
-X-Spam-Score: -5.2 (-----)
+X-CRM114-CacheID: sfid-20200524_193143_848434_FC354485 
+X-CRM114-Status: GOOD (  11.54  )
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
- Content analysis details:   (-5.2 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
- high trust [198.145.29.99 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
@@ -73,7 +71,8 @@ X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  valid
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
  author's domain
- -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -86,87 +85,51 @@ List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
 Cc: Mark Rutland <mark.rutland@arm.com>, devicetree@vger.kernel.org,
- Daniel Vetter <daniel@ffwll.ch>, wsd_upstream@mediatek.com,
- David Airlie <airlied@linux.ie>, Jassi Brar <jassisinghbrar@gmail.com>,
- linux-kernel <linux-kernel@vger.kernel.org>,
- DRI Development <dri-devel@lists.freedesktop.org>,
- HS Liao <hs.liao@mediatek.com>, Dennis YC Hsieh <dennis-yc.hsieh@mediatek.com>,
- Rob Herring <robh+dt@kernel.org>,
- "moderated list:ARM/Mediatek SoC support" <linux-mediatek@lists.infradead.org>,
- Houlong Wei <houlong.wei@mediatek.com>, Philipp Zabel <p.zabel@pengutronix.de>,
- Linux ARM <linux-arm-kernel@lists.infradead.org>
-Content-Type: text/plain; charset="utf-8"
-Content-Transfer-Encoding: base64
+ srv_heupstream@mediatek.com, linux-kernel@vger.kernel.org,
+ Rob Herring <robh+dt@kernel.org>, linux-mediatek@lists.infradead.org,
+ linux-arm-kernel@lists.infradead.org
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-SGksIE1hdHRoaWFzOgoKTWF0dGhpYXMgQnJ1Z2dlciA8bWF0dGhpYXMuYmdnQGdtYWlsLmNvbT4g
-5pa8IDIwMjDlubQ15pyIMTfml6Ug6YCx5pelIOS4iuWNiDI6MjLlr6vpgZPvvJoKPgo+Cj4KPiBP
-biAwOC8wMy8yMDIwIDExOjUyLCBEZW5uaXMgWUMgSHNpZWggd3JvdGU6Cj4gPiBFeHBvcnQgZmlu
-YWxpemUgZnVuY3Rpb24gdG8gY2xpZW50IHdoaWNoIGhlbHBzIGFwcGVuZCBlb2MgYW5kIGp1bXAK
-PiA+IGNvbW1hbmQgdG8gcGt0LiBMZXQgY2xpZW50IGRlY2lkZSBjYWxsIGZpbmFsaXplIG9yIG5v
-dC4KPiA+Cj4gPiBTaWduZWQtb2ZmLWJ5OiBEZW5uaXMgWUMgSHNpZWggPGRlbm5pcy15Yy5oc2ll
-aEBtZWRpYXRlay5jb20+Cj4gPiBSZXZpZXdlZC1ieTogQ0sgSHUgPGNrLmh1QG1lZGlhdGVrLmNv
-bT4KPiA+IC0tLQo+ID4gIGRyaXZlcnMvZ3B1L2RybS9tZWRpYXRlay9tdGtfZHJtX2NydGMuYyB8
-IDEgKwo+ID4gIGRyaXZlcnMvc29jL21lZGlhdGVrL210ay1jbWRxLWhlbHBlci5jICB8IDcgKyst
-LS0tLQo+ID4gIGluY2x1ZGUvbGludXgvc29jL21lZGlhdGVrL210ay1jbWRxLmggICB8IDggKysr
-KysrKysKPiA+ICAzIGZpbGVzIGNoYW5nZWQsIDExIGluc2VydGlvbnMoKyksIDUgZGVsZXRpb25z
-KC0pCj4gPgo+ID4gZGlmZiAtLWdpdCBhL2RyaXZlcnMvZ3B1L2RybS9tZWRpYXRlay9tdGtfZHJt
-X2NydGMuYyBiL2RyaXZlcnMvZ3B1L2RybS9tZWRpYXRlay9tdGtfZHJtX2NydGMuYwo+ID4gaW5k
-ZXggMGRmY2QxNzg3ZTY1Li43ZGFhYWJjMjZlYjEgMTAwNjQ0Cj4gPiAtLS0gYS9kcml2ZXJzL2dw
-dS9kcm0vbWVkaWF0ZWsvbXRrX2RybV9jcnRjLmMKPiA+ICsrKyBiL2RyaXZlcnMvZ3B1L2RybS9t
-ZWRpYXRlay9tdGtfZHJtX2NydGMuYwo+ID4gQEAgLTQ5MCw2ICs0OTAsNyBAQCBzdGF0aWMgdm9p
-ZCBtdGtfZHJtX2NydGNfaHdfY29uZmlnKHN0cnVjdCBtdGtfZHJtX2NydGMgKm10a19jcnRjKQo+
-ID4gICAgICAgICAgICAgICBjbWRxX3BrdF9jbGVhcl9ldmVudChjbWRxX2hhbmRsZSwgbXRrX2Ny
-dGMtPmNtZHFfZXZlbnQpOwo+ID4gICAgICAgICAgICAgICBjbWRxX3BrdF93ZmUoY21kcV9oYW5k
-bGUsIG10a19jcnRjLT5jbWRxX2V2ZW50KTsKPiA+ICAgICAgICAgICAgICAgbXRrX2NydGNfZGRw
-X2NvbmZpZyhjcnRjLCBjbWRxX2hhbmRsZSk7Cj4gPiArICAgICAgICAgICAgIGNtZHFfcGt0X2Zp
-bmFsaXplKGNtZHFfaGFuZGxlKTsKPiA+ICAgICAgICAgICAgICAgY21kcV9wa3RfZmx1c2hfYXN5
-bmMoY21kcV9oYW5kbGUsIGRkcF9jbWRxX2NiLCBjbWRxX2hhbmRsZSk7Cj4gPiAgICAgICB9Cj4g
-PiAgI2VuZGlmCj4KPiBUaGlzIHNob3VsZCBiZSBhIGluZGVwZW5kZW50IHBhdGNoLgo+IE90aGVy
-IHRoZW4gdGhhdCBwYXRjaCBsb29rcyBnb29kLgoKQXBwbHkgb25seSBkcm0gcGFydCBvciBvbmx5
-IGNtZHEgaGVscHIgcGFydCwgaXQgd291bGQgYmUgYWJub3JtYWwuClNoYWxsIHdlIHNlcGVyYXRl
-IHRoaXMgcGF0Y2g/Ck9yIHNlcGVyYXRlIGl0IGJ1dCBtYWtlIHN1cmUgdGhlc2UgdHdvIHBhdGNo
-ZXMgYmUgaW4gdGhlIHNhbWUgdHJlZT8KClJlZ2FyZHMsCkNodW4tS3VhbmcuCgo+Cj4gPiBkaWZm
-IC0tZ2l0IGEvZHJpdmVycy9zb2MvbWVkaWF0ZWsvbXRrLWNtZHEtaGVscGVyLmMgYi9kcml2ZXJz
-L3NvYy9tZWRpYXRlay9tdGstY21kcS1oZWxwZXIuYwo+ID4gaW5kZXggYTllYmJhYmI3NDM5Li41
-OWJjMTE2NGI0MTEgMTAwNjQ0Cj4gPiAtLS0gYS9kcml2ZXJzL3NvYy9tZWRpYXRlay9tdGstY21k
-cS1oZWxwZXIuYwo+ID4gKysrIGIvZHJpdmVycy9zb2MvbWVkaWF0ZWsvbXRrLWNtZHEtaGVscGVy
-LmMKPiA+IEBAIC0zNzIsNyArMzcyLDcgQEAgaW50IGNtZHFfcGt0X2Fzc2lnbihzdHJ1Y3QgY21k
-cV9wa3QgKnBrdCwgdTE2IHJlZ19pZHgsIHUzMiB2YWx1ZSkKPiA+ICB9Cj4gPiAgRVhQT1JUX1NZ
-TUJPTChjbWRxX3BrdF9hc3NpZ24pOwo+ID4KPiA+IC1zdGF0aWMgaW50IGNtZHFfcGt0X2ZpbmFs
-aXplKHN0cnVjdCBjbWRxX3BrdCAqcGt0KQo+ID4gK2ludCBjbWRxX3BrdF9maW5hbGl6ZShzdHJ1
-Y3QgY21kcV9wa3QgKnBrdCkKPiA+ICB7Cj4gPiAgICAgICBzdHJ1Y3QgY21kcV9pbnN0cnVjdGlv
-biBpbnN0ID0geyB7MH0gfTsKPiA+ICAgICAgIGludCBlcnI7Cj4gPiBAQCAtMzkyLDYgKzM5Miw3
-IEBAIHN0YXRpYyBpbnQgY21kcV9wa3RfZmluYWxpemUoc3RydWN0IGNtZHFfcGt0ICpwa3QpCj4g
-Pgo+ID4gICAgICAgcmV0dXJuIGVycjsKPiA+ICB9Cj4gPiArRVhQT1JUX1NZTUJPTChjbWRxX3Br
-dF9maW5hbGl6ZSk7Cj4gPgo+ID4gIHN0YXRpYyB2b2lkIGNtZHFfcGt0X2ZsdXNoX2FzeW5jX2Ni
-KHN0cnVjdCBjbWRxX2NiX2RhdGEgZGF0YSkKPiA+ICB7Cj4gPiBAQCAtNDI2LDEwICs0MjcsNiBA
-QCBpbnQgY21kcV9wa3RfZmx1c2hfYXN5bmMoc3RydWN0IGNtZHFfcGt0ICpwa3QsIGNtZHFfYXN5
-bmNfZmx1c2hfY2IgY2IsCj4gPiAgICAgICB1bnNpZ25lZCBsb25nIGZsYWdzID0gMDsKPiA+ICAg
-ICAgIHN0cnVjdCBjbWRxX2NsaWVudCAqY2xpZW50ID0gKHN0cnVjdCBjbWRxX2NsaWVudCAqKXBr
-dC0+Y2w7Cj4gPgo+ID4gLSAgICAgZXJyID0gY21kcV9wa3RfZmluYWxpemUocGt0KTsKPiA+IC0g
-ICAgIGlmIChlcnIgPCAwKQo+ID4gLSAgICAgICAgICAgICByZXR1cm4gZXJyOwo+ID4gLQo+ID4g
-ICAgICAgcGt0LT5jYi5jYiA9IGNiOwo+ID4gICAgICAgcGt0LT5jYi5kYXRhID0gZGF0YTsKPiA+
-ICAgICAgIHBrdC0+YXN5bmNfY2IuY2IgPSBjbWRxX3BrdF9mbHVzaF9hc3luY19jYjsKPiA+IGRp
-ZmYgLS1naXQgYS9pbmNsdWRlL2xpbnV4L3NvYy9tZWRpYXRlay9tdGstY21kcS5oIGIvaW5jbHVk
-ZS9saW51eC9zb2MvbWVkaWF0ZWsvbXRrLWNtZHEuaAo+ID4gaW5kZXggZmVjMjkyYWFjODNjLi45
-OWU3NzE1NWY5NjcgMTAwNjQ0Cj4gPiAtLS0gYS9pbmNsdWRlL2xpbnV4L3NvYy9tZWRpYXRlay9t
-dGstY21kcS5oCj4gPiArKysgYi9pbmNsdWRlL2xpbnV4L3NvYy9tZWRpYXRlay9tdGstY21kcS5o
-Cj4gPiBAQCAtMjEzLDYgKzIxMywxNCBAQCBpbnQgY21kcV9wa3RfcG9sbF9tYXNrKHN0cnVjdCBj
-bWRxX3BrdCAqcGt0LCB1OCBzdWJzeXMsCj4gPiAgICovCj4gPiAgaW50IGNtZHFfcGt0X2Fzc2ln
-bihzdHJ1Y3QgY21kcV9wa3QgKnBrdCwgdTE2IHJlZ19pZHgsIHUzMiB2YWx1ZSk7Cj4gPgo+ID4g
-Ky8qKgo+ID4gKyAqIGNtZHFfcGt0X2ZpbmFsaXplKCkgLSBBcHBlbmQgRU9DIGFuZCBqdW1wIGNv
-bW1hbmQgdG8gcGt0Lgo+ID4gKyAqIEBwa3Q6ICAgICB0aGUgQ01EUSBwYWNrZXQKPiA+ICsgKgo+
-ID4gKyAqIFJldHVybjogMCBmb3Igc3VjY2VzczsgZWxzZSB0aGUgZXJyb3IgY29kZSBpcyByZXR1
-cm5lZAo+ID4gKyAqLwo+ID4gK2ludCBjbWRxX3BrdF9maW5hbGl6ZShzdHJ1Y3QgY21kcV9wa3Qg
-KnBrdCk7Cj4gPiArCj4gPiAgLyoqCj4gPiAgICogY21kcV9wa3RfZmx1c2hfYXN5bmMoKSAtIHRy
-aWdnZXIgQ01EUSB0byBhc3luY2hyb25vdXNseSBleGVjdXRlIHRoZSBDTURRCj4gPiAgICogICAg
-ICAgICAgICAgICAgICAgICAgICAgIHBhY2tldCBhbmQgY2FsbCBiYWNrIGF0IHRoZSBlbmQgb2Yg
-ZG9uZSBwYWNrZXQKPiA+Cj4gX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19f
-X19fX19fX18KPiBkcmktZGV2ZWwgbWFpbGluZyBsaXN0Cj4gZHJpLWRldmVsQGxpc3RzLmZyZWVk
-ZXNrdG9wLm9yZwo+IGh0dHBzOi8vbGlzdHMuZnJlZWRlc2t0b3Aub3JnL21haWxtYW4vbGlzdGlu
-Zm8vZHJpLWRldmVsCgpfX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19f
-X19fXwpMaW51eC1tZWRpYXRlayBtYWlsaW5nIGxpc3QKTGludXgtbWVkaWF0ZWtAbGlzdHMuaW5m
-cmFkZWFkLm9yZwpodHRwOi8vbGlzdHMuaW5mcmFkZWFkLm9yZy9tYWlsbWFuL2xpc3RpbmZvL2xp
-bnV4LW1lZGlhdGVrCg==
+On Sat, 2020-05-23 at 21:04 +0200, Matthias Brugger wrote:
+> 
+> On 20/12/2019 08:26, Andrew-sh.Cheng wrote:
+> > From: "Andrew-sh.Cheng" <andrew-sh.cheng@mediatek.com>
+> > 
+> > add cpufreq and cci devfreq nodes for mt8183
+> > 
+> > Depend on regulator node patch:
+> > https://patchwork.kernel.org/patch/11284617/
+> > 
+> > Signed-off-by: Andrew-sh.Cheng <andrew-sh.cheng@mediatek.com>
+> > ---
+> >  arch/arm64/boot/dts/mediatek/mt8183-evb.dts |  36 ++++
+> >  arch/arm64/boot/dts/mediatek/mt8183.dtsi    | 245 ++++++++++++++++++++++++++++
+> >  2 files changed, 281 insertions(+)
+> > 
+> [...]
+> > +
+> > +	cci: cci {
+> > +		compatible = "mediatek,mt8183-cci";
+> 
+> I wasn't able to find anyprovider for this compatible.
+> 
+> I'll drop this patch from my queue.
+> 
+> Regards,
+> Matthias
+Hi Matthias,
+
+I put the dt-binding at another patch set.
+https://patchwork.kernel.org/patch/11559265/
+I will integrate this patch with that patch set and resend.
+Thank you.
+
+BR
+Andrew-sh.Cheng
+_______________________________________________
+Linux-mediatek mailing list
+Linux-mediatek@lists.infradead.org
+http://lists.infradead.org/mailman/listinfo/linux-mediatek
