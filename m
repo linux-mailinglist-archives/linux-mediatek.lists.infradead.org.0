@@ -2,80 +2,68 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id D1CE41E3D52
-	for <lists+linux-mediatek@lfdr.de>; Wed, 27 May 2020 11:13:51 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id C03791E3D09
+	for <lists+linux-mediatek@lfdr.de>; Wed, 27 May 2020 11:02:34 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=+XrhJGTAsG/hthoGhj8RvM+bdV6IVnK9ptStfrvHn4c=; b=ZVm0DHD5+BT3jb
-	jOhzXX2jNjgTyktfkKLvjeZ/K3eSjIgp5Nuz0E0ve6q6Jt91DcNP0kPA6kJGTQscfgDe+PIVTZp0U
-	+JD4T466WSD8EmsIKL2I+LQ4IX2kTQFZnj4ysjaNzLohhbsYV1mxpC9X/BLHR+6whAnPCSGsFGkrK
-	n+jrS5dffKkADh73qCumz3Bxwqrtw7xpMC7nrgyb3AaTlh6AlxnnPWAiqQhxcUZnxpg/ZkPyQ9Jzr
-	UnNjHiuh4/WATXHXLz7UvPvZ713OtXiQlaPx/AJF3cRmxnJmxzB96nTxKTxmnRO84WqaljPOJCGYZ
-	FJYmgvrFXn6d1+7Dr+qg==;
+	List-Owner; bh=FTEwRZ2WeBylE/RFphBLRYRzaEDHyhqnlFAqZqyjWrw=; b=XvYzCZM2fGsFJn
+	rWd9Ygr/1t5o3a5foOV8d45ajokfxUJ1XWee9A/7ECXMpzaTiQJLMp7PsHyAf6P5NDXHcJZNBXpQP
+	2mT1WvtlAx1x3uhkyiC2GLXxr1EO+LENW7MIdmzUO/ZYR+keXsITNMEwCMbqBXbnKG7+YZ0nqU7gV
+	D8k7NKnM5AOp85ffWQS9wH9vskQjakn2/mhW9Y4fRkJBi4wax6Kjb4anN5I26BoZwD9a+qRDKJBgD
+	9X1nBVXw82Jd6TK24oXxo9MQSLTWfBdd1O1OhWa4ztY40YpmB0H+P918AVAKFaKOVJsZNfKlJaNxa
+	8aIonb9F5CzUMJy5iaQQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jds85-0005tJ-1c; Wed, 27 May 2020 09:13:41 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
+	id 1jdrxE-0007Ov-0f; Wed, 27 May 2020 09:02:28 +0000
+Received: from metis.ext.pengutronix.de ([2001:67c:670:201:290:27ff:fe1d:cc33])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jds82-0005so-JX; Wed, 27 May 2020 09:13:40 +0000
-X-UUID: d24be6cad85d457999452fbb36838512-20200527
-DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
- s=dk; 
- h=Content-Transfer-Encoding:MIME-Version:Content-Type:References:In-Reply-To:Date:CC:To:From:Subject:Message-ID;
- bh=niIGUTjMuwM6Dzf6Aan1ADPLP3BVHBCxpGmXP1NJl2E=; 
- b=JNNHgxvdyaaY1E4KFGIN+iIuH39MdujciautPSaRta1Fms+78ZhpRWwlLkNPqPuubVmWPdNfdje1sg/Qqmxf8qj62ZEiE6yzl3S4jaLswbleEVeQcYsfQ3Qd+h76huQMd48qTeGmcE45H8B+hoLX4gI2DjGp/5j1UwdRjoBJQC0=;
-X-UUID: d24be6cad85d457999452fbb36838512-20200527
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
- (envelope-from <dongchun.zhu@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 888760595; Wed, 27 May 2020 01:13:24 -0800
-Received: from MTKMBS31N1.mediatek.inc (172.27.4.69) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1497.2; Wed, 27 May 2020 02:03:37 -0700
-Received: from MTKCAS36.mediatek.inc (172.27.4.186) by MTKMBS31N1.mediatek.inc
- (172.27.4.69) with Microsoft SMTP Server (TLS) id 15.0.1497.2;
- Wed, 27 May 2020 17:03:15 +0800
-Received: from [10.17.3.153] (10.17.3.153) by MTKCAS36.mediatek.inc
- (172.27.4.170) with Microsoft SMTP Server id 15.0.1497.2 via Frontend
- Transport; Wed, 27 May 2020 17:03:13 +0800
-Message-ID: <1590570089.8804.453.camel@mhfsdcap03>
-Subject: Re: [V6, 2/2] media: i2c: dw9768: Add DW9768 VCM driver
-From: Dongchun Zhu <dongchun.zhu@mediatek.com>
-To: Tomasz Figa <tfiga@chromium.org>
-Date: Wed, 27 May 2020 17:01:29 +0800
-In-Reply-To: <CAAFQd5CCsT_oM9aij_imV+NABzByi94RmCj97Dx0Tk3S0WDsTg@mail.gmail.com>
-References: <20200518132731.20855-1-dongchun.zhu@mediatek.com>
- <20200518132731.20855-3-dongchun.zhu@mediatek.com>
- <20200521195113.GC14214@chromium.org>
- <1590139561.8804.390.camel@mhfsdcap03>
- <CAAFQd5CCsT_oM9aij_imV+NABzByi94RmCj97Dx0Tk3S0WDsTg@mail.gmail.com>
-X-Mailer: Evolution 3.10.4-0ubuntu2 
+ id 1jdrwv-00079y-Co
+ for linux-mediatek@lists.infradead.org; Wed, 27 May 2020 09:02:10 +0000
+Received: from pty.hi.pengutronix.de ([2001:67c:670:100:1d::c5])
+ by metis.ext.pengutronix.de with esmtps
+ (TLS1.2:ECDHE_RSA_AES_256_GCM_SHA384:256) (Exim 4.92)
+ (envelope-from <mfe@pengutronix.de>)
+ id 1jdrwp-0001Gq-Dy; Wed, 27 May 2020 11:02:03 +0200
+Received: from mfe by pty.hi.pengutronix.de with local (Exim 4.89)
+ (envelope-from <mfe@pengutronix.de>)
+ id 1jdrwp-0007XE-1g; Wed, 27 May 2020 11:02:03 +0200
+Date: Wed, 27 May 2020 11:02:03 +0200
+From: Marco Felsch <m.felsch@pengutronix.de>
+To: Fengping Yu <fengping.yu@mediatek.com>
+Subject: Re: [PATCH v9 3/3] configs: defconfig: Add CONFIG_KEYBOARD_MTK_KPD=m
+Message-ID: <20200527090203.q6aesh3xjesnxaxp@pengutronix.de>
+References: <20200527083137.56566-1-fengping.yu@mediatek.com>
+ <20200527083137.56566-4-fengping.yu@mediatek.com>
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: C6DAD625A2A8FEE655D867D0563F7BB4655DD51B1E8845A1432CFAC0ED8261322000:8
-X-MTK: N
+Content-Disposition: inline
+In-Reply-To: <20200527083137.56566-4-fengping.yu@mediatek.com>
+X-Sent-From: Pengutronix Hildesheim
+X-URL: http://www.pengutronix.de/
+X-IRC: #ptxdist @freenode
+X-Accept-Language: de,en
+X-Accept-Content-Type: text/plain
+X-Uptime: 11:01:21 up 194 days, 19 min, 194 users, load average: 0.43, 0.25, 
+ 0.15
+User-Agent: NeoMutt/20170113 (1.7.2)
+X-SA-Exim-Connect-IP: 2001:67c:670:100:1d::c5
+X-SA-Exim-Mail-From: mfe@pengutronix.de
+X-SA-Exim-Scanned: No (on metis.ext.pengutronix.de);
+ SAEximRunCond expanded to false
+X-PTX-Original-Recipient: linux-mediatek@lists.infradead.org
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200527_021338_650979_4B44FA0E 
-X-CRM114-Status: GOOD (  16.95  )
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20200527_020209_428691_C12BEDDB 
+X-CRM114-Status: GOOD (  11.41  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -87,81 +75,42 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Mark Rutland <mark.rutland@arm.com>,
- Nicolas Boichat <drinkcat@chromium.org>,
+Cc: Dmitry Torokhov <dmitry.torokhov@gmail.com>,
+ linux-mediatek@lists.infradead.org, linux-arm-kernel@lists.infradead.org,
  Andy Shevchenko <andriy.shevchenko@linux.intel.com>,
- srv_heupstream <srv_heupstream@mediatek.com>,
- linux-devicetree <devicetree@vger.kernel.org>,
- Linus Walleij <linus.walleij@linaro.org>, Shengnan
- Wang =?UTF-8?Q?=28=E7=8E=8B=E5=9C=A3=E7=94=B7=29?=
- <shengnan.wang@mediatek.com>, Louis Kuo <louis.kuo@mediatek.com>,
- Bartosz Golaszewski <bgolaszewski@baylibre.com>,
- Sj Huang <sj.huang@mediatek.com>, Rob Herring <robh+dt@kernel.org>,
- "moderated list:ARM/Mediatek SoC support" <linux-mediatek@lists.infradead.org>,
- dongchun.zhu@mediatek.com, Sakari Ailus <sakari.ailus@linux.intel.com>,
- Matthias Brugger <matthias.bgg@gmail.com>, Cao Bing Bu <bingbu.cao@intel.com>,
- Mauro Carvalho Chehab <mchehab@kernel.org>, "list@263.net:IOMMU DRIVERS
- <iommu@lists.linux-foundation.org>, Joerg  Roedel <joro@8bytes.org>,
- " <linux-arm-kernel@lists.infradead.org>,
- Linux Media Mailing List <linux-media@vger.kernel.org>
+ linux-input@vger.kernel.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi Tomasz,
-
-On Mon, 2020-05-25 at 13:45 +0200, Tomasz Figa wrote:
-> On Fri, May 22, 2020 at 11:27 AM Dongchun Zhu <dongchun.zhu@mediatek.com> wrote:
-> >
-> > Hi Tomasz,
-> >
-> > Thanks for the review. My replies are as below.
-> >
-> > On Thu, 2020-05-21 at 19:51 +0000, Tomasz Figa wrote:
-> > > Hi Dongchun, Sakari,
-> > >
-> > > On Mon, May 18, 2020 at 09:27:31PM +0800, Dongchun Zhu wrote:
-> [snip]
-> > > > +   pm_runtime_enable(dev);
-> > > > +   if (!pm_runtime_enabled(dev)) {
-> > > > +           ret = dw9768_runtime_resume(dev);
-> > > > +           if (ret < 0) {
-> > > > +                   dev_err(dev, "failed to power on: %d\n", ret);
-> > > > +                   goto entity_cleanup;
-> > > > +           }
-> > > > +   }
-> > > > +
-> > > > +   ret = v4l2_async_register_subdev(&dw9768->sd);
-> > > > +   if (ret < 0)
-> > > > +           goto entity_cleanup;
-> > > > +
-> > > > +   return 0;
-> > > > +
-> > > > +entity_cleanup:
-> > >
-> > > Need to power off if the code above powered on.
-> > >
-> >
-> > Thanks for the reminder.
-> > If there is something wrong with runtime PM, actuator is to be powered
-> > on via dw9768_runtime_resume() API.
-> > When actuator sub-device is powered on completely and async registered
-> > successfully, we shall power off it afterwards.
-> >
+On 20-05-27 16:31, Fengping Yu wrote:
+> From: "fengping.yu" <fengping.yu@mediatek.com>
 > 
-> The code above calls dw9768_runtime_resume() if
-> !pm_runtime_enabled(dev), but the clean-up code below the
-> entity_cleanup label doesn't have the corresponding
-> dw9768_runtime_suspend() call.
+> Add Mediatek matrix keypad support in defconfig.
 > 
+> Signed-off-by: fengping.yu <fengping.yu@mediatek.com>
 
-Did you mean the 'entity_cleanup' after v4l2_async_register_subdev()?
-Actually I made some changes for OV02A V9, according to this comment.
-Could you help review that change? Thanks.
+Reviewed-by: Marco Felsch <m.felsch@pengutronix.de>
 
-> Best regards,
-> Tomasz
+> ---
+>  arch/arm64/configs/defconfig | 1 +
+>  1 file changed, 1 insertion(+)
+> 
+> diff --git a/arch/arm64/configs/defconfig b/arch/arm64/configs/defconfig
+> index 24e534d85045..112ced090b21 100644
+> --- a/arch/arm64/configs/defconfig
+> +++ b/arch/arm64/configs/defconfig
+> @@ -349,6 +349,7 @@ CONFIG_KEYBOARD_GPIO=y
+>  CONFIG_KEYBOARD_SNVS_PWRKEY=m
+>  CONFIG_KEYBOARD_IMX_SC_KEY=m
+>  CONFIG_KEYBOARD_CROS_EC=y
+> +CONFIG_KEYBOARD_MTK_KPD=m
+>  CONFIG_INPUT_TOUCHSCREEN=y
+>  CONFIG_TOUCHSCREEN_ATMEL_MXT=m
+>  CONFIG_INPUT_MISC=y
+> -- 
+> 2.18.0
 
 _______________________________________________
 Linux-mediatek mailing list
