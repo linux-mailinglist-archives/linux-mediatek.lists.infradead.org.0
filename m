@@ -2,68 +2,72 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id C47071E60A4
-	for <lists+linux-mediatek@lfdr.de>; Thu, 28 May 2020 14:23:08 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 0C2271E60F1
+	for <lists+linux-mediatek@lfdr.de>; Thu, 28 May 2020 14:33:48 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
 	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=gWbtHhF3jUyCRpo1dhEn7nvadIBNKAzE14cHueVsRbE=; b=LWVoAFhyxjnO2x
-	VXbqxZ6eJHMftg0DbwR2TGPprTmebaic5ij/awZ6ByZ2VylkICywdN3v+3YGGLE1er/hnHP4FVV2i
-	qfuN4hbQ61kA0g7VhRBS9ecN06+UlcTvN16SnZEVhbFZT/0Y/MU9/MO6gNadSmsbMzp91569BF2o2
-	TlzQeVJqzxz+W+yMH4eurC4EOn/sjeuCKUz0UzrNOb7zPOPcUoILssdIdLjt5IzenTucCvVhYJo72
-	DImIzeOTO7aTCiqeraN4ICpFb7vW4Hp52AmNcBoEzR26diBl3QrmUS48J8KINunLIYS5APdPA115v
-	p6m/U2VqH+7YMv1IZ/Dg==;
+	List-Owner; bh=e8XKBjr+eWTi6QfQFyN/PlYemTtYwLyLqc3zsP9mzBc=; b=TZmM7X+asUjHnf
+	/A0lObXhtNyNYSRrgRN9ADtAHW1aE+kyAiV9Q8O38Osw8FjUgN+ccTv5PqdpoXyG98onDxV8uGZKx
+	XWhw9K00BcF2Jvyiqkx68sextVZgxFStlRPuVsyvoSkNuPDP/P73SWascVGOqrYuBxR1rnlTTd9EX
+	XdwS4uW23kFdMxjL3Wypm0DjMjkk60+93fIRK2shA6CCR+DisBvqgPLnZrWLFL6lmIVAJM3X9ToGm
+	mrPYySE6kaRS7YFyzSFM1Q26i2Lxvlmui7/DIWd7vDiObRF6UixB2YZKVIaqv+aYAeGzksx9vRd9g
+	69U5V9bA7p0JBpRbPtPw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jeHYs-0005nK-2U; Thu, 28 May 2020 12:23:02 +0000
-Received: from mga14.intel.com ([192.55.52.115])
+	id 1jeHj8-0004p5-Mu; Thu, 28 May 2020 12:33:38 +0000
+Received: from metis.ext.pengutronix.de ([2001:67c:670:201:290:27ff:fe1d:cc33])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jeHYg-0005gx-7z; Thu, 28 May 2020 12:22:51 +0000
-IronPort-SDR: UGyaJ4naWK3FZ7BpKWK+HgzICkUBC0LgdP7GLaLOZIDpN3Qho8sObBq7j6b16Q+EXfz0/vkmfR
- 7hYngJzaDOlQ==
-X-Amp-Result: SKIPPED(no attachment in message)
-X-Amp-File-Uploaded: False
-Received: from orsmga006.jf.intel.com ([10.7.209.51])
- by fmsmga103.fm.intel.com with ESMTP/TLS/ECDHE-RSA-AES256-GCM-SHA384;
- 28 May 2020 05:22:47 -0700
-IronPort-SDR: A3d785f1MX0R7l/E+smvmFj55G3TOUMleCHgan5saOuclYvpp83MCkk6Ke8WhCNtrEbqnDgWXP
- cxkwBA55WAIg==
-X-ExtLoop1: 1
-X-IronPort-AV: E=Sophos;i="5.73,444,1583222400"; d="scan'208";a="270834696"
-Received: from smile.fi.intel.com (HELO smile) ([10.237.68.40])
- by orsmga006.jf.intel.com with ESMTP; 28 May 2020 05:22:45 -0700
-Received: from andy by smile with local (Exim 4.93)
- (envelope-from <andriy.shevchenko@linux.intel.com>)
- id 1jeHYe-009QMX-Rx; Thu, 28 May 2020 15:22:48 +0300
-Date: Thu, 28 May 2020 15:22:48 +0300
-From: Andy Shevchenko <andriy.shevchenko@linux.intel.com>
-To: Marco Felsch <m.felsch@pengutronix.de>
+ id 1jeHj4-0004oI-In
+ for linux-mediatek@lists.infradead.org; Thu, 28 May 2020 12:33:36 +0000
+Received: from pty.hi.pengutronix.de ([2001:67c:670:100:1d::c5])
+ by metis.ext.pengutronix.de with esmtps
+ (TLS1.2:ECDHE_RSA_AES_256_GCM_SHA384:256) (Exim 4.92)
+ (envelope-from <mfe@pengutronix.de>)
+ id 1jeHiv-0000ic-LM; Thu, 28 May 2020 14:33:25 +0200
+Received: from mfe by pty.hi.pengutronix.de with local (Exim 4.89)
+ (envelope-from <mfe@pengutronix.de>)
+ id 1jeHiu-0004hf-5T; Thu, 28 May 2020 14:33:24 +0200
+Date: Thu, 28 May 2020 14:33:24 +0200
+From: Marco Felsch <m.felsch@pengutronix.de>
+To: Andy Shevchenko <andriy.shevchenko@linux.intel.com>
 Subject: Re: [RESEND PATCH v11 2/3] drivers: input: keyboard: Add mtk keypad
  driver
-Message-ID: <20200528122248.GL1634618@smile.fi.intel.com>
+Message-ID: <20200528123324.baoihyrg7rqjtt6r@pengutronix.de>
 References: <20200528090144.54033-1-fengping.yu@mediatek.com>
  <20200528090144.54033-3-fengping.yu@mediatek.com>
  <20200528102730.GK1634618@smile.fi.intel.com>
  <20200528114558.5decxsun2o65k2fr@pengutronix.de>
+ <20200528122248.GL1634618@smile.fi.intel.com>
 MIME-Version: 1.0
 Content-Disposition: inline
-In-Reply-To: <20200528114558.5decxsun2o65k2fr@pengutronix.de>
-Organization: Intel Finland Oy - BIC 0357606-4 - Westendinkatu 7, 02160 Espoo
+In-Reply-To: <20200528122248.GL1634618@smile.fi.intel.com>
+X-Sent-From: Pengutronix Hildesheim
+X-URL: http://www.pengutronix.de/
+X-IRC: #ptxdist @freenode
+X-Accept-Language: de,en
+X-Accept-Content-Type: text/plain
+X-Uptime: 14:31:38 up 195 days,  3:50, 196 users,  load average: 0.17, 0.13,
+ 0.10
+User-Agent: NeoMutt/20170113 (1.7.2)
+X-SA-Exim-Connect-IP: 2001:67c:670:100:1d::c5
+X-SA-Exim-Mail-From: mfe@pengutronix.de
+X-SA-Exim-Scanned: No (on metis.ext.pengutronix.de);
+ SAEximRunCond expanded to false
+X-PTX-Original-Recipient: linux-mediatek@lists.infradead.org
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200528_052250_328106_AE2D5B18 
-X-CRM114-Status: GOOD (  10.04  )
-X-Spam-Score: -5.0 (-----)
+X-CRM114-CacheID: sfid-20200528_053335_373274_9A3E4BF9 
+X-CRM114-Status: GOOD (  10.88  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
- Content analysis details:   (-5.0 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
- high trust [192.55.52.115 listed in list.dnswl.org]
+ -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -84,33 +88,39 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Thu, May 28, 2020 at 01:45:58PM +0200, Marco Felsch wrote:
-> On 20-05-28 13:27, Andy Shevchenko wrote:
-> > On Thu, May 28, 2020 at 05:01:47PM +0800, Fengping Yu wrote:
-
-...
-
-> > > +	select CONFIG_REGMAP_MMIO
-> > 
-> > This is wrong.
+On 20-05-28 15:22, Andy Shevchenko wrote:
+> On Thu, May 28, 2020 at 01:45:58PM +0200, Marco Felsch wrote:
+> > On 20-05-28 13:27, Andy Shevchenko wrote:
+> > > On Thu, May 28, 2020 at 05:01:47PM +0800, Fengping Yu wrote:
 > 
-> Why is this wrong? The driver uses the rmap-mmio functions.
+> ...
+> 
+> > > > +	select CONFIG_REGMAP_MMIO
+> > > 
+> > > This is wrong.
+> > 
+> > Why is this wrong? The driver uses the rmap-mmio functions.
+> 
+> In Kconfig CONFIG_ prefix is implied.
+> 
+> There is no CONFIG_CONFIG_REGMAP_MMIO.
+> 
+> > Thanks for the explanation =)
+> 
+> Sorry, I think it's obvious...
 
-In Kconfig CONFIG_ prefix is implied.
+Damn, you right it is. Bloody automatism mismatch in my brain.
 
-There is no CONFIG_CONFIG_REGMAP_MMIO.
+Regards,
+  Marco
 
-> Thanks for the explanation =)
-
-Sorry, I think it's obvious...
-
-> > > +	select INPUT_MATRIXKMAP
-
--- 
-With Best Regards,
-Andy Shevchenko
-
-
+> 
+> > > > +	select INPUT_MATRIXKMAP
+> 
+> -- 
+> With Best Regards,
+> Andy Shevchenko
+> 
 
 _______________________________________________
 Linux-mediatek mailing list
