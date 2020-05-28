@@ -2,61 +2,60 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id B406C1E5B31
-	for <lists+linux-mediatek@lfdr.de>; Thu, 28 May 2020 10:52:55 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 656651E5B84
+	for <lists+linux-mediatek@lfdr.de>; Thu, 28 May 2020 11:12:35 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=GrByWsiUsfQOst0a3iI4w79rJD/EdNk2FeDKNmzwJw8=; b=BK1ZOt8JuF9w+I
-	rh84Ax478VrweOBQYCoFWHWq5sVU+d4wxHOTagrjigYLh+aLMJeSsPx8h2RVHe2d7ohoPbEHtG+3r
-	V4bgWuIrs3pMmD2aLS8dtfMJVTeuDEiyXg8SEdlZMrWjy4WLOlXaF6qhqQYPUXznh/S22xzxn3wdY
-	/NAklJAeC0B3sC06cEPDVHGo/jVyyNPZBlH4IKpT44Nm93R+Hw6+DgUmeIzuH8EyJqwijQhLYvI9J
-	J6+XdJnn1N/dHws26aRcb97WVvhE9ciMdOefG8rFf693a2QO8WLu7S7L8854dH3svAWaIn18/IYKa
-	vTrBewfUPNF6BmMYdjig==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=egwdPSvyc9rBqdcKbCnf+QQXyYPOVgg4TOrfZeNEfu8=; b=G/bP7IMZHoHMN0
+	nXE2J3JqEzqAjDebTAdjbTqw6aeIMU3jxYET+5JPuiMw6nQuhm6HqOgpS3gmepIHjcnVmFsaofnqp
+	JjeZr4IxqCUEPEtZOmDLzAsAz8MMUKXfi7f+DxsfWYhckZkwtGEfE8e4rXq/22cit/iszBpFs9l6O
+	ix+NgeL3N4iIerkoINh4yto+RvGT6UCsW5gfIR2ogxJdn8LV3+7SMUoqZNIshyKfwFhpOB4i41n07
+	q8XJs6KZNgLNPfOsjpCWOdKmttzke7U5mf0b9nveI9tCzx0L18QAukCMXIVby6fjF2XJgTsDxdpIw
+	lHHK4jHQiJ4AHjpIa1wA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jeEHO-0003cH-M8; Thu, 28 May 2020 08:52:46 +0000
+	id 1jeEaP-0002DT-Q7; Thu, 28 May 2020 09:12:25 +0000
 Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jeEHK-0003bn-Uu; Thu, 28 May 2020 08:52:44 +0000
-X-UUID: b4e5d9ca4df4423ebbf22d4186aeb25d-20200528
+ id 1jeEa9-0001w9-Rn; Thu, 28 May 2020 09:12:11 +0000
+X-UUID: 9b74364624344293b47bed35b5ea425f-20200528
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
  s=dk; 
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:References:In-Reply-To:Message-ID:Date:Subject:CC:To:From;
- bh=nnpcRKVMg+Ds8Jsd86q+Mu9psGr5IX3/2sTy8A93vwo=; 
- b=O49okf06bWBTRcM4sd9L90ienSiYCGaBQwslMCaCg6BZtROOyYmzLZHvddpz1fm9oKGEOdV+i+OfCbO95syaQJ6rltDdqaxovS6R37kZzNO2b4NCXjwVbtyTLY0yAFbt0LyMmANLpXtxrL/4l/SazqDSMiee6ybTNptS2LVHn4M=;
-X-UUID: b4e5d9ca4df4423ebbf22d4186aeb25d-20200528
+ h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:Subject:CC:To:From;
+ bh=CEyczhGcIBHIfsym2XRqySGH4dvwQoU66NsgzcC4tto=; 
+ b=AClwao4M+r4IjJYEsOmsnHAhFsjWYom0wB2WiX9vZq49OE6JRMUh0yfjzyTBxwuXbP+eGzTru/LyAlhgTGPXVwH650E3wFwpfwO6v3+w2NCFKVokWpc4QzqhQPUW/0kbjr9RvK16br4PMKVUbSPSuwjX6SLHq9Hxv8r6o0oq6No=;
+X-UUID: 9b74364624344293b47bed35b5ea425f-20200528
 Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
  (envelope-from <fengping.yu@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1030644523; Thu, 28 May 2020 00:52:49 -0800
-Received: from MTKMBS02N1.mediatek.inc (172.21.101.77) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1497.2; Thu, 28 May 2020 01:42:36 -0700
+ with ESMTP id 950179093; Thu, 28 May 2020 01:12:08 -0800
+Received: from MTKMBS02N2.mediatek.inc (172.21.101.101) by
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1497.2; Thu, 28 May 2020 02:02:05 -0700
 Received: from mtkcas08.mediatek.inc (172.21.101.126) by
- mtkmbs02n1.mediatek.inc (172.21.101.77) with Microsoft SMTP Server (TLS) id
- 15.0.1497.2; Thu, 28 May 2020 16:42:36 +0800
+ mtkmbs02n2.mediatek.inc (172.21.101.101) with Microsoft SMTP Server (TLS) id
+ 15.0.1497.2; Thu, 28 May 2020 17:02:03 +0800
 Received: from localhost.localdomain (10.15.43.140) by mtkcas08.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1497.2 via Frontend
- Transport; Thu, 28 May 2020 16:42:35 +0800
+ Transport; Thu, 28 May 2020 17:02:02 +0800
 From: Fengping Yu <fengping.yu@mediatek.com>
 To: Yingjoe Chen <yingjoe.chen@mediatek.com>, Dmitry Torokhov
  <dmitry.torokhov@gmail.com>, Andy Shevchenko
  <andriy.shevchenko@linux.intel.com>, Marco Felsch <m.felsch@pengutronix.de>
-Subject: [PATCH v10 3/3] configs: defconfig: Add CONFIG_KEYBOARD_MTK_KPD=m
-Date: Thu, 28 May 2020 16:41:46 +0800
-Message-ID: <20200528084143.36482-4-fengping.yu@mediatek.com>
+Subject: [RESEND PATCH v11] Add matrix keypad driver support for Mediatek SoCs
+Date: Thu, 28 May 2020 17:01:42 +0800
+Message-ID: <20200528090144.54033-1-fengping.yu@mediatek.com>
 X-Mailer: git-send-email 2.18.0
-In-Reply-To: <20200528084143.36482-1-fengping.yu@mediatek.com>
-References: <20200528084143.36482-1-fengping.yu@mediatek.com>
 MIME-Version: 1.0
+X-TM-SNTS-SMTP: 8BB79A2A68B472B71DC37E982F864F1B3062B1DBE30F6FC6EE6719529D102EC62000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200528_015243_001861_5E78A314 
-X-CRM114-Status: UNSURE (   6.80  )
+X-CRM114-CacheID: sfid-20200528_021209_896685_E781B728 
+X-CRM114-Status: UNSURE (   6.06  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
@@ -87,37 +86,34 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: "fengping.yu" <fengping.yu@mediatek.com>,
- linux-mediatek@lists.infradead.org, linux-arm-kernel@lists.infradead.org,
+Cc: linux-mediatek@lists.infradead.org, linux-arm-kernel@lists.infradead.org,
  linux-input@vger.kernel.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-From: "fengping.yu" <fengping.yu@mediatek.com>
 
-Add Mediatek matrix keypad support in defconfig.
+Change since v10:
+- add wakeup source setting in probe function
 
-Signed-off-by: fengping.yu <fengping.yu@mediatek.com>
----
- arch/arm64/configs/defconfig | 1 +
- 1 file changed, 1 insertion(+)
+fengping.yu (3):
+  dt-bindings: Add keypad devicetree documentation
+  drivers: input: keyboard: Add mtk keypad driver
+  configs: defconfig: Add CONFIG_KEYBOARD_MTK_KPD=m
 
-diff --git a/arch/arm64/configs/defconfig b/arch/arm64/configs/defconfig
-index 24e534d85045..112ced090b21 100644
---- a/arch/arm64/configs/defconfig
-+++ b/arch/arm64/configs/defconfig
-@@ -349,6 +349,7 @@ CONFIG_KEYBOARD_GPIO=y
- CONFIG_KEYBOARD_SNVS_PWRKEY=m
- CONFIG_KEYBOARD_IMX_SC_KEY=m
- CONFIG_KEYBOARD_CROS_EC=y
-+CONFIG_KEYBOARD_MTK_KPD=m
- CONFIG_INPUT_TOUCHSCREEN=y
- CONFIG_TOUCHSCREEN_ATMEL_MXT=m
- CONFIG_INPUT_MISC=y
+ .../devicetree/bindings/input/mtk-kpd.yaml    |  95 ++++++++
+ arch/arm64/configs/defconfig                  |   1 +
+ drivers/input/keyboard/Kconfig                |  11 +
+ drivers/input/keyboard/Makefile               |   1 +
+ drivers/input/keyboard/mtk-kpd.c              | 206 ++++++++++++++++++
+ 5 files changed, 314 insertions(+)
+ create mode 100644 Documentation/devicetree/bindings/input/mtk-kpd.yaml
+ create mode 100644 drivers/input/keyboard/mtk-kpd.c
+
 -- 
 2.18.0
+
 _______________________________________________
 Linux-mediatek mailing list
 Linux-mediatek@lists.infradead.org
