@@ -2,90 +2,80 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 0EEA31E6690
-	for <lists+linux-mediatek@lfdr.de>; Thu, 28 May 2020 17:46:11 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 4F8C11E6837
+	for <lists+linux-mediatek@lfdr.de>; Thu, 28 May 2020 19:06:52 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=X7DereG2SIgQnpDC6ZgTbHld5BlqvDxvgBmRF9af4/E=; b=tgblarjeZpVBng
-	Fk7GiRB6hKKqR1HyAm3jI3Ogpx1P/BvoeJB1s1C8lEySCKAGGrSqd/OcT0tMVsF/17izGAdTSBbto
-	LkNrdO6UdT6TEulvpTK0UXHd+2onj69biEveS90N6+QNUEGF8p2WB9W0o3dExAtqvDma+Gf77p2Ud
-	M+JPTUN9JYbCzItvWEG8sHSv1UVKGGrlEHSPwviRP9QSoCt0iYCJUyBfwfITUv/taojbUYQRLWT8/
-	B1hZGWL68f32Ex2zuSnYa9XG92vDVDbANexJhRIjbvcJaycysouX7rP/GWAv9blkpbAUmTFUmAZqx
-	PKCoNUDBlOUfbP/ScZlA==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=Z+ec9PCOpRa9uuc8rIP9JUIpPUrwvpMYSsWNAEQXuOs=; b=f+4kqVIXaXmb6G
+	Sa5HQ4kr9KlCrb6fxfJ85jb8BkYZwIjY/sWFw0USy2tkARgRLmficjhcsd3KEdEVyp+Qww+qUUa34
+	18DPk6X1AVpSKJmtFn7DbVb+478PEWaQhC72rjnTarrhIS+q/FJbRwfmV0yLVV3zrfWt4jvTRv32b
+	xptjVQudGaIgXzgW3HBETDj+8l21igIoqHo8yuJZXbEN+9AskOJPYgO4NQlqgqyKK/aCh2qMWo4Ks
+	uunwLGbYgwz8fvTqwOmERLXFhWUtNfr5kWRzPKmcBU/IHSE6N1HQWgZYRIoiPztrL8EUTv6q+nkxi
+	AaBrlCTNNoGxprtQC9TA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jeKjK-0003aU-Ev; Thu, 28 May 2020 15:46:02 +0000
-Received: from mail-wr1-x441.google.com ([2a00:1450:4864:20::441])
+	id 1jeLzP-0001H4-FZ; Thu, 28 May 2020 17:06:43 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jeKiV-0001zb-7g
- for linux-mediatek@lists.infradead.org; Thu, 28 May 2020 15:45:15 +0000
-Received: by mail-wr1-x441.google.com with SMTP id x13so13784571wrv.4
- for <linux-mediatek@lists.infradead.org>; Thu, 28 May 2020 08:45:10 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=bgdev-pl.20150623.gappssmtp.com; s=20150623;
- h=from:to:cc:subject:date:message-id:in-reply-to:references
- :mime-version:content-transfer-encoding;
- bh=Jw+8SfYlfUDAgIF9spfjdhK61J/Bd95zBvBrsjSxAUU=;
- b=cK8xhMZKDzOmsTRRQEQcuqhqXPfbUpiWFAfsREb29O+myn1bfGY3IISqjlf4/H1BDP
- DIplsvxDsR31jL6oXnLA0UzRGbdlvX+SBNcQSw7v6n8df6Up6MzRJM4LzJjmoiSXsKrk
- KQnb4wLC3psE42BSbrTm3jaDV5ptiCsLKB1cVCuQImwgSpjFBfYWPZ8Vt1DDE1/caxQD
- f5xR2NVF21b36xMkTeSM8EZdOPgyz3SjDVPeiwY+yAu7Gw6PbutAfh4skyAXSrPRyyMX
- prHmgx5xRnkUXyaMVlzZUgZNZwF+oC+SbLX4NZhI45913NP20awTBPhI9NNOJmG0iI8Z
- BKuw==
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:from:to:cc:subject:date:message-id:in-reply-to
- :references:mime-version:content-transfer-encoding;
- bh=Jw+8SfYlfUDAgIF9spfjdhK61J/Bd95zBvBrsjSxAUU=;
- b=N7Wrrq7p9FtSaPxhnNSpIi8XAKsBkNVdURW277Az+Dtd/xwqlGtUjha1k/mZsvu133
- X5pfUJaSmV0mGEMy3IrSZIrVV4OHpZgx6joyUYUNolVKgA7Fg/Xk5DY3HA2YA9XWFVfd
- Ulpksm/5DCDUfdzWv8XsmG4fWOUJGpGA8CY+GtLKptFwDL4/leZ5Cj4CMxcVBH08rHZ8
- e1Ljpe36wYGNzOwdqSHcTeLtBq7BG8aGGmR6Hzk/voJuvWZxbQx/VqdG4EWs37UhxWvu
- Ts4RHQxUFqRsZ1nT+2UItp5IyJZsBOPJtyvv+WV/iwRoE+DUVM7smhr9z1dTDa3R9LM9
- pngg==
-X-Gm-Message-State: AOAM530b7DEqzbsCNWmVxLaFDx0lydIg3P7dt4NSttRUECumUU64utTh
- w+sHeoSafK9p48cTQEO46HVibg==
-X-Google-Smtp-Source: ABdhPJyuTmrpPZh0lHXM+wLtVGFMTghPxLn7C2+maSV6/9h0yIDJ2MdhyAP9CMX++jUmqTbuYQU1Ng==
-X-Received: by 2002:a05:6000:100e:: with SMTP id
- a14mr4014706wrx.349.1590680709788; 
- Thu, 28 May 2020 08:45:09 -0700 (PDT)
-Received: from localhost.localdomain (lfbn-nic-1-65-232.w2-15.abo.wanadoo.fr.
- [2.15.156.232])
- by smtp.gmail.com with ESMTPSA id n1sm6285650wrp.10.2020.05.28.08.45.08
- (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Thu, 28 May 2020 08:45:09 -0700 (PDT)
-From: Bartosz Golaszewski <brgl@bgdev.pl>
-To: John Crispin <john@phrozen.org>, Sean Wang <sean.wang@mediatek.com>,
- Mark Lee <Mark-MC.Lee@mediatek.com>,
- "David S . Miller" <davem@davemloft.net>, Jakub Kicinski <kuba@kernel.org>,
- Matthias Brugger <matthias.bgg@gmail.com>, Mark Brown <broonie@kernel.org>
-Subject: [PATCH v3 2/2] net: ethernet: mtk-star-emac: use regmap bitops
-Date: Thu, 28 May 2020 17:45:03 +0200
-Message-Id: <20200528154503.26304-3-brgl@bgdev.pl>
-X-Mailer: git-send-email 2.26.1
-In-Reply-To: <20200528154503.26304-1-brgl@bgdev.pl>
-References: <20200528154503.26304-1-brgl@bgdev.pl>
+ id 1jeLy8-0000AE-TH; Thu, 28 May 2020 17:05:26 +0000
+X-UUID: ad46572d7d5a4d2a9121027f2622123b-20200528
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
+ s=dk; 
+ h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:Subject:CC:To:From;
+ bh=A1yEVTAAPXmkb1voL9ofORATdhhJt+rPBnyZJEjeoIU=; 
+ b=pLSd2ONUDQuoe/vJXQ6SFWH4lYbUnh/DINe7B2nDwWjjiRZ+tQ31IpeCd94STyv1tQhlnNiIlWDxg2XQjALZQNID9+jPWPRHCZGBzxODRHz2DeFxlt8otDIpxSbsd5jSqKTq1pSguh26Fmte0JNzQz8MFR1VKIoHa78J7GxqOc8=;
+X-UUID: ad46572d7d5a4d2a9121027f2622123b-20200528
+Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw01.mediatek.com
+ (envelope-from <dennis-yc.hsieh@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 1165061382; Thu, 28 May 2020 09:04:59 -0800
+Received: from mtkmbs08n2.mediatek.inc (172.21.101.56) by
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1497.2; Thu, 28 May 2020 10:05:14 -0700
+Received: from mtkcas08.mediatek.inc (172.21.101.126) by
+ mtkmbs08n2.mediatek.inc (172.21.101.56) with Microsoft SMTP Server (TLS) id
+ 15.0.1497.2; Fri, 29 May 2020 01:05:07 +0800
+Received: from mtkswgap22.mediatek.inc (172.21.77.33) by mtkcas08.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1497.2 via
+ Frontend Transport; Fri, 29 May 2020 01:05:07 +0800
+From: Dennis YC Hsieh <dennis-yc.hsieh@mediatek.com>
+To: Rob Herring <robh+dt@kernel.org>, Mark Rutland <mark.rutland@arm.com>,
+ Matthias Brugger <matthias.bgg@gmail.com>, Jassi Brar
+ <jassisinghbrar@gmail.com>, Philipp Zabel <p.zabel@pengutronix.de>, "David
+ Airlie" <airlied@linux.ie>, Daniel Vetter <daniel@ffwll.ch>
+Subject: [PATCH v6] support gce on mt6779 platform
+Date: Fri, 29 May 2020 01:04:35 +0800
+Message-ID: <1590685491-17107-1-git-send-email-dennis-yc.hsieh@mediatek.com>
+X-Mailer: git-send-email 1.7.9.5
 MIME-Version: 1.0
+X-TM-SNTS-SMTP: 0A7A7DAD0F7B2228A38B441CB5B4C08F26FDE1F1C012783C0DCE4A784086282F2000:8
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200528_084511_309797_9C7AC657 
-X-CRM114-Status: GOOD (  11.93  )
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20200528_100524_970110_EB2B239C 
+X-CRM114-Status: UNSURE (   8.33  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:441 listed in]
- [list.dnswl.org]
+ -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
+ 0.0 MIME_BASE64_TEXT       RAW: Message text disguised using base64
+ encoding
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -97,197 +87,62 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Stephane Le Provost <stephane.leprovost@mediatek.com>,
- Bartosz Golaszewski <bgolaszewski@baylibre.com>, netdev@vger.kernel.org,
- linux-kernel@vger.kernel.org, Fabien Parent <fparent@baylibre.com>,
- linux-mediatek@lists.infradead.org,
- Andrew Perepech <andrew.perepech@mediatek.com>,
- Pedro Tsai <pedro.tsai@mediatek.com>, linux-arm-kernel@lists.infradead.org
+Cc: devicetree@vger.kernel.org, wsd_upstream@mediatek.com,
+ linux-kernel@vger.kernel.org, dri-devel@lists.freedesktop.org,
+ HS Liao <hs.liao@mediatek.com>, linux-mediatek@lists.infradead.org,
+ Houlong Wei <houlong.wei@mediatek.com>, Bibby Hsieh <bibby.hsieh@mediatek.com>,
+ CK Hu <ck.hu@mediatek.com>, linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-From: Bartosz Golaszewski <bgolaszewski@baylibre.com>
+This patch support gce on mt6779 platform.
 
-Shrink the code visually by replacing regmap_update_bits() with
-appropriate regmap bit operations where applicable.
+Change since v5:
+- spearate address shift code in client helper and mailbox controller
+- separate write_s/write_s_mask and write_s_value/write_s_mask_value so that
+  client can decide use mask or not
+- fix typo in header
 
-Signed-off-by: Bartosz Golaszewski <bgolaszewski@baylibre.com>
----
- drivers/net/ethernet/mediatek/mtk_star_emac.c | 80 ++++++++-----------
- 1 file changed, 35 insertions(+), 45 deletions(-)
+Change since v4:
+- do not clear disp event again in drm driver
+- symbolize value 1 to jump relative
 
-diff --git a/drivers/net/ethernet/mediatek/mtk_star_emac.c b/drivers/net/ethernet/mediatek/mtk_star_emac.c
-index 8596ca0e60eb..326ac792a4a0 100644
---- a/drivers/net/ethernet/mediatek/mtk_star_emac.c
-+++ b/drivers/net/ethernet/mediatek/mtk_star_emac.c
-@@ -413,8 +413,8 @@ static void mtk_star_dma_unmap_tx(struct mtk_star_priv *priv,
- 
- static void mtk_star_nic_disable_pd(struct mtk_star_priv *priv)
- {
--	regmap_update_bits(priv->regs, MTK_STAR_REG_MAC_CFG,
--			   MTK_STAR_BIT_MAC_CFG_NIC_PD, 0);
-+	regmap_clear_bits(priv->regs, MTK_STAR_REG_MAC_CFG,
-+			  MTK_STAR_BIT_MAC_CFG_NIC_PD);
- }
- 
- /* Unmask the three interrupts we care about, mask all others. */
-@@ -434,41 +434,38 @@ static void mtk_star_intr_disable(struct mtk_star_priv *priv)
- 
- static void mtk_star_intr_enable_tx(struct mtk_star_priv *priv)
- {
--	regmap_update_bits(priv->regs, MTK_STAR_REG_INT_MASK,
--			   MTK_STAR_BIT_INT_STS_TNTC, 0);
-+	regmap_clear_bits(priv->regs, MTK_STAR_REG_INT_MASK,
-+			  MTK_STAR_BIT_INT_STS_TNTC);
- }
- 
- static void mtk_star_intr_enable_rx(struct mtk_star_priv *priv)
- {
--	regmap_update_bits(priv->regs, MTK_STAR_REG_INT_MASK,
--			   MTK_STAR_BIT_INT_STS_FNRC, 0);
-+	regmap_clear_bits(priv->regs, MTK_STAR_REG_INT_MASK,
-+			  MTK_STAR_BIT_INT_STS_FNRC);
- }
- 
- static void mtk_star_intr_enable_stats(struct mtk_star_priv *priv)
- {
--	regmap_update_bits(priv->regs, MTK_STAR_REG_INT_MASK,
--			   MTK_STAR_REG_INT_STS_MIB_CNT_TH, 0);
-+	regmap_clear_bits(priv->regs, MTK_STAR_REG_INT_MASK,
-+			  MTK_STAR_REG_INT_STS_MIB_CNT_TH);
- }
- 
- static void mtk_star_intr_disable_tx(struct mtk_star_priv *priv)
- {
--	regmap_update_bits(priv->regs, MTK_STAR_REG_INT_MASK,
--			   MTK_STAR_BIT_INT_STS_TNTC,
--			   MTK_STAR_BIT_INT_STS_TNTC);
-+	regmap_set_bits(priv->regs, MTK_STAR_REG_INT_MASK,
-+			MTK_STAR_BIT_INT_STS_TNTC);
- }
- 
- static void mtk_star_intr_disable_rx(struct mtk_star_priv *priv)
- {
--	regmap_update_bits(priv->regs, MTK_STAR_REG_INT_MASK,
--			   MTK_STAR_BIT_INT_STS_FNRC,
--			   MTK_STAR_BIT_INT_STS_FNRC);
-+	regmap_set_bits(priv->regs, MTK_STAR_REG_INT_MASK,
-+			MTK_STAR_BIT_INT_STS_FNRC);
- }
- 
- static void mtk_star_intr_disable_stats(struct mtk_star_priv *priv)
- {
--	regmap_update_bits(priv->regs, MTK_STAR_REG_INT_MASK,
--			   MTK_STAR_REG_INT_STS_MIB_CNT_TH,
--			   MTK_STAR_REG_INT_STS_MIB_CNT_TH);
-+	regmap_set_bits(priv->regs, MTK_STAR_REG_INT_MASK,
-+			MTK_STAR_REG_INT_STS_MIB_CNT_TH);
- }
- 
- static unsigned int mtk_star_intr_read(struct mtk_star_priv *priv)
-@@ -524,12 +521,10 @@ static void mtk_star_dma_init(struct mtk_star_priv *priv)
- 
- static void mtk_star_dma_start(struct mtk_star_priv *priv)
- {
--	regmap_update_bits(priv->regs, MTK_STAR_REG_TX_DMA_CTRL,
--			   MTK_STAR_BIT_TX_DMA_CTRL_START,
--			   MTK_STAR_BIT_TX_DMA_CTRL_START);
--	regmap_update_bits(priv->regs, MTK_STAR_REG_RX_DMA_CTRL,
--			   MTK_STAR_BIT_RX_DMA_CTRL_START,
--			   MTK_STAR_BIT_RX_DMA_CTRL_START);
-+	regmap_set_bits(priv->regs, MTK_STAR_REG_TX_DMA_CTRL,
-+			MTK_STAR_BIT_TX_DMA_CTRL_START);
-+	regmap_set_bits(priv->regs, MTK_STAR_REG_RX_DMA_CTRL,
-+			MTK_STAR_BIT_RX_DMA_CTRL_START);
- }
- 
- static void mtk_star_dma_stop(struct mtk_star_priv *priv)
-@@ -553,16 +548,14 @@ static void mtk_star_dma_disable(struct mtk_star_priv *priv)
- 
- static void mtk_star_dma_resume_rx(struct mtk_star_priv *priv)
- {
--	regmap_update_bits(priv->regs, MTK_STAR_REG_RX_DMA_CTRL,
--			   MTK_STAR_BIT_RX_DMA_CTRL_RESUME,
--			   MTK_STAR_BIT_RX_DMA_CTRL_RESUME);
-+	regmap_set_bits(priv->regs, MTK_STAR_REG_RX_DMA_CTRL,
-+			MTK_STAR_BIT_RX_DMA_CTRL_RESUME);
- }
- 
- static void mtk_star_dma_resume_tx(struct mtk_star_priv *priv)
- {
--	regmap_update_bits(priv->regs, MTK_STAR_REG_TX_DMA_CTRL,
--			   MTK_STAR_BIT_TX_DMA_CTRL_RESUME,
--			   MTK_STAR_BIT_TX_DMA_CTRL_RESUME);
-+	regmap_set_bits(priv->regs, MTK_STAR_REG_TX_DMA_CTRL,
-+			MTK_STAR_BIT_TX_DMA_CTRL_RESUME);
- }
- 
- static void mtk_star_set_mac_addr(struct net_device *ndev)
-@@ -845,8 +838,8 @@ static int mtk_star_hash_wait_ok(struct mtk_star_priv *priv)
- 		return ret;
- 
- 	/* Check the BIST_OK bit. */
--	regmap_read(priv->regs, MTK_STAR_REG_HASH_CTRL, &val);
--	if (!(val & MTK_STAR_BIT_HASH_CTRL_BIST_OK))
-+	if (!regmap_test_bits(priv->regs, MTK_STAR_REG_HASH_CTRL,
-+			      MTK_STAR_BIT_HASH_CTRL_BIST_OK))
- 		return -EIO;
- 
- 	return 0;
-@@ -880,12 +873,10 @@ static int mtk_star_reset_hash_table(struct mtk_star_priv *priv)
- 	if (ret)
- 		return ret;
- 
--	regmap_update_bits(priv->regs, MTK_STAR_REG_HASH_CTRL,
--			   MTK_STAR_BIT_HASH_CTRL_BIST_EN,
--			   MTK_STAR_BIT_HASH_CTRL_BIST_EN);
--	regmap_update_bits(priv->regs, MTK_STAR_REG_TEST1,
--			   MTK_STAR_BIT_TEST1_RST_HASH_MBIST,
--			   MTK_STAR_BIT_TEST1_RST_HASH_MBIST);
-+	regmap_set_bits(priv->regs, MTK_STAR_REG_HASH_CTRL,
-+			MTK_STAR_BIT_HASH_CTRL_BIST_EN);
-+	regmap_set_bits(priv->regs, MTK_STAR_REG_TEST1,
-+			MTK_STAR_BIT_TEST1_RST_HASH_MBIST);
- 
- 	return mtk_star_hash_wait_ok(priv);
- }
-@@ -1016,13 +1007,13 @@ static int mtk_star_enable(struct net_device *ndev)
- 		return ret;
- 
- 	/* Setup the hashing algorithm */
--	regmap_update_bits(priv->regs, MTK_STAR_REG_ARL_CFG,
--			   MTK_STAR_BIT_ARL_CFG_HASH_ALG |
--			   MTK_STAR_BIT_ARL_CFG_MISC_MODE, 0);
-+	regmap_clear_bits(priv->regs, MTK_STAR_REG_ARL_CFG,
-+			  MTK_STAR_BIT_ARL_CFG_HASH_ALG |
-+			  MTK_STAR_BIT_ARL_CFG_MISC_MODE);
- 
- 	/* Don't strip VLAN tags */
--	regmap_update_bits(priv->regs, MTK_STAR_REG_MAC_CFG,
--			   MTK_STAR_BIT_MAC_CFG_VLAN_STRIP, 0);
-+	regmap_clear_bits(priv->regs, MTK_STAR_REG_MAC_CFG,
-+			  MTK_STAR_BIT_MAC_CFG_VLAN_STRIP);
- 
- 	/* Setup DMA */
- 	mtk_star_dma_init(priv);
-@@ -1204,9 +1195,8 @@ static void mtk_star_set_rx_mode(struct net_device *ndev)
- 	int ret;
- 
- 	if (ndev->flags & IFF_PROMISC) {
--		regmap_update_bits(priv->regs, MTK_STAR_REG_ARL_CFG,
--				   MTK_STAR_BIT_ARL_CFG_MISC_MODE,
--				   MTK_STAR_BIT_ARL_CFG_MISC_MODE);
-+		regmap_set_bits(priv->regs, MTK_STAR_REG_ARL_CFG,
-+				MTK_STAR_BIT_ARL_CFG_MISC_MODE);
- 	} else if (netdev_mc_count(ndev) > MTK_STAR_HASHTABLE_MC_LIMIT ||
- 		   ndev->flags & IFF_ALLMULTI) {
- 		for (i = 0; i < MTK_STAR_HASHTABLE_SIZE_MAX; i++) {
+[... snip ...]
+
+
+
+Dennis YC Hsieh (16):
+  dt-binding: gce: add gce header file for mt6779
+  mailbox: cmdq: variablize address shift in platform
+  mailbox: cmdq: support mt6779 gce platform definition
+  mailbox: mediatek: cmdq: clear task in channel before shutdown
+  soc: mediatek: cmdq: return send msg error code
+  soc: mediatek: cmdq: add address shift in jump
+  soc: mediatek: cmdq: add assign function
+  soc: mediatek: cmdq: add write_s function
+  soc: mediatek: cmdq: add write_s_mask function
+  soc: mediatek: cmdq: add read_s function
+  soc: mediatek: cmdq: add write_s value function
+  soc: mediatek: cmdq: add write_s_mask value function
+  soc: mediatek: cmdq: export finalize function
+  soc: mediatek: cmdq: add jump function
+  soc: mediatek: cmdq: add clear option in cmdq_pkt_wfe api
+  soc: mediatek: cmdq: add set event function
+
+ .../devicetree/bindings/mailbox/mtk-gce.txt   |   8 +-
+ drivers/gpu/drm/mediatek/mtk_drm_crtc.c       |   3 +-
+ drivers/mailbox/mtk-cmdq-mailbox.c            | 101 ++++++--
+ drivers/soc/mediatek/mtk-cmdq-helper.c        | 163 ++++++++++++-
+ include/dt-bindings/gce/mt6779-gce.h          | 222 ++++++++++++++++++
+ include/linux/mailbox/mtk-cmdq-mailbox.h      |  10 +-
+ include/linux/soc/mediatek/mtk-cmdq.h         | 125 +++++++++-
+ 7 files changed, 599 insertions(+), 33 deletions(-)
+ create mode 100644 include/dt-bindings/gce/mt6779-gce.h
+
 -- 
-2.26.1
-
-
+2.18.0
 _______________________________________________
 Linux-mediatek mailing list
 Linux-mediatek@lists.infradead.org
