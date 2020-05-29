@@ -2,82 +2,79 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 997891E7853
-	for <lists+linux-mediatek@lfdr.de>; Fri, 29 May 2020 10:28:21 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 17DF51E794D
+	for <lists+linux-mediatek@lfdr.de>; Fri, 29 May 2020 11:24:12 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
-	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=r+UPiD51RW9XCf0HMIIEDOvYyLMZFm2/G3m6nmy0/po=; b=KvtGlmSsVMgRdm
-	cCZdRyZZVDi/scc7Wu34Z4ULNwZg8IrQveHH8UgsoqQAjUQYtUsuMklgtmIOFCUOLdUz1yMZK+rSA
-	aIE5M7neDhzTVIgarPNU8bEovTijYGWhx6ibFdEc8iO6rQymY3tkUPZwjM3pnVlfCyrGM5HsK8m6H
-	JUVUc6Op8nsnpMH2qBL4Rl8oQtPUMV7LFMxOx/A1uoZqED+gYETRid5ZJpwZcjkD/dwwdSuShZvlY
-	4GZd0S7ykFeFPvdr7nGh6MQgiQ+E8xLNUtXDn9Uqg+fHM0dIyaRZSQISdQtvEVhHAj1/vAYiGdVpP
-	PB7QpZAxyiZZbOW/ot/g==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=+nBcVtBJAGhweiNbgIkW2V3TwJ120S8bqctN4bMz9fA=; b=Px4ZUgre2IYWYi
+	Q/TIO4CIYk9tcWUDQi4fVegJ+WzxESmGoj+OunngLx+pbnQvdXN3/PdWar6WXsYEDXOzlasPcqPHB
+	SVByh+/FWqgwiqQM9jUlyhn44SljMwx+mgJi+feKlYrZXUUSQpkU/btzkxyn8Bif81WdyQ1oQ36pB
+	8oDx201cqVoMObCAD2vQGZVuXAS0fHLq7s+iywsr9ayucnnOkcMsWdHgynbKuJN+kI7novwmKPOTf
+	2J7ujPRpgtRRC4rTwC/eu5Vt8CC1hxHCV50kQTOU0TA0BU2YdXZo4MLwuIDIEev5cf6YWlBgkinhz
+	gAq3PcOzIW+xbL9fjpZw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jeaN2-0002Be-Dl; Fri, 29 May 2020 08:28:04 +0000
-Received: from mail-io1-xd44.google.com ([2607:f8b0:4864:20::d44])
+	id 1jebFC-0005uF-UV; Fri, 29 May 2020 09:24:02 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jeaMy-00029S-CR
- for linux-mediatek@lists.infradead.org; Fri, 29 May 2020 08:28:01 +0000
-Received: by mail-io1-xd44.google.com with SMTP id q8so1436108iow.7
- for <linux-mediatek@lists.infradead.org>; Fri, 29 May 2020 01:27:58 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=bgdev-pl.20150623.gappssmtp.com; s=20150623;
- h=mime-version:references:in-reply-to:from:date:message-id:subject:to
- :cc:content-transfer-encoding;
- bh=3d129KIQl0F/HD1hAf9TNqbvJlvdS5cc8KsVfjCHT5Q=;
- b=wmyW81JabzxHJmyCKMgZjhesXeaxlHAgtiSlQtfNNLqtFcCrytSXj05vrtsugNI+4e
- cfEaRb4P/p456XvH6fTzAvynFbm1j8iN/KG5+cIDq8dpjbfm1pMTjOf60KV8RWik3/de
- 1eaGl0ZLxmBp0eYX6Oh3hGpLro16xeOKrrUwZLm/j4wIIVouEbL6btDd3cWH6rTNnWWM
- yItf/W3AGeYP32m8aYT1kn81XaPibh0YxX9TkvEfkjFoKK/hOH21th+HLU9QeZvS7qMP
- wxJZLuvTclR/UhJOiystbHeZen80bdCUIz+slilZhz2xIv7VNwGFp8WcxCZcr7rDbe87
- TR6g==
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:mime-version:references:in-reply-to:from:date
- :message-id:subject:to:cc:content-transfer-encoding;
- bh=3d129KIQl0F/HD1hAf9TNqbvJlvdS5cc8KsVfjCHT5Q=;
- b=uCS6DTvcTPtFVIv7o0Zy0dVXW8kdKtjttU10XJD/8Q0SW1MmG6rKvllCAA3tXjtTcy
- DY76YDtTIlu2ZUrdprXMz8qQ9G0iQyZ9nZ3FfzFRpoSdXaNZhFoB4eBZsWFYtNBWZAfw
- soy3c/5z2UDpo+tSQDIHxQMi1l8sASxgW9tk6ITks1Z8ba70ZemcFMAK5jIfMWa0MqWe
- /c2xE2S1/+OZyEBqFYv+HrkprfnsnLRkZtSBy5INXnQpYKbIkVE4fhLmg7NmLFE/Jh+P
- tIZXYEX3iaKhw1tuM1NHBBeA9/541tTDzefbqSpKdARuFk29S62j+LgUMruaOyu4bytR
- BbNg==
-X-Gm-Message-State: AOAM531NI6StXCZr7eTOx2uFMtPfbXvoLLhLSwubUsJQrrpLmxlPTNp9
- UFiMlpIqHZlIIHdbYFeH75Zhubt4kIlmlsIr7hkEhw==
-X-Google-Smtp-Source: ABdhPJwA8vRDCN9N0HPnWhWtdnh8yznfwlfh5vLhi00vaN8ZbQ3tavDm+I4SrAQgg7Tnm8hKYE5T5eYY2+qznSroVnY=
-X-Received: by 2002:a5d:9e55:: with SMTP id i21mr5656308ioi.130.1590740878066; 
- Fri, 29 May 2020 01:27:58 -0700 (PDT)
+ id 1jebEd-0005Ne-0Z; Fri, 29 May 2020 09:23:28 +0000
+X-UUID: b4759ac15c4d49e2bd9a59ed3eafd004-20200529
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
+ s=dk; 
+ h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:Subject:CC:To:From;
+ bh=C7jiqWJqQUQFX3wanPIiepBSjlj6iNhBD/xNOyaJx/o=; 
+ b=kDCJTzk4x9EtqMkosbm3DAGFx0pWXlTB7sW3ZcZqrgz+AXw6iJUOLZqazpKxcEMmA9jmKCICggLLMID5HMjyDYmJ1ig5CfhfcE04ZC+Rd7OOnM/EZ40UtPNZqaudmFALvmHyaPlPP22b6OjO2toRWq7109FZebZaPy1ayyuQRcM=;
+X-UUID: b4759ac15c4d49e2bd9a59ed3eafd004-20200529
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
+ (envelope-from <stanley.chu@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 1765577043; Fri, 29 May 2020 01:23:13 -0800
+Received: from MTKMBS02N2.mediatek.inc (172.21.101.101) by
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1497.2; Fri, 29 May 2020 02:23:18 -0700
+Received: from mtkcas08.mediatek.inc (172.21.101.126) by
+ mtkmbs02n2.mediatek.inc (172.21.101.101) with Microsoft SMTP Server (TLS) id
+ 15.0.1497.2; Fri, 29 May 2020 17:23:10 +0800
+Received: from mtksdccf07.mediatek.inc (172.21.84.99) by mtkcas08.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1497.2 via
+ Frontend Transport; Fri, 29 May 2020 17:23:09 +0800
+From: Stanley Chu <stanley.chu@mediatek.com>
+To: <linux-scsi@vger.kernel.org>, <martin.petersen@oracle.com>,
+ <avri.altman@wdc.com>, <alim.akhtar@samsung.com>, <jejb@linux.ibm.com>
+Subject: [PATCH v2 0/5] scsi: ufs-mediatek: Fix clk-gating and introduce
+ low-power mode for vccq2
+Date: Fri, 29 May 2020 17:23:05 +0800
+Message-ID: <20200529092310.1106-1-stanley.chu@mediatek.com>
+X-Mailer: git-send-email 2.18.0
 MIME-Version: 1.0
-References: <20200529082648.19677-1-brgl@bgdev.pl>
-In-Reply-To: <20200529082648.19677-1-brgl@bgdev.pl>
-From: Bartosz Golaszewski <brgl@bgdev.pl>
-Date: Fri, 29 May 2020 10:27:47 +0200
-Message-ID: <CAMRc=Md+KMpa-6f2rpd=fbR-xmCzaR3QypAk3FvMHpeyNzUX=g@mail.gmail.com>
-Subject: Re: [PATCH] net: ethernet: mtk-star-emac: remove unused variable
-To: John Crispin <john@phrozen.org>, Sean Wang <sean.wang@mediatek.com>, 
- Mark Lee <Mark-MC.Lee@mediatek.com>, "David S . Miller" <davem@davemloft.net>, 
- Jakub Kicinski <kuba@kernel.org>, Matthias Brugger <matthias.bgg@gmail.com>
+X-TM-SNTS-SMTP: BC13AC5E0CEC9B039233AABE34122B89E422FCA98B5DA0A01FF13D32ED2EEF7E2000:8
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200529_012800_418343_92A21C79 
-X-CRM114-Status: GOOD (  13.26  )
-X-Spam-Score: 0.0 (/)
+X-CRM114-CacheID: sfid-20200529_022327_059376_509AE53D 
+X-CRM114-Status: UNSURE (   5.67  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:d44 listed in]
- [list.dnswl.org]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+ 0.0 MIME_BASE64_TEXT       RAW: Message text disguised using base64
+ encoding
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -89,47 +86,39 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: kbuild test robot <lkp@intel.com>,
- Stephane Le Provost <stephane.leprovost@mediatek.com>,
- Bartosz Golaszewski <bgolaszewski@baylibre.com>,
- netdev <netdev@vger.kernel.org>,
- Linux Kernel Mailing List <linux-kernel@vger.kernel.org>,
- Fabien Parent <fparent@baylibre.com>,
- "moderated list:ARM/Mediatek SoC..." <linux-mediatek@lists.infradead.org>,
- Andrew Perepech <andrew.perepech@mediatek.com>,
- Pedro Tsai <pedro.tsai@mediatek.com>,
- Linux ARM <linux-arm-kernel@lists.infradead.org>
-Content-Type: text/plain; charset="utf-8"
-Content-Transfer-Encoding: base64
+Cc: pengshun.zhao@mediatek.com, Stanley Chu <stanley.chu@mediatek.com>,
+ bvanassche@acm.org, andy.teng@mediatek.com, cc.chou@mediatek.com,
+ chun-hung.wu@mediatek.com, kuohong.wang@mediatek.com,
+ linux-kernel@vger.kernel.org, cang@codeaurora.org,
+ linux-mediatek@lists.infradead.org, peter.wang@mediatek.com,
+ matthias.bgg@gmail.com, beanhuo@micron.com, chaotian.jing@mediatek.com,
+ linux-arm-kernel@lists.infradead.org, asutoshd@codeaurora.org
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-cHQuLCAyOSBtYWogMjAyMCBvIDEwOjI2IEJhcnRvc3ogR29sYXN6ZXdza2kgPGJyZ2xAYmdkZXYu
-cGw+IG5hcGlzYcWCKGEpOgo+Cj4gRnJvbTogQmFydG9zeiBHb2xhc3pld3NraSA8YmdvbGFzemV3
-c2tpQGJheWxpYnJlLmNvbT4KPgo+IFRoZSBkZXNjIHBvaW50ZXIgaXMgc2V0IGJ1dCBub3QgdXNl
-ZC4gUmVtb3ZlIGl0Lgo+Cj4gUmVwb3J0ZWQtYnk6IGtidWlsZCB0ZXN0IHJvYm90IDxsa3BAaW50
-ZWwuY29tPgo+IEZpeGVzOiA4YzdiZDVhNDU0ZmYgKCJuZXQ6IGV0aGVybmV0OiBtdGstc3Rhci1l
-bWFjOiBuZXcgZHJpdmVyIikKPiBTaWduZWQtb2ZmLWJ5OiBCYXJ0b3N6IEdvbGFzemV3c2tpIDxi
-Z29sYXN6ZXdza2lAYmF5bGlicmUuY29tPgo+IC0tLQo+ICBkcml2ZXJzL25ldC9ldGhlcm5ldC9t
-ZWRpYXRlay9tdGtfc3Rhcl9lbWFjLmMgfCAzIC0tLQo+ICAxIGZpbGUgY2hhbmdlZCwgMyBkZWxl
-dGlvbnMoLSkKPgo+IGRpZmYgLS1naXQgYS9kcml2ZXJzL25ldC9ldGhlcm5ldC9tZWRpYXRlay9t
-dGtfc3Rhcl9lbWFjLmMgYi9kcml2ZXJzL25ldC9ldGhlcm5ldC9tZWRpYXRlay9tdGtfc3Rhcl9l
-bWFjLmMKPiBpbmRleCA4NTk2Y2EwZTYwZWIuLjdkZjM1ODcyYzEwNyAxMDA2NDQKPiAtLS0gYS9k
-cml2ZXJzL25ldC9ldGhlcm5ldC9tZWRpYXRlay9tdGtfc3Rhcl9lbWFjLmMKPiArKysgYi9kcml2
-ZXJzL25ldC9ldGhlcm5ldC9tZWRpYXRlay9tdGtfc3Rhcl9lbWFjLmMKPiBAQCAtNzQ2LDE1ICs3
-NDYsMTIgQEAgbXRrX3N0YXJfcmluZ19mcmVlX3NrYnMoc3RydWN0IG10a19zdGFyX3ByaXYgKnBy
-aXYsIHN0cnVjdCBtdGtfc3Rhcl9yaW5nICpyaW5nLAo+ICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICAgICAgICAgICBzdHJ1Y3QgbXRrX3N0YXJfcmluZ19kZXNjX2RhdGEgKikpCj4g
-IHsKPiAgICAgICAgIHN0cnVjdCBtdGtfc3Rhcl9yaW5nX2Rlc2NfZGF0YSBkZXNjX2RhdGE7Cj4g
-LSAgICAgICBzdHJ1Y3QgbXRrX3N0YXJfcmluZ19kZXNjICpkZXNjOwo+ICAgICAgICAgaW50IGk7
-Cj4KPiAgICAgICAgIGZvciAoaSA9IDA7IGkgPCBNVEtfU1RBUl9SSU5HX05VTV9ERVNDUzsgaSsr
-KSB7Cj4gICAgICAgICAgICAgICAgIGlmICghcmluZy0+ZG1hX2FkZHJzW2ldKQo+ICAgICAgICAg
-ICAgICAgICAgICAgICAgIGNvbnRpbnVlOwo+Cj4gLSAgICAgICAgICAgICAgIGRlc2MgPSAmcmlu
-Zy0+ZGVzY3NbaV07Cj4gLQo+ICAgICAgICAgICAgICAgICBkZXNjX2RhdGEuZG1hX2FkZHIgPSBy
-aW5nLT5kbWFfYWRkcnNbaV07Cj4gICAgICAgICAgICAgICAgIGRlc2NfZGF0YS5za2IgPSByaW5n
-LT5za2JzW2ldOwo+Cj4gLS0KPiAyLjI2LjEKPgoKQ3IqcCBJIGZvcmdvdCB0byB0YWcgaXQgZm9y
-IG5ldC1uZXh0LiBEYXZpZCBsZXQgbWUga25vdyBpZiB5b3Ugd2FudCBtZQp0byByZXNlbmQgaXQu
-CgpCYXJ0b3N6CgpfX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19f
-XwpMaW51eC1tZWRpYXRlayBtYWlsaW5nIGxpc3QKTGludXgtbWVkaWF0ZWtAbGlzdHMuaW5mcmFk
-ZWFkLm9yZwpodHRwOi8vbGlzdHMuaW5mcmFkZWFkLm9yZy9tYWlsbWFuL2xpc3RpbmZvL2xpbnV4
-LW1lZGlhdGVrCg==
+Hi,
+This series fixes clk-gating issues and introduces low-power mode for vccq2 in MediaTek platforms.
+
+v1 -> v2:
+  - Add patch [4] and [5]
+
+Stanley Chu (5):
+  scsi: ufs-mediatek: Fix imprecise waiting time for ref-clk control
+  scsi: ufs-mediatek: Do not gate clocks if auto-hibern8 is not entered
+    yet
+  scsi: ufs-mediatek: Introduce low-power mode for device power supply
+  scsi: ufs-mediatek: Fix unbalanced clock on/off
+  scsi: ufs-mediatek: Allow unbound mphy
+
+ drivers/scsi/ufs/ufs-mediatek.c | 112 +++++++++++++++++++++++---------
+ drivers/scsi/ufs/ufs-mediatek.h |   2 +-
+ 2 files changed, 84 insertions(+), 30 deletions(-)
+
+-- 
+2.18.0
+_______________________________________________
+Linux-mediatek mailing list
+Linux-mediatek@lists.infradead.org
+http://lists.infradead.org/mailman/listinfo/linux-mediatek
