@@ -2,80 +2,84 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 6C3611E7950
-	for <lists+linux-mediatek@lfdr.de>; Fri, 29 May 2020 11:24:36 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 358AD1E7A4F
+	for <lists+linux-mediatek@lfdr.de>; Fri, 29 May 2020 12:16:29 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=NFmT7x+QFuLwaxGt0ausCh5WkjpDAqpUc7ZF48uyGPw=; b=DTYKIybVPL9Xhq
-	NuAJme2Y4/POdvVLo/Z634vQe2p3Dw8zgEGrRMa1uptBsr5PJdI0Q2kbEM+PWkFlTEaM3LN7MLUbf
-	O3goNbQk0ccsShiWDjmlkWM5OA5D+zJlXzdyAtFnCPyPy1jB5+rG4NCA/iqGXfJDR+nvDHmk2yX3f
-	/yARNf1D3zX5hGqTdnC4Gnr7KMRNlaQJCRZLKeJ7mGLU8V7qGl3xuzMIL1Od8bsr1Rm9Mv2ekKbQ8
-	SL0KjnI0BSk59PUK0H+SzigNoPFsQ1kmywEoG6ReeXVcBLkk+eE9dpsj0AdC1ghonwGBAHOeCdYFJ
-	6N5XQpqKbhzkw8Mo0uQw==;
+	List-Owner; bh=GeL9jsmdn8FSKTvOGMlLf8PPvIg/64FP/HMWfvq4YEo=; b=fM0OFdBxxx2ki1
+	YlyDoRjymgtO+wy1CVilvwmLYmOfhUBKrsHyP7zWtfbTtovq8jOLPB9FLST86WFGqtujCLwyYBZzn
+	Sh98A1mKfvTvS6vZikFCRumwY5x9cce7u2/6pyEO7K6/Cc31+xkWipGKfAWeJQzv7LbBfcsHOC6Ws
+	txrDBC002gzH9L+qxXhIHm1Usx4hZRyCYdros1F2yuGvY0BwL5aC1klagr1Q8Xld72ZcXFETLMHl/
+	OSbRgnKwlurkv6wmzMC00D+sa+xYK7AXnjGGquUFjOCs6cxH65A16S/NwwE74dtD5KnX7c7lgGRo6
+	uYYAxsjDXNm0zCIIuSYQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jebFb-0006E6-LU; Fri, 29 May 2020 09:24:27 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1jec3o-0001Ix-7e; Fri, 29 May 2020 10:16:20 +0000
+Received: from mail-lj1-f193.google.com ([209.85.208.193])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jebEd-0005OD-DC; Fri, 29 May 2020 09:23:29 +0000
-X-UUID: 7fddb775005c4f649de878bf7469b7eb-20200529
-DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
- s=dk; 
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:References:In-Reply-To:Message-ID:Date:Subject:CC:To:From;
- bh=4xEpx/TR5nABOEWlUURKNlyYrrqiM9TJ/MUnzRuryNo=; 
- b=KwTZZDkAIWumGSURBvHi/MkEzOdtzSDG5OkFGzfJDV3FCxN+ekl8udQO9RQiNU/44leRavlOtIH+ubEpVAgRuRGSdufDqvisbIYkQ7CkQsoK4RdMA1u1009TgPZEYVDYK9Xa6kMgCv4J1yqrMp3yZxN2POLHslFmH+BtUQlFV8E=;
-X-UUID: 7fddb775005c4f649de878bf7469b7eb-20200529
-Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw01.mediatek.com
- (envelope-from <stanley.chu@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1249399842; Fri, 29 May 2020 01:23:15 -0800
-Received: from MTKMBS02N2.mediatek.inc (172.21.101.101) by
- MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
- 15.0.1497.2; Fri, 29 May 2020 02:23:19 -0700
-Received: from mtkcas08.mediatek.inc (172.21.101.126) by
- mtkmbs02n2.mediatek.inc (172.21.101.101) with Microsoft SMTP Server (TLS) id
- 15.0.1497.2; Fri, 29 May 2020 17:23:11 +0800
-Received: from mtksdccf07.mediatek.inc (172.21.84.99) by mtkcas08.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1497.2 via
- Frontend Transport; Fri, 29 May 2020 17:23:11 +0800
-From: Stanley Chu <stanley.chu@mediatek.com>
-To: <linux-scsi@vger.kernel.org>, <martin.petersen@oracle.com>,
- <avri.altman@wdc.com>, <alim.akhtar@samsung.com>, <jejb@linux.ibm.com>
-Subject: [PATCH v2 5/5] scsi: ufs-mediatek: Allow unbound mphy
-Date: Fri, 29 May 2020 17:23:10 +0800
-Message-ID: <20200529092310.1106-6-stanley.chu@mediatek.com>
-X-Mailer: git-send-email 2.18.0
-In-Reply-To: <20200529092310.1106-1-stanley.chu@mediatek.com>
-References: <20200529092310.1106-1-stanley.chu@mediatek.com>
+ id 1jec3k-0001HW-4t; Fri, 29 May 2020 10:16:17 +0000
+Received: by mail-lj1-f193.google.com with SMTP id z18so1881452lji.12;
+ Fri, 29 May 2020 03:16:14 -0700 (PDT)
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:date:from:to:cc:subject:message-id:references
+ :mime-version:content-disposition:in-reply-to;
+ bh=Qb23YrFge2bev6B+pdY5MYpRbBAt1YLbxMOSUywPdHk=;
+ b=QUJHk+rjfRS6Mzozco5dZQcKmlQCv3K+k7fXcHZVtkKN1OsjLSbGXLrDrMqo4kt27X
+ qXJZdsrLnIIVVsbRL6iobjoaxczwLwn+tSEPQT+HkmPKEcREUWjMLoFbbvip4IFI+ps5
+ f+ZC1PV27uIPZ7F9L3NftBBl6dm7Phfz9SEWFLiVu+gx9VDehV2XztHwlKSRomMolEV5
+ cHZXjVrOGS+4krw/wCQ3dVoA9n4pXghfTDoSAn7832VZ+bNtDWZCnug4CDiYx7+zLs2W
+ e7wLbORxEzJTKqt9n9onufO0NSrOPhZIkGSA7ejo28Ia3FTSnDRem0EaLH9FGOrYgSk9
+ IfBg==
+X-Gm-Message-State: AOAM531VKpvp5XfU4otPrV7fh6bPZ8cWv9naqDWS/3wzKKqynDJ79aAv
+ +IE1Gh2KYZj4bZzfgn4pFXY=
+X-Google-Smtp-Source: ABdhPJyb49lJcndlDqUtkrSajYOpqC0lpLBM00Du0tW1RABChW4sreguvSnQJV4+HR28+sDilaHYIw==
+X-Received: by 2002:a05:651c:39b:: with SMTP id
+ e27mr3886282ljp.253.1590747373144; 
+ Fri, 29 May 2020 03:16:13 -0700 (PDT)
+Received: from xi.terra (c-beaee455.07-184-6d6c6d4.bbcust.telenor.se.
+ [85.228.174.190])
+ by smtp.gmail.com with ESMTPSA id h26sm2236339lja.0.2020.05.29.03.16.12
+ (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+ Fri, 29 May 2020 03:16:12 -0700 (PDT)
+Received: from johan by xi.terra with local (Exim 4.93.0.4)
+ (envelope-from <johan@kernel.org>)
+ id 1jec3c-0004TR-D6; Fri, 29 May 2020 12:16:08 +0200
+Date: Fri, 29 May 2020 12:16:08 +0200
+From: Johan Hovold <johan@kernel.org>
+To: Alexandru Ardelean <alexandru.ardelean@analog.com>
+Subject: Re: [PATCH 4/5] iio: light: lm3533-als: remove explicit parent
+ assignment
+Message-ID: <20200529101608.GC19480@localhost>
+References: <20200522082208.383631-1-alexandru.ardelean@analog.com>
+ <20200522082208.383631-4-alexandru.ardelean@analog.com>
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: 451FC8FF6AD885113447FC16F8CFD0DF8E384566BE623E31C5FFF9080F619BF32000:8
-X-MTK: N
+Content-Disposition: inline
+In-Reply-To: <20200522082208.383631-4-alexandru.ardelean@analog.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200529_022327_455082_CC960664 
-X-CRM114-Status: UNSURE (   7.78  )
-X-CRM114-Notice: Please train this message.
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20200529_031616_190737_B6A4A29F 
+X-CRM114-Status: GOOD (  14.01  )
+X-Spam-Score: 0.5 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (0.5 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 MIME_BASE64_TEXT       RAW: Message text disguised using base64
- encoding
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
+ 0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
+ mail domains are different
+ 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
+ provider [jhovold[at]gmail.com]
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [209.85.208.193 listed in list.dnswl.org]
+ -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
+ [209.85.208.193 listed in wl.mailspike.net]
+ 0.2 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
+ EnvelopeFrom freemail headers are different
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -87,46 +91,71 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: pengshun.zhao@mediatek.com, Stanley Chu <stanley.chu@mediatek.com>,
- bvanassche@acm.org, andy.teng@mediatek.com, cc.chou@mediatek.com,
- chun-hung.wu@mediatek.com, kuohong.wang@mediatek.com,
- linux-kernel@vger.kernel.org, cang@codeaurora.org,
- linux-mediatek@lists.infradead.org, peter.wang@mediatek.com,
- matthias.bgg@gmail.com, beanhuo@micron.com, chaotian.jing@mediatek.com,
- linux-arm-kernel@lists.infradead.org, asutoshd@codeaurora.org
+Cc: milo.kim@ti.com, tomislav.denis@avl.com, dan@dlrobertson.com,
+ heiko@sntech.de, linux-aspeed@lists.ozlabs.org, linux-iio@vger.kernel.org,
+ linus.walleij@linaro.org, eajames@linux.ibm.com,
+ platform-driver-x86@vger.kernel.org, paul@crapouillou.net,
+ lorenzo.bianconi83@gmail.com, songqiang1304521@gmail.com,
+ srinivas.pandruvada@linux.intel.com, linux-stm32@st-md-mailman.stormreply.com,
+ devel@driverdev.osuosl.org, linux-samsung-soc@vger.kernel.org,
+ khilman@baylibre.com, tduszyns@gmail.com, krzk@kernel.org,
+ linux-rockchip@lists.infradead.org, wens@csie.org, kgene@kernel.org,
+ bcm-kernel-feedback-list@broadcom.com, agross@kernel.org,
+ linux-input@vger.kernel.org, orsonzhai@gmail.com, alexandre.torgue@st.com,
+ linux-pm@vger.kernel.org, linux-arm-msm@vger.kernel.org,
+ s.hauer@pengutronix.de, jikos@kernel.org, vilhelm.gray@gmail.com,
+ mripard@kernel.org, vz@mleia.com, hdegoede@redhat.com,
+ linux-mediatek@lists.infradead.org, ak@it-klinger.de, matthias.bgg@gmail.com,
+ linux-amlogic@lists.infradead.org, fabrice.gasnier@st.com,
+ linux-arm-kernel@lists.infradead.org, sbranden@broadcom.com, rmfrfs@gmail.com,
+ shawnguo@kernel.org, dmitry.torokhov@gmail.com, coproscefalo@gmail.com,
+ linux-kernel@vger.kernel.org, rjui@broadcom.com, slemieux.tyco@gmail.com,
+ bjorn.andersson@linaro.org, mcoquelin.stm32@gmail.com, zhang.lyra@gmail.com,
+ baolin.wang7@gmail.com, ktsai@capellamicro.com, syednwaris@gmail.com,
+ peda@axentia.se, jic23@kernel.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Allow unbound MPHY module since not every MediaTek UFS platform
-needs specific MPHY control.
+On Fri, May 22, 2020 at 11:22:07AM +0300, Alexandru Ardelean wrote:
+> This assignment is the more peculiar of the bunch as it assigns the parent
+> of the platform-device's device (i.e. pdev->dev.parent) as the IIO device's
+> parent.
+>
+> It's unclear whether this is intentional or not.
+> Hence it is in it's own patch.
 
-Signed-off-by: Stanley Chu <stanley.chu@mediatek.com>
-Reviewed-by: Peter Wang <peter.wang@mediatek.com>
----
- drivers/scsi/ufs/ufs-mediatek.c | 6 ++++++
- 1 file changed, 6 insertions(+)
+Yeah, we have a few mfd drivers whose child drivers registers their
+class devices directly under the parent mfd device rather than the
+corresponding child platform device.
 
-diff --git a/drivers/scsi/ufs/ufs-mediatek.c b/drivers/scsi/ufs/ufs-mediatek.c
-index de9e643fb8dd..d587b3276aa8 100644
---- a/drivers/scsi/ufs/ufs-mediatek.c
-+++ b/drivers/scsi/ufs/ufs-mediatek.c
-@@ -113,6 +113,12 @@ static int ufs_mtk_bind_mphy(struct ufs_hba *hba)
- 
- 	if (err)
- 		host->mphy = NULL;
-+	/*
-+	 * Allow unbound mphy because not every platform needs specific
-+	 * mphy control.
-+	 */
-+	if (err == -ENODEV)
-+		err = 0;
- 
- 	return err;
- }
--- 
-2.18.0
+Since it's done consistently I think you need to update them all if you
+really want to change this. 
+
+And it may not be worth it since at least in theory someone could now be
+relying on this topology.
+
+> Signed-off-by: Alexandru Ardelean <alexandru.ardelean@analog.com>
+> ---
+>  drivers/iio/light/lm3533-als.c | 1 -
+>  1 file changed, 1 deletion(-)
+> 
+> diff --git a/drivers/iio/light/lm3533-als.c b/drivers/iio/light/lm3533-als.c
+> index bc196c212881..0f380ec8d30c 100644
+> --- a/drivers/iio/light/lm3533-als.c
+> +++ b/drivers/iio/light/lm3533-als.c
+> @@ -852,7 +852,6 @@ static int lm3533_als_probe(struct platform_device *pdev)
+>  	indio_dev->channels = lm3533_als_channels;
+>  	indio_dev->num_channels = ARRAY_SIZE(lm3533_als_channels);
+>  	indio_dev->name = dev_name(&pdev->dev);
+> -	indio_dev->dev.parent = pdev->dev.parent;
+>  	indio_dev->modes = INDIO_DIRECT_MODE;
+>  
+>  	als = iio_priv(indio_dev);
+
+Johan
+
 _______________________________________________
 Linux-mediatek mailing list
 Linux-mediatek@lists.infradead.org
