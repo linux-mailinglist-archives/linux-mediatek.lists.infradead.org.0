@@ -2,63 +2,61 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id C5FE91EDEA0
-	for <lists+linux-mediatek@lfdr.de>; Thu,  4 Jun 2020 09:39:31 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 7D6801EDE62
+	for <lists+linux-mediatek@lfdr.de>; Thu,  4 Jun 2020 09:32:28 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=hDolrxu4ZSXi5wU7ePwZxC/aSWGPqLhlqLtWxoj3ZME=; b=S7ps0Tf2SYd2RX
-	ArQ8E6jA+Wy8+07J4QsGb9XEJ4a4WaHaQuYDLYtmAwGXt1F9YNrIj2LRYg253nMnYRdFp7xOPSbhp
-	WI9UPbd6my+Jwc5yjdozxqSnhVMpHcJ7vefosawTfukLckOJawa4I01ysRd/w3JJskPtchLcpLyvi
-	H8SbDR/k4GKABsNtHc11x/moK4q2aBCAp/xc2H32UkXQJplylLT50BkAZz2lyLHxUvKryAOyO8pMk
-	pDepgXZjIPYGSjN13Z4BYs8kCAIFQZZx+wMBAf9inAOL0WUnRSowg4jaMaArsF/vxuTjLgzAY+mFo
-	GgACVVcvD4SbncB0JjqQ==;
+	List-Owner; bh=sDeowbNtcYUKyk16QAEEg2qEqlCxFVcVQ1FAwhZLFCg=; b=Wz+yFJowO4AZYr
+	qR+l9VKDdzr6bAfWkIBbPuKXKqzWDT7+jFyov89k7OgrmAFa418Up81Ocwv6MkOkAs8zyTyVa1aOD
+	zO0ebK3puCmaXyyPgjuPnaxuLDUB5h5MpYGDPywGiK2CSoGwSmbBEagxXLgSAaQqB/hWOgQ+wEavL
+	08NgPOxCZZ2SzczT41ZZxRqH5dDu36uLhRcFG0oXUPzXlitV4bPEnbE7ZkfOX6hgKyW/WHMo4DaYz
+	HtLuEtCNnG6sbak54HDCHqD8PIFuQry6dh8nAQT9KSqCnZA/dbdxu9cUHJeW2hm8wM87K1ebvOOF6
+	4wWktVUBBDlbbL4mwkXg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jgkTD-0006BJ-8n; Thu, 04 Jun 2020 07:39:23 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1jgkMP-0007ju-3y; Thu, 04 Jun 2020 07:32:21 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jgkT9-000651-Ol; Thu, 04 Jun 2020 07:39:21 +0000
-X-UUID: 46fdfe630a844206a4728704bce95c41-20200603
+ id 1jgkM6-0007VJ-Mu; Thu, 04 Jun 2020 07:32:05 +0000
+X-UUID: 36bb82c0989f4a37ba025a81a00610d3-20200603
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
  s=dk; 
  h=Content-Transfer-Encoding:Content-Type:MIME-Version:References:In-Reply-To:Message-ID:Date:Subject:CC:To:From;
- bh=ZTXG1swxMq+6u0sp84wMTHDYveVRdbBvoRAsf7UsS68=; 
- b=ttBmYibxNywZsv0WT7YGBdPAyfV3bQN5YxaSeFJLRtE1TV6FjSgIGAbJDsSn0XoF8qtZNJT7j3Y4F/gpRLNFkHPooWz1U4Z5OinPf/mOeiE4QpYGFSDMLCzD/iJvGCTlVmHO5oawEpu/Knr7Pom2BRgjmXG8qWxSb3KNq/5oyhM=;
-X-UUID: 46fdfe630a844206a4728704bce95c41-20200603
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
+ bh=B/w2ehlpdSMG2o1JAKklslgzvugqL0CKOQBnvbbutuc=; 
+ b=Ngsug16108evhC1YXvJ0jSPgV4woQrLHxXxPaXwVnlDOv3NP6ftY75UWK3PZD2u8cD+lBwJ1zVL6YhsxNRznl47tM7h5H0u7uGPYYrtCP2e1TdXmjN1s90mdldJcMJYOi8iCjWEFNpFwGC0SXR+OhY3BOTV9V4+f3QfhzeH9UyU=;
+X-UUID: 36bb82c0989f4a37ba025a81a00610d3-20200603
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
  (envelope-from <xia.jiang@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1579935807; Wed, 03 Jun 2020 23:39:14 -0800
-Received: from mtkmbs05n1.mediatek.inc (172.21.101.15) by
- MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
+ with ESMTP id 2053062593; Wed, 03 Jun 2020 23:31:53 -0800
+Received: from mtkmbs07n1.mediatek.inc (172.21.101.16) by
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
  15.0.1497.2; Thu, 4 Jun 2020 00:29:24 -0700
 Received: from MTKCAS06.mediatek.inc (172.21.101.30) by
- mtkmbs05n1.mediatek.inc (172.21.101.15) with Microsoft SMTP Server (TLS) id
- 15.0.1497.2; Thu, 4 Jun 2020 15:29:22 +0800
+ mtkmbs07n1.mediatek.inc (172.21.101.16) with Microsoft SMTP Server (TLS) id
+ 15.0.1497.2; Thu, 4 Jun 2020 15:29:23 +0800
 Received: from localhost.localdomain (10.17.3.153) by MTKCAS06.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1497.2 via Frontend
- Transport; Thu, 4 Jun 2020 15:29:20 +0800
+ Transport; Thu, 4 Jun 2020 15:29:21 +0800
 From: Xia Jiang <xia.jiang@mediatek.com>
 To: Hans Verkuil <hverkuil-cisco@xs4all.nl>, Mauro Carvalho Chehab
  <mchehab+samsung@kernel.org>, Rob Herring <robh+dt@kernel.org>, "Matthias
  Brugger" <matthias.bgg@gmail.com>, Rick Chang <rick.chang@mediatek.com>
-Subject: [PATCH v9 07/18] media: platform: Improve the implementation of the
- system PM ops
-Date: Thu, 4 Jun 2020 15:26:57 +0800
-Message-ID: <20200604072708.9468-8-xia.jiang@mediatek.com>
+Subject: [PATCH v9 08/18] media: platform: Cancel the last frame handling flow
+Date: Thu, 4 Jun 2020 15:26:58 +0800
+Message-ID: <20200604072708.9468-9-xia.jiang@mediatek.com>
 X-Mailer: git-send-email 2.18.0
 In-Reply-To: <20200604072708.9468-1-xia.jiang@mediatek.com>
 References: <20200604072708.9468-1-xia.jiang@mediatek.com>
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200604_003919_815677_1D1DD4B9 
-X-CRM114-Status: UNSURE (   9.86  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20200604_003202_753579_1656D87E 
+X-CRM114-Status: GOOD (  10.49  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
@@ -100,53 +98,77 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Add v4l2_m2m_suspend() function call in mtk_jpeg_suspend() to make sure
-that the current frame is processed completely before suspend.
-Add v4l2_m2m_resume() function call in mtk_jpeg_resume() to unblock the
-driver from scheduling next frame.
+There is no need to queue an empty buffer for signaling a last frame,
+because all frames are separate from each other in JPEG.
 
 Signed-off-by: Xia Jiang <xia.jiang@mediatek.com>
 ---
-v9: use v4l2_m2m_suspend() and v4l2_m2m_resume() to improve the
-    implemention of the system PM ops
+v9: new patch
 ---
- drivers/media/platform/mtk-jpeg/mtk_jpeg_core.c | 6 ++++++
- 1 file changed, 6 insertions(+)
+ .../media/platform/mtk-jpeg/mtk_jpeg_core.c   | 21 +------------------
+ 1 file changed, 1 insertion(+), 20 deletions(-)
 
 diff --git a/drivers/media/platform/mtk-jpeg/mtk_jpeg_core.c b/drivers/media/platform/mtk-jpeg/mtk_jpeg_core.c
-index 7f74597262fc..49bdbf1c435f 100644
+index 49bdbf1c435f..bb4ebce881ee 100644
 --- a/drivers/media/platform/mtk-jpeg/mtk_jpeg_core.c
 +++ b/drivers/media/platform/mtk-jpeg/mtk_jpeg_core.c
-@@ -1208,10 +1208,13 @@ static __maybe_unused int mtk_jpeg_pm_resume(struct device *dev)
- static __maybe_unused int mtk_jpeg_suspend(struct device *dev)
- {
- 	int ret;
-+	struct mtk_jpeg_dev *jpeg = dev_get_drvdata(dev);
+@@ -55,15 +55,9 @@ static struct mtk_jpeg_fmt mtk_jpeg_formats[] = {
  
- 	if (pm_runtime_suspended(dev))
- 		return 0;
+ #define MTK_JPEG_NUM_FORMATS ARRAY_SIZE(mtk_jpeg_formats)
  
-+	v4l2_m2m_suspend(jpeg->m2m_dev);
-+
- 	ret = mtk_jpeg_pm_suspend(dev);
- 	return ret;
+-enum {
+-	MTK_JPEG_BUF_FLAGS_INIT			= 0,
+-	MTK_JPEG_BUF_FLAGS_LAST_FRAME		= 1,
+-};
+-
+ struct mtk_jpeg_src_buf {
+ 	struct vb2_v4l2_buffer b;
+ 	struct list_head list;
+-	int flags;
+ 	struct mtk_jpeg_dec_param dec_param;
+ };
+ 
+@@ -520,8 +514,6 @@ static int mtk_jpeg_qbuf(struct file *file, void *priv, struct v4l2_buffer *buf)
+ 
+ 	vb = vb2_get_buffer(vq, buf->index);
+ 	jpeg_src_buf = mtk_jpeg_vb2_to_srcbuf(vb);
+-	jpeg_src_buf->flags = (buf->m.planes[0].bytesused == 0) ?
+-		MTK_JPEG_BUF_FLAGS_LAST_FRAME : MTK_JPEG_BUF_FLAGS_INIT;
+ end:
+ 	return v4l2_m2m_qbuf(file, fh->m2m_ctx, buf);
  }
-@@ -1219,12 +1222,15 @@ static __maybe_unused int mtk_jpeg_suspend(struct device *dev)
- static __maybe_unused int mtk_jpeg_resume(struct device *dev)
- {
- 	int ret;
-+	struct mtk_jpeg_dev *jpeg = dev_get_drvdata(dev);
+@@ -676,10 +668,6 @@ static void mtk_jpeg_buf_queue(struct vb2_buffer *vb)
+ 	param = &jpeg_src_buf->dec_param;
+ 	memset(param, 0, sizeof(*param));
  
- 	if (pm_runtime_suspended(dev))
- 		return 0;
+-	if (jpeg_src_buf->flags & MTK_JPEG_BUF_FLAGS_LAST_FRAME) {
+-		v4l2_dbg(1, debug, &jpeg->v4l2_dev, "Got eos\n");
+-		goto end;
+-	}
+ 	header_valid = mtk_jpeg_parse(param, (u8 *)vb2_plane_vaddr(vb, 0),
+ 				      vb2_get_plane_payload(vb, 0));
+ 	if (!header_valid) {
+@@ -792,19 +780,12 @@ static void mtk_jpeg_device_run(void *priv)
+ 	struct mtk_jpeg_src_buf *jpeg_src_buf;
+ 	struct mtk_jpeg_bs bs;
+ 	struct mtk_jpeg_fb fb;
+-	int i, ret;
++	int ret;
  
- 	ret = mtk_jpeg_pm_resume(dev);
+ 	src_buf = v4l2_m2m_next_src_buf(ctx->fh.m2m_ctx);
+ 	dst_buf = v4l2_m2m_next_dst_buf(ctx->fh.m2m_ctx);
+ 	jpeg_src_buf = mtk_jpeg_vb2_to_srcbuf(&src_buf->vb2_buf);
  
-+	v4l2_m2m_resume(jpeg->m2m_dev);
-+
- 	return ret;
- }
- 
+-	if (jpeg_src_buf->flags & MTK_JPEG_BUF_FLAGS_LAST_FRAME) {
+-		for (i = 0; i < dst_buf->vb2_buf.num_planes; i++)
+-			vb2_set_plane_payload(&dst_buf->vb2_buf, i, 0);
+-		buf_state = VB2_BUF_STATE_DONE;
+-		goto dec_end;
+-	}
+-
+ 	if (mtk_jpeg_check_resolution_change(ctx, &jpeg_src_buf->dec_param)) {
+ 		mtk_jpeg_queue_src_chg_event(ctx);
+ 		ctx->state = MTK_JPEG_SOURCE_CHANGE;
 -- 
 2.18.0
 _______________________________________________
