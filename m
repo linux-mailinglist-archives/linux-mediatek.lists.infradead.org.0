@@ -2,61 +2,59 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 296531EF4C0
-	for <lists+linux-mediatek@lfdr.de>; Fri,  5 Jun 2020 11:56:37 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 565081EF597
+	for <lists+linux-mediatek@lfdr.de>; Fri,  5 Jun 2020 12:46:14 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=W3uZ/G5ziby6YdU92IvK5txbzYdflM5Dny16zIrbGrk=; b=kdbGm25A9wWJ15
-	uUWjtp93BSR5W4A1tHzvzho5Liygb84bo4NW0sH2JwtxcoqaDpUwC7Nav1LR6RKgt/jv34ZAA6iIZ
-	I7Gak2MBeKEVNyQ9KV4cbl/FyG8hh4oQt88C3SXk2JFDQx/nGXa1FnYXTN5VjlWZgIK58AoYTp9fQ
-	T8nUn2aMPS7ebzOfhabfpLnNAfVxkrSIw+e9pa9FZ+6gZ1F2fOS9wsvWr+GUojbgh2mKYnHZe8rbT
-	fpiK7trqGU+Pz5ctA0UJlLcQwsW3P6nXas6G20u2qL6B3dP1RIHsxgd2vx/rEKk48MVZhitj8v4Jf
-	Wh7REEfzQu7PtZRB53ew==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=G6zJ++5CszTTQW4a84jpkJrbcIc73LQ9WNl35ynDBC0=; b=j7W7k9wIQgR0le
+	0XSK13tFb+d9a6mfP8aR8Dc2u3hjt+ajxrO6+8xiWA6R3YUP/ThGsDW1CpAiH+R3tTf9/5AZSeb7y
+	ydphQlBWekBrAIpEXCJL2iT7Tnh9seWW+WVsfTkGWxaRYxo6BpPnbHLbSULmzS+5DxO5PrAgnt9Q5
+	onqeeUb4mq1ErNoHgG/+xtHtoey8IckeGF1TmLeV8sbZMI33ZxxuYuMlv5jRyUd+mrfmlV6ieRQcf
+	7Xbb/MYh1MpvdTDvZ9Lgo4bGSr5U4zoYMz/R8rsnNJS8gPTvtwWBzsmI33RNWS4MkviOtFF5epboR
+	uuPXTxdjlkIbIcHdHg6w==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jh95P-0001xR-Os; Fri, 05 Jun 2020 09:56:27 +0000
+	id 1jh9rR-0001nk-O9; Fri, 05 Jun 2020 10:46:05 +0000
 Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jh94z-0001V3-VA; Fri, 05 Jun 2020 09:56:03 +0000
-X-UUID: 25c206d166fc4840a4c920ca2cd844c2-20200605
+ id 1jh9rI-0001h9-Sm; Fri, 05 Jun 2020 10:45:58 +0000
+X-UUID: f8e53d073ecd4f318a146d9295b6dcc9-20200605
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
  s=dk; 
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:References:In-Reply-To:Message-ID:Date:Subject:CC:To:From;
- bh=aftpXunH1eDQjPXFO8QI2IEzKcVO0kd6k1ZnXlRllyc=; 
- b=q5kzpTKE1GnRrlfGC5KCRFDhLvUfLRl0CYVPAWH2+mWbTHODnekQlMoGXww0khiUM15wKDDM287u4OxakLmQgsuVEQmkq7YsM0FQ6+/zG0ubtxVBC9DsI7LUF/RYnk9fqSgUZoxgAXtN2pKTCxncYiMqGsnreTrpvdtOmP0XuCI=;
-X-UUID: 25c206d166fc4840a4c920ca2cd844c2-20200605
+ h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:Subject:CC:To:From;
+ bh=nsUntpG+2ZTGK4HrWe8pIq15nHkMfEaQcUq9M+NOtWk=; 
+ b=ZziRepXD1Tc2tvW8UgCB9U8mMFj8HAhFyvII54fN0S5EPTBx0ntD9TZ9Jxgc6oMQi+wii8CRsxB8x9POeeJox6t0LZCwazYx5uJYvCREmw543rnnsapfKScKefLEbGZ793KXzKseHNCQ4P3zNQbhhoO7AsDOMFNjqEJ40LFE7XM=;
+X-UUID: f8e53d073ecd4f318a146d9295b6dcc9-20200605
 Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
  (envelope-from <jiaxin.yu@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1767239972; Fri, 05 Jun 2020 01:55:52 -0800
-Received: from MTKMBS31N1.mediatek.inc (172.27.4.69) by
+ with ESMTP id 668679519; Fri, 05 Jun 2020 02:45:48 -0800
+Received: from MTKMBS31N2.mediatek.inc (172.27.4.87) by
  MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
- 15.0.1497.2; Fri, 5 Jun 2020 02:55:54 -0700
-Received: from mtkcas08.mediatek.inc (172.21.101.126) by
- MTKMBS31N1.mediatek.inc (172.27.4.69) with Microsoft SMTP Server (TLS) id
- 15.0.1497.2; Fri, 5 Jun 2020 17:55:52 +0800
-Received: from localhost.localdomain (10.17.3.153) by mtkcas08.mediatek.inc
+ 15.0.1497.2; Fri, 5 Jun 2020 03:35:51 -0700
+Received: from MTKCAS06.mediatek.inc (172.21.101.30) by
+ MTKMBS31N2.mediatek.inc (172.27.4.87) with Microsoft SMTP Server (TLS) id
+ 15.0.1497.2; Fri, 5 Jun 2020 18:35:46 +0800
+Received: from localhost.localdomain (10.17.3.153) by MTKCAS06.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1497.2 via Frontend
- Transport; Fri, 5 Jun 2020 17:55:51 +0800
+ Transport; Fri, 5 Jun 2020 18:35:45 +0800
 From: Jiaxin Yu <jiaxin.yu@mediatek.com>
 To: <lgirdwood@gmail.com>, <broonie@kernel.org>, <tiwai@suse.com>,
  <matthias.bgg@gmail.com>, <hariprasad.kelam@gmail.com>
-Subject: [v2, 2/2] ASoC: dt-bindings: mediatek: mt6358: add dmic-mode property
-Date: Fri, 5 Jun 2020 17:53:45 +0800
-Message-ID: <1591350825-18152-2-git-send-email-jiaxin.yu@mediatek.com>
+Subject: [PATCH v2 0/2] ASoC: mediatek: mt6358: support DMIC one-wire mode
+Date: Fri, 5 Jun 2020 18:33:40 +0800
+Message-ID: <1591353222-18576-1-git-send-email-jiaxin.yu@mediatek.com>
 X-Mailer: git-send-email 1.8.1.1.dirty
-In-Reply-To: <1591350825-18152-1-git-send-email-jiaxin.yu@mediatek.com>
-References: <1591350825-18152-1-git-send-email-jiaxin.yu@mediatek.com>
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: DA84537A393A2A092512B040C0A414505375F5DBD6BEBB53201491E8557FD55F2000:8
+X-TM-SNTS-SMTP: 8183516B6E5D2C2436F93EBC972FC14D6494A6210300ACC0EE968670B2FED9B22000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200605_025602_001507_0EB41F17 
-X-CRM114-Status: UNSURE (   5.63  )
+X-CRM114-CacheID: sfid-20200605_034556_931816_BD8E2E9F 
+X-CRM114-Status: UNSURE (   4.13  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
@@ -96,33 +94,22 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Adds dmic-mode property and updates example.
+v2 changes:
+	1. Uses a DT property to select DMIC mode instead of a mixer control.
 
-Signed-off-by: Jiaxin Yu <jiaxin.yu@mediatek.com>
----
- Documentation/devicetree/bindings/sound/mt6358.txt | 6 ++++++
- 1 file changed, 6 insertions(+)
+v1 changes:
+	1. Uses a mixer control to select DMIC mode.
+	2. patchwork list:
+		https://patchwork.kernel.org/patch/11578309
 
-diff --git a/Documentation/devicetree/bindings/sound/mt6358.txt b/Documentation/devicetree/bindings/sound/mt6358.txt
-index 5465730..59a73ff 100644
---- a/Documentation/devicetree/bindings/sound/mt6358.txt
-+++ b/Documentation/devicetree/bindings/sound/mt6358.txt
-@@ -10,9 +10,15 @@ Required properties:
- - compatible : "mediatek,mt6358-sound".
- - Avdd-supply : power source of AVDD
- 
-+Optional properties:
-+- mediatek,dmic-mode : Indicates how many data pins are used to transmit two
-+	channels of PDM signal. 0 means two wires, 1 means one wire. Default
-+	value is 0.
-+
- Example:
- 
- mt6358_snd {
- 	compatible = "mediatek,mt6358-sound";
- 	Avdd-supply = <&mt6358_vaud28_reg>;
-+	mediatek,dmic-mode = <0>;
- };
+Jiaxin Yu (2):
+  ASoC: mediatek: mt6358: support DMIC one-wire mode
+  ASoC: dt-bindings: mediatek: mt6358: add dmic-mode property
+
+ Documentation/devicetree/bindings/sound/mt6358.txt |  6 ++++++
+ sound/soc/codecs/mt6358.c                          | 23 +++++++++++++++++++++-
+ 2 files changed, 28 insertions(+), 1 deletion(-)
+
 -- 
 1.8.1.1.dirty
 _______________________________________________
