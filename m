@@ -2,46 +2,46 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 55F9B1F2672
-	for <lists+linux-mediatek@lfdr.de>; Tue,  9 Jun 2020 01:41:34 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 8B19F1F2677
+	for <lists+linux-mediatek@lfdr.de>; Tue,  9 Jun 2020 01:42:39 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=0ddgYbKWIIV1KWGOopAtNazqmxMyWK4v+uF6QB4ALJ0=; b=q/Vq+3CWC70/K7
-	sHSV7BMgL+hWLeV94ymQwfQjuBfJQ1yJ1LYwUeE2ecWqp90DUdwKf2MttByuJQQJB5qdHaFp85KQ3
-	TI+0gEgct/ortqEqs+u1361SZkQjp2eGkQpTp3ftxux84i/p3K7iRx5PyHLJqFhPgwE+Um5erVAeP
-	2hb/n9u0F7Er2TburiNSLdQfxaE5Ppw1qVenD5+ZYHFuQMAfNS/FghH5AQwoeSFrKPfHfxZj53GeQ
-	y6b41FRI5pe35EiBxINzd8Ug+eE4ZI+yg581CteewpvcJ5S8UFRyZMm1/RlH32XJy+WgbYlzMcFYZ
-	17OrkpL9UR7pLH9KknOg==;
+	List-Owner; bh=TXim0LvQGL8BpPq1/vXbcFWVR2anHHGjjNFsVHSp1Zg=; b=U/CbpoQAjv2lMh
+	YtjZhsLAfAmz+hcs8XOvKnTWzYQHMxqFQcuNMa3PnzrDwMBlru/5FDwimPIa1J2+eVkagYOq21ov/
+	Qam6O61gVzG7Cm7B14Jq+zLigcxjzwqmD0zDS1DWVWVX4T09nfGGpb2ibG+aXlNK5NeUrvF6XncId
+	rVIi4+HuvIy26RKE3S17KUUmPej9NbIftx7597S6Feymm5GFZa+lhBjUr/e0O7GEJAFlgaEzZduhU
+	vBkwKzdZatvEv02znmPZoxpU/IWa8S8ReTC76X6tzZaAH1mxlujsFh2L/u8Q+tjBLWxROv4eJ8Iow
+	4faHtjFAT0GIAcVJyoSQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jiROQ-0003V5-Qn; Mon, 08 Jun 2020 23:41:26 +0000
+	id 1jiRPT-0004V2-M6; Mon, 08 Jun 2020 23:42:31 +0000
 Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jiR3f-0006IT-R2; Mon, 08 Jun 2020 23:20:02 +0000
+ id 1jiR46-0000T1-QI; Mon, 08 Jun 2020 23:20:30 +0000
 Received: from sasha-vm.mshome.net (c-73-47-72-35.hsd1.nh.comcast.net
  [73.47.72.35])
  (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
  (No client certificate requested)
- by mail.kernel.org (Postfix) with ESMTPSA id 9EDF920823;
- Mon,  8 Jun 2020 23:19:58 +0000 (UTC)
+ by mail.kernel.org (Postfix) with ESMTPSA id D78A620814;
+ Mon,  8 Jun 2020 23:20:24 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1591658399;
- bh=PRuINvBRZW2mZwEv6yL9odErB1I7qLxkutEUY51xAFc=;
+ s=default; t=1591658425;
+ bh=JpyXvZPwGmhcDX7HBvEqn00iZ7V++vRJV0NKykGQJf4=;
  h=From:To:Cc:Subject:Date:In-Reply-To:References:From;
- b=OBJlHTlLYJCrIS/T0vc8HigBTccwaYPH2dGJfpSumlSl5wTkUcp2Iypp6cw1cHCgp
- +xOUpUE2P2fTLK1uEa37UWElQlV4C7SrHrx0rMvs91v+Xo3UraLCZXL0rawjOWZ0D8
- oBuyFyGp+PsT/wkb2yLRgDjspM7W+l1tAaP5xN8c=
+ b=F5RIdsHWsmMNxjVpWQiQnDb44mD2oG2KJ4cozkb548SisLZQLa1I2jsWJk9tg6x8F
+ qqSsPOqNPQ75Flfc7W+Yb2+rTj/62glJFcnSXu+noD/iVEYx6IgiaXIscsL1qT2On6
+ GZwJm2X9I/K7eFhNOeeq+ihGNCg8FKkUg0em2+/8=
 From: Sasha Levin <sashal@kernel.org>
 To: linux-kernel@vger.kernel.org,
 	stable@vger.kernel.org
-Subject: [PATCH AUTOSEL 5.4 055/175] Bluetooth: btmtkuart: Improve exception
- handling in btmtuart_probe()
-Date: Mon,  8 Jun 2020 19:16:48 -0400
-Message-Id: <20200608231848.3366970-55-sashal@kernel.org>
+Subject: [PATCH AUTOSEL 5.4 071/175] dt-bindings: display: mediatek: control
+ dpi pins mode to avoid leakage
+Date: Mon,  8 Jun 2020 19:17:04 -0400
+Message-Id: <20200608231848.3366970-71-sashal@kernel.org>
 X-Mailer: git-send-email 2.25.1
 In-Reply-To: <20200608231848.3366970-1-sashal@kernel.org>
 References: <20200608231848.3366970-1-sashal@kernel.org>
@@ -49,8 +49,9 @@ MIME-Version: 1.0
 X-stable: review
 X-Patchwork-Hint: Ignore
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200608_161959_945559_F42151E7 
-X-CRM114-Status: GOOD (  11.25  )
+X-CRM114-CacheID: sfid-20200608_162027_011939_202AA3CD 
+X-CRM114-Status: UNSURE (   8.20  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: -5.2 (-----)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  Content analysis details:   (-5.2 points)
@@ -79,77 +80,55 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Sasha Levin <sashal@kernel.org>, Marcel Holtmann <marcel@holtmann.org>,
- Chuhong Yuan <hslester96@gmail.com>, linux-bluetooth@vger.kernel.org,
- linux-mediatek@lists.infradead.org, linux-arm-kernel@lists.infradead.org
+Cc: Sasha Levin <sashal@kernel.org>, Rob Herring <robh@kernel.org>,
+ Jitao Shi <jitao.shi@mediatek.com>, devicetree@vger.kernel.org,
+ dri-devel@lists.freedesktop.org, linux-mediatek@lists.infradead.org,
+ Chun-Kuang Hu <chunkuang.hu@kernel.org>, linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-From: Chuhong Yuan <hslester96@gmail.com>
+From: Jitao Shi <jitao.shi@mediatek.com>
 
-[ Upstream commit 4803c54ca24923a30664bea2a7772db6e7303c51 ]
+[ Upstream commit b0ff9b590733079f7f9453e5976a9dd2630949e3 ]
 
-Calls of the functions clk_disable_unprepare() and hci_free_dev()
-were missing for the exception handling.
-Thus add the missed function calls together with corresponding
-jump targets.
+Add property "pinctrl-names" to swap pin mode between gpio and dpi mode.
+Set the dpi pins to gpio mode and output-low to avoid leakage current
+when dpi disabled.
 
-Fixes: 055825614c6b ("Bluetooth: btmtkuart: add an implementation for clock osc property")
-Signed-off-by: Chuhong Yuan <hslester96@gmail.com>
-Signed-off-by: Marcel Holtmann <marcel@holtmann.org>
+Acked-by: Rob Herring <robh@kernel.org>
+Signed-off-by: Jitao Shi <jitao.shi@mediatek.com>
+Signed-off-by: Chun-Kuang Hu <chunkuang.hu@kernel.org>
 Signed-off-by: Sasha Levin <sashal@kernel.org>
 ---
- drivers/bluetooth/btmtkuart.c | 14 ++++++++------
- 1 file changed, 8 insertions(+), 6 deletions(-)
+ .../devicetree/bindings/display/mediatek/mediatek,dpi.txt   | 6 ++++++
+ 1 file changed, 6 insertions(+)
 
-diff --git a/drivers/bluetooth/btmtkuart.c b/drivers/bluetooth/btmtkuart.c
-index e11169ad8247..8a81fbca5c9d 100644
---- a/drivers/bluetooth/btmtkuart.c
-+++ b/drivers/bluetooth/btmtkuart.c
-@@ -1015,7 +1015,7 @@ static int btmtkuart_probe(struct serdev_device *serdev)
- 	if (btmtkuart_is_standalone(bdev)) {
- 		err = clk_prepare_enable(bdev->osc);
- 		if (err < 0)
--			return err;
-+			goto err_hci_free_dev;
+diff --git a/Documentation/devicetree/bindings/display/mediatek/mediatek,dpi.txt b/Documentation/devicetree/bindings/display/mediatek/mediatek,dpi.txt
+index b6a7e7397b8b..b944fe067188 100644
+--- a/Documentation/devicetree/bindings/display/mediatek/mediatek,dpi.txt
++++ b/Documentation/devicetree/bindings/display/mediatek/mediatek,dpi.txt
+@@ -16,6 +16,9 @@ Required properties:
+   Documentation/devicetree/bindings/graph.txt. This port should be connected
+   to the input port of an attached HDMI or LVDS encoder chip.
  
- 		if (bdev->boot) {
- 			gpiod_set_value_cansleep(bdev->boot, 1);
-@@ -1028,10 +1028,8 @@ static int btmtkuart_probe(struct serdev_device *serdev)
++Optional properties:
++- pinctrl-names: Contain "default" and "sleep".
++
+ Example:
  
- 		/* Power on */
- 		err = regulator_enable(bdev->vcc);
--		if (err < 0) {
--			clk_disable_unprepare(bdev->osc);
--			return err;
--		}
-+		if (err < 0)
-+			goto err_clk_disable_unprepare;
+ dpi0: dpi@1401d000 {
+@@ -26,6 +29,9 @@ dpi0: dpi@1401d000 {
+ 		 <&mmsys CLK_MM_DPI_ENGINE>,
+ 		 <&apmixedsys CLK_APMIXED_TVDPLL>;
+ 	clock-names = "pixel", "engine", "pll";
++	pinctrl-names = "default", "sleep";
++	pinctrl-0 = <&dpi_pin_func>;
++	pinctrl-1 = <&dpi_pin_idle>;
  
- 		/* Reset if the reset-gpios is available otherwise the board
- 		 * -level design should be guaranteed.
-@@ -1063,7 +1061,6 @@ static int btmtkuart_probe(struct serdev_device *serdev)
- 	err = hci_register_dev(hdev);
- 	if (err < 0) {
- 		dev_err(&serdev->dev, "Can't register HCI device\n");
--		hci_free_dev(hdev);
- 		goto err_regulator_disable;
- 	}
- 
-@@ -1072,6 +1069,11 @@ static int btmtkuart_probe(struct serdev_device *serdev)
- err_regulator_disable:
- 	if (btmtkuart_is_standalone(bdev))
- 		regulator_disable(bdev->vcc);
-+err_clk_disable_unprepare:
-+	if (btmtkuart_is_standalone(bdev))
-+		clk_disable_unprepare(bdev->osc);
-+err_hci_free_dev:
-+	hci_free_dev(hdev);
- 
- 	return err;
- }
+ 	port {
+ 		dpi0_out: endpoint {
 -- 
 2.25.1
 
