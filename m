@@ -2,46 +2,46 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 371DF1F23A5
-	for <lists+linux-mediatek@lfdr.de>; Tue,  9 Jun 2020 01:17:31 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id D6C951F2400
+	for <lists+linux-mediatek@lfdr.de>; Tue,  9 Jun 2020 01:18:55 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=pFrPazIGVdoIrNlSiacVyzmkNU2n4J0U6/aAtfqxDfk=; b=AZXhAkDdNmFIxD
-	SQ7oh6pcAyneOTpoGfT/CQY2XtK3nfExgNHzjNgqdx3BCiboY+iR7keqXjkbHL2nHaGMI2HByzn5D
-	0oIlzEFQttkTp+K/hmpf/X4nbAIS/LR8DdY7jhXMPPYUwhQ9txiAmfJjeeSMJtvTERfGLdBekVKXG
-	CdTb/xBSyGhbYi96PSO6sJS89IO9bwwfo6ZpbMC2lk6ayxG5u6zz/xxuCBWmEyXRE9tm2QIsnC75t
-	Ieviqwju/dtrUw0cRSWEc/iHIdej4ucF6MYh+WawK1kWOgQq7f99ERW8MkC7WSNtKI3GBmjjfKtWU
-	Wsk6uVhFWyl83kLXexWA==;
+	List-Owner; bh=+zY7DGxarSfqCqutUM+S7AY1cvx1+cQEdD40L4Ay4QU=; b=NeMkQZl1z1U0cK
+	ApFrIC3yreF348ocjBsqkU52dc0I55zjTUlsn6YVoZioIO6gisjOUQbrg3rjvldBh2kcID815MPqg
+	qLO6k3Hvcfy4apyy9sWd4tr63T2LNdYYber08N4PU3x1/q9F81Q1Glm+T+RQ+IWFydTtT6vRkCnV7
+	QCW6KOaaNI5NfwTo0lmYjoJfq25zdD6Zk6ULJRlORU3VU64VVT2tswmm1RUKwlDPFVTjl36tojPLR
+	LRt5CS6Z34pIdd2X1bs2qMyVkX4Z+fySWC/FUtyRA8MutAQEv7cVk2uiAiJWCNI1npnjYLstEpMPI
+	d9b6MEGUEuN25w6h2z9A==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jiR19-0003zx-3c; Mon, 08 Jun 2020 23:17:23 +0000
+	id 1jiR2W-0005CK-C6; Mon, 08 Jun 2020 23:18:48 +0000
 Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jiQuG-0003DN-Nb; Mon, 08 Jun 2020 23:10:19 +0000
+ id 1jiQuI-0003RE-W7; Mon, 08 Jun 2020 23:10:21 +0000
 Received: from sasha-vm.mshome.net (c-73-47-72-35.hsd1.nh.comcast.net
  [73.47.72.35])
  (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
  (No client certificate requested)
- by mail.kernel.org (Postfix) with ESMTPSA id 243D4208A9;
- Mon,  8 Jun 2020 23:10:15 +0000 (UTC)
+ by mail.kernel.org (Postfix) with ESMTPSA id 71B1D20E65;
+ Mon,  8 Jun 2020 23:10:16 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1591657816;
- bh=5itkUDluYpaS3Zxz7oL2dZm1OCRzVTnguZY9d4Ovqcg=;
+ s=default; t=1591657817;
+ bh=+6kXrgQ4NVOvyd8KUFY2r+iOtJb5sRwbTKszCOGlshU=;
  h=From:To:Cc:Subject:Date:In-Reply-To:References:From;
- b=CZ7plkCrPkDrRgea6NdYDVaUTu/XP1wglSFD+VvXneIOnMABxu4hKk3uJOcFLRP8i
- ea9XDisjhl/Tgdf8wAFtlKnTZ5ep3K+wv4z+zr3oAMeF+qd6NEA826f1wJnHqCviEA
- gVRyCgNyI3DjEOsbAZs0IfPFSjkZ6I8hWqGOIpT8=
+ b=jwBSWwlHHwT1eOdvbDAzMiAS1zda14eYEEjhXFzOUnZIORcjTIHzvJz89PaBHtkab
+ hrF3YbjaR7v8uk6duvBlLrHAO/3tP2M3hPDKudu8v8EMFAUwXoNE88qQvGNAxRW2Zt
+ PUr69nkY0Sm3GgfOOF04c/QiN8Q497lYLP7iiU5Y=
 From: Sasha Levin <sashal@kernel.org>
 To: linux-kernel@vger.kernel.org,
 	stable@vger.kernel.org
-Subject: [PATCH AUTOSEL 5.7 190/274] mt76: mt7663: fix
- mt7615_mac_cca_stats_reset routine
-Date: Mon,  8 Jun 2020 19:04:43 -0400
-Message-Id: <20200608230607.3361041-190-sashal@kernel.org>
+Subject: [PATCH AUTOSEL 5.7 191/274] mt76: mt7615: do not always reset the dfs
+ state setting the channel
+Date: Mon,  8 Jun 2020 19:04:44 -0400
+Message-Id: <20200608230607.3361041-191-sashal@kernel.org>
 X-Mailer: git-send-email 2.25.1
 In-Reply-To: <20200608230607.3361041-1-sashal@kernel.org>
 References: <20200608230607.3361041-1-sashal@kernel.org>
@@ -49,9 +49,8 @@ MIME-Version: 1.0
 X-stable: review
 X-Patchwork-Hint: Ignore
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200608_161016_898813_7BA74E6F 
-X-CRM114-Status: UNSURE (   9.84  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20200608_161019_277635_F2D97EDA 
+X-CRM114-Status: GOOD (  11.89  )
 X-Spam-Score: -5.2 (-----)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  Content analysis details:   (-5.2 points)
@@ -91,52 +90,60 @@ Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.o
 
 From: Lorenzo Bianconi <lorenzo@kernel.org>
 
-[ Upstream commit 886a862d3677ac0d3b57d19ffcf5b2d48b9c5267 ]
+[ Upstream commit fdb786cce0ef3615dcbb30d8baf06a1d4cb7a344 ]
 
-Fix PHYMUX_5 register definition for mt7663 in
-mt7615_mac_cca_stats_reset routine
+mac80211/hostapd runs mt7615_set_channel with the same channel
+parameters sending multiple rdd commands overwriting the previous ones.
+This behaviour is causing tpt issues on dfs channels.
+Fix the issue checking new channel freq/width with the running one.
 
-Fixes: f40ac0f3d3c0 ("mt76: mt7615: introduce mt7663e support")
+Fixes: 5dabdf71e94e ("mt76: mt7615: add multiple wiphy support to the dfs support code")
 Signed-off-by: Lorenzo Bianconi <lorenzo@kernel.org>
 Signed-off-by: Felix Fietkau <nbd@nbd.name>
 Signed-off-by: Sasha Levin <sashal@kernel.org>
 ---
- drivers/net/wireless/mediatek/mt76/mt7615/mac.c  | 8 +++++++-
- drivers/net/wireless/mediatek/mt76/mt7615/regs.h | 1 +
- 2 files changed, 8 insertions(+), 1 deletion(-)
+ .../net/wireless/mediatek/mt76/mt7615/main.c  | 21 ++++++++++++++++++-
+ 1 file changed, 20 insertions(+), 1 deletion(-)
 
-diff --git a/drivers/net/wireless/mediatek/mt76/mt7615/mac.c b/drivers/net/wireless/mediatek/mt76/mt7615/mac.c
-index a27a6d164009..656231786d55 100644
---- a/drivers/net/wireless/mediatek/mt76/mt7615/mac.c
-+++ b/drivers/net/wireless/mediatek/mt76/mt7615/mac.c
-@@ -1574,8 +1574,14 @@ void mt7615_mac_cca_stats_reset(struct mt7615_phy *phy)
+diff --git a/drivers/net/wireless/mediatek/mt76/mt7615/main.c b/drivers/net/wireless/mediatek/mt76/mt7615/main.c
+index 6586176c29af..f92ac9a916fc 100644
+--- a/drivers/net/wireless/mediatek/mt76/mt7615/main.c
++++ b/drivers/net/wireless/mediatek/mt76/mt7615/main.c
+@@ -218,6 +218,25 @@ static void mt7615_remove_interface(struct ieee80211_hw *hw,
+ 	spin_unlock_bh(&dev->sta_poll_lock);
+ }
+ 
++static void mt7615_init_dfs_state(struct mt7615_phy *phy)
++{
++	struct mt76_phy *mphy = phy->mt76;
++	struct ieee80211_hw *hw = mphy->hw;
++	struct cfg80211_chan_def *chandef = &hw->conf.chandef;
++
++	if (hw->conf.flags & IEEE80211_CONF_OFFCHANNEL)
++		return;
++
++	if (!(chandef->chan->flags & IEEE80211_CHAN_RADAR))
++		return;
++
++	if (mphy->chandef.chan->center_freq == chandef->chan->center_freq &&
++	    mphy->chandef.width == chandef->width)
++		return;
++
++	phy->dfs_state = -1;
++}
++
+ static int mt7615_set_channel(struct mt7615_phy *phy)
  {
  	struct mt7615_dev *dev = phy->dev;
- 	bool ext_phy = phy != &dev->phy;
--	u32 reg = MT_WF_PHY_R0_PHYMUX_5(ext_phy);
-+	u32 reg;
+@@ -229,7 +248,7 @@ static int mt7615_set_channel(struct mt7615_phy *phy)
+ 	mutex_lock(&dev->mt76.mutex);
+ 	set_bit(MT76_RESET, &phy->mt76->state);
  
-+	if (is_mt7663(&dev->mt76))
-+		reg = MT7663_WF_PHY_R0_PHYMUX_5;
-+	else
-+		reg = MT_WF_PHY_R0_PHYMUX_5(ext_phy);
-+
-+	/* reset PD and MDRDY counters */
- 	mt76_clear(dev, reg, GENMASK(22, 20));
- 	mt76_set(dev, reg, BIT(22) | BIT(20));
- }
-diff --git a/drivers/net/wireless/mediatek/mt76/mt7615/regs.h b/drivers/net/wireless/mediatek/mt76/mt7615/regs.h
-index 1e0d95b917e1..f7c2a633841c 100644
---- a/drivers/net/wireless/mediatek/mt76/mt7615/regs.h
-+++ b/drivers/net/wireless/mediatek/mt76/mt7615/regs.h
-@@ -151,6 +151,7 @@ enum mt7615_reg_base {
- #define MT_WF_PHY_WF2_RFCTRL0_LPBCN_EN	BIT(9)
+-	phy->dfs_state = -1;
++	mt7615_init_dfs_state(phy);
+ 	mt76_set_channel(phy->mt76);
  
- #define MT_WF_PHY_R0_PHYMUX_5(_phy)	MT_WF_PHY(0x0614 + ((_phy) << 9))
-+#define MT7663_WF_PHY_R0_PHYMUX_5	MT_WF_PHY(0x0414)
- 
- #define MT_WF_PHY_R0_PHYCTRL_STS0(_phy)	MT_WF_PHY(0x020c + ((_phy) << 9))
- #define MT_WF_PHYCTRL_STAT_PD_OFDM	GENMASK(31, 16)
+ 	ret = mt7615_mcu_set_chan_info(phy, MCU_EXT_CMD_CHANNEL_SWITCH);
 -- 
 2.25.1
 
