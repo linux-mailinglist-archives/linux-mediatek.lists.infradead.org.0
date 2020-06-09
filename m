@@ -2,63 +2,64 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 0A29A1F4274
-	for <lists+linux-mediatek@lfdr.de>; Tue,  9 Jun 2020 19:36:19 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 02F4F1F427C
+	for <lists+linux-mediatek@lfdr.de>; Tue,  9 Jun 2020 19:36:52 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
 	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=/PGBmYmz8r13IsyRhqYRGmiYZCeJCJgKxU3M4F1KjXA=; b=ZJRP7vuKO3mrk7
-	wS0QyK68y/uIF/Zl3mFqhn9sg3Tc7+NY9iFMSKq1QxFkuSHlG+ySAT3Qqktv9PgbGCBph7RCnSq/k
-	tFZkJ7sQWdzg17V8QkTQU9ASYupnaBFffPidqyPJjGw6OzRPJNMDk/mfiUmGJe+wP/LBghG6wtwVv
-	XU3dSEtQ+R4U7Bh7C1LHMvdXUN1JCer0CQuX483yylYMIteiMXBtXBS6qrz5Y/yDZPVATB+vBWb/i
-	hKIlUGHzkK44Bqn+91pFvYR5qXa+ZhJyO9gVVj1ZVEzk9QueU3GrMwQ6HNp7ZmiGtHEtF3aIKJZOx
-	0SCrpVABvHqh/VEiLlRQ==;
+	List-Owner; bh=+of5P3TlouvcYUY+ZEMEkc5HTWvsvWx7dT2It5gwEVY=; b=dPkFO7kPPCVGEO
+	N/DpetAcmN1+AnU+s7IyYqCoukAa5ZAwJxI2oubzGF/4ZvpNB6UTaio2lbkKIJk64S70R7AT8SD9p
+	ZlQMUfTFJ0om09+RJgTWY4T/N8Jq4I62WIrAhw347YrcGqjDNIEfg3NnRnqFDRTweBpWJGvXNQCQM
+	HRSiw5IJJjcBxUi0QKlWejB8lWazQZ2aB3LHLwaHQZ8H9foE3AmmZFrIdYBkCZr2N26iT7BeHU1M2
+	3SNeMsU6JxLMLK8BVMKPaesiO1DUpdalnXvJHttJ8k4crGA2p+KRW6+GlEc2VNYF0jDTRs/5Husul
+	e6od8DrunM7jeChWcEVw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jiiAU-0007WP-Bz; Tue, 09 Jun 2020 17:36:10 +0000
+	id 1jiiB1-00081o-ST; Tue, 09 Jun 2020 17:36:43 +0000
 Received: from mail-io1-f66.google.com ([209.85.166.66])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jiiAH-0007Mc-I1; Tue, 09 Jun 2020 17:35:59 +0000
-Received: by mail-io1-f66.google.com with SMTP id q8so23694854iow.7;
- Tue, 09 Jun 2020 10:35:57 -0700 (PDT)
+ id 1jiiAx-0007zD-Dc; Tue, 09 Jun 2020 17:36:41 +0000
+Received: by mail-io1-f66.google.com with SMTP id p20so23646912iop.11;
+ Tue, 09 Jun 2020 10:36:39 -0700 (PDT)
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:date:from:to:cc:subject:message-id:references
  :mime-version:content-disposition:in-reply-to;
- bh=UemfyzL4CDaIbSMWhLIN31hIuc2Yr7jCv1si14uauIA=;
- b=UaBKcCRjWzpd+BcDyyV9ADuQyAyaGxJO7uGhaiJjCK7I3baYFTMU5G1CcOnxxkP2DM
- cki8t2yIux4AGzICzhZU3ZSEUPbfSx2Zd/E25cDrI9oB2dGHql/GSzWWYeZA83wPKcOb
- +ZBC9LNrZmQasE/8mUxexqpUkj/FOw/zZ3H77frEu3efHdcMNlVnSSQdZCIUEWZKtLnh
- jElKsZXPOOA03uVrFpdkX/TjsUGqAoxa79GeddIt6RP0Y/YVdehpr1UqXmHMl8bKsACx
- vfcT2bSk2w3qGDqCXI+9uYJ57Ux0ry6eB+Y1Gy7d3TEVWnjYQVmiYANagLQrwueTJo9l
- zGcw==
-X-Gm-Message-State: AOAM5336ijOSNjv+K8OuD7Z6+4cn6I6pVUuHGvRpDfUG7RlA0vvcgXas
- 44H+MIunjUQeQyTbI177Vg==
-X-Google-Smtp-Source: ABdhPJyHA9bqkWZOLvk/hYOQV0AQki68RB2uY7Ob2Db2LSH4HMdre46KjSCiZoV+zVZ26b+BnZ/s9A==
-X-Received: by 2002:a6b:1745:: with SMTP id 66mr12153914iox.151.1591724156628; 
- Tue, 09 Jun 2020 10:35:56 -0700 (PDT)
+ bh=7dNnoZ1rdnzksidSAoSZhnIgLkiZGWEcPmE8xec0a/I=;
+ b=BTPLnPuEApLztP20MDZhrfKcC8lmiv3x56MzD4CQG/L0nBoZxWGMmNt6EFqOXcuB84
+ Wnw2HOfWJGBT1RYRov8tMVHEn8LUkjCtE/aZuX5Buh4CovWNUtMwHzTeHpQB4MMOx3AE
+ dcGn/YJuXuLPHBYNWU5nnw4ABto799jiQ9jGvD8lsoj9dgd+UUHfLegL5zhmdQ2GVdcU
+ o+arnyCAWAkiR5P1uj9jbRvsbtEEV2p4oJhNUCQFoFA9CGDooNnOHaFeEpOBPWsGhMCx
+ YzG6dRY+fF1QnhnGVtJ0e+k3/ed5tEsoPjcU4nj9KsBcNGgEAB30pjcro56D2L8LoUlL
+ kd3g==
+X-Gm-Message-State: AOAM533tWqXfN69kPu8A3SgjxUJVIscIE51ecZKeCym2ACNHcVdRMAUi
+ Kuy5jDj+nzm6z7WtEvC63w==
+X-Google-Smtp-Source: ABdhPJx/yiiBlNgsHUuSZP9/9xQBsqT57J3LHhF0CAayD6QmiM8GHdAZbeyCcaqsGh0uWxqQeNNQvg==
+X-Received: by 2002:a02:a78e:: with SMTP id e14mr28221151jaj.9.1591724198380; 
+ Tue, 09 Jun 2020 10:36:38 -0700 (PDT)
 Received: from xps15 ([64.188.179.251])
- by smtp.gmail.com with ESMTPSA id z4sm7599577iot.24.2020.06.09.10.35.55
+ by smtp.gmail.com with ESMTPSA id y5sm8056179iov.3.2020.06.09.10.36.37
  (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Tue, 09 Jun 2020 10:35:56 -0700 (PDT)
-Received: (nullmailer pid 1125416 invoked by uid 1000);
- Tue, 09 Jun 2020 17:35:54 -0000
-Date: Tue, 9 Jun 2020 11:35:54 -0600
+ Tue, 09 Jun 2020 10:36:37 -0700 (PDT)
+Received: (nullmailer pid 1126603 invoked by uid 1000);
+ Tue, 09 Jun 2020 17:36:36 -0000
+Date: Tue, 9 Jun 2020 11:36:36 -0600
 From: Rob Herring <robh@kernel.org>
 To: Roger Lu <roger.lu@mediatek.com>
 Subject: Re: [PATCH v9 1/4] dt-bindings: power: avs: add mtk svs dt-bindings
-Message-ID: <20200609173554.GA1119852@bogus>
+Message-ID: <20200609173636.GA1125574@bogus>
 References: <20200609104534.29314-1-roger.lu@mediatek.com>
  <20200609104534.29314-2-roger.lu@mediatek.com>
 MIME-Version: 1.0
 Content-Disposition: inline
 In-Reply-To: <20200609104534.29314-2-roger.lu@mediatek.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200609_103557_589898_B0B9E698 
-X-CRM114-Status: GOOD (  15.75  )
+X-CRM114-CacheID: sfid-20200609_103639_466028_C12E123D 
+X-CRM114-Status: UNSURE (   9.95  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.7 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  Content analysis details:   (0.7 points)
@@ -66,6 +67,8 @@ X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
  no trust [209.85.166.66 listed in list.dnswl.org]
+ -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
+ [209.85.166.66 listed in wl.mailspike.net]
  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
  provider [robherring2[at]gmail.com]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
@@ -74,8 +77,6 @@ X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  in digit [robherring2[at]gmail.com]
  0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
  mail domains are different
- -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
- [209.85.166.66 listed in wl.mailspike.net]
  0.2 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
  EnvelopeFrom freemail headers are different
 X-BeenThere: linux-mediatek@lists.infradead.org
@@ -90,12 +91,12 @@ List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
 Cc: Mark Rutland <mark.rutland@arm.com>, Nicolas Boichat <drinkcat@google.com>,
- Angus Lin <Angus.Lin@mediatek.com>, Kevin Hilman <khilman@kernel.org>,
- Stephen Boyd <sboyd@kernel.org>, linux-pm@vger.kernel.org,
- linux-kernel@vger.kernel.org, HenryC Chen <HenryC.Chen@mediatek.com>,
+ Angus Lin <Angus.Lin@mediatek.com>, linux-pm@vger.kernel.org,
+ Stephen Boyd <sboyd@kernel.org>, Kevin Hilman <khilman@kernel.org>,
+ linux-kernel@vger.kernel.org, Xiaoqing Liu <Xiaoqing.Liu@mediatek.com>,
  YT Lee <yt.lee@mediatek.com>, Fan Chen <fan.chen@mediatek.com>,
- devicetree@vger.kernel.org, linux-mediatek@lists.infradead.org,
- Xiaoqing Liu <Xiaoqing.Liu@mediatek.com>,
+ devicetree@vger.kernel.org, Rob Herring <robh+dt@kernel.org>,
+ linux-mediatek@lists.infradead.org, HenryC Chen <HenryC.Chen@mediatek.com>,
  Charles Yang <Charles.Yang@mediatek.com>,
  Matthias Brugger <matthias.bgg@gmail.com>, Nishanth Menon <nm@ti.com>,
  linux-arm-kernel@lists.infradead.org
@@ -104,7 +105,7 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Tue, Jun 09, 2020 at 06:45:31PM +0800, Roger Lu wrote:
+On Tue, 09 Jun 2020 18:45:31 +0800, Roger Lu wrote:
 > Document the binding for enabling mtk svs on MediaTek SoC.
 > 
 > Signed-off-by: Roger Lu <roger.lu@mediatek.com>
@@ -113,73 +114,29 @@ On Tue, Jun 09, 2020 at 06:45:31PM +0800, Roger Lu wrote:
 >  1 file changed, 141 insertions(+)
 >  create mode 100644 Documentation/devicetree/bindings/power/avs/mtk_svs.yaml
 > 
-> diff --git a/Documentation/devicetree/bindings/power/avs/mtk_svs.yaml b/Documentation/devicetree/bindings/power/avs/mtk_svs.yaml
-> new file mode 100644
-> index 000000000000..f16f4eb56ee3
-> --- /dev/null
-> +++ b/Documentation/devicetree/bindings/power/avs/mtk_svs.yaml
-> @@ -0,0 +1,141 @@
-> +# SPDX-License-Identifier: (GPL-2.0-only OR BSD-2-Clause)
-> +%YAML 1.2
-> +---
-> +$id: http://devicetree.org/schemas/power/avs/mtk_svs.yaml#
-> +$schema: http://devicetree.org/meta-schemas/core.yaml#
-> +
-> +title: Introduce SVS engine
-> +
-> +maintainers:
-> +  - Kevin Hilman <khilman@kernel.org>
-> +  - Nishanth Menon <nm@ti.com>
-> +
-> +description: |+
-> +  The Smart Voltage Scaling(SVS) engine is a piece of hardware
-> +  which has several controllers(banks) for calculating suitable
-> +  voltage to different power domains(CPU/GPU/CCI) according to
-> +  chip process corner, temperatures and other factors. Then DVFS
-> +  driver could apply SVS bank voltage to PMIC/Buck.
-> +
-> +properties:
-> +  compatible:
-> +    const: mediatek,mt8183-svs
-> +
-> +  reg:
-> +    description: Address range of the MTK SVS controller.
-> +    maxItems: 1
-> +
-> +  interrupts:
-> +    description: IRQ for the MTK SVS controller.
-> +    maxItems: 1
-> +
-> +  clocks:
-> +    description: Main clock for svs controller to work.
-> +
-> +  clock-names:
-> +    const: main
-> +
-> +  nvmem-cells:
-> +    maxItems: 2
-> +    description:
-> +      Phandle to the calibration data provided by a nvmem device.
-> +
-> +  nvmem-cell-names:
-> +    items:
-> +      - const: svs-calibration-data
-> +      - const: calibration-data
-> +
-> +patternProperties:
-> +  "^svs-(cpu-little|cpu-big|cci|gpu)$":
-> +    type: object
-> +    description:
-> +      Each subnode represents one SVS bank.
-> +        - svs-cpu-little (SVS bank device node of little CPU)
-> +        - svs-cpu-big (SVS bank device node of big CPU)
-> +        - svs-cci (SVS bank device node of CCI)
-> +        - svs-gpu (SVS bank device node of GPU)
 
-As I've said before, I don't think these child nodes make sense. All 
-this data should already be available elsewhere in the DT.
 
-Rob
+My bot found errors running 'make dt_binding_check' on your patch:
+
+Documentation/devicetree/bindings/power/avs/mtk_svs.example.dts:22:18: fatal error: dt-bindings/power/mt8183-power.h: No such file or directory
+         #include <dt-bindings/power/mt8183-power.h>
+                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+scripts/Makefile.lib:312: recipe for target 'Documentation/devicetree/bindings/power/avs/mtk_svs.example.dt.yaml' failed
+make[1]: *** [Documentation/devicetree/bindings/power/avs/mtk_svs.example.dt.yaml] Error 1
+make[1]: *** Waiting for unfinished jobs....
+Makefile:1300: recipe for target 'dt_binding_check' failed
+make: *** [dt_binding_check] Error 2
+
+See https://patchwork.ozlabs.org/patch/1305800
+
+If you already ran 'make dt_binding_check' and didn't see the above
+error(s), then make sure dt-schema is up to date:
+
+pip3 install git+https://github.com/devicetree-org/dt-schema.git@master --upgrade
+
+Please check and re-submit.
+
 
 _______________________________________________
 Linux-mediatek mailing list
