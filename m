@@ -2,71 +2,68 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 1CB691F422F
-	for <lists+linux-mediatek@lfdr.de>; Tue,  9 Jun 2020 19:27:28 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 3D6CB1F425C
+	for <lists+linux-mediatek@lfdr.de>; Tue,  9 Jun 2020 19:32:26 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
 	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=9V4SfxQhjMKxdDHTJzl76J6fFbI6zImg2l4banTqTfE=; b=M6c34Hq89FmAHY
-	Nn/O8/Kxetc5CpK3Y8QfsBzf8iGCjcaNOuVwRbIq4I8Hi8anDBMHo67WAxkZ7yfK2tu+JBcUj99t1
-	QBNBGqvc067Rar4wAXu4I4vtOQRVsJ13z9tiBCvM0O12w8LoXxT3sghWVZrfsNfDRuG0NhejcvnOd
-	uNQkMvFMDjT3rX/+p8wdWE02Sy5gkO0TXqihmrJ17cadbbKvyeX5eqyImlzffbjEVJ/6Ze7M78VGx
-	aqpQvOwBjpaVksJf4AhlED4DW00svrL6Q2Y0hnMY26VEJhLLTD23JBRJIwPTqS38rWCEN+8ci9WR6
-	lvfRxJjbWmGF4fJLk8BA==;
+	List-Owner; bh=96jr7KrU1I/S1Fd7usqQwUTx28HutYFK7tStJTGhEtI=; b=EB3hXkZxHv5/5V
+	QcFrONlRbkezIfUltNqi+X8JgZcsnpwhe1bqlCSwwajC0Jlo66sFg0qQIeionXUOcxIWJR2L2B8+c
+	f0pTS8a768PgriHb2HQefL9pk6okD87jFHUN3UROkNJr5CpFfXgPP6KG+c3PXo8TwVAIo03hPRfM1
+	iMsbL5Z5Q2ZI1BE2TE4FgZqS7gImncj2AaQ+WoFyaZzr0M8ovPi0GmwVxj3HIuJJagC39w5CGCw4v
+	jxGPXV3PhDSklW+tXYGSgPLiWXYTGwxna1i8gxmjBLyPjoV+KaYfl5YRu89Qrlv/ZwalpTm3Z/RB9
+	GwTfSj2Ho27546XBVqXw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jii1r-0000Tc-S9; Tue, 09 Jun 2020 17:27:15 +0000
-Received: from mail-io1-f67.google.com ([209.85.166.67])
+	id 1jii6j-0004JW-Bw; Tue, 09 Jun 2020 17:32:17 +0000
+Received: from mail-il1-f181.google.com ([209.85.166.181])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jii1p-0000TI-6H; Tue, 09 Jun 2020 17:27:14 +0000
-Received: by mail-io1-f67.google.com with SMTP id u13so17473052iol.10;
- Tue, 09 Jun 2020 10:27:12 -0700 (PDT)
+ id 1jii6Y-0004BU-GP; Tue, 09 Jun 2020 17:32:07 +0000
+Received: by mail-il1-f181.google.com with SMTP id i1so19938774ils.11;
+ Tue, 09 Jun 2020 10:32:06 -0700 (PDT)
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:date:from:to:cc:subject:message-id:references
  :mime-version:content-disposition:in-reply-to;
- bh=YzMT5lPVyIWtT5NNG9r0IznpD+jop0KaSD17rOh2S9c=;
- b=BELAyC3JnxmVuvjZjFFXq+2lkzGZcysmAKnB2rmr5aizZpbo9/ltkPG1HPmPsGmExZ
- ANJ39b3UWP5DeRPwczWA1Ii38AjPDoRgLv2qywx+Bvr8RnM2vA6TWXmMpcuFZhi5PPNR
- lemm2JPSeM+2V7wRMm7scH3tKJPS3QzYMHzBzX0H9Ng6r9SK2aw6qlzicYfJNQrgMW4T
- 6dsIblV+efiOzP0lXw7FYheXez6c/xyMYmQJcdalitYs0cJGm4neDs41SOex0dSCJKe4
- VugKSJpyUIXAC78zO+eh0QEbbpVcwr2WYynCMqsKIUQEk7GlwACYTaoKNdmV4KW5VcNh
- WN5g==
-X-Gm-Message-State: AOAM533z75xEMZF9LP/pkWakxuSakaDbc8SwtU9mkBWP1yCmB4VGoIG2
- ZLEiHpRb8mjakhYCd7TBBQ==
-X-Google-Smtp-Source: ABdhPJxCWEnQhYmYJHctyaQwbFMOsDA2DwTPjTRs2cYEIoIfm3wINvGJ7r8/9C4ky1Jmlj2/LagJOA==
-X-Received: by 2002:a6b:dc12:: with SMTP id s18mr27314270ioc.56.1591723632320; 
- Tue, 09 Jun 2020 10:27:12 -0700 (PDT)
+ bh=IGnSfBXB+3nfSv3N6F0fbjwPESQfDqrwP19nspwqC6U=;
+ b=lqtlHrsKaB6ntFyWutP0aDQknwTNjN0p2xnrx5YbagDVSmSZEjcCvxJihGsSuBDW5L
+ IGAsZhKtNxLwpFci+iKBhxZLwsvr9eu+l0EROI6AyIZVMpS8gxQUHBzlHJgzBPx7g8FA
+ y+Luqlu4qscRS8/DqEgiCdeDeTqv9Zvi2FIMKSw/WXL/oJVCU6m8GwXqu1ZDxX1mD8iS
+ ZKyGUDjsn0U+IXpAlos7DOzGMeLvDb0wHr8b+fZ5xNXhkbwLyqZZjLrivVWUjDF/hGaL
+ +OgZxPi1wx/u0jLZvh6INqF2snM+sAWsrm8WcmfvDfYCSOUfqmfpZR81p5q9/5mJtpVr
+ tHSQ==
+X-Gm-Message-State: AOAM531dRWe7TKJ5LuoGbhhw+wufxzhIX7cTXeqOjS+nzUYl0/f+VhDA
+ GQRXe39HHnjIP/ajUywn3w==
+X-Google-Smtp-Source: ABdhPJyVUj4y5yOWIEZhHu2FOPrV9CJO6MI8LLU5aR4WVyN9icWLtu67T0oniravBER69+CId1YnxA==
+X-Received: by 2002:a92:89cf:: with SMTP id w76mr20191903ilk.10.1591723925603; 
+ Tue, 09 Jun 2020 10:32:05 -0700 (PDT)
 Received: from xps15 ([64.188.179.251])
- by smtp.gmail.com with ESMTPSA id i10sm9595983ilp.28.2020.06.09.10.27.11
+ by smtp.gmail.com with ESMTPSA id l12sm640246ilj.8.2020.06.09.10.32.04
  (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Tue, 09 Jun 2020 10:27:11 -0700 (PDT)
-Received: (nullmailer pid 1111820 invoked by uid 1000);
- Tue, 09 Jun 2020 17:27:10 -0000
-Date: Tue, 9 Jun 2020 11:27:10 -0600
+ Tue, 09 Jun 2020 10:32:04 -0700 (PDT)
+Received: (nullmailer pid 1119483 invoked by uid 1000);
+ Tue, 09 Jun 2020 17:32:04 -0000
+Date: Tue, 9 Jun 2020 11:32:04 -0600
 From: Rob Herring <robh@kernel.org>
 To: Neal Liu <neal.liu@mediatek.com>
-Subject: Re: [PATCH 1/2] dt-bindings: devapc: add bindings for devapc-mt6873
-Message-ID: <20200609172710.GA1107294@bogus>
+Subject: Re: Add MediaTek MT6873 devapc driver
+Message-ID: <20200609173204.GB1107294@bogus>
 References: <1591698261-22639-1-git-send-email-neal.liu@mediatek.com>
- <1591698261-22639-2-git-send-email-neal.liu@mediatek.com>
 MIME-Version: 1.0
 Content-Disposition: inline
-In-Reply-To: <1591698261-22639-2-git-send-email-neal.liu@mediatek.com>
+In-Reply-To: <1591698261-22639-1-git-send-email-neal.liu@mediatek.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200609_102713_235821_8A06A873 
-X-CRM114-Status: UNSURE (   9.67  )
+X-CRM114-CacheID: sfid-20200609_103206_544165_6F92E4B3 
+X-CRM114-Status: UNSURE (   7.79  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: 0.7 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  Content analysis details:   (0.7 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [209.85.166.67 listed in list.dnswl.org]
  0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
  provider [robherring2[at]gmail.com]
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
@@ -75,8 +72,10 @@ X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  in digit [robherring2[at]gmail.com]
  0.2 HEADER_FROM_DIFFERENT_DOMAINS From and EnvelopeFrom 2nd level
  mail domains are different
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [209.85.166.181 listed in list.dnswl.org]
  -0.0 RCVD_IN_MSPIKE_H2      RBL: Average reputation (+2)
- [209.85.166.67 listed in wl.mailspike.net]
+ [209.85.166.181 listed in wl.mailspike.net]
  0.2 FREEMAIL_FORGED_FROMDOMAIN 2nd level domains in From and
  EnvelopeFrom freemail headers are different
 X-BeenThere: linux-mediatek@lists.infradead.org
@@ -91,49 +90,33 @@ List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
 Cc: devicetree@vger.kernel.org, wsd_upstream@mediatek.com,
- linux-kernel@vger.kernel.org, Rob Herring <robh+dt@kernel.org>,
- linux-mediatek@lists.infradead.org, Matthias Brugger <matthias.bgg@gmail.com>,
+ linux-kernel@vger.kernel.org, linux-mediatek@lists.infradead.org,
+ Matthias Brugger <matthias.bgg@gmail.com>,
  linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Tue, 09 Jun 2020 18:24:20 +0800, Neal Liu wrote:
-> Add bindings for MT6873 devapc.
+On Tue, Jun 09, 2020 at 06:24:19PM +0800, Neal Liu wrote:
+> These patch series introduce a MediaTek MT6873 devapc driver.
 > 
-> Signed-off-by: Neal Liu <neal.liu@mediatek.com>
-> ---
->  .../soc/mediatek/devapc/devapc-mt6873.yaml         |   61 ++++++++++++++++++++
->  1 file changed, 61 insertions(+)
->  create mode 100644 Documentation/devicetree/bindings/soc/mediatek/devapc/devapc-mt6873.yaml
+> MT6873 bus frabric provides TrustZone security support and data
+> protection to prevent slaves from being accessed by unexpected
+> masters.
+> The security violations are logged and sent to the processor for
+> further analysis or countermeasures.
 > 
+> Any occurrence of security violation would raise an interrupt, and
+> it will be handled by devapc-mt6873 driver. The violation
+> information is printed in order to find the murderer.
 
+There's also a proposed driver with similar functionality[1]. Come up 
+with a common solution.
 
-My bot found errors running 'make dt_binding_check' on your patch:
+Rob
 
-/builds/robherring/linux-dt-review/Documentation/devicetree/bindings/soc/mediatek/devapc/devapc-mt6873.yaml: Additional properties are not allowed ('maintainer' was unexpected)
-/builds/robherring/linux-dt-review/Documentation/devicetree/bindings/soc/mediatek/devapc/devapc-mt6873.yaml: 'maintainers' is a required property
-/builds/robherring/linux-dt-review/Documentation/devicetree/bindings/soc/mediatek/devapc/devapc-mt6873.yaml: Additional properties are not allowed ('maintainer' was unexpected)
-Documentation/devicetree/bindings/Makefile:12: recipe for target 'Documentation/devicetree/bindings/soc/mediatek/devapc/devapc-mt6873.example.dts' failed
-make[1]: *** [Documentation/devicetree/bindings/soc/mediatek/devapc/devapc-mt6873.example.dts] Error 1
-make[1]: *** Waiting for unfinished jobs....
-/builds/robherring/linux-dt-review/Documentation/devicetree/bindings/soc/mediatek/devapc/devapc-mt6873.yaml: ignoring, error in schema: 
-warning: no schema found in file: ./Documentation/devicetree/bindings/soc/mediatek/devapc/devapc-mt6873.yaml
-/builds/robherring/linux-dt-review/Documentation/devicetree/bindings/soc/mediatek/devapc/devapc-mt6873.yaml: ignoring, error in schema: 
-warning: no schema found in file: ./Documentation/devicetree/bindings/soc/mediatek/devapc/devapc-mt6873.yaml
-Makefile:1300: recipe for target 'dt_binding_check' failed
-make: *** [dt_binding_check] Error 2
-
-See https://patchwork.ozlabs.org/patch/1305778
-
-If you already ran 'make dt_binding_check' and didn't see the above
-error(s), then make sure dt-schema is up to date:
-
-pip3 install git+https://github.com/devicetree-org/dt-schema.git@master --upgrade
-
-Please check and re-submit.
-
+[1] https://lore.kernel.org/linux-arm-kernel/20200128153806.7780-1-benjamin.gaignard@st.com/
 
 _______________________________________________
 Linux-mediatek mailing list
