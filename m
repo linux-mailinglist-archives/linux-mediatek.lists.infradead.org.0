@@ -2,71 +2,71 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 1DC541F69DF
-	for <lists+linux-mediatek@lfdr.de>; Thu, 11 Jun 2020 16:26:03 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 87BB91F69E8
+	for <lists+linux-mediatek@lfdr.de>; Thu, 11 Jun 2020 16:27:41 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
 	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=S3wCTcsZ24pZcyVWeWMdH9ZLySmX3X+97770Le464QY=; b=mWgpVLI3FK1v0v
-	4PuaUkv4oURZ8M65LPPFbehhHk95SKaZACcGDA50eKFZn1OZaJ8t7qGLyKRJxaWwmlZMXlXPUWtio
-	TA1jv5qqncTTV+lONoXcdpHfsk0kMM/RvUxfDzZbCaFn8NXXTuF1A3cFMuFpDkdpQaikW8mggJygY
-	o4BLk18ZxdIBt+SQrPYMRl0SVmo4SXkGFS0TUP9wjTSbhXCREuv1w85/pAAsiUrCNQgbBxFQBod/h
-	h73zqAKuUKMLNeNb9+SMTcf6XIB8giWD/xvdFH8dwku/rCuhwvJGBL1RVpqNFhme/NvUJyKyGZizB
-	KboRJtD9je/53iRsoeOw==;
+	List-Owner; bh=+MgYOjEIkLaiNJbtBxSpQUIjtgSDYtnxP0LYlR39Pv0=; b=rv0vqtPu/Bc0yB
+	q1t+CZUKksYXUmGqKlfbFhV3JDp5PAl7wAg1PgbrmOQgiW1bnLrGGenqmPhGhHMktUp6X9Fa7k2Ax
+	o4eTx06OQBmA1EjO4CyL6NyKk54ySP/KcIFqayHn+/zBoYS3OTVU7ck+eLII8euMLW8KVoQTxgiK3
+	Cx1hcjlEdLQnMMZbYASuvjhy8p+LjhxRu5p5eTMu8xdE016+QmUycPrACuX31zJO8WCEGkl6uBqxC
+	KHojTkwF5OM5UvVyhWUmGAPaRymkxzKMwtEqyrrd7DIWFuOFUm7W3xHWhSgk69D5TP5skYvvT7SL6
+	RyHft+xvrrScGjNTCkZg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jjO9S-0005ZG-0c; Thu, 11 Jun 2020 14:25:54 +0000
+	id 1jjOB4-000698-G2; Thu, 11 Jun 2020 14:27:34 +0000
 Received: from mail-wm1-x342.google.com ([2a00:1450:4864:20::342])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jjO9O-0005YR-Fu
- for linux-mediatek@lists.infradead.org; Thu, 11 Jun 2020 14:25:52 +0000
-Received: by mail-wm1-x342.google.com with SMTP id c71so5145335wmd.5
- for <linux-mediatek@lists.infradead.org>; Thu, 11 Jun 2020 07:25:50 -0700 (PDT)
+ id 1jjOB0-00067d-Ny
+ for linux-mediatek@lists.infradead.org; Thu, 11 Jun 2020 14:27:31 +0000
+Received: by mail-wm1-x342.google.com with SMTP id u26so7080299wmn.1
+ for <linux-mediatek@lists.infradead.org>; Thu, 11 Jun 2020 07:27:30 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=chromium.org; s=google;
  h=date:from:to:cc:subject:message-id:references:mime-version
  :content-disposition:in-reply-to;
- bh=4Wl9FPjQM/OmioKsKPEd8aDegLYWZmFx0p2ql/A57hk=;
- b=l28f8UvDUpME1nIHWAzTfBskecEhX50JaBZhgjJEeNEemNi2o5jq6jzfPAXaUlfCc0
- Tsgd8VVnkXoyX74/1DMaTTXjBT2cVYaVJLtAnFt53WEJI1amkTsQZ6pe40TWM7f+u8tf
- gAFiVIgbp/zn78MwZ11YBE5DZge2oKlRtDmMU=
+ bh=6oNSKO/bfHkroY5E6w01GRrWanZd3YtLMnWhvnjnTpA=;
+ b=j2Zm8WTakmUV2T5y/+dMnLN/v4wOdjhGJvK5fkIK2O+ryCylfrjDzedqOoet78T75o
+ Ldpf9ZChG1Qa8baFLKfR/dMZfYDYfM/dHdjOp3Yx66MPkJNvGhfScPuLyNt4jF9UKrN9
+ lHtbYaVmspsKGB1HNStwdkVEgJW9qsM01+RiQ=
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:date:from:to:cc:subject:message-id:references
  :mime-version:content-disposition:in-reply-to;
- bh=4Wl9FPjQM/OmioKsKPEd8aDegLYWZmFx0p2ql/A57hk=;
- b=WfRCOs4Vc5opH8ylMEDZ+61YCqXLuhR5duilg0JguOvEv/iX2E4uAD08y5shJj2Q3C
- lmF8iwIdpqkT9gou9s0oCtpu0Ig7bmKppePJG4SBsAT1WpDVJOm2FBfMS5pHWMt+17JV
- OGQ72pqqFdjHH6bOhFJjdl1FRLUfI23dGx412qh/D/waNfmWUkmZ68tUWnJjTQP+Wu3H
- rZKuCKzgPWxbMC47Lfy65+TO8kPXLwW+VDT6oL8azllk2qRaBJk0V1QZKwow5ITr5Zx5
- 47aTUFCA70DlIaslpc60f3YxFPqjOY5Cq93etnMnFU0JHEkykkSHuPJMtzwxj08gVHuh
- rAPg==
-X-Gm-Message-State: AOAM533Aje1sina4OI+lXUM/56gkS4hoSYl7lshbVWJKXhNEwwmeIsrY
- PhyRMlfZMZeYAS/PvZWSkqBIzELT53Mh0g==
-X-Google-Smtp-Source: ABdhPJwq/eOqXtITLK+kyOLCk4mNDfVsqXIZV2F3yV+6GfhTdR4AaBB6cuDCKN+FCMKfYALtIfLtaA==
-X-Received: by 2002:a1c:1d16:: with SMTP id d22mr8733030wmd.174.1591885548499; 
- Thu, 11 Jun 2020 07:25:48 -0700 (PDT)
+ bh=6oNSKO/bfHkroY5E6w01GRrWanZd3YtLMnWhvnjnTpA=;
+ b=o7sgqFEWPbXYFStNzmHneuUbgwsfGWBaAUBRPvid0X/MnKAQKrDhleHrD/gbZy5DxZ
+ aL4lRdeVQAfNoVYfBlLiYGodwW7wzvWeEQ0eh1zDlUHbBmTke1tf9rp3w8FqH4rPJVfF
+ c2F8yz8oaTEkQNiEAGiM9z2NyawECicre0g0he1lgdhkEiXu/07Hq4ASkql1O0Dcl+Gy
+ BYvBaxHqfUIzwPoQHLtCYoVn5kkjwdimC5rNDmX+JVTaWiRaV5GgSOcPsGubR/QLi+9M
+ dnxCOPZizH+hCSaPqCT865yjeSP2Y5Mas9E6ufqSoW0mtBTbJ/QPHE9jFSu3x0n8hFF/
+ 5U0g==
+X-Gm-Message-State: AOAM530UjFENKBF4Z5XwUiWHhoyQpBt6kfSkuS1NNq7grHDM9QGYIuTs
+ PP9hvbnegP3ismCs6XpHvQILBA==
+X-Google-Smtp-Source: ABdhPJwcHlML3GVU5KUrSHCPpOa1Dg4OCgzoWnC1F47mU912hVUwl1saC95zTHAPsWEKo1Yl3nrQ2g==
+X-Received: by 2002:a7b:c40e:: with SMTP id k14mr8960381wmi.59.1591885649589; 
+ Thu, 11 Jun 2020 07:27:29 -0700 (PDT)
 Received: from chromium.org (205.215.190.35.bc.googleusercontent.com.
  [35.190.215.205])
- by smtp.gmail.com with ESMTPSA id b14sm4310840wmj.47.2020.06.11.07.25.47
+ by smtp.gmail.com with ESMTPSA id g3sm5808646wrb.46.2020.06.11.07.27.28
  (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Thu, 11 Jun 2020 07:25:47 -0700 (PDT)
-Date: Thu, 11 Jun 2020 14:25:46 +0000
+ Thu, 11 Jun 2020 07:27:29 -0700 (PDT)
+Date: Thu, 11 Jun 2020 14:27:27 +0000
 From: Tomasz Figa <tfiga@chromium.org>
 To: Xia Jiang <xia.jiang@mediatek.com>
-Subject: Re: [PATCH RESEND v9 08/18] media: platform: Cancel the last frame
- handling flow
-Message-ID: <20200611142546.GB158633@chromium.org>
+Subject: Re: [PATCH RESEND v9 09/18] media: platform: Delete zeroing the
+ reserved fields
+Message-ID: <20200611142727.GC158633@chromium.org>
 References: <20200604090553.10861-1-xia.jiang@mediatek.com>
- <20200604090553.10861-10-xia.jiang@mediatek.com>
+ <20200604090553.10861-11-xia.jiang@mediatek.com>
 MIME-Version: 1.0
 Content-Disposition: inline
-In-Reply-To: <20200604090553.10861-10-xia.jiang@mediatek.com>
+In-Reply-To: <20200604090553.10861-11-xia.jiang@mediatek.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200611_072550_548586_0D4AE336 
-X-CRM114-Status: UNSURE (   9.00  )
+X-CRM114-CacheID: sfid-20200611_072730_778437_4B7D38A4 
+X-CRM114-Status: UNSURE (   7.73  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
@@ -113,16 +113,16 @@ Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.o
 
 Hi Xia,
 
-On Thu, Jun 04, 2020 at 05:05:43PM +0800, Xia Jiang wrote:
-> There is no need to queue an empty buffer for signaling a last frame,
-> because all frames are separate from each other in JPEG.
+On Thu, Jun 04, 2020 at 05:05:44PM +0800, Xia Jiang wrote:
+> Delete zeroing the reserved fields because that the core already
+> does it.
 > 
 > Signed-off-by: Xia Jiang <xia.jiang@mediatek.com>
 > ---
 > v9: new patch
 > ---
->  .../media/platform/mtk-jpeg/mtk_jpeg_core.c   | 21 +------------------
->  1 file changed, 1 insertion(+), 20 deletions(-)
+>  drivers/media/platform/mtk-jpeg/mtk_jpeg_core.c | 5 -----
+>  1 file changed, 5 deletions(-)
 > 
 
 Reviewed-by: Tomasz Figa <tfiga@chromium.org>
