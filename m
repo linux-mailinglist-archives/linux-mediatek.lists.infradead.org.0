@@ -2,77 +2,68 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id D47381F64B4
-	for <lists+linux-mediatek@lfdr.de>; Thu, 11 Jun 2020 11:26:29 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 4BAF01F64FF
+	for <lists+linux-mediatek@lfdr.de>; Thu, 11 Jun 2020 11:54:02 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=Iaol3ovo6SOJpYwIE5HQ3hgpcTbhDrtl6S1Ms/AlCCA=; b=jmbKxzvHjKgmOG
-	j7JUaJa1i26bwAvmsC/XU+l/Qi/mWb6T7oRtl2Xweu+DCrzZlzX9SxViWh2F3LpsVnDFBQ894A1Nf
-	/F7Obrp8yZQE+qj+qFK+XmyOJIH88zkrvU2BSCIbRZAuhh0QDw/dgbOYxalousah0ngl1kiszFl/K
-	D2dy3gY50tFPdybZnH8sX0xeueuWlfM+yFlmWqdlWrD/zcFzontnlmDh85CQvgRpIjmjMnGthcRaf
-	J8ftwoWwt/P1eE2m3BJXnnjnhQJ2c32+Hcj+I4nXrkpYd80S0bbu/VhvuzE7C0rWH+6liffjKBTd1
-	PVGKCGI+M9R65fu17dSA==;
+	List-Owner; bh=6utc+8O3gSlbQ5COh0nU5pOSUvqvlcmNVCsZCgL9Kow=; b=ar3fUBwPltTsvb
+	14AedYNPIlfaToYz757bre9KLOJYgmKpVd2Y+yVY3/yLEGOd0ARaYroOrcECoFn+ruGRe+FhZ8LoB
+	IVUdEuMdC3dnyCaUe9XQ+nA5OZjVk9QcUXfiAtT2x7e8zzOeIVLn4TufOoMyzmABC3inkkPgzuhO+
+	qRm+/OfMvRnLefQ2qq8xz4GCQHEz2Nrdny6Z0dhw/E2l8LwVi2bPUk1V4+6n21eOoIvU5gnlbblXc
+	dlzFpNtK7KFJhcSAtd8bxU3neYJJPHF35Pvk+brMWfejvLqBeCVwssLIwvEbrHP5G42K5rUAJ6bzJ
+	NH6nx6y5KS7aSXatSKlw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jjJTV-0001Ru-1e; Thu, 11 Jun 2020 09:26:17 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
+	id 1jjJuC-00012u-Hc; Thu, 11 Jun 2020 09:53:52 +0000
+Received: from mga09.intel.com ([134.134.136.24])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jjJTR-0001QL-2G; Thu, 11 Jun 2020 09:26:14 +0000
-X-UUID: 94624fa3ead5447aa6539b5f782fc22d-20200611
-DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
- s=dk; 
- h=Content-Transfer-Encoding:MIME-Version:Content-Type:References:In-Reply-To:Date:CC:To:From:Subject:Message-ID;
- bh=arPIeFMQZ1+NZeZaAa8iqxicI65qOT2Z+fn97VHkHyg=; 
- b=sd7V/kvTL+bcexp3YLpxV/isLcX1pmju0wE7zCKMn1elCqftHm0oQC5Z2cT7/pIQL7bykmG0vP8ncVbo7WL1l6kipwHEW80r4NExv45dHkGT8aFrXWLqyxajPg+RTsOBxg91H98cVlz57JiRTWqXR5dV3RuxoIIr3lxeqyIUlcc=;
-X-UUID: 94624fa3ead5447aa6539b5f782fc22d-20200611
-Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw02.mediatek.com
- (envelope-from <neal.liu@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 30019533; Thu, 11 Jun 2020 01:25:48 -0800
-Received: from MTKMBS01N1.mediatek.inc (172.21.101.68) by
- MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
- 15.0.1497.2; Thu, 11 Jun 2020 02:26:02 -0700
-Received: from MTKCAS06.mediatek.inc (172.21.101.30) by
- mtkmbs01n1.mediatek.inc (172.21.101.68) with Microsoft SMTP Server (TLS) id
- 15.0.1497.2; Thu, 11 Jun 2020 17:26:01 +0800
-Received: from [172.21.77.33] (172.21.77.33) by MTKCAS06.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1497.2 via Frontend
- Transport; Thu, 11 Jun 2020 17:26:01 +0800
-Message-ID: <1591867563.27949.9.camel@mtkswgap22>
-Subject: Re: [PATCH 2/2] soc: mediatek: devapc: add devapc-mt6873 driver
-From: Neal Liu <neal.liu@mediatek.com>
-To: Chun-Kuang Hu <chunkuang.hu@kernel.org>
-Date: Thu, 11 Jun 2020 17:26:03 +0800
-In-Reply-To: <CAAOTY__g3Fnwsoqx=x_tgdMii5K_L9TmF_9048XbAOSJwb-Cxg@mail.gmail.com>
-References: <1591698261-22639-1-git-send-email-neal.liu@mediatek.com>
- <1591698261-22639-3-git-send-email-neal.liu@mediatek.com>
- <CAAOTY__g3Fnwsoqx=x_tgdMii5K_L9TmF_9048XbAOSJwb-Cxg@mail.gmail.com>
-X-Mailer: Evolution 3.2.3-0ubuntu6 
+ id 1jjJu2-0000vZ-0R; Thu, 11 Jun 2020 09:53:43 +0000
+IronPort-SDR: vYBF0hofZllJusvBxak3IZDA+s0GDz7+AlLW7z4baV/T2cEZSMvB51wXgP0DYW6IjzXx24C6U4
+ hGQgvFw4hYJA==
+X-Amp-Result: SKIPPED(no attachment in message)
+X-Amp-File-Uploaded: False
+Received: from orsmga001.jf.intel.com ([10.7.209.18])
+ by orsmga102.jf.intel.com with ESMTP/TLS/ECDHE-RSA-AES256-GCM-SHA384;
+ 11 Jun 2020 02:53:41 -0700
+IronPort-SDR: dHCsEc4njPF+kHjdOEWILszXP2QQ+HFtapoZFzJIsrkp1puF+YHOe0YdbiUqnorzm8NusR4716
+ 26t59K7DO3yA==
+X-IronPort-AV: E=Sophos;i="5.73,499,1583222400"; d="scan'208";a="350138738"
+Received: from paasikivi.fi.intel.com ([10.237.72.42])
+ by orsmga001-auth.jf.intel.com with ESMTP/TLS/ECDHE-RSA-AES256-GCM-SHA384;
+ 11 Jun 2020 02:53:35 -0700
+Received: by paasikivi.fi.intel.com (Postfix, from userid 1000)
+ id 6E06720680; Thu, 11 Jun 2020 12:53:33 +0300 (EEST)
+Date: Thu, 11 Jun 2020 12:53:33 +0300
+From: Sakari Ailus <sakari.ailus@linux.intel.com>
+To: Tomasz Figa <tfiga@chromium.org>
+Subject: Re: [V9, 2/2] media: i2c: ov02a10: Add OV02A10 image sensor driver
+Message-ID: <20200611095333.GK16711@paasikivi.fi.intel.com>
+References: <20200523084103.31276-1-dongchun.zhu@mediatek.com>
+ <20200523084103.31276-3-dongchun.zhu@mediatek.com>
+ <20200610194455.GK201868@chromium.org>
 MIME-Version: 1.0
-X-MTK: N
+Content-Disposition: inline
+In-Reply-To: <20200610194455.GK201868@chromium.org>
+User-Agent: Mutt/1.10.1 (2018-07-13)
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200611_022613_117205_F827DFCD 
-X-CRM114-Status: GOOD (  13.64  )
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20200611_025342_092740_A165DFB2 
+X-CRM114-Status: GOOD (  24.42  )
+X-Spam-Score: -5.0 (-----)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (-5.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 SPF_PASS               SPF: sender matches SPF record
+ -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
+ high trust [134.134.136.24 listed in list.dnswl.org]
+ 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
+ 0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
+ [134.134.136.24 listed in wl.mailspike.net]
+ 0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -84,178 +75,154 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: "devicetree@vger.kernel.org" <devicetree@vger.kernel.org>,
- wsd_upstream <wsd_upstream@mediatek.com>,
- linux-kernel <linux-kernel@vger.kernel.org>, Rob Herring <robh+dt@kernel.org>,
- "moderated list:ARM/Mediatek SoC support" <linux-mediatek@lists.infradead.org>,
- Matthias Brugger <matthias.bgg@gmail.com>,
- Linux ARM <linux-arm-kernel@lists.infradead.org>
+Cc: mark.rutland@arm.com, drinkcat@chromium.org,
+ andriy.shevchenko@linux.intel.com, srv_heupstream@mediatek.com,
+ devicetree@vger.kernel.org, linus.walleij@linaro.org,
+ shengnan.wang@mediatek.com, bgolaszewski@baylibre.com, sj.huang@mediatek.com,
+ robh+dt@kernel.org, linux-mediatek@lists.infradead.org,
+ Dongchun Zhu <dongchun.zhu@mediatek.com>, louis.kuo@mediatek.com,
+ matthias.bgg@gmail.com, bingbu.cao@intel.com, mchehab@kernel.org,
+ linux-arm-kernel@lists.infradead.org, linux-media@vger.kernel.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Wed, 2020-06-10 at 00:01 +0800, Chun-Kuang Hu wrote:
-Hi Chun-Kuang,
+Hi Tomasz,
 
-[snip]
-
-> > +
-> > +/*
-> > + * mtk_devapc_pd_get - get devapc pd_types of register address.
-> > + *
-> > + * Returns the value of reg addr
-> > + */
-> > +static void __iomem *mtk_devapc_pd_get(int slave_type,
-> > +                                      enum DEVAPC_PD_REG_TYPE pd_reg_type,
-> > +                                      u32 index)
+On Wed, Jun 10, 2020 at 07:44:55PM +0000, Tomasz Figa wrote:
+> Hi Dongchun,
+> 
+> On Sat, May 23, 2020 at 04:41:03PM +0800, Dongchun Zhu wrote:
+> > Add a V4L2 sub-device driver for OV02A10 image sensor.
+> > 
+> > Signed-off-by: Dongchun Zhu <dongchun.zhu@mediatek.com>
+> > ---
+> >  MAINTAINERS                 |    1 +
+> >  drivers/media/i2c/Kconfig   |   13 +
+> >  drivers/media/i2c/Makefile  |    1 +
+> >  drivers/media/i2c/ov02a10.c | 1025 +++++++++++++++++++++++++++++++++++++++++++
+> >  4 files changed, 1040 insertions(+)
+> >  create mode 100644 drivers/media/i2c/ov02a10.c
+> > 
+> 
+> Thank you for the patch. Please see my comments inline.
+> 
+> [snip]
+> > diff --git a/drivers/media/i2c/ov02a10.c b/drivers/media/i2c/ov02a10.c
+> > new file mode 100644
+> > index 0000000..160a0b5
+> > --- /dev/null
+> > +++ b/drivers/media/i2c/ov02a10.c
+> [snip]
+> > +static const char * const ov02a10_test_pattern_menu[] = {
+> > +	"Disabled",
+> > +	"Color Bar",
+> 
+> nit: We should normalize this to one of the standard names. What is the
+> pattern on this sensor? Is it perhaps "Eight Vertical Colour Bars"?
+> 
+> > +};
+> [snip]
+> > +static int ov02a10_set_fmt(struct v4l2_subdev *sd,
+> > +			   struct v4l2_subdev_pad_config *cfg,
+> > +			   struct v4l2_subdev_format *fmt)
 > > +{
-> > +       struct mtk_devapc_vio_info *vio_info = mtk_devapc_ctx->soc->vio_info;
-> > +       u32 slave_type_num = mtk_devapc_ctx->soc->slave_type_num;
-> > +       const u32 *devapc_pds = mtk_devapc_ctx->soc->devapc_pds;
-> > +       void __iomem *reg;
+> > +	struct ov02a10 *ov02a10 = to_ov02a10(sd);
+> > +	struct v4l2_mbus_framefmt *mbus_fmt = &fmt->format;
 > > +
-> > +       if (!devapc_pds)
-> > +               return NULL;
+> > +	mutex_lock(&ov02a10->mutex);
 > > +
-> > +       if ((slave_type < slave_type_num &&
-> > +            index < vio_info->vio_mask_sta_num[slave_type]) &&
-> > +           pd_reg_type < PD_REG_TYPE_NUM) {
-> > +               reg = mtk_devapc_ctx->devapc_pd_base[slave_type] +
-> > +                       devapc_pds[pd_reg_type];
-> > +
-> > +               if (pd_reg_type == VIO_MASK || pd_reg_type == VIO_STA)
-> > +                       reg += 0x4 * index;
-> > +
-> > +       } else {
-> > +               pr_err(PFX "%s:0x%x or %s:0x%x or %s:0x%x is out of boundary\n",
-> > +                      "slave_type", slave_type,
 > 
-> Move "slave_type" into format string.
+> 
+> Don't we need to handle the case when fmt->which is V4L2_SUBDEV_FORMAT_TRY,
+> which is used for trying the format, but not applying it to the hardware?
 
-Why is this necessary? Is there any benefit for moving this?
-Since the line length is almost over 80 chars.
+Yes.
 
 > 
-> > +                      "pd_reg_type", pd_reg_type,
-> > +                      "index", index);
-> > +               return NULL;
-> > +       }
+> > +	if (ov02a10->streaming) {
+> > +		mutex_unlock(&ov02a10->mutex);
+> > +		return -EBUSY;
+> > +	}
 > > +
-> > +       return reg;
+> > +	/* Only one sensor mode supported */
+> > +	mbus_fmt->code = ov02a10->fmt.code;
+> > +	ov02a10_fill_fmt(ov02a10->cur_mode, mbus_fmt);
+> > +	ov02a10->fmt = fmt->format;
+> > +
+> > +	mutex_unlock(&ov02a10->mutex);
+> > +
+> > +	return 0;
+> > +}
+> > +
+> > +static int ov02a10_get_fmt(struct v4l2_subdev *sd,
+> > +			   struct v4l2_subdev_pad_config *cfg,
+> > +			   struct v4l2_subdev_format *fmt)
+> > +{
+> > +	struct ov02a10 *ov02a10 = to_ov02a10(sd);
+> > +	struct v4l2_mbus_framefmt *mbus_fmt = &fmt->format;
+> > +
+> > +	mutex_lock(&ov02a10->mutex);
+> > +
+> > +	fmt->format = ov02a10->fmt;
+> 
+> Ditto.
+> 
+> > +	mbus_fmt->code = ov02a10->fmt.code;
+> > +	ov02a10_fill_fmt(ov02a10->cur_mode, mbus_fmt);
+> > +
+> > +	mutex_unlock(&ov02a10->mutex);
+> > +
+> > +	return 0;
+> > +}
+> > +
+> > +static int ov02a10_enum_mbus_code(struct v4l2_subdev *sd,
+> > +				  struct v4l2_subdev_pad_config *cfg,
+> > +				  struct v4l2_subdev_mbus_code_enum *code)
+> > +{
+> > +	struct ov02a10 *ov02a10 = to_ov02a10(sd);
+> > +
+> > +	if (code->index >= ARRAY_SIZE(supported_modes))
+> > +		return -EINVAL;
+> 
+> Hmm, supported_modes[] doesn't seem to hold the information about mbus
+> codes. Should this just perhaps be "!= 0"?
+> 
+> > +
+> > +	code->code = ov02a10->fmt.code;
+> > +
+> > +	return 0;
+> > +}
+> [snip]
+> > +static int ov02a10_entity_init_cfg(struct v4l2_subdev *sd,
+> > +				   struct v4l2_subdev_pad_config *cfg)
+> > +{
+> > +	struct v4l2_subdev_format fmt = {
+> > +		.which = cfg ? V4L2_SUBDEV_FORMAT_TRY : V4L2_SUBDEV_FORMAT_ACTIVE,
+> > +		.format = {
+> > +			.width = 1600,
+> > +			.height = 1200,
+> > +		}
+> > +	};
+> > +
+> > +	ov02a10_set_fmt(sd, cfg, &fmt);
+> > +
+> > +	return 0;
 > > +}
 > > +
 > 
+> I'm not familiar with this init_cfg operation and the documentation is very
+> sparse about it. Sakari, is this a correct implementation?
 
-[snip]
+The purpose is to initialise a pad configuration (format and selection
+rectangles) to the device defaults. As there seem to be no selection
+rectangles, this seems fine to me.
 
-> 
-> > +
-> > +/*
-> > + * devapc_violation_irq - the devapc Interrupt Service Routine (ISR) will dump
-> > + *                       violation information including which master violates
-> > + *                       access slave.
-> > + */
-> > +static irqreturn_t devapc_violation_irq(int irq_number, void *dev_id)
-> > +{
-> > +       u32 slave_type_num = mtk_devapc_ctx->soc->slave_type_num;
-> > +       const struct mtk_device_info **device_info;
-> > +       struct mtk_devapc_vio_info *vio_info;
-> > +       int slave_type, vio_idx, index;
-> > +       const char *vio_master;
-> > +       unsigned long flags;
-> > +       bool normal;
-> > +       u8 perm;
-> > +
-> > +       spin_lock_irqsave(&devapc_lock, flags);
-> > +
-> > +       device_info = mtk_devapc_ctx->soc->device_info;
-> > +       vio_info = mtk_devapc_ctx->soc->vio_info;
-> > +       normal = false;
-> > +       vio_idx = -1;
-> > +       index = -1;
-> > +
-> > +       /* There are multiple DEVAPC_PD */
-> > +       for (slave_type = 0; slave_type < slave_type_num; slave_type++) {
-> > +               if (!check_type2_vio_status(slave_type, &vio_idx, &index))
-> > +                       if (!mtk_devapc_dump_vio_dbg(slave_type, &vio_idx,
-> > +                                                    &index))
-> > +                               continue;
-> > +
-> > +               /* Ensure that violation info are written before
-> > +                * further operations
-> > +                */
-> > +               smp_mb();
-> > +               normal = true;
-> > +
-> > +               mask_module_irq(slave_type, vio_idx, true);
-> > +
-> > +               if (clear_vio_status(slave_type, vio_idx))
-> > +                       pr_warn(PFX "%s, %s:0x%x, %s:0x%x\n",
-> > +                               "clear vio status failed",
-> > +                               "slave_type", slave_type,
-> > +                               "vio_index", vio_idx);
-> > +
-> > +               perm = get_permission(slave_type, index, vio_info->domain_id);
-> > +
-> > +               vio_master = mtk_devapc_ctx->soc->master_get
-> > +                       (vio_info->master_id,
-> > +                        vio_info->vio_addr,
-> > +                        slave_type,
-> > +                        vio_info->shift_sta_bit,
-> > +                        vio_info->domain_id);
-> 
-> Call mt6873_bus_id_to_master() directly. For first patch, make things
-> as simple as possible.
+-- 
+Regards,
 
-In devapc_violation_irq() function, we use common flow to handle each
-devapc violation on different platforms. The master_get() has different
-implementation on different platforms, that why it called indirectly.
-
-Once we have new platform, we only have to update devapc-mtxxxx.c
-instead of common handler flow.
-
-> 
-> > +
-> > +               if (!vio_master) {
-> > +                       pr_warn(PFX "master_get failed\n");
-> > +                       vio_master = "UNKNOWN_MASTER";
-> > +               }
-> > +
-> > +               pr_info(PFX "%s - %s:0x%x, %s:0x%x, %s:0x%x, %s:0x%x\n",
-> > +                       "Violation", "slave_type", slave_type,
-> > +                       "sys_index",
-> > +                       device_info[slave_type][index].sys_index,
-> > +                       "ctrl_index",
-> > +                       device_info[slave_type][index].ctrl_index,
-> > +                       "vio_index",
-> > +                       device_info[slave_type][index].vio_index);
-> > +
-> > +               pr_info(PFX "%s %s %s %s\n",
-> > +                       "Violation - master:", vio_master,
-> > +                       "access violation slave:",
-> > +                       device_info[slave_type][index].device);
-> > +
-> > +               devapc_vio_reason(perm);
-> > +
-> > +               devapc_extra_handler(slave_type, vio_master, vio_idx,
-> > +                                    vio_info->vio_addr);
-> > +
-> > +               mask_module_irq(slave_type, vio_idx, false);
-> > +       }
-> > +
-> > +       if (normal) {
-> > +               spin_unlock_irqrestore(&devapc_lock, flags);
-> > +               return IRQ_HANDLED;
-> > +       }
-> > +
-> > +       spin_unlock_irqrestore(&devapc_lock, flags);
-> > +       return IRQ_HANDLED;
-> > +}
-> > +
-
-[snip]
-
+Sakari Ailus
 
 _______________________________________________
 Linux-mediatek mailing list
