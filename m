@@ -2,62 +2,64 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 302CA1F751C
-	for <lists+linux-mediatek@lfdr.de>; Fri, 12 Jun 2020 10:14:24 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 16C0D1F7603
+	for <lists+linux-mediatek@lfdr.de>; Fri, 12 Jun 2020 11:33:58 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=pmLMSnx43kegNlAvli65dy3Fvfcj11dJok4IngonNe8=; b=X7eM2wC/dx074F
-	9pUJtHZexWvoRsyhxavuI+vddlsHyB4FwZsaLTUA4wgWlkrzRlQgqDMYqPvFll085JwhIHcTHc+Ll
-	7p6lBmL9m+kgR0f6IiqDqo0f6XCjmwSE+7is7QrBYoQR7r+2KaQTE1cMiuIG6O/KZyHSIF+lu0pGN
-	z3dw10Tzp+6/YhcfFFiVMLyMC0TDLDrtiT60Gwr54FGWsy4MJAdydpb+u8E0UE7NYz4iOgntMj89r
-	omUrx71YEJ+jQK4JmVSuEBEh9TrQKfAlaqKwC84RKwKrROA9gZxTRxiq5xHsyxMj0mm6He1IvdXkR
-	ldv3Y/VeVrYvLQSfYE2w==;
+	List-Owner; bh=yGxv+tEQZ9g37rh3pCkNSuTU9+zJOhAgm2KHo46CSmw=; b=HqfksX4Htj8ASS
+	/i1IPPIAyn2O6CKN/f9O+Nj3GXN0owHm6VxvdaWm1s37IDcUiKCDA/e9zKZE9WiLpRDkPg5OQrcm8
+	ivZ8LhAJL1EbfBYNQEcIvqNWUeK8k+fBGx0YQ9ugYF7lMTK/YVo5+6o0Rlg+aO0Ds9vkpqabxEkbe
+	jH73ICEzPJ0rq0SpiBUq5N6z/Wn/B0sazyDAMNGTuMB4U0gmZAXHoRZxbfrCsOVIHy1/Ty1/9XYNu
+	6Hais9SWy9PzS5ZXSuS31i9kQnerMeAF/eh8tQVDmaxisbED3J0LQWTWrONTN3QQ1iNSX93pf5qfz
+	xcIagnQ7u9iQ13iKG3GQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jjepJ-00022H-4D; Fri, 12 Jun 2020 08:14:13 +0000
+	id 1jjg4I-0001Mo-3N; Fri, 12 Jun 2020 09:33:46 +0000
 Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jjepB-0001x6-7o; Fri, 12 Jun 2020 08:14:06 +0000
-X-UUID: 819cc0c09c9948d4884a6de2e721a687-20200612
+ id 1jjg4D-0001MA-Rm; Fri, 12 Jun 2020 09:33:44 +0000
+X-UUID: bf7654826a42439ca762d7cbd3071dbf-20200612
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
  s=dk; 
  h=Content-Transfer-Encoding:MIME-Version:Content-Type:References:In-Reply-To:Date:CC:To:From:Subject:Message-ID;
- bh=0GUyHvRF9VSyT75UO1lemvQzocW+/xKvL/7X1JD+e3c=; 
- b=kyvH0EUBv92HPX2ACqV0iGmIsriy/5p9EwSAR3r4T1xcSU5vwKwEtzt9COkq0ShUR8M9thPr/QQ9I5d26rbTQtS7gHAh7GNGONyzcGjpBUtQ/Hluusz7r4KZYYDlIFvp1q+oJolP3loCoYOKwriwq0zoG8DWbE7y64Jmbkg3FZg=;
-X-UUID: 819cc0c09c9948d4884a6de2e721a687-20200612
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
- (envelope-from <eastl.lee@mediatek.com>)
+ bh=BaLcuqfyqtgeka1QHj6hfdc3DlQV6DK0+EkHYH3N9E4=; 
+ b=gOwIYaHePzXcPux/R9Q9VBLs8dw4CX5n6FAPbwrcuzFvAVLoPCEOpJZN82SkEv1aVe4VyninPOFcF7O64hGq6R24ZcYl8DL0hKBaozEJ8jMa6pSioLHGMU1YIrUrh5/5mcQ9P+mY2cNEfIzXklAu4dxgNt/Fm0SDPVYF5Cl25jU=;
+X-UUID: bf7654826a42439ca762d7cbd3071dbf-20200612
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw02.mediatek.com
+ (envelope-from <dongchun.zhu@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1315875167; Fri, 12 Jun 2020 00:13:54 -0800
-Received: from MTKMBS01N1.mediatek.inc (172.21.101.68) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1497.2; Fri, 12 Jun 2020 01:13:55 -0700
-Received: from MTKCAS06.mediatek.inc (172.21.101.30) by
- mtkmbs01n1.mediatek.inc (172.21.101.68) with Microsoft SMTP Server (TLS) id
- 15.0.1497.2; Fri, 12 Jun 2020 16:13:54 +0800
-Received: from [172.21.77.33] (172.21.77.33) by MTKCAS06.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1497.2 via Frontend
- Transport; Fri, 12 Jun 2020 16:13:53 +0800
-Message-ID: <1591949635.23595.9.camel@mtkswgap22>
-Subject: Re: [PATCH v4 4/4] dmaengine: mediatek-cqdma: add dma mask for
- capability
-From: EastL <EastL.Lee@mediatek.com>
-To: Matthias Brugger <matthias.bgg@gmail.com>
-Date: Fri, 12 Jun 2020 16:13:55 +0800
-In-Reply-To: <ea26fb2c-aec0-c031-ac30-9e5099943d9c@gmail.com>
-References: <1590659832-31476-1-git-send-email-EastL.Lee@mediatek.com>
- <1590659832-31476-5-git-send-email-EastL.Lee@mediatek.com>
- <ea26fb2c-aec0-c031-ac30-9e5099943d9c@gmail.com>
-X-Mailer: Evolution 3.2.3-0ubuntu6 
+ with ESMTP id 1382197401; Fri, 12 Jun 2020 01:33:25 -0800
+Received: from MTKMBS31DR.mediatek.inc (172.27.6.102) by
+ MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
+ 15.0.1497.2; Fri, 12 Jun 2020 02:33:28 -0700
+Received: from MTKCAS32.mediatek.inc (172.27.4.184) by MTKMBS31DR.mediatek.inc
+ (172.27.6.102) with Microsoft SMTP Server (TLS) id 15.0.1497.2;
+ Fri, 12 Jun 2020 17:33:24 +0800
+Received: from [10.17.3.153] (10.17.3.153) by MTKCAS32.mediatek.inc
+ (172.27.4.170) with Microsoft SMTP Server id 15.0.1497.2 via Frontend
+ Transport; Fri, 12 Jun 2020 17:33:22 +0800
+Message-ID: <1591954266.8804.646.camel@mhfsdcap03>
+Subject: Re: [V8, 2/2] media: i2c: ov02a10: Add OV02A10 image sensor driver
+From: Dongchun Zhu <dongchun.zhu@mediatek.com>
+To: Tomasz Figa <tfiga@chromium.org>
+Date: Fri, 12 Jun 2020 17:31:06 +0800
+In-Reply-To: <20200610183600.GI201868@chromium.org>
+References: <20200509080627.23222-1-dongchun.zhu@mediatek.com>
+ <20200509080627.23222-3-dongchun.zhu@mediatek.com>
+ <20200521193204.GA14214@chromium.org>
+ <1590209415.8804.431.camel@mhfsdcap03>
+ <20200610183600.GI201868@chromium.org>
+X-Mailer: Evolution 3.10.4-0ubuntu2 
 MIME-Version: 1.0
+X-TM-SNTS-SMTP: D560A70DAB39B39E17459FE12DB960DD38080384D408DDDBB17C727BB4A53AF72000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200612_011405_283552_D067F96E 
-X-CRM114-Status: GOOD (  17.46  )
+X-CRM114-CacheID: sfid-20200612_023343_061881_8969D04A 
+X-CRM114-Status: GOOD (  29.89  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
@@ -85,100 +87,295 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: mark.rutland@arm.com, devicetree@vger.kernel.org, wsd_upstream@mediatek.com,
- Sean Wang <sean.wang@mediatek.com>, linux-kernel@vger.kernel.org,
- vkoul@kernel.org, robh+dt@kernel.org, linux-mediatek@lists.infradead.org,
- dmaengine@vger.kernel.org, linux-arm-kernel@lists.infradead.org
+Cc: mark.rutland@arm.com, drinkcat@chromium.org,
+ andriy.shevchenko@linux.intel.com, srv_heupstream@mediatek.com,
+ devicetree@vger.kernel.org, linus.walleij@linaro.org,
+ shengnan.wang@mediatek.com, louis.kuo@mediatek.com, bgolaszewski@baylibre.com,
+ sj.huang@mediatek.com, robh+dt@kernel.org, linux-mediatek@lists.infradead.org,
+ dongchun.zhu@mediatek.com, sakari.ailus@linux.intel.com,
+ matthias.bgg@gmail.com, bingbu.cao@intel.com, mchehab@kernel.org,
+ linux-arm-kernel@lists.infradead.org, linux-media@vger.kernel.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-On Thu, 2020-05-28 at 16:10 +0200, Matthias Brugger wrote:
-> 
-> On 28/05/2020 11:57, EastL wrote:
-> > This patch add dma mask for capability.
-> > 
-> > Change-Id: I31f4622f9541d769702029532e5f5f185815dda2
-> 
-> No Change-Id in the commit message please.
-> 
-> > Signed-off-by: EastL <EastL.Lee@mediatek.com>
-> > ---
-> >  drivers/dma/mediatek/mtk-cqdma.c | 13 +++++++++++++
-> >  1 file changed, 13 insertions(+)
-> > 
-> > diff --git a/drivers/dma/mediatek/mtk-cqdma.c b/drivers/dma/mediatek/mtk-cqdma.c
-> > index bca7118..1805a76 100644
-> > --- a/drivers/dma/mediatek/mtk-cqdma.c
-> > +++ b/drivers/dma/mediatek/mtk-cqdma.c
-> > @@ -117,6 +117,7 @@ struct mtk_cqdma_vchan {
-> >   * @clk:                    The clock that device internal is using
-> >   * @dma_requests:           The number of VCs the device supports to
-> >   * @dma_channels:           The number of PCs the device supports to
-> > + * @dma_mask:               A mask for DMA capability
-> >   * @vc:                     The pointer to all available VCs
-> >   * @pc:                     The pointer to all the underlying PCs
-> >   */
-> > @@ -126,6 +127,7 @@ struct mtk_cqdma_device {
-> >  
-> >  	u32 dma_requests;
-> >  	u32 dma_channels;
-> > +	u32 dma_mask;
-> >  	struct mtk_cqdma_vchan *vc;
-> >  	struct mtk_cqdma_pchan **pc;
-> >  };
-> > @@ -549,6 +551,7 @@ static void mtk_cqdma_hw_deinit(struct mtk_cqdma_device *cqdma)
-> >  };
-> >  MODULE_DEVICE_TABLE(of, mtk_cqdma_match);
-> >  
-> > +static u64 cqdma_dmamask;
-> >  static int mtk_cqdma_probe(struct platform_device *pdev)
-> >  {
-> >  	struct mtk_cqdma_device *cqdma;
-> > @@ -607,6 +610,16 @@ static int mtk_cqdma_probe(struct platform_device *pdev)
-> >  		cqdma->dma_channels = MTK_CQDMA_NR_PCHANS;
-> >  	}
-> >  
-> > +	if (pdev->dev.of_node && of_property_read_u32(pdev->dev.of_node,
-> > +						      "dma-channel-mask",
-> > +						      &cqdma->dma_mask)) {
-> 
-> I'd prefer:
-> 
-> if (pdev->dev.of_node)
->     ret = of_property_read_u32(pdev->dev.of_node,
->                                "dma-channel-mask",
->                                &cqdma->dma_mask))
-> if (ret) {
->     dev_warn(&pdev->dev,
->              "Using 0 as missing dma-channel-mask
->               property\n");
->     cqdma->dma_mask = 0;
-> }
-> 
-> > +		dev_info(&pdev->dev,
-> > +			 "Using 0 as missing dma-channel-mask property\n");
-> 
-> dev_warn should be OK.
-> 
-> > +	} else {
-> > +		cqdma_dmamask = DMA_BIT_MASK(cqdma->dma_mask);
-> > +		pdev->dev.dma_mask = &cqdma_dmamask;
-> 
-> if (dma_set_mask(&pdev->dev,
->     DMA_BIT_MASK(cqdma->dma_mask)) {
->          /* error out */
-> }
-> 
-OK, I'll fix it on next version.
+Hi Tomasz,
 
-> > +	}
-> > +
-> >  	cqdma->pc = devm_kcalloc(&pdev->dev, cqdma->dma_channels,
-> >  				 sizeof(*cqdma->pc), GFP_KERNEL);
-> >  	if (!cqdma->pc)
+On Wed, 2020-06-10 at 18:36 +0000, Tomasz Figa wrote:
+> On Sat, May 23, 2020 at 12:50:15PM +0800, Dongchun Zhu wrote:
+> > Hi Tomasz,
 > > 
+> > Thanks for the review. My replies are as below.
+> > 
+> > On Thu, 2020-05-21 at 19:32 +0000, Tomasz Figa wrote:
+> > > Hi Dongchun,
+> > > 
+> > > On Sat, May 09, 2020 at 04:06:27PM +0800, Dongchun Zhu wrote:
+> [snip]
+> > > > +{
+> > > > +	struct i2c_client *client = to_i2c_client(dev);
+> > > > +	struct v4l2_subdev *sd = i2c_get_clientdata(client);
+> > > > +	struct ov02a10 *ov02a10 = to_ov02a10(sd);
+> > > > +	int ret;
+> > > > +
+> > > > +	gpiod_set_value_cansleep(ov02a10->n_rst_gpio, 0);
+> > > > +	gpiod_set_value_cansleep(ov02a10->pd_gpio, 0);
+> > > > +
+> > > > +	ret = clk_prepare_enable(ov02a10->eclk);
+> > > > +	if (ret < 0) {
+> > > > +		dev_err(dev, "failed to enable eclk\n");
+> > > > +		return ret;
+> > > > +	}
+> > > > +
+> > > > +	ret = regulator_bulk_enable(OV02A10_NUM_SUPPLIES, ov02a10->supplies);
+> > > > +	if (ret < 0) {
+> > > > +		dev_err(dev, "failed to enable regulators\n");
+> > > > +		goto disable_clk;
+> > > > +	}
+> > > > +	usleep_range(5000, 6000);
+> > > > +
+> > > > +	gpiod_set_value_cansleep(ov02a10->pd_gpio, 1);
+> > > 
+> > > This is a "powerdown" GPIO. It must be set to 0 if the sensor is to be
+> > > powered on.
+> > > 
+> > 
+> > The value set by gpiod_set_value_cansleep() API actually depends upon
+> > GPIO polarity defined in DT.
+> > Since I set GPIO_ACTIVE_LOW to powerdown,
+> > gpiod_set_value_cansleep(gpio_desc, value) would set !value to
+> > gpio_desc.
+> > Thus here powerdown would be low-state when sensor is powered on.
+> > For GPIO polarity, I also post a comment to the binding patch.
+> >
+> 
+> That's true. However, this makes the driver really confusing. If someone
+> reads this code and compares with the datasheet, it looks incorrect,
+> because in the datasheet the powerdown GPIO needs to be configured low
+> for the sensor to operate.
+> 
+> I'd recommend defining the binding in a way that makes it clear in the driver code
+> that it implementes the power sequencing as per the datasheet.
+> 
+
+Uh-huh...
+But it all depends on how we look at the powerdown GPIO.
+Or where should we define the active low or active high, the driver or
+DT?
+
+My initial idea is using DT GPIO polarity to describe sensor active
+polarity according to the datasheet.
+As an active low shutdown signal is equivalent to an active high enable
+signal.
+
+> [snip]
+> > > > +/*
+> > > > + * ov02a10_set_exposure - Function called when setting exposure time
+> > > > + * @priv: Pointer to device structure
+> > > > + * @val: Variable for exposure time, in the unit of micro-second
+> > > > + *
+> > > > + * Set exposure time based on input value.
+> > > > + *
+> > > > + * Return: 0 on success
+> > > > + */
+> > > > +static int ov02a10_set_exposure(struct ov02a10 *ov02a10, int val)
+> > > > +{
+> > > > +	struct i2c_client *client = v4l2_get_subdevdata(&ov02a10->subdev);
+> > > > +	int ret;
+> > > > +
+> > > > +	ret = i2c_smbus_write_byte_data(client, REG_PAGE_SWITCH, REG_ENABLE);
+> > > > +	if (ret < 0)
+> > > > +		return ret;
+> > > 
+> > > How does this page switch work? According to the documentation I have, the
+> > > register allows selecting between a few different pages. However, there
+> > > should be two page pointers - one for the AP and the other for the sensor,
+> > > so that when the AP is programming page X, the sensor can have consistent
+> > > settings from page Y. But here we only set one register and always with
+> > > page 1.
+> > > 
+> > 
+> > Thanks for the carefully observation.
+> > The style or requirement of register setting here is suggested by OV
+> > vendor.
+> > From hardware signal behavior and effect-test, this setting should be
+> > right.
+> > But for your concern, we can also dig into it with OV.
+> > Let's have time to talk with OV.
+> > 
+> > > > +
+> > > > +	ret = i2c_smbus_write_byte_data(client, OV02A10_REG_EXPOSURE_H,
+> > > > +					val >> OV02A10_EXP_SHIFT);
+> > > > +	if (ret < 0)
+> > > > +		return ret;
+> > > > +
+> > > > +	ret = i2c_smbus_write_byte_data(client, OV02A10_REG_EXPOSURE_L, val);
+> > > > +	if (ret < 0)
+> > > > +		return ret;
+> > > > +
+> > > > +	return i2c_smbus_write_byte_data(client, REG_GLOBAL_EFFECTIVE,
+> > > > +					 REG_ENABLE);
+> > > 
+> > > This patch defines REG_GLOBAL_EFFECTIVE to 0x01. I don't see such register
+> > > mentioned in the documentation.
+> > > 
+> > 
+> > There may be several editions of sensor documentation.
+> > From OV, 0x01 is one register shall be updated to keep
+> > exposure/gain/test pattern... register settings effective.
+> >
+> 
+> Okay, let's try to get some explanation of this offline.
+> 
+
+Fine.
+
+> > > > +}
+> > > > +
+> > > > +static int ov02a10_set_gain(struct ov02a10 *ov02a10, int val)
+> > > > +{
+> > > > +	struct i2c_client *client = v4l2_get_subdevdata(&ov02a10->subdev);
+> > > > +	int ret;
+> > > > +
+> > > > +	ret = i2c_smbus_write_byte_data(client, REG_PAGE_SWITCH, REG_ENABLE);
+> > > > +	if (ret < 0)
+> > > > +		return ret;
+> > > > +
+> > > > +	ret = i2c_smbus_write_byte_data(client, OV02A10_REG_GAIN, val);
+> > > > +	if (ret < 0)
+> > > > +		return ret;
+> > > > +
+> > > > +	return i2c_smbus_write_byte_data(client, REG_GLOBAL_EFFECTIVE,
+> > > > +					 REG_ENABLE);
+> > > > +}
+> > > > +
+> > > > +static int ov02a10_set_vblank(struct ov02a10 *ov02a10, int val)
+> > > > +{
+> > > > +	struct i2c_client *client = v4l2_get_subdevdata(&ov02a10->subdev);
+> > > > +	u32 vts = val + ov02a10->cur_mode->height - OV02A10_BASIC_LINE;
+> > > > +	int ret;
+> > > > +
+> > > > +	ret = i2c_smbus_write_byte_data(client, REG_PAGE_SWITCH, REG_ENABLE);
+> > > > +	if (ret < 0)
+> > > > +		return ret;
+> > > > +
+> > > > +	ret = i2c_smbus_write_byte_data(client, OV02A10_REG_VTS_H,
+> > > > +					vts >> OV02A10_VTS_SHIFT);
+> > > > +	if (ret < 0)
+> > > > +		return ret;
+> > > > +
+> > > > +	ret = i2c_smbus_write_byte_data(client, OV02A10_REG_VTS_L, vts);
+> > > > +	if (ret < 0)
+> > > > +		return ret;
+> > > > +
+> > > > +	return i2c_smbus_write_byte_data(client, REG_GLOBAL_EFFECTIVE,
+> > > > +					 REG_ENABLE);
+> > > > +}
+> > > > +
+> > > > +static int ov02a10_set_test_pattern(struct ov02a10 *ov02a10, int pattern)
+> > > > +{
+> > > > +	struct i2c_client *client = v4l2_get_subdevdata(&ov02a10->subdev);
+> > > > +	int ret;
+> > > > +
+> > > > +	if (pattern)
+> > > > +		pattern = OV02A10_TEST_PATTERN_ENABLE;
+> > > 
+> > > Is this necessary? Our control can be 0 for disabled and 1 for color bars.
+> > > The latter is the same as the above macro.
+> > > 
+> > 
+> > Yes. It looks redundant here.
+> > Fixed in next release.
+> > 
+> > > [snip]
+> > > > +static int ov02a10_initialize_controls(struct ov02a10 *ov02a10)
+> > > > +{
+> > > > +	struct i2c_client *client = v4l2_get_subdevdata(&ov02a10->subdev);
+> > > > +	const struct ov02a10_mode *mode;
+> > > > +	struct v4l2_ctrl_handler *handler;
+> > > > +	struct v4l2_ctrl *ctrl;
+> > > > +	u64 exposure_max;
+> > > > +	u32 pixel_rate, h_blank;
+> > > > +	int ret;
+> > > > +
+> > > > +	handler = &ov02a10->ctrl_handler;
+> > > > +	mode = ov02a10->cur_mode;
+> > > > +	ret = v4l2_ctrl_handler_init(handler, 7);
+> > > > +	if (ret)
+> > > > +		return ret;
+> > > > +
+> > > > +	handler->lock = &ov02a10->mutex;
+> > > > +
+> > > > +	ctrl = v4l2_ctrl_new_int_menu(handler, NULL, V4L2_CID_LINK_FREQ, 0, 0,
+> > > > +				      link_freq_menu_items);
+> > > > +	if (ctrl)
+> > > > +		ctrl->flags |= V4L2_CTRL_FLAG_READ_ONLY;
+> > > > +
+> > > > +	pixel_rate = to_pixel_rate(0);
+> > > > +	v4l2_ctrl_new_std(handler, NULL, V4L2_CID_PIXEL_RATE, 0, pixel_rate, 1,
+> > > > +			  pixel_rate);
+> > > > +
+> > > > +	h_blank = mode->hts_def - mode->width;
+> > > > +	ov02a10->hblank = v4l2_ctrl_new_std(handler, NULL, V4L2_CID_HBLANK,
+> > > > +					    h_blank, h_blank, 1, h_blank);
+> > > > +	if (ov02a10->hblank)
+> > > > +		ov02a10->hblank->flags |= V4L2_CTRL_FLAG_READ_ONLY;
+> > > > +
+> > > 
+> > > Do we need to hold a pointer to this control? We don't seem to ever access
+> > > it anywhere else in the driver.
+> > > 
+> > 
+> > No.
+> > These lines would be removed in next release.
+> > 
+> > > > +	ov02a10->vblank = v4l2_ctrl_new_std(handler, &ov02a10_ctrl_ops,
+> > > > +					    V4L2_CID_VBLANK, mode->vts_def -
+> > > > +					    mode->height,
+> > > > +					    OV02A10_VTS_MAX - mode->height, 1,
+> > > > +					    mode->vts_def - mode->height);
+> > > > +
+> > > 
+> > > Ditto.
+> > > 
+> > 
+> > These lines would be removed in next release.
+> > 
+
+Sorry that I made a mistake.
+Here we need to reserve V4L2_CID_VBLANK control.
+
+> > > > +	exposure_max = mode->vts_def - 4;
+> > > > +	ov02a10->exposure = v4l2_ctrl_new_std(handler, &ov02a10_ctrl_ops,
+> > > > +					      V4L2_CID_EXPOSURE,
+> > > > +					      OV02A10_EXPOSURE_MIN,
+> > > > +					      exposure_max,
+> > > > +					      OV02A10_EXPOSURE_STEP,
+> > > > +					      mode->exp_def);
+> > > > +
+> > > > +	ov02a10->anal_gain = v4l2_ctrl_new_std(handler, &ov02a10_ctrl_ops,
+> > > > +					       V4L2_CID_ANALOGUE_GAIN,
+> > > > +					       OV02A10_GAIN_MIN,
+> > > > +					       OV02A10_GAIN_MAX,
+> > > > +					       OV02A10_GAIN_STEP,
+> > > > +					       OV02A10_GAIN_DEFAULT);
+> > > 
+> > > Ditto.
+> > > 
+> > 
+> > Fields: exposure and anal_gain would be removed in next release.
+> > But v4l2_ctrl_new_std remains, as user may set exp/gain. 
+> > 
+> 
+> I don't mean removing the controls, but just not storing the returned
+> pointers inside driver data.
+> 
+
+Got it : -) 
+
+> Best regards,
+> Tomasz
 
 _______________________________________________
 Linux-mediatek mailing list
