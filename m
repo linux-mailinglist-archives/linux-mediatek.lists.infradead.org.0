@@ -2,79 +2,73 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id CD6971F8A22
-	for <lists+linux-mediatek@lfdr.de>; Sun, 14 Jun 2020 20:38:03 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 7D4FB1F8ABD
+	for <lists+linux-mediatek@lfdr.de>; Sun, 14 Jun 2020 22:42:12 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=pRf90cn+MxHN1md/i4vDBh9mp0JZDu2NVXKwX5i/V1w=; b=nBCht6rsHANd+l
-	nhXtqw+XhCecVc8n3VjaK9vS18Zv3U4s0lBqmnAy/thO2pmHnmjqRqIT+0zMThqo+xUXKxgJ3XrQW
-	JVFxq7TqGIpd8gYYskT7F9GcK/nMlHbeT+zurOm5WGpeMGsXbdH8J3pDYm0Nr9pairrfHTNAyRfNv
-	70qgZw1+wKswukNzNtVvUJDm36edGRVTVvZwYHHhwsVMqPtxuJYLHcIa+WB6qFAN2zOnGn6UqqDKr
-	U50IQxsHX4G2Gc/2rETx45HRzjS4NBHLg7wAoXYD356Fh1o2p7heqQ0GJ+u7wAqn0V6xwpP86vC4H
-	l/6qFiK8iiLxmWHgUJIg==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=cryz0Ujr+4qAyhSn5BGJiJDPB4Pkdoqi3lXMTYRZMlk=; b=pzlcPUCno8V2jh
+	vVXhR6RRMRPxPjYeTxutmL2ONiOprf7BaFPtca+G8ad8Qih13AUNLuNUqcfut1kyPi6yNi9c2vDI4
+	e+FSOhi/sraCwEtBa4NTCc6ykuZQ0mxD+5hhAdVFwuilrwlkM2vTLFA1YdIOTDPPvcrQKklMvkRnA
+	YnsoPOyNM5W6WofNvUdDZnDqoUT1Bls26tfuFebwbG2Bl+3skOeczf2LlddjmxjwuTYlVxXsH20pv
+	3ekSnKcX0J+PI2x+gCMc2uGc5lFPAAvKb+hc/wYiVfQKHUe1eEVFgIVc8DohX+3AW1nCpCSG3ByQx
+	c7abBV4mn0Lq3rr/0vBQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jkXW0-0004sb-Vy; Sun, 14 Jun 2020 18:37:56 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1jkZS6-0002P8-6c; Sun, 14 Jun 2020 20:42:02 +0000
+Received: from smtprelay0068.hostedemail.com ([216.40.44.68]
+ helo=smtprelay.hostedemail.com)
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jkXVx-0004sA-VG
- for linux-mediatek@lists.infradead.org; Sun, 14 Jun 2020 18:37:55 +0000
-X-UUID: 865763a2e7e042a1b9762a0f665cd2a0-20200614
-DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
- s=dk; 
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:Subject:CC:To:From;
- bh=BJmFZxpc5gJCz9bp1c2mprgDExNZVkRketLDbjwuhBA=; 
- b=DB5uIEK/BdCnCXAZwofRYD6R9QJUrE6LX+j7JliI8NpJV25I2MVOapQ1340UTdEkflXlSgiHacfYL0HAAh3TgwUZmAu4vVXmRYjur9ZxJL+lSGCpmgulD29ZaOqK0wbyvemqboztmbwVk5CSl6WVHR7annfS5JLTHiNIk02GJsY=;
-X-UUID: 865763a2e7e042a1b9762a0f665cd2a0-20200614
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
- (envelope-from <ryder.lee@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 2051720676; Sun, 14 Jun 2020 10:37:34 -0800
-Received: from mtkmbs08n2.mediatek.inc (172.21.101.56) by
- MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
- 15.0.1497.2; Sun, 14 Jun 2020 11:27:45 -0700
-Received: from mtkcas07.mediatek.inc (172.21.101.84) by
- mtkmbs08n2.mediatek.inc (172.21.101.56) with Microsoft SMTP Server (TLS) id
- 15.0.1497.2; Mon, 15 Jun 2020 02:27:43 +0800
-Received: from mtksdccf07.mediatek.inc (172.21.84.99) by mtkcas07.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1497.2 via
- Frontend Transport; Mon, 15 Jun 2020 02:27:45 +0800
-From: Ryder Lee <ryder.lee@mediatek.com>
-To: Felix Fietkau <nbd@nbd.name>, Lorenzo Bianconi
- <lorenzo.bianconi@redhat.com>
-Subject: [PATCH v3 0/4] mt7915: add MU-MIMO support
-Date: Mon, 15 Jun 2020 02:27:43 +0800
-Message-ID: <cover.1592158312.git.ryder.lee@mediatek.com>
-X-Mailer: git-send-email 2.18.0
+ id 1jkZRw-0002IT-Cn; Sun, 14 Jun 2020 20:41:53 +0000
+Received: from filter.hostedemail.com (clb03-v110.bra.tucows.net
+ [216.40.38.60])
+ by smtprelay02.hostedemail.com (Postfix) with ESMTP id 79E4F15E7;
+ Sun, 14 Jun 2020 20:41:44 +0000 (UTC)
+X-Session-Marker: 6A6F6540706572636865732E636F6D
+X-Spam-Summary: 2, 0, 0, , d41d8cd98f00b204, joe@perches.com, ,
+ RULES_HIT:41:355:379:599:968:988:989:1260:1277:1311:1313:1314:1345:1359:1437:1515:1516:1518:1534:1540:1593:1594:1711:1730:1747:1777:1792:2393:2559:2562:2828:3138:3139:3140:3141:3142:3352:3622:3865:3867:3870:3871:4321:4605:5007:9121:10004:10400:10848:11026:11232:11233:11473:11657:11658:11914:12043:12048:12296:12297:12438:12679:12740:12760:12895:13069:13311:13357:13439:14659:14721:21080:21433:21451:21627:21990:30012:30054:30070:30091,
+ 0, RBL:none, CacheIP:none, Bayesian:0.5, 0.5, 0.5, Netcheck:none,
+ DomainCache:0, MSF:not bulk, SPF:, MSBL:0, DNSBL:none, Custom_rules:0:0:0,
+ LFtime:1, LUA_SUMMARY:none
+X-HE-Tag: error76_4e1659226df0
+X-Filterd-Recvd-Size: 1906
+Received: from XPS-9350.home (unknown [47.151.136.130])
+ (Authenticated sender: joe@perches.com)
+ by omf09.hostedemail.com (Postfix) with ESMTPA;
+ Sun, 14 Jun 2020 20:41:42 +0000 (UTC)
+Message-ID: <48891eaf60c5e0c449e573a906894db2c3a7b72c.camel@perches.com>
+Subject: Re: [PATCH] drm/mediatek: remove unnecessary conversion to bool
+From: Joe Perches <joe@perches.com>
+To: Bernard Zhao <bernard@vivo.com>, Chun-Kuang Hu
+ <chunkuang.hu@kernel.org>,  Philipp Zabel <p.zabel@pengutronix.de>, David
+ Airlie <airlied@linux.ie>, Daniel Vetter <daniel@ffwll.ch>,  Matthias
+ Brugger <matthias.bgg@gmail.com>, dri-devel@lists.freedesktop.org,
+ linux-arm-kernel@lists.infradead.org,  linux-mediatek@lists.infradead.org,
+ linux-kernel@vger.kernel.org
+Date: Sun, 14 Jun 2020 13:41:41 -0700
+In-Reply-To: <20200612124007.4990-1-bernard@vivo.com>
+References: <20200612124007.4990-1-bernard@vivo.com>
+User-Agent: Evolution 3.36.2-0ubuntu1 
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: 51BD0B510CE7B4BDB95B28DDD489A5BBB0D09640FBCC167C46E2AB553BF6D0ED2000:8
-X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200614_113754_010204_20267D9F 
-X-CRM114-Status: UNSURE (   4.53  )
+X-CRM114-CacheID: sfid-20200614_134152_495063_0060FB34 
+X-CRM114-Status: UNSURE (   7.87  )
 X-CRM114-Notice: Please train this message.
-X-Spam-Score: -0.2 (/)
+X-Spam-Score: -0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (-0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 SPF_PASS               SPF: sender matches SPF record
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [216.40.44.68 listed in list.dnswl.org]
+ -0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
+ [216.40.44.68 listed in wl.mailspike.net]
+ 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 MIME_BASE64_TEXT       RAW: Message text disguised using base64
- encoding
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
+ -0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -86,42 +80,42 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: linux-mediatek@lists.infradead.org, Sean Wang <sean.wang@mediatek.com>,
- linux-wireless@vger.kernel.org, Ryder Lee <ryder.lee@mediatek.com>,
- Shayne Chen <shayne.chen@mediatek.com>
+Cc: opensource.kernel@vivo.com
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-This series adds MU-MIMO support.
+On Fri, 2020-06-12 at 20:40 +0800, Bernard Zhao wrote:
+> In function mtk_dsi_clk_hs_state, remove unnecessary conversion
+> to bool return, this change is to make the code a bit readable.
+[]
+> diff --git a/drivers/gpu/drm/mediatek/mtk_dsi.c b/drivers/gpu/drm/mediatek/mtk_dsi.c
+[]
+> @@ -319,7 +319,7 @@ static bool mtk_dsi_clk_hs_state(struct mtk_dsi *dsi)
+>  	u32 tmp_reg1;
+>  
+>  	tmp_reg1 = readl(dsi->regs + DSI_PHY_LCCON);
+> -	return ((tmp_reg1 & LC_HS_TX_EN) == 1) ? true : false;
+> +	return ((tmp_reg1 & LC_HS_TX_EN) == 1);
 
-changes since v3:
-- add patch 1/4 to avoid open coded and fix a wrong WMM parameter assignment.
-- cleanup unused sta_rec_mu_edca_tlv.
-- fix a wrong enum number "MT_LMAC_BMC0 = 0x10",
+Given:
 
-changes since v2:
-- move CONFIG_MAC80211_DEBUGFS fixup into patch 1/3
+drivers/gpu/drm/mediatek/mtk_dsi.c:#define LC_HS_TX_EN                  BIT(0)
 
-Ryder Lee (4):
-  mt76: mt7915: add missing CONFIG_MAC80211_DEBUGFS
-  mt76: mt7915: add a fixed AC queue mapping
-  mt76: mt7915: add MU-MIMO support
-  mt76: mt7915: use ieee80211_tx_queue_params to avoid open coded
+This is likely clearer as
 
- .../wireless/mediatek/mt76/mt7915/debugfs.c   | 11 ++-
- .../net/wireless/mediatek/mt76/mt7915/mac.c   |  2 +-
- .../net/wireless/mediatek/mt76/mt7915/mac.h   | 10 --
- .../net/wireless/mediatek/mt76/mt7915/main.c  |  7 +-
- .../net/wireless/mediatek/mt76/mt7915/mcu.c   | 91 ++++++++++++++++---
- .../net/wireless/mediatek/mt76/mt7915/mcu.h   |  6 +-
- .../wireless/mediatek/mt76/mt7915/mt7915.h    | 34 +++++--
- .../net/wireless/mediatek/mt76/mt7915/regs.h  |  5 +
- 8 files changed, 127 insertions(+), 39 deletions(-)
+	return tmp_reg1 & LC_HS_TX_EN;
 
--- 
-2.18.0
+or even
+
+static bool mtk_dsi_clk_hs_state(struct mtk_dsi *dsi)
+{
+	return readl(dsi->regs + DSI_PHY_LCCON) & LC_HS_TX_EN;
+}
+
+
+
 _______________________________________________
 Linux-mediatek mailing list
 Linux-mediatek@lists.infradead.org
