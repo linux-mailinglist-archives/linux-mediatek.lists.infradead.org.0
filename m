@@ -2,139 +2,86 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 04CA01F8FED
-	for <lists+linux-mediatek@lfdr.de>; Mon, 15 Jun 2020 09:32:25 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 9538D1F9034
+	for <lists+linux-mediatek@lfdr.de>; Mon, 15 Jun 2020 09:45:32 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:In-Reply-To:References:
-	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=IUKODQBjkgj9SAUHNbPMD5bNA2AsAN68voqfUiCzRwk=; b=ufRHAUKdduM0+N
-	4SX7gR46wHP/vsyNblh/R/8g2GUggdN0qF8uzWBTPB9Y9GLdMHQvC2vsy8HlWtueJ0lZvPGwDjoQy
-	9GhGkqRrN5ZpA61EwnUruKPTVhm62prIuu93q+kUwGaGh5uaIxBi1glcWmuz4Y+rFp0vZz/1Jntq/
-	gbqjnJJj1cmxzM21LmPyRW33kpjQ6j74OBNhufcsFj33V/3B1CF4usPJHdzGck9PFN6x+EwcQZoLf
-	aIizyUrs18DGrK6ECWhxD4fpQhfJ7PYFocJ+gymZwkLqR0u5UEqzdf1PBM+zOxTZ2N4LXUnlq4NC9
-	HK7Q37wJZcSV9jm6t7Cw==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=UudgEWjEsD6O5eGzlL9k3Cmy0WKhkVLLqIbfiiwkeA0=; b=dBvTPkhGKAaRR9
+	IABOQPsHerf8WvXaj4C7fkJRlnJS5MnqLeV7Ox6/P3zMaP8fEUSz3jMn/HRXImGi4ki+dx0B57FKt
+	wtkzC2z62+hFUqt0EOZ22zr/8zWe9OnN3Pckel30WYfHgJFkhRujh9CovLLbL8zd6JFhmo6cK+hPt
+	DxSmtl64n3YPCkpVAbHSZKfHJRfbCR5mdaD566hkFvBZMGns72VFFMDMeahA091Wpc/7n56BtrvEu
+	HU0spdFYhQtAyNAyLqunraZgc9+tnKn3EGtOLq+vcZjgQTHytbs3tURdR4A03BU/rVK2xJ2EDH7jC
+	9il2hUA09pj06NQo/fDQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jkjbL-0003Xt-5x; Mon, 15 Jun 2020 07:32:15 +0000
-Received: from esa3.hgst.iphmx.com ([216.71.153.141])
+	id 1jkjo4-0005Or-JL; Mon, 15 Jun 2020 07:45:24 +0000
+Received: from mail-wr1-x444.google.com ([2a00:1450:4864:20::444])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jkjbC-0003HF-SV; Mon, 15 Jun 2020 07:32:08 +0000
-DKIM-Signature: v=1; a=rsa-sha256; c=simple/simple;
- d=wdc.com; i=@wdc.com; q=dns/txt; s=dkim.wdc.com;
- t=1592206327; x=1623742327;
- h=from:to:cc:subject:date:message-id:references:
- in-reply-to:content-transfer-encoding:mime-version;
- bh=UCPh9nnOLJQOa5+2ym/DZ4EMeZYp+q1/7H9nm8F8hmc=;
- b=ExUv09ZX0zXU3GlNAR752idpWdinDHoRNoRXx6g4xEqUuZiec+f+6jED
- BvNVP2lFZDa6EIawmAdlrmMmpyoV9CoaR07heuaZiTq2ocBxqAYyW/5Bk
- PhKt7n3Lsw++mRmhUB9qQrdtRs8BDwAnlBr1Hu9asz94l+PG3O/lKOGct
- XlBAI6O3Z2JKQBaMjxBQPH3apBbRs7qgTpW8Su0/xg9sokzLB7R8OTI6t
- JaWoy/a2l18FhnPMr71SEZ1YaQjw63tl7RGe62Vh5Td9yeimGY/R7Rqxy
- k7nCZXq9ExZkjUy5gKbOQOc9raAhvBIRKficgY9ssAYQc8WKF0PXPywO9 A==;
-IronPort-SDR: q5O0GQSgSMwVIlDKYEgBch4qcH2FbR99BROzDF0tMmSaMWQRoE0j6ew6areU98s8kQZFQUR3FN
- eZg+1zJTQlqlgio/YQojKoRYffo6KgdO202iWX3aqXy/RxXFEtiWWFqHwr+6p6EShu+doO6Kbl
- HMsemQLf2TmSB+CH8LQANg4iK92dobJ11OtTHmOVYCY+mS8dMFOHPTMpA/amnoeHd+6pi1vTC1
- GN3g0I981IQ6VZm2F4XY10WPzXDqhR/swM26WQAk+pwoHJo4kpMo/s5d+p+XmEsTe3RBEjSEac
- eec=
-X-IronPort-AV: E=Sophos;i="5.73,514,1583164800"; d="scan'208";a="144328971"
-Received: from mail-dm6nam12lp2173.outbound.protection.outlook.com (HELO
- NAM12-DM6-obe.outbound.protection.outlook.com) ([104.47.59.173])
- by ob1.hgst.iphmx.com with ESMTP; 15 Jun 2020 15:31:59 +0800
-ARC-Seal: i=1; a=rsa-sha256; s=arcselector9901; d=microsoft.com; cv=none;
- b=Bu+X2DkGp+OF++qXHxM2bImuTolUseYqUIs0jELaNKU0NL16vP6LQ/rzWwvJyDJRdrTHc10yOLJl/aCs3xe2aQlSyfTmwO8VhqXN0+xWxzGpKwzz+KWXno6zW5KCViW2oH3k4iSmU/EWzCSpQ8xZwGKCDSwJS6UZb1QdLRuZftkSknWDwqRHZju66J7OQunaGVL/tib/tel3KYfuVKN/NweUY5wo/SwJbLcYbI9to0yy3Lfyygi2cfU3mhSjfa1e5HSXEddCnaJjVwFsyIHw7sgZH4twyy9+FiQ4ZzHByp9JM6tUoJDyU1r1xMPck1ExydtEottYbmd293F4+n9vow==
-ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com; 
- s=arcselector9901;
- h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
- bh=rPrXFE2K3KaA7qL2ov68PWSD/9aopTG3HiemXZKwniI=;
- b=HuFty+lviKJ5dzvi5H6hu8OmRg3ni0yZs8lUejoGXniT3u44VsTbwrO8Db0Bt0gkMRruyCZ4NpRIQJ7CIGbA2IGr55EmPdiFAsHoTsEA8B6bfdBy8KQc6TWC6c0HXi5jIxNKaJPQzLz6332nGOngv3gzs2Li4309YsPEzgwDlDKARnTYtpO8XRkjUlgif5HapZKvCbU3WpR9nN7ZDU23VwFf+ZLyw2WYVIO/dfxOIaugm6Ylrbr6E6P9tIVQBNP06BABDAENyIez2HlXw+biABhdUspWj0vXaSAOGN4E8urvNFuR21A1ug8gwVEZeQjfaojcQ1X+19rIshHBezP+Uw==
-ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=pass
- smtp.mailfrom=wdc.com; dmarc=pass action=none header.from=wdc.com; dkim=pass
- header.d=wdc.com; arc=none
+ id 1jkjnY-0002lj-94
+ for linux-mediatek@lists.infradead.org; Mon, 15 Jun 2020 07:44:53 +0000
+Received: by mail-wr1-x444.google.com with SMTP id t18so15985622wru.6
+ for <linux-mediatek@lists.infradead.org>; Mon, 15 Jun 2020 00:44:50 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=sharedspace.onmicrosoft.com; s=selector2-sharedspace-onmicrosoft-com;
- h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
- bh=rPrXFE2K3KaA7qL2ov68PWSD/9aopTG3HiemXZKwniI=;
- b=tzDBAnOpdbf+VJfEC113I9WkLG9K2TPS1QPI9bsdtpY00rRKxo15HKsFZih/lF3PY/0QNEuOfpgaV4xT0gdEzi3QFmkmM9TG4i8BYTNtIUXVYFI/0/IgzGZmuZtm1j+4prpa/mjyIOUQVSpV8s012Q7MfDojbW4praubzfeDSRA=
-Received: from SN6PR04MB4640.namprd04.prod.outlook.com (2603:10b6:805:a4::19)
- by SN6PR04MB4574.namprd04.prod.outlook.com (2603:10b6:805:a9::12)
- with Microsoft SMTP Server (version=TLS1_2,
- cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.3088.18; Mon, 15 Jun
- 2020 07:31:57 +0000
-Received: from SN6PR04MB4640.namprd04.prod.outlook.com
- ([fe80::9cbe:995f:c25f:d288]) by SN6PR04MB4640.namprd04.prod.outlook.com
- ([fe80::9cbe:995f:c25f:d288%6]) with mapi id 15.20.3088.028; Mon, 15 Jun 2020
- 07:31:57 +0000
-From: Avri Altman <Avri.Altman@wdc.com>
-To: Stanley Chu <stanley.chu@mediatek.com>, "linux-scsi@vger.kernel.org"
- <linux-scsi@vger.kernel.org>, "martin.petersen@oracle.com"
- <martin.petersen@oracle.com>, "alim.akhtar@samsung.com"
- <alim.akhtar@samsung.com>, "jejb@linux.ibm.com" <jejb@linux.ibm.com>,
- "asutoshd@codeaurora.org" <asutoshd@codeaurora.org>
-Subject: RE: [PATCH v3 0/2] scsi: ufs: Add trace event for UIC commands and
- cleanup UIC struct
-Thread-Topic: [PATCH v3 0/2] scsi: ufs: Add trace event for UIC commands and
- cleanup UIC struct
-Thread-Index: AQHWQuXCGsZjEECOEkK/CSP7H3WFf6jZSDGA
-Date: Mon, 15 Jun 2020 07:31:57 +0000
-Message-ID: <SN6PR04MB4640ABE5681594C4C1A53F7BFC9C0@SN6PR04MB4640.namprd04.prod.outlook.com>
-References: <20200615072235.23042-1-stanley.chu@mediatek.com>
-In-Reply-To: <20200615072235.23042-1-stanley.chu@mediatek.com>
-Accept-Language: en-US
-Content-Language: en-US
-X-MS-Has-Attach: 
-X-MS-TNEF-Correlator: 
-authentication-results: mediatek.com; dkim=none (message not signed)
- header.d=none;mediatek.com; dmarc=none action=none header.from=wdc.com;
-x-originating-ip: [212.25.79.133]
-x-ms-publictraffictype: Email
-x-ms-office365-filtering-ht: Tenant
-x-ms-office365-filtering-correlation-id: 3e02f386-0fe0-489c-1964-08d810fe2f4e
-x-ms-traffictypediagnostic: SN6PR04MB4574:
-x-microsoft-antispam-prvs: <SN6PR04MB4574EA21B24468D0B6776E72FC9C0@SN6PR04MB4574.namprd04.prod.outlook.com>
-wdcipoutbound: EOP-TRUE
-x-ms-oob-tlc-oobclassifiers: OLM:3968;
-x-forefront-prvs: 04359FAD81
-x-ms-exchange-senderadcheck: 1
-x-microsoft-antispam: BCL:0;
-x-microsoft-antispam-message-info: iFGwxXstVhtqYVPlYXCpHkhKWy7ZDoxcIJ2xqVqfWzOuN3Y8T7RDh1fdzaUVtJqrVdocZ8oznBRS5u0O5kbJO/SMU/9y+3sIH9Dd4jyLvSMFb/yZsV7OLBAhDLKzD0sEVMqxnkTbGSCoeJompHCZZPd/NmXXAmCptLyOFU22z3TE5wl+nv2CEt7sdY8LQIGm1g4LEnAF2qtIQljQ/6m17DBkvO7Did5qK12OCQQB2RXPMdktYRRewOBdXIdWjcXhX29Csd9DrLBMrurhiWIKxJtsP0Gn+BNp/lHa805vAPD7E0QRKFGPrCP2SfXJflnx
-x-forefront-antispam-report: CIP:255.255.255.255; CTRY:; LANG:en; SCL:1; SRV:;
- IPV:NLI; SFV:NSPM; H:SN6PR04MB4640.namprd04.prod.outlook.com; PTR:; CAT:NONE;
- SFTY:;
- SFS:(4636009)(366004)(376002)(346002)(39860400002)(136003)(396003)(316002)(33656002)(186003)(6506007)(2906002)(7696005)(83380400001)(478600001)(4326008)(110136005)(54906003)(26005)(76116006)(66556008)(64756008)(66446008)(8676002)(66946007)(71200400001)(66476007)(8936002)(86362001)(4744005)(52536014)(55016002)(5660300002)(7416002)(9686003);
- DIR:OUT; SFP:1102; 
-x-ms-exchange-antispam-messagedata: g8MtzIJDRVTzUb5kg1m7eqQRonfTDkBuMoHUQjU6H7xb/TyYU+cK5SRQAnkihqm0+558F2n23UZRgqN2mV+tFa5Bexm8vxPRC1hvPXQP+HTldDHZvYzXXdW6tP2nNZBeM1n95EzCXA4L+QWRYbLhqFtxdfwzCRYr6R/1BE/rj+whur7JxszRu4TuStxfXlDswvccBGioGw6bv0XGng4004hTEqR71GMpaGBtIG5t+K3ClaEiTtciw9HjNwzaKdwWVNCG624gOiTM8UdE8k+4VyooeaslDVTofwDAtCqRLpEBQRUPxS5QdC9iTSU99F6lpskAiqXME+PmeYg/ieX3cI1OKII+UF9GHFwjX/xhmokbbjIvRk602FMG42HMsNBeVPnxM5FDw7mkvgmcS3Q1pGYcR4Nd3/nspJyXSr72fofHBjnrPhBmzt0BdBmBXfvOy53dbVuAYWQRcrzy+sRZ2ZB14jXGNxZxMmFQ3Es1jPE=
-x-ms-exchange-transport-forked: True
+ d=bgdev-pl.20150623.gappssmtp.com; s=20150623;
+ h=from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=wLML/7CffDFBhoqwyzC9IFFqzUtN0PnXKPbU0+WecW8=;
+ b=ngWpM4Vd5ByUkX1bUWebKGgG0vYWezYAT7vWvhgdaTo8IBZujJgVraWXo6Ox6Yb/+9
+ cR5YyPmPnGK45v6sM/dK+T+hW3FTrjwS10sazaftNflzQNQFOABhYSmVSimImmg7Euyf
+ NWVYY4ypkR2JseWN9ChtJP2Zy7FLfsT19Qf0ZhjPbmHYo5yH0kRts0nNcfii4NqLMQfR
+ V0ShmXbG7Hr4Fn6EETdOiX0bcZ9x7AHb8xGgXyVHxF7rsg+vYDrbgjynUJQAntcaQYal
+ CY/a/rom9ousRJ9Z25dSmcaGbQViMd2DjSbRFsfm6lLnvb+dsVxLdfbwJedlIfVqAzC/
+ sDYw==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:from:to:cc:subject:date:message-id:mime-version
+ :content-transfer-encoding;
+ bh=wLML/7CffDFBhoqwyzC9IFFqzUtN0PnXKPbU0+WecW8=;
+ b=uEw+sFP8ZLD6o6Dz3397uER3481opN88rit/h7mxmLSlXKr+3Q2dwcGcZmFlqVqQDo
+ aShfjteWSlkzF1jxO9QrFqpaGCEGOYFh8zMjM9qh8ZEl+AijgfThOPgHcbWLwXCofxRK
+ KEDR9MNkmyA4K5no+O4ByP5khuMVrZF58lTc6gMr+kQ6APGUk8ncTxafLa3c+OZil/gn
+ bnroQxJYmP0RxUCxMXMqyj/pacr1Ye3ZMoLC7HDoXnDx2+3nKmjhCGalgkSqXHEQnW6B
+ QAIiFuUQcCqvPzmWSbt4bomsRcpPw6LuOR3Z1UeoLl1ap4dnv8q1sGYTHd2Hg7HeB9WB
+ ocHw==
+X-Gm-Message-State: AOAM530hbwnrmVtaCuG5A1Pe59h+QeInVfdn5Kmqw/DHvwCeTpSJ3ScE
+ s7FiJWBcUUmGPW9BY7LKWCHqTA==
+X-Google-Smtp-Source: ABdhPJw4+6gHE62n11a4DToU9lNCniCgkvi+x33BOd94wC0+HgPDvk1KRFmpSkPOQNQpytwNGESEAg==
+X-Received: by 2002:a5d:6150:: with SMTP id y16mr29528478wrt.219.1592207089789; 
+ Mon, 15 Jun 2020 00:44:49 -0700 (PDT)
+Received: from localhost.localdomain (lfbn-nic-1-65-232.w2-15.abo.wanadoo.fr.
+ [2.15.156.232])
+ by smtp.gmail.com with ESMTPSA id z16sm23227610wrm.70.2020.06.15.00.44.48
+ (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+ Mon, 15 Jun 2020 00:44:49 -0700 (PDT)
+From: Bartosz Golaszewski <brgl@bgdev.pl>
+To: Thomas Gleixner <tglx@linutronix.de>, Jason Cooper <jason@lakedaemon.net>,
+ Marc Zyngier <maz@kernel.org>, Matthias Brugger <matthias.bgg@gmail.com>
+Subject: [RESEND PATCH] irqchip/irq-mtk-sysirq: replace spinlock with
+ raw_spinlock
+Date: Mon, 15 Jun 2020 09:44:45 +0200
+Message-Id: <20200615074445.3579-1-brgl@bgdev.pl>
+X-Mailer: git-send-email 2.26.1
 MIME-Version: 1.0
-X-OriginatorOrg: wdc.com
-X-MS-Exchange-CrossTenant-Network-Message-Id: 3e02f386-0fe0-489c-1964-08d810fe2f4e
-X-MS-Exchange-CrossTenant-originalarrivaltime: 15 Jun 2020 07:31:57.3180 (UTC)
-X-MS-Exchange-CrossTenant-fromentityheader: Hosted
-X-MS-Exchange-CrossTenant-id: b61c8803-16f3-4c35-9b17-6f65f441df86
-X-MS-Exchange-CrossTenant-mailboxtype: HOSTED
-X-MS-Exchange-CrossTenant-userprincipalname: OGvK99Qa9rdojRwJ5mYFdwZ4r+0JI/TCSjzHfwfVBdfwupKN0b1DF1Y4BeHBviTyIw1IzwiqgtpSH2QkpWYhvw==
-X-MS-Exchange-Transport-CrossTenantHeadersStamped: SN6PR04MB4574
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200615_003207_015601_186DDFAB 
-X-CRM114-Status: GOOD (  13.28  )
-X-Spam-Score: -2.5 (--)
+X-CRM114-CacheID: sfid-20200615_004452_313899_3C658352 
+X-CRM114-Status: GOOD (  11.45  )
+X-Spam-Score: 0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
- Content analysis details:   (-2.5 points)
+ Content analysis details:   (0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -2.3 RCVD_IN_DNSWL_MED      RBL: Sender listed at https://www.dnswl.org/,
- medium trust [216.71.153.141 listed in list.dnswl.org]
- -0.0 SPF_PASS               SPF: sender matches SPF record
- -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [2a00:1450:4864:20:0:0:0:444 listed in]
+ [list.dnswl.org]
+ 0.0 SPF_NONE               SPF: sender does not publish an SPF Record
+ 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -146,55 +93,106 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: "bvanassche@acm.org" <bvanassche@acm.org>,
- "andy.teng@mediatek.com" <andy.teng@mediatek.com>,
- "cc.chou@mediatek.com" <cc.chou@mediatek.com>,
- "chun-hung.wu@mediatek.com" <chun-hung.wu@mediatek.com>,
- "kuohong.wang@mediatek.com" <kuohong.wang@mediatek.com>,
- "linux-kernel@vger.kernel.org" <linux-kernel@vger.kernel.org>,
- "cang@codeaurora.org" <cang@codeaurora.org>,
- "linux-mediatek@lists.infradead.org" <linux-mediatek@lists.infradead.org>,
- "peter.wang@mediatek.com" <peter.wang@mediatek.com>,
- "matthias.bgg@gmail.com" <matthias.bgg@gmail.com>,
- "chaotian.jing@mediatek.com" <chaotian.jing@mediatek.com>,
- "linux-arm-kernel@lists.infradead.org" <linux-arm-kernel@lists.infradead.org>,
- "beanhuo@micron.com" <beanhuo@micron.com>
+Cc: Stephane Le Provost <stephane.leprovost@mediatek.com>,
+ Bartosz Golaszewski <bgolaszewski@baylibre.com>,
+ Pedro Tsai <pedro.tsai@mediatek.com>, linux-kernel@vger.kernel.org,
+ Fabien Parent <fparent@baylibre.com>, linux-mediatek@lists.infradead.org,
+ Andrew Perepech <andrew.perepech@mediatek.com>,
+ linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Looks good to me.
-Thanks,
-Avri
+From: Bartosz Golaszewski <bgolaszewski@baylibre.com>
 
-> 
-> 
-> Hi,
-> This series adds trace event for UIC commands and do a small cleanup in
-> struct uic_command.
-> 
-> v2 -> v3:
->   - Refactor "complete" event hooks in ufshcd_uic_cmd_compl() (Avri Altman)
-> 
-> v1 -> v2:
->   - Rename "uic_send" to "send" and "uic_complete" to "complete"
->   - Move "send" trace before UIC command is sent otherwise "send" trace may
-> log incorrect arguments
->   - Move "complete" trace to UIC interrupt handler to make logging time
-> precise
-> 
-> Stanley Chu (2):
->   scsi: ufs: Remove unused field in struct uic_command
->   scsi: ufs: Add trace event for UIC commands
-> 
->  drivers/scsi/ufs/ufshcd.c  | 26 ++++++++++++++++++++++++++
->  drivers/scsi/ufs/ufshcd.h  |  4 ----
->  include/trace/events/ufs.h | 31 +++++++++++++++++++++++++++++++
->  3 files changed, 57 insertions(+), 4 deletions(-)
-> 
-> --
-> 2.18.0
+This driver may take a regular spinlock when a raw spinlock
+(irq_desc->lock) is already taken which results in the following
+lockdep splat:
+
+=============================
+[ BUG: Invalid wait context ]
+5.7.0-rc7 #1 Not tainted
+-----------------------------
+swapper/0/0 is trying to lock:
+ffffff800303b798 (&chip_data->lock){....}-{3:3}, at: mtk_sysirq_set_type+0x48/0xc0
+other info that might help us debug this:
+context-{5:5}
+2 locks held by swapper/0/0:
+ #0: ffffff800302ee68 (&desc->request_mutex){....}-{4:4}, at: __setup_irq+0xc4/0x8a0
+ #1: ffffff800302ecf0 (&irq_desc_lock_class){....}-{2:2}, at: __setup_irq+0xe4/0x8a0
+stack backtrace:
+CPU: 0 PID: 0 Comm: swapper/0 Not tainted 5.7.0-rc7 #1
+Hardware name: Pumpkin MT8516 (DT)
+Call trace:
+ dump_backtrace+0x0/0x180
+ show_stack+0x14/0x20
+ dump_stack+0xd0/0x118
+ __lock_acquire+0x8c8/0x2270
+ lock_acquire+0xf8/0x470
+ _raw_spin_lock_irqsave+0x50/0x78
+ mtk_sysirq_set_type+0x48/0xc0
+ __irq_set_trigger+0x58/0x170
+ __setup_irq+0x420/0x8a0
+ request_threaded_irq+0xd8/0x190
+ timer_of_init+0x1e8/0x2c4
+ mtk_gpt_init+0x5c/0x1dc
+ timer_probe+0x74/0xf4
+ time_init+0x14/0x44
+ start_kernel+0x394/0x4f0
+
+Replace the spinlock_t with raw_spinlock_t to avoid this warning.
+
+Signed-off-by: Bartosz Golaszewski <bgolaszewski@baylibre.com>
+---
+Rebased on top of v5.8-rc1.
+
+ drivers/irqchip/irq-mtk-sysirq.c | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+diff --git a/drivers/irqchip/irq-mtk-sysirq.c b/drivers/irqchip/irq-mtk-sysirq.c
+index 73eae5966a40..6ff98b87e5c0 100644
+--- a/drivers/irqchip/irq-mtk-sysirq.c
++++ b/drivers/irqchip/irq-mtk-sysirq.c
+@@ -15,7 +15,7 @@
+ #include <linux/spinlock.h>
+ 
+ struct mtk_sysirq_chip_data {
+-	spinlock_t lock;
++	raw_spinlock_t lock;
+ 	u32 nr_intpol_bases;
+ 	void __iomem **intpol_bases;
+ 	u32 *intpol_words;
+@@ -37,7 +37,7 @@ static int mtk_sysirq_set_type(struct irq_data *data, unsigned int type)
+ 	reg_index = chip_data->which_word[hwirq];
+ 	offset = hwirq & 0x1f;
+ 
+-	spin_lock_irqsave(&chip_data->lock, flags);
++	raw_spin_lock_irqsave(&chip_data->lock, flags);
+ 	value = readl_relaxed(base + reg_index * 4);
+ 	if (type == IRQ_TYPE_LEVEL_LOW || type == IRQ_TYPE_EDGE_FALLING) {
+ 		if (type == IRQ_TYPE_LEVEL_LOW)
+@@ -53,7 +53,7 @@ static int mtk_sysirq_set_type(struct irq_data *data, unsigned int type)
+ 
+ 	data = data->parent_data;
+ 	ret = data->chip->irq_set_type(data, type);
+-	spin_unlock_irqrestore(&chip_data->lock, flags);
++	raw_spin_unlock_irqrestore(&chip_data->lock, flags);
+ 	return ret;
+ }
+ 
+@@ -212,7 +212,7 @@ static int __init mtk_sysirq_of_init(struct device_node *node,
+ 		ret = -ENOMEM;
+ 		goto out_free_which_word;
+ 	}
+-	spin_lock_init(&chip_data->lock);
++	raw_spin_lock_init(&chip_data->lock);
+ 
+ 	return 0;
+ 
+-- 
+2.26.1
+
 
 _______________________________________________
 Linux-mediatek mailing list
