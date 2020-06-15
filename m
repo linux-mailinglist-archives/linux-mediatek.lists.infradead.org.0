@@ -2,43 +2,43 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id D65C71F8E4B
-	for <lists+linux-mediatek@lfdr.de>; Mon, 15 Jun 2020 08:48:44 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 970B01F8E38
+	for <lists+linux-mediatek@lfdr.de>; Mon, 15 Jun 2020 08:48:26 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=LbHHd1Ycsje66V8zIrSVWbp1mtdwmjnwBj+JRcl/D8g=; b=Y8K0hIXmDHFdkd
-	uw/+KxDLO2X10s6nbn1ybiS6AYDCefzeKESYAZ0wRGTzMr0p8QcS7qbgICoDOt2wI1rj6QaOQE+n9
-	bglR3bsD1hkX6Y9qrbW2tzaHRf3B7kFy1MZHlGjkuolIPZfecW5TAMz+X5P0h3wZeItuLh4jZBreg
-	acV7yqYxAnS/vpvaKP2TShhn64y5sy/0OKkC1abTRS1ZI4SXZrAwqZe/yHrz0XTXAwFVHM3EbaXDL
-	gO8LY5mctqNEbijptMgbUXNhlfp+7IQJB1VRh0/+EQKJmZcBFDuI2WBK82WUK5dpQJpR/4LCsVfdv
-	dSA6nTkoYNsSu2yYKlfA==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=imCnus/Fe6E5XlpOn2u2eOCksgjmc9mfh2Gy7xg+ORM=; b=d2oKWUVC35iQSb
+	iB+PgDQeFMSb9wVDwfD2jFHCqwQtkl5Z9QEWvDZL5bUdACrnXCGafRQnfQdryR6NTJk2nbFCWA/2Q
+	Ira0GP99l4so/gd35WmlqTSSLHHlYKVpq/szTaaltCD2bEeTNb4ShJDzaQoBHWOc9zp19XBE+vgAT
+	JqZQqDiTRyMvYfDIQjNdU62Ic3nCC6Bb7p/ILXeYsagdAzP4rHw3dLtusIFyFYNrclXoS8FzWBm6b
+	BJh4ZnI5jqxdlIZOl2Bqz3f/Z8WS0SQNBP2ATXbdUqIEY6oZB5dPe4UMJVveZQF83luddBfe64tJF
+	nAY+D3o8Lce89ZQBGeVw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jkiv8-0002wK-1L; Mon, 15 Jun 2020 06:48:38 +0000
+	id 1jkiun-0002ZE-54; Mon, 15 Jun 2020 06:48:17 +0000
 Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jkiua-0002Mf-K7; Mon, 15 Jun 2020 06:48:06 +0000
-X-UUID: a4acf494c8104481977360e211496ff0-20200614
+ id 1jkiuY-0002NP-Eu; Mon, 15 Jun 2020 06:48:03 +0000
+X-UUID: 623e0f63732545d9a1b96217e6465b93-20200614
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
  s=dk; 
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:Subject:CC:To:From;
- bh=6sskvS9E8A91kA1DIsgQnE7Mcroj4DNNwvI11p317Kg=; 
- b=pfynxBDm5eu4j6Km9k3s09pLNgy4vcncQBh+ce9dnMaTBNmJWGGfsOgrPmIeZSh3vS7I5+uhWmPlaMG6tekSFJLffFZ6jaTTTV5WfmZQee0FoVP7Zl97FkZdZ5zxnCbUgp2WD3fF5AkJcr7ycZrUvU0bYCt5NunEP0xookaDEg4=;
-X-UUID: a4acf494c8104481977360e211496ff0-20200614
+ h=Content-Transfer-Encoding:Content-Type:MIME-Version:References:In-Reply-To:Message-ID:Date:Subject:CC:To:From;
+ bh=NX2+h82NMuVzjAxKBumSAQWD3ozofhPE4z0/RVmqYDE=; 
+ b=n22tBQ8JucIlMt+hec5sT9QgpLKWnCYCCavG+/4iV7DxLtlKEU/xun6o0f2CLxyiYgX+o45uFNRJUuzf5x14M35x6KJ3O+OpNET//TCwYD+VKZSBJA0a+Q2xWolNivMRTf0NyvcAadPm1Ct8XIoo4xs07/C9rdhAixi0Y7G3Oj0=;
+X-UUID: 623e0f63732545d9a1b96217e6465b93-20200614
 Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw01.mediatek.com
  (envelope-from <stanley.chu@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 280066135; Sun, 14 Jun 2020 22:47:57 -0800
-Received: from MTKMBS02N2.mediatek.inc (172.21.101.101) by
+ with ESMTP id 302216593; Sun, 14 Jun 2020 22:47:57 -0800
+Received: from MTKMBS02N1.mediatek.inc (172.21.101.77) by
  MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
- 15.0.1497.2; Sun, 14 Jun 2020 23:47:56 -0700
+ 15.0.1497.2; Sun, 14 Jun 2020 23:47:55 -0700
 Received: from mtkcas08.mediatek.inc (172.21.101.126) by
- mtkmbs02n2.mediatek.inc (172.21.101.101) with Microsoft SMTP Server (TLS) id
- 15.0.1497.2; Mon, 15 Jun 2020 14:47:54 +0800
+ mtkmbs02n1.mediatek.inc (172.21.101.77) with Microsoft SMTP Server (TLS) id
+ 15.0.1497.2; Mon, 15 Jun 2020 14:47:53 +0800
 Received: from mtksdccf07.mediatek.inc (172.21.84.99) by mtkcas08.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1497.2 via
  Frontend Transport; Mon, 15 Jun 2020 14:47:53 +0800
@@ -46,17 +46,17 @@ From: Stanley Chu <stanley.chu@mediatek.com>
 To: <linux-scsi@vger.kernel.org>, <martin.petersen@oracle.com>,
  <avri.altman@wdc.com>, <alim.akhtar@samsung.com>, <jejb@linux.ibm.com>,
  <asutoshd@codeaurora.org>
-Subject: [PATCH v2 0/2] scsi: ufs: Add trace event for UIC commands and
- cleanup UIC struct
-Date: Mon, 15 Jun 2020 14:47:51 +0800
-Message-ID: <20200615064753.20935-1-stanley.chu@mediatek.com>
+Subject: [PATCH v2 1/2] scsi: ufs: Remove unused field in struct uic_command
+Date: Mon, 15 Jun 2020 14:47:52 +0800
+Message-ID: <20200615064753.20935-2-stanley.chu@mediatek.com>
 X-Mailer: git-send-email 2.18.0
+In-Reply-To: <20200615064753.20935-1-stanley.chu@mediatek.com>
+References: <20200615064753.20935-1-stanley.chu@mediatek.com>
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: 8D5C5DFC44D1CCFA7C459F1F145365925C51A8DB378C958FCB620F0E9436551A2000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200614_234804_665166_61E2C486 
-X-CRM114-Status: UNSURE (   5.67  )
+X-CRM114-CacheID: sfid-20200614_234802_502990_D9089382 
+X-CRM114-Status: UNSURE (   5.62  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
@@ -99,23 +99,36 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Hi,
-This series adds trace event for UIC commands and do a small cleanup in struct uic_command.
+Remove unused field "cmd_active" and "result" in struct ufs_command.
 
-v1 -> v2:
-  - Rename "uic_send" to "send" and "uic_complete" to "complete"
-  - Move "send" trace before UIC command is sent otherwise "send" trace may log incorrect arguments
-  - Move "complete" trace to UIC interrupt handler to make logging time precise
+Signed-off-by: Stanley Chu <stanley.chu@mediatek.com>
+Reviewed-by: Alim Akhtar <alim.akhtar@samsung.com>
+---
+ drivers/scsi/ufs/ufshcd.h | 4 ----
+ 1 file changed, 4 deletions(-)
 
-Stanley Chu (2):
-  scsi: ufs: Remove unused field in struct uic_command
-  scsi: ufs: Add trace event for UIC commands
-
- drivers/scsi/ufs/ufshcd.c  | 26 ++++++++++++++++++++++++++
- drivers/scsi/ufs/ufshcd.h  |  4 ----
- include/trace/events/ufs.h | 31 +++++++++++++++++++++++++++++++
- 3 files changed, 57 insertions(+), 4 deletions(-)
-
+diff --git a/drivers/scsi/ufs/ufshcd.h b/drivers/scsi/ufs/ufshcd.h
+index bf97d616e597..7fa35c78342b 100644
+--- a/drivers/scsi/ufs/ufshcd.h
++++ b/drivers/scsi/ufs/ufshcd.h
+@@ -88,8 +88,6 @@ enum dev_cmd_type {
+  * @argument1: UIC command argument 1
+  * @argument2: UIC command argument 2
+  * @argument3: UIC command argument 3
+- * @cmd_active: Indicate if UIC command is outstanding
+- * @result: UIC command result
+  * @done: UIC command completion
+  */
+ struct uic_command {
+@@ -97,8 +95,6 @@ struct uic_command {
+ 	u32 argument1;
+ 	u32 argument2;
+ 	u32 argument3;
+-	int cmd_active;
+-	int result;
+ 	struct completion done;
+ };
+ 
 -- 
 2.18.0
 _______________________________________________
