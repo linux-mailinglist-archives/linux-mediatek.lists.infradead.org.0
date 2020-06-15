@@ -2,43 +2,43 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id B4B8B1F9AD6
-	for <lists+linux-mediatek@lfdr.de>; Mon, 15 Jun 2020 16:51:15 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 33CD51F9AC0
+	for <lists+linux-mediatek@lfdr.de>; Mon, 15 Jun 2020 16:48:35 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=lOwJE4FniU9r2iL1EWLPo+zwwfQcpRH3bTWS1F/AMhs=; b=T6RJTX/CpoHwfg
-	H/FvcWKfy1qBdcr43hgRA8FwhNQ+qJOUWw5Y26UlGx/7v/3hWUO/+rhp/Uq6VGrnJ+EWOUZPll54s
-	OJi2VZurki0ZPfAglK1jnw4abqMZnZpnJEAmYpOk0ATwpR6Y4ILxYy/lZ3XZiJ9u6dCErtyqr4RYh
-	zgB21tiblqc6r8iTNv3pumi2tl9mxhpXi0cmFhNK+8ILrhFomfUtQUh5EDO0nkbilUTPCWJWXJIL8
-	25TZT/WO79R8NJBxARSjS6TU6Djh8osWmfMucLX6boeOiZYYab5huX5bIJDvKZ4Wli2GJRcu4a7r6
-	2HWYs7K0rhmA4H6Ofykg==;
+	List-Owner; bh=KMLTjd9qzn/tDgxOK3F/FPcyVdIZmibLAs3bleF/VOE=; b=pKvG9BPmAKrWd1
+	1iKlejYs+w2WmQD8EJZrOGYPElWxLc2UsNr3TcN9wmmeNeiafgCDxAZcbpiPDfi74l+yavy+iPJm3
+	cz5sR8FmT9xcSjrw4KFNSapfF9hk06ZIXWpnxOooa+ZLlds5cvA9aTI/SdVTRPbmNVZ7X47h2Z65m
+	kpR6+UkbBzIH//NFNwSKXNmGeYXzyS+vTn6PyokxOI5zqgp7CuiIydInwMQUWUsX+fsYHhAEaiMlc
+	1uzSFZ9ElFapPyTmIIA3LIrg5FMOTaqQBzb24m8MGGR9OSm0AbV0wjlZbstDefzQDgxpwOSCMTKaD
+	9Uh4xyNLrzmqivMPNVYw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jkqS4-0008Hc-C5; Mon, 15 Jun 2020 14:51:08 +0000
+	id 1jkqPP-0004l3-DM; Mon, 15 Jun 2020 14:48:23 +0000
 Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jkqRt-00088I-2Q; Mon, 15 Jun 2020 14:50:58 +0000
-X-UUID: 036107b04f054aff822aa8faf953a253-20200615
+ id 1jkqPD-0004bi-AM; Mon, 15 Jun 2020 14:48:12 +0000
+X-UUID: 441fc905e68f4c08b5968153ab3e5a81-20200615
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
  s=dk; 
  h=Content-Transfer-Encoding:Content-Type:MIME-Version:References:In-Reply-To:Message-ID:Date:Subject:CC:To:From;
- bh=K9jHs+9H91saKQrMUULPDpgsjmfGksPsDZmJk9xUKNo=; 
- b=nxflQnvciSd75PZ6THLHoH0qJQQZ8wiNp3cMhoq6qDfMmb1yyVZMavRUA0RGPH3KnF8L+NSMoAYpJMxU8cXtxkzni6dF4bgc3ShZDFh8zQlmrzjwP62A86YZ3P8JL4Tse4dXRM5o9LO0djgYFVUC3UvD46WHi5B5j51Jn1xlp94=;
-X-UUID: 036107b04f054aff822aa8faf953a253-20200615
+ bh=omTxP510z3SeJM3158srmfQljfQpeJ6GXR7o8i88WeQ=; 
+ b=kzf1P9ZuIYgprokM8jWU8qEWiL8zEx1ROosCU3gLlj3E2Hd/eSqgWu6bDAeJBMswRSo0PapkmPYlYkq6d5Luf5IqajA2IOXpY00CCXGQm7D0j8JAPpp0IKXOAT2A6NuhtzsjlmKT49cFBh31e5UdqUKo0rZsNHy4+UoY397IoJU=;
+X-UUID: 441fc905e68f4c08b5968153ab3e5a81-20200615
 Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
  (envelope-from <stanley.chu@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 382958377; Mon, 15 Jun 2020 06:50:53 -0800
-Received: from MTKMBS02N1.mediatek.inc (172.21.101.77) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
+ with ESMTP id 886568649; Mon, 15 Jun 2020 06:48:08 -0800
+Received: from mtkmbs05n2.mediatek.inc (172.21.101.140) by
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
  15.0.1497.2; Mon, 15 Jun 2020 07:48:06 -0700
 Received: from mtkcas07.mediatek.inc (172.21.101.84) by
- mtkmbs02n1.mediatek.inc (172.21.101.77) with Microsoft SMTP Server (TLS) id
- 15.0.1497.2; Mon, 15 Jun 2020 22:48:03 +0800
+ mtkmbs05n2.mediatek.inc (172.21.101.140) with Microsoft SMTP Server (TLS) id
+ 15.0.1497.2; Mon, 15 Jun 2020 22:48:04 +0800
 Received: from mtksdccf07.mediatek.inc (172.21.84.99) by mtkcas07.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1497.2 via
  Frontend Transport; Mon, 15 Jun 2020 22:48:03 +0800
@@ -46,19 +46,18 @@ From: Stanley Chu <stanley.chu@mediatek.com>
 To: <linux-scsi@vger.kernel.org>, <martin.petersen@oracle.com>,
  <avri.altman@wdc.com>, <alim.akhtar@samsung.com>, <jejb@linux.ibm.com>,
  <asutoshd@codeaurora.org>
-Subject: [PATCH v2 1/3] scsi: ufs: Remove redundant label "out" in
- ufshcd_make_hba_operational()
-Date: Mon, 15 Jun 2020 22:48:03 +0800
-Message-ID: <20200615144805.6921-2-stanley.chu@mediatek.com>
+Subject: [PATCH v2 2/3] scsi: ufs: Manage and export UFS debugging information
+ dump
+Date: Mon, 15 Jun 2020 22:48:04 +0800
+Message-ID: <20200615144805.6921-3-stanley.chu@mediatek.com>
 X-Mailer: git-send-email 2.18.0
 In-Reply-To: <20200615144805.6921-1-stanley.chu@mediatek.com>
 References: <20200615144805.6921-1-stanley.chu@mediatek.com>
 MIME-Version: 1.0
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200615_075057_116852_AE29FED6 
-X-CRM114-Status: UNSURE (   6.39  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20200615_074811_368714_3CEED184 
+X-CRM114-Status: GOOD (  11.66  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
@@ -100,29 +99,162 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Label "out" is redundant in ufshcd_make_hba_operational() and
-can be removed.
+UFS has many functions to print different types of debugging
+information. Some information is helpful for vendor drivers and
+can be dumped if something wrong in vendor-specific flows.
+
+To have minimum and most simple exported interface for vendor
+drivers, create a single and unified entrance to most
+debugging functions, and then export the entry function.
 
 Signed-off-by: Stanley Chu <stanley.chu@mediatek.com>
 ---
- drivers/scsi/ufs/ufshcd.c | 2 --
- 1 file changed, 2 deletions(-)
+ drivers/scsi/ufs/ufshcd.c | 49 +++++++++++++++++++++++----------------
+ drivers/scsi/ufs/ufshcd.h |  8 +++++++
+ 2 files changed, 37 insertions(+), 20 deletions(-)
 
 diff --git a/drivers/scsi/ufs/ufshcd.c b/drivers/scsi/ufs/ufshcd.c
-index 1e1316ba7082..152ae7f5ae86 100644
+index 152ae7f5ae86..5158c496cf95 100644
 --- a/drivers/scsi/ufs/ufshcd.c
 +++ b/drivers/scsi/ufs/ufshcd.c
-@@ -4258,10 +4258,8 @@ int ufshcd_make_hba_operational(struct ufs_hba *hba)
+@@ -573,6 +573,19 @@ static void ufshcd_print_pwr_info(struct ufs_hba *hba)
+ 		 hba->pwr_info.hs_rate);
+ }
+ 
++void ufshcd_print_info(struct ufs_hba *hba, enum ufs_info_item flags)
++{
++	if (flags & UFS_INFO_HOST_STATE)
++		ufshcd_print_host_state(hba);
++	if (flags & UFS_INFO_HOST_REGS)
++		ufshcd_print_host_regs(hba);
++	if (flags & UFS_INFO_PWR)
++		ufshcd_print_pwr_info(hba);
++	if (flags & UFS_INFO_TMRS)
++		ufshcd_print_tmrs(hba, hba->outstanding_tasks);
++}
++EXPORT_SYMBOL_GPL(ufshcd_print_info);
++
+ void ufshcd_delay_us(unsigned long us, unsigned long tolerance)
+ {
+ 	if (!us)
+@@ -3783,11 +3796,9 @@ static int ufshcd_uic_pwr_ctrl(struct ufs_hba *hba, struct uic_command *cmd)
+ 		ret = (status != PWR_OK) ? status : -1;
+ 	}
+ out:
+-	if (ret) {
+-		ufshcd_print_host_state(hba);
+-		ufshcd_print_pwr_info(hba);
+-		ufshcd_print_host_regs(hba);
+-	}
++	if (ret)
++		ufshcd_print_info(hba, UFS_INFO_HOST_STATE |
++				  UFS_INFO_HOST_REGS | UFS_INFO_PWR);
+ 
+ 	spin_lock_irqsave(hba->host->host_lock, flags);
+ 	hba->active_uic_cmd = NULL;
+@@ -4454,7 +4465,7 @@ static int ufshcd_link_startup(struct ufs_hba *hba)
+ 
+ 	/* Mark that link is up in PWM-G1, 1-lane, SLOW-AUTO mode */
+ 	ufshcd_init_pwr_info(hba);
+-	ufshcd_print_pwr_info(hba);
++	ufshcd_print_info(hba, UFS_INFO_PWR);
+ 
+ 	if (hba->quirks & UFSHCD_QUIRK_BROKEN_LCC) {
+ 		ret = ufshcd_disable_device_tx_lcc(hba);
+@@ -4471,9 +4482,8 @@ static int ufshcd_link_startup(struct ufs_hba *hba)
+ out:
+ 	if (ret) {
+ 		dev_err(hba->dev, "link startup failed %d\n", ret);
+-		ufshcd_print_host_state(hba);
+-		ufshcd_print_pwr_info(hba);
+-		ufshcd_print_host_regs(hba);
++		ufshcd_print_info(hba, UFS_INFO_HOST_STATE |
++				  UFS_INFO_HOST_REGS | UFS_INFO_PWR);
+ 	}
+ 	return ret;
+ }
+@@ -4817,8 +4827,8 @@ ufshcd_transfer_rsp_status(struct ufs_hba *hba, struct ufshcd_lrb *lrbp)
  		dev_err(hba->dev,
- 			"Host controller not ready to process requests");
- 		err = -EIO;
--		goto out;
+ 				"OCS error from controller = %x for tag %d\n",
+ 				ocs, lrbp->task_tag);
+-		ufshcd_print_host_regs(hba);
+-		ufshcd_print_host_state(hba);
++		ufshcd_print_info(hba, UFS_INFO_HOST_STATE |
++				  UFS_INFO_HOST_REGS);
+ 		break;
+ 	} /* end of switch */
+ 
+@@ -5801,9 +5811,9 @@ static irqreturn_t ufshcd_check_errors(struct ufs_hba *hba)
+ 					__func__, hba->saved_err,
+ 					hba->saved_uic_err);
+ 
+-				ufshcd_print_host_regs(hba);
+-				ufshcd_print_pwr_info(hba);
+-				ufshcd_print_tmrs(hba, hba->outstanding_tasks);
++				ufshcd_print_info(hba, UFS_INFO_HOST_REGS |
++						  UFS_INFO_PWR |
++						  UFS_INFO_TMRS);
+ 				ufshcd_print_trs(hba, hba->outstanding_reqs,
+ 							pr_prdt);
+ 			}
+@@ -6416,9 +6426,8 @@ static int ufshcd_abort(struct scsi_cmnd *cmd)
+ 	scsi_print_command(hba->lrb[tag].cmd);
+ 	if (!hba->req_abort_count) {
+ 		ufshcd_update_reg_hist(&hba->ufs_stats.task_abort, 0);
+-		ufshcd_print_host_regs(hba);
+-		ufshcd_print_host_state(hba);
+-		ufshcd_print_pwr_info(hba);
++		ufshcd_print_info(hba, UFS_INFO_HOST_STATE |
++				  UFS_INFO_HOST_REGS | UFS_INFO_PWR);
+ 		ufshcd_print_trs(hba, 1 << tag, true);
+ 	} else {
+ 		ufshcd_print_trs(hba, 1 << tag, false);
+@@ -7444,7 +7453,7 @@ static int ufshcd_probe_hba(struct ufs_hba *hba, bool async)
+ 					__func__, ret);
+ 			goto out;
+ 		}
+-		ufshcd_print_pwr_info(hba);
++		ufshcd_print_info(hba, UFS_INFO_PWR);
  	}
  
--out:
- 	return err;
+ 	/*
+@@ -8897,8 +8906,8 @@ int ufshcd_init(struct ufs_hba *hba, void __iomem *mmio_base, unsigned int irq)
+ 	err = ufshcd_hba_enable(hba);
+ 	if (err) {
+ 		dev_err(hba->dev, "Host controller enable failed\n");
+-		ufshcd_print_host_regs(hba);
+-		ufshcd_print_host_state(hba);
++		ufshcd_print_info(hba, UFS_INFO_HOST_STATE |
++				  UFS_INFO_HOST_REGS);
+ 		goto free_tmf_queue;
+ 	}
+ 
+diff --git a/drivers/scsi/ufs/ufshcd.h b/drivers/scsi/ufs/ufshcd.h
+index 7fa35c78342b..3450d9589602 100644
+--- a/drivers/scsi/ufs/ufshcd.h
++++ b/drivers/scsi/ufs/ufshcd.h
+@@ -817,6 +817,13 @@ static inline void ufshcd_rmwl(struct ufs_hba *hba, u32 mask, u32 val, u32 reg)
+ 	ufshcd_writel(hba, tmp, reg);
  }
- EXPORT_SYMBOL_GPL(ufshcd_make_hba_operational);
+ 
++enum ufs_info_item {
++	UFS_INFO_HOST_STATE = (1 << 0),
++	UFS_INFO_HOST_REGS  = (1 << 1),
++	UFS_INFO_PWR        = (1 << 2),
++	UFS_INFO_TMRS       = (1 << 3)
++};
++
+ int ufshcd_alloc_host(struct device *, struct ufs_hba **);
+ void ufshcd_dealloc_host(struct ufs_hba *);
+ int ufshcd_hba_enable(struct ufs_hba *hba);
+@@ -826,6 +833,7 @@ int ufshcd_make_hba_operational(struct ufs_hba *hba);
+ void ufshcd_remove(struct ufs_hba *);
+ int ufshcd_uic_hibern8_exit(struct ufs_hba *hba);
+ void ufshcd_delay_us(unsigned long us, unsigned long tolerance);
++void ufshcd_print_info(struct ufs_hba *hba, enum ufs_info_item flags);
+ int ufshcd_wait_for_register(struct ufs_hba *hba, u32 reg, u32 mask,
+ 				u32 val, unsigned long interval_us,
+ 				unsigned long timeout_ms);
 -- 
 2.18.0
 _______________________________________________
