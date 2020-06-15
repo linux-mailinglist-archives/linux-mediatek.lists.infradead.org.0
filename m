@@ -2,40 +2,42 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id B8E6E1FA188
-	for <lists+linux-mediatek@lfdr.de>; Mon, 15 Jun 2020 22:31:45 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 3D2061FA18B
+	for <lists+linux-mediatek@lfdr.de>; Mon, 15 Jun 2020 22:32:08 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=d2K1D/lOSMGxUuRmnu/QYSoLy6m57iewJpD+SA7HkVU=; b=pVi8srHtZlQ2u9
-	hCPZ2so/JO8OAIQWd8jCMFCpstM0BTkyE6ZUVZ3epYuEO9iK3xaCk0/b4Qdx2ysM5pEC95+jYK2sA
-	4J5oRJh4bEdQDg3TKi5WDXutu4ZGK5eNkpGXJFA4CtYy+t8jrMoVJ2zBpqdrgzxXbwhpSG7QENA+z
-	3bYA0VUb+eMNez1MDe0ypghaqKRFeOnvgPdbbrkPwtoHQx6QTwB+9uhulgogqCqG9f+VG5sjdRMJV
-	2tOQQbO1kpcoTC3ONbh6w4m6TfQg6R7516xzuX++CyAqXDm6Ee6Clj4jCfzJayf6EA4qoH5HeFwwV
-	ia1PGLrhVmzeKskJIs/w==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=cVeUr5aZ4yZT9MKKMfirkqRU7HrrznSvw49BwkBsDOE=; b=Y8/QyATNgxoUZ5
+	rTVtk3XSMkTjonJtIUNKgkhqMnr210K/8XmrRvXFernNXnAnAbwm88sCph2FfXdRTYr5CFYA+4MoU
+	E9ESFx/8J0fP92jPz7k4O6HFFnQjtJ1ELSCnfEJsADWN3EsE90AnPNHPEdb6UfK3rdSXjc/qJdg0H
+	V/lBmi/nHHuIc7rp7N1AVUyZ0ouSVQRGTa3Q+TMDe+KoluqD6Z3JDuItCYBUPRoUT64UjBbK6nlHS
+	fV2dhpfRuy7hi5vxbTnaMEwz+mAm60+UDyzkfUeSNTa9RbhXyMJPBtCIFWWniyFuht/EUwIqOW/Rf
+	k9A/i3Vfrc6OI6oKuagg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jkvlV-0007f6-K7; Mon, 15 Jun 2020 20:31:33 +0000
+	id 1jkvlv-00082F-TB; Mon, 15 Jun 2020 20:31:59 +0000
 Received: from bhuna.collabora.co.uk ([46.235.227.227])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jkvlI-0007V6-Ur; Mon, 15 Jun 2020 20:31:22 +0000
+ id 1jkvlJ-0007VG-T0; Mon, 15 Jun 2020 20:31:23 +0000
 Received: from [127.0.0.1] (localhost [127.0.0.1])
- (Authenticated sender: eballetbo) with ESMTPSA id 48A632A2CF6
+ (Authenticated sender: eballetbo) with ESMTPSA id E93AA2A2CFC
 From: Enric Balletbo i Serra <enric.balletbo@collabora.com>
 To: linux-kernel@vger.kernel.org,
 	Collabora Kernel ML <kernel@collabora.com>
-Subject: [RESEND PATCH v4 0/7] Convert mtk-dsi to drm_bridge API and get EDID
- for ps8640 bridge
-Date: Mon, 15 Jun 2020 22:31:01 +0200
-Message-Id: <20200615203108.786083-1-enric.balletbo@collabora.com>
+Subject: [RESEND PATCH v4 3/7] drm/mediatek: mtk_dsi: Rename bridge to
+ next_bridge
+Date: Mon, 15 Jun 2020 22:31:04 +0200
+Message-Id: <20200615203108.786083-4-enric.balletbo@collabora.com>
 X-Mailer: git-send-email 2.27.0
+In-Reply-To: <20200615203108.786083-1-enric.balletbo@collabora.com>
+References: <20200615203108.786083-1-enric.balletbo@collabora.com>
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200615_133121_125169_61DCEB53 
-X-CRM114-Status: GOOD (  12.21  )
+X-CRM114-CacheID: sfid-20200615_133122_061417_509A2264 
+X-CRM114-Status: GOOD (  11.81  )
 X-Spam-Score: -0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  Content analysis details:   (-0.0 points)
@@ -58,73 +60,73 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Chun-Kuang Hu <chunkuang.hu@kernel.org>,
- Jernej Skrabec <jernej.skrabec@siol.net>, drinkcat@chromium.org,
- Philipp Zabel <p.zabel@pengutronix.de>, Jonas Karlman <jonas@kwiboo.se>,
- David Airlie <airlied@linux.ie>, Thomas Zimmermann <tzimmermann@suse.de>,
- dri-devel@lists.freedesktop.org, Neil Armstrong <narmstrong@baylibre.com>,
- Maarten Lankhorst <maarten.lankhorst@linux.intel.com>,
- Maxime Ripard <mripard@kernel.org>, Andrzej Hajda <a.hajda@samsung.com>,
- linux-mediatek@lists.infradead.org,
- Laurent Pinchart <Laurent.pinchart@ideasonboard.com>,
- Daniel Vetter <daniel@ffwll.ch>, hsinyi@chromium.org, matthias.bgg@gmail.com,
+Cc: Chun-Kuang Hu <chunkuang.hu@kernel.org>, drinkcat@chromium.org,
+ Philipp Zabel <p.zabel@pengutronix.de>, David Airlie <airlied@linux.ie>,
+ dri-devel@lists.freedesktop.org, linux-mediatek@lists.infradead.org,
+ laurent.pinchart@ideasonboard.com, Daniel Vetter <daniel@ffwll.ch>,
+ hsinyi@chromium.org, matthias.bgg@gmail.com, Sam Ravnborg <sam@ravnborg.org>,
  linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-(This resend is to fix some trivial conflicts due the merge window)
+This is really a cosmetic change just to make a bit more readable the
+code after convert the driver to drm_bridge. The bridge variable name
+will be used by the encoder drm_bridge, and the chained bridge will be
+named next_bridge.
 
-The PS8640 dsi-to-eDP bridge driver is using the panel bridge API,
-however, not all the components in the chain have been ported to the
-drm_bridge API. Actually, when a panel is attached the default panel's mode
-is used, but in some cases we can't get display up if mode getting from
-eDP control EDID is not chosen.
+Signed-off-by: Enric Balletbo i Serra <enric.balletbo@collabora.com>
+Reviewed-by: Laurent Pinchart <laurent.pinchart@ideasonboard.com>
+Acked-by: Sam Ravnborg <sam@ravnborg.org>
+Reviewed-by: Chun-Kuang Hu <chunkuang.hu@kernel.org>
+---
 
-This series address that problem, first implements the .get_edid()
-callback in the PS8640 driver (which is not used until the conversion is
-done) and then, converts the Mediatek DSI driver to use the drm_bridge
-API.
-
-As far as I know, we're the only users of the mediatek dsi driver in
-mainline, so should be safe to switch to the new chain of drm_bridge API
-unconditionally.
-
-The patches has been tested on a Acer Chromebook R13 (Elm) running a
-Chrome OS userspace and checking that the valid EDID mode reported by
-the bridge is selected.
-
-Changes in v4:
-- Remove double call to drm_encoder_init(). (Chun-Kuang Hu)
-- Cleanup the encoder in mtk_dsi_unbind(). (Chun-Kuang Hu)
-
+Changes in v4: None
 Changes in v3:
 - Replace s/bridge/next bridge/ for comment. (Laurent Pinchart)
-- Add the bridge.type. (Laurent Pinchart)
-- Use next_bridge field to store the panel bridge. (Laurent Pinchart)
-- Add the bridge.type field. (Laurent Pinchart)
-- This patch requires https://lkml.org/lkml/2020/4/16/2080 to work
-  properly.
-- Move the bridge.type line to the patch that adds drm_bridge support. (Laurent Pinchart)
 
-Changes in v2:
-- Do not set connector_type for panel here. (Sam Ravnborg)
+Changes in v2: None
 
-Enric Balletbo i Serra (7):
-  drm/bridge: ps8640: Get the EDID from eDP control
-  drm/bridge_connector: Set default status connected for eDP connectors
-  drm/mediatek: mtk_dsi: Rename bridge to next_bridge
-  drm/mediatek: mtk_dsi: Convert to bridge driver
-  drm/mediatek: mtk_dsi: Use simple encoder
-  drm/mediatek: mtk_dsi: Use the drm_panel_bridge API
-  drm/mediatek: mtk_dsi: Create connector for bridges
+ drivers/gpu/drm/mediatek/mtk_dsi.c | 11 ++++++-----
+ 1 file changed, 6 insertions(+), 5 deletions(-)
 
- drivers/gpu/drm/bridge/parade-ps8640.c |  12 ++
- drivers/gpu/drm/drm_bridge_connector.c |   1 +
- drivers/gpu/drm/mediatek/mtk_dsi.c     | 269 ++++++++-----------------
- 3 files changed, 97 insertions(+), 185 deletions(-)
-
+diff --git a/drivers/gpu/drm/mediatek/mtk_dsi.c b/drivers/gpu/drm/mediatek/mtk_dsi.c
+index 270bf22c98feb..208f49bf14a01 100644
+--- a/drivers/gpu/drm/mediatek/mtk_dsi.c
++++ b/drivers/gpu/drm/mediatek/mtk_dsi.c
+@@ -183,7 +183,7 @@ struct mtk_dsi {
+ 	struct drm_encoder encoder;
+ 	struct drm_connector conn;
+ 	struct drm_panel *panel;
+-	struct drm_bridge *bridge;
++	struct drm_bridge *next_bridge;
+ 	struct phy *phy;
+ 
+ 	void __iomem *regs;
+@@ -894,9 +894,10 @@ static int mtk_dsi_create_conn_enc(struct drm_device *drm, struct mtk_dsi *dsi)
+ 	 */
+ 	dsi->encoder.possible_crtcs = 1;
+ 
+-	/* If there's a bridge, attach to it and let it create the connector */
+-	if (dsi->bridge) {
+-		ret = drm_bridge_attach(&dsi->encoder, dsi->bridge, NULL, 0);
++	/* If there's a next bridge, attach to it and let it create the connector */
++	if (dsi->next_bridge) {
++		ret = drm_bridge_attach(&dsi->encoder, dsi->next_bridge, NULL,
++					0);
+ 		if (ret) {
+ 			DRM_ERROR("Failed to attach bridge to drm\n");
+ 			goto err_encoder_cleanup;
+@@ -1177,7 +1178,7 @@ static int mtk_dsi_probe(struct platform_device *pdev)
+ 	}
+ 
+ 	ret = drm_of_find_panel_or_bridge(dev->of_node, 0, 0,
+-					  &dsi->panel, &dsi->bridge);
++					  &dsi->panel, &dsi->next_bridge);
+ 	if (ret)
+ 		goto err_unregister_host;
+ 
 -- 
 2.27.0
 
