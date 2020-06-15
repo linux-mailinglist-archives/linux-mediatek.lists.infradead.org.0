@@ -2,75 +2,61 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id E7ABE1F8D9A
-	for <lists+linux-mediatek@lfdr.de>; Mon, 15 Jun 2020 08:18:05 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 85CEF1F8E28
+	for <lists+linux-mediatek@lfdr.de>; Mon, 15 Jun 2020 08:48:00 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=4AtHOJwUy7cAJ/QGsVOnYVDStv8nh2g6+VVQf/2HLdI=; b=G1CvnwdeU/LoUF
-	YpfCE9uO0043Vx6BjvwoKPrr9/EbU9+aoyLg6HmVilGUc+NKhWTx0nid52bIARa0aXye3MQyR8T60
-	iXH7IpqUHpS5pkwA0WUAlO72h3Jwfomj7URxvKtfybGisyu77rytJRcQRy9zhv+HmoTKhvqFchE4s
-	bp9A/AfVzIFiw58r18ptjX1EawAJPmDrjBp5/aNDkS48L0IOftj9V2jdUVBvqzgvaBYvxfL6/hAtA
-	iMDpdwsf7mdf+EXWWvI80puzrDKhFqrNB6U0QnRauEn3/CRq3qAvPTzQgfN9DM+tAdx4hLlWos51u
-	e6Rykn6g9BCg7dHVe37A==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=tZCm+6Rb6jvVDlgOninIWfSZtGCdoGKw4RogZ8F/eB4=; b=ZdfeoEy5C+90y3
+	iSQaghnjyAJpHOigxchwXUEYwjQLb4INPp54rZDgb0GPB0dBTfjl2uao1kx7oO6Oe0U0FIwY4v//D
+	dtrSTqdXWs8CfrB3+m8nTxl1Mr9l1MVg0hcLqbMl5y11Lss0JB0tzCzQW3lLzBq6LHm7b8abpOtei
+	NiX2FfdODmAz/b3pbHmiKkyltGbbNNkrXY0HW8/rXdlxuU2lkfwiCIKJNv07UkAtmoux3w8u8PcRJ
+	R60Nf/PNDd7tjcJZOchR395i1T73pNvJew0x7fv3m6l8IvcsIxFLKiJ2/VonW2ZfbaFEVheyAnylI
+	mfFR/H2WujCDeoIjWdgw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jkiRL-0000yJ-2q; Mon, 15 Jun 2020 06:17:51 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
+	id 1jkiuP-0002Fs-P1; Mon, 15 Jun 2020 06:47:53 +0000
+Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jkiRH-0000xS-M3; Mon, 15 Jun 2020 06:17:49 +0000
-X-UUID: 4ffdd50c18af4656a46eefc0bfbb791b-20200614
-DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
- s=dk; 
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:References:In-Reply-To:Message-ID:Date:Subject:CC:To:From;
- bh=8E6iUgy1G5r0W+amwcAzOmYy/2hIRJmEje9glVMcWAE=; 
- b=b/X8KeEoJ94QKzFOYASCMzMn/nguGtHkwdi9D7frlPbA/VSjC8rvGQuQflitKCFsvC8qLQltFeQWJwzHhHFMm2Iwka/GPAMP1dr1OflTS3hLmTGwSt08KHMJmX4sa9l4bV3B5PZH9d8Zi0fo/BWyJhPqS2NsYwfNz+87voD7qIo=;
-X-UUID: 4ffdd50c18af4656a46eefc0bfbb791b-20200614
-Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw02.mediatek.com
- (envelope-from <macpaul.lin@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 822435723; Sun, 14 Jun 2020 22:17:40 -0800
-Received: from MTKMBS01N2.mediatek.inc (172.21.101.79) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1497.2; Sun, 14 Jun 2020 23:17:40 -0700
-Received: from mtkcas08.mediatek.inc (172.21.101.126) by
- mtkmbs01n2.mediatek.inc (172.21.101.79) with Microsoft SMTP Server (TLS) id
- 15.0.1497.2; Mon, 15 Jun 2020 14:17:38 +0800
-Received: from mtkswgap22.mediatek.inc (172.21.77.33) by mtkcas08.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1497.2 via
- Frontend Transport; Mon, 15 Jun 2020 14:17:36 +0800
-From: Macpaul Lin <macpaul.lin@mediatek.com>
-To: Felipe Balbi <balbi@kernel.org>, Greg Kroah-Hartman
- <gregkh@linuxfoundation.org>, Matthias Brugger <matthias.bgg@gmail.com>,
- <linux-usb@vger.kernel.org>, <linux-kernel@vger.kernel.org>,
- <linux-arm-kernel@lists.infradead.org>, <linux-mediatek@lists.infradead.org>, 
- Jim Lin <jilin@nvidia.com>, Siqi Lin <siqilin@google.com>, Alan Stern
- <stern@rowland.harvard.edu>
-Subject: [PATCH v2] usb: replace hardcode maximum usb string length by
- definition
-Date: Mon, 15 Jun 2020 14:17:35 +0800
-Message-ID: <1592201855-8218-1-git-send-email-macpaul.lin@mediatek.com>
-X-Mailer: git-send-email 1.7.9.5
-In-Reply-To: <1591939967-29943-1-git-send-email-macpaul.lin@mediatek.com>
-References: <1591939967-29943-1-git-send-email-macpaul.lin@mediatek.com>
+ id 1jkito-0001bI-4L; Mon, 15 Jun 2020 06:47:17 +0000
+Received: from mail.kernel.org (ip5f5ad5c5.dynamic.kabel-deutschland.de
+ [95.90.213.197])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+ (No client certificate requested)
+ by mail.kernel.org (Postfix) with ESMTPSA id 75D7A2074D;
+ Mon, 15 Jun 2020 06:47:15 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
+ s=default; t=1592203635;
+ bh=GF2Otkk8GeL8AnPZYKuZzCwG9PVKg5Z7DVVHgebQ7f0=;
+ h=From:To:Cc:Subject:Date:From;
+ b=fkfERACX/KYWbqRV8t7NVva9Lz8x+VqHnC1VM5w/C1EyVHebhNifzo3dQ171xOJrK
+ ObPfrHwHwEruPskgn2YnHQnGtDn4XjWbifORQiGr9U4Hg5yLGrpHKAr1xeGQuJNFXe
+ zUj9yUXIVup3rTuDe9+3oIQlqZcYnzoQlAjH9YrI=
+Received: from mchehab by mail.kernel.org with local (Exim 4.93)
+ (envelope-from <mchehab@kernel.org>)
+ id 1jkith-009nlx-C3; Mon, 15 Jun 2020 08:47:09 +0200
+From: Mauro Carvalho Chehab <mchehab+huawei@kernel.org>
+To: Linux Doc Mailing List <linux-doc@vger.kernel.org>
+Subject: [PATCH 00/29] Documentation fixes
+Date: Mon, 15 Jun 2020 08:46:39 +0200
+Message-Id: <cover.1592203542.git.mchehab+huawei@kernel.org>
+X-Mailer: git-send-email 2.26.2
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: ADBF890E55533CA3D08784747C3C1882B436106C825BCC1A9AAF43AD4F3E88222000:8
-X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200614_231747_727891_60663F0E 
-X-CRM114-Status: GOOD (  10.88  )
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20200614_234716_214264_5984A292 
+X-CRM114-Status: GOOD (  15.63  )
+X-Spam-Score: -5.2 (-----)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (-5.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
+ high trust [198.145.29.99 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 MIME_BASE64_TEXT       RAW: Message text disguised using base64
- encoding
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
  author's domain
@@ -78,8 +64,7 @@ X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  valid
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
+ -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -91,95 +76,189 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Macpaul Lin <macpaul.lin@gmail.com>, Macpaul Lin <macpaul.lin@mediatek.com>,
- Mediatek WSD Upstream <wsd_upstream@mediatek.com>
+Cc: =?UTF-8?q?Heiko=20St=C3=BCbner?= <heiko@sntech.de>,
+ Geert Uytterhoeven <geert+renesas@glider.be>,
+ Catalin Marinas <catalin.marinas@arm.com>,
+ Linus Walleij <linus.walleij@linaro.org>, dri-devel@lists.freedesktop.org,
+ Paul Mackerras <paulus@samba.org>, Christoph Hellwig <hch@lst.de>,
+ Marek Szyprowski <m.szyprowski@samsung.com>, linux-arch@vger.kernel.org,
+ Mike Snitzer <snitzer@redhat.com>,
+ Bartosz Golaszewski <bgolaszewski@baylibre.com>,
+ Michael Ellerman <mpe@ellerman.id.au>, kasan-dev@googlegroups.com,
+ Ingo Molnar <mingo@redhat.com>, Alan Stern <stern@rowland.harvard.edu>,
+ NXP Linux Team <linux-imx@nxp.com>,
+ Benjamin Herrenschmidt <benh@kernel.crashing.org>,
+ Boqun Feng <boqun.feng@gmail.com>, Nicholas Piggin <npiggin@gmail.com>,
+ Alexander Viro <viro@zeniv.linux.org.uk>, Thomas Gleixner <tglx@linutronix.de>,
+ Greg Kroah-Hartman <gregkh@linuxfoundation.org>, linux-kernel@vger.kernel.org,
+ linux-spi@vger.kernel.org, Pengutronix Kernel Team <kernel@pengutronix.de>,
+ linux-fsdevel@vger.kernel.org, Andrew Morton <akpm@linux-foundation.org>,
+ alsa-devel@alsa-project.org, linux-ia64@vger.kernel.org,
+ David Airlie <airlied@linux.ie>,
+ "James E.J. Bottomley" <James.Bottomley@HansenPartnership.com>,
+ Eric Dumazet <edumazet@google.com>, keyrings@vger.kernel.org,
+ Shuah Khan <shuah@kernel.org>, Alasdair Kergon <agk@redhat.com>,
+ Daniel Kiss <daniel.kiss@arm.com>, Stephen Rothwell <sfr@canb.auug.org.au>,
+ Fabio Estevam <festevam@gmail.com>, Helge Deller <deller@gmx.de>,
+ linux-rockchip@lists.infradead.org, linux-media@vger.kernel.org,
+ Andrea Parri <parri.andrea@gmail.com>, linux-arm-msm@vger.kernel.org,
+ Sean Wang <sean.wang@mediatek.com>, linux-gpio@vger.kernel.org,
+ Bjorn Helgaas <bhelgaas@google.com>, Jaegeuk Kim <jaegeuk@kernel.org>,
+ linux-arm-kernel@lists.infradead.org,
+ =?UTF-8?q?Niklas=20S=C3=B6derlund?= <niklas.soderlund+renesas@ragnatech.se>,
+ Tony Luck <tony.luck@intel.com>, dm-devel@redhat.com,
+ Alexey Gladkov <gladkov.alexey@gmail.com>,
+ Arnaud Pouliquen <arnaud.pouliquen@st.com>, Sandy Huang <hjc@rock-chips.com>,
+ linux-f2fs-devel@lists.sourceforge.net, linux-renesas-soc@vger.kernel.org,
+ "Eric W. Biederman" <ebiederm@xmission.com>,
+ Mike Kravetz <mike.kravetz@oracle.com>, linux-pci@vger.kernel.org,
+ Akira Yokosawa <akiyks@gmail.com>, Lai Jiangshan <jiangshanlai@gmail.com>,
+ Jarkko Sakkinen <jarkko.sakkinen@linux.intel.com>,
+ Dave Hansen <dave.hansen@intel.com>, linux-kselftest@vger.kernel.org,
+ Joel Fernandes <joel@joelfernandes.org>,
+ Sukadev Bhattiprolu <sukadev@linux.ibm.com>, Will Deacon <will@kernel.org>,
+ Florian Fainelli <f.fainelli@gmail.com>, Jonathan Corbet <corbet@lwn.net>,
+ Haren Myneni <haren@linux.ibm.com>,
+ Gerald Schaefer <gerald.schaefer@de.ibm.com>,
+ Federico Vaga <federico.vaga@vaga.pv.it>, Jade Alglave <j.alglave@ucl.ac.uk>,
+ Alexey Dobriyan <adobriyan@gmail.com>, Fenghua Yu <fenghua.yu@intel.com>,
+ Marco Elver <elver@google.com>, Kees Cook <keescook@chromium.org>,
+ Josh Triplett <josh@joshtriplett.org>, Steven Rostedt <rostedt@goodmis.org>,
+ rcu@vger.kernel.org, Mark Brown <broonie@kernel.org>,
+ Mathieu Desnoyers <mathieu.desnoyers@efficios.com>,
+ Luc Maranget <luc.maranget@inria.fr>,
+ Thomas Bogendoerfer <tsbogend@alpha.franken.de>, linux-parisc@vger.kernel.org,
+ Jeff Layton <jlayton@kernel.org>, Liam Girdwood <lgirdwood@gmail.com>,
+ iommu@lists.linux-foundation.org, netdev@vger.kernel.org,
+ Shawn Guo <shawnguo@kernel.org>, "David S. Miller" <davem@davemloft.net>,
+ Thiago Jung Bauermann <bauerman@linux.ibm.com>, Jan Kara <jack@suse.cz>,
+ "Peter Zijlstra \(Intel\)" <peterz@infradead.org>,
+ Bjorn Andersson <bjorn.andersson@linaro.org>,
+ David Howells <dhowells@redhat.com>, linux-mm@kvack.org,
+ Sandipan Das <sandipan@linux.ibm.com>, "H. Peter Anvin" <hpa@zytor.com>,
+ Mauro Carvalho Chehab <mchehab+huawei@kernel.org>, x86@kernel.org,
+ Russell King <linux@armlinux.org.uk>, Andy Gross <agross@kernel.org>,
+ Jakub Kicinski <kuba@kernel.org>, Sascha Hauer <s.hauer@pengutronix.de>,
+ devicetree@vger.kernel.org, Philipp Zabel <p.zabel@pengutronix.de>,
+ "Paul E. McKenney" <paulmck@kernel.org>, Daniel Lustig <dlustig@nvidia.com>,
+ Chao Yu <chao@kernel.org>, Lubomir Rintel <lkundrak@v3.sk>,
+ Rob Herring <robh+dt@kernel.org>, linux-mediatek@lists.infradead.org,
+ Matthias Brugger <matthias.bgg@gmail.com>, Dmitry Vyukov <dvyukov@google.com>,
+ Robin Murphy <robin.murphy@arm.com>, Akira Shimahara <akira215corp@gmail.com>,
+ linux-mips@vger.kernel.org, linux-bluetooth@vger.kernel.org,
+ Daniel Vetter <daniel@ffwll.ch>, Borislav Petkov <bp@alien8.de>,
+ linuxppc-dev@lists.ozlabs.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Replace hardcode maximum usb string length (126 bytes) by definition
-"MAX_USB_STRING_LEN".
+Hi Jon,
 
-Signed-off-by: Macpaul Lin <macpaul.lin@mediatek.com>
----
-Changes for v2:
-  - Add definition "MAX_USB_STRING_LEN" in ch9.h instead of in usb.h.
-    Thanks for Alan's suggestion.
+That's a bunch of files I have to be applied on the top of v5.8-rc1 fixing
+documentation warnings. I already removed some duplicated stuff.
 
- drivers/usb/gadget/composite.c |    4 ++--
- drivers/usb/gadget/configfs.c  |    2 +-
- drivers/usb/gadget/usbstring.c |    4 ++--
- include/uapi/linux/usb/ch9.h   |    3 +++
- 4 files changed, 8 insertions(+), 5 deletions(-)
+Regards,
+Mauro
 
-diff --git a/drivers/usb/gadget/composite.c b/drivers/usb/gadget/composite.c
-index cb4950c..d0de016 100644
---- a/drivers/usb/gadget/composite.c
-+++ b/drivers/usb/gadget/composite.c
-@@ -1041,7 +1041,7 @@ static void collect_langs(struct usb_gadget_strings **sp, __le16 *buf)
- 	while (*sp) {
- 		s = *sp;
- 		language = cpu_to_le16(s->language);
--		for (tmp = buf; *tmp && tmp < &buf[126]; tmp++) {
-+		for (tmp = buf; *tmp && tmp < &buf[MAX_USB_STRING_LEN]; tmp++) {
- 			if (*tmp == language)
- 				goto repeat;
- 		}
-@@ -1116,7 +1116,7 @@ static int get_string(struct usb_composite_dev *cdev,
- 			collect_langs(sp, s->wData);
- 		}
- 
--		for (len = 0; len <= 126 && s->wData[len]; len++)
-+		for (len = 0; len <= MAX_USB_STRING_LEN && s->wData[len]; len++)
- 			continue;
- 		if (!len)
- 			return -EINVAL;
-diff --git a/drivers/usb/gadget/configfs.c b/drivers/usb/gadget/configfs.c
-index 32b637e..70dd4ba 100644
---- a/drivers/usb/gadget/configfs.c
-+++ b/drivers/usb/gadget/configfs.c
-@@ -115,7 +115,7 @@ static int usb_string_copy(const char *s, char **s_copy)
- 	char *str;
- 	char *copy = *s_copy;
- 	ret = strlen(s);
--	if (ret > 126)
-+	if (ret > MAX_USB_STRING_LEN)
- 		return -EOVERFLOW;
- 
- 	str = kstrdup(s, GFP_KERNEL);
-diff --git a/drivers/usb/gadget/usbstring.c b/drivers/usb/gadget/usbstring.c
-index 7c24d1c..8a8d647 100644
---- a/drivers/usb/gadget/usbstring.c
-+++ b/drivers/usb/gadget/usbstring.c
-@@ -55,9 +55,9 @@
- 		return -EINVAL;
- 
- 	/* string descriptors have length, tag, then UTF16-LE text */
--	len = min((size_t) 126, strlen (s->s));
-+	len = min((size_t)MAX_USB_STRING_LEN, strlen(s->s));
- 	len = utf8s_to_utf16s(s->s, len, UTF16_LITTLE_ENDIAN,
--			(wchar_t *) &buf[2], 126);
-+			(wchar_t *) &buf[2], MAX_USB_STRING_LEN);
- 	if (len < 0)
- 		return -EINVAL;
- 	buf [0] = (len + 1) * 2;
-diff --git a/include/uapi/linux/usb/ch9.h b/include/uapi/linux/usb/ch9.h
-index 2b623f3..cc02d05 100644
---- a/include/uapi/linux/usb/ch9.h
-+++ b/include/uapi/linux/usb/ch9.h
-@@ -364,6 +364,9 @@ struct usb_config_descriptor {
- 
- /*-------------------------------------------------------------------------*/
- 
-+/* USB String descriptors can contain at most 126 characters. */
-+#define MAX_USB_STRING_LEN	126
-+
- /* USB_DT_STRING: String descriptor */
- struct usb_string_descriptor {
- 	__u8  bLength;
+Mauro Carvalho Chehab (29):
+  mm: vmalloc.c: remove a kernel-doc annotation from a removed parameter
+  net: dev: add a missing kernel-doc annotation
+  net: netdevice.h: add a description for napi_defer_hard_irqs
+  scripts/kernel-doc: parse __ETHTOOL_DECLARE_LINK_MODE_MASK
+  net: pylink.h: add kernel-doc descriptions for new fields at
+    phylink_config
+  scripts/kernel-doc: handle function pointer prototypes
+  fs: fs.h: fix a kernel-doc parameter description
+  gpio: driver.h: fix kernel-doc markup
+  kcsan: fix a kernel-doc warning
+  rcu: fix some kernel-doc warnings
+  fs: docs: f2fs.rst: fix a broken table
+  dt: update a reference for reneases pcar file renamed to yaml
+  dt: fix broken links due to txt->yaml renames
+  dt: Fix broken references to renamed docs
+  dt: fix reference to olpc,xo1.75-ec.txt
+  selftests/vm/keys: fix a broken reference at protection_keys.c
+  docs: hugetlbpage.rst: fix some warnings
+  docs: powerpc: fix some issues at vas-api.rst
+  docs: driver-model: remove a duplicated markup at driver.rst
+  docs: watch_queue.rst: supress some Sphinx warnings and move to
+    core-api
+  docs: device-mapper: add dm-ebs.rst to an index file
+  docs: it_IT: add two missing references
+  docs: ABI: fix a typo when pointing to w1-generic.rst
+  docs: fs: locking.rst: fix a broken table
+  docs: add bus-virt-phys-mapping.txt to core-api
+  docs: fix references for DMA*.txt files
+  docs: dt: minor adjustments at writing-schema.rst
+  docs: fs: proc.rst: fix a warning due to a merge conflict
+  docs: fs: proc.rst: convert a new chapter to ReST
+
+ .../ABI/testing/sysfs-driver-w1_therm         |   2 +-
+ Documentation/PCI/pci.rst                     |   6 +-
+ .../admin-guide/device-mapper/index.rst       |   1 +
+ Documentation/admin-guide/mm/hugetlbpage.rst  |  25 ++-
+ Documentation/block/biodoc.rst                |   2 +-
+ .../bus-virt-phys-mapping.rst}                |   2 +-
+ Documentation/core-api/dma-api.rst            |   6 +-
+ Documentation/core-api/dma-isa-lpc.rst        |   2 +-
+ Documentation/core-api/index.rst              |   2 +
+ Documentation/{ => core-api}/watch_queue.rst  |  34 ++--
+ .../bindings/arm/freescale/fsl,scu.txt        |   2 +-
+ .../bindings/display/bridge/sii902x.txt       |   2 +-
+ .../bindings/display/imx/fsl-imx-drm.txt      |   4 +-
+ .../devicetree/bindings/display/imx/ldb.txt   |   4 +-
+ .../display/rockchip/rockchip-drm.yaml        |   2 +-
+ .../bindings/misc/olpc,xo1.75-ec.txt          |   2 +-
+ .../bindings/net/mediatek-bluetooth.txt       |   2 +-
+ .../bindings/pinctrl/renesas,pfc-pinctrl.txt  |   2 +-
+ .../bindings/sound/audio-graph-card.txt       |   2 +-
+ .../bindings/sound/st,sti-asoc-card.txt       |   2 +-
+ .../bindings/spi/qcom,spi-geni-qcom.txt       |   2 +-
+ Documentation/devicetree/writing-schema.rst   |   9 +-
+ .../driver-api/driver-model/driver.rst        |   2 -
+ Documentation/driver-api/usb/dma.rst          |   6 +-
+ Documentation/filesystems/f2fs.rst            | 150 ++++++++++++------
+ Documentation/filesystems/locking.rst         |   6 +-
+ Documentation/filesystems/proc.rst            |  46 +++---
+ Documentation/memory-barriers.txt             |   6 +-
+ Documentation/mips/ingenic-tcu.rst            |   2 +-
+ Documentation/powerpc/vas-api.rst             |  23 ++-
+ Documentation/security/keys/core.rst          |   2 +-
+ .../it_IT/process/management-style.rst        |   2 +
+ .../it_IT/process/submitting-patches.rst      |   2 +
+ .../translations/ko_KR/memory-barriers.txt    |   6 +-
+ MAINTAINERS                                   |   8 +-
+ arch/ia64/hp/common/sba_iommu.c               |  12 +-
+ arch/parisc/kernel/pci-dma.c                  |   2 +-
+ arch/x86/include/asm/dma-mapping.h            |   4 +-
+ arch/x86/kernel/amd_gart_64.c                 |   2 +-
+ drivers/parisc/sba_iommu.c                    |  14 +-
+ include/linux/dma-mapping.h                   |   2 +-
+ include/linux/fs.h                            |   2 +-
+ include/linux/gpio/driver.h                   |   2 +-
+ include/linux/kcsan-checks.h                  |  10 +-
+ include/linux/netdevice.h                     |   2 +
+ include/linux/phylink.h                       |   4 +
+ include/linux/rculist.h                       |   2 +-
+ include/linux/watch_queue.h                   |   2 +-
+ include/media/videobuf-dma-sg.h               |   2 +-
+ init/Kconfig                                  |   2 +-
+ kernel/dma/debug.c                            |   2 +-
+ kernel/watch_queue.c                          |   2 +-
+ mm/vmalloc.c                                  |   1 -
+ net/core/dev.c                                |   1 +
+ scripts/kernel-doc                            |   7 +
+ tools/testing/selftests/vm/protection_keys.c  |   2 +-
+ 56 files changed, 282 insertions(+), 175 deletions(-)
+ rename Documentation/{bus-virt-phys-mapping.txt => core-api/bus-virt-phys-mapping.rst} (99%)
+ rename Documentation/{ => core-api}/watch_queue.rst (94%)
+
 -- 
-1.7.9.5
+2.26.2
+
+
+
 _______________________________________________
 Linux-mediatek mailing list
 Linux-mediatek@lists.infradead.org
