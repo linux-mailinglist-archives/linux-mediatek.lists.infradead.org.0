@@ -2,79 +2,72 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id CCE0A1FAF22
-	for <lists+linux-mediatek@lfdr.de>; Tue, 16 Jun 2020 13:28:21 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 2F3661FB10C
+	for <lists+linux-mediatek@lfdr.de>; Tue, 16 Jun 2020 14:45:46 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
-	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Message-Id:Date:
-	Subject:To:From:Reply-To:Content-ID:Content-Description:Resent-Date:
-	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
-	References:List-Owner; bh=WSdozx9oGWQtqSsBnY+QawRjX7kqqV5QsyckGGOp368=; b=mON
-	KknoVM7f5QjhLpGZM8QZL0JU5mXlY2ALbIa8CaGXbD3IeH8d4MJJOLlDhAn15EJ57cWdUCiszUJ1j
-	3n/g7WUbJAx5y7OFTJxkPGwOH7atOhVweySbBeTMDs1bx2mnrm7zENaGstm9/naI029oQWp1pAOT/
-	GVzTPaoZJcCO/k496XX8O8FiZv0eblAMU3WwPeWb2YgvBvnWIGf5zIwXCI1UrUKCPwslSIwb6bw/o
-	qbx/CQi396SeRp3HrZei/uLlSCcNDPeWJRaCntQrIkWRDGwe/2Ky7e8yahvRYzdsbiIgmYSpFVo4j
-	SdAOTTQ4/k/FQGgcZBx8yejOi33Lsqw==;
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=pE22qUofcm0X4xsxiAahcfuKmyTTELOWCbRICPLMUGQ=; b=d+M5aw8njGWLTj
+	us6o12oCBGdSfanEM+Rc8ReFQ2VUfZnYRZrJWrLZCGYwxwsVNLnXmlqbabMyYMlvJa2KcJSnTvLVb
+	Asu9ugmt+awz/rYl+2fHiRlXhtZdXr8tgRZnQWhlaIKyxl65hcE30QFr+s+e3l8KFPybExDhX6L+F
+	fyYDkf9XMhlBUJJSCHSnPm4HRMIJMCB5lRYIAtR7cK7VqbMBwNKzzwIx/nN7ZX1t3Fjyn5njbDQd9
+	+0waZUffUc7SgkX7+3/DekU6pECqlvPNyhCZZ3h1d6m5BHjADb4cHWTUZa+pcSC+Ku/hTbIpt8n1H
+	vtu/Qh33z/t3rX6+9RUw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jl9lF-0002Ca-8I; Tue, 16 Jun 2020 11:28:13 +0000
-Received: from mail-pl1-x641.google.com ([2607:f8b0:4864:20::641])
+	id 1jlAyA-0007N9-TO; Tue, 16 Jun 2020 12:45:38 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jl9l5-00024m-9a; Tue, 16 Jun 2020 11:28:04 +0000
-Received: by mail-pl1-x641.google.com with SMTP id k6so3300023pll.9;
- Tue, 16 Jun 2020 04:28:02 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
- h=from:to:cc:subject:date:message-id;
- bh=C66Iy0udb87vhjoDYd71Ql6l2XA6eYACBYbwZNfMhzU=;
- b=ICJev4x2OgJ6X7xmSzWcGWWwJAyPTOuhILDrFDfIxcor78l92hde85mv/ysyicxvef
- iPNwenqBqzDbFYvb1JN0CUUfCD/bVIu8lN07+lYRk/zQ79/IhvUQXPkBOAMQHdCG5CLq
- w5Sq6/CXDDYr0RG7p6vn79pM30Dl03IYtNXE4GfkD0tlZFOzpYLWUvcRW0T2WAK+H2/S
- 6dRw9Bh5DKve8/a1Nd85Gd7LTgTsOPUU1p2F6w3ozF/XkHf/bG/7J2lhs7lGUJtze0wc
- f8CojXLI6JoBPREEVLMQjgXwOSuemXoDk4DjB7x7zXK9YgYMX8a87KK7rZeLaVKjY4Xk
- I0ew==
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:from:to:cc:subject:date:message-id;
- bh=C66Iy0udb87vhjoDYd71Ql6l2XA6eYACBYbwZNfMhzU=;
- b=rAeJamletUxRhW6ycKlzWgszRSTbXM/Y9xDmrjq7vRxJzezpM8z/LO1kRKCygmBt6z
- nmU2D4RyxhXwyCui8vndMcdWtrE5kelbNCaPvX5seCIiW+Tul8hAMN/HzkH6wzFx7pnv
- U2dzhU9Z5YC+FbPHTuwRY/NshuXmUiXVUFhQ+5OiILercYsFmwWOPFZI6uI5gZlhlUHg
- haMgc8JMTG4EG2b1L0pb62Y7ZV/Qz75rgK4zXVvQEgkWaQvwCGg8spOijuCjejd4VLwh
- Pcv4luVDYr0fqk2xGk1Y4f3TScwK9ri2oxHIDvXUC7b+UBRr9C9pUE4X2awh0U5+6wJa
- X1Xw==
-X-Gm-Message-State: AOAM533+OtMzIN7gHcobkvf0MBUn5wElEd50w52Z6ShCM2v5sIdVAgKJ
- gFtwn+2aRCkHSEthcxHDDCU=
-X-Google-Smtp-Source: ABdhPJwaevj2Eg+de+5NM26vCPlyHzB6CcylDSU3H8uKvyfdS27T3gYBG5pWtcngruNnK1bLe2z5/A==
-X-Received: by 2002:a17:90a:c85:: with SMTP id
- v5mr2248738pja.114.1592306882003; 
- Tue, 16 Jun 2020 04:28:02 -0700 (PDT)
-Received: from localhost.localdomain ([101.12.205.96])
- by smtp.gmail.com with ESMTPSA id b19sm16617701pft.74.2020.06.16.04.27.59
- (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
- Tue, 16 Jun 2020 04:28:01 -0700 (PDT)
-From: Gene Chen <gene.chen.richtek@gmail.com>
-To: robh+dt@kernel.org,
-	matthias.bgg@gmail.com
-Subject: [PATCH] dt-bindings: mfd: Add bindings for the Mediatek MT6360 PMIC
-Date: Tue, 16 Jun 2020 19:27:56 +0800
-Message-Id: <1592306876-3504-1-git-send-email-gene.chen.richtek@gmail.com>
-X-Mailer: git-send-email 2.7.4
+ id 1jlAxa-0004VV-Ml; Tue, 16 Jun 2020 12:45:04 +0000
+X-UUID: 4d82aed94592474f8381813f80a32ca5-20200616
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
+ s=dk; 
+ h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:Subject:CC:To:From;
+ bh=1y6jYCU5bn8D2X7/K/Tvzzlj7X36JuNHASO4pxrPu4w=; 
+ b=iQnnbsRTQitClaSbkDUZL8p5j1UhN/N0a5ci1xagj+SPqnGJrzpDu9K8qXY0GEqvkm/5tOJCUIW8SFZRqygRE0vjXP9Z9AzJdl2QGfFmTsN48qrV1puJ+aD5Em255xhl/L0G4KiP4alOAGAH4vg/szZj1braTQKUI3CFef5Iscw=;
+X-UUID: 4d82aed94592474f8381813f80a32ca5-20200616
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
+ (envelope-from <macpaul.lin@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 1256596933; Tue, 16 Jun 2020 04:44:46 -0800
+Received: from MTKMBS01N1.mediatek.inc (172.21.101.68) by
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1497.2; Tue, 16 Jun 2020 05:34:51 -0700
+Received: from mtkcas08.mediatek.inc (172.21.101.126) by
+ mtkmbs01n1.mediatek.inc (172.21.101.68) with Microsoft SMTP Server (TLS) id
+ 15.0.1497.2; Tue, 16 Jun 2020 20:34:45 +0800
+Received: from mtkswgap22.mediatek.inc (172.21.77.33) by mtkcas08.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1497.2 via
+ Frontend Transport; Tue, 16 Jun 2020 20:34:45 +0800
+From: Macpaul Lin <macpaul.lin@mediatek.com>
+To: Chunfeng Yun <chunfeng.yun@mediatek.com>, Greg Kroah-Hartman
+ <gregkh@linuxfoundation.org>, Felipe Balbi <balbi@kernel.org>, "Matthias
+ Brugger" <matthias.bgg@gmail.com>, =?UTF-8?q?Micha=C5=82=20Miros=C5=82aw?=
+ <mirq-linux@rere.qmqm.pl>, Sergey Organov <sorganov@gmail.com>, "Fabrice
+ Gasnier" <fabrice.gasnier@st.com>, <linux-usb@vger.kernel.org>,
+ <linux-arm-kernel@lists.infradead.org>, <linux-mediatek@lists.infradead.org>, 
+ <linux-kernel@vger.kernel.org>
+Subject: [PATCH 1/2] usb: gadget: introduce flag for large request
+Date: Tue, 16 Jun 2020 20:34:43 +0800
+Message-ID: <1592310884-4307-1-git-send-email-macpaul.lin@mediatek.com>
+X-Mailer: git-send-email 1.7.9.5
+MIME-Version: 1.0
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200616_042803_333549_26E1C1BD 
-X-CRM114-Status: GOOD (  10.28  )
+X-CRM114-CacheID: sfid-20200616_054502_767313_080F3DFB 
+X-CRM114-Status: GOOD (  10.26  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:641 listed in]
- [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider [gene.chen.richtek[at]gmail.com]
+ 0.0 MIME_BASE64_TEXT       RAW: Message text disguised using base64
+ encoding
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
@@ -82,6 +75,8 @@ X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -93,89 +88,76 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: gene_chen@richtek.com, devicetree@vger.kernel.org, Wilma.Wu@mediatek.com,
- linux-kernel@vger.kernel.org, cy_huang@richtek.com,
- linux-mediatek@lists.infradead.org, lee.jones@linaro.org,
- linux-arm-kernel@lists.infradead.org, shufan_lee@richtek.com
-MIME-Version: 1.0
+Cc: Macpaul Lin <macpaul.lin@gmail.com>, Macpaul Lin <macpaul.lin@mediatek.com>,
+ Mediatek WSD Upstream <wsd_upstream@mediatek.com>
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-From: Gene Chen <gene_chen@richtek.com>
+Some USB hardware like DMA engine can help to process (split) the data
+of each URB request into small packets. For example, the max packet size
+of high speed is 512 bytes. These kinds of hardware can help to split
+the continue Tx/Rx data requests into packets just at the max packet
+size during transmission. Hence upper layer software can reduce some
+effort for queueing many requests back and forth for larger data.
 
-Add devicetree binding document support Mediatek MT6360 PMIC
+Here we introduce "can_exceed_maxp" flag in gadget when these kinds of
+hardware is ready to support these operations.
 
-Signed-off-by: Gene Chen <gene_chen@richtek.com>
+Signed-off-by: Macpaul Lin <macpaul.lin@mediatek.com>
 ---
- Documentation/devicetree/bindings/mfd/mt6360.txt | 53 ++++++++++++++++++++++++
- 1 file changed, 53 insertions(+)
- create mode 100644 Documentation/devicetree/bindings/mfd/mt6360.txt
+ drivers/usb/mtu3/mtu3_qmu.c |   11 ++++++++++-
+ include/linux/usb/gadget.h  |    1 +
+ 2 files changed, 11 insertions(+), 1 deletion(-)
 
-diff --git a/Documentation/devicetree/bindings/mfd/mt6360.txt b/Documentation/devicetree/bindings/mfd/mt6360.txt
-new file mode 100644
-index 0000000..e25b5c6
---- /dev/null
-+++ b/Documentation/devicetree/bindings/mfd/mt6360.txt
-@@ -0,0 +1,53 @@
-+MediaTek MT6360 Multifunction Device Driver
+diff --git a/drivers/usb/mtu3/mtu3_qmu.c b/drivers/usb/mtu3/mtu3_qmu.c
+index 3f414f9..2b51a20 100644
+--- a/drivers/usb/mtu3/mtu3_qmu.c
++++ b/drivers/usb/mtu3/mtu3_qmu.c
+@@ -620,7 +620,7 @@ irqreturn_t mtu3_qmu_isr(struct mtu3 *mtu)
+ 
+ int mtu3_qmu_init(struct mtu3 *mtu)
+ {
+-
++	int i;
+ 	compiletime_assert(QMU_GPD_SIZE == 16, "QMU_GPD size SHOULD be 16B");
+ 
+ 	mtu->qmu_gpd_pool = dma_pool_create("QMU_GPD", mtu->dev,
+@@ -629,10 +629,19 @@ int mtu3_qmu_init(struct mtu3 *mtu)
+ 	if (!mtu->qmu_gpd_pool)
+ 		return -ENOMEM;
+ 
++	/* Let gadget know we can process request larger than max packet */
++	for (i = 1; i < mtu->num_eps; i++)
++		mtu->ep_array[i].ep.can_exceed_maxp = 1;
 +
-+MT6360 is a multifunction device with the following sub modules:
-+- ADC
-+- Battery Charger/OTG boost
-+- Flash LED/RGB LED/moonlight LED
-+- 2-channel Buck
-+- 6-channel LDO
-+- USB_PD
+ 	return 0;
+ }
+ 
+ void mtu3_qmu_exit(struct mtu3 *mtu)
+ {
++	int i;
+ 	dma_pool_destroy(mtu->qmu_gpd_pool);
 +
-+It is interfaced to host controller using I2C interface.
-+This document describes the binding for MFD device and its sub module.
-+
-+Required properties:
-+- compatible:	Must be "mediatek,mt6360_pmu"
-+- reg:			Specifies the I2C slave address of PMIC block, Must be <0x34>
-+- interrupts:	I2C device IRQ line connected to the main SoC.
-+
-+Optional subnodes:
-+- ADC
-+	Required properties:
-+		- compatible: "mediatek,mt6360_adc"
-+- battery charger/OTG boost
-+	Required properties:
-+		- compatible: "mediatek,mt6360_chg"
-+- Flash LED/RGB LED/moonlight LED
-+	Required properties:
-+		- compatible: "mediatek,mt6360_led"
-+- 2-channel Buck
-+	Required properties:
-+		- compatible: "mediatek,mt6360_pmic"
-+- 6-channel LDO
-+	Required properties:
-+		- compatible: "mediatek,mt6360_ldo"
-+- USB_PD
-+	Required properties:
-+		- compatible: "mediatek,mt6360_tcpc"
-+
-+Example:
-+
-+	#include <dt-bindings/usb/pd.h>
-+
-+	pmu: mt6360_pmu@34 {
-+		status = "ok";
-+		compatible = "mediatek,mt6360_pmu";
-+		reg = <0x34>;
-+		wakeup-source;
-+		interrupts-extended = <&gpio26 0 IRQ_TYPE_LEVEL_LOW>;
-+		interrupt-names = "IRQB";
-+		interrupt-controller;
-+		#interrupt-cells = <2>;
-+	};
-+
++	/* Disable large request support */
++	for (i = 1; i < mtu->num_eps; i++)
++		mtu->ep_array[i].ep.can_exceed_maxp = 0;
+ }
+diff --git a/include/linux/usb/gadget.h b/include/linux/usb/gadget.h
+index 6a17817..60e0645 100644
+--- a/include/linux/usb/gadget.h
++++ b/include/linux/usb/gadget.h
+@@ -236,6 +236,7 @@ struct usb_ep {
+ 	unsigned		max_streams:16;
+ 	unsigned		mult:2;
+ 	unsigned		maxburst:5;
++	unsigned		can_exceed_maxp:1;
+ 	u8			address;
+ 	const struct usb_endpoint_descriptor	*desc;
+ 	const struct usb_ss_ep_comp_descriptor	*comp_desc;
 -- 
-2.7.4
-
-
+1.7.9.5
 _______________________________________________
 Linux-mediatek mailing list
 Linux-mediatek@lists.infradead.org
