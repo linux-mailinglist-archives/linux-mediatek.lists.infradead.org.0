@@ -2,63 +2,91 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id BE4891FA922
-	for <lists+linux-mediatek@lfdr.de>; Tue, 16 Jun 2020 08:51:33 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 260761FAB28
+	for <lists+linux-mediatek@lfdr.de>; Tue, 16 Jun 2020 10:28:30 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
-	Content-Transfer-Encoding:Content-Type:MIME-Version:Cc:List-Subscribe:
-	List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:Message-Id:Date:
-	Subject:To:From:Reply-To:Content-ID:Content-Description:Resent-Date:
-	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:
-	References:List-Owner; bh=U5lviph0QmE16IT6qijw5+0qgfOBeoNk3KOzutMDI0k=; b=chH
-	iwXm0UottK5YoPsCVnUPKZGmNkd49/N4yb1h/J8UXPP8BiQ7sFPbLHi17G9MHjKGU3MhLavMY8MrU
-	d0e9jF0a/FTTidsdF3soa5m9yF3ouPunlpSnwFwVMrJYSCzJqmDlZyrbPGhU1cZo9F2RPjPtC61Yc
-	5KU7OmltPdiHXK0WVuxCdI6JNAJQfnmb821H5xU4C+F+tOC/iRLcw+xV0zXnpa2VOKkki75SUqWiX
-	3k/AFi11Wp+cis+OHFhQ3CYIoru8NMr00vTXctsVNFW+fCZQuFGmgbABPhKXmupf5qVdg6kkQOy6l
-	NB5/4WYCZyP69ZbGf5qvCl8nVW/uieg==;
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=xy07ANBY6eACr0mo0KMIXC18t5CiGYe+j+As4w3dsk8=; b=Vh2nWYReZfBgoB
+	+oHGfrvl+g2y1n8KaI9tr1Ae6e1RM8KK1grQcQ/3j7FsaKdMdNa+ZWiz+k9wY5D6SUh/StcL5dteU
+	IniIgO7XINvXVjnTau7bRMwrLbMv87EQN8vo47bRkrpqyX/N4O5riE7ihGQG3Wc25N03eZhIMIRMG
+	3C2dTjlHGR2Z2O6KDDyv0cAvLc+uI5gx0OfiugqdSts0cE/RLga72GwL5vMf8QrSBvh0k2tCwDq+I
+	i+GQvFvuET28ImdtMf8EHDE5hitZSlmdYtc9GTcr3sSC+1zPtmOcUOjaMrgT4RDC6U8hDKhpSmdwP
+	+nVc/hd/MIXJZOIxCVdg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jl5RN-0001vs-8V; Tue, 16 Jun 2020 06:51:25 +0000
-Received: from m17617.mail.qiye.163.com ([59.111.176.17])
+	id 1jl6xA-0005NE-HW; Tue, 16 Jun 2020 08:28:20 +0000
+Received: from mail-wr1-x442.google.com ([2a00:1450:4864:20::442])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jl5RJ-0001ur-Gb
- for linux-mediatek@lists.infradead.org; Tue, 16 Jun 2020 06:51:24 +0000
-Received: from njvxl5505.vivo.xyz (unknown [157.0.31.125])
- by m17617.mail.qiye.163.com (Hmail) with ESMTPA id 82C2F2616A3;
- Tue, 16 Jun 2020 14:51:13 +0800 (CST)
-From: Bernard Zhao <bernard@vivo.com>
-To: Chun-Kuang Hu <chunkuang.hu@kernel.org>,
- Philipp Zabel <p.zabel@pengutronix.de>, David Airlie <airlied@linux.ie>,
- Daniel Vetter <daniel@ffwll.ch>, Matthias Brugger <matthias.bgg@gmail.com>,
- dri-devel@lists.freedesktop.org, linux-arm-kernel@lists.infradead.org,
- linux-mediatek@lists.infradead.org, linux-kernel@vger.kernel.org
-Subject: [PATCH v2] drm/mediatek: remove unnecessary conversion to bool
-Date: Tue, 16 Jun 2020 14:51:01 +0800
-Message-Id: <20200616065102.15756-1-bernard@vivo.com>
-X-Mailer: git-send-email 2.17.1
-X-HM-Spam-Status: e1kfGhgUHx5ZQUpXWQgYFAkeWUFZS1VLWVdZKFlBSE83V1ktWUFJV1kPCR
- oVCBIfWUFZGUweQ09JSElITExLVkpOQklJQktJTEhMQ09VEwETFhoSFyQUDg9ZV1kWGg8SFR0UWU
- FZT0tIVUpKS0hKTFVKS0tZBg++
-X-HM-Sender-Digest: e1kMHhlZQR0aFwgeV1kSHx4VD1lBWUc6P006IRw*Czg3Kw9LSQkSMSE#
- Qy4wFEpVSlVKTkJJSUJLSUxPSk9IVTMWGhIXVRkeCRUaCR87DRINFFUYFBZFWVdZEgtZQVlKTkxV
- S1VISlVKSU5ZV1kIAVlBSUlNSDcG
-X-HM-Tid: 0a72bbe5699f9375kuws82c2f2616a3
+ id 1jl6ww-0005Dr-5U
+ for linux-mediatek@lists.infradead.org; Tue, 16 Jun 2020 08:28:07 +0000
+Received: by mail-wr1-x442.google.com with SMTP id j10so19776017wrw.8
+ for <linux-mediatek@lists.infradead.org>; Tue, 16 Jun 2020 01:28:05 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=linaro.org; s=google;
+ h=date:from:to:cc:subject:message-id:references:mime-version
+ :content-disposition:content-transfer-encoding:in-reply-to;
+ bh=B3Zvc0+WkJWTmHdueBto0Q5WGj5wxL8G3qgASoBVzNY=;
+ b=gLakXFsIC8xZtNwr+XfHP1wnr5SDo5nHecQ4brNe+lN2ChBIsKPXALQeHsIYYaLTXb
+ wsvothXzTvUtQKDoSSHmDdiny1LJSckLfw1XnhXhiPAKw/TnCVbjH9L2P5IOgnxLahvD
+ 5kajvazyTYkm4UxG9dIxiqA2FO1wwGkvejOnt/oVT7h13AdfGubQVmi2NieFR0lX/NIZ
+ 8YFNuHCvlY3mexZYqrHcvNt2LtxuvNyr43qnliRLp+9Q2uLMZLwNvzMlnLOYbGGjAtXk
+ LUUwyneBgVZaLmTSdxo2Gk03Mj5BJVjRjoHyK1UcuXPm70vAq+YgSNDHi9gCE+VEavB+
+ 5zLQ==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=1e100.net; s=20161025;
+ h=x-gm-message-state:date:from:to:cc:subject:message-id:references
+ :mime-version:content-disposition:content-transfer-encoding
+ :in-reply-to;
+ bh=B3Zvc0+WkJWTmHdueBto0Q5WGj5wxL8G3qgASoBVzNY=;
+ b=pHFCxB337EsaIO+dbQ4UOOSjVranIAaxx6MEGTuMvJ66Lyp/Kpt98PdplH988TNmpT
+ 1OGdI1koG/FayqInREmEVT5MpMVi0+eLPYiFyeptkMfSABMYUdqFY+6GJyapMmCellMJ
+ gRhAjnrMi7IdTuXwW4JIXJkYzkvXXor53Xj+D/6qE8ufEt5Us9vgcvsCnqhNnj2whlUP
+ 9/Clbco8uBMogPhjTfhrwXIKmRya3EiNSk/QI7Bc6uk1e9Mz/5RVtYdkEVKhAkMjyG+8
+ 35AnuLD+x5wMiYgg8PZZcdvdFr4awPXqmgaHzWT+n/KW71DX4Jw8cy1qpu1vm2CIjbdu
+ HYHA==
+X-Gm-Message-State: AOAM533Swt4i3YitQS3+EA9z3enQ8TT/iKrbn0uD9lx+FNGGHrrRDcpC
+ 2hPDZwDV6DXGB5DEJFCmi8TUmA==
+X-Google-Smtp-Source: ABdhPJzAvCk0ui/vMtJ+dz/ehjMGM1fOixVzM29fYWpKqQN1QryV19KiL93HTiApPkKVxsAzR5Xljg==
+X-Received: by 2002:adf:ea11:: with SMTP id q17mr1748627wrm.75.1592296084603; 
+ Tue, 16 Jun 2020 01:28:04 -0700 (PDT)
+Received: from dell ([109.180.115.156])
+ by smtp.gmail.com with ESMTPSA id z16sm28111508wrm.70.2020.06.16.01.28.03
+ (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+ Tue, 16 Jun 2020 01:28:03 -0700 (PDT)
+Date: Tue, 16 Jun 2020 09:28:02 +0100
+From: Lee Jones <lee.jones@linaro.org>
+To: Gene Chen <gene.chen.richtek@gmail.com>
+Subject: Re: [PATCH] mfd: mt6360: Fix register driver NULL pointer by add
+ driver name
+Message-ID: <20200616082802.GM2608702@dell>
+References: <1591609125-3761-1-git-send-email-gene.chen.richtek@gmail.com>
+MIME-Version: 1.0
+Content-Disposition: inline
+In-Reply-To: <1591609125-3761-1-git-send-email-gene.chen.richtek@gmail.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200615_235121_779874_B179BB4C 
-X-CRM114-Status: UNSURE (   6.74  )
+X-CRM114-CacheID: sfid-20200616_012806_234799_D79E63C0 
+X-CRM114-Status: UNSURE (   7.63  )
 X-CRM114-Notice: Please train this message.
-X-Spam-Score: 0.0 (/)
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
- Content analysis details:   (0.0 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
  -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [59.111.176.17 listed in list.dnswl.org]
- 0.0 RCVD_IN_MSPIKE_H3      RBL: Good reputation (+3)
- [59.111.176.17 listed in wl.mailspike.net]
+ no trust [2a00:1450:4864:20:0:0:0:442 listed in]
+ [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 RCVD_IN_MSPIKE_WL      Mailspike good senders
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+ envelope-from domain
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+ author's domain
+ 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+ valid
+ -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -70,48 +98,49 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: opensource.kernel@vivo.com, Bernard Zhao <bernard@vivo.com>
-MIME-Version: 1.0
-Content-Type: text/plain; charset="us-ascii"
-Content-Transfer-Encoding: 7bit
+Cc: gene_chen@richtek.com, linux-kernel@vger.kernel.org, cy_huang@richtek.com,
+ linux-mediatek@lists.infradead.org, matthias.bgg@gmail.com,
+ Wilma.Wu@mediatek.com, linux-arm-kernel@lists.infradead.org,
+ shufan_lee@richtek.com
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: base64
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-In function mtk_dsi_clk_hs_state, remove unnecessary conversion
-to bool return, this change is to make the code a bit readable.
-
-Signed-off-by: Bernard Zhao <bernard@vivo.com>
----
-Changes since V1:
-*optimize to make the code a bit more clear.
-
-Link for V1:
-*https://lore.kernel.org/patchwork/patch/1255327/
----
- drivers/gpu/drm/mediatek/mtk_dsi.c | 5 +----
- 1 file changed, 1 insertion(+), 4 deletions(-)
-
-diff --git a/drivers/gpu/drm/mediatek/mtk_dsi.c b/drivers/gpu/drm/mediatek/mtk_dsi.c
-index 4491e64b3f06..840cc9b9efc8 100644
---- a/drivers/gpu/drm/mediatek/mtk_dsi.c
-+++ b/drivers/gpu/drm/mediatek/mtk_dsi.c
-@@ -316,10 +316,7 @@ static void mtk_dsi_lane0_ulp_mode_leave(struct mtk_dsi *dsi)
- 
- static bool mtk_dsi_clk_hs_state(struct mtk_dsi *dsi)
- {
--	u32 tmp_reg1;
--
--	tmp_reg1 = readl(dsi->regs + DSI_PHY_LCCON);
--	return ((tmp_reg1 & LC_HS_TX_EN) == 1);
-+	return (readl(dsi->regs + DSI_PHY_LCCON) & LC_HS_TX_EN);
- }
- 
- static void mtk_dsi_clk_hs_mode(struct mtk_dsi *dsi, bool enter)
--- 
-2.17.1
-
-
-_______________________________________________
-Linux-mediatek mailing list
-Linux-mediatek@lists.infradead.org
-http://lists.infradead.org/mailman/listinfo/linux-mediatek
+T24gTW9uLCAwOCBKdW4gMjAyMCwgR2VuZSBDaGVuIHdyb3RlOgoKPiBGcm9tOiBHZW5lIENoZW4g
+PGdlbmVfY2hlbkByaWNodGVrLmNvbT4KPiAKPiBhY2NpZGVudGFsbHkgcmVtb3ZlIGRyaXZlciBu
+YW1lIHdoZW4KPiByZXBsYWNlIHByb2JlIGJ5IHByb2JlX25ldyBpbiBhZGQgbXQ2MzYwIG1mZCBk
+cml2ZXIgcGF0Y2ggdjQKPiAKPiBbICAxMjEuMjQzMDEyXSBFQVg6IGMyYThiYzY0IEVCWDogMDAw
+MDAwMDAgRUNYOiAwMDAwMDAwMCBFRFg6IDAwMDAwMDAwCj4gWyAgMTIxLjI0MzAxMl0gRVNJOiBj
+MmE4YmM3OSBFREk6IDAwMDAwMDAwIEVCUDogZTU0YmRlYTggRVNQOiBlNTRiZGVhMAo+IFsgIDEy
+MS4yNDMwMTJdIERTOiAwMDdiIEVTOiAwMDdiIEZTOiAwMDAwIEdTOiAwMDAwIFNTOiAwMDY4IEVG
+TEFHUzogMDAwMTAyODYKPiBbICAxMjEuMjQzMDEyXSBDUjA6IDgwMDUwMDMzIENSMjogMDAwMDAw
+MDAgQ1IzOiAwMmVjMzAwMCBDUjQ6IDAwMDAwNmIwCj4gWyAgMTIxLjI0MzAxMl0gQ2FsbCBUcmFj
+ZToKPiBbICAxMjEuMjQzMDEyXSAga3NldF9maW5kX29iaisweDNkLzB4YzAKPiBbICAxMjEuMjQz
+MDEyXSAgZHJpdmVyX2ZpbmQrMHgxNi8weDQwCj4gWyAgMTIxLjI0MzAxMl0gIGRyaXZlcl9yZWdp
+c3RlcisweDQ5LzB4MTAwCj4gWyAgMTIxLjI0MzAxMl0gID8gaTJjX2Zvcl9lYWNoX2RldisweDM5
+LzB4NTAKPiBbICAxMjEuMjQzMDEyXSAgPyBfX3Byb2Nlc3NfbmV3X2FkYXB0ZXIrMHgyMC8weDIw
+Cj4gWyAgMTIxLjI0MzAxMl0gID8gY2h0X3djX2RyaXZlcl9pbml0KzB4MTEvMHgxMQo+IFsgIDEy
+MS4yNDMwMTJdICBpMmNfcmVnaXN0ZXJfZHJpdmVyKzB4MzAvMHg4MAo+IFsgIDEyMS4yNDMwMTJd
+ICA/IGludGVsX2xwc3NfcGNpX2RyaXZlcl9pbml0KzB4MTYvMHgxNgo+IFsgIDEyMS4yNDMwMTJd
+ICBtdDYzNjBfcG11X2RyaXZlcl9pbml0KzB4Zi8weDExCj4gWyAgMTIxLjI0MzAxMl0gIGRvX29u
+ZV9pbml0Y2FsbCsweDMzLzB4MWEwCj4gWyAgMTIxLjI0MzAxMl0gID8gcGFyc2VfYXJncysweDFl
+Yi8weDNkMAo+IFsgIDEyMS4yNDMwMTJdICA/IF9fbWlnaHRfc2xlZXArMHgzMS8weDkwCj4gWyAg
+MTIxLjI0MzAxMl0gID8ga2VybmVsX2luaXRfZnJlZWFibGUrMHgxMGEvMHgxN2YKPiBbICAxMjEu
+MjQzMDEyXSAga2VybmVsX2luaXRfZnJlZWFibGUrMHgxMmMvMHgxN2YKPiBbICAxMjEuMjQzMDEy
+XSAgPyByZXN0X2luaXQrMHgxMTAvMHgxMTAKPiBbICAxMjEuMjQzMDEyXSAga2VybmVsX2luaXQr
+MHhiLzB4MTAwCj4gWyAgMTIxLjI0MzAxMl0gID8gc2NoZWR1bGVfdGFpbF93cmFwcGVyKzB4OS8w
+eGMKPiBbICAxMjEuMjQzMDEyXSAgcmV0X2Zyb21fZm9yaysweDE5LzB4MjQKPiBbICAxMjEuMjQz
+MDEyXSBNb2R1bGVzIGxpbmtlZCBpbjoKPiBbICAxMjEuMjQzMDEyXSBDUjI6IDAwMDAwMDAwMDAw
+MDAwMDAKPiBbICAxMjEuMjQzMDEyXSByYW5kb206IGdldF9yYW5kb21fYnl0ZXMgY2FsbGVkIGZy
+b20gaW5pdF9vb3BzX2lkKzB4M2EvMHg0MCB3aXRoIGNybmdfaW5pdD0wCj4gWyAgMTIxLjI0MzAx
+Ml0gLS0tWyBlbmQgdHJhY2UgMzhhODAzNDAwZjFhMmJlZSBdLS0tCj4gWyAgMTIxLjI0MzAxMl0g
+RUlQOiBzdHJjbXArMHgxMS8weDMwCj4gCj4gU2lnbmVkLW9mZi1ieTogR2VuZSBDaGVuIDxnZW5l
+X2NoZW5AcmljaHRlay5jb20+Cj4gLS0tCj4gIGRyaXZlcnMvbWZkL210NjM2MC1jb3JlLmMgfCAx
+ICsKPiAgMSBmaWxlIGNoYW5nZWQsIDEgaW5zZXJ0aW9uKCspCgpBcHBsaWVkLCB0aGFua3MuCgot
+LSAKTGVlIEpvbmVzIFvmnY7nkLzmlq9dClNlbmlvciBUZWNobmljYWwgTGVhZCAtIERldmVsb3Bl
+ciBTZXJ2aWNlcwpMaW5hcm8ub3JnIOKUgiBPcGVuIHNvdXJjZSBzb2Z0d2FyZSBmb3IgQXJtIFNv
+Q3MKRm9sbG93IExpbmFybzogRmFjZWJvb2sgfCBUd2l0dGVyIHwgQmxvZwoKX19fX19fX19fX19f
+X19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX18KTGludXgtbWVkaWF0ZWsgbWFpbGlu
+ZyBsaXN0CkxpbnV4LW1lZGlhdGVrQGxpc3RzLmluZnJhZGVhZC5vcmcKaHR0cDovL2xpc3RzLmlu
+ZnJhZGVhZC5vcmcvbWFpbG1hbi9saXN0aW5mby9saW51eC1tZWRpYXRlawo=
