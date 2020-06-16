@@ -2,62 +2,62 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id E58341FB14E
-	for <lists+linux-mediatek@lfdr.de>; Tue, 16 Jun 2020 14:57:26 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id CE7961FB15C
+	for <lists+linux-mediatek@lfdr.de>; Tue, 16 Jun 2020 14:58:19 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=8CtDIKXMjDBVYxQrKBkEk7Pe5CwKX3/55nU3RG1D+ME=; b=E/EGdx0krlR27U
-	yfCHF/ADAMVF5xIu2JfJwlVIn4Uttz/dWznxoNILIAkOSmdCdHT3CSiyu67w6cMZ94AJ7yJhSI4JU
-	+GJ+JBnSutXoOUGJ97QdffggXQIHhsofwSXESkzq/wWko6NPcXv3vYb9IT1mf+/SeCXYYBJ/YNlXo
-	38atyp3Mb7p3OvNfoH1wlx/DRa8UnP80jYYGfI+CD3jpM4b1fHgWdRIPg/pmIrWrrGdxY5lL7UB49
-	OjQUeeydvZJnC46VBaLT74HIEK79r3/ZSEtpVf7+HrvkuY1nJNHVzT98QkDODldQkAH4SNhU3uSkZ
-	BsZ+t5HFd9z7pTq0alrA==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=lEx9yftN4tc+O5TwOVP8v0BlsYo2YS64fzBPYV6I+4g=; b=L934xC3tAhAKQq
+	ri1cY+L4IH3umDkFBjMJGL9fAecB1zHvqyFaEgmxoTtNROwXlvAcQvFMzJkbdf/jzzWLqiodei1yl
+	tk9OII66WOj5kJ6NrDLp2nDuZ1uUzb595VsREmPKGb1oVA6US1uMHkogdIvei0yKzatUtytzL6dP6
+	rEpL8bmYo11G0gwqtvP1TpU16gHelvlhxNtR1iL7FB9i+gwBSlda8kbg5kz6IlNezelR1YVakxSF6
+	9+h7xPWRiIzeEBbAI+cUmMylM3PdAEb3R6QGR/JbeJ1TQjY9JAeF7RBMvLfcsELSixa1pNRrgrBpR
+	OlKh2KraHjxIvbnmjavg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jlB9R-0005A0-OA; Tue, 16 Jun 2020 12:57:17 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
+	id 1jlBAJ-0005cT-Qg; Tue, 16 Jun 2020 12:58:11 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jlB9E-0004yy-3P
- for linux-mediatek@lists.infradead.org; Tue, 16 Jun 2020 12:57:06 +0000
-X-UUID: 2c78b3cc02a3469694c5f18e75693374-20200616
+ id 1jlBAG-0005c6-AV; Tue, 16 Jun 2020 12:58:10 +0000
+X-UUID: a07f37de364741b6ae95946d71a88386-20200616
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
  s=dk; 
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:References:In-Reply-To:Message-ID:Date:Subject:CC:To:From;
- bh=cFT7b6H2LRT9dSPfnxzcUSZBaTbz+EV+Si2bOMAYrIw=; 
- b=o+Hw2+/+df3kElzxoJeYCt1JSK+pNNLeMtnnojBJrNUKo6JzIuP70EhLVRJhhWllxEon45aSaivTS3ny6yyECjKGQHxtILe35kuZaKn58hDVh7SKJyyyyojAzNZ8JTNB4+XTEayCa0YiV7bD/RzuuiIn0D2hGD8BU5tO+cDS7uk=;
-X-UUID: 2c78b3cc02a3469694c5f18e75693374-20200616
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
- (envelope-from <shayne.chen@mediatek.com>)
+ h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:Subject:CC:To:From;
+ bh=oNHjaMOtZSRmFXKNgj4jutQqnqBUtcgYhDdv/yzFkco=; 
+ b=leubagLZK/HGWxX/mDodYglcxtNSjE0hq0QyZdaDQZrsieWLSZdj3yUjmeHkLSc15tDfU4GB/DrZ/r8nrf8R+gA0dhjQJvgjJzlEM59LfxS81SZlQhH1XxO4p6H4xKKhJXBTUrYRFwnxLPBFRXw5+YBy/bOQkHyRyArytkKm34g=;
+X-UUID: a07f37de364741b6ae95946d71a88386-20200616
+Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw01.mediatek.com
+ (envelope-from <dongchun.zhu@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 870427155; Tue, 16 Jun 2020 04:56:49 -0800
-Received: from MTKMBS02N2.mediatek.inc (172.21.101.101) by
+ with ESMTP id 780172729; Tue, 16 Jun 2020 04:57:53 -0800
+Received: from mtkmbs07n1.mediatek.inc (172.21.101.16) by
  MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1497.2; Tue, 16 Jun 2020 05:47:06 -0700
-Received: from mtkcas07.mediatek.inc (172.21.101.84) by
- mtkmbs02n2.mediatek.inc (172.21.101.101) with Microsoft SMTP Server (TLS) id
- 15.0.1497.2; Tue, 16 Jun 2020 20:47:03 +0800
-Received: from mtksdccf07.mediatek.inc (172.21.84.99) by mtkcas07.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1497.2 via
- Frontend Transport; Tue, 16 Jun 2020 20:47:02 +0800
-From: Shayne Chen <shayne.chen@mediatek.com>
-To: Felix Fietkau <nbd@nbd.name>
-Subject: [PATCH 4/4] mt76: mt7915: add support to read per-rate tx power from
- HW in debugfs
-Date: Tue, 16 Jun 2020 20:46:13 +0800
-Message-ID: <05dcb80b4bac2e274f2b49479d030588f9dba326.1592276165.git.ryder.lee@mediatek.com>
-X-Mailer: git-send-email 2.18.0
-In-Reply-To: <9ae2b6233284b60206e3513f7bf2eb03d2fbd724.1592276165.git.ryder.lee@mediatek.com>
-References: <9ae2b6233284b60206e3513f7bf2eb03d2fbd724.1592276165.git.ryder.lee@mediatek.com>
+ 15.0.1497.2; Tue, 16 Jun 2020 05:58:00 -0700
+Received: from mtkcas08.mediatek.inc (172.21.101.126) by
+ mtkmbs07n1.mediatek.inc (172.21.101.16) with Microsoft SMTP Server (TLS) id
+ 15.0.1497.2; Tue, 16 Jun 2020 20:58:00 +0800
+Received: from localhost.localdomain (10.17.3.153) by mtkcas08.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1497.2 via Frontend
+ Transport; Tue, 16 Jun 2020 20:57:58 +0800
+From: Dongchun Zhu <dongchun.zhu@mediatek.com>
+To: <linus.walleij@linaro.org>, <bgolaszewski@baylibre.com>,
+ <mchehab@kernel.org>, <andriy.shevchenko@linux.intel.com>,
+ <robh+dt@kernel.org>, <mark.rutland@arm.com>, <sakari.ailus@linux.intel.com>, 
+ <drinkcat@chromium.org>, <tfiga@chromium.org>, <matthias.bgg@gmail.com>,
+ <bingbu.cao@intel.com>
+Subject: [PATCH V8 0/2] media: i2c: Add support for DW9768 VCM driver
+Date: Tue, 16 Jun 2020 20:55:29 +0800
+Message-ID: <20200616125531.31671-1-dongchun.zhu@mediatek.com>
+X-Mailer: git-send-email 2.9.2
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: 81AD79F399CF7952C93F3F0FD4020AFF4A34E91C3EFF498E24B5505F11A4EFE82000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200616_055704_148916_C7F69441 
-X-CRM114-Status: GOOD (  13.40  )
+X-CRM114-CacheID: sfid-20200616_055808_365315_F7F690F1 
+X-CRM114-Status: UNSURE (   8.87  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
@@ -87,147 +87,74 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Ryder Lee <ryder.lee@mediatek.com>, Evelyn Tsai <evelyn.tsai@mediatek.com>,
- linux-wireless <linux-wireless@vger.kernel.org>,
- linux-mediatek <linux-mediatek@lists.infradead.org>,
- Lorenzo Bianconi <lorenzo.bianconi@redhat.com>,
- Shayne Chen <shayne.chen@mediatek.com>
+Cc: devicetree@vger.kernel.org, srv_heupstream@mediatek.com,
+ shengnan.wang@mediatek.com, sj.huang@mediatek.com,
+ linux-mediatek@lists.infradead.org, dongchun.zhu@mediatek.com,
+ louis.kuo@mediatek.com, linux-arm-kernel@lists.infradead.org,
+ linux-media@vger.kernel.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-In the previous version, the values of per-rate tx power are calculated
-from SW side, but it may be inaccurate if additional limits are applied.
-This patch adds support for getting per-rate tx power directly from
-registers.
+Hello,
 
-Tested-by: Evelyn Tsai <evelyn.tsai@mediatek.com>
-Signed-off-by: Shayne Chen <shayne.chen@mediatek.com>
----
- .../wireless/mediatek/mt76/mt7915/debugfs.c   | 60 +++++++++++++------
- .../net/wireless/mediatek/mt76/mt7915/regs.h  |  5 ++
- 2 files changed, 46 insertions(+), 19 deletions(-)
+This series adds DT bindings and V4L2 sub-device driver for Dongwoon's DW9768,
+which is a 10-bit DAC with 100mA output current sink capability.
 
-diff --git a/drivers/net/wireless/mediatek/mt76/mt7915/debugfs.c b/drivers/net/wireless/mediatek/mt76/mt7915/debugfs.c
-index 38f473d587c9..67bc05600190 100644
---- a/drivers/net/wireless/mediatek/mt76/mt7915/debugfs.c
-+++ b/drivers/net/wireless/mediatek/mt76/mt7915/debugfs.c
-@@ -307,8 +307,8 @@ mt7915_queues_read(struct seq_file *s, void *data)
- }
- 
- static void
--mt7915_puts_rate_txpower(struct seq_file *s, s8 *delta,
--			 s8 txpower_cur, int band)
-+mt7915_puts_rate_txpower(struct seq_file *s, struct mt7915_dev *dev,
-+			 int band, bool ext_phy)
- {
- 	static const char * const sku_group_name[] = {
- 		"CCK", "OFDM", "HT20", "HT40",
-@@ -316,24 +316,51 @@ mt7915_puts_rate_txpower(struct seq_file *s, s8 *delta,
- 		"RU26", "RU52", "RU106", "RU242/SU20",
- 		"RU484/SU40", "RU996/SU80", "RU2x996/SU160"
- 	};
--	s8 txpower[MT7915_SKU_RATE_NUM];
-+	u32 reg_base = MT_TMAC_FP0R0(ext_phy);
- 	int i, idx = 0;
- 
--	for (i = 0; i < MT7915_SKU_RATE_NUM; i++)
--		txpower[i] = DIV_ROUND_UP(txpower_cur + delta[i], 2);
--
- 	for (i = 0; i < MAX_SKU_RATE_GROUP_NUM; i++) {
- 		const struct sku_group *sku = &mt7915_sku_groups[i];
- 		u32 offset = sku->offset[band];
-+		u8 cnt, mcs_num = sku->len;
-+		s8 txpower[12];
-+		int j;
-+
-+		if (i == SKU_HT_BW20 || i == SKU_HT_BW40) {
-+			mcs_num = 8;
-+		} else if (i >= SKU_VHT_BW20 && i <= SKU_VHT_BW160) {
-+			mcs_num = 10;
-+
-+			if (idx == 60) {
-+				reg_base = MT_TMAC_FP0R15(ext_phy);
-+				idx = 0;
-+			}
-+		} else if (i == SKU_HE_RU26) {
-+			reg_base = MT_TMAC_FP0R18(ext_phy);
-+			idx = 0;
-+		}
- 
- 		if (!offset) {
--			idx += sku->len;
-+			idx += mcs_num;
- 			continue;
- 		}
- 
--		mt76_seq_puts_array(s, sku_group_name[i],
--				    txpower + idx, sku->len);
--		idx += sku->len;
-+		for (j = 0, cnt = 0; j < DIV_ROUND_UP(mcs_num, 4); j++) {
-+			u32 val = mt76_rr(dev, reg_base + (idx / 4) * 4);
-+
-+			if (idx && idx % 4)
-+				val >>= (idx % 4) * 8;
-+
-+			while (val > 0 && cnt < mcs_num) {
-+				s8 pwr = FIELD_GET(MT_TMAC_FP_MASK, val);
-+
-+				txpower[cnt++] = pwr;
-+				val >>= 8;
-+				idx++;
-+			}
-+		}
-+
-+		mt76_seq_puts_array(s, sku_group_name[i], txpower, mcs_num);
- 	}
- }
- 
-@@ -343,21 +370,16 @@ mt7915_read_rate_txpower(struct seq_file *s, void *data)
- 	struct mt7915_dev *dev = dev_get_drvdata(s->private);
- 	struct mt76_phy *mphy = &dev->mphy;
- 	enum nl80211_band band = mphy->chandef.chan->band;
--	s8 *delta = dev->rate_power[band];
--	s8 txpower_base = mphy->txpower_cur - delta[MT7915_SKU_MAX_DELTA_IDX];
- 
--	seq_puts(s, "Band 0:\n");
--	mt7915_puts_rate_txpower(s, delta, txpower_base, band);
-+	seq_puts(s, "Band 0: (unit: 0.5 dBm)\n");
-+	mt7915_puts_rate_txpower(s, dev, band, false);
- 
- 	if (dev->mt76.phy2) {
- 		mphy = dev->mt76.phy2;
- 		band = mphy->chandef.chan->band;
--		delta = dev->rate_power[band];
--		txpower_base = mphy->txpower_cur -
--			       delta[MT7915_SKU_MAX_DELTA_IDX];
- 
--		seq_puts(s, "Band 1:\n");
--		mt7915_puts_rate_txpower(s, delta, txpower_base, band);
-+		seq_puts(s, "Band 1: (unit: 0.5 dBm)\n");
-+		mt7915_puts_rate_txpower(s, dev, band, true);
- 	}
- 
- 	return 0;
-diff --git a/drivers/net/wireless/mediatek/mt76/mt7915/regs.h b/drivers/net/wireless/mediatek/mt76/mt7915/regs.h
-index e0989141d9da..afd582fd20a1 100644
---- a/drivers/net/wireless/mediatek/mt76/mt7915/regs.h
-+++ b/drivers/net/wireless/mediatek/mt76/mt7915/regs.h
-@@ -67,6 +67,11 @@
- #define MT_TMAC_CTCR0_INS_DDLMT_EN		BIT(17)
- #define MT_TMAC_CTCR0_INS_DDLMT_VHT_SMPDU_EN	BIT(18)
- 
-+#define MT_TMAC_FP0R0(_band)		MT_WF_TMAC(_band, 0x020)
-+#define MT_TMAC_FP0R15(_band)		MT_WF_TMAC(_band, 0x080)
-+#define MT_TMAC_FP0R18(_band)		MT_WF_TMAC(_band, 0x270)
-+#define MT_TMAC_FP_MASK			GENMASK(7, 0)
-+
- /* DMA Band 0 */
- #define MT_WF_DMA_BASE			0x21e00
- #define MT_WF_DMA(ofs)			(MT_WF_DMA_BASE + (ofs))
+The driver is designed for linear control of voice coil motor(VCM),
+and controlled via IIC serial interface to set the desired focus.
+
+It controls the position with 10-bit DAC data D[9:0] and seperates
+two 8-bit registers to control the VCM position as belows.
+DAC_MSB: D[9:8](ADDR: 0x03):
+     +---+---+---+---+---+---+---+---+
+     |---|---|---|---|---|---|D09|D08|
+     +---+---+---+---+---+---+---+---+
+DAC_LSB: D[7:0](ADDR: 0x04):
+     +---+---+---+---+---+---+---+---+
+     |D07|D06|D05|D04|D03|D02|D01|D00|
+     +---+---+---+---+---+---+---+---+
+
+This driver supports:
+ - set DW9768 to standby mode once suspend and turn it back to active if resume
+ - set the desired focus via V4L2_CID_FOCUS_ABSOLUTE ctrl
+
+Previous versions of this patch-set can be found here:
+v7: https://lore.kernel.org/linux-media/20200605105412.18813-1-dongchun.zhu@mediatek.com/
+v6: https://lore.kernel.org/linux-media/20200518132731.20855-1-dongchun.zhu@mediatek.com/
+v5: https://lore.kernel.org/linux-media/20200502161727.30463-1-dongchun.zhu@mediatek.com/
+v4: https://lore.kernel.org/linux-media/20200330123634.363-1-dongchun.zhu@mediatek.com/
+v3: https://lore.kernel.org/linux-media/20200228155958.20657-1-dongchun.zhu@mediatek.com/
+v2: https://lore.kernel.org/linux-media/20190905072142.14606-1-dongchun.zhu@mediatek.com/
+v1: https://lore.kernel.org/linux-media/20190708100641.2702-1-dongchun.zhu@mediatek.com/
+
+Mainly changes of v8 are addressing comments from Rob, Sakari, Andy, Tomasz.
+Compared to v7:
+ - Rebase onto 5.8-rc1
+ - Calculate move delay time once in probe() and restore it in private struct
+ - Use the fwnode property API to read the properties into the filed directly
+ - Rename error_async_register to err_power_off and refine it
+ - Fix other review comments in v7
+
+Please review.
+Thanks.
+
+Dongchun Zhu (2):
+  media: dt-bindings: media: i2c: Document DW9768 bindings
+  media: i2c: dw9768: Add DW9768 VCM driver
+
+ .../bindings/media/i2c/dongwoon,dw9768.yaml        | 100 ++++
+ MAINTAINERS                                        |   8 +
+ drivers/media/i2c/Kconfig                          |  12 +
+ drivers/media/i2c/Makefile                         |   1 +
+ drivers/media/i2c/dw9768.c                         | 553 +++++++++++++++++++++
+ 5 files changed, 674 insertions(+)
+ create mode 100644 Documentation/devicetree/bindings/media/i2c/dongwoon,dw9768.yaml
+ create mode 100644 drivers/media/i2c/dw9768.c
+
 -- 
-2.18.0
+2.9.2
 _______________________________________________
 Linux-mediatek mailing list
 Linux-mediatek@lists.infradead.org
