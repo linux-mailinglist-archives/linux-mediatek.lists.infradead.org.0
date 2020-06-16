@@ -2,82 +2,67 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 260761FAB28
-	for <lists+linux-mediatek@lfdr.de>; Tue, 16 Jun 2020 10:28:30 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 165861FAC18
+	for <lists+linux-mediatek@lfdr.de>; Tue, 16 Jun 2020 11:14:45 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
-	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=xy07ANBY6eACr0mo0KMIXC18t5CiGYe+j+As4w3dsk8=; b=Vh2nWYReZfBgoB
-	+oHGfrvl+g2y1n8KaI9tr1Ae6e1RM8KK1grQcQ/3j7FsaKdMdNa+ZWiz+k9wY5D6SUh/StcL5dteU
-	IniIgO7XINvXVjnTau7bRMwrLbMv87EQN8vo47bRkrpqyX/N4O5riE7ihGQG3Wc25N03eZhIMIRMG
-	3C2dTjlHGR2Z2O6KDDyv0cAvLc+uI5gx0OfiugqdSts0cE/RLga72GwL5vMf8QrSBvh0k2tCwDq+I
-	i+GQvFvuET28ImdtMf8EHDE5hitZSlmdYtc9GTcr3sSC+1zPtmOcUOjaMrgT4RDC6U8hDKhpSmdwP
-	+nVc/hd/MIXJZOIxCVdg==;
+	List-Owner; bh=Lpto8/KNYI6boAZOZO3BGqr1mM7lV27WdPOwaiUst/o=; b=mVW4cozcYjwzbG
+	BICWpLpJgziSEgbH+2b+EEiRopbtPAU4zgKVEeMfieXrcAJPEPAeNUWZNTyNTAP0QIKipoxi+3oGR
+	16SaQoIabcgTRaUZbzqSqhhgp0kshOeSIGnyrkzpmowZR9WEqaoHwV3rCJIQds98h/TAPoWo5I5gx
+	i1G6XrA0z97yW9EFnXWTYhOamsOlWOq1r+XrjNOhk5SCXeW2ENmvd/A4otrjC/obkbF4GyqX1IoIx
+	GuTM33G/DUrLPCC6omLcqi3qi3zTd2iUjkRKGTObZTLI5cCz8kyQ1ONrpBoTBGvjjXAH0yDvobOBn
+	glHyk27Jf/OXj7IDyTQA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jl6xA-0005NE-HW; Tue, 16 Jun 2020 08:28:20 +0000
-Received: from mail-wr1-x442.google.com ([2a00:1450:4864:20::442])
+	id 1jl7fy-0001nf-Ev; Tue, 16 Jun 2020 09:14:38 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jl6ww-0005Dr-5U
- for linux-mediatek@lists.infradead.org; Tue, 16 Jun 2020 08:28:07 +0000
-Received: by mail-wr1-x442.google.com with SMTP id j10so19776017wrw.8
- for <linux-mediatek@lists.infradead.org>; Tue, 16 Jun 2020 01:28:05 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=linaro.org; s=google;
- h=date:from:to:cc:subject:message-id:references:mime-version
- :content-disposition:content-transfer-encoding:in-reply-to;
- bh=B3Zvc0+WkJWTmHdueBto0Q5WGj5wxL8G3qgASoBVzNY=;
- b=gLakXFsIC8xZtNwr+XfHP1wnr5SDo5nHecQ4brNe+lN2ChBIsKPXALQeHsIYYaLTXb
- wsvothXzTvUtQKDoSSHmDdiny1LJSckLfw1XnhXhiPAKw/TnCVbjH9L2P5IOgnxLahvD
- 5kajvazyTYkm4UxG9dIxiqA2FO1wwGkvejOnt/oVT7h13AdfGubQVmi2NieFR0lX/NIZ
- 8YFNuHCvlY3mexZYqrHcvNt2LtxuvNyr43qnliRLp+9Q2uLMZLwNvzMlnLOYbGGjAtXk
- LUUwyneBgVZaLmTSdxo2Gk03Mj5BJVjRjoHyK1UcuXPm70vAq+YgSNDHi9gCE+VEavB+
- 5zLQ==
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:date:from:to:cc:subject:message-id:references
- :mime-version:content-disposition:content-transfer-encoding
- :in-reply-to;
- bh=B3Zvc0+WkJWTmHdueBto0Q5WGj5wxL8G3qgASoBVzNY=;
- b=pHFCxB337EsaIO+dbQ4UOOSjVranIAaxx6MEGTuMvJ66Lyp/Kpt98PdplH988TNmpT
- 1OGdI1koG/FayqInREmEVT5MpMVi0+eLPYiFyeptkMfSABMYUdqFY+6GJyapMmCellMJ
- gRhAjnrMi7IdTuXwW4JIXJkYzkvXXor53Xj+D/6qE8ufEt5Us9vgcvsCnqhNnj2whlUP
- 9/Clbco8uBMogPhjTfhrwXIKmRya3EiNSk/QI7Bc6uk1e9Mz/5RVtYdkEVKhAkMjyG+8
- 35AnuLD+x5wMiYgg8PZZcdvdFr4awPXqmgaHzWT+n/KW71DX4Jw8cy1qpu1vm2CIjbdu
- HYHA==
-X-Gm-Message-State: AOAM533Swt4i3YitQS3+EA9z3enQ8TT/iKrbn0uD9lx+FNGGHrrRDcpC
- 2hPDZwDV6DXGB5DEJFCmi8TUmA==
-X-Google-Smtp-Source: ABdhPJzAvCk0ui/vMtJ+dz/ehjMGM1fOixVzM29fYWpKqQN1QryV19KiL93HTiApPkKVxsAzR5Xljg==
-X-Received: by 2002:adf:ea11:: with SMTP id q17mr1748627wrm.75.1592296084603; 
- Tue, 16 Jun 2020 01:28:04 -0700 (PDT)
-Received: from dell ([109.180.115.156])
- by smtp.gmail.com with ESMTPSA id z16sm28111508wrm.70.2020.06.16.01.28.03
- (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
- Tue, 16 Jun 2020 01:28:03 -0700 (PDT)
-Date: Tue, 16 Jun 2020 09:28:02 +0100
-From: Lee Jones <lee.jones@linaro.org>
-To: Gene Chen <gene.chen.richtek@gmail.com>
-Subject: Re: [PATCH] mfd: mt6360: Fix register driver NULL pointer by add
- driver name
-Message-ID: <20200616082802.GM2608702@dell>
-References: <1591609125-3761-1-git-send-email-gene.chen.richtek@gmail.com>
+ id 1jl7fv-0001mQ-5m
+ for linux-mediatek@lists.infradead.org; Tue, 16 Jun 2020 09:14:36 +0000
+X-UUID: ee9ed3241bb54967b3fe71ba747882c3-20200616
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
+ s=dk; 
+ h=Content-Transfer-Encoding:MIME-Version:Content-Type:References:In-Reply-To:Date:CC:To:From:Subject:Message-ID;
+ bh=Iom0Ooo0ld9eO1CCp1yVYs+J5BlfrqPZC6D1eK2m31s=; 
+ b=ZeQ6t7PANxnwNglBoXj75fCoHVMKCmJpHauasOWs97vV+lrVwnEdWHty1+qrzKkp2cmz8mwOqi4H6yOKGA0KKNJbJbCfZRAxfKk4twVwhSJa3nwJvU4WAGqwENMYcygoZQNB+u6QMFgjtQ1sM94LnC21PCEyjLsM1a0FUNN4PWA=;
+X-UUID: ee9ed3241bb54967b3fe71ba747882c3-20200616
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
+ (envelope-from <tiffany.lin@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 1719535930; Tue, 16 Jun 2020 01:14:33 -0800
+Received: from MTKMBS01N1.mediatek.inc (172.21.101.68) by
+ MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
+ 15.0.1497.2; Tue, 16 Jun 2020 02:04:30 -0700
+Received: from MTKCAS06.mediatek.inc (172.21.101.30) by
+ mtkmbs01n1.mediatek.inc (172.21.101.68) with Microsoft SMTP Server (TLS) id
+ 15.0.1497.2; Tue, 16 Jun 2020 17:04:27 +0800
+Received: from [172.21.77.4] (172.21.77.4) by MTKCAS06.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1497.2 via Frontend
+ Transport; Tue, 16 Jun 2020 17:04:29 +0800
+Message-ID: <1592298269.25202.0.camel@mtksdaap41>
+Subject: Re: [PATCH 04/10] media: mtk-vcodec: venc: handle firmware version
+ field
+From: Tiffany Lin <tiffany.lin@mediatek.com>
+To: Alexandre Courbot <acourbot@chromium.org>
+Date: Tue, 16 Jun 2020 17:04:29 +0800
+In-Reply-To: <20200520082723.96136-5-acourbot@chromium.org>
+References: <20200520082723.96136-1-acourbot@chromium.org>
+ <20200520082723.96136-5-acourbot@chromium.org>
+X-Mailer: Evolution 3.10.4-0ubuntu2 
 MIME-Version: 1.0
-Content-Disposition: inline
-In-Reply-To: <1591609125-3761-1-git-send-email-gene.chen.richtek@gmail.com>
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200616_012806_234799_D79E63C0 
-X-CRM114-Status: UNSURE (   7.63  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20200616_021435_222427_92E0119B 
+X-CRM114-Status: GOOD (  21.18  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2a00:1450:4864:20:0:0:0:442 listed in]
- [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
@@ -87,6 +72,8 @@ X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -98,49 +85,162 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: gene_chen@richtek.com, linux-kernel@vger.kernel.org, cy_huang@richtek.com,
- linux-mediatek@lists.infradead.org, matthias.bgg@gmail.com,
- Wilma.Wu@mediatek.com, linux-arm-kernel@lists.infradead.org,
- shufan_lee@richtek.com
-Content-Type: text/plain; charset="utf-8"
-Content-Transfer-Encoding: base64
+Cc: Andrew-CT Chen <andrew-ct.chen@mediatek.com>,
+ Maoguang Meng <maoguang.meng@mediatek.com>,
+ Rui Wang <gtk_ruiwang@mediatek.com>, Yunfei Dong <yunfei.dong@mediatek.com>,
+ linux-kernel@vger.kernel.org, linux-mediatek@lists.infradead.org, Pi-Hsun
+ Shih <pihsun@chromium.org>, linux-media@vger.kernel.org
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-T24gTW9uLCAwOCBKdW4gMjAyMCwgR2VuZSBDaGVuIHdyb3RlOgoKPiBGcm9tOiBHZW5lIENoZW4g
-PGdlbmVfY2hlbkByaWNodGVrLmNvbT4KPiAKPiBhY2NpZGVudGFsbHkgcmVtb3ZlIGRyaXZlciBu
-YW1lIHdoZW4KPiByZXBsYWNlIHByb2JlIGJ5IHByb2JlX25ldyBpbiBhZGQgbXQ2MzYwIG1mZCBk
-cml2ZXIgcGF0Y2ggdjQKPiAKPiBbICAxMjEuMjQzMDEyXSBFQVg6IGMyYThiYzY0IEVCWDogMDAw
-MDAwMDAgRUNYOiAwMDAwMDAwMCBFRFg6IDAwMDAwMDAwCj4gWyAgMTIxLjI0MzAxMl0gRVNJOiBj
-MmE4YmM3OSBFREk6IDAwMDAwMDAwIEVCUDogZTU0YmRlYTggRVNQOiBlNTRiZGVhMAo+IFsgIDEy
-MS4yNDMwMTJdIERTOiAwMDdiIEVTOiAwMDdiIEZTOiAwMDAwIEdTOiAwMDAwIFNTOiAwMDY4IEVG
-TEFHUzogMDAwMTAyODYKPiBbICAxMjEuMjQzMDEyXSBDUjA6IDgwMDUwMDMzIENSMjogMDAwMDAw
-MDAgQ1IzOiAwMmVjMzAwMCBDUjQ6IDAwMDAwNmIwCj4gWyAgMTIxLjI0MzAxMl0gQ2FsbCBUcmFj
-ZToKPiBbICAxMjEuMjQzMDEyXSAga3NldF9maW5kX29iaisweDNkLzB4YzAKPiBbICAxMjEuMjQz
-MDEyXSAgZHJpdmVyX2ZpbmQrMHgxNi8weDQwCj4gWyAgMTIxLjI0MzAxMl0gIGRyaXZlcl9yZWdp
-c3RlcisweDQ5LzB4MTAwCj4gWyAgMTIxLjI0MzAxMl0gID8gaTJjX2Zvcl9lYWNoX2RldisweDM5
-LzB4NTAKPiBbICAxMjEuMjQzMDEyXSAgPyBfX3Byb2Nlc3NfbmV3X2FkYXB0ZXIrMHgyMC8weDIw
-Cj4gWyAgMTIxLjI0MzAxMl0gID8gY2h0X3djX2RyaXZlcl9pbml0KzB4MTEvMHgxMQo+IFsgIDEy
-MS4yNDMwMTJdICBpMmNfcmVnaXN0ZXJfZHJpdmVyKzB4MzAvMHg4MAo+IFsgIDEyMS4yNDMwMTJd
-ICA/IGludGVsX2xwc3NfcGNpX2RyaXZlcl9pbml0KzB4MTYvMHgxNgo+IFsgIDEyMS4yNDMwMTJd
-ICBtdDYzNjBfcG11X2RyaXZlcl9pbml0KzB4Zi8weDExCj4gWyAgMTIxLjI0MzAxMl0gIGRvX29u
-ZV9pbml0Y2FsbCsweDMzLzB4MWEwCj4gWyAgMTIxLjI0MzAxMl0gID8gcGFyc2VfYXJncysweDFl
-Yi8weDNkMAo+IFsgIDEyMS4yNDMwMTJdICA/IF9fbWlnaHRfc2xlZXArMHgzMS8weDkwCj4gWyAg
-MTIxLjI0MzAxMl0gID8ga2VybmVsX2luaXRfZnJlZWFibGUrMHgxMGEvMHgxN2YKPiBbICAxMjEu
-MjQzMDEyXSAga2VybmVsX2luaXRfZnJlZWFibGUrMHgxMmMvMHgxN2YKPiBbICAxMjEuMjQzMDEy
-XSAgPyByZXN0X2luaXQrMHgxMTAvMHgxMTAKPiBbICAxMjEuMjQzMDEyXSAga2VybmVsX2luaXQr
-MHhiLzB4MTAwCj4gWyAgMTIxLjI0MzAxMl0gID8gc2NoZWR1bGVfdGFpbF93cmFwcGVyKzB4OS8w
-eGMKPiBbICAxMjEuMjQzMDEyXSAgcmV0X2Zyb21fZm9yaysweDE5LzB4MjQKPiBbICAxMjEuMjQz
-MDEyXSBNb2R1bGVzIGxpbmtlZCBpbjoKPiBbICAxMjEuMjQzMDEyXSBDUjI6IDAwMDAwMDAwMDAw
-MDAwMDAKPiBbICAxMjEuMjQzMDEyXSByYW5kb206IGdldF9yYW5kb21fYnl0ZXMgY2FsbGVkIGZy
-b20gaW5pdF9vb3BzX2lkKzB4M2EvMHg0MCB3aXRoIGNybmdfaW5pdD0wCj4gWyAgMTIxLjI0MzAx
-Ml0gLS0tWyBlbmQgdHJhY2UgMzhhODAzNDAwZjFhMmJlZSBdLS0tCj4gWyAgMTIxLjI0MzAxMl0g
-RUlQOiBzdHJjbXArMHgxMS8weDMwCj4gCj4gU2lnbmVkLW9mZi1ieTogR2VuZSBDaGVuIDxnZW5l
-X2NoZW5AcmljaHRlay5jb20+Cj4gLS0tCj4gIGRyaXZlcnMvbWZkL210NjM2MC1jb3JlLmMgfCAx
-ICsKPiAgMSBmaWxlIGNoYW5nZWQsIDEgaW5zZXJ0aW9uKCspCgpBcHBsaWVkLCB0aGFua3MuCgot
-LSAKTGVlIEpvbmVzIFvmnY7nkLzmlq9dClNlbmlvciBUZWNobmljYWwgTGVhZCAtIERldmVsb3Bl
-ciBTZXJ2aWNlcwpMaW5hcm8ub3JnIOKUgiBPcGVuIHNvdXJjZSBzb2Z0d2FyZSBmb3IgQXJtIFNv
-Q3MKRm9sbG93IExpbmFybzogRmFjZWJvb2sgfCBUd2l0dGVyIHwgQmxvZwoKX19fX19fX19fX19f
-X19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX18KTGludXgtbWVkaWF0ZWsgbWFpbGlu
-ZyBsaXN0CkxpbnV4LW1lZGlhdGVrQGxpc3RzLmluZnJhZGVhZC5vcmcKaHR0cDovL2xpc3RzLmlu
-ZnJhZGVhZC5vcmcvbWFpbG1hbi9saXN0aW5mby9saW51eC1tZWRpYXRlawo=
+On Wed, 2020-05-20 at 17:27 +0900, Alexandre Courbot wrote:
+> Firmwares for encoders newer than MT8173 will include an ABI version
+> number in their initialization ack message. Add the capacity to manage
+> it and make initialization fail if the firmware ABI is of a version that
+> we don't support.
+> 
+> For MT8173, this ABI version field is reserved and thus undefined ; thus
+> ignore it on this chip. There should only be one firmware version available
+> for it anyway.
+> 
+
+Acked-by: Tiffany Lin <tiffany.lin@mediatek.com>
+
+> Signed-off-by: Alexandre Courbot <acourbot@chromium.org>
+> ---
+>  .../platform/mtk-vcodec/mtk_vcodec_drv.h      |  8 ++++++
+>  .../platform/mtk-vcodec/mtk_vcodec_enc_drv.c  |  1 +
+>  .../media/platform/mtk-vcodec/venc_ipi_msg.h  |  9 ++++---
+>  .../media/platform/mtk-vcodec/venc_vpu_if.c   | 27 ++++++++++++++++---
+>  4 files changed, 38 insertions(+), 7 deletions(-)
+> 
+> diff --git a/drivers/media/platform/mtk-vcodec/mtk_vcodec_drv.h b/drivers/media/platform/mtk-vcodec/mtk_vcodec_drv.h
+> index 45c8adfc6a0c..e7b155e7432e 100644
+> --- a/drivers/media/platform/mtk-vcodec/mtk_vcodec_drv.h
+> +++ b/drivers/media/platform/mtk-vcodec/mtk_vcodec_drv.h
+> @@ -300,13 +300,21 @@ struct mtk_vcodec_ctx {
+>  
+>  };
+>  
+> +enum mtk_chip {
+> +	MTK_MT8173,
+> +};
+> +
+>  /**
+>   * struct mtk_vcodec_enc_pdata - compatible data for each IC
+>   *
+> + * @chip: chip this encoder is compatible with
+> + *
+>   * @uses_ext: whether the encoder uses the extended firmware messaging format
+>   * @has_lt_irq: whether the encoder uses the LT irq
+>   */
+>  struct mtk_vcodec_enc_pdata {
+> +	enum mtk_chip chip;
+> +
+>  	bool uses_ext;
+>  	bool has_lt_irq;
+>  };
+> diff --git a/drivers/media/platform/mtk-vcodec/mtk_vcodec_enc_drv.c b/drivers/media/platform/mtk-vcodec/mtk_vcodec_enc_drv.c
+> index 922bc8883811..c1365209263e 100644
+> --- a/drivers/media/platform/mtk-vcodec/mtk_vcodec_enc_drv.c
+> +++ b/drivers/media/platform/mtk-vcodec/mtk_vcodec_enc_drv.c
+> @@ -378,6 +378,7 @@ static int mtk_vcodec_probe(struct platform_device *pdev)
+>  }
+>  
+>  static const struct mtk_vcodec_enc_pdata mt8173_pdata = {
+> +	.chip = MTK_MT8173,
+>  	.has_lt_irq = true,
+>  };
+>  
+> diff --git a/drivers/media/platform/mtk-vcodec/venc_ipi_msg.h b/drivers/media/platform/mtk-vcodec/venc_ipi_msg.h
+> index 4cafbf92d9cd..31a3c76f7d0d 100644
+> --- a/drivers/media/platform/mtk-vcodec/venc_ipi_msg.h
+> +++ b/drivers/media/platform/mtk-vcodec/venc_ipi_msg.h
+> @@ -131,16 +131,17 @@ struct venc_vpu_ipi_msg_common {
+>   * @venc_inst:	AP encoder instance (struct venc_vp8_inst/venc_h264_inst *)
+>   * @vpu_inst_addr:	VPU encoder instance addr
+>   *			(struct venc_vp8_vsi/venc_h264_vsi *)
+> - * @reserved:	reserved for future use. vpu is running in 32bit. Without
+> - *		this reserved field, if kernel run in 64bit. this struct size
+> - *		will be different between kernel and vpu
+> + * @venc_abi_version:	ABI version of the firmware. Kernel can use it to
+> + *			ensure that it is compatible with the firmware.
+> + *			For MT8173 the value of this field is undefined and
+> + *			should not be used.
+>   */
+>  struct venc_vpu_ipi_msg_init {
+>  	uint32_t msg_id;
+>  	uint32_t status;
+>  	uint64_t venc_inst;
+>  	uint32_t vpu_inst_addr;
+> -	uint32_t reserved;
+> +	uint32_t venc_abi_version;
+>  };
+>  
+>  /**
+> diff --git a/drivers/media/platform/mtk-vcodec/venc_vpu_if.c b/drivers/media/platform/mtk-vcodec/venc_vpu_if.c
+> index 6c77bf025172..472503701003 100644
+> --- a/drivers/media/platform/mtk-vcodec/venc_vpu_if.c
+> +++ b/drivers/media/platform/mtk-vcodec/venc_vpu_if.c
+> @@ -4,6 +4,7 @@
+>   * Author: PoChun Lin <pochun.lin@mediatek.com>
+>   */
+>  
+> +#include "mtk_vcodec_drv.h"
+>  #include "mtk_vcodec_fw.h"
+>  #include "venc_ipi_msg.h"
+>  #include "venc_vpu_if.h"
+> @@ -15,6 +16,23 @@ static void handle_enc_init_msg(struct venc_vpu_inst *vpu, const void *data)
+>  	vpu->inst_addr = msg->vpu_inst_addr;
+>  	vpu->vsi = mtk_vcodec_fw_map_dm_addr(vpu->ctx->dev->fw_handler,
+>  					     msg->vpu_inst_addr);
+> +
+> +	/* Firmware version field value is unspecified on MT8173. */
+> +	if (vpu->ctx->dev->venc_pdata->chip == MTK_MT8173)
+> +		return;
+> +
+> +	/* Check firmware version. */
+> +	mtk_vcodec_debug(vpu, "firmware version: 0x%x\n",
+> +			 msg->venc_abi_version);
+> +	switch (msg->venc_abi_version) {
+> +	case 1:
+> +		break;
+> +	default:
+> +		mtk_vcodec_err(vpu, "unhandled firmware version 0x%x\n",
+> +			       msg->venc_abi_version);
+> +		vpu->failure = 1;
+> +		break;
+> +	}
+>  }
+>  
+>  static void handle_enc_encode_msg(struct venc_vpu_inst *vpu, const void *data)
+> @@ -35,6 +53,11 @@ static void vpu_enc_ipi_handler(void *data, unsigned int len, void *priv)
+>  	mtk_vcodec_debug(vpu, "msg_id %x inst %p status %d",
+>  			 msg->msg_id, vpu, msg->status);
+>  
+> +	vpu->signaled = 1;
+> +	vpu->failure = (msg->status != VENC_IPI_MSG_STATUS_OK);
+> +	if (vpu->failure)
+> +		goto failure;
+> +
+>  	switch (msg->msg_id) {
+>  	case VPU_IPIMSG_ENC_INIT_DONE:
+>  		handle_enc_init_msg(vpu, data);
+> @@ -51,9 +74,7 @@ static void vpu_enc_ipi_handler(void *data, unsigned int len, void *priv)
+>  		break;
+>  	}
+>  
+> -	vpu->signaled = 1;
+> -	vpu->failure = (msg->status != VENC_IPI_MSG_STATUS_OK);
+> -
+> +failure:
+>  	mtk_vcodec_debug_leave(vpu);
+>  }
+>  
+
+_______________________________________________
+Linux-mediatek mailing list
+Linux-mediatek@lists.infradead.org
+http://lists.infradead.org/mailman/listinfo/linux-mediatek
