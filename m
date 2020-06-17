@@ -2,78 +2,67 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 33DF21FC4FC
-	for <lists+linux-mediatek@lfdr.de>; Wed, 17 Jun 2020 06:09:11 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id B37081FC590
+	for <lists+linux-mediatek@lfdr.de>; Wed, 17 Jun 2020 07:14:50 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:References:
+	Message-ID:Subject:To:From:Date:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=8eR/cnn/iGrLimWYEWF7nVKyi1bCEdH1EVitLak+Eec=; b=YLY27ynVg5oj/f
-	GbLRYuSFELjGh5olgX98/qRAVROo/Z/67BSIQmKM5jpcJjS+Oqr+fpZA2RHCIx2Y3JpPnUd4oHMsC
-	AUKwZk3N86T874Qy2yqz2Cm5fyug4KkKj4Z38RTKu6Mdsxh2TdPuu39reo3m2sGasVhdKSQnNthYL
-	hwQMdBbPmc4GJH/batAp4LfsrCGERamoNRKv5O5RcweeN5zP4MV1fpD9VnfTyBaBWM8j1NFZGYI5w
-	xKYdXrkJDycnU4KPDg2Wb2/lLPYM3wrvceC5oM4OZhKyI0khQio/I3yPQfCght/AgB2tT366pDNp4
-	QiUZZADpb5Aad3rqRlnQ==;
+	List-Owner; bh=rerd0FsdG5+/F9PzOmkHxOsqC1ZIgNYjXuw9eUC4IRA=; b=l3wVlGrogZqf+2
+	7KzjYl3hUv50sYabkS+3kvBP7OpRtt1TssXfqR6O45NYVEOz0AdHK8/oyRZUQCkhiM3u1foDUFUCF
+	lSLQPY6El7ks+Pqhkz0OSz+ULNwgw3DdyXr6v5SFfVfiBD77eD6C5kx5Mt1DdqJbsdiRSVG0PvPWR
+	jP0Vbbaew+VsFKUYBCBAZjxBExSgy/yBzr6PKuhRq/2sM4VFFx1kPQrosN847OzrAe3OSE4wLbDmS
+	5huli89eP9nJbEOhWDjWsYY7cGAzt0gL2IAC/d5nncf8yjncsAy4T/J7igTfJf27iEr1C/b87sqhG
+	WKM28PfrJXSxDKAFl4Qg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jlPNZ-0001Rt-Eb; Wed, 17 Jun 2020 04:08:49 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1jlQPJ-0005Eo-48; Wed, 17 Jun 2020 05:14:41 +0000
+Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jlPNQ-0001Ma-VG; Wed, 17 Jun 2020 04:08:42 +0000
-X-UUID: 1d786445c1874bd59d4de727291a4d3d-20200616
-DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
- s=dk; 
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:References:In-Reply-To:Message-ID:Date:Subject:CC:To:From;
- bh=J8u4UWY2G4d5/E7DWKw+p+qbm1PghnIow5Vag4ifkTE=; 
- b=pABTy1T7Xcoou7TOVVET4AwChQc0Yj+mqREDzs2EHOoR3jYdXvGFPNkAs9XeFyHBfo68UXTN2OVL6eBoSeu7NFN7aK4/lU/HPHKwH4XIMWlTentiBsnj/VedVQHPjpeIGV5skLauQ7tHn/pHmnE8BRAzs77W84oZf9o7E9lrSx8=;
-X-UUID: 1d786445c1874bd59d4de727291a4d3d-20200616
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
- (envelope-from <sean.wang@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 531224116; Tue, 16 Jun 2020 20:08:32 -0800
-Received: from MTKMBS02N1.mediatek.inc (172.21.101.77) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1497.2; Tue, 16 Jun 2020 20:58:32 -0700
-Received: from mtkcas08.mediatek.inc (172.21.101.126) by
- mtkmbs02n1.mediatek.inc (172.21.101.77) with Microsoft SMTP Server (TLS) id
- 15.0.1497.2; Wed, 17 Jun 2020 11:58:21 +0800
-Received: from mtkswgap22.mediatek.inc (172.21.77.33) by mtkcas08.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1497.2 via
- Frontend Transport; Wed, 17 Jun 2020 11:58:21 +0800
-From: <sean.wang@mediatek.com>
-To: <andy.shevchenko@gmail.com>
-Subject: Re: [PATCH v3] tty: serial: don't do termios for BTIF
-Date: Wed, 17 Jun 2020 11:58:20 +0800
-Message-ID: <1592366300-29503-1-git-send-email-sean.wang@mediatek.com>
-X-Mailer: git-send-email 1.7.9.5
-In-Reply-To: <CAHp75VdSvE9RPq3V8LTVX7OjaYs1PThVi2f1roh3p5EY_k0ANA@mail.gmail.com>
-References: <CAHp75VdSvE9RPq3V8LTVX7OjaYs1PThVi2f1roh3p5EY_k0ANA@mail.gmail.com>
+ id 1jlQP9-00058H-NA; Wed, 17 Jun 2020 05:14:32 +0000
+Received: from localhost (83-86-89-107.cable.dynamic.v4.ziggo.nl
+ [83.86.89.107])
+ (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
+ (No client certificate requested)
+ by mail.kernel.org (Postfix) with ESMTPSA id 106092082F;
+ Wed, 17 Jun 2020 05:14:29 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
+ s=default; t=1592370870;
+ bh=4RC/DvxLHx87nlYMECwxb5uBAMKIO7v3A/WfAL5PBCs=;
+ h=Date:From:To:Cc:Subject:References:In-Reply-To:From;
+ b=YErZksz0VYampTxWJdKuowSC+ReHO1RudkP9FrchHYS6Yh9N3LGVdZvflUqj8fNVz
+ Koo7nEAU92bNrPGW3HRg+wuttpu8rfAwIkXXN2tgFNO1ZoNezk+eUfGYXqKeaSpett
+ ezmBuDCFceFPfl5n9MgqcOj6K4hXh5r3k9hkXwXw=
+Date: Wed, 17 Jun 2020 07:14:22 +0200
+From: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
+To: Macpaul Lin <macpaul.lin@mediatek.com>
+Subject: Re: [PATCH v2] usb: gadget: u_serial: improve performance for large
+ data
+Message-ID: <20200617051422.GA1331778@kroah.com>
+References: <1592310884-4307-1-git-send-email-macpaul.lin@mediatek.com>
+ <1592362007-7120-1-git-send-email-macpaul.lin@mediatek.com>
 MIME-Version: 1.0
-X-MTK: N
+Content-Disposition: inline
+In-Reply-To: <1592362007-7120-1-git-send-email-macpaul.lin@mediatek.com>
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200616_210841_013074_B6ABDDB5 
-X-CRM114-Status: UNSURE (   7.21  )
+X-CRM114-CacheID: sfid-20200616_221431_775688_784852BC 
+X-CRM114-Status: UNSURE (   8.51  )
 X-CRM114-Notice: Please train this message.
-X-Spam-Score: -0.2 (/)
+X-Spam-Score: -5.0 (-----)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (-5.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
+ high trust [198.145.29.99 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 MIME_BASE64_TEXT       RAW: Message text disguised using base64
- encoding
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
- lines
+ -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -85,56 +74,37 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Ryder.Lee@mediatek.com, steven.liu@mediatek.com, arnd@arndb.de,
- gregkh@linuxfoundation.org, sean.wang@mediatek.com,
- linux-kernel@vger.kernel.org, linux-mediatek@lists.infradead.org,
- tthayer@opensource.altera.com, linux-serial@vger.kernel.org, jslaby@suse.com,
- matthias.bgg@gmail.com, andriy.shevchenko@linux.intel.com,
- mika.westerberg@linux.intel.com, sr@denx.de,
+Cc: Felipe Balbi <balbi@kernel.org>,
+ Mediatek WSD Upstream <wsd_upstream@mediatek.com>, linux-usb@vger.kernel.org,
+ linux-mediatek@lists.infradead.org, linux-kernel@vger.kernel.org,
+ =?utf-8?B?TWljaGHFgiBNaXJvc8WCYXc=?= <mirq-linux@rere.qmqm.pl>,
+ Matthias Brugger <matthias.bgg@gmail.com>,
+ Alan Stern <stern@rowland.harvard.edu>,
+ Chunfeng Yun <chunfeng.yun@mediatek.com>, Sergey Organov <sorganov@gmail.com>,
+ Macpaul Lin <macpaul.lin@gmail.com>, Fabrice Gasnier <fabrice.gasnier@st.com>,
  linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-From: Sean Wang <sean.wang@mediatek.com>
+On Wed, Jun 17, 2020 at 10:46:47AM +0800, Macpaul Lin wrote:
+> Nowadays some embedded systems use VCOM to transfer large log and data.
+> Take LTE MODEM as an example, during the long debugging stage, large
+> log and data were transfer through VCOM when doing field try or in
+> operator's lab. Here we suggest slightly increase the transfer buffer
+> in u_serial.c for performance improving.
+> 
+> Signed-off-by: Macpaul Lin <macpaul.lin@mediatek.com>
+> ---
+>  drivers/usb/gadget/function/u_serial.c |    5 +++--
+>  1 file changed, 3 insertions(+), 2 deletions(-)
 
->>
->> From: Sean Wang <sean.wang@mediatek.com>
->>
->> Bluetooth Interface (BTIF) is designed dedicatedly for MediaTek SOC
->> with BT in order to be instead of the UART interface between BT module
->> and Host CPU, and not exported to user space to access.
->>
->> As the UART design, BTIF will be an APB slave and can transmit or
->> receive data by MCU access, but doesn't provide termios function like
->> baudrate and flow control setup.
->>
->> Even LCR on offset 0xC that is just a FAKELCR a. If FAKELCR[7] is
->> equaled to 1, RBR(0x00), THR(0x00), IER(0x04)
->>    will not be readable/writable.
->>
->> b. If FAKELCR is equaled to 0xBF, RBR(0x00), THR(0x00), IER(0x04),
->>    IIR(0x08), and LSR(0x14) will not be readable/writable.
->>
->> So adding a new capability 'UART_CAP_NTIO' for the unusual unsupported
->> case.
->>
->> Fixes: 1c16ae65e250 ("serial: 8250: of: Add new port type for MediaTek
->> BTIF controller on MT7622/23 SoC")
->> Cc: Steven Liu <steven.liu@mediatek.com>
->
->> Suggested-by: Andy Shevchenko <andriy.shevchenko@linux.intel.com>
->
->I didn't suggest this change. I only commented on the name of the macro.
+What changed from v1?  Always put that below the --- line as the
+documentation asks for.
 
-my fault. i will remove the tag from next version.
+v3?
 
->
->> Signed-off-by: Sean Wang <sean.wang@mediatek.com>
->> Signed-off-by: Ryder Lee <ryder.lee@mediatek.com>
->>
->> --
 _______________________________________________
 Linux-mediatek mailing list
 Linux-mediatek@lists.infradead.org
