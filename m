@@ -2,46 +2,46 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id F369B1FDB51
-	for <lists+linux-mediatek@lfdr.de>; Thu, 18 Jun 2020 03:12:01 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id D45E61FDC47
+	for <lists+linux-mediatek@lfdr.de>; Thu, 18 Jun 2020 03:18:29 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=JXELrDnDijRvPvCGCwwmDDVWOw1lg/Nm+XapiW878ZE=; b=PjpmBV/pFOkTBf
-	1jxzF/uxTbI1F7N0IZ1lu3KYRSiV4w8Jd/cbiTnrqW0LhW/1Us4bKxwu4mjUclYVKiipSkWryoEjh
-	/r2eP5HW/cz0fMxfJDBSGhE7lo+I1fOESLBhC0RnjWpF2/GV0B1+NZWH+25I63Bi+O6Qiy7fk/TnD
-	UlEy4ElhA7lstJPLhphnvPP3ujTsGXHFr0zn89R2t17g1Nq34NG+dtzdG4o3HG8lOcuMCRomITwiH
-	3tSjVeE9n3Z6vnVlHTYCZgM8UKOCS0N8dAjD5L181QAxQC+RpprCctymll4u3OwlDmUyhZVQ8tpnF
-	7YUlPRRpMJ8Tb43Sbs4g==;
+	List-Owner; bh=9T9ZZexQ+pyEFY6Lde4Q8sdiMe5C4bxRkTSrtkI8tOk=; b=t8rgJZrjhgRnVe
+	ae8Decr6zOcuygqUXOfkyJfTy/iWm/1cj3I/4ZJ+LTkVWFAFhfkQC50uCciY6szELtqwyBVpWbghW
+	u5vsFjmDrHMpOZWPnUCxXlXKWUAH7vsi5CGJYAPcNaE75C1UTlzXM2dyu92jqtUtH/WiFkn4ek8CT
+	HXhcv+ci5QImnNk/xPzYe6M10vQpy/+igHyubDv7IcmTr3JPsJsQZEzJFrRz03DzKLGhX8NUTtb8o
+	7usMORp3V1hC+HXis4dSqZIP1nrmGH3BBmWoLSJKACH65/VQs1mAbZEE+40uGwCkGaRTQlT/wbGXE
+	rlgVjPXPkImrwBRPqBuQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jlj5n-0001SW-O0; Thu, 18 Jun 2020 01:11:47 +0000
+	id 1jljC8-0000Jq-1K; Thu, 18 Jun 2020 01:18:20 +0000
 Received: from mail.kernel.org ([198.145.29.99])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jlj3A-0005De-Id; Thu, 18 Jun 2020 01:09:06 +0000
+ id 1jlj4m-0000XL-DV; Thu, 18 Jun 2020 01:10:47 +0000
 Received: from sasha-vm.mshome.net (c-73-47-72-35.hsd1.nh.comcast.net
  [73.47.72.35])
  (using TLSv1.2 with cipher ECDHE-RSA-AES128-GCM-SHA256 (128/128 bits))
  (No client certificate requested)
- by mail.kernel.org (Postfix) with ESMTPSA id 426A021D6C;
- Thu, 18 Jun 2020 01:09:02 +0000 (UTC)
+ by mail.kernel.org (Postfix) with ESMTPSA id 340CF221FA;
+ Thu, 18 Jun 2020 01:10:43 +0000 (UTC)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1592442544;
- bh=mJwDThznqFqYuVdPQYXqiTJAdQqBcPNpMgkMU+wC5+8=;
+ s=default; t=1592442644;
+ bh=+M0W5qBbHTPjU1IEEobOMiZujG9hxISML1JRsZPtPdA=;
  h=From:To:Cc:Subject:Date:In-Reply-To:References:From;
- b=fSd7QNjMPDeFi3LsPdBP2gxPl/l2RsFX2psqjD0lOyTQm9yPfPd09GaySURCx1MnQ
- 082C3VaVpiOOjLCk5TBR1KUWGrmHTkr1IEsjGmKa0QCqs3gXY4jBwsY2NYv70/geB7
- ReJb/vZ//RKIkdAPBJDPEw36STGDuXCLukGmqyxA=
+ b=vd2uZbKD2Ul2FKiwxWd9kVMVRRMFSqEDDPIakzR+makaXrgofbbgRDfD+goyngmcF
+ TQXyzQYF8lsF/xKT3pANXNjeB8VrZw84W6Skx0a2K8iOWmfZ1QguS8gTEkJ5ERu7iv
+ tdCahUV5W9ZRZUil2ALTAnjxooetfwPaEQG8h1Uw=
 From: Sasha Levin <sashal@kernel.org>
 To: linux-kernel@vger.kernel.org,
 	stable@vger.kernel.org
-Subject: [PATCH AUTOSEL 5.7 043/388] serial: 8250: Fix max baud limit in
- generic 8250 port
-Date: Wed, 17 Jun 2020 21:02:20 -0400
-Message-Id: <20200618010805.600873-43-sashal@kernel.org>
+Subject: [PATCH AUTOSEL 5.7 118/388] staging: mt7621-pci: fix PCIe interrupt
+ mapping
+Date: Wed, 17 Jun 2020 21:03:35 -0400
+Message-Id: <20200618010805.600873-118-sashal@kernel.org>
 X-Mailer: git-send-email 2.25.1
 In-Reply-To: <20200618010805.600873-1-sashal@kernel.org>
 References: <20200618010805.600873-1-sashal@kernel.org>
@@ -49,8 +49,8 @@ MIME-Version: 1.0
 X-stable: review
 X-Patchwork-Hint: Ignore
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200617_180904_728869_D5DB76D2 
-X-CRM114-Status: GOOD (  12.80  )
+X-CRM114-CacheID: sfid-20200617_181044_529950_F6E0B6E0 
+X-CRM114-Status: GOOD (  15.74  )
 X-Spam-Score: -5.2 (-----)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  Content analysis details:   (-5.2 points)
@@ -67,8 +67,6 @@ X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
  valid
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.0 TVD_PH_BODY_ACCOUNTS_PRE The body matches phrases such as
- "accounts suspended", "account credited", "account verification"
  -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
@@ -81,96 +79,194 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Sasha Levin <sashal@kernel.org>,
- Thomas Bogendoerfer <tsbogend@alpha.franken.de>, linux-mips@vger.kernel.org,
- Paul Burton <paulburton@kernel.org>, Arnd Bergmann <arnd@arndb.de>,
- Catalin Marinas <catalin.marinas@arm.com>,
- Russell King <linux@armlinux.org.uk>, Ralf Baechle <ralf@linux-mips.org>,
- Alexey Malahov <Alexey.Malahov@baikalelectronics.ru>,
- Serge Semin <Sergey.Semin@baikalelectronics.ru>,
- Long Cheng <long.cheng@mediatek.com>, linux-mediatek@lists.infradead.org,
- Maxime Ripard <mripard@kernel.org>, linux-serial@vger.kernel.org,
+Cc: Sasha Levin <sashal@kernel.org>, devel@driverdev.osuosl.org,
  Greg Kroah-Hartman <gregkh@linuxfoundation.org>,
- Andy Shevchenko <andriy.shevchenko@linux.intel.com>,
- Will Deacon <will@kernel.org>, linux-arm-kernel@lists.infradead.org
+ Sergio Paracuellos <sergio.paracuellos@gmail.com>,
+ linux-mediatek@lists.infradead.org, linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-From: Serge Semin <Sergey.Semin@baikalelectronics.ru>
+From: Sergio Paracuellos <sergio.paracuellos@gmail.com>
 
-[ Upstream commit 7b668c064ec33f3d687c3a413d05e355172e6c92 ]
+[ Upstream commit fab6710e4c51f4eb622f95a08322ab5fdbe3f295 ]
 
-Standard 8250 UART ports are designed in a way so they can communicate
-with baud rates up to 1/16 of a reference frequency. It's expected from
-most of the currently supported UART controllers. That's why the former
-version of serial8250_get_baud_rate() method called uart_get_baud_rate()
-with min and max baud rates passed as (port->uartclk / 16 / UART_DIV_MAX)
-and ((port->uartclk + tolerance) / 16) respectively. Doing otherwise, like
-it was suggested in commit ("serial: 8250_mtk: support big baud rate."),
-caused acceptance of bauds, which was higher than the normal UART
-controllers actually supported. As a result if some user-space program
-requested to set a baud greater than (uartclk / 16) it would have been
-permitted without truncation, but then serial8250_get_divisor(baud)
-(which calls uart_get_divisor() to get the reference clock divisor) would
-have returned a zero divisor. Setting zero divisor will cause an
-unpredictable effect varying from chip to chip. In case of DW APB UART the
-communications just stop.
+MT7621 has three assigned interrupts for the pcie. This
+interrupts should properly being mapped taking into account
+which devices are finally connected in which bus according
+to link status. So the irq mappings should be as follows
+according to link status (three bits indicating which devices
+are link up):
 
-Lets fix this problem by getting back the limitation of (uartclk +
-tolerance) / 16 maximum baud supported by the generic 8250 port. Mediatek
-8250 UART ports driver developer shouldn't have touched it in the first
-place  notably seeing he already provided a custom version of set_termios()
-callback in that glue-driver which took into account the extended baud
-rate values and accordingly updated the standard and vendor-specific
-divisor latch registers anyway.
+* For PCIe Bus 1 slot 0:
+  - status = 0x2 || status = 0x6 => IRQ = pcie1_irq (24).
+  - status = 0x4 => IRQ = pcie2_irq (25).
+  - default => IRQ = pcie0_irq (23).
+* For PCIe Bus 2 slot 0:
+  - status = 0x5 || status = 0x6 => IRQ = pcie2_irq (25).
+  - default => IRQ = pcie1_irq (24).
+* For PCIe Bus 2 slot 1:
+  - status = 0x5 || status = 0x6 => IRQ = pcie2_irq (25).
+  - default => IRQ = pcie1_irq (24).
+* For PCIe Bus 3 any slot:
+  - default => IRQ = pcie2_irq (25).
 
-Fixes: 81bb549fdf14 ("serial: 8250_mtk: support big baud rate.")
-Signed-off-by: Serge Semin <Sergey.Semin@baikalelectronics.ru>
-Cc: Alexey Malahov <Alexey.Malahov@baikalelectronics.ru>
-Cc: Thomas Bogendoerfer <tsbogend@alpha.franken.de>
-Cc: Paul Burton <paulburton@kernel.org>
-Cc: Ralf Baechle <ralf@linux-mips.org>
-Cc: Arnd Bergmann <arnd@arndb.de>
-Cc: Long Cheng <long.cheng@mediatek.com>
-Cc: Andy Shevchenko <andriy.shevchenko@linux.intel.com>
-Cc: Maxime Ripard <mripard@kernel.org>
-Cc: Catalin Marinas <catalin.marinas@arm.com>
-Cc: Will Deacon <will@kernel.org>
-Cc: Russell King <linux@armlinux.org.uk>
-Cc: linux-mips@vger.kernel.org
-Cc: linux-arm-kernel@lists.infradead.org
-Cc: linux-mediatek@lists.infradead.org
-Link: https://lore.kernel.org/r/20200506233136.11842-2-Sergey.Semin@baikalelectronics.ru
+Because of this, the function 'of_irq_parse_and_map_pci' cannot
+be used and we need to change device tree information from using
+the 'interrupt-map' and 'interrupt-map-mask' properties into an
+'interrupts' property to be able to get irq information from the
+ports using the 'platform_get_irq' and storing an 'irq-map' into
+the pcie driver data node to properly map correct irq using a
+new 'mt7621_map_irq' function where this map will be read and the
+correct irq returned.
+
+Fixes: 46d093124df4 ("staging: mt7621-pci: improve interrupt mapping")
+Signed-off-by: Sergio Paracuellos <sergio.paracuellos@gmail.com>
+Link: https://lore.kernel.org/r/20200413055942.2714-1-sergio.paracuellos@gmail.com
 Signed-off-by: Greg Kroah-Hartman <gregkh@linuxfoundation.org>
 Signed-off-by: Sasha Levin <sashal@kernel.org>
 ---
- drivers/tty/serial/8250/8250_port.c | 4 +++-
- 1 file changed, 3 insertions(+), 1 deletion(-)
+ drivers/staging/mt7621-dts/mt7621.dtsi  |  9 +++----
+ drivers/staging/mt7621-pci/pci-mt7621.c | 36 +++++++++++++++++++++++--
+ 2 files changed, 38 insertions(+), 7 deletions(-)
 
-diff --git a/drivers/tty/serial/8250/8250_port.c b/drivers/tty/serial/8250/8250_port.c
-index f77bf820b7a3..4d83c85a7389 100644
---- a/drivers/tty/serial/8250/8250_port.c
-+++ b/drivers/tty/serial/8250/8250_port.c
-@@ -2615,6 +2615,8 @@ static unsigned int serial8250_get_baud_rate(struct uart_port *port,
- 					     struct ktermios *termios,
- 					     struct ktermios *old)
- {
-+	unsigned int tolerance = port->uartclk / 100;
-+
- 	/*
- 	 * Ask the core to calculate the divisor for us.
- 	 * Allow 1% tolerance at the upper limit so uart clks marginally
-@@ -2623,7 +2625,7 @@ static unsigned int serial8250_get_baud_rate(struct uart_port *port,
- 	 */
- 	return uart_get_baud_rate(port, termios, old,
- 				  port->uartclk / 16 / UART_DIV_MAX,
--				  port->uartclk);
-+				  (port->uartclk + tolerance) / 16);
+diff --git a/drivers/staging/mt7621-dts/mt7621.dtsi b/drivers/staging/mt7621-dts/mt7621.dtsi
+index 9e5cf68731bb..82aa93634eda 100644
+--- a/drivers/staging/mt7621-dts/mt7621.dtsi
++++ b/drivers/staging/mt7621-dts/mt7621.dtsi
+@@ -523,11 +523,10 @@ pcie: pcie@1e140000 {
+ 			0x01000000 0 0x00000000 0x1e160000 0 0x00010000 /* io space */
+ 		>;
+ 
+-		#interrupt-cells = <1>;
+-		interrupt-map-mask = <0xF0000 0 0 1>;
+-		interrupt-map = <0x10000 0 0 1 &gic GIC_SHARED 4 IRQ_TYPE_LEVEL_HIGH>,
+-				<0x20000 0 0 1 &gic GIC_SHARED 24 IRQ_TYPE_LEVEL_HIGH>,
+-				<0x30000 0 0 1 &gic GIC_SHARED 25 IRQ_TYPE_LEVEL_HIGH>;
++		interrupt-parent = <&gic>;
++		interrupts = <GIC_SHARED 4 IRQ_TYPE_LEVEL_HIGH
++				GIC_SHARED 24 IRQ_TYPE_LEVEL_HIGH
++				GIC_SHARED 25 IRQ_TYPE_LEVEL_HIGH>;
+ 
+ 		status = "disabled";
+ 
+diff --git a/drivers/staging/mt7621-pci/pci-mt7621.c b/drivers/staging/mt7621-pci/pci-mt7621.c
+index b9d460a9c041..36207243a71b 100644
+--- a/drivers/staging/mt7621-pci/pci-mt7621.c
++++ b/drivers/staging/mt7621-pci/pci-mt7621.c
+@@ -97,6 +97,7 @@
+  * @pcie_rst: pointer to port reset control
+  * @gpio_rst: gpio reset
+  * @slot: port slot
++ * @irq: GIC irq
+  * @enabled: indicates if port is enabled
+  */
+ struct mt7621_pcie_port {
+@@ -107,6 +108,7 @@ struct mt7621_pcie_port {
+ 	struct reset_control *pcie_rst;
+ 	struct gpio_desc *gpio_rst;
+ 	u32 slot;
++	int irq;
+ 	bool enabled;
+ };
+ 
+@@ -120,6 +122,7 @@ struct mt7621_pcie_port {
+  * @dev: Pointer to PCIe device
+  * @io_map_base: virtual memory base address for io
+  * @ports: pointer to PCIe port information
++ * @irq_map: irq mapping info according pcie link status
+  * @resets_inverted: depends on chip revision
+  * reset lines are inverted.
+  */
+@@ -135,6 +138,7 @@ struct mt7621_pcie {
+ 	} offset;
+ 	unsigned long io_map_base;
+ 	struct list_head ports;
++	int irq_map[PCIE_P2P_MAX];
+ 	bool resets_inverted;
+ };
+ 
+@@ -279,6 +283,16 @@ static void setup_cm_memory_region(struct mt7621_pcie *pcie)
+ 	}
  }
  
- void
++static int mt7621_map_irq(const struct pci_dev *pdev, u8 slot, u8 pin)
++{
++	struct mt7621_pcie *pcie = pdev->bus->sysdata;
++	struct device *dev = pcie->dev;
++	int irq = pcie->irq_map[slot];
++
++	dev_info(dev, "bus=%d slot=%d irq=%d\n", pdev->bus->number, slot, irq);
++	return irq;
++}
++
+ static int mt7621_pci_parse_request_of_pci_ranges(struct mt7621_pcie *pcie)
+ {
+ 	struct device *dev = pcie->dev;
+@@ -330,6 +344,7 @@ static int mt7621_pcie_parse_port(struct mt7621_pcie *pcie,
+ {
+ 	struct mt7621_pcie_port *port;
+ 	struct device *dev = pcie->dev;
++	struct platform_device *pdev = to_platform_device(dev);
+ 	struct device_node *pnode = dev->of_node;
+ 	struct resource regs;
+ 	char name[10];
+@@ -371,6 +386,12 @@ static int mt7621_pcie_parse_port(struct mt7621_pcie *pcie,
+ 	port->slot = slot;
+ 	port->pcie = pcie;
+ 
++	port->irq = platform_get_irq(pdev, slot);
++	if (port->irq < 0) {
++		dev_err(dev, "Failed to get IRQ for PCIe%d\n", slot);
++		return -ENXIO;
++	}
++
+ 	INIT_LIST_HEAD(&port->list);
+ 	list_add_tail(&port->list, &pcie->ports);
+ 
+@@ -585,13 +606,15 @@ static int mt7621_pcie_init_virtual_bridges(struct mt7621_pcie *pcie)
+ {
+ 	u32 pcie_link_status = 0;
+ 	u32 n;
+-	int i;
++	int i = 0;
+ 	u32 p2p_br_devnum[PCIE_P2P_MAX];
++	int irqs[PCIE_P2P_MAX];
+ 	struct mt7621_pcie_port *port;
+ 
+ 	list_for_each_entry(port, &pcie->ports, list) {
+ 		u32 slot = port->slot;
+ 
++		irqs[i++] = port->irq;
+ 		if (port->enabled)
+ 			pcie_link_status |= BIT(slot);
+ 	}
+@@ -614,6 +637,15 @@ static int mt7621_pcie_init_virtual_bridges(struct mt7621_pcie *pcie)
+ 		 (p2p_br_devnum[1] << PCIE_P2P_BR_DEVNUM1_SHIFT) |
+ 		 (p2p_br_devnum[2] << PCIE_P2P_BR_DEVNUM2_SHIFT));
+ 
++	/* Assign IRQs */
++	n = 0;
++	for (i = 0; i < PCIE_P2P_MAX; i++)
++		if (pcie_link_status & BIT(i))
++			pcie->irq_map[n++] = irqs[i];
++
++	for (i = n; i < PCIE_P2P_MAX; i++)
++		pcie->irq_map[i] = -1;
++
+ 	return 0;
+ }
+ 
+@@ -638,7 +670,7 @@ static int mt7621_pcie_register_host(struct pci_host_bridge *host,
+ 	host->busnr = pcie->busn.start;
+ 	host->dev.parent = pcie->dev;
+ 	host->ops = &mt7621_pci_ops;
+-	host->map_irq = of_irq_parse_and_map_pci;
++	host->map_irq = mt7621_map_irq;
+ 	host->swizzle_irq = pci_common_swizzle;
+ 	host->sysdata = pcie;
+ 
 -- 
 2.25.1
 
