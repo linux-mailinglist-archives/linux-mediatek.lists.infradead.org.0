@@ -2,42 +2,42 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 56B5C1FF0A5
-	for <lists+linux-mediatek@lfdr.de>; Thu, 18 Jun 2020 13:34:58 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 1FCF61FF0E0
+	for <lists+linux-mediatek@lfdr.de>; Thu, 18 Jun 2020 13:45:47 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=hBsasUoAUiu28KZrVsJlo7ggofjMMNwfEuMBHqO8Tso=; b=Hm2B7zxjvdDgpu
-	xLGur7mbhaLIspkgTdIm5ZNczDTawxpevAdWmqaEBd85pwFoWeQ3XJ6rV3mP4QyM+hqa1kpd5X3bs
-	j7Ac7bz8rqvLT6gKQOqVzNQcSXg1J29cVRXwuXv4roL9vUseUqEskMYZpg3rRGPoIuxDXFoo6b087
-	6KCZLYKS5Tw0yAEhkez07XJBGKTh8UqBcE9Ucu3MKkS2wL4ROdncTfDZW3PMeB6Yh2DBznmW12u37
-	lTbWofpu2wYHwmjisx6u67yPdlYDKbRYmiC8y2BXRpSCD0gvGNuuE7eJbhc60D5ljIm7Qw8017eSd
-	OcjYI6YAVkkIhPHeD1Vw==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=2ZHcSTUPKgmfbiPo1Uz79qQmoYFf/5CI2wOM9PzxaIE=; b=jEdfO5psEBVKSA
+	eLz8fYz7oGNuUA/OdjuscIUAbUgtmY2qT/TMY2iXB8StTE+d6XZZoMkC0NjjAaTo9SXKwyWfKgoeV
+	Y+GsEeFv8r/sNvyKAh6TyYArRVlIoqaLqbh6WCLy+rh/w2DAO28Xcx3CK5xXCdFD5wTcq+SM1xHEj
+	Ww/K8IZl8oGmcgTpgxnuiBLEyrPRXffpvhb+zwdOI05o9E0Bu54L+jS5fAoNhrDYrBZA86vTsey8Z
+	yr0KBKqLQYl9z+KloHxvh1/fyfvjmI3O2O0iy4yQBqkNuaHRNewyvZaLaFKema/OreE8z+lntZGdv
+	3Fs+gM7QMn4k5EeK0NBg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jlsol-0000Ls-1H; Thu, 18 Jun 2020 11:34:51 +0000
+	id 1jlszC-0002eM-9R; Thu, 18 Jun 2020 11:45:38 +0000
 Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jlsoI-0008Jn-Bu; Thu, 18 Jun 2020 11:34:23 +0000
-X-UUID: 8ee310dc690f42c7b7db0ecbe38269bf-20200618
+ id 1jlsxm-0007Jp-S8; Thu, 18 Jun 2020 11:44:12 +0000
+X-UUID: ba79e400b0c04248b35e8abc1b426831-20200618
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
  s=dk; 
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:Subject:CC:To:From;
- bh=jOW7/ZlqTBzww6L1JbZKHV6k0YOMNioqgiPWE3AJk84=; 
- b=Lv6qw0zN9bx+nP3IBoLut4P1JDt6do55+rmeLOj/HFCxKRUo31Wp3H5O6kASUO3V/pxh1DvX2i/1lfCv5euvMKiqa+H6eHQjkvSi2JFwFntXnMrpOlzhIsQPCjf2Lz2vi/rR0r/lkWx2lHuewN14NXnYWGTLJGOiMo6K1WKL5Fs=;
-X-UUID: 8ee310dc690f42c7b7db0ecbe38269bf-20200618
-Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw01.mediatek.com
+ h=Content-Transfer-Encoding:Content-Type:MIME-Version:References:In-Reply-To:Message-ID:Date:Subject:CC:To:From;
+ bh=YOyQ+xNoYb3LVTxsjHvGeSZpfP5WbSuesuRvHY3x/ss=; 
+ b=KSPLphkk9G/Z+DRNrWvRtW13llGR9kE1HpuyPWjN+im9c3Mk6jVwmgQQxoIF0tCfxytUL+6k2rVtz4NgVcMwGRjwkJ5KpK+y1x4ripBR4/3MUgTSL3lxjbwAjiulFsp4xoOxBpomO3L9Dk+ax+elvR83PujdMyijLArccHwEjSc=;
+X-UUID: ba79e400b0c04248b35e8abc1b426831-20200618
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
  (envelope-from <hanks.chen@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1515181308; Thu, 18 Jun 2020 03:34:06 -0800
-Received: from MTKMBS02N1.mediatek.inc (172.21.101.77) by
- MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
- 15.0.1497.2; Thu, 18 Jun 2020 04:34:16 -0700
+ with ESMTP id 414446399; Thu, 18 Jun 2020 03:43:55 -0800
+Received: from MTKMBS01N2.mediatek.inc (172.21.101.79) by
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1497.2; Thu, 18 Jun 2020 04:34:03 -0700
 Received: from mtkcas08.mediatek.inc (172.21.101.126) by
- mtkmbs02n1.mediatek.inc (172.21.101.77) with Microsoft SMTP Server (TLS) id
+ mtkmbs01n2.mediatek.inc (172.21.101.79) with Microsoft SMTP Server (TLS) id
  15.0.1497.2; Thu, 18 Jun 2020 19:34:01 +0800
 Received: from mtkswgap22.mediatek.inc (172.21.77.33) by mtkcas08.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1497.2 via
@@ -47,16 +47,19 @@ To: Linus Walleij <linus.walleij@linaro.org>, Rob Herring
  <robh+dt@kernel.org>, Matthias Brugger <matthias.bgg@gmail.com>, "Michael
  Turquette" <mturquette@baylibre.com>, Stephen Boyd <sboyd@kernel.org>, "Sean
  Wang" <sean.wang@kernel.org>
-Subject: [PATCH v6] Add basic SoC Support for Mediatek MT6779 SoC
-Date: Thu, 18 Jun 2020 19:33:31 +0800
-Message-ID: <1592480018-3340-1-git-send-email-hanks.chen@mediatek.com>
+Subject: [PATCH v6 1/7] dt-bindings: pinctrl: add bindings for MediaTek MT6779
+ SoC
+Date: Thu, 18 Jun 2020 19:33:32 +0800
+Message-ID: <1592480018-3340-2-git-send-email-hanks.chen@mediatek.com>
 X-Mailer: git-send-email 1.7.9.5
+In-Reply-To: <1592480018-3340-1-git-send-email-hanks.chen@mediatek.com>
+References: <1592480018-3340-1-git-send-email-hanks.chen@mediatek.com>
 MIME-Version: 1.0
+X-TM-SNTS-SMTP: 591640295288D394FECD5647B9F01693616AD9C0716C35C57EF74C52D2E77B222000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200618_043422_556674_5C3B93D3 
-X-CRM114-Status: UNSURE (   9.40  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20200618_044410_939785_1D33A2A9 
+X-CRM114-Status: GOOD (  13.63  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
@@ -97,74 +100,234 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-This patch add basic SoC Support for Mediatek MT6779 SoC
+From: Andy Teng <andy.teng@mediatek.com>
 
-Change since v6:
-Commit "dt-bindings: pinctrl: add bindings for MediaTek"
--- fix format of bindings and add interrupt definition.
-Commit "pinctrl: mediatek: update pinmux definitions for"
--- use the standard include path
-Commit "pinctrl: mediatek: avoid virtual gpio trying to set"
--- remove unnecessary error handler
-Commit "pinctrl: mediatek: add pinctrl support for MT6779 SoC"
--- add some useful help text in kconfig
-Commit "clk: mediatek: add UART0 clock support"
--- add UART0 clock support
-Commit "arm64: dts: add dts nodes for MT6779"
--- add "baud" and "bus" clocks for uart
--- add new approach for mmsys
+Add devicetree bindings for MediaTek MT6779 pinctrl driver.
 
+Signed-off-by: Andy Teng <andy.teng@mediatek.com>
+---
+ .../bindings/pinctrl/mediatek,mt6779-pinctrl.yaml  |  210 ++++++++++++++++++++
+ 1 file changed, 210 insertions(+)
+ create mode 100644 Documentation/devicetree/bindings/pinctrl/mediatek,mt6779-pinctrl.yaml
 
-Change since v5:
-1. remove unnecessary string in commit message
-
-
-Change since v4:
-1. fix format of pinctrl bindings
-
-
-Change since v3:
-1. add bindings for "mediatek,mt6779-pinctrl"
-2. add some comments into the code (e.g. virtual gpio ...)
-3. add Acked-by tags
-4. add pmu node into dts
-5. support ppi partition and fix base address in gic node of dts
-
-
-Change since v2:
-1. add Reviewed-by tags
-2. fix checkpatch warnings with strict level
-
-
-Change since v1:
-first patchset
-
-
-Andy Teng (1):
-  dt-bindings: pinctrl: add bindings for MediaTek MT6779 SoC
-
-Hanks Chen (6):
-  pinctrl: mediatek: update pinmux definitions for mt6779
-  pinctrl: mediatek: avoid virtual gpio trying to set reg
-  pinctrl: mediatek: add pinctrl support for MT6779 SoC
-  pinctrl: mediatek: add mt6779 eint support
-  clk: mediatek: add UART0 clock support
-  arm64: dts: add dts nodes for MT6779
-
- .../bindings/pinctrl/mediatek,mt6779-pinctrl.yaml  |  210 ++
- arch/arm64/boot/dts/mediatek/Makefile              |    1 +
- arch/arm64/boot/dts/mediatek/mt6779-evb.dts        |   31 +
- arch/arm64/boot/dts/mediatek/mt6779.dtsi           |  261 +++
- drivers/clk/mediatek/clk-mt6779.c                  |    2 +
- drivers/pinctrl/mediatek/Kconfig                   |   12 +
- drivers/pinctrl/mediatek/Makefile                  |    1 +
- drivers/pinctrl/mediatek/pinctrl-mt6779.c          |  783 ++++++++
- drivers/pinctrl/mediatek/pinctrl-mtk-common-v2.c   |   25 +
- drivers/pinctrl/mediatek/pinctrl-mtk-common-v2.h   |    1 +
- drivers/pinctrl/mediatek/pinctrl-mtk-mt6779.h      | 2085 ++++++++++++++++++++
- drivers/pinctrl/mediatek/pinctrl-paris.c           |    7 +
- include/dt-bindings/pinctrl/mt6779-pinfunc.h       | 1242 ++++++++++++
- 13 files changed, 4661 insertions(+)
+diff --git a/Documentation/devicetree/bindings/pinctrl/mediatek,mt6779-pinctrl.yaml b/Documentation/devicetree/bindings/pinctrl/mediatek,mt6779-pinctrl.yaml
+new file mode 100644
+index 0000000..85819a4
+--- /dev/null
++++ b/Documentation/devicetree/bindings/pinctrl/mediatek,mt6779-pinctrl.yaml
+@@ -0,0 +1,210 @@
++# SPDX-License-Identifier: (GPL-2.0-only OR BSD-2-Clause)
++%YAML 1.2
++---
++$id: http://devicetree.org/schemas/pinctrl/mediatek,mt6779-pinctrl.yaml#
++$schema: http://devicetree.org/meta-schemas/core.yaml#
++
++title: Mediatek MT6779 Pin Controller Device Tree Bindings
++
++maintainers:
++  - Andy Teng <andy.teng@mediatek.com>
++
++description: |+
++  The pin controller node should be the child of a syscon node with the
++  required property:
++  - compatible: "syscon"
++
++properties:
++  compatible:
++    const: mediatek,mt6779-pinctrl
++
++  reg:
++    minItems: 9
++    maxItems: 9
++    description: |
++      physical address base for gpio-related control registers.
++
++  reg-names:
++    description: |
++      GPIO base register names. The names are "gpio", "iocfg_rm",
++      "iocfg_br", "iocfg_lm", "iocfg_lb", "iocfg_rt", "iocfg_lt",
++      "iocfg_tl", "eint";
++
++  gpio-controller: true
++
++  "#gpio-cells":
++    const: 2
++    description: |
++      Number of cells in GPIO specifier. Since the generic GPIO
++      binding is used, the amount of cells must be specified as 2. See the below
++      mentioned gpio binding representation for description of particular cells.
++
++  gpio-ranges:
++    minItems: 1
++    maxItems: 5
++    description: |
++      GPIO valid number range.
++
++  interrupt-controller: true
++
++  interrupts:
++    maxItems: 1
++    description: |
++      Specifies the summary IRQ.
++
++  "#interrupt-cells":
++    const: 2
++
++required:
++  - compatible
++  - reg
++  - reg-names
++  - gpio-controller
++  - "#gpio-cells"
++  - gpio-ranges
++  - interrupt-controller
++  - interrupts
++  - "#interrupt-cells"
++
++patternProperties:
++  '-[0-9]*$':
++    type: object
++    patternProperties:
++      '-pins*$':
++        type: object
++        description: |
++          A pinctrl node should contain at least one subnodes representing the
++          pinctrl groups available on the machine. Each subnode will list the
++          pins it needs, and how they should be configured, with regard to muxer
++          configuration, pullups, drive strength, input enable/disable and input schmitt.
++
++        properties:
++          pinmux:
++            description:
++              integer array, represents gpio pin number and mux setting.
++              Supported pin number and mux varies for different SoCs, and are defined
++              as macros in boot/dts/<soc>-pinfunc.h directly.
++
++          bias-disable:
++            type: boolean
++
++          bias-pull-up:
++            type: boolean
++
++          bias-pull-down:
++            type: boolean
++
++          input-enable:
++            type: boolean
++
++          input-disable:
++            type: boolean
++
++          output-low:
++            type: boolean
++
++          output-high:
++            type: boolean
++
++          input-schmitt-enable:
++            type: boolean
++
++          input-schmitt-disable:
++            type: boolean
++
++          mediatek,pull-up-adv:
++            description: |
++              Pull up setings for 2 pull resistors, R0 and R1. User can
++              configure those special pins. Valid arguments are described as below:
++              0: (R1, R0) = (0, 0) which means R1 disabled and R0 disable.
++              1: (R1, R0) = (0, 1) which means R1 disabled and R0 enabled.
++              2: (R1, R0) = (1, 0) which means R1 enabled and R0 disabled.
++              3: (R1, R0) = (1, 1) which means R1 enabled and R0 enabled.
++            allOf:
++              - $ref: /schemas/types.yaml#/definitions/uint32
++              - enum: [0, 1, 2, 3]
++
++          mediatek,pull-down-adv:
++            description: |
++              Pull down settings for 2 pull resistors, R0 and R1. User can
++              configure those special pins. Valid arguments are described as below:
++              0: (R1, R0) = (0, 0) which means R1 disabled and R0 disable.
++              1: (R1, R0) = (0, 1) which means R1 disabled and R0 enabled.
++              2: (R1, R0) = (1, 0) which means R1 enabled and R0 disabled.
++              3: (R1, R0) = (1, 1) which means R1 enabled and R0 enabled.
++            allOf:
++              - $ref: /schemas/types.yaml#/definitions/uint32
++              - enum: [0, 1, 2, 3]
++
++          drive-strength:
++            description: |
++              Selects the drive strength for the specified pins in mA.
++            allOf:
++              - $ref: /schemas/types.yaml#/definitions/uint32
++              - enum: [2, 4, 6, 8, 10, 12, 14, 16]
++
++        required:
++          - pinmux
++
++        additionalProperties: false
++
++additionalProperties: false
++
++examples:
++  - |
++    #include <dt-bindings/interrupt-controller/irq.h>
++    #include <dt-bindings/interrupt-controller/arm-gic.h>
++    #include <dt-bindings/pinctrl/mt6779-pinfunc.h>
++
++    pio: pinctrl@10005000 {
++        compatible = "mediatek,mt6779-pinctrl";
++        reg = <0 0x10005000 0 0x1000>,
++            <0 0x11c20000 0 0x1000>,
++            <0 0x11d10000 0 0x1000>,
++            <0 0x11e20000 0 0x1000>,
++            <0 0x11e70000 0 0x1000>,
++            <0 0x11ea0000 0 0x1000>,
++            <0 0x11f20000 0 0x1000>,
++            <0 0x11f30000 0 0x1000>,
++            <0 0x1000b000 0 0x1000>;
++        reg-names = "gpio", "iocfg_rm",
++          "iocfg_br", "iocfg_lm",
++          "iocfg_lb", "iocfg_rt",
++          "iocfg_lt", "iocfg_tl",
++          "eint";
++        gpio-controller;
++        #gpio-cells = <2>;
++        gpio-ranges = <&pio 0 0 210>;
++        interrupt-controller;
++        #interrupt-cells = <2>;
++        interrupts = <GIC_SPI 204 IRQ_TYPE_LEVEL_HIGH>;
++
++        mmc0_pins_default: mmc0-0 {
++            cmd-dat-pins {
++                pinmux = <PINMUX_GPIO168__FUNC_MSDC0_DAT0>,
++                    <PINMUX_GPIO172__FUNC_MSDC0_DAT1>,
++                    <PINMUX_GPIO169__FUNC_MSDC0_DAT2>,
++                    <PINMUX_GPIO177__FUNC_MSDC0_DAT3>,
++                    <PINMUX_GPIO170__FUNC_MSDC0_DAT4>,
++                    <PINMUX_GPIO173__FUNC_MSDC0_DAT5>,
++                    <PINMUX_GPIO171__FUNC_MSDC0_DAT6>,
++                    <PINMUX_GPIO174__FUNC_MSDC0_DAT7>,
++                    <PINMUX_GPIO167__FUNC_MSDC0_CMD>;
++                input-enable;
++                mediatek,pull-up-adv = <1>;
++            };
++            clk-pins {
++                pinmux = <PINMUX_GPIO176__FUNC_MSDC0_CLK>;
++                mediatek,pull-down-adv = <2>;
++            };
++            rst-pins {
++                pinmux = <PINMUX_GPIO178__FUNC_MSDC0_RSTB>;
++                mediatek,pull-up-adv = <0>;
++            };
++        };
++    };
++
++    mmc0 {
++       pinctrl-0 = <&mmc0_pins_default>;
++       pinctrl-names = "default";
++    };
+-- 
+1.7.9.5
 _______________________________________________
 Linux-mediatek mailing list
 Linux-mediatek@lists.infradead.org
