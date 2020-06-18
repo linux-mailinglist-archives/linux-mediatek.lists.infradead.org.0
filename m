@@ -2,59 +2,70 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id A55081FF068
-	for <lists+linux-mediatek@lfdr.de>; Thu, 18 Jun 2020 13:19:25 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 56B5C1FF0A5
+	for <lists+linux-mediatek@lfdr.de>; Thu, 18 Jun 2020 13:34:58 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
-	d=lists.infradead.org; s=bombadil.20170209; h=Sender:Content-Type:Cc:
-	List-Subscribe:List-Help:List-Post:List-Archive:List-Unsubscribe:List-Id:
-	In-Reply-To:MIME-Version:References:Message-ID:Subject:To:From:Date:Reply-To:
-	Content-Transfer-Encoding:Content-ID:Content-Description:Resent-Date:
-	Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:List-Owner;
-	 bh=aosN6u3jP4g6+UxrH7o95vxFZ+/J2b1VIhTHJy2QQr8=; b=kkXhzBsWt8zLFsnLAaq2XNRVK
-	oF2Pqp+UJuV+IZUoYPkfXl+YzbhmhmqjZR44zQg7YYrolSIz9WPhZVQUeP4ddajqRXJUb3yzDu9Ch
-	Fe3nNFAh/uaN3me1L7T4yaHdHIDdkouN8GKydNDJyOs+eXVb73vgGV9IhgWk2qMvHL5cprbN1wMFj
-	4IdXsXw0PSfQ647JzaB4mpg3HyA+CR8vCY3ogjq8t8f+GK3m0RJqG4gfNhqaZiClB45XM6/PG9m1g
-	tIicfRmwdoTx8WASBrY+qj5m9f1BfLB1VJu5y5Qx+Cb5X5ymDyA5gCDbS0R+Js6MFsB7uQj/HyywB
-	nqyQl3EuQ==;
+	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
+	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=hBsasUoAUiu28KZrVsJlo7ggofjMMNwfEuMBHqO8Tso=; b=Hm2B7zxjvdDgpu
+	xLGur7mbhaLIspkgTdIm5ZNczDTawxpevAdWmqaEBd85pwFoWeQ3XJ6rV3mP4QyM+hqa1kpd5X3bs
+	j7Ac7bz8rqvLT6gKQOqVzNQcSXg1J29cVRXwuXv4roL9vUseUqEskMYZpg3rRGPoIuxDXFoo6b087
+	6KCZLYKS5Tw0yAEhkez07XJBGKTh8UqBcE9Ucu3MKkS2wL4ROdncTfDZW3PMeB6Yh2DBznmW12u37
+	lTbWofpu2wYHwmjisx6u67yPdlYDKbRYmiC8y2BXRpSCD0gvGNuuE7eJbhc60D5ljIm7Qw8017eSd
+	OcjYI6YAVkkIhPHeD1Vw==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jlsZg-0006Dx-8W; Thu, 18 Jun 2020 11:19:16 +0000
-Received: from mail.kernel.org ([198.145.29.99])
+	id 1jlsol-0000Ls-1H; Thu, 18 Jun 2020 11:34:51 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jlsZa-0006D7-L6
- for linux-mediatek@lists.infradead.org; Thu, 18 Jun 2020 11:19:14 +0000
-Received: from localhost (unknown [151.48.140.182])
- (using TLSv1.2 with cipher ECDHE-RSA-AES256-GCM-SHA384 (256/256 bits))
- (No client certificate requested)
- by mail.kernel.org (Postfix) with ESMTPSA id A29402078D;
- Thu, 18 Jun 2020 11:19:05 +0000 (UTC)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=kernel.org;
- s=default; t=1592479149;
- bh=VMTjW3A5rM+/n8uTmhib5xc6DSyPNkBhwsyvBYgZETA=;
- h=Date:From:To:Cc:Subject:References:In-Reply-To:From;
- b=Dw2AtYlUis3RrRvXICgjJS9KxGDTJj8qk6FfhNQqgUH4oGN3yA4YYqciaFJtCyJPo
- pJvdkvxTSzNCTq9oZrKXI6OaP57Bcs2S2bm6ELcG+Ufjs+jE1BjVa04Hr3iZDXQL/w
- 3hIG/B03CAJSr59A/uIK6CZdg/mQqd2dRqKcljCw=
-Date: Thu, 18 Jun 2020 13:18:59 +0200
-From: Lorenzo Bianconi <lorenzo@kernel.org>
-To: Oleksandr Natalenko <oleksandr@redhat.com>
-Subject: Re: mt7612 suspend/resume issue
-Message-ID: <20200618111859.GC698688@lore-desk.lan>
-References: <20200618090556.pepjdbnba2gqzcbe@butterfly.localdomain>
+ id 1jlsoI-0008Jn-Bu; Thu, 18 Jun 2020 11:34:23 +0000
+X-UUID: 8ee310dc690f42c7b7db0ecbe38269bf-20200618
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
+ s=dk; 
+ h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:Subject:CC:To:From;
+ bh=jOW7/ZlqTBzww6L1JbZKHV6k0YOMNioqgiPWE3AJk84=; 
+ b=Lv6qw0zN9bx+nP3IBoLut4P1JDt6do55+rmeLOj/HFCxKRUo31Wp3H5O6kASUO3V/pxh1DvX2i/1lfCv5euvMKiqa+H6eHQjkvSi2JFwFntXnMrpOlzhIsQPCjf2Lz2vi/rR0r/lkWx2lHuewN14NXnYWGTLJGOiMo6K1WKL5Fs=;
+X-UUID: 8ee310dc690f42c7b7db0ecbe38269bf-20200618
+Received: from mtkcas68.mediatek.inc [(172.29.94.19)] by mailgw01.mediatek.com
+ (envelope-from <hanks.chen@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 1515181308; Thu, 18 Jun 2020 03:34:06 -0800
+Received: from MTKMBS02N1.mediatek.inc (172.21.101.77) by
+ MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
+ 15.0.1497.2; Thu, 18 Jun 2020 04:34:16 -0700
+Received: from mtkcas08.mediatek.inc (172.21.101.126) by
+ mtkmbs02n1.mediatek.inc (172.21.101.77) with Microsoft SMTP Server (TLS) id
+ 15.0.1497.2; Thu, 18 Jun 2020 19:34:01 +0800
+Received: from mtkswgap22.mediatek.inc (172.21.77.33) by mtkcas08.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1497.2 via
+ Frontend Transport; Thu, 18 Jun 2020 19:34:01 +0800
+From: Hanks Chen <hanks.chen@mediatek.com>
+To: Linus Walleij <linus.walleij@linaro.org>, Rob Herring
+ <robh+dt@kernel.org>, Matthias Brugger <matthias.bgg@gmail.com>, "Michael
+ Turquette" <mturquette@baylibre.com>, Stephen Boyd <sboyd@kernel.org>, "Sean
+ Wang" <sean.wang@kernel.org>
+Subject: [PATCH v6] Add basic SoC Support for Mediatek MT6779 SoC
+Date: Thu, 18 Jun 2020 19:33:31 +0800
+Message-ID: <1592480018-3340-1-git-send-email-hanks.chen@mediatek.com>
+X-Mailer: git-send-email 1.7.9.5
 MIME-Version: 1.0
-In-Reply-To: <20200618090556.pepjdbnba2gqzcbe@butterfly.localdomain>
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200618_041910_736187_03746367 
-X-CRM114-Status: GOOD (  21.81  )
-X-Spam-Score: -5.2 (-----)
+X-CRM114-CacheID: sfid-20200618_043422_556674_5C3B93D3 
+X-CRM114-Status: UNSURE (   9.40  )
+X-CRM114-Notice: Please train this message.
+X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
- Content analysis details:   (-5.2 points)
+ Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -5.0 RCVD_IN_DNSWL_HI       RBL: Sender listed at https://www.dnswl.org/,
- high trust [198.145.29.99 listed in list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ 0.0 MIME_BASE64_TEXT       RAW: Message text disguised using base64
+ encoding
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
@@ -62,7 +73,8 @@ X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
  author's domain
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- -0.0 DKIMWL_WL_HIGH         DKIMwl.org - Whitelisted High sender
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -74,238 +86,86 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Ryder Lee <ryder.lee@mediatek.com>, netdev@vger.kernel.org,
- linux-wireless@vger.kernel.org, linux-kernel@vger.kernel.org,
- Matthias Brugger <matthias.bgg@gmail.com>, linux-mediatek@lists.infradead.org,
- Lorenzo Bianconi <lorenzo.bianconi83@gmail.com>,
- Jakub Kicinski <kuba@kernel.org>, "David S. Miller" <davem@davemloft.net>,
- Kalle Valo <kvalo@codeaurora.org>, Felix Fietkau <nbd@nbd.name>
-Content-Type: multipart/mixed; boundary="===============7656527663789798021=="
+Cc: devicetree@vger.kernel.org, CC Hwang <cc.hwang@mediatek.com>,
+ wsd_upstream@mediatek.com, Andy Teng <andy.teng@mediatek.com>,
+ Loda Chou <loda.chou@mediatek.com>, linux-kernel@vger.kernel.org,
+ linux-gpio@vger.kernel.org, linux-mediatek@lists.infradead.org,
+ mtk01761 <wendell.lin@mediatek.com>, linux-clk@vger.kernel.org,
+ linux-arm-kernel@lists.infradead.org
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
+This patch add basic SoC Support for Mediatek MT6779 SoC
 
---===============7656527663789798021==
-Content-Type: multipart/signed; micalg=pgp-sha256;
-	protocol="application/pgp-signature"; boundary="yVhtmJPUSI46BTXb"
-Content-Disposition: inline
-
-
---yVhtmJPUSI46BTXb
-Content-Type: text/plain; charset=us-ascii
-Content-Disposition: inline
-Content-Transfer-Encoding: quoted-printable
-
-> Hello, Lorenzo et al.
-
-Hi Oleksandr,
-
->=20
-> I'm using MT7612 mini-PCIE cards as both AP in a home server and as a cli=
-ent in
-> a laptop. The AP works perfectly (after some fixing from your side; thank=
-s for
-> that!), and so does the client modulo it has issues during system resume.
->=20
-
-[...]
-
->=20
-> The Wi-Fi becomes unusable from this point. If I `modprobe -r` the "mt76x=
-2e" module
-> after this splat, the system hangs completely.
->=20
-> If the system resumes fine, the resume itself takes quite some time (more=
- than
-> 10 seconds).
->=20
-> I've found a workaround for this, though. It seems the system behaves fin=
-e if I
-> do `modprobe -r mt76x2e` before it goes to sleep, and then `modprobe mt76=
-x2e`
-> after resume. Also, the resume time improves greatly.
->=20
-> I cannot say if it is some regression or not. I've installed the card
-> just recently, and used it with v5.7 kernel series only.
->=20
-> Do you have any idea what could go wrong and how to approach the issue?
-
-I have not reproduced the issue myself yet, but I guess we can try:
-1- update to latest Felix's tree [1]
-2- could you please try to apply the patch below? (compile-test only)
-
-Regards,
-Lorenzo
-
-[1] https://github.com/nbd168/wireless
-
-=46rom 400268a0ee5843cf736308504dfbd2f20a291eaf Mon Sep 17 00:00:00 2001
-Message-Id: <400268a0ee5843cf736308504dfbd2f20a291eaf.1592478809.git.lorenz=
-o@kernel.org>
-=46rom: Lorenzo Bianconi <lorenzo@kernel.org>
-Date: Thu, 18 Jun 2020 13:10:11 +0200
-Subject: [PATCH] mt76: mt76x2: fix pci suspend
-
-Signed-off-by: Lorenzo Bianconi <lorenzo@kernel.org>
----
- .../net/wireless/mediatek/mt76/mt76x02_dma.h  |  1 +
- .../net/wireless/mediatek/mt76/mt76x02_mmio.c | 15 +++++
- .../net/wireless/mediatek/mt76/mt76x2/pci.c   | 58 +++++++++++++++++++
- 3 files changed, 74 insertions(+)
-
-diff --git a/drivers/net/wireless/mediatek/mt76/mt76x02_dma.h b/drivers/net=
-/wireless/mediatek/mt76/mt76x02_dma.h
-index 4aff4f8e87b6..6262f2ecded5 100644
---- a/drivers/net/wireless/mediatek/mt76/mt76x02_dma.h
-+++ b/drivers/net/wireless/mediatek/mt76/mt76x02_dma.h
-@@ -62,5 +62,6 @@ mt76x02_wait_for_wpdma(struct mt76_dev *dev, int timeout)
- int mt76x02_dma_init(struct mt76x02_dev *dev);
- void mt76x02_dma_disable(struct mt76x02_dev *dev);
- void mt76x02_dma_cleanup(struct mt76x02_dev *dev);
-+void mt76x02_dma_reset(struct mt76x02_dev *dev);
-=20
- #endif /* __MT76x02_DMA_H */
-diff --git a/drivers/net/wireless/mediatek/mt76/mt76x02_mmio.c b/drivers/ne=
-t/wireless/mediatek/mt76/mt76x02_mmio.c
-index cbbe986655fe..e2631c964331 100644
---- a/drivers/net/wireless/mediatek/mt76/mt76x02_mmio.c
-+++ b/drivers/net/wireless/mediatek/mt76/mt76x02_mmio.c
-@@ -348,6 +348,21 @@ void mt76x02_dma_disable(struct mt76x02_dev *dev)
- }
- EXPORT_SYMBOL_GPL(mt76x02_dma_disable);
-=20
-+void mt76x02_dma_reset(struct mt76x02_dev *dev)
-+{
-+	int i;
-+
-+	mt76x02_dma_disable(dev);
-+	usleep_range(1000, 2000);
-+
-+	for (i =3D 0; i < __MT_TXQ_MAX; i++)
-+		mt76_queue_tx_cleanup(dev, i, true);
-+	mt76_for_each_q_rx(&dev->mt76, i)
-+		mt76_queue_rx_reset(dev, i);
-+
-+	mt76x02_dma_enable(dev);
-+}
-+
- void mt76x02_mac_start(struct mt76x02_dev *dev)
- {
- 	mt76x02_mac_reset_counters(dev);
-diff --git a/drivers/net/wireless/mediatek/mt76/mt76x2/pci.c b/drivers/net/=
-wireless/mediatek/mt76/mt76x2/pci.c
-index 53ca0cedf026..5543e242fb9b 100644
---- a/drivers/net/wireless/mediatek/mt76/mt76x2/pci.c
-+++ b/drivers/net/wireless/mediatek/mt76/mt76x2/pci.c
-@@ -103,6 +103,60 @@ mt76pci_remove(struct pci_dev *pdev)
- 	mt76_free_device(mdev);
- }
-=20
-+static int __maybe_unused
-+mt76x2e_suspend(struct pci_dev *pdev, pm_message_t state)
-+{
-+	struct mt76_dev *mdev =3D pci_get_drvdata(pdev);
-+	struct mt76x02_dev *dev =3D container_of(mdev, struct mt76x02_dev, mt76);
-+	int i, err;
-+
-+	napi_disable(&mdev->tx_napi);
-+	tasklet_kill(&mdev->pre_tbtt_tasklet);
-+	tasklet_kill(&mdev->tx_tasklet);
-+
-+	mt76_for_each_q_rx(mdev, i)
-+		napi_disable(&mdev->napi[i]);
-+
-+	mt76x02_dma_reset(dev);
-+
-+	pci_enable_wake(pdev, pci_choose_state(pdev, state), true);
-+	pci_save_state(pdev);
-+	err =3D pci_set_power_state(pdev, pci_choose_state(pdev, state));
-+	if (err)
-+		goto restore;
-+
-+	return 0;
-+
-+restore:
-+	mt76_for_each_q_rx(mdev, i)
-+		napi_enable(&mdev->napi[i]);
-+	napi_enable(&mdev->tx_napi);
-+
-+	return err;
-+}
-+
-+static int __maybe_unused
-+mt76x2e_resume(struct pci_dev *pdev)
-+{
-+	struct mt76_dev *mdev =3D pci_get_drvdata(pdev);
-+	int i, err;
-+
-+	err =3D pci_set_power_state(pdev, PCI_D0);
-+	if (err)
-+		return err;
-+
-+	pci_restore_state(pdev);
-+
-+	mt76_for_each_q_rx(mdev, i) {
-+		napi_enable(&mdev->napi[i]);
-+		napi_schedule(&mdev->napi[i]);
-+	}
-+	napi_enable(&mdev->tx_napi);
-+	napi_schedule(&mdev->tx_napi);
-+
-+	return 0;
-+}
-+
- MODULE_DEVICE_TABLE(pci, mt76pci_device_table);
- MODULE_FIRMWARE(MT7662_FIRMWARE);
- MODULE_FIRMWARE(MT7662_ROM_PATCH);
-@@ -113,6 +167,10 @@ static struct pci_driver mt76pci_driver =3D {
- 	.id_table	=3D mt76pci_device_table,
- 	.probe		=3D mt76pci_probe,
- 	.remove		=3D mt76pci_remove,
-+#ifdef CONFIG_PM
-+	.suspend	=3D mt76x2e_suspend,
-+	.resume		=3D mt76x2e_resume,
-+#endif /* CONFIG_PM */
- };
-=20
- module_pci_driver(mt76pci_driver);
---=20
-2.26.2
+Change since v6:
+Commit "dt-bindings: pinctrl: add bindings for MediaTek"
+-- fix format of bindings and add interrupt definition.
+Commit "pinctrl: mediatek: update pinmux definitions for"
+-- use the standard include path
+Commit "pinctrl: mediatek: avoid virtual gpio trying to set"
+-- remove unnecessary error handler
+Commit "pinctrl: mediatek: add pinctrl support for MT6779 SoC"
+-- add some useful help text in kconfig
+Commit "clk: mediatek: add UART0 clock support"
+-- add UART0 clock support
+Commit "arm64: dts: add dts nodes for MT6779"
+-- add "baud" and "bus" clocks for uart
+-- add new approach for mmsys
 
 
->=20
-> Thanks.
->=20
-> --=20
->   Best regards,
->     Oleksandr Natalenko (post-factum)
->     Principal Software Maintenance Engineer
->=20
-
---yVhtmJPUSI46BTXb
-Content-Type: application/pgp-signature; name="signature.asc"
-
------BEGIN PGP SIGNATURE-----
-
-iHUEABYIAB0WIQTquNwa3Txd3rGGn7Y6cBh0uS2trAUCXutNoAAKCRA6cBh0uS2t
-rGaCAP9seDnh+3I9x7qM0L6z+RmRhKym8Vj5D+al2CY0DHHnMgEAgvTcNsCPFMrh
-Dj6aS0JZ6xV07SQNTlsUmV2eld+m6gc=
-=Cp+H
------END PGP SIGNATURE-----
-
---yVhtmJPUSI46BTXb--
+Change since v5:
+1. remove unnecessary string in commit message
 
 
---===============7656527663789798021==
-Content-Type: text/plain; charset="us-ascii"
-MIME-Version: 1.0
-Content-Transfer-Encoding: 7bit
-Content-Disposition: inline
+Change since v4:
+1. fix format of pinctrl bindings
 
+
+Change since v3:
+1. add bindings for "mediatek,mt6779-pinctrl"
+2. add some comments into the code (e.g. virtual gpio ...)
+3. add Acked-by tags
+4. add pmu node into dts
+5. support ppi partition and fix base address in gic node of dts
+
+
+Change since v2:
+1. add Reviewed-by tags
+2. fix checkpatch warnings with strict level
+
+
+Change since v1:
+first patchset
+
+
+Andy Teng (1):
+  dt-bindings: pinctrl: add bindings for MediaTek MT6779 SoC
+
+Hanks Chen (6):
+  pinctrl: mediatek: update pinmux definitions for mt6779
+  pinctrl: mediatek: avoid virtual gpio trying to set reg
+  pinctrl: mediatek: add pinctrl support for MT6779 SoC
+  pinctrl: mediatek: add mt6779 eint support
+  clk: mediatek: add UART0 clock support
+  arm64: dts: add dts nodes for MT6779
+
+ .../bindings/pinctrl/mediatek,mt6779-pinctrl.yaml  |  210 ++
+ arch/arm64/boot/dts/mediatek/Makefile              |    1 +
+ arch/arm64/boot/dts/mediatek/mt6779-evb.dts        |   31 +
+ arch/arm64/boot/dts/mediatek/mt6779.dtsi           |  261 +++
+ drivers/clk/mediatek/clk-mt6779.c                  |    2 +
+ drivers/pinctrl/mediatek/Kconfig                   |   12 +
+ drivers/pinctrl/mediatek/Makefile                  |    1 +
+ drivers/pinctrl/mediatek/pinctrl-mt6779.c          |  783 ++++++++
+ drivers/pinctrl/mediatek/pinctrl-mtk-common-v2.c   |   25 +
+ drivers/pinctrl/mediatek/pinctrl-mtk-common-v2.h   |    1 +
+ drivers/pinctrl/mediatek/pinctrl-mtk-mt6779.h      | 2085 ++++++++++++++++++++
+ drivers/pinctrl/mediatek/pinctrl-paris.c           |    7 +
+ include/dt-bindings/pinctrl/mt6779-pinfunc.h       | 1242 ++++++++++++
+ 13 files changed, 4661 insertions(+)
 _______________________________________________
 Linux-mediatek mailing list
 Linux-mediatek@lists.infradead.org
 http://lists.infradead.org/mailman/listinfo/linux-mediatek
-
---===============7656527663789798021==--
-
