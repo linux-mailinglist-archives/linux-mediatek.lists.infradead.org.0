@@ -2,79 +2,70 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 38B311FF0CB
-	for <lists+linux-mediatek@lfdr.de>; Thu, 18 Jun 2020 13:38:55 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 763D01FF0E4
+	for <lists+linux-mediatek@lfdr.de>; Thu, 18 Jun 2020 13:46:20 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:To:Subject:Message-ID:Date:From:
-	In-Reply-To:References:MIME-Version:Reply-To:Content-ID:Content-Description:
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=7dQpmUGWx7I5INY+s4cNdC1y6sOi4rnHiqNY9OJFojE=; b=ajcpghSIDmYXcw
-	RKiPBYd+PRK8PizfnPQOpcnR//GMvxrXkVkdSc0+tG4y6ShQsV5A5ZAa4YpcG9LObaAZE+notUHhC
-	b0XQ4vexcv9xvCpatwxlqhcpeoEMOwnl2EJ/VKO+B584oztnW5L021KPNFNnfmjQZWKjleKa91LrO
-	7X9HsJmTyRgyWVuIx+OLgBdmF2HkDdbu8zScgu0/1Kd5v3rVfjkFMZUfycd80N8wW0ICjiSaU4Ys4
-	kELKqk+UbUUqpJGVRGRKsgp9j/8uLF3IM0qYKIcMfKikIo6oKVLjoJc5olTqCcDzJeWpi3rmlcHSv
-	1GRBApB1nXcy+HguV6GQ==;
+	List-Owner; bh=1rLiEXFXlurmFHJkG/cxPuoRpOb2U+YFrnrghRk1umg=; b=a3P6DOZhipn0tP
+	/RtzOEEMgkV3D3ofdwcAsVeJusvm6lWVahXPTiYsANDJ/lPRgr2MtLYd2cKX+zm3oR7ysEK42HiUw
+	KkMdELnrodLqewxmPFKy65pD2731OahFj4vUfSMAPoNdctFTp/O/QS23tSH36osIzoEQvKEOOC93A
+	5A1V5QACiFTM6rZTATrOKVn0iRY/qOwu0+j+edp3YevhuefNzpQTe09A4LhSvEdG1L5kUs5pSysbF
+	z7KTb4slKBK2NlTmxtbVBmlP11qodAJlrz/p5pkpmttt56dJ1BiLwRwaY1KZhoWKTPIQLsqpjo1l3
+	QEZNHB4NjxgrybSS24eg==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jlssZ-00040l-Bn; Thu, 18 Jun 2020 11:38:47 +0000
-Received: from mail-il1-x143.google.com ([2607:f8b0:4864:20::143])
+	id 1jlszj-0003Ei-QT; Thu, 18 Jun 2020 11:46:11 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jlssF-0003p0-CL; Thu, 18 Jun 2020 11:38:28 +0000
-Received: by mail-il1-x143.google.com with SMTP id h3so5376128ilh.13;
- Thu, 18 Jun 2020 04:38:27 -0700 (PDT)
-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
- h=mime-version:references:in-reply-to:from:date:message-id:subject:to
- :cc:content-transfer-encoding;
- bh=HnqZ825QaUjHcFcUoPVeekIL3cloh6uSJswdCHcGNMU=;
- b=XbgW/1mXE4RlRrvQUAPe6piL/vvN9pMY8TMFHLIfTTurGrvqjI7qc00i30vHQLli1M
- OGqVPPM3Bo/wUZ51cib1et1xvfLqpJePfWs6ULwM7yUhrWpn8C7Sac8BAMpXhofGttKG
- Y95mEIZ2YSDycjFQJ74N0d76rpEVaUYI/EY2uB8A5dYu9ESLVf+txrJJWMU6LuUZtCQI
- Z8jHEAo1nZ2VxW46rH5fBN+YuoGUgGb3KCzBbqMqL8EOF5vtWajx0+Z653kWkLAHd7VT
- vc77SbsNaeagrUdkcUWyF3dv85R1qPMtVwc7YkUwJwkzmo11StWyebx5iSysmHeKqFOp
- Sseg==
-X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
- d=1e100.net; s=20161025;
- h=x-gm-message-state:mime-version:references:in-reply-to:from:date
- :message-id:subject:to:cc:content-transfer-encoding;
- bh=HnqZ825QaUjHcFcUoPVeekIL3cloh6uSJswdCHcGNMU=;
- b=D9xZAXKE8u2UP1EPI7GAhYAk6Y9Y0lVVeMO1WzyD6sAZkz0zolzDBqRxyR4/nZWcZi
- 1vuU+oZ1UO7PrpWgsuGjPY5kYmiPP7bsrssBD7nQ9OVZHUs3h6pglu2hbYy282PnxfJy
- SkVSSWeZ0voR1BQCVplzvbll1OAlenxSaup+PkIMtv2R65krQCJQdYHZ4BoR4xV+OztJ
- bmpdN8LnN94rNRjWGC9qrqlN7jeqk8x0aWhAMineNrVyvPl0CvoETTGnITauZV2zjy8C
- QbqvQ4RdBPUdtQIjs1sNDDm5dUlPCFVrUqOGjKAOodnLm4WRXue5eLQhSRRsoJ2qYtLt
- jVCw==
-X-Gm-Message-State: AOAM531aJ2Syl8E0MPY7ZDDk80o42K0n3gB05YX4NsXpfexSt2Z99X77
- 9XxlxK2T40R2FLOjF3D0ERaei4cogy4UrcnJtr0=
-X-Google-Smtp-Source: ABdhPJxcR9iEAJokjPMB/KxunZWalwUdWYUL4oPT1aiima67yngP6LTlhi+OnZVtLJNI8vSsb2FTq1BpSc6gS0vdZiI=
-X-Received: by 2002:a05:6e02:92:: with SMTP id
- l18mr1254204ilm.212.1592480306512; 
- Thu, 18 Jun 2020 04:38:26 -0700 (PDT)
+ id 1jlsyW-0008Gw-JI; Thu, 18 Jun 2020 11:44:59 +0000
+X-UUID: 0aa4d90294734ab799c00339d86a65f7-20200618
+DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
+ s=dk; 
+ h=Content-Transfer-Encoding:MIME-Version:Content-Type:References:In-Reply-To:Date:CC:To:From:Subject:Message-ID;
+ bh=bPuvJFwQK1+UUwK7qWYiuSt1c5UvVj+Vy18oTLOPX74=; 
+ b=FkPuKCooyoDAOyg2wthMVb6yX42MHyUe5cqMn4pQ9vpSTTBP9W4fhB4H9sA0yAq1FhomfngG0+VuEVOyq6N4Tjylh3iN+1DlnBEolplWnIKGaHLYxEo88qNnvdW1sBTiZLRgyFwST4MulAhJJCr6vnqH/EHXJOrYHGSJVif+ZaI=;
+X-UUID: 0aa4d90294734ab799c00339d86a65f7-20200618
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw01.mediatek.com
+ (envelope-from <chao.hao@mediatek.com>)
+ (musrelay.mediatek.com ESMTP with TLS)
+ with ESMTP id 1282835294; Thu, 18 Jun 2020 03:44:37 -0800
+Received: from MTKMBS01N1.mediatek.inc (172.21.101.68) by
+ MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
+ 15.0.1497.2; Thu, 18 Jun 2020 04:44:47 -0700
+Received: from MTKCAS06.mediatek.inc (172.21.101.30) by
+ mtkmbs01n1.mediatek.inc (172.21.101.68) with Microsoft SMTP Server (TLS) id
+ 15.0.1497.2; Thu, 18 Jun 2020 19:44:39 +0800
+Received: from [10.15.20.246] (10.15.20.246) by MTKCAS06.mediatek.inc
+ (172.21.101.73) with Microsoft SMTP Server id 15.0.1497.2 via Frontend
+ Transport; Thu, 18 Jun 2020 19:44:38 +0800
+Message-ID: <1592480656.12647.2.camel@mbjsdccf07>
+Subject: Re: [PATCH v4 5/7] iommu/mediatek: Add sub_comm id in translation
+ fault
+From: chao hao <Chao.Hao@mediatek.com>
+To: Yong Wu <yong.wu@mediatek.com>
+Date: Thu, 18 Jun 2020 19:44:16 +0800
+In-Reply-To: <1592392265.20080.11.camel@mhfsdcap03>
+References: <20200617030029.4082-1-chao.hao@mediatek.com>
+ <20200617030029.4082-6-chao.hao@mediatek.com>
+ <4418c5a7-3f17-9d00-43b2-4ffc5d458116@gmail.com>
+ <1592392265.20080.11.camel@mhfsdcap03>
+X-Mailer: Evolution 3.10.4-0ubuntu2 
 MIME-Version: 1.0
-References: <1591254387-10304-1-git-send-email-gene.chen.richtek@gmail.com>
- <4135d264-6758-301a-0f19-ba2f229301c3@infradead.org>
-In-Reply-To: <4135d264-6758-301a-0f19-ba2f229301c3@infradead.org>
-From: Gene Chen <gene.chen.richtek@gmail.com>
-Date: Thu, 18 Jun 2020 19:38:14 +0800
-Message-ID: <CAE+NS360B8S6sDNPSwEOFWoEDLwtYKxf96M5wdu1brKtMD-Nvg@mail.gmail.com>
-Subject: Re: [PATCH] regulator: mt6360: Add support for MT6360 regulator
-To: Randy Dunlap <rdunlap@infradead.org>
+X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200618_043827_419331_C6BF9AAB 
-X-CRM114-Status: GOOD (  11.97  )
+X-CRM114-CacheID: sfid-20200618_044456_644009_25601D64 
+X-CRM114-Status: GOOD (  27.46  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
- no trust [2607:f8b0:4864:20:0:0:0:143 listed in]
- [list.dnswl.org]
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
- 0.0 FREEMAIL_FROM          Sender email is commonly abused enduser mail
- provider [gene.chen.richtek[at]gmail.com]
  -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
  envelope-from domain
  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
@@ -82,6 +73,8 @@ X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
  author's domain
  -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
+ 0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
+ lines
 X-BeenThere: linux-mediatek@lists.infradead.org
 X-Mailman-Version: 2.1.29
 Precedence: list
@@ -93,38 +86,196 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Gene Chen <gene_chen@richtek.com>, lgirdwood@gmail.com,
- linux-kernel@vger.kernel.org, cy_huang@richtek.com, benjamin.chao@mediatek.com,
- Mark Brown <broonie@kernel.org>, linux-mediatek@lists.infradead.org,
- matthias.bgg@gmail.com, Wilma.Wu@mediatek.com,
- linux-arm-kernel@lists.infradead.org, shufan_lee@richtek.com
-Content-Type: text/plain; charset="utf-8"
-Content-Transfer-Encoding: base64
+Cc: devicetree@vger.kernel.org, FY Yang <fy.yang@mediatek.com>,
+ wsd_upstream@mediatek.com, Joerg Roedel <joro@8bytes.org>,
+ linux-kernel@vger.kernel.org, iommu@lists.linux-foundation.org,
+ Rob Herring <robh+dt@kernel.org>, linux-mediatek@lists.infradead.org,
+ Matthias Brugger <matthias.bgg@gmail.com>,
+ linux-arm-kernel@lists.infradead.org
+Content-Type: text/plain; charset="us-ascii"
+Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-UmFuZHkgRHVubGFwIDxyZHVubGFwQGluZnJhZGVhZC5vcmc+IOaWvCAyMDIw5bm0NuaciDTml6Ug
-6YCx5ZubIOS4i+WNiDExOjA25a+r6YGT77yaCj4KPiBPbiA2LzQvMjAgMTI6MDYgQU0sIEdlbmUg
-Q2hlbiB3cm90ZToKPiA+IGRpZmYgLS1naXQgYS9kcml2ZXJzL3JlZ3VsYXRvci9LY29uZmlnIGIv
-ZHJpdmVycy9yZWd1bGF0b3IvS2NvbmZpZwo+ID4gaW5kZXggZjRiNzJjYi4uMDVhM2IxNCAxMDA2
-NDQKPiA+IC0tLSBhL2RyaXZlcnMvcmVndWxhdG9yL0tjb25maWcKPiA+ICsrKyBiL2RyaXZlcnMv
-cmVndWxhdG9yL0tjb25maWcKPiA+IEBAIC02ODAsNiArNjgwLDE2IEBAIGNvbmZpZyBSRUdVTEFU
-T1JfTVQ2MzU4Cj4gPiAgICAgICAgIFRoaXMgZHJpdmVyIHN1cHBvcnRzIHRoZSBjb250cm9sIG9m
-IGRpZmZlcmVudCBwb3dlciByYWlscyBvZiBkZXZpY2UKPiA+ICAgICAgICAgdGhyb3VnaCByZWd1
-bGF0b3IgaW50ZXJmYWNlLgo+ID4KPiA+ICtjb25maWcgUkVHVUxBVE9SX01UNjM2MAo+ID4gKyAg
-ICAgdHJpc3RhdGUgIk1UNjM2MCBTdWJQTUlDIFJlZ3VsYXRvciIKPiA+ICsgICAgIGRlcGVuZHMg
-b24gTUZEX01UNjM2MAo+ID4gKyAgICAgc2VsZWN0IENSQzgKPiA+ICsgICAgIGhlbHAKPiA+ICsg
-ICAgICAgU2F5IFkgaGVyZSB0byBlbmFibGUgTVQ2MzYwIHJlZ3VsYXRvciBzdXBwb3J0Lgo+ID4g
-KyAgICAgICBUaGlzIGlzIHN1cHBvcnQgTVQ2MzYwIFBNSUMvTERPIHBhcnQgaW5jbHVkZQo+Cj4g
-ICAgICAgICAgIFRoaXMgc3VwcG9ydHMgdGhlIE1UNjMwMCBQTUlDL0xETyBwYXJ0LCB3aGljaCBp
-bmNsdWRlcwo+Cj4gPiArICAgICAgIDItY2hhbm5lbCBidWNrIHdpdGggVGhlcm1hbCBTaHV0ZG93
-biBhbmQgT3ZlcmxvcmQgUHJvdGVjdGlvbgo+Cj4gICAgICAgICAgICAgICAgICAgICAgICAgICAg
-ICAgICAgICAgICBpcyB0aGF0ICAgICAgT3ZlcmxvYWQgID8KPiBZZXMsIGl0IGNvdWxkIGJlIE92
-ZXJsb3JkLgo+Cgp0eXBvLCBvdmVybG9hZCBpcyBzdWl0YWJsZSwgdGhhbmtzCgo+ID4gKyAgICAg
-ICA2LWNoYW5uZWwgSGlnaCBQU1JSIGFuZCBMb3cgRHJvcG91dCBMRE8uCj4gPiArCj4gPiAgY29u
-ZmlnIFJFR1VMQVRPUl9NVDYzODAKPiA+ICAgICAgIHRyaXN0YXRlICJNZWRpYVRlayBNVDYzODAg
-UE1JQyIKPiA+ICAgICAgIGRlcGVuZHMgb24gTVRLX1BNSUNfV1JBUAo+Cj4KPiAtLQo+IH5SYW5k
-eQo+CgpfX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fX19fXwpMaW51
-eC1tZWRpYXRlayBtYWlsaW5nIGxpc3QKTGludXgtbWVkaWF0ZWtAbGlzdHMuaW5mcmFkZWFkLm9y
-ZwpodHRwOi8vbGlzdHMuaW5mcmFkZWFkLm9yZy9tYWlsbWFuL2xpc3RpbmZvL2xpbnV4LW1lZGlh
-dGVrCg==
+On Wed, 2020-06-17 at 19:11 +0800, Yong Wu wrote:
+> Hi Matthias,
+> 
+> Thanks very much for your review.
+> 
+> On Wed, 2020-06-17 at 11:17 +0200, Matthias Brugger wrote:
+> > 
+> > On 17/06/2020 05:00, Chao Hao wrote:
+> > > The max larb number that a iommu HW support is 8(larb0~larb7 in the below
+> > > diagram).
+> > > If the larb's number is over 8, we use a sub_common for merging
+> > > several larbs into one larb. At this case, we will extend larb_id:
+> > > bit[11:9] means common-id;
+> > > bit[8:7] means subcommon-id;
+> > > From these two variable, we could get the real larb number when
+> > > translation fault happen.
+> > > The diagram is as below:
+> > > 		 EMI
+> > > 		  |
+> > > 		IOMMU
+> > > 		  |
+> > >            -----------------
+> > > 	   |               |
+> > > 	common1   	common0
+> > > 	   |		   |
+> > > 	   -----------------
+> > > 		  |
+> > >              smi common
+> > > 		  |
+> > >   ------------------------------------
+> > >   |       |       |       |     |    |
+> > >  3'd0    3'd1    3'd2    3'd3  ...  3'd7   <-common_id(max is 8)
+> > >   |       |       |       |     |    |
+> > > Larb0   Larb1     |     Larb3  ... Larb7
+> > > 		  |
+> > > 	    smi sub common
+> > > 		  |
+> > >      --------------------------
+> > >      |        |       |       |
+> > >     2'd0     2'd1    2'd2    2'd3   <-sub_common_id(max is 4)
+> > >      |        |       |       |
+> > >    Larb8    Larb9   Larb10  Larb11
+> > > 
+> > > In this patch we extern larb_remap[] to larb_remap[8][4] for this.
+> > 
+> > extern -> extend
+> > 
+> > > larb_remap[x][y]: x mean common-id above, y means subcommon_id above.
+> > 
+> > mean -> means
+> > 
+> > > 
+> > > We can also distinguish if the M4U HW has sub_common by has_sub_comm
+> > > property.
+> > > 
+> > > Signed-off-by: Chao Hao <chao.hao@mediatek.com>
+> > > Reviewed-by: Yong Wu <yong.wu@mediatek.com>
+> > > ---
+> > >  drivers/iommu/mtk_iommu.c | 20 +++++++++++++-------
+> > >  drivers/iommu/mtk_iommu.h |  3 ++-
+> > >  2 files changed, 15 insertions(+), 8 deletions(-)
+> > > 
+> > > diff --git a/drivers/iommu/mtk_iommu.c b/drivers/iommu/mtk_iommu.c
+> > > index f23919feba4e..a687e8db0e51 100644
+> > > --- a/drivers/iommu/mtk_iommu.c
+> > > +++ b/drivers/iommu/mtk_iommu.c
+> > > @@ -91,6 +91,8 @@
+> > >  #define REG_MMU1_INVLD_PA			0x148
+> > >  #define REG_MMU0_INT_ID				0x150
+> > >  #define REG_MMU1_INT_ID				0x154
+> > > +#define F_MMU_INT_ID_COMM_ID(a)			(((a) >> 9) & 0x7)
+> > > +#define F_MMU_INT_ID_SUB_COMM_ID(a)		(((a) >> 7) & 0x3)
+> > >  #define F_MMU_INT_ID_LARB_ID(a)			(((a) >> 7) & 0x7)
+> > >  #define F_MMU_INT_ID_PORT_ID(a)			(((a) >> 2) & 0x1f)
+> > >  
+> > > @@ -229,7 +231,7 @@ static irqreturn_t mtk_iommu_isr(int irq, void *dev_id)
+> > >  	struct mtk_iommu_data *data = dev_id;
+> > >  	struct mtk_iommu_domain *dom = data->m4u_dom;
+> > >  	u32 int_state, regval, fault_iova, fault_pa;
+> > > -	unsigned int fault_larb, fault_port;
+> > > +	unsigned int fault_larb, fault_port, sub_comm = 0;
+> > >  	bool layer, write;
+> > >  
+> > >  	/* Read error info from registers */
+> > > @@ -245,10 +247,14 @@ static irqreturn_t mtk_iommu_isr(int irq, void *dev_id)
+> > >  	}
+> > >  	layer = fault_iova & F_MMU_FAULT_VA_LAYER_BIT;
+> > >  	write = fault_iova & F_MMU_FAULT_VA_WRITE_BIT;
+> > > -	fault_larb = F_MMU_INT_ID_LARB_ID(regval);
+> > >  	fault_port = F_MMU_INT_ID_PORT_ID(regval);
+> > > -
+> > > -	fault_larb = data->plat_data->larbid_remap[fault_larb];
+> > > +	if (data->plat_data->has_sub_comm) {
+> > > +		fault_larb = F_MMU_INT_ID_COMM_ID(regval);
+> > > +		sub_comm = F_MMU_INT_ID_SUB_COMM_ID(regval);
+> > > +	} else {
+> > > +		fault_larb = F_MMU_INT_ID_LARB_ID(regval);
+> > > +	}
+> > > +	fault_larb = data->plat_data->larbid_remap[fault_larb][sub_comm];
+> > >  
+> > >  	if (report_iommu_fault(&dom->domain, data->dev, fault_iova,
+> > >  			       write ? IOMMU_FAULT_WRITE : IOMMU_FAULT_READ)) {
+> > > @@ -778,7 +784,7 @@ static const struct mtk_iommu_plat_data mt2712_data = {
+> > >  	.has_bclk       = true,
+> > >  	.has_vld_pa_rng = true,
+> > >  	.inv_sel_reg    = REG_MMU_INV_SEL_GEN1,
+> > > -	.larbid_remap   = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9},
+> > > +	.larbid_remap   = {{0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}},
+> > >  };
+> > >  
+> > >  static const struct mtk_iommu_plat_data mt8173_data = {
+> > > @@ -787,14 +793,14 @@ static const struct mtk_iommu_plat_data mt8173_data = {
+> > >  	.has_bclk     = true,
+> > >  	.reset_axi    = true,
+> > >  	.inv_sel_reg  = REG_MMU_INV_SEL_GEN1,
+> > > -	.larbid_remap = {0, 1, 2, 3, 4, 5}, /* Linear mapping. */
+> > > +	.larbid_remap = {{0}, {1}, {2}, {3}, {4}, {5}}, /* Linear mapping. */
+> > >  };
+> > >  
+> > >  static const struct mtk_iommu_plat_data mt8183_data = {
+> > >  	.m4u_plat     = M4U_MT8183,
+> > >  	.reset_axi    = true,
+> > >  	.inv_sel_reg  = REG_MMU_INV_SEL_GEN1,
+> > > -	.larbid_remap = {0, 4, 5, 6, 7, 2, 3, 1},
+> > > +	.larbid_remap = {{0}, {4}, {5}, {6}, {7}, {2}, {3}, {1}},
+> > >  };
+> > >  
+> > >  static const struct of_device_id mtk_iommu_of_ids[] = {
+> > > diff --git a/drivers/iommu/mtk_iommu.h b/drivers/iommu/mtk_iommu.h
+> > > index afd7a2de5c1e..d51ff99c2c71 100644
+> > > --- a/drivers/iommu/mtk_iommu.h
+> > > +++ b/drivers/iommu/mtk_iommu.h
+> > > @@ -41,10 +41,11 @@ struct mtk_iommu_plat_data {
+> > >  	/* HW will use the EMI clock if there isn't the "bclk". */
+> > >  	bool                has_bclk;
+> > >  	bool		    has_misc_ctrl;
+> > > +	bool		    has_sub_comm;
+> > >  	bool                has_vld_pa_rng;
+> > >  	bool                reset_axi;
+> > >  	u32                 inv_sel_reg;
+> > > -	unsigned char       larbid_remap[MTK_LARB_NR_MAX];
+> > > +	unsigned char       larbid_remap[8][4];
+> > 
+> > MTK_LARB_NR_MAX is 16, why do you decrease it to 8?
+> 
+> From the diagram above, the max number of the larbs that could connected
+> with a IOMMU HW is 8. thus, 8 is right here for each a IOMMU HW.
+> 
+> as I commented when v3. mt2712 have the larbs over 8 since it has 2
+> IOMMU HWes.
+> 
+> and MTK_LARB_NR_MAX means the max larbs number that this SoC support.
+> Keep its value as is.
+> 
+> 
+> > Should we use a define for the subcommon as well?
+> > 
+> > Regards,
+> > Matthias
+> >
+
+Hi Matthias and yong,
+Thanks very much for your review.
+HW diagram is as belove and whether we need to use macro definitions to
+show it, maybe more clearer? like this:
+ 
+#define LARB_COMMON_MAX             8
+#define LARB_SUB_COMMON_MAX         4
+unsigned char    larbid_remap[LARB_COMMON_MAX][LARB_SUB_COMMON_MAX];
+
+>  
+> > >  };
+> > >  
+> > >  struct mtk_iommu_domain;
+> > > 
+> 
+> 
+
+_______________________________________________
+Linux-mediatek mailing list
+Linux-mediatek@lists.infradead.org
+http://lists.infradead.org/mailman/listinfo/linux-mediatek
