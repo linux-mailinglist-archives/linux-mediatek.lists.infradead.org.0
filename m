@@ -2,67 +2,66 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id F271A1FF837
-	for <lists+linux-mediatek@lfdr.de>; Thu, 18 Jun 2020 17:54:24 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id BD7CD1FF867
+	for <lists+linux-mediatek@lfdr.de>; Thu, 18 Jun 2020 18:00:26 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:In-Reply-To:MIME-Version:Date:
 	Message-ID:From:References:To:Subject:Reply-To:Content-ID:Content-Description
 	:Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=1pgOXxJ98LzfDdXgytz+/t9uJJPQOu8N99EaQJpEZkU=; b=YeEa6ZC7hwFt7X
-	2+Zu2rzNYVLyy7TGqNlfBGIqUcLhaHhItZ1FWAigvKbBByW03YHBey2E2jPNA7iqaPjZC+vZRxdsR
-	gsDTRn8l9NctMhEQ9+5ALmCdUrIpcbjRqKeQlwhGE4HfxociWf081tV2k1Aq6fqp/TKwsui4fNxMw
-	a4rTfYz1Lq/8xK4cdctnwD36DvGsdI+xozBPNjR/NcaXKksXa5y6mIi2ttJ2BQi6XPdg/YViw0Q7p
-	zGWNYyb3q9X3X1d50CnnBS+bT9IaqqUwqI43qTzh2vek1I3oWbZzAonhb9J2aGys/Hae8vUmkyQTj
-	Af+yhIXsaA7MLwYOnitA==;
+	List-Owner; bh=uRjqZGq4g3Zw2p/+Key+LWpI0RFZMmHa4csbbhzs/1g=; b=UkKZo46qZcyMvm
+	Tr7McCQ2it10FGiRL/mrmQJfFzF4vOqrjlHkK7XDXTPxfJEht4+sCK4LbiwTRb9fErvmvtiat9vaK
+	jLUaezOGEfhww5cXr2//qtbMiilEOQEralR91FW0WVD63a4alDsAN6XTp7XsIOpZAUFDZohLd42lP
+	DqQv4O909OI0DuPIOVlmulm4s+aw5MfkxFrhqY/tbGGCH8SsR3oNAElYh7CmdZiW0HcooEQk5qjCX
+	1tvAcoMO8jJPQJW6a9+L8fpkCmvacqVaymGyEFWjBJi4EKLvbSej9lOH/0RUSaW0M0y381r2utjfw
+	U9OTmIaONvO6xohNgtog==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jlwrn-0003FI-Hq; Thu, 18 Jun 2020 15:54:15 +0000
+	id 1jlwxa-00049F-JE; Thu, 18 Jun 2020 16:00:14 +0000
 Received: from mail-wr1-x442.google.com ([2a00:1450:4864:20::442])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jlwp3-00017M-Js; Thu, 18 Jun 2020 15:51:43 +0000
-Received: by mail-wr1-x442.google.com with SMTP id r7so6608151wro.1;
- Thu, 18 Jun 2020 08:51:24 -0700 (PDT)
+ id 1jlwxU-00038y-I7; Thu, 18 Jun 2020 16:00:11 +0000
+Received: by mail-wr1-x442.google.com with SMTP id x6so6589338wrm.13;
+ Thu, 18 Jun 2020 09:00:08 -0700 (PDT)
 DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gmail.com; s=20161025;
  h=subject:to:cc:references:from:autocrypt:message-id:date:user-agent
  :mime-version:in-reply-to:content-language:content-transfer-encoding;
- bh=gH7qzcCxjfKEx0xjjm7740rxj015q9ytvZGcKdLLIio=;
- b=YNHlrM0Ay9bRne1mOhLxToB7acw3MVdBAYT8260307zdvNpTq62DySLiwpbfqoBCiw
- IBZDjY3iCERWhWzX095O/qhP1q1WSBzZ7JwjTDPwFr2a+y9Cdi7fM7FKQ4E6fFBoS0wf
- GCEHKxr++Xx35L1Y58gxglo1UhaaeyhsGkwgXMHIJTuF63edgD2LDofQO3OIAV9f85Lv
- THJRO2Hoyffh698fVHZvAoda9jLE3GhJDN8WflFGszkuhAc3PGGDJFIb63Qfa/AkAaHt
- 9E6Gst0mv0qcjL8GgUJBOESimCv4xEhHtrpvfqOPLaOwqswo8EWY+n/At+Uo5uApEc25
- YPMA==
+ bh=x3LA7sp3dOy30DhOnl4vpK+38g2VcseF6kbs7o6qdjU=;
+ b=n9cuHroTaFNZCY7THCnqo0RHhaYu1VILKqV9Ta+oZGnTyGLAn3KCcu3YReAqfvpV1q
+ N7VVJpTcGduU9REUvFc7RUIEe/TM1wowrVm4XJmaELRjI+oapelT979yU22XzwXnSCXT
+ aWdGGRhKscciAHpGv+174b81TiDq4ja9JTBtXGpgqUocWGYsQUGBlEec8WOOGkwsE9FQ
+ nibMp7KLfce4L4ze7oR5sZgieTUOcKIAFZJi4EiS506QpiFha5N31jTE+s0zv82XNUXC
+ W1Bi5gmfmwqqvwHtmmdsISqdJHA6nI6uYu5jXODGN+LFBL0VyAJx4y5jUlT/63TFjjK7
+ fiIg==
 X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
  d=1e100.net; s=20161025;
  h=x-gm-message-state:subject:to:cc:references:from:autocrypt
  :message-id:date:user-agent:mime-version:in-reply-to
  :content-language:content-transfer-encoding;
- bh=gH7qzcCxjfKEx0xjjm7740rxj015q9ytvZGcKdLLIio=;
- b=Vbk1HtNNPFRIG/HVBl/BtAEtIPeyp303TxkXf2dGV2kRnlxeVApa7plJLeE7PANRJ/
- NH2OsuANrh9YFUzfRSABYFHAqen03+SXLIg2ynWygX45gX/sK4XB1lluFXWv9ybekBlU
- VpsAqPWCm+hY2OF6/qmjJyLdI4WwxqYv5VoMEvh1mqpqJ/UqaIYP/2bsvVQw9IwwLiEV
- BfqN4Mcipoqu2HkvfLYiM6+KllMnEzzPSUFYCAJtQAIr3KCfsL9PDOWpas/RhhGawm8d
- NNmtOzzhd/Kwog54xbAHb+S2pBNtlYER8y3dAQtaCFF7izElUQ7WJQ7HeL69t/uI1JhD
- c66w==
-X-Gm-Message-State: AOAM530h6ipgPrEj+uKyIMDN+Gqj1emRra7RWW67/llHa0hmX6IoF6W8
- 0QcDxPf+BdZCzmtCH+ieLWQ=
-X-Google-Smtp-Source: ABdhPJzFa9kq3Ql8Nhmf2B0ep4sk8iA+d3i5dXbYqEXMV5Gx+8bSyBe62/pwam8m4beO6khgPr6SNw==
-X-Received: by 2002:adf:f3cb:: with SMTP id g11mr2820956wrp.142.1592495481322; 
- Thu, 18 Jun 2020 08:51:21 -0700 (PDT)
+ bh=x3LA7sp3dOy30DhOnl4vpK+38g2VcseF6kbs7o6qdjU=;
+ b=g/BCgt8O2pfZQAc9po1iskF87tCLEt6/WEJ/nW6nKQTRA0Z3rkPVyyu21LC1oZ322U
+ KnqK+aD6JuTTa1OL/K5TfTRULyIR4xknvVC0laiWSJ5AieWMLMwUaXw5jYNelWX+F024
+ idc/yacSoN/7uplXO3nxx7k922ty1fjpcVjwMVXQqK2enVQ+1brt8sWmzOo0952+yd04
+ c/AQInN2yFV045LQO30cuglK+ix2lSPe86ycvTvHsVoGF2tRKa4MdJIDoZklV1C32fA1
+ 3GGyfrbIe1NvwLZj+//2gdeqRm6ccttb+GphuNiGrR8e1C70gXPYuOXSkSW4Pthd1WD3
+ XKzg==
+X-Gm-Message-State: AOAM530K/Niq7kVXNc56OSN4b1dN+sMSD+sy8Ts9Gk1ALkaRl4kUxOMd
+ c/DU7UFPlryXAay7e3wsagE=
+X-Google-Smtp-Source: ABdhPJz+7F0EbRzsmpp//fFKGQX4eSnlBsnREIubb7/IkgjJyYeYoA5oBjWwUsxu479ZxwsrZTgfzQ==
+X-Received: by 2002:a5d:6b8c:: with SMTP id n12mr5343092wrx.61.1592496007103; 
+ Thu, 18 Jun 2020 09:00:07 -0700 (PDT)
 Received: from ziggy.stardust (81.172.57.81.dyn.user.ono.com. [81.172.57.81])
  by smtp.gmail.com with ESMTPSA id
- m24sm4047732wmi.14.2020.06.18.08.51.19
+ b187sm4062266wmd.26.2020.06.18.09.00.05
  (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
- Thu, 18 Jun 2020 08:51:20 -0700 (PDT)
-Subject: Re: [PATCH v6 6/7] clk: mediatek: add UART0 clock support
-To: Hanks Chen <hanks.chen@mediatek.com>,
- Linus Walleij <linus.walleij@linaro.org>, Rob Herring <robh+dt@kernel.org>,
- Michael Turquette <mturquette@baylibre.com>, Stephen Boyd
- <sboyd@kernel.org>, Sean Wang <sean.wang@kernel.org>
-References: <1592480018-3340-1-git-send-email-hanks.chen@mediatek.com>
- <1592480018-3340-7-git-send-email-hanks.chen@mediatek.com>
+ Thu, 18 Jun 2020 09:00:06 -0700 (PDT)
+Subject: Re: [PATCH v4 7/7] iommu/mediatek: Add mt6779 basic support
+To: chao hao <Chao.Hao@mediatek.com>
+References: <20200617030029.4082-1-chao.hao@mediatek.com>
+ <20200617030029.4082-8-chao.hao@mediatek.com>
+ <64f63ccc-92a4-191c-3566-de00c9e04ca2@gmail.com>
+ <1592481247.12647.9.camel@mbjsdccf07>
 From: Matthias Brugger <matthias.bgg@gmail.com>
 Autocrypt: addr=matthias.bgg@gmail.com; prefer-encrypt=mutual; keydata=
  mQINBFP1zgUBEAC21D6hk7//0kOmsUrE3eZ55kjc9DmFPKIz6l4NggqwQjBNRHIMh04BbCMY
@@ -138,16 +137,16 @@ Autocrypt: addr=matthias.bgg@gmail.com; prefer-encrypt=mutual; keydata=
  jzi+DzD9cvj2K6eD5j5kcKJJQactXqfJvF1Eb+OnxlB1BCLE8D1rNkPO5O742Mq3MgDmq19l
  +abzEL6QDAAxn9md8KwrA3RtucNh87cHlDXfUBKa7SRvBjTczDg+HEPNk2u3hrz1j3l2rliQ
  y1UfYx7Vk/TrdwUIJgKS8QAr8Lw9WuvY2hSqL9vEjx8VAkPWNWPwrQ==
-Message-ID: <a61ed70c-a360-f3af-e215-6377ea25a6ab@gmail.com>
-Date: Thu, 18 Jun 2020 17:51:18 +0200
+Message-ID: <9618cc95-99ac-63d0-f502-335e38819842@gmail.com>
+Date: Thu, 18 Jun 2020 18:00:05 +0200
 User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:68.0) Gecko/20100101
  Thunderbird/68.9.0
 MIME-Version: 1.0
-In-Reply-To: <1592480018-3340-7-git-send-email-hanks.chen@mediatek.com>
+In-Reply-To: <1592481247.12647.9.camel@mbjsdccf07>
 Content-Language: en-US
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200618_085125_723236_26089620 
-X-CRM114-Status: GOOD (  14.15  )
+X-CRM114-CacheID: sfid-20200618_090008_720552_9FB5ABF3 
+X-CRM114-Status: GOOD (  25.35  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
@@ -178,12 +177,11 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: devicetree@vger.kernel.org, CC Hwang <cc.hwang@mediatek.com>,
- wsd_upstream@mediatek.com, Andy Teng <andy.teng@mediatek.com>,
- Loda Chou <loda.chou@mediatek.com>, linux-kernel@vger.kernel.org,
- linux-gpio@vger.kernel.org, linux-mediatek@lists.infradead.org,
- mtk01761 <wendell.lin@mediatek.com>, linux-clk@vger.kernel.org,
- linux-arm-kernel@lists.infradead.org
+Cc: devicetree@vger.kernel.org, FY Yang <fy.yang@mediatek.com>,
+ wsd_upstream@mediatek.com, Joerg Roedel <joro@8bytes.org>,
+ linux-kernel@vger.kernel.org, iommu@lists.linux-foundation.org,
+ Rob Herring <robh+dt@kernel.org>, linux-mediatek@lists.infradead.org,
+ Yong Wu <yong.wu@mediatek.com>, linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
@@ -191,36 +189,141 @@ Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.o
 
 
 
-On 18/06/2020 13:33, Hanks Chen wrote:
-> Add MT6779 UART0 clock support.
+On 18/06/2020 13:54, chao hao wrote:
+> On Wed, 2020-06-17 at 11:33 +0200, Matthias Brugger wrote:
+>>
+>> On 17/06/2020 05:00, Chao Hao wrote:
+>>> 1. Start from mt6779, INVLDT_SEL move to offset=0x2c, so we add
+>>>    REG_MMU_INV_SEL_GEN2 definition and mt6779 uses it.
+>>> 2. Change PROTECT_PA_ALIGN from 128 byte to 256 byte.
+>>> 3. For REG_MMU_CTRL_REG register, we only need to change bit[2:0],
+>>>    others bits keep default value, ex: enable victim tlb.
+>>> 4. Add mt6779_data to support mm_iommu HW init.
+>>>
+>>> Change since v3:
+>>> 1. When setting MMU_CTRL_REG, we don't need to include mt8173.
+>>>
+>>> Cc: Yong Wu <yong.wu@mediatek.com>
+>>> Signed-off-by: Chao Hao <chao.hao@mediatek.com>
+>>> ---
+>>>  drivers/iommu/mtk_iommu.c | 20 ++++++++++++++++++--
+>>>  drivers/iommu/mtk_iommu.h |  1 +
+>>>  2 files changed, 19 insertions(+), 2 deletions(-)
+>>>
+>>> diff --git a/drivers/iommu/mtk_iommu.c b/drivers/iommu/mtk_iommu.c
+>>> index c706bca6487e..def2e996683f 100644
+>>> --- a/drivers/iommu/mtk_iommu.c
+>>> +++ b/drivers/iommu/mtk_iommu.c
+>>> @@ -37,6 +37,11 @@
+>>>  #define REG_MMU_INVLD_START_A			0x024
+>>>  #define REG_MMU_INVLD_END_A			0x028
+>>>  
+>>> +/* In latest Coda, MMU_INV_SEL's offset is changed to 0x02c.
+>>> + * So we named offset = 0x02c to "REG_MMU_INV_SEL_GEN2"
+>>> + * and offset = 0x038 to "REG_MMU_INV_SEL_GEN1".
+>>> + */
+>>
+>> Please delete the comment, this should be understandable from the git history
+> 
+> ok, thanks
+> 
+>>
+>>> +#define REG_MMU_INV_SEL_GEN2			0x02c
+>>>  #define REG_MMU_INV_SEL_GEN1			0x038
+>>>  #define F_INVLD_EN0				BIT(0)
+>>>  #define F_INVLD_EN1				BIT(1)
+>>> @@ -98,7 +103,7 @@
+>>>  #define F_MMU_INT_ID_LARB_ID(a)			(((a) >> 7) & 0x7)
+>>>  #define F_MMU_INT_ID_PORT_ID(a)			(((a) >> 2) & 0x1f)
+>>>  
+>>> -#define MTK_PROTECT_PA_ALIGN			128
+>>> +#define MTK_PROTECT_PA_ALIGN			256
+>>
+>> Do we need 512 bytes for all gen2 IOMMUs?
+>> I'm not sure if we should add this in plat_data or if we should just bump up the
+>> value for all SoCs.
+>> In both cases this should be a separate patch.
+>>
+> From mt6779, MTK_PROTECT_PA_ALIGN is extend to 256 bytes and don't be
+> changed for a long time from our HW designer comment. The legacy iommu
+> also can use it, mabye it doesn't set it by platform.
 > 
 
-Please a dd fixes tag:
+Ok then just bump it to 256 in a new patch. Thanks for clarification.
 
-Fixes: 710774e04861 ("clk: mediatek: Add MT6779 clock support")
-
-> Signed-off-by: Hanks Chen <hanks.chen@mediatek.com>
-> Signed-off-by: mtk01761 <wendell.lin@mediatek.com>
-
-Must be a real name not "mtk01761"
-
-> ---
->  drivers/clk/mediatek/clk-mt6779.c |    2 ++
->  1 file changed, 2 insertions(+)
 > 
-> diff --git a/drivers/clk/mediatek/clk-mt6779.c b/drivers/clk/mediatek/clk-mt6779.c
-> index 9766ccc..6e0d3a1 100644
-> --- a/drivers/clk/mediatek/clk-mt6779.c
-> +++ b/drivers/clk/mediatek/clk-mt6779.c
-> @@ -919,6 +919,8 @@
->  		    "pwm_sel", 19),
->  	GATE_INFRA0(CLK_INFRA_PWM, "infra_pwm",
->  		    "pwm_sel", 21),
-> +	GATE_INFRA0(CLK_INFRA_UART0, "infra_uart0",
-> +		    "uart_sel", 22),
->  	GATE_INFRA0(CLK_INFRA_UART1, "infra_uart1",
->  		    "uart_sel", 23),
->  	GATE_INFRA0(CLK_INFRA_UART2, "infra_uart2",
+>>>  
+>>>  /*
+>>>   * Get the local arbiter ID and the portid within the larb arbiter
+>>> @@ -543,11 +548,12 @@ static int mtk_iommu_hw_init(const struct mtk_iommu_data *data)
+>>>  		return ret;
+>>>  	}
+>>>  
+>>> +	regval = readl_relaxed(data->base + REG_MMU_CTRL_REG);
+>>>  	if (data->plat_data->m4u_plat == M4U_MT8173)
+>>>  		regval = F_MMU_PREFETCH_RT_REPLACE_MOD |
+>>>  			 F_MMU_TF_PROT_TO_PROGRAM_ADDR_MT8173;
+>>>  	else
+>>> -		regval = F_MMU_TF_PROT_TO_PROGRAM_ADDR;
+>>> +		regval |= F_MMU_TF_PROT_TO_PROGRAM_ADDR;
+>>
+>> Why do we change this, is it that the bootloader for mt6779 set some values in
+>> the register we have to keep? In this case I think we should update the regval
+>> accordingly.
+> 
+> For REG_MMU_CTRL_REG, bit[12] represents victim_tlb_en feature and
+> victim_tlb is enable defaultly(bit[12]=1),but if we use "regval =
+> F_MMU_TF_PROT_TO_PROGRAM_ADDR", victim_tlb will disable, it will drop
+> iommu performace for mt6779
+> 
+
+Got it. Please put that in a separate patch then.
+
+Regards,
+Matthias
+
+> 
+>>
+>>>  	writel_relaxed(regval, data->base + REG_MMU_CTRL_REG);
+>>>  
+>>>  	regval = F_L2_MULIT_HIT_EN |
+>>> @@ -797,6 +803,15 @@ static const struct mtk_iommu_plat_data mt2712_data = {
+>>>  	.larbid_remap   = {{0}, {1}, {2}, {3}, {4}, {5}, {6}, {7}},
+>>>  };
+>>>  
+>>> +static const struct mtk_iommu_plat_data mt6779_data = {
+>>> +	.m4u_plat      = M4U_MT6779,
+>>> +	.has_sub_comm  = true,
+>>> +	.has_wr_len    = true,
+>>> +	.has_misc_ctrl = true,
+>>> +	.inv_sel_reg   = REG_MMU_INV_SEL_GEN2,
+>>> +	.larbid_remap  = {{0}, {1}, {2}, {3}, {5}, {7, 8}, {10}, {9}},
+>>> +};
+>>> +
+>>>  static const struct mtk_iommu_plat_data mt8173_data = {
+>>>  	.m4u_plat     = M4U_MT8173,
+>>>  	.has_4gb_mode = true,
+>>> @@ -815,6 +830,7 @@ static const struct mtk_iommu_plat_data mt8183_data = {
+>>>  
+>>>  static const struct of_device_id mtk_iommu_of_ids[] = {
+>>>  	{ .compatible = "mediatek,mt2712-m4u", .data = &mt2712_data},
+>>> +	{ .compatible = "mediatek,mt6779-m4u", .data = &mt6779_data},
+>>>  	{ .compatible = "mediatek,mt8173-m4u", .data = &mt8173_data},
+>>>  	{ .compatible = "mediatek,mt8183-m4u", .data = &mt8183_data},
+>>>  	{}
+>>> diff --git a/drivers/iommu/mtk_iommu.h b/drivers/iommu/mtk_iommu.h
+>>> index 9971cedd72ea..fb79e710c8d9 100644
+>>> --- a/drivers/iommu/mtk_iommu.h
+>>> +++ b/drivers/iommu/mtk_iommu.h
+>>> @@ -31,6 +31,7 @@ struct mtk_iommu_suspend_reg {
+>>>  enum mtk_iommu_plat {
+>>>  	M4U_MT2701,
+>>>  	M4U_MT2712,
+>>> +	M4U_MT6779,
+>>>  	M4U_MT8173,
+>>>  	M4U_MT8183,
+>>>  };
+>>>
 > 
 
 _______________________________________________
