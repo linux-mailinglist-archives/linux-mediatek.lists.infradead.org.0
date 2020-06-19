@@ -2,60 +2,60 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id E2951200359
-	for <lists+linux-mediatek@lfdr.de>; Fri, 19 Jun 2020 10:15:40 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 5E64720033D
+	for <lists+linux-mediatek@lfdr.de>; Fri, 19 Jun 2020 10:06:29 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=0TIjet8G9RtMcxOba0RjavbgHSckp6qV7KNtsvvmovA=; b=UZBIl6sxy7KjuB
-	/e+JkXfpiKBo5rDkDolht+3ebA3mqWREuOKTUp4LGW2Ed/h52/wIOSlAZoQOm7w8HYkGwly8E30ut
-	pVwtL0yVbhcitsPcpHm4Tt5RP1ps90Fen8zD+0KU4zKQA+BTTYITDQd8g47F0908Bbae9Wf6e83KO
-	FmbJLGT+M/VqI6ndZqbRIU92aS/WaESxvfzWI8LKI8MHOwPmwyU9Eai1GtvqwramRR477wLPnW+9Q
-	WfFzZdATeT16fPrIaeI8eh17zy9UwElAkNhY8gD7REthb/bTpKkKD+o6hZuYnBdlSdyuVk+cO43CD
-	+RnPs2HFPRSh3XINRmxA==;
+	List-Owner; bh=HdghnEBwQdPfz/sZByJtiUzxi5IrFIcdp49F+Z2+q5A=; b=ih/cW9dSvYoZou
+	W2OZn0Mi3MxIko2Uu9tr4hxRCCSWAWkqcwcVRK0te88UFvY2n36lurShpQbQx1evQfWqpFawiBcDy
+	EPBsFyaxg7O9Xjr3gsObItEfUmVIlN/rNxZ/LCBNOfIqb3h4XMuQsUI8f1mSKfi3tf0T9XJc23B3/
+	badUqOjod0xmdh+HwYLcPthpb/ghvL3e3eRtBS3CBSPD6iOHcgE5GBy04tkjVg1hK0TvuZUIxCFFq
+	AZno+6wY1wfX+id7AZ1KcsZGZRc04DAm4qFBC4rkA6BSeMeww6OK/V22U2Nk3JLB+KHyit5J6Xono
+	xJKftDxunUHlEv1DbC/A==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jmCBO-0007WF-TM; Fri, 19 Jun 2020 08:15:30 +0000
+	id 1jmC2X-0000tr-J6; Fri, 19 Jun 2020 08:06:21 +0000
 Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jmCBK-0007Vr-LE; Fri, 19 Jun 2020 08:15:28 +0000
-X-UUID: e2cd8a66796d4a8eac1aec89c73688ad-20200619
+ id 1jmC2V-0000t7-Ew; Fri, 19 Jun 2020 08:06:20 +0000
+X-UUID: e37bf0512ade482cb2faac0cf2ec107c-20200619
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
  s=dk; 
  h=Content-Transfer-Encoding:Content-Type:MIME-Version:References:In-Reply-To:Message-ID:Date:Subject:CC:To:From;
- bh=ySEtHTH57bxejrMtxUW7baRYR2KhL0kU2xryPA6GWeY=; 
- b=ClaWGkPI9RpLVoRnBZifvdim+xIqrjdZPjEAOWfc3U9cAl8zghRfsiYu7/cOHk0NzeSE5JglQJOYwOjQY9ssN4NVngve7nT4mBTFGv7NMBvrXlzmqEtF8E3laAwL3eL1CRQ6mScKDdleuysXyDNqn25QnTHepArv5ZSIYpKdYpk=;
-X-UUID: e2cd8a66796d4a8eac1aec89c73688ad-20200619
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
+ bh=W1LOndusl+hI8qr6PnjPnMVG0Xt0LgOh2kjlUuxSIlM=; 
+ b=VMtoT5tr4JljExfIqY2eJH5+25Btl9MG9FUYvhtEhuBgPZ8oKVoN8pR1qzbQRvwK9MxB4I1pkv6433pUgRsVpZdqWcKLSvgRWWVPuUiyM5EC9hmVEyy1oVTGcuAoMwZ8PbUYu6rV7CeNi1QI8oTSD/7a61AZLo7m0kdVysoZBDA=;
+X-UUID: e37bf0512ade482cb2faac0cf2ec107c-20200619
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw02.mediatek.com
  (envelope-from <eastl.lee@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 301809450; Fri, 19 Jun 2020 00:15:36 -0800
-Received: from MTKMBS02N2.mediatek.inc (172.21.101.101) by
- MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1497.2; Fri, 19 Jun 2020 01:05:20 -0700
+ with ESMTP id 900632201; Fri, 19 Jun 2020 00:06:29 -0800
+Received: from MTKMBS01N2.mediatek.inc (172.21.101.79) by
+ MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ 15.0.1497.2; Fri, 19 Jun 2020 01:06:13 -0700
 Received: from mtkcas08.mediatek.inc (172.21.101.126) by
- mtkmbs02n2.mediatek.inc (172.21.101.101) with Microsoft SMTP Server (TLS) id
- 15.0.1497.2; Fri, 19 Jun 2020 16:05:06 +0800
+ mtkmbs01n2.mediatek.inc (172.21.101.79) with Microsoft SMTP Server (TLS) id
+ 15.0.1497.2; Fri, 19 Jun 2020 16:05:08 +0800
 Received: from mtkswgap22.mediatek.inc (172.21.77.33) by mtkcas08.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1497.2 via
- Frontend Transport; Fri, 19 Jun 2020 16:05:08 +0800
+ Frontend Transport; Fri, 19 Jun 2020 16:05:09 +0800
 From: EastL <EastL.Lee@mediatek.com>
 To: Sean Wang <sean.wang@mediatek.com>
-Subject: [PATCH v5 3/4] dmaengine: mediatek-cqdma: add dma mask for capability
-Date: Fri, 19 Jun 2020 16:05:01 +0800
-Message-ID: <1592553902-30592-4-git-send-email-EastL.Lee@mediatek.com>
+Subject: [PATCH v5 4/4] dmaengine: mediatek-cqdma: fix compatible
+Date: Fri, 19 Jun 2020 16:05:02 +0800
+Message-ID: <1592553902-30592-5-git-send-email-EastL.Lee@mediatek.com>
 X-Mailer: git-send-email 1.9.1
 In-Reply-To: <1592553902-30592-1-git-send-email-EastL.Lee@mediatek.com>
 References: <1592553902-30592-1-git-send-email-EastL.Lee@mediatek.com>
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: 5F99345FA7F246BBF9849BD1CEB69989773CB4DE139E4BBB3040F4B2C603A3392000:8
+X-TM-SNTS-SMTP: 58ED8B8D4A56CF4C1ECAA6613447FE08CC9F96345E443B1B0F182794823BBC192000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200619_011526_703138_6841DFC7 
-X-CRM114-Status: UNSURE (   9.84  )
+X-CRM114-CacheID: sfid-20200619_010619_501981_A9DF83D6 
+X-CRM114-Status: UNSURE (   8.23  )
 X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
@@ -96,55 +96,27 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-This patch add dma mask for capability.
+This patch adds common compatible & platform compatiable.
 
 Signed-off-by: EastL <EastL.Lee@mediatek.com>
 ---
- drivers/dma/mediatek/mtk-cqdma.c | 17 +++++++++++++++++
- 1 file changed, 17 insertions(+)
+ drivers/dma/mediatek/mtk-cqdma.c | 2 ++
+ 1 file changed, 2 insertions(+)
 
 diff --git a/drivers/dma/mediatek/mtk-cqdma.c b/drivers/dma/mediatek/mtk-cqdma.c
-index 905bbcb..ed33c64 100644
+index ed33c64..d701ebf 100644
 --- a/drivers/dma/mediatek/mtk-cqdma.c
 +++ b/drivers/dma/mediatek/mtk-cqdma.c
-@@ -117,6 +117,7 @@ struct mtk_cqdma_vchan {
-  * @clk:                    The clock that device internal is using
-  * @dma_requests:           The number of VCs the device supports to
-  * @dma_channels:           The number of PCs the device supports to
-+ * @dma_mask:               A mask for DMA capability
-  * @vc:                     The pointer to all available VCs
-  * @pc:                     The pointer to all the underlying PCs
-  */
-@@ -126,6 +127,7 @@ struct mtk_cqdma_device {
+@@ -546,7 +546,9 @@ static void mtk_cqdma_hw_deinit(struct mtk_cqdma_device *cqdma)
+ }
  
- 	u32 dma_requests;
- 	u32 dma_channels;
-+	u32 dma_mask;
- 	struct mtk_cqdma_vchan *vc;
- 	struct mtk_cqdma_pchan **pc;
+ static const struct of_device_id mtk_cqdma_match[] = {
++	{ .compatible = "mediatek,common-cqdma" },
+ 	{ .compatible = "mediatek,mt6765-cqdma" },
++	{ .compatible = "mediatek,mt6779-cqdma" },
+ 	{ /* sentinel */ }
  };
-@@ -607,6 +609,21 @@ static int mtk_cqdma_probe(struct platform_device *pdev)
- 		cqdma->dma_channels = MTK_CQDMA_NR_PCHANS;
- 	}
- 
-+	if (pdev->dev.of_node)
-+		err = of_property_read_u32(pdev->dev.of_node,
-+					   "dma-channel-mask",
-+					   &cqdma->dma_mask);
-+	if (err) {
-+		dev_warn(&pdev->dev,
-+			 "Using 0 as missing dma-channel-mask property\n");
-+		cqdma->dma_mask = 0;
-+	}
-+
-+	if (dma_set_mask(&pdev->dev, DMA_BIT_MASK(cqdma->dma_mask))) {
-+		dev_warn(&pdev->dev, "DMA set mask fail\n");
-+		return -EINVAL;
-+	}
-+
- 	cqdma->pc = devm_kcalloc(&pdev->dev, cqdma->dma_channels,
- 				 sizeof(*cqdma->pc), GFP_KERNEL);
- 	if (!cqdma->pc)
+ MODULE_DEVICE_TABLE(of, mtk_cqdma_match);
 -- 
 1.9.1
 _______________________________________________
