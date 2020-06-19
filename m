@@ -2,61 +2,62 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id F3CC9200288
-	for <lists+linux-mediatek@lfdr.de>; Fri, 19 Jun 2020 09:12:49 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 9E02920028D
+	for <lists+linux-mediatek@lfdr.de>; Fri, 19 Jun 2020 09:13:58 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
 	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
 	Date:To:From:Subject:Message-ID:Reply-To:Content-ID:Content-Description:
 	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=jzcHOdIbg1jByfW4CpiUN7gTpaKcGOKmf1hyCv+wqbQ=; b=cFduow0zPLrrv5
-	pZ0xzlnB2DuiXojY9WgElGOzMvS+mogysHV1v1X8qQkZjZ1NOuWroPqjQyqzinX/eKIavQUB8ixb3
-	o2QEwDE7RH7rIF2FY4/FANABC+JJ0dvmFKcvWMpsoxzcd14StgKD4MHmNtT+wOkJ81DPr0fPwGh3q
-	Ztq9Zeq/F+nblad0UZIR7D+b7y/lIryKsnnUD2a/4+EAh9uTuJ9lAndRBm3Jrz1QFkDWC8vwi61Ir
-	+EvaCr3p21DL5rdcTG6vfVoJ+LQijZbWnPgE3IMyZet9Z/AbPN9eRSHdvQeGKao1yquQ7kWmTyN6K
-	Zvi7I9OMSev+UEuPXuEA==;
+	List-Owner; bh=UGv1Ja30ked/z6h4G9CtCxd5jjR5Ro2gRRoUk86FoSw=; b=YYHustoyoTfwl5
+	H3jPUOp6fE0lsILjCkclRnUbJmBfLuHnq95oxD6a3YWr/rUI+4pZ0/1aY3uniuJFJLUkdCbvr3+Kz
+	rpQUmUW3duxG7/3dctTLOtrFbCO1ATivIGe6nJB1o8CvFBebYV9kr3PFXXWSfwEhg/3vnNd/pRWhc
+	z5AeNJfmrCwg7hR2JpL0kokBucO22XmL9vv1S5e9q9hwXndQ927zLs0LvMI2nRcZeA8fxWBR+E7+M
+	FNb2d9drCpgBDyDmaJKq+9qsz/isADKg68ZDMsFXrewYv9otRJPesz4i1ii4ojLu76Gng1eNAkCOL
+	TSHW0l/83/4OR/r3uSpQ==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jmBCc-0004cX-78; Fri, 19 Jun 2020 07:12:42 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
+	id 1jmBDj-0004ks-9g; Fri, 19 Jun 2020 07:13:51 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jmBCZ-0004c3-AJ
- for linux-mediatek@lists.infradead.org; Fri, 19 Jun 2020 07:12:40 +0000
-X-UUID: fdd3b6b0d57f4485a0118f53712f52fb-20200618
+ id 1jmBDg-0004kO-DI
+ for linux-mediatek@lists.infradead.org; Fri, 19 Jun 2020 07:13:50 +0000
+X-UUID: 307d272b17544ad4bb3971cd8fc4baff-20200618
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
  s=dk; 
  h=Content-Transfer-Encoding:MIME-Version:Content-Type:References:In-Reply-To:Date:CC:To:From:Subject:Message-ID;
- bh=sU2yodu52kHAngph3lY1etIFjGoRAmnTFcEZex/XlNw=; 
- b=rJanF4yEjLeVa/C488ipGMWhq74NWKx7ZOgfTwXvvx4C/wS7EMo/kvDpaHrW3P278ZM018nCxuf69QdYJnWh7+2kWMgmz5MzNIHazlu4IjE6GqeAbh3uBmzX55zZOwyvL9t+f1JusihGNIR6aYO1hNdxX+To07zuZBcHlFrgpLQ=;
-X-UUID: fdd3b6b0d57f4485a0118f53712f52fb-20200618
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
+ bh=Ge4Q1IGNmven9DEwI5s/AYTPPYmWkvgiVPEkL7m9LtI=; 
+ b=M9q2XpuUPKOgdGV049XKRskPDU9OY/g1aBHPIBEN+X6ADjyZR7Q3LoaSXElk2pylXOH0sCWRb0460ICYCNgEosZcpjvFOrRQBV94OMMBShz0HYfCbMd6sH6tc2jzpvraGNgMwEWC6tkfbkHbr5lryexkgIAW08MD3ZRpS7oczAo=;
+X-UUID: 307d272b17544ad4bb3971cd8fc4baff-20200618
+Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw01.mediatek.com
  (envelope-from <tiffany.lin@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 17747593; Thu, 18 Jun 2020 23:12:50 -0800
-Received: from MTKMBS01N1.mediatek.inc (172.21.101.68) by
+ with ESMTP id 1771009837; Thu, 18 Jun 2020 23:13:57 -0800
+Received: from MTKMBS01N2.mediatek.inc (172.21.101.79) by
  MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1497.2; Fri, 19 Jun 2020 00:12:36 -0700
+ 15.0.1497.2; Fri, 19 Jun 2020 00:13:42 -0700
 Received: from mtkcas07.mediatek.inc (172.21.101.84) by
- mtkmbs01n1.mediatek.inc (172.21.101.68) with Microsoft SMTP Server (TLS) id
- 15.0.1497.2; Fri, 19 Jun 2020 15:12:35 +0800
+ mtkmbs01n2.mediatek.inc (172.21.101.79) with Microsoft SMTP Server (TLS) id
+ 15.0.1497.2; Fri, 19 Jun 2020 15:13:33 +0800
 Received: from [172.21.77.4] (172.21.77.4) by mtkcas07.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1497.2 via Frontend
- Transport; Fri, 19 Jun 2020 15:12:35 +0800
-Message-ID: <1592550754.23952.4.camel@mtksdaap41>
-Subject: Re: [PATCH 08/10] media: mtk-vcodec: add support for MT8183 encoder
+ Transport; Fri, 19 Jun 2020 15:13:33 +0800
+Message-ID: <1592550813.23952.5.camel@mtksdaap41>
+Subject: Re: [PATCH 09/10] media: dt-bindings: mtk-vcodec: specify SCP node
 From: Tiffany Lin <tiffany.lin@mediatek.com>
 To: Alexandre Courbot <acourbot@chromium.org>
-Date: Fri, 19 Jun 2020 15:12:34 +0800
-In-Reply-To: <20200520082723.96136-9-acourbot@chromium.org>
+Date: Fri, 19 Jun 2020 15:13:33 +0800
+In-Reply-To: <20200520082723.96136-10-acourbot@chromium.org>
 References: <20200520082723.96136-1-acourbot@chromium.org>
- <20200520082723.96136-9-acourbot@chromium.org>
+ <20200520082723.96136-10-acourbot@chromium.org>
 X-Mailer: Evolution 3.10.4-0ubuntu2 
 MIME-Version: 1.0
+X-TM-SNTS-SMTP: 4A4C11D294B15114B2E1BEFFA5738803A511605A5CDDAEB32273C11F7D27DE922000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200619_001239_363736_3D03EF91 
-X-CRM114-Status: GOOD (  13.14  )
+X-CRM114-CacheID: sfid-20200619_001348_451944_D786D714 
+X-CRM114-Status: GOOD (  11.96  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
@@ -95,78 +96,32 @@ Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
 On Wed, 2020-05-20 at 17:27 +0900, Alexandre Courbot wrote:
-> From: Yunfei Dong <yunfei.dong@mediatek.com>
+> The mediatek codecs can use either the VPU or the SCP as their interface
+> to firmware. Reflect this in the DT bindings.
 > 
-> Now that all the supporting blocks are present, enable encoder for
-> MT8183.
-> 
-
 Acked-by: Tiffany Lin <tiffany.lin@mediatek.com>
 
 
-> Signed-off-by: Yunfei Dong <yunfei.dong@mediatek.com>
-> [acourbot: refactor, cleanup and split]
-> Co-developed-by: Alexandre Courbot <acourbot@chromium.org>
 > Signed-off-by: Alexandre Courbot <acourbot@chromium.org>
 > ---
->  .../platform/mtk-vcodec/mtk_vcodec_drv.h      |  1 +
->  .../platform/mtk-vcodec/mtk_vcodec_enc_drv.c  | 22 +++++++++++++++++++
->  2 files changed, 23 insertions(+)
+>  Documentation/devicetree/bindings/media/mediatek-vcodec.txt | 4 +++-
+>  1 file changed, 3 insertions(+), 1 deletion(-)
 > 
-> diff --git a/drivers/media/platform/mtk-vcodec/mtk_vcodec_drv.h b/drivers/media/platform/mtk-vcodec/mtk_vcodec_drv.h
-> index 59b4b750666b..a271611750ad 100644
-> --- a/drivers/media/platform/mtk-vcodec/mtk_vcodec_drv.h
-> +++ b/drivers/media/platform/mtk-vcodec/mtk_vcodec_drv.h
-> @@ -302,6 +302,7 @@ struct mtk_vcodec_ctx {
+> diff --git a/Documentation/devicetree/bindings/media/mediatek-vcodec.txt b/Documentation/devicetree/bindings/media/mediatek-vcodec.txt
+> index b6b5dde6abd8..7aef0a4fe207 100644
+> --- a/Documentation/devicetree/bindings/media/mediatek-vcodec.txt
+> +++ b/Documentation/devicetree/bindings/media/mediatek-vcodec.txt
+> @@ -19,7 +19,9 @@ Required properties:
+>  - iommus : should point to the respective IOMMU block with master port as
+>    argument, see Documentation/devicetree/bindings/iommu/mediatek,iommu.txt
+>    for details.
+> -- mediatek,vpu : the node of video processor unit
+> +One of the two following nodes:
+> +- mediatek,vpu : the node of the video processor unit, if using VPU.
+> +- mediatek,scp : the noode of the SCP unit, if using SCP.
 >  
->  enum mtk_chip {
->  	MTK_MT8173,
-> +	MTK_MT8183,
->  };
->  
->  /**
-> diff --git a/drivers/media/platform/mtk-vcodec/mtk_vcodec_enc_drv.c b/drivers/media/platform/mtk-vcodec/mtk_vcodec_enc_drv.c
-> index c8a4b85a81c4..b8fe408dd6c7 100644
-> --- a/drivers/media/platform/mtk-vcodec/mtk_vcodec_enc_drv.c
-> +++ b/drivers/media/platform/mtk-vcodec/mtk_vcodec_enc_drv.c
-> @@ -62,6 +62,14 @@ static const struct mtk_video_fmt mtk_video_formats_capture_mt8173[] =  {
->  	},
->  };
->  
-> +static const struct mtk_video_fmt mtk_video_formats_capture_mt8183[] =  {
-> +	{
-> +		.fourcc = V4L2_PIX_FMT_H264,
-> +		.type = MTK_FMT_ENC,
-> +		.num_planes = 1,
-> +	},
-> +};
-> +
->  /* Wake up context wait_queue */
->  static void wake_up_ctx(struct mtk_vcodec_ctx *ctx, unsigned int reason)
->  {
-> @@ -424,8 +432,22 @@ static const struct mtk_vcodec_enc_pdata mt8173_pdata = {
->  	.max_bitrate = 4000000,
->  };
->  
-> +static const struct mtk_vcodec_enc_pdata mt8183_pdata = {
-> +	.chip = MTK_MT8183,
-> +	.has_lt_irq = false,
-> +	.uses_ext = true,
-> +	.capture_formats = mtk_video_formats_capture_mt8183,
-> +	.num_capture_formats = ARRAY_SIZE(mtk_video_formats_capture_mt8183),
-> +	/* MT8183 supports the same output formats as MT8173 */
-> +	.output_formats = mtk_video_formats_output_mt8173,
-> +	.num_output_formats = ARRAY_SIZE(mtk_video_formats_output_mt8173),
-> +	.min_bitrate = 64,
-> +	.max_bitrate = 40000000,
-> +};
-> +
->  static const struct of_device_id mtk_vcodec_enc_match[] = {
->  	{.compatible = "mediatek,mt8173-vcodec-enc", .data = &mt8173_pdata},
-> +	{.compatible = "mediatek,mt8183-vcodec-enc", .data = &mt8183_pdata},
->  	{},
->  };
->  MODULE_DEVICE_TABLE(of, mtk_vcodec_enc_match);
+> 
+>  Example:
 
 _______________________________________________
 Linux-mediatek mailing list
