@@ -2,77 +2,46 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 17DB12005F4
-	for <lists+linux-mediatek@lfdr.de>; Fri, 19 Jun 2020 12:05:00 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id AFEBC20063E
+	for <lists+linux-mediatek@lfdr.de>; Fri, 19 Jun 2020 12:28:53 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
-	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
-	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
-	List-Owner; bh=6ZbEcwheo1gZOBF8e583nF0HbDjHiYmzg6uc8ta2DOA=; b=jkiHzZT3w47MbD
-	TKkUSgL80REiZCMJwEZoicHg2B3wqO4VKU3Lpb73IbsQlkB94qhhlIYBu+drP8hThZ8z5EaqjMnYD
-	eGSQmJcJ7TOnctUypfsG5IklUCpYFo7WX5Q3OHJpDCuu+iCqqXD8IblCbhrSMWszc5bh9weuL/lgD
-	9zXDn8gX50BucixSqPoPOEJoFnmhSnXh/6hEYVrgU9cYJKJrWmSwhbSWlnkcfC7VSR/5gtq416+l3
-	SQFYLq3xSUdtdVxf9ibdgWn/ebPxoasR2b8w6q1VSlTK+I9yA/JXrJxuZN2hBRObDwyz4oKxAr9bQ
-	HjBpfCOOcyE1ZtrJCo9Q==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
+	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
+	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
+	List-Owner; bh=f8u0PR9YI2juSzPSe2znjCE6+RTCOFZo80fqTfSXZ6E=; b=aBN4Ha1C5PUShX
+	o3SdqWXjppNRUm6zmZ5f41L2JNCNDr7GieUg431Fv1MR4HU3305mIEeby6mQnduGmmO/f0CKXOOml
+	KyjeeYABcaRsLYAzq02/ZFf//upglbMyZq4BPBlp83dzhaYLbfvjYZ8dveQGxItqEWoQwpNdQUZMS
+	lY9uSgKb/Sy+Ix5p7ob2S1vz9B4qsy3RMvFQoxGtPFBGoBYW03rvtSIyP0EQzvMTilkZYeqa5pq3+
+	kOWGHjgPmmqnF6chPd4HQJ9WmanKL/DFcWQaoW9ltGltjC74duL/6SLEeVSfU49QB1q9islk+uWE8
+	R7kzoLc2G5j95nWcuddA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jmDtF-0005Cy-2H; Fri, 19 Jun 2020 10:04:53 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1jmEGL-0005d8-OX; Fri, 19 Jun 2020 10:28:45 +0000
+Received: from bhuna.collabora.co.uk ([2a00:1098:0:82:1000:25:2eeb:e3e3])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jmDtB-0005Bp-IV
- for linux-mediatek@lists.infradead.org; Fri, 19 Jun 2020 10:04:51 +0000
-X-UUID: fd98104499da42519fcea93293d0fca5-20200619
-DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
- s=dk; 
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:References:In-Reply-To:Message-ID:Date:Subject:CC:To:From;
- bh=7R3+vIyIcJGIoNqgxDKbx7s8gBbCjRAh+DCyFKieXfA=; 
- b=UU96WzUn/HibU7uQGzUIUYR6RAe0yXjHVb+FoOkIZ/nhonnH48hnA65H+8rbRKFO98ETTugGpJv5HB86p+Vdw1PsSK+gNd8KtV7YsQicoSUuSMjojThAIk6k2so6LgNPfu97Sznk2nO+q8ftMdc/w2AmsNSjAmGN7bitghYuK5U=;
-X-UUID: fd98104499da42519fcea93293d0fca5-20200619
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
- (envelope-from <shayne.chen@mediatek.com>)
- (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1445374094; Fri, 19 Jun 2020 02:04:37 -0800
-Received: from MTKMBS02N1.mediatek.inc (172.21.101.77) by
- MTKMBS62DR.mediatek.inc (172.29.94.18) with Microsoft SMTP Server (TLS) id
- 15.0.1497.2; Fri, 19 Jun 2020 03:04:37 -0700
-Received: from mtkcas07.mediatek.inc (172.21.101.84) by
- mtkmbs02n1.mediatek.inc (172.21.101.77) with Microsoft SMTP Server (TLS) id
- 15.0.1497.2; Fri, 19 Jun 2020 18:04:35 +0800
-Received: from mtksdccf07.mediatek.inc (172.21.84.99) by mtkcas07.mediatek.inc
- (172.21.101.73) with Microsoft SMTP Server id 15.0.1497.2 via
- Frontend Transport; Fri, 19 Jun 2020 18:04:35 +0800
-From: Shayne Chen <shayne.chen@mediatek.com>
-To: Felix Fietkau <nbd@nbd.name>
-Subject: [PATCH v3 3/3] mt76: mt7915: directly read per-rate tx power from
- registers
-Date: Fri, 19 Jun 2020 18:04:25 +0800
-Message-ID: <20200619100425.26351-3-shayne.chen@mediatek.com>
-X-Mailer: git-send-email 2.18.0
-In-Reply-To: <20200619100425.26351-1-shayne.chen@mediatek.com>
-References: <20200619100425.26351-1-shayne.chen@mediatek.com>
+ id 1jmEFi-00056Q-SP; Fri, 19 Jun 2020 10:28:08 +0000
+Received: from [127.0.0.1] (localhost [127.0.0.1])
+ (Authenticated sender: eballetbo) with ESMTPSA id 23DE72A51F7
+From: Enric Balletbo i Serra <enric.balletbo@collabora.com>
+To: linux-kernel@vger.kernel.org
+Subject: [PATCH 0/7] arm64: dts: mediatek: Add support for Lenovo IdeaPad Duet
+ Chromebook
+Date: Fri, 19 Jun 2020 12:27:50 +0200
+Message-Id: <20200619102757.1358675-1-enric.balletbo@collabora.com>
+X-Mailer: git-send-email 2.27.0
 MIME-Version: 1.0
-X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200619_030449_622051_0BE87E6E 
-X-CRM114-Status: GOOD (  11.87  )
-X-Spam-Score: -0.2 (/)
+X-CRM114-CacheID: sfid-20200619_032807_046195_4BB5551E 
+X-CRM114-Status: GOOD (  11.83  )
+X-Spam-Score: -0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
- Content analysis details:   (-0.2 points)
+ Content analysis details:   (-0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
- 0.0 SPF_HELO_NONE          SPF: HELO does not publish an SPF Record
+ -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
  -0.0 SPF_PASS               SPF: sender matches SPF record
- 0.0 MIME_BASE64_TEXT       RAW: Message text disguised using base64
- encoding
- -0.1 DKIM_VALID Message has at least one valid DKIM or DK signature
- 0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
- valid
- -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
- envelope-from domain
- -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
- author's domain
  0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
  lines
 X-BeenThere: linux-mediatek@lists.infradead.org
@@ -86,139 +55,58 @@ List-Post: <mailto:linux-mediatek@lists.infradead.org>
 List-Help: <mailto:linux-mediatek-request@lists.infradead.org?subject=help>
 List-Subscribe: <http://lists.infradead.org/mailman/listinfo/linux-mediatek>, 
  <mailto:linux-mediatek-request@lists.infradead.org?subject=subscribe>
-Cc: Ryder Lee <ryder.lee@mediatek.com>, Evelyn Tsai <evelyn.tsai@mediatek.com>,
- linux-wireless <linux-wireless@vger.kernel.org>,
- linux-mediatek <linux-mediatek@lists.infradead.org>,
- Lorenzo Bianconi <lorenzo.bianconi@redhat.com>,
- Shayne Chen <shayne.chen@mediatek.com>
+Cc: erwanaliasr1@gmail.com, drinkcat@chromium.org, devicetree@vger.kernel.org,
+ Sean Wang <sean.wang@mediatek.com>, Rob Herring <robh+dt@kernel.org>,
+ Mars Cheng <mars.cheng@mediatek.com>, hsinyi@chromium.org,
+ matthias.bgg@gmail.com, linux-mediatek@lists.infradead.org,
+ Collabora Kernel ML <kernel@collabora.com>,
+ linux-arm-kernel@lists.infradead.org
 Content-Type: text/plain; charset="us-ascii"
 Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-Since driver no longer handler per-rate tx power setting, we need to
-read the power values directly from registers.
+These series adds basic support for the Lenovo IdeaPad Duet Chromebook, a
+2-in-1 detachable devices using the MediaTek MT8183 SoC. The first patch
+only adds the new compatible names in the mediatek binding. The second
+patch, adds the missing compatible to instantiate the PMIC regulators.
+The next patch adds missing devices to support better the board and fixes
+some warnings found running dtbs_check. And finally, the latest
+introduces support for the board itself.
 
-Tested-by: Evelyn Tsai <evelyn.tsai@mediatek.com>
-Signed-off-by: Shayne Chen <shayne.chen@mediatek.com>
----
-v2:
- - fix reg_base and idx calculation
----
- .../wireless/mediatek/mt76/mt7915/debugfs.c   | 57 ++++++++++++++-----
- .../net/wireless/mediatek/mt76/mt7915/regs.h  |  5 ++
- 2 files changed, 47 insertions(+), 15 deletions(-)
+All the patches has been tested on Lenovo IdeaPad Duet Chromebook with
+the patches applied on top of 5.8-rc1 and with serial console, booting
+without problems and being able to go to the login prompt.
 
-diff --git a/drivers/net/wireless/mediatek/mt76/mt7915/debugfs.c b/drivers/net/wireless/mediatek/mt76/mt7915/debugfs.c
-index 73a48c9..92affd4 100644
---- a/drivers/net/wireless/mediatek/mt76/mt7915/debugfs.c
-+++ b/drivers/net/wireless/mediatek/mt76/mt7915/debugfs.c
-@@ -300,7 +300,8 @@ mt7915_queues_read(struct seq_file *s, void *data)
- }
- 
- static void
--mt7915_puts_rate_txpower(struct seq_file *s, s8 txpower_cur, int band)
-+mt7915_puts_rate_txpower(struct seq_file *s, struct mt7915_dev *dev,
-+			 int band, bool ext_phy)
- {
- 	static const char * const sku_group_name[] = {
- 		"CCK", "OFDM", "HT20", "HT40",
-@@ -308,18 +309,46 @@ mt7915_puts_rate_txpower(struct seq_file *s, s8 txpower_cur, int band)
- 		"RU26", "RU52", "RU106", "RU242/SU20",
- 		"RU484/SU40", "RU996/SU80", "RU2x996/SU160"
- 	};
--	s8 txpower[161];
-+	u32 reg_base = MT_TMAC_FP0R0(ext_phy);
- 	int i, idx = 0;
- 
--	for (i = 0; i < ARRAY_SIZE(txpower); i++)
--		txpower[i] = DIV_ROUND_UP(txpower_cur, 2);
--
- 	for (i = 0; i < ARRAY_SIZE(mt7915_sku_group_len); i++) {
--		u8 len = mt7915_sku_group_len[i];
-+		u8 cnt, mcs_num = mt7915_sku_group_len[i];
-+		s8 txpower[12];
-+		int j;
-+
-+		if (i == SKU_HT_BW20 || i == SKU_HT_BW40) {
-+			mcs_num = 8;
-+		} else if (i >= SKU_VHT_BW20 && i <= SKU_VHT_BW160) {
-+			mcs_num = 10;
-+		} else if (i == SKU_HE_RU26) {
-+			reg_base = MT_TMAC_FP0R18(ext_phy);
-+			idx = 0;
-+		}
-+
-+		for (j = 0, cnt = 0; j < DIV_ROUND_UP(mcs_num, 4); j++) {
-+			u32 val;
-+
-+			if (i == SKU_VHT_BW160 && idx == 60) {
-+				reg_base = MT_TMAC_FP0R15(ext_phy);
-+				idx = 0;
-+			}
-+
-+			val = mt76_rr(dev, reg_base + (idx / 4) * 4);
-+
-+			if (idx && idx % 4)
-+				val >>= (idx % 4) * 8;
-+
-+			while (val > 0 && cnt < mcs_num) {
-+				s8 pwr = FIELD_GET(MT_TMAC_FP_MASK, val);
-+
-+				txpower[cnt++] = pwr;
-+				val >>= 8;
-+				idx++;
-+			}
-+		}
- 
--		mt76_seq_puts_array(s, sku_group_name[i],
--				    txpower + idx, len);
--		idx += len;
-+		mt76_seq_puts_array(s, sku_group_name[i], txpower, mcs_num);
- 	}
- }
- 
-@@ -329,18 +358,16 @@ mt7915_read_rate_txpower(struct seq_file *s, void *data)
- 	struct mt7915_dev *dev = dev_get_drvdata(s->private);
- 	struct mt76_phy *mphy = &dev->mphy;
- 	enum nl80211_band band = mphy->chandef.chan->band;
--	s8 txpower = mphy->txpower_cur;
- 
--	seq_puts(s, "Band 0:\n");
--	mt7915_puts_rate_txpower(s, txpower, band);
-+	seq_puts(s, "Band 0: (unit: 0.5 dBm)\n");
-+	mt7915_puts_rate_txpower(s, dev, band, false);
- 
- 	if (dev->mt76.phy2) {
- 		mphy = dev->mt76.phy2;
- 		band = mphy->chandef.chan->band;
--		txpower = mphy->txpower_cur;
- 
--		seq_puts(s, "Band 1:\n");
--		mt7915_puts_rate_txpower(s, txpower, band);
-+		seq_puts(s, "Band 1: (unit: 0.5 dBm)\n");
-+		mt7915_puts_rate_txpower(s, dev, band, true);
- 	}
- 
- 	return 0;
-diff --git a/drivers/net/wireless/mediatek/mt76/mt7915/regs.h b/drivers/net/wireless/mediatek/mt76/mt7915/regs.h
-index c121715..d80ae1e 100644
---- a/drivers/net/wireless/mediatek/mt76/mt7915/regs.h
-+++ b/drivers/net/wireless/mediatek/mt76/mt7915/regs.h
-@@ -67,6 +67,11 @@
- #define MT_TMAC_CTCR0_INS_DDLMT_EN		BIT(17)
- #define MT_TMAC_CTCR0_INS_DDLMT_VHT_SMPDU_EN	BIT(18)
- 
-+#define MT_TMAC_FP0R0(_band)		MT_WF_TMAC(_band, 0x020)
-+#define MT_TMAC_FP0R15(_band)		MT_WF_TMAC(_band, 0x080)
-+#define MT_TMAC_FP0R18(_band)		MT_WF_TMAC(_band, 0x270)
-+#define MT_TMAC_FP_MASK			GENMASK(7, 0)
-+
- /* DMA Band 0 */
- #define MT_WF_DMA_BASE			0x21e00
- #define MT_WF_DMA(ofs)			(MT_WF_DMA_BASE + (ofs))
+Best regards,
+  Enric
+
+Enric Balletbo i Serra (7):
+  dt-bindings: arm64: dts: mediatek: Add mt8183-kukui-krane-sku176
+  arm64: dts: mt6358: Add the compatible for the regulators
+  arm64: dts: mt8183: Add MediaTek's peripheral configuration controller
+  arm64: dts: mt8183: Fix unit name warnings
+  arm64: dts: mt8183-evb: Fix unit name warnings
+  arm64: dts: mt8183: Add USB3.0 support
+  arm64: dts: mt8183: Add krane-sku176 board
+
+ .../devicetree/bindings/arm/mediatek.yaml     |   5 +
+ arch/arm64/boot/dts/mediatek/Makefile         |   1 +
+ arch/arm64/boot/dts/mediatek/mt6358.dtsi      |   2 +
+ arch/arm64/boot/dts/mediatek/mt8183-evb.dts   |   4 +-
+ .../mediatek/mt8183-kukui-krane-sku176.dts    |  18 +
+ .../boot/dts/mediatek/mt8183-kukui-krane.dtsi | 343 ++++++++
+ .../arm64/boot/dts/mediatek/mt8183-kukui.dtsi | 788 ++++++++++++++++++
+ arch/arm64/boot/dts/mediatek/mt8183.dtsi      |  68 +-
+ 8 files changed, 1225 insertions(+), 4 deletions(-)
+ create mode 100644 arch/arm64/boot/dts/mediatek/mt8183-kukui-krane-sku176.dts
+ create mode 100644 arch/arm64/boot/dts/mediatek/mt8183-kukui-krane.dtsi
+ create mode 100644 arch/arm64/boot/dts/mediatek/mt8183-kukui.dtsi
+
 -- 
-2.17.1
+2.27.0
+
+
 _______________________________________________
 Linux-mediatek mailing list
 Linux-mediatek@lists.infradead.org
