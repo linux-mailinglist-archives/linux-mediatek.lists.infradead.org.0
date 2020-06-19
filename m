@@ -2,59 +2,59 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 7D4202005BC
-	for <lists+linux-mediatek@lfdr.de>; Fri, 19 Jun 2020 11:51:24 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 12ED1200591
+	for <lists+linux-mediatek@lfdr.de>; Fri, 19 Jun 2020 11:43:00 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=dyulWtoiAwkYtU7Dr1iL+0SBjHRe/O7GJChHXXvTQQE=; b=gJf4LbKz4FC+LI
-	i3TzKTg+Ii+QFgvQaIAPapuFFhWVcRw1vxzAh6z3fqttcm9Qv19YOa88mX18ROtDGD0lA3HSlLT9Z
-	+jk8cnQ++uMILX+1ZXVPTiitCeMpTG8SseFvOQJQd0gtuTNLS3Fi2ckai7i4eYqk/iYZYTktLrd7+
-	+ADLPBt5rhWffDKYecVg1VhFFq8QYrSv+5CKx4X8r3U8V8CvWYjRX2u9kRofElhzi2LJcGi38rOor
-	z3ECTGoZ1pfDd70Y1AqsiheUyNkIDiPQ4MWx+UkOmGT8EJWlNpt2r8bMx2q9cMdgsHDDcB/ebFJNh
-	V9buAsFo3D+HQb+Nhnxg==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=e8yynKm1esiqs/fE/KPNKKS5fq4auPM016yIyeTFCtY=; b=ShOA7sN9TJiojO
+	IlQH0mzQLyxKefVK8gCIyvzptyjpDn7Wau50833sHkznuYlqTm1Ecn1fUVhoY63KaGlQdOk92Y/hS
+	daHuMHKElaknnevZ+y/MzC2wFeh6JTTAR+MSJ00H3dTRTHLik4QTcnwqWlzas9gUao1Jfi3i5GwN/
+	cMgLM9+E1g56orpDm09Bv27zljdWEh64xTfSPLaqH5X1PLhq0+j4mruGdEPBTfnvqJcUljeCMVQk7
+	tAQWgGKMVnbTlMfpkN5PZCFGLKj/4XsnLPw8k3jsm3mh82XTO4NYsc36RgDByc9CSgxHy3NiFklfI
+	QbuPMu7Yjyw3bsrwODug==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jmDg7-0005It-QP; Fri, 19 Jun 2020 09:51:19 +0000
-Received: from mailgw01.mediatek.com ([216.200.240.184])
+	id 1jmDXY-0005Wb-F8; Fri, 19 Jun 2020 09:42:28 +0000
+Received: from mailgw02.mediatek.com ([216.200.240.185])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jmDfk-00056e-0c; Fri, 19 Jun 2020 09:50:57 +0000
-X-UUID: 382c76562d6e4a5d9828804d41068cb4-20200619
+ id 1jmDXL-0005ME-3M; Fri, 19 Jun 2020 09:42:16 +0000
+X-UUID: bae763d8d5284383a1462e4494f386ac-20200619
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
  s=dk; 
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:Subject:CC:To:From;
- bh=NdvWbt7SwERzP8EgpdUPpJCpCAPBLOEYJIsaPCSnY3U=; 
- b=J7mOGjfd4cBqpiT/30veNsMyXAyq+JZisEykhp4+/JfvnMoZFLCx5tpZcqfyqs3FxefApwukg6OBdThCuSv9EqOXJ4uRp87csHf91OV2n9AoL17d3SgUGwdgbC17VDo59T3hUzG3K3sgClzF1aWsd9Ln+vPpIviJ40ka/mPzqcw=;
-X-UUID: 382c76562d6e4a5d9828804d41068cb4-20200619
-Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
+ h=Content-Transfer-Encoding:Content-Type:MIME-Version:References:In-Reply-To:Message-ID:Date:Subject:CC:To:From;
+ bh=h/UQEjXf6uvMc+oxKD1tqte0usDqTFwha7l55rvLaKo=; 
+ b=QswppJNE8Ds+KTlNb4GTUjbx8Mwd1ZIxbpmoFoyOHYUXyHOIIwYqL8ynRW3GxH8zBjnuM1YgwGjf2KhNut+MBfyImRbeDnJ+Nu4q3pXCydo/Qn8JShmRu1SXVeq8e7lY5vcKREp3tjDwhWm4UpXbkVuHh53LoF+F7EkzZwf1AmA=;
+X-UUID: bae763d8d5284383a1462e4494f386ac-20200619
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw02.mediatek.com
  (envelope-from <neal.liu@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1380759853; Fri, 19 Jun 2020 01:51:40 -0800
-Received: from MTKMBS01N2.mediatek.inc (172.21.101.79) by
- MTKMBS62N2.mediatek.inc (172.29.193.42) with Microsoft SMTP Server (TLS) id
+ with ESMTP id 717118113; Fri, 19 Jun 2020 01:42:57 -0800
+Received: from MTKMBS01N1.mediatek.inc (172.21.101.68) by
+ MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
  15.0.1497.2; Fri, 19 Jun 2020 02:42:05 -0700
 Received: from mtkcas07.mediatek.inc (172.21.101.84) by
- mtkmbs01n2.mediatek.inc (172.21.101.79) with Microsoft SMTP Server (TLS) id
- 15.0.1497.2; Fri, 19 Jun 2020 17:42:03 +0800
+ mtkmbs01n1.mediatek.inc (172.21.101.68) with Microsoft SMTP Server (TLS) id
+ 15.0.1497.2; Fri, 19 Jun 2020 17:42:01 +0800
 Received: from mtkswgap22.mediatek.inc (172.21.77.33) by mtkcas07.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1497.2 via
  Frontend Transport; Fri, 19 Jun 2020 17:42:01 +0800
 From: Neal Liu <neal.liu@mediatek.com>
 To: Rob Herring <robh+dt@kernel.org>, Matthias Brugger <matthias.bgg@gmail.com>
-Subject: Add MediaTek MT6873 devapc driver
-Date: Fri, 19 Jun 2020 17:41:58 +0800
-Message-ID: <1592559720-8482-1-git-send-email-neal.liu@mediatek.com>
+Subject: [PATCH v2 1/2] dt-bindings: devapc: add bindings for devapc-mt6873
+Date: Fri, 19 Jun 2020 17:41:59 +0800
+Message-ID: <1592559720-8482-2-git-send-email-neal.liu@mediatek.com>
 X-Mailer: git-send-email 1.7.9.5
+In-Reply-To: <1592559720-8482-1-git-send-email-neal.liu@mediatek.com>
+References: <1592559720-8482-1-git-send-email-neal.liu@mediatek.com>
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: DEC6BD0ECEC83BC5E2FEC7676357C14324487936CC6DF2BA5AF3EE8EC662E1A12000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200619_025056_059387_4E090956 
-X-CRM114-Status: UNSURE (   6.76  )
-X-CRM114-Notice: Please train this message.
+X-CRM114-CacheID: sfid-20200619_024215_150512_34716A72 
+X-CRM114-Status: GOOD (  10.15  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
@@ -92,44 +92,83 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-These patch series introduce a MediaTek MT6873 devapc driver.
+Add bindings for MT6873 devapc.
 
-MT6873 bus frabric provides TrustZone security support and data protection to prevent slaves from being accessed by unexpected masters.
-The security violations are logged and sent to the processor for further analysis or countermeasures.
-
-Any occurrence of security violation would raise an interrupt, and it will be handled by devapc-mt6873 driver. The violation information is printed in order to find the murderer.
-
-changes since v1:
- - revise dt-bindings schema. (needs mt8192-clk.h to pass dt_binding_check)
- - remove debugging functions and make driver more simple.
-
-*** BLURB HERE ***
-
-Neal Liu (2):
-  dt-bindings: devapc: add bindings for devapc-mt6873
-  soc: mediatek: devapc: add devapc-mt6873 driver
-
- .../soc/mediatek/devapc/devapc-mt6873.yaml    |   61 +
- drivers/soc/mediatek/Kconfig                  |    6 +
- drivers/soc/mediatek/Makefile                 |    1 +
- drivers/soc/mediatek/devapc/Kconfig           |   25 +
- drivers/soc/mediatek/devapc/Makefile          |   13 +
- drivers/soc/mediatek/devapc/devapc-mt6873.c   | 1652 +++++++++++++++++
- drivers/soc/mediatek/devapc/devapc-mt6873.h   |  111 ++
- .../soc/mediatek/devapc/devapc-mtk-multi-ao.c |  756 ++++++++
- .../soc/mediatek/devapc/devapc-mtk-multi-ao.h |  182 ++
- 9 files changed, 2807 insertions(+)
+Signed-off-by: Neal Liu <neal.liu@mediatek.com>
+---
+ .../soc/mediatek/devapc/devapc-mt6873.yaml         |   61 ++++++++++++++++++++
+ 1 file changed, 61 insertions(+)
  create mode 100644 Documentation/devicetree/bindings/soc/mediatek/devapc/devapc-mt6873.yaml
- create mode 100644 drivers/soc/mediatek/devapc/Kconfig
- create mode 100644 drivers/soc/mediatek/devapc/Makefile
- create mode 100644 drivers/soc/mediatek/devapc/devapc-mt6873.c
- create mode 100644 drivers/soc/mediatek/devapc/devapc-mt6873.h
- create mode 100644 drivers/soc/mediatek/devapc/devapc-mtk-multi-ao.c
- create mode 100644 drivers/soc/mediatek/devapc/devapc-mtk-multi-ao.h
 
+diff --git a/Documentation/devicetree/bindings/soc/mediatek/devapc/devapc-mt6873.yaml b/Documentation/devicetree/bindings/soc/mediatek/devapc/devapc-mt6873.yaml
+new file mode 100644
+index 0000000..1deb7f6
+--- /dev/null
++++ b/Documentation/devicetree/bindings/soc/mediatek/devapc/devapc-mt6873.yaml
+@@ -0,0 +1,61 @@
++# SPDX-License-Identifier: (GPL-2.0 OR BSD-2-Clause)
++# # Copyright 2020 MediaTek Inc.
++%YAML 1.2
++---
++$id: "http://devicetree.org/schemas/soc/mediatek/devapc/devapc-mt6873.yaml#"
++$schema: "http://devicetree.org/meta-schemas/core.yaml#"
++
++title: MediaTek MT6873 Device Access Permission Control driver
++
++description: |
++  MediaTek MT6873 bus frabric provides TrustZone security support and data
++  protection to prevent slaves from being accessed by unexpected masters.
++  The security violations are logged and sent to the processor for further
++  analysis and countermeasures.
++
++maintainers:
++  - Neal Liu <neal.liu@mediatek.com>
++
++properties:
++  compatible:
++    enum:
++      - mediatek,mt6873-devapc
++
++  reg:
++    description: The base address of devapc register bank
++    maxItems: 5
++
++  interrupts:
++    description: A single interrupt specifier
++    maxItems: 1
++
++  clocks:
++    description: Contains module clock source and clock names
++    maxItems: 1
++
++  clock-names:
++    description: Names of the clocks list in clocks property
++    maxItems: 1
++
++required:
++  - compatible
++  - reg
++  - interrupts
++  - clocks
++  - clock-names
++
++examples:
++  - |
++    #include <dt-bindings/interrupt-controller/arm-gic.h>
++    #include <dt-bindings/clock/mt8183-clk.h>
++    devapc: devapc@10207000 {
++            compatible = "mediatek,mt6873-devapc";
++            reg = <0 0x10207000 0 0x1000>,
++                  <0 0x10274000 0 0x1000>,
++                  <0 0x10275000 0 0x1000>,
++                  <0 0x11020000 0 0x1000>,
++                  <0 0x1020e000 0 0x1000>;
++            interrupts = <GIC_SPI 187 IRQ_TYPE_LEVEL_HIGH>;
++            clocks = <&infracfg CLK_INFRA_DEVICE_APC>;
++            clock-names = "devapc-infra-clock";
++    };
 -- 
-2.18.0
-
+1.7.9.5
 _______________________________________________
 Linux-mediatek mailing list
 Linux-mediatek@lists.infradead.org
