@@ -2,44 +2,49 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id AFEBC20063E
-	for <lists+linux-mediatek@lfdr.de>; Fri, 19 Jun 2020 12:28:53 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 1C8BA20064E
+	for <lists+linux-mediatek@lfdr.de>; Fri, 19 Jun 2020 12:29:37 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-Id:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=f8u0PR9YI2juSzPSe2znjCE6+RTCOFZo80fqTfSXZ6E=; b=aBN4Ha1C5PUShX
-	o3SdqWXjppNRUm6zmZ5f41L2JNCNDr7GieUg431Fv1MR4HU3305mIEeby6mQnduGmmO/f0CKXOOml
-	KyjeeYABcaRsLYAzq02/ZFf//upglbMyZq4BPBlp83dzhaYLbfvjYZ8dveQGxItqEWoQwpNdQUZMS
-	lY9uSgKb/Sy+Ix5p7ob2S1vz9B4qsy3RMvFQoxGtPFBGoBYW03rvtSIyP0EQzvMTilkZYeqa5pq3+
-	kOWGHjgPmmqnF6chPd4HQJ9WmanKL/DFcWQaoW9ltGltjC74duL/6SLEeVSfU49QB1q9islk+uWE8
-	R7kzoLc2G5j95nWcuddA==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Message-Id:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=CBjSTuL0Tv9VnlF3eMAi4eadBRTbi/goGgoqwfPO0Ug=; b=qENGp7kZyEYiaq
+	wdbeEqcedvcKb65Lq8g6BgT/yMJpGnkED8GlBiuhk7dWDG06oVBSHmohK/buP9Ik+HkRtLr9mM8zl
+	g+6B8SeNXxWif8NaWxyYWeRj7g/cXD3wrakaS3MBkpKQIxoRJL5dn2DXtp52c0W7TQqUKOb8vfNBq
+	795xl9wxFKrt90pxDUBebAjpsmrySIeXoUxhj48R4PRhcfs4LOK09TEKrZnFQ5K7Hh6ihHqGq1Y8H
+	HsrYRscSAmEJ9uo0Sr0yG9RuBkMgIvfiMKBEt5w2LC75w6dfwQL1DxIjoPwZsPht59o9t8dywDbgf
+	kYxvQJJQBh4/4R8/WC4w==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jmEGL-0005d8-OX; Fri, 19 Jun 2020 10:28:45 +0000
-Received: from bhuna.collabora.co.uk ([2a00:1098:0:82:1000:25:2eeb:e3e3])
+	id 1jmEH4-0006PX-25; Fri, 19 Jun 2020 10:29:30 +0000
+Received: from bhuna.collabora.co.uk ([46.235.227.227])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jmEFi-00056Q-SP; Fri, 19 Jun 2020 10:28:08 +0000
+ id 1jmEFj-00056R-RA; Fri, 19 Jun 2020 10:28:09 +0000
 Received: from [127.0.0.1] (localhost [127.0.0.1])
- (Authenticated sender: eballetbo) with ESMTPSA id 23DE72A51F7
+ (Authenticated sender: eballetbo) with ESMTPSA id 425E12A51F9
 From: Enric Balletbo i Serra <enric.balletbo@collabora.com>
 To: linux-kernel@vger.kernel.org
-Subject: [PATCH 0/7] arm64: dts: mediatek: Add support for Lenovo IdeaPad Duet
- Chromebook
-Date: Fri, 19 Jun 2020 12:27:50 +0200
-Message-Id: <20200619102757.1358675-1-enric.balletbo@collabora.com>
+Subject: [PATCH 1/7] dt-bindings: arm64: dts: mediatek: Add
+ mt8183-kukui-krane-sku176
+Date: Fri, 19 Jun 2020 12:27:51 +0200
+Message-Id: <20200619102757.1358675-2-enric.balletbo@collabora.com>
 X-Mailer: git-send-email 2.27.0
+In-Reply-To: <20200619102757.1358675-1-enric.balletbo@collabora.com>
+References: <20200619102757.1358675-1-enric.balletbo@collabora.com>
 MIME-Version: 1.0
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200619_032807_046195_4BB5551E 
-X-CRM114-Status: GOOD (  11.83  )
+X-CRM114-CacheID: sfid-20200619_032808_003194_5BD1203B 
+X-CRM114-Status: UNSURE (   7.25  )
+X-CRM114-Notice: Please train this message.
 X-Spam-Score: -0.0 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  Content analysis details:   (-0.0 points)
  pts rule name              description
  ---- ---------------------- --------------------------------------------------
+ -0.0 RCVD_IN_DNSWL_NONE     RBL: Sender listed at https://www.dnswl.org/,
+ no trust [46.235.227.227 listed in list.dnswl.org]
  -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
  -0.0 SPF_PASS               SPF: sender matches SPF record
  0.0 UNPARSEABLE_RELAY      Informational: message has unparseable relay
@@ -66,43 +71,29 @@ Content-Transfer-Encoding: 7bit
 Sender: "Linux-mediatek" <linux-mediatek-bounces@lists.infradead.org>
 Errors-To: linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradead.org
 
-These series adds basic support for the Lenovo IdeaPad Duet Chromebook, a
-2-in-1 detachable devices using the MediaTek MT8183 SoC. The first patch
-only adds the new compatible names in the mediatek binding. The second
-patch, adds the missing compatible to instantiate the PMIC regulators.
-The next patch adds missing devices to support better the board and fixes
-some warnings found running dtbs_check. And finally, the latest
-introduces support for the board itself.
+The krane-sku176 is the Lenovo IdeaPad Duet Chromebook. A 2-in-1
+detachable device using the MediaTek MT8183 SoC.
 
-All the patches has been tested on Lenovo IdeaPad Duet Chromebook with
-the patches applied on top of 5.8-rc1 and with serial console, booting
-without problems and being able to go to the login prompt.
+Signed-off-by: Enric Balletbo i Serra <enric.balletbo@collabora.com>
+---
 
-Best regards,
-  Enric
+ Documentation/devicetree/bindings/arm/mediatek.yaml | 5 +++++
+ 1 file changed, 5 insertions(+)
 
-Enric Balletbo i Serra (7):
-  dt-bindings: arm64: dts: mediatek: Add mt8183-kukui-krane-sku176
-  arm64: dts: mt6358: Add the compatible for the regulators
-  arm64: dts: mt8183: Add MediaTek's peripheral configuration controller
-  arm64: dts: mt8183: Fix unit name warnings
-  arm64: dts: mt8183-evb: Fix unit name warnings
-  arm64: dts: mt8183: Add USB3.0 support
-  arm64: dts: mt8183: Add krane-sku176 board
-
- .../devicetree/bindings/arm/mediatek.yaml     |   5 +
- arch/arm64/boot/dts/mediatek/Makefile         |   1 +
- arch/arm64/boot/dts/mediatek/mt6358.dtsi      |   2 +
- arch/arm64/boot/dts/mediatek/mt8183-evb.dts   |   4 +-
- .../mediatek/mt8183-kukui-krane-sku176.dts    |  18 +
- .../boot/dts/mediatek/mt8183-kukui-krane.dtsi | 343 ++++++++
- .../arm64/boot/dts/mediatek/mt8183-kukui.dtsi | 788 ++++++++++++++++++
- arch/arm64/boot/dts/mediatek/mt8183.dtsi      |  68 +-
- 8 files changed, 1225 insertions(+), 4 deletions(-)
- create mode 100644 arch/arm64/boot/dts/mediatek/mt8183-kukui-krane-sku176.dts
- create mode 100644 arch/arm64/boot/dts/mediatek/mt8183-kukui-krane.dtsi
- create mode 100644 arch/arm64/boot/dts/mediatek/mt8183-kukui.dtsi
-
+diff --git a/Documentation/devicetree/bindings/arm/mediatek.yaml b/Documentation/devicetree/bindings/arm/mediatek.yaml
+index abc544dde6920..30908963ae261 100644
+--- a/Documentation/devicetree/bindings/arm/mediatek.yaml
++++ b/Documentation/devicetree/bindings/arm/mediatek.yaml
+@@ -114,4 +114,9 @@ properties:
+           - enum:
+               - mediatek,mt8183-evb
+           - const: mediatek,mt8183
++      - description: Google Krane (Lenovo IdeaPad Duet, 10e,...)
++        items:
++          - const: google,krane-sku176
++          - const: google,krane
++          - const: mediatek,mt8183
+ ...
 -- 
 2.27.0
 
