@@ -2,59 +2,60 @@ Return-Path: <linux-mediatek-bounces+lists+linux-mediatek=lfdr.de@lists.infradea
 X-Original-To: lists+linux-mediatek@lfdr.de
 Delivered-To: lists+linux-mediatek@lfdr.de
 Received: from bombadil.infradead.org (bombadil.infradead.org [IPv6:2607:7c80:54:e::133])
-	by mail.lfdr.de (Postfix) with ESMTPS id 5D0C32019C6
-	for <lists+linux-mediatek@lfdr.de>; Fri, 19 Jun 2020 19:52:34 +0200 (CEST)
+	by mail.lfdr.de (Postfix) with ESMTPS id 80F922019C7
+	for <lists+linux-mediatek@lfdr.de>; Fri, 19 Jun 2020 19:52:35 +0200 (CEST)
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed;
 	d=lists.infradead.org; s=bombadil.20170209; h=Sender:
 	Content-Transfer-Encoding:Content-Type:Cc:List-Subscribe:List-Help:List-Post:
-	List-Archive:List-Unsubscribe:List-Id:MIME-Version:Message-ID:Date:Subject:To
-	:From:Reply-To:Content-ID:Content-Description:Resent-Date:Resent-From:
-	Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:In-Reply-To:References:
-	List-Owner; bh=EMkl3werMMKGldXSeth7n3m2lKmiJEx3D6yq9Tu4B6M=; b=lYFn+yqvZIIOpd
-	PutfqHAnchjdcIQjIyZ1M7FXet0t4uGyzvSfxvq0vI4uShXfI6+nkj9dNuWuMwzyKVccP56ndSbhJ
-	C9RCKNJ1ca97vn285GAeAecC/0lHxnNZc9PRQzf/3LNrhS7WzUnLHnpMETOar1NRYjfJ3swWVlw0C
-	jDip4Fb+VycWl7GAkKXwGgX4w8ML6inn4RVcSxWzQ536SmsrEFRJ06UNS6nWaIrp9R6V4QjXLkcIO
-	ypuB9LnoNTog4WKLAo8yg8oRjlA732J97YrHRKZPs5G/xXczJaUSOYzlxExx8A2oHD6rmOk5WvhbZ
-	XQTC1uF+aubsxk4jTbnw==;
+	List-Archive:List-Unsubscribe:List-Id:MIME-Version:References:In-Reply-To:
+	Message-ID:Date:Subject:To:From:Reply-To:Content-ID:Content-Description:
+	Resent-Date:Resent-From:Resent-Sender:Resent-To:Resent-Cc:Resent-Message-ID:
+	List-Owner; bh=0tOi7d5oXp5xz2pwvB9hbzneRs3oKCnOKH8tP+qCulY=; b=cCnHx785g2sbOg
+	OPhdSY6BaRTHdw/md1B1OOmtVBOs6UwmgRO5u6dnikN4PK2BsPLSCPSVGzGzTvvSQbD3kl1CR/ZfM
+	HuDV6LyjJMV7Dz949z3V5fBflB7FBxRmCsivqxGyqN+Moqx/bt6xIgkSl+SnPz2uSfxAIeT9Dq0l1
+	tyZTgbsorar8BXgygRWrqpDPnM/9WZUK8ej4XLO/mbX/rrxIy5WoXJpWCkoWT2f0adi31hWSdumEb
+	vb0kzCcZ/tt7Uk86vcea6SaMWzWcT+jj0qmfmxmYLtHuJoABxaR+djpG3kX0ArxqgkHEzwE5goubT
+	Ao+SGRaolVd94jSIemGA==;
 Received: from localhost ([127.0.0.1] helo=bombadil.infradead.org)
 	by bombadil.infradead.org with esmtp (Exim 4.92.3 #3 (Red Hat Linux))
-	id 1jmLBg-0001vV-4G; Fri, 19 Jun 2020 17:52:24 +0000
-Received: from mailgw02.mediatek.com ([216.200.240.185])
+	id 1jmLBg-0001wD-OH; Fri, 19 Jun 2020 17:52:24 +0000
+Received: from mailgw01.mediatek.com ([216.200.240.184])
  by bombadil.infradead.org with esmtps (Exim 4.92.3 #3 (Red Hat Linux))
- id 1jmLBa-0001tq-NG
+ id 1jmLBa-0001tr-QV
  for linux-mediatek@lists.infradead.org; Fri, 19 Jun 2020 17:52:22 +0000
-X-UUID: 0d38bb38df6748dbae7b1e67625a3f40-20200619
+X-UUID: 7f6d8a588d24420ab7443fb62a69dd5e-20200619
 DKIM-Signature: v=1; a=rsa-sha256; q=dns/txt; c=relaxed/relaxed; d=mediatek.com;
  s=dk; 
- h=Content-Transfer-Encoding:Content-Type:MIME-Version:Message-ID:Date:Subject:CC:To:From;
- bh=3xq/EA3dMYuLkP6tJy8QiqzcaouWnuGLQAnhnlu8VYw=; 
- b=WwLT4Y/8Q4nbDJJLE50vLvGMX9k62J11bDO7T5fr9tvJ5KlqhYhhWZw0XwAwGdEnPjB96Eu12TEY32ccUe4s7PDcN305+2+v1XgFwwPNlhOLzOnsdFuIV+NZ0k/Ap35gzu43cUZurwWrF+fd9ZNnRIWQRfXib5ma6UkQc6vGilc=;
-X-UUID: 0d38bb38df6748dbae7b1e67625a3f40-20200619
-Received: from mtkcas67.mediatek.inc [(172.29.193.45)] by mailgw02.mediatek.com
+ h=Content-Transfer-Encoding:Content-Type:MIME-Version:References:In-Reply-To:Message-ID:Date:Subject:CC:To:From;
+ bh=sIDH8EdAE4qcmj93nhKlzx7c6UAV1dzXbtm0oufG89w=; 
+ b=P3vPznNbBFt87BddjbeK4q1uarTDy5M62LRiA60qFwjamgD6+S/0/pXdGMxxKeHEZuKtFb8AAqQ2+jC7qp6Y1sWZdOePsSSRpV3ueXiW0dPCVpDqYopHUHo5lPTbuLmWXcjd0NYTQgmEbaRgfKZY/hmtFuGp/5lKZF8Ja/Y+nqA=;
+X-UUID: 7f6d8a588d24420ab7443fb62a69dd5e-20200619
+Received: from mtkcas66.mediatek.inc [(172.29.193.44)] by mailgw01.mediatek.com
  (envelope-from <sean.wang@mediatek.com>)
  (musrelay.mediatek.com ESMTP with TLS)
- with ESMTP id 1688913237; Fri, 19 Jun 2020 09:51:45 -0800
-Received: from mtkmbs08n2.mediatek.inc (172.21.101.56) by
+ with ESMTP id 1879623861; Fri, 19 Jun 2020 09:51:43 -0800
+Received: from mtkmbs08n1.mediatek.inc (172.21.101.55) by
  MTKMBS62N1.mediatek.inc (172.29.193.41) with Microsoft SMTP Server (TLS) id
- 15.0.1497.2; Fri, 19 Jun 2020 10:52:12 -0700
+ 15.0.1497.2; Fri, 19 Jun 2020 10:52:10 -0700
 Received: from mtkcas08.mediatek.inc (172.21.101.126) by
- mtkmbs08n2.mediatek.inc (172.21.101.56) with Microsoft SMTP Server (TLS) id
- 15.0.1497.2; Sat, 20 Jun 2020 01:52:00 +0800
+ mtkmbs08n1.mediatek.inc (172.21.101.55) with Microsoft SMTP Server (TLS) id
+ 15.0.1497.2; Sat, 20 Jun 2020 01:52:02 +0800
 Received: from mtkswgap22.mediatek.inc (172.21.77.33) by mtkcas08.mediatek.inc
  (172.21.101.73) with Microsoft SMTP Server id 15.0.1497.2 via
  Frontend Transport; Sat, 20 Jun 2020 01:52:01 +0800
 From: <sean.wang@mediatek.com>
 To: <marcel@holtmann.org>, <johan.hedberg@gmail.com>
-Subject: [PATCH v2 1/2] Bluetooth: btusb: fix up firmware download sequence
-Date: Sat, 20 Jun 2020 01:52:01 +0800
-Message-ID: <7d835850c16e07d1346c763900cc8c880182f497.1592588740.git.sean.wang@mediatek.com>
+Subject: [PATCH v2 2/2] Bluetooth: btmtksdio: fix up firmware download sequence
+Date: Sat, 20 Jun 2020 01:52:02 +0800
+Message-ID: <8ed6746c7d2ce6a38eb88c78c81593c0cbd4451f.1592588740.git.sean.wang@mediatek.com>
 X-Mailer: git-send-email 1.7.9.5
+In-Reply-To: <7d835850c16e07d1346c763900cc8c880182f497.1592588740.git.sean.wang@mediatek.com>
+References: <7d835850c16e07d1346c763900cc8c880182f497.1592588740.git.sean.wang@mediatek.com>
 MIME-Version: 1.0
-X-TM-SNTS-SMTP: 2821007EF3AFA80A7E8D45E7FC13707227D66AE0967B67343F6BEA83B2DC8ED92000:8
 X-MTK: N
 X-CRM114-Version: 20100106-BlameMichelson ( TRE 0.8.0 (BSD) ) MR-646709E3 
-X-CRM114-CacheID: sfid-20200619_105218_766910_A8357C06 
-X-CRM114-Status: GOOD (  10.61  )
+X-CRM114-CacheID: sfid-20200619_105218_862731_F05D1C73 
+X-CRM114-Status: GOOD (  11.10  )
 X-Spam-Score: -0.2 (/)
 X-Spam-Report: SpamAssassin version 3.4.4 on bombadil.infradead.org summary:
  Content analysis details:   (-0.2 points)
@@ -100,19 +101,19 @@ the firmware.
 v1->v2:
 	rebased to bluetooth-next
 
-Fixes: a1c49c434e15 ("Bluetooth: btusb: Add protocol support for MediaTek MT7668U USB devices")
+Fixes: 9aebfd4a2200 ("Bluetooth: mediatek: add support for MediaTek MT7663S and MT7668S SDIO devices")
 Co-developed-by: Mark Chen <Mark-YW.Chen@mediatek.com>
 Signed-off-by: Mark Chen <Mark-YW.Chen@mediatek.com>
 Signed-off-by: Sean Wang <sean.wang@mediatek.com>
 ---
- drivers/bluetooth/btusb.c | 16 +++++++++++++++-
+ drivers/bluetooth/btmtksdio.c | 16 +++++++++++++++-
  1 file changed, 15 insertions(+), 1 deletion(-)
 
-diff --git a/drivers/bluetooth/btusb.c b/drivers/bluetooth/btusb.c
-index c7cc8e594166..e42fdd625eb0 100644
---- a/drivers/bluetooth/btusb.c
-+++ b/drivers/bluetooth/btusb.c
-@@ -2934,7 +2934,7 @@ static int btusb_mtk_setup_firmware(struct hci_dev *hdev, const char *fwname)
+diff --git a/drivers/bluetooth/btmtksdio.c b/drivers/bluetooth/btmtksdio.c
+index 519788c442ca..11494cd2a982 100644
+--- a/drivers/bluetooth/btmtksdio.c
++++ b/drivers/bluetooth/btmtksdio.c
+@@ -685,7 +685,7 @@ static int mtk_setup_firmware(struct hci_dev *hdev, const char *fwname)
  	const u8 *fw_ptr;
  	size_t fw_size;
  	int err, dlen;
@@ -121,19 +122,19 @@ index c7cc8e594166..e42fdd625eb0 100644
  
  	err = request_firmware(&fw, fwname, &hdev->dev);
  	if (err < 0) {
-@@ -2942,6 +2942,20 @@ static int btusb_mtk_setup_firmware(struct hci_dev *hdev, const char *fwname)
+@@ -693,6 +693,20 @@ static int mtk_setup_firmware(struct hci_dev *hdev, const char *fwname)
  		return err;
  	}
  
 +	/* Power on data RAM the firmware relies on. */
 +	param = 1;
-+	wmt_params.op = BTMTK_WMT_FUNC_CTRL;
++	wmt_params.op = MTK_WMT_FUNC_CTRL;
 +	wmt_params.flag = 3;
 +	wmt_params.dlen = sizeof(param);
 +	wmt_params.data = &param;
 +	wmt_params.status = NULL;
 +
-+	err = btusb_mtk_hci_wmt_sync(hdev, &wmt_params);
++	err = mtk_hci_wmt_sync(hdev, &wmt_params);
 +	if (err < 0) {
 +		bt_dev_err(hdev, "Failed to power on data RAM (%d)", err);
 +		return err;
